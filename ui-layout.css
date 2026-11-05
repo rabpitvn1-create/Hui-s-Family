@@ -585,8 +585,8 @@ body.stage-entity-on #stage-entity {
 }
 
 /* Song kiếm bay quanh nhân vật: mỗi thanh là lớp phủ kín khung bọc,
-   kiếm nhỏ ở tâm; quỹ đạo elip bằng keyframes — nửa vòng trước mặt
-   (z-index 4, to/sáng) và nửa vòng sau lưng (z-index 1, nhỏ/mờ hơn).
+   kiếm nhỏ ở tâm; quỹ đạo vệ tinh NGANG quanh người bằng keyframes (vòng dẹt, lên/xuống tối thiểu ±6%) — nửa vòng trước mặt
+   (z-index 4, to hơn) và nửa vòng sau lưng (z-index 1, nhỏ hơn).
    Hai thanh lệch pha nửa vòng nên luôn đối xứng qua nhân vật. */
 .stage-sword {
   position: absolute;
@@ -596,7 +596,7 @@ body.stage-entity-on #stage-entity {
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  animation: sword-orbit 14s linear infinite;
+  animation: sword-orbit 13.5s linear infinite;
   will-change: transform, opacity;
 }
 
@@ -609,17 +609,17 @@ body.stage-entity-on #stage-entity {
   filter: drop-shadow(0 0 10px rgba(255, 45, 60, .45)) drop-shadow(0 6px 14px rgba(0, 0, 0, .55));
 }
 
-.stage-sword-b { animation-delay: -7s; }
+.stage-sword-b { animation-delay: -6.75s; }
 .stage-sword-b img { height: 50%; }
 
 @keyframes sword-orbit {
-  0%   { transform: translate(-42%, -2%) rotate(-7deg) scale(.94); z-index: 4; opacity: 1; }
-  25%  { transform: translate(0, 18%) rotate(0deg) scale(1.05); z-index: 4; opacity: 1; }
+  0%   { transform: translate(-49%, 0%) rotate(-1deg) scale(.94); z-index: 4; opacity: 1; }
+  25%  { transform: translate(0, 6%) rotate(0deg) scale(1.05); z-index: 4; opacity: 1; }
   49%  { z-index: 4; }
-  50%  { transform: translate(42%, -2%) rotate(7deg) scale(.94); z-index: 1; opacity: .92; }
-  75%  { transform: translate(0, -22%) rotate(0deg) scale(.84); z-index: 1; opacity: .85; }
+  50%  { transform: translate(49%, 0%) rotate(1deg) scale(.94); z-index: 1; opacity: 1; }
+  75%  { transform: translate(0, -6%) rotate(0deg) scale(.84); z-index: 1; opacity: 1; }
   99%  { z-index: 1; }
-  100% { transform: translate(-42%, -2%) rotate(-7deg) scale(.94); z-index: 4; opacity: 1; }
+  100% { transform: translate(-49%, 0%) rotate(-1deg) scale(.94); z-index: 4; opacity: 1; }
 }
 
 .stage-caption {
