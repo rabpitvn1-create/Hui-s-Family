@@ -473,7 +473,7 @@ body.focus-mode .snapshot-stage { display: none; }
     max-height: 100%;
   }
   #stage-entity { max-width: 44%; }
-  #stage-character { max-width: 56%; }
+  .stage-character-wrap { max-width: 56%; }
   #stage-scene-name, .stage-scene-name {
     z-index: 5;
     max-width: min(80%, 24rem);
