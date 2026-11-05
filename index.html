@@ -44,10 +44,19 @@
           <img id="stage-background" src="assets/snapshots/long-hai-exterior.webp" alt="" width="1536" height="1024" fetchpriority="high">
         </div>
         <img id="stage-entity" class="stage-entity" src="assets/overlay/entity-01.png" alt="" aria-hidden="true">
-        <div class="stage-character-wrap">
-          <img id="stage-character" class="stage-character" src="assets/overlay/main-character.png" alt="Nhân vật chính">
+        <div class="stage-character-wrap" data-equipped="a">
+          <img id="stage-character" class="stage-character" src="assets/overlay/main-character-sword-a.png" alt="Nhân vật chính">
           <span class="stage-sword stage-sword-a" aria-hidden="true"><img src="assets/overlay/sword-demon-face.png" alt=""></span>
           <span class="stage-sword stage-sword-b" aria-hidden="true"><img src="assets/overlay/sword-red-core.png" alt=""></span>
+        </div>
+        <div class="stage-equipment" role="group" aria-label="Trang bị: chọn thanh kiếm Cao Minh cầm trên tay">
+          <span class="stage-equipment-label">Cầm kiếm</span>
+          <button id="equip-sword-a" class="equip-btn is-equipped" type="button" data-equip-sword="a" aria-pressed="true" title="Cầm Sát Thần Kiếm — ấn lại để cất kiếm">
+            <img src="assets/overlay/sword-demon-face.png" alt="" aria-hidden="true"><span>Sát Thần</span>
+          </button>
+          <button id="equip-sword-b" class="equip-btn" type="button" data-equip-sword="b" aria-pressed="false" title="Cầm Sát Ma Kiếm — ấn lại để cất kiếm">
+            <img src="assets/overlay/sword-red-core.png" alt="" aria-hidden="true"><span>Sát Ma</span>
+          </button>
         </div>
         <div class="stage-caption"><span id="stage-scene-name">Biệt thự dưỡng bệnh</span></div>
       </section>
@@ -133,6 +142,17 @@
               <p class="micro-label">ĐẠO TỔ · VẠN MA ĐẠO MÔN</p>
               <h2>Cao Minh <span>/ Vạn Giới Ma Tổ</span></h2>
               <p>Đạo Tổ · song kiếm Thái Cổ Song Sát · Hắc Long Chiến Khải · đang trừ tà khí cho Hứa Tiểu Lan</p>
+              <div class="equipment-row" role="group" aria-label="Trang bị: Thái Cổ Song Sát">
+                <span class="equipment-label">Trang bị · đang cầm: <strong id="equipment-name">Sát Thần Kiếm</strong></span>
+                <span class="equipment-buttons">
+                  <button id="equip-sword-a-drawer" class="equip-btn is-equipped" type="button" data-equip-sword="a" aria-pressed="true" title="Cầm Sát Thần Kiếm — ấn lại để cất kiếm">
+                    <img src="assets/overlay/sword-demon-face.png" alt="" aria-hidden="true"><span>Sát Thần</span>
+                  </button>
+                  <button id="equip-sword-b-drawer" class="equip-btn" type="button" data-equip-sword="b" aria-pressed="false" title="Cầm Sát Ma Kiếm — ấn lại để cất kiếm">
+                    <img src="assets/overlay/sword-red-core.png" alt="" aria-hidden="true"><span>Sát Ma</span>
+                  </button>
+                </span>
+              </div>
             </div>
           </section>
 
