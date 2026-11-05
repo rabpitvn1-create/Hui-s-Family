@@ -31,10 +31,10 @@ Màn hình chính chỉ còn 3 tầng, theo đúng thứ tự từ trên xuống
 |---|---|---|
 | `assets/overlay/entity-01.png` | Ảnh owner gửi trực tiếp ngày 2026-11-05 | Ảnh gốc 336×595, **nền checkerboard bị nướng chết vào ảnh** (không có alpha). Đã tách nền thành alpha thật (flood-fill từ biên + xử lý vùng nền bao kín), 4 góc alpha = 0, ~73% pixel trong suốt, đã kiểm chứng trên nền tối và nền vàng. Commit `5b4abf9` trên main. Đây là Entity overlay đầu tiên và duy nhất tính đến v5. |
 | `assets/overlay/main-character.png` | Drive, thư mục `/GAOMING`: "Cao Minh — Toàn thân — Nền trong suốt.png" (1086×1448, cập nhật 2026-11-05) | Alpha thật, sạch; nhân vật chiếm 100% chiều cao khung. Dùng làm overlay nhân vật chính phía phải khung Snapshot. |
-| `assets/avatars/main-avatar.jpg` | Drive, thư mục `/GAOMING`: "Cao Minh — Chân dung.jpg" (1536×1536) | Avatar hiển thị trong drawer burger. **Không** dùng `kai_avatar.png` trong Drive `game/assets/avatars/` — xem cảnh báo bên dưới. |
+| `assets/avatars/main-avatar.jpg` | Drive, thư mục `/GAOMING`: "Cao Minh — Chân dung.jpg" (1536×1536) | Avatar hiển thị trong drawer burger. Chỉ dùng ảnh từ thư mục Drive `/GAOMING` — xem cảnh báo bên dưới. |
 | `assets/fonts/` (Quicksand + OFL) | Google Fonts — font Quicksand, giấy phép OFL | Đóng gói local trong APK, khai báo bằng `@font-face`. Không tải từ CDN (APK chạy offline). |
 
-**Cấm dùng cho Hui Family:** toàn bộ cây **Drive `game/assets/`** (avatars, entity, overlays của Kai…). Cây đó là bản mirror của repo **BACKROOMsV2**, thuộc repo khác — owner đã ra rule ngày 2026-11-05. Nguồn tài sản hợp lệ của Hui Family chỉ gồm: repo này, thư mục Drive `/GAOMING`, và ảnh owner gửi trực tiếp.
+**Cấm dùng cho Hui Family:** toàn bộ cây **Drive `game/assets/`** (avatars, entity, overlays…). Cây đó là bản mirror của repo **BACKROOMsV2**, thuộc repo khác — owner đã ra rule ngày 2026-11-05. Nguồn tài sản hợp lệ của Hui Family chỉ gồm: repo này, thư mục Drive `/GAOMING`, và ảnh owner gửi trực tiếp.
 
 ## Font
 
@@ -60,5 +60,5 @@ Giữ nguyên **toàn bộ 70 element ID hiện có** của `index.html`; v5 ch�
 
 - **Chưa có asset ảnh cảnh nền theo stage.** Repo chưa có ảnh nền riêng cho 6 stage (Long Hải → Cần Giờ → Backrooms 1900 → Thủ Dầu Một → Vũng Tàu → Sài Gòn–Chợ Lớn); lớp nền của `#snapshot-stage` (`stage-bg`) hiện là nền CSS. Muốn có ảnh thật phải bổ sung asset nền sau, theo từng stage.
 - **Entity mới có 01 file** (`entity-01.png`, độ phân giải gốc chỉ 336×595 — hiển thị lớn sẽ mềm). Các Entity sau bổ sung tiếp vào `assets/overlay/` theo cùng quy ước tách nền alpha thật.
-- **Hai file WebP overlay của Kai trên Drive đã HỎNG — đừng dùng:** `kai_snapshot_overlay.webp` và `kai_snapshot_overlay_hd.webp` đều bị cắt cụt khi upload (file chỉ 11.249 B trong khi chunk ALPH khai báo 33.378 B; PIL và ffmpeg đều không mở được, bản "hd" cũng chỉ khai canvas 512×768). Cần WebP thì phải xuất lại từ PNG gốc.
+- **Hai file WebP overlay nhân vật cũ trên Drive đã HỎNG — đừng dùng:** cả hai bản WebP của overlay nhân vật chính (bản thường và bản "hd") đều bị cắt cụt khi upload (file chỉ 11.249 B trong khi chunk ALPH khai báo 33.378 B; PIL và ffmpeg đều không mở được, bản "hd" cũng chỉ khai canvas 512×768). Cần WebP thì phải xuất lại từ PNG gốc.
 - Số liệu Tiểu Lan lấy theo `INITIAL_STATE` trong `src/world-canon.js` (Sức khỏe 45%, Ảnh hưởng Mẫu 25%, Lòng tin 5%); các số tĩnh cũ trong `index.html` (100%/0%) không còn là chuẩn.
