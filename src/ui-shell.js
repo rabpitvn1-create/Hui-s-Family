@@ -92,28 +92,39 @@ export function initMissionInterface() {
   const lanInfluence = document.querySelector("#lan-influence-rail");
   const routeItems = [...document.querySelectorAll("[data-route-stage]")];
   const actionInput = document.querySelector("#ai-action");
-  const mobilePanelQuery = window.matchMedia("(max-width: 1020px)");
+  const actionsToggle = document.querySelector("#actions-toggle");
+  const stageEntity = document.querySelector("#stage-entity");
+  const stageSceneName = document.querySelector("#stage-scene-name");
   let lastSceneId = "";
   let sceneAnimationTimer = 0;
 
   if (window.HuaAndroid) body.classList.add("native-apk");
 
+  // v5: #intel-panel là drawer ở MỌI bề rộng (burger nằm trong header).
+  // Không còn matchMedia gating: trạng thái mở/đóng chỉ do class .intel-open quyết định.
   function syncIntelAccessibility() {
-    const isMobile = mobilePanelQuery.matches;
     const isOpen = body.classList.contains("intel-open");
-    if (intelPanel) intelPanel.setAttribute("aria-hidden", String(isMobile && !isOpen));
-    if (intelToggle) intelToggle.setAttribute("aria-expanded", String(isMobile ? isOpen : true));
-    if (intelScrim) intelScrim.tabIndex = isMobile && isOpen ? 0 : -1;
+    if (intelPanel) intelPanel.setAttribute("aria-hidden", String(!isOpen));
+    if (intelToggle) intelToggle.setAttribute("aria-expanded", String(isOpen));
+    if (intelScrim) intelScrim.tabIndex = isOpen ? 0 : -1;
   }
 
   function setIntelOpen(value) {
-    body.classList.toggle("intel-open", Boolean(value) && mobilePanelQuery.matches);
+    body.classList.toggle("intel-open", Boolean(value));
     syncIntelAccessibility();
-    if (value && mobilePanelQuery.matches) {
+    if (value) {
       window.setTimeout(() => intelClose?.focus(), 50);
-    } else if (!value && mobilePanelQuery.matches) {
+    } else {
       intelToggle?.focus({ preventScroll: true });
     }
+  }
+
+  // v5: nút "Thao Tác" (#actions-toggle) ẩn/hiện .choice-deck qua class
+  // .choices-collapsed trên #story-panel; CSS chịu trách nhiệm display.
+  function setChoicesOpen(value) {
+    const expanded = Boolean(value);
+    storyPanel?.classList.toggle("choices-collapsed", !expanded);
+    actionsToggle?.setAttribute("aria-expanded", String(expanded));
   }
 
   function setFocusMode(value) {
@@ -181,11 +192,26 @@ export function initMissionInterface() {
     if (lanInfluence) lanInfluence.textContent = `${clamp(numberOr(snapshot?.campaignStats?.lanMaterInfluence), 0, 100)}%`;
   }
 
+  // v5: đồng bộ khung Snapshot (#snapshot-stage).
+  // - #stage-scene-name: caption cảnh, lấy snapshot.scene.title; rỗng thì giữ text mặc định trong HTML.
+  // - #stage-entity: overlay Entity, CHỈ hiện khi encounter active — cùng ngưỡng với
+  //   syncThreat (active = threat score >= 42). Cơ chế: class .stage-entity-on trên
+  //   chính #stage-entity (CSS mặc định ẩn #stage-entity, .stage-entity-on thì hiện).
+  // - #stage-character: luôn hiển thị, không cần sync.
+  function syncStage(snapshot) {
+    const title = String(snapshot?.scene?.title || "").trim();
+    if (stageSceneName && title) stageSceneName.textContent = title;
+
+    const active = threatFromSnapshot(snapshot).score >= 42;
+    stageEntity?.classList.toggle("stage-entity-on", active);
+  }
+
   function sync(snapshot) {
     if (!snapshot || typeof snapshot !== "object") return;
     syncRoute(snapshot);
     syncThreat(snapshot);
     syncTarget(snapshot);
+    syncStage(snapshot);
     animateScene(String(snapshot?.scene?.id || `turn-${numberOr(snapshot?.turn)}`));
   }
 
@@ -196,18 +222,14 @@ export function initMissionInterface() {
   }
 
   intelToggle?.addEventListener("click", () => {
-    if (mobilePanelQuery.matches) {
-      setIntelOpen(!body.classList.contains("intel-open"));
-    } else {
-      intelPanel?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    setIntelOpen(!body.classList.contains("intel-open"));
   });
   intelClose?.addEventListener("click", () => setIntelOpen(false));
   intelScrim?.addEventListener("click", () => setIntelOpen(false));
   focusToggle?.addEventListener("click", () => setFocusMode(!body.classList.contains("focus-mode")));
-  mobilePanelQuery.addEventListener?.("change", () => {
-    if (!mobilePanelQuery.matches) body.classList.remove("intel-open");
-    syncIntelAccessibility();
+  actionsToggle?.addEventListener("click", () => {
+    const expanded = actionsToggle.getAttribute("aria-expanded") !== "false";
+    setChoicesOpen(!expanded);
   });
   actionInput?.addEventListener("input", resizeActionInput);
 
@@ -242,6 +264,8 @@ export function initMissionInterface() {
   } catch {
     setFocusMode(false);
   }
+  // Mặc định: deck phương án đang hiện (aria-expanded="true"), trừ khi HTML ghi rõ "false".
+  setChoicesOpen(actionsToggle ? actionsToggle.getAttribute("aria-expanded") !== "false" : true);
   syncIntelAccessibility();
   resizeActionInput();
 
