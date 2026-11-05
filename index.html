@@ -35,30 +35,7 @@
         <p class="header-subtitle">Biệt thự dưỡng bệnh · hồ sơ giải cứu HTL-04</p>
       </div>
 
-      <div class="elysium-stamp" aria-label="Hồ sơ chiến dịch SRU">
-        <span class="stamp-sigil" aria-hidden="true">S</span>
-        <span>
-          <strong>SRU // SPECIAL RESPONSE UNIT</strong>
-          <small>FIELD JUDGMENT · CIVILIAN FIRST · 2299</small>
-        </span>
-      </div>
-
-      <button id="focus-toggle" class="mission-tool" type="button" aria-pressed="false">
-        <span aria-hidden="true">◉</span>
-        Chế độ đọc
-      </button>
-
-      <div class="sub-strip">
-      <div class="route-readout" aria-label="Tiến độ tuyến chiến dịch">
-        <div class="route-readout-copy">
-          <span id="route-step-label">Hồi 1 · Long Hải</span>
-          <span id="threat-label">Hiện trường đang kín</span>
-        </div>
-        <div class="route-track" aria-hidden="true">
-          <span id="route-progress"></span>
-        </div>
-      </div>
-      </div>
+      <span id="turn-chip" class="turn-chip">Lượt 00</span>
     </header>
 
 
@@ -196,6 +173,25 @@
               <li data-route-stage="sai_gon_cho_lon"><span>06</span><strong>Sài Gòn–Chợ Lớn</strong><small>Nhà chính Hứa Gia</small></li>
             </ol>
           </section>
+
+          <div class="elysium-stamp" aria-label="Hồ sơ chiến dịch SRU">
+            <span class="stamp-sigil" aria-hidden="true">S</span>
+            <span>
+              <strong>SRU // SPECIAL RESPONSE UNIT</strong>
+              <small>FIELD JUDGMENT · CIVILIAN FIRST · 2299</small>
+            </span>
+          </div>
+
+          <div class="route-readout" aria-label="Tiến độ tuyến chiến dịch">
+            <div class="route-readout-copy">
+              <span id="route-step-label">Hồi 1 · Long Hải</span>
+              <span id="threat-label">Hiện trường đang kín</span>
+            </div>
+            <div class="route-track" aria-hidden="true">
+              <span id="route-progress"></span>
+            </div>
+          </div>
+
           <section class="intel-section meter-section">
             <div class="intel-section-heading">
               <h3>Nguy cơ tại chỗ</h3>
@@ -304,6 +300,10 @@
           </details>
 
           <section class="intel-section controls" aria-label="Điều khiển trò chơi">
+            <button id="focus-toggle" class="mission-tool" type="button" aria-pressed="false">
+              <span aria-hidden="true">◉</span>
+              Chế độ đọc
+            </button>
             <button id="save-button" type="button">Lưu chiến dịch</button>
             <button id="load-button" type="button">Tải bản lưu</button>
             <button id="restart-button" class="danger-control" type="button">Chiến dịch mới</button>

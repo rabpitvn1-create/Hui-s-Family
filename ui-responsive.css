@@ -33,7 +33,7 @@ body.focus-mode .story-panel { width: 100%; }
 
 @media (max-width: 1020px) {
   .shell { width: min(100% - 1rem, var(--shell-width)); }
-  .campaign-header { min-height: 6.8rem; }
+  .campaign-header { min-height: 0; }
   .elysium-stamp { min-width: 15rem; }
   .game-layout { grid-template-columns: 220px minmax(0,1fr); }
   .field-rail { position: static; }

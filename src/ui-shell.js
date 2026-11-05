@@ -212,6 +212,9 @@ export function initMissionInterface() {
     syncThreat(snapshot);
     syncTarget(snapshot);
     syncStage(snapshot);
+    const turnChip = document.querySelector("#turn-chip");
+    const sceneProgressText = document.querySelector("#scene-progress")?.textContent?.trim();
+    if (turnChip && sceneProgressText) turnChip.textContent = `Lượt ${sceneProgressText}`;
     animateScene(String(snapshot?.scene?.id || `turn-${numberOr(snapshot?.turn)}`));
   }
 

@@ -581,3 +581,63 @@ body.stage-entity-on #stage-entity {
   text-overflow: ellipsis;
   pointer-events: none;
 }
+
+/* v5 header fix (theo đúng mockup v5): một hàng gọn — burger trái,
+   "Hứa Gia / LIBERA-1899" giữa, chip Lượt ở phải. Các khối di sản
+   (ledger-tab, header-subtitle, tem SRU, route-readout, focus-toggle)
+   không còn nằm trên header: tem + route vào drawer, focus vào controls. */
+body .campaign-header {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  min-height: 0;
+  padding: .55rem .8rem;
+}
+.campaign-header .ledger-tab,
+.campaign-header .header-subtitle { display: none; }
+.campaign-header .heritage-mark { flex: 1 1 auto; min-width: 0; }
+.campaign-header h1 { font-size: 1.32rem; line-height: 1.08; margin: 0; white-space: nowrap; }
+.campaign-header h1 span {
+  display: block;
+  font-size: .6rem;
+  font-weight: 600;
+  letter-spacing: .32em;
+  margin-top: .22rem;
+}
+#intel-toggle.burger-toggle {
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  border: 1px solid var(--brass);
+  border-radius: .65rem;
+  background: transparent;
+  cursor: pointer;
+}
+#intel-toggle .burger-line {
+  display: block;
+  width: 1.15rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--brass-pale);
+}
+#intel-toggle .burger-text { display: none; }
+.turn-chip {
+  flex: none;
+  border: 1px solid var(--brass);
+  border-radius: 999px;
+  padding: .34rem .68rem;
+  color: var(--brass-pale);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+#intel-panel .elysium-stamp { margin: .85rem .9rem 0; }
+#intel-panel .route-readout { margin: .85rem .9rem 0; }
