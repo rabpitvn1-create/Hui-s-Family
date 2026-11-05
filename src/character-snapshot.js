@@ -8,7 +8,7 @@ const DEFAULT_CHARACTER = Object.freeze({
   alias: KAI_IDENTITY.codename,
   role: `${KAI_IDENTITY.position.toUpperCase()} SRU`,
   summary: `${KAI_IDENTITY.combatTier} · chỉ huy hiện trường · xạ thủ chủ lực`,
-  image: "assets/avatars/kai.svg",
+  image: "assets/avatars/main-avatar.jpg",
   alt: `Chân dung ${KAI_IDENTITY.name}, mật danh ${KAI_IDENTITY.codename}`
 });
 
@@ -90,7 +90,7 @@ function buildOverlay() {
 }
 
 export function initCharacterSnapshot() {
-  const snapshot = document.querySelector(".field-rail .operator-card");
+  const snapshot = document.querySelector("#intel-panel .operator-card");
   if (!(snapshot instanceof HTMLElement)) return null;
 
   syncSnapshotCard(snapshot, DEFAULT_CHARACTER);
