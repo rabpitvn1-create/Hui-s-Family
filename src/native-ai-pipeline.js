@@ -231,7 +231,9 @@ async function invokeGeminiProxyModel({ model, systemInstruction, prompt, schema
       } catch (error) {
         lastError = error;
         if (attempt + 1 < attempts) {
-          await new Promise((resolve) => setTimeout(resolve, 3000));
+          // 503 quá tải theo model thường là spike vài giây: chờ 8s rồi thử lại
+          // (số liệu chẩn đoán pool 2026-11-05), thay vì dội request liên tục.
+          await new Promise((resolve) => setTimeout(resolve, 8000));
         }
       }
     }
