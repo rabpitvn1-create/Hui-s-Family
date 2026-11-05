@@ -1,8 +1,10 @@
 import {
   hasNativeAiBridge,
+  hasProxyAiLane,
   getNativeAiConfiguration,
   openNativeApiKeySettings,
-  runNativeCampaignTurn
+  runNativeCampaignTurn,
+  warmUpProxyAi
 } from "./native-ai-pipeline.js";
 
 function cleanText(value, maxLength = 500) {
@@ -75,6 +77,7 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
   if (!elements.status || !elements.action || !elements.submit || !elements.clear || !elements.note) return;
 
   const nativeMode = hasNativeAiBridge();
+  const proxyMode = hasProxyAiLane();
   let nativeConfigured = false;
   let busy = false;
 
@@ -84,7 +87,8 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
   }
 
   function isUnavailable() {
-    return !nativeMode || !nativeConfigured;
+    if (nativeMode) return !nativeConfigured;
+    return !proxyMode;
   }
 
   function setBusy(value) {
@@ -167,13 +171,13 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
       return;
     }
 
-    if (!nativeMode) {
-      setStatus("Chỉ hỗ trợ APK Android", "error");
-      elements.note.textContent = "Backend web đã bị loại bỏ. AI chỉ chạy qua cầu nối native trong APK.";
+    if (!nativeMode && !proxyMode) {
+      setStatus("Không có đường gọi AI", "error");
+      elements.note.textContent = "Môi trường này không có cầu nối APK và cũng không gọi được proxy AI.";
       return;
     }
 
-    if (!nativeConfigured) {
+    if (nativeMode && !nativeConfigured) {
       setStatus("Chưa có API key", "error");
       elements.note.textContent = "Mở Cấu hình API key để thêm ít nhất một Gemini API key.";
       openNativeApiKeySettings();
@@ -181,7 +185,7 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
     }
 
     setBusy(true);
-    setStatus("Gemini đang dùng nhóm API key…", "busy");
+    setStatus(nativeMode ? "Gemini đang dùng nhóm API key…" : "Gemini đang xử lý qua proxy…", "busy");
 
     try {
       const payload = await runNativeCampaignTurn(bridge.getSnapshot(), action);
@@ -237,9 +241,13 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
   if (nativeMode) {
     window.__huaApiKeysChanged = refreshNativeConfiguration;
     refreshNativeConfiguration();
+  } else if (proxyMode) {
+    warmUpProxyAi();
+    setStatus("Sẵn sàng · proxy Render", "ready");
+    elements.note.textContent = "Bản web gọi Gemini qua proxy Render của chủ sở hữu; API key nằm ở server của proxy, không có trong trang. Lần gọi đầu có thể chậm khi proxy đang khởi động.";
   } else {
     setStatus("Chỉ hỗ trợ APK Android", "warning");
-    elements.note.textContent = "Bản web/backend legacy đã bị loại bỏ. Hãy build và cài APK Android để chơi với Gemini.";
+    elements.note.textContent = "Môi trường này không có cầu nối APK và cũng không gọi được proxy AI.";
   }
 
   setBusy(false);

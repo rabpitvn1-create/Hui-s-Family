@@ -65,3 +65,9 @@ gradle -p android :app:assembleDebug
 ```
 
 Workflow `.github/workflows/build-android-apk.yml` chạy preflight, build APK và kiểm tra archive để xác nhận các module runtime bắt buộc đã được đóng gói.
+
+## Làn proxy Render cho bản web
+
+Khi game chạy ngoài APK (trình duyệt), `src/native-ai-pipeline.js` tự động chuyển sang làn proxy: gọi `POST https://backrooms-gemini-proxy.onrender.com/gemini` với đúng hợp đồng generateContent (model, contents, systemInstruction, generationConfig) và cùng cặp model mặc định như APK. Proxy giữ API key ở server và tự luân phiên key; trang web không chứa bất kỳ API key nào.
+
+Trong APK, cầu nối native luôn được ưu tiên và làn proxy không bao giờ chạy — six-key pool đóng gói vẫn là đường duy nhất. Proxy có cold start (Render free tier) nên bản web ping `/health` ngay khi mở trang để đánh thức proxy trước lượt chơi đầu.

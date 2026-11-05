@@ -68,6 +68,13 @@ for (const modulePath of [
   }
 }
 
+// Làn proxy Render cho bản web (owner duyệt): khi không có cầu nối APK,
+// pipeline gọi Gemini qua proxy của chủ sở hữu bằng URL công khai duy nhất này.
+// APK không dùng làn này; six-key pool đóng gói vẫn là đường duy nhất trong APK.
+if (!nativePipeline.includes("https://backrooms-gemini-proxy.onrender.com")) {
+  throw new Error("Native pipeline thiếu làn proxy Render đã duyệt cho bản web.");
+}
+
 const gradle = readFileSync("android/app/build.gradle.kts", "utf8");
 if (!gradle.includes('include("apk-ai/**")')) {
   throw new Error("Gradle chưa đóng gói apk-ai/** vào APK.");
@@ -169,7 +176,7 @@ if (!activity.includes("ApiProviderConfig.hasBundledProviders()")) {
   throw new Error("MainActivity chưa ưu tiên six-key pool đóng gói.");
 }
 
-const sensitiveSources = [gradle, providerConfig, client, bridge, buildWorkflow, releaseWorkflow];
+const sensitiveSources = [gradle, providerConfig, client, bridge, buildWorkflow, releaseWorkflow, nativePipeline, gameMaster];
 const rawSecretPatterns = [/AIza[0-9A-Za-z_-]{20,}/];
 for (const source of sensitiveSources) {
   for (const pattern of rawSecretPatterns) {
