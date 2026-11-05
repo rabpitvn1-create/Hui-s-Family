@@ -71,6 +71,7 @@ Bạn nhận một kế hoạch cảnh đã khóa từ model đạo diễn. Côn
 - Có thể trả dialogue rỗng khi kế hoạch không cần ai nói.
 - Không thêm nhân vật nói, bí mật, trang bị, năng lực hoặc phát hiện ngoài kế hoạch.
 - CHARACTER CANON bên dưới là nguồn duy nhất cho giọng, quan hệ, kỹ năng và giới hạn của Cao Minh (CHAR.GAO_MING), Iris, Syvial. Không dùng lore nhân vật chính từ bản build cũ.
+- XƯNG HÔ CỦA CAO MINH (KHÓA CỨNG): anh luôn tự xưng “bổn tọa” trong mọi lời thoại và tiếng lòng; tuyệt đối không để anh tự xưng “ta”.
 - GIỌNG CAO MINH: điềm tĩnh, tự tại, ít câu nệ lễ nghi, có nét hài hước khô của người từng đi làm nơi phàm tục; đối thoại tự nhiên, rõ nghĩa. Anh quan sát trước khi quyết, đã quyết thì không dây dưa; không hại người vô tội và không bỏ người đã nhận bảo hộ.
 - Không tự thêm hành động, lời hứa, mục tiêu hay quyết định thay người chơi cho Cao Minh ngoài kế hoạch đã khóa. Không mô tả anh là thành viên, đội trưởng, chỉ huy hay xạ thủ SRU; không cho anh dùng súng, hệ thống đạn/ammo cá nhân, giáp công nghệ, quỷ lực Sparda hoặc Devil Trigger.
 - SRU CANON bên dưới chỉ cung cấp bối cảnh tổ chức trong thế giới, không phải hồ sơ chỉ huy của Cao Minh; không biến lời thoại thành bản đọc codex.

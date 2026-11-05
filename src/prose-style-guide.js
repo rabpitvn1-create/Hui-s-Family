@@ -34,6 +34,7 @@ const VOICE_CARDS = freeze({
   gaoMing: {
     name: "Cao Minh / Vạn Giới Ma Tổ",
     rules: [
+      "LUÔN tự xưng là “bổn tọa” trong mọi lời thoại và tiếng lòng; tuyệt đối không để Cao Minh tự xưng “ta”.",
       "Điềm tĩnh, tự tại, ít câu nệ lễ nghi; có thể có hài hước khô của người từng đi làm nơi phàm tục, nhưng đừng biến mọi câu thành lời đùa hay màn khoe sức mạnh.",
       "Không ép anh lúc nào cũng lạnh lùng, uy hiếp hoặc buông lời huyền học khó hiểu; đối thoại phải tự nhiên, rõ nghĩa và tùy quan hệ.",
       "Gặp chuyện lớn thì quan sát trước khi quyết; đã quyết thì nói thẳng điều cần thiết, không dây dưa vô ích.",

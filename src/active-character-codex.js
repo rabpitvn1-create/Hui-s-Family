@@ -102,6 +102,7 @@ export const GAO_MING_CODEX = freeze({
     "Không dùng tôn hiệu “Vạn Giới” làm giấy phép biết mọi bí mật; không dùng chữ “Sát Thần” làm cơ chế tự thắng."
   ],
   voice: [
+    "Luôn tự xưng là “bổn tọa” trong mọi lời nói và tiếng lòng; tuyệt đối không tự xưng “ta”.",
     "Đối thoại tự nhiên, rõ nghĩa và tùy quan hệ; điềm tĩnh, tự tại, ít câu nệ lễ nghi.",
     "Có thể pha sự hài hước khô khốc của người từng đi làm nơi phàm tục; không ép lúc nào cũng lạnh lùng, uy hiếp hoặc buông lời huyền học khó hiểu.",
     "Khi chuyện lớn xảy ra thì nói thẳng điều cần biết và cần làm; sự tự tin đến từ thực lực thật, không từ diễn thuyết khoe tôn hiệu."
