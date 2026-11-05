@@ -1,11 +1,16 @@
+/* V5: màn hình chính là MỘT cột dọc — Snapshot stage rồi tới khung GM.
+   #intel-panel là drawer fixed (xem khối drawer bên dưới) nên không còn
+   chiếm cột trong layout; .field-rail không còn tồn tại trong DOM mới. */
 .game-layout {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(230px, .72fr) minmax(0, 2.25fr) minmax(290px, .9fr);
+  display: flex;
+  flex-direction: column;
   gap: .8rem;
-  align-items: start;
+  align-items: stretch;
   margin-top: .8rem;
 }
+
+body.focus-mode .game-layout { align-items: center; }
 
 .field-rail,
 .story-panel,
@@ -329,14 +334,46 @@
 .scene-rule::after { flex: 1; background: linear-gradient(90deg, transparent, var(--line)); }
 .scene-rule span { width: .55rem; height: .55rem; margin: 0 .55rem; border: 1px solid var(--seal-bright); transform: rotate(45deg); }
 
+/* V5: #intel-panel là DRAWER trượt từ phải ở MỌI bề rộng màn hình.
+   Đóng: translateX(105%) + visibility hidden. Mở: body.intel-open. */
 .intel-panel {
-  position: sticky;
-  top: 4.5rem;
-  max-height: calc(100vh - 5.4rem);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  width: min(420px, 92vw);
+  height: 100dvh;
+  max-height: none;
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(255,255,255,.018), transparent 18%),
     #17110e;
+  visibility: hidden;
+  transform: translateX(105%);
+  transition: transform 260ms ease, visibility 260ms ease;
+}
+
+body.intel-open .intel-panel {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+body.intel-open { overflow: hidden; }
+
+/* Các card vốn ở field-rail nay nằm ở đầu drawer. */
+#intel-panel .profile-card,
+#intel-panel .encounter-monitor,
+#intel-panel .route-ledger { margin: .85rem .9rem 0; }
+
+/* Footer chiến dịch nằm trong drawer (cuối panel). */
+#intel-panel .campaign-footer {
+  flex-direction: column;
+  gap: .35rem;
+  margin-top: .85rem;
+  padding: .9rem;
+  border-top: 1px solid var(--line);
 }
 
 .intel-header {
@@ -350,7 +387,8 @@
 }
 .intel-header h2 { margin: .18rem 0 0; color: var(--ink-strong); font-size: 1.15rem; font-weight: 500; }
 #intel-close {
-  display: none;
+  display: grid;
+  place-items: center;
   width: 2.2rem;
   height: 2.2rem;
   border: 1px solid var(--line);
@@ -361,7 +399,9 @@
   cursor: pointer;
 }
 .intel-scroll {
-  max-height: calc(100vh - 10rem);
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
   overflow: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
@@ -380,4 +420,163 @@
 }
 .campaign-footer p { margin: 0; }
 
-.intel-scrim { display: none; }
+/* Scrim phủ mờ sau drawer, hiện ở mọi bề rộng khi body.intel-open. */
+.intel-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 115;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: rgba(5,3,2,.72);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 260ms ease, visibility 260ms ease;
+}
+
+body.intel-open .intel-scrim {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== V5 — Header gọn + dải sub-strip =====
+   Header là một hàng ngang: burger (#intel-toggle) trái, heritage-mark
+   ở giữa/trái, #focus-toggle và SRU stamp thu gọn bên phải. */
+.campaign-header {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  min-height: 0;
+  padding: .7rem .9rem;
+}
+
+.campaign-header #intel-toggle { flex: 0 0 auto; }
+
+.campaign-header .heritage-mark {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.campaign-header h1 { font-size: clamp(1.45rem, 3vw, 2.15rem); }
+
+.campaign-header h1 span {
+  display: inline;
+  margin: 0 0 0 .55rem;
+}
+
+.campaign-header #focus-toggle { flex: 0 0 auto; }
+
+.campaign-header .elysium-stamp {
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: .5rem .7rem;
+}
+
+/* Ba vạch burger (JS/HTML bọc trong .burger-icon nếu có). */
+.burger-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.burger-line {
+  display: block;
+  width: 1.05rem;
+  height: 2px;
+  background: currentColor;
+}
+
+.sub-strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .7rem;
+  padding: .6rem .75rem;
+  border: 1px solid var(--line);
+  background: rgba(20,13,10,.92);
+  box-shadow: 0 8px 24px rgba(0,0,0,.32);
+}
+
+.sub-strip .route-readout { flex: 1 1 auto; }
+
+@media (max-width: 760px) {
+  .campaign-header .elysium-stamp { display: none; }
+  .campaign-header .header-subtitle { display: none; }
+}
+
+/* ===== V5 — Khung Snapshot (minh họa overlay, KHÔNG phải khung avatar) =====
+   .stage-bg là lớp nền duy nhất bị bo góc + overflow hidden; Entity và
+   nhân vật chính là ảnh alpha phủ lên trên, không khung, không viền. */
+.snapshot-stage {
+  position: relative;
+  height: clamp(300px, 82vw, 340px);
+  margin-top: .8rem;
+}
+
+.stage-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 50% -10%, rgba(114,169,181,.14), transparent 55%),
+    radial-gradient(circle at 50% 115%, rgba(189,148,88,.16), transparent 60%),
+    linear-gradient(180deg, #26333b 0%, #3a3d31 34%, #57482c 58%, #33261a 80%, #1d140e 100%);
+  box-shadow: var(--shadow-paper);
+}
+
+#stage-entity,
+#stage-character {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  display: block;
+  object-fit: contain;
+  border: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Entity chỉ hiện khi encounter đang active (JS gắn .stage-entity-on). */
+#stage-entity {
+  left: 0;
+  height: 92%;
+  max-width: 55%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 260ms ease, visibility 260ms ease;
+}
+
+.snapshot-stage.stage-entity-on #stage-entity,
+body.stage-entity-on #stage-entity {
+  opacity: 1;
+  visibility: visible;
+}
+
+#stage-character {
+  right: 0;
+  z-index: 3;
+  height: 100%;
+  max-width: 62%;
+}
+
+.stage-caption {
+  position: absolute;
+  left: 50%;
+  bottom: .6rem;
+  z-index: 4;
+  transform: translateX(-50%);
+  max-width: calc(100% - 2rem);
+  padding: .38rem .8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: rgba(14,9,5,.72);
+  font-size: .72rem;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
