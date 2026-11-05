@@ -28,7 +28,7 @@ export const GAO_MING_CODEX = freeze({
     organizationRole: "Đạo thống ma đạo lấy tự chủ tâm tính, hiểu hậu quả và giữ lời thề đã nhận làm gốc; không dùng danh nghĩa tông môn để biện hộ cho việc tàn hại sinh linh vô cớ.",
     position: "Đạo Tổ",
     combatTier: "Đạo Tổ",
-    role: "Đạo Tổ · Vạn Ma Đạo Môn — đứng đầu đạo thống, đạo trường tại Lôi Thiên Sơn; trong mạch chiến dịch hiện tại là người nhận bảo hộ Hứa Tiểu Lan. Không thuộc SRU và không giữ chức vụ hay biên chế nào trong SRU."
+    role: "Đạo Tổ · Vạn Ma Đạo Môn — đứng đầu đạo thống, đạo trường tại Lôi Thiên Sơn; trong mạch chiến dịch hiện tại là người lạ bị vầng sáng ném xuống Long Hải năm 1899, ra tay vì tà khí đang xâm thực Hứa Tiểu Lan. Không thuộc SRU và không giữ chức vụ hay biên chế nào trong SRU."
   },
   personality: [
     "Điềm tĩnh, tự tại, ít câu nệ lễ nghi; không lúc nào cũng lạnh lùng, uy hiếp hay buông lời huyền học khó hiểu.",

@@ -157,7 +157,7 @@ export const BACKROOMS_FLOORS = freeze([
 ]);
 
 const longHaiObjectives = freeze([
-  { id: "infiltrate_villa", label: "Đột nhập biệt thự Hứa Gia mà không làm nghi lễ tăng tốc." },
+  { id: "infiltrate_villa", label: "Xâm nhập sâu vào biệt thự Hứa Gia mà không làm nghi lễ tăng tốc." },
   { id: "locate_tieu_lan", label: "Xác định vị trí và tình trạng thật của Hứa Tiểu Lan." },
   { id: "classify_servants", label: "Phân loại gia nhân: tự nguyện, bị lừa, bị ép hoặc mất quyền kiểm soát." },
   { id: "break_long_hai_ritual", label: "Phá nghi thức và điểm neo Long Hải." },
@@ -204,7 +204,7 @@ export const CAMPAIGN_ROUTE = freeze([
     label: "Long Hải",
     act: "Hồi 1",
     allowedLocations: ["Long Hải", "Biệt thự Hứa Gia", "vùng Bà Rịa"],
-    premise: "Giải cứu Hứa Tiểu Lan, phá nghi thức và phân loại gia nhân nhiễm trùng.",
+    premise: "Người lạ bị vầng sáng ném xuống Long Hải: trừ tà khí trong người Hứa Tiểu Lan, truy nguồn tà khí, phá nghi thức và phân loại gia nhân nhiễm trùng.",
     boss: "Mẫu Chủng hoặc người giữ nghi lễ, chưa phải Tam Đại Quỷ Tử.",
     objectives: longHaiObjectives,
     next: "can_gio"

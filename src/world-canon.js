@@ -17,7 +17,7 @@ export const WORLD_CANON = Object.freeze({
   opening: {
     year: 1899,
     location: "Long Hải, Nam Kỳ",
-    premise: "Cao Minh, Đạo Tổ của Vạn Ma Đạo Môn, đã tới Long Hải năm 1899 để nhận bảo hộ Hứa Tiểu Lan, giải cứu cô và phá mạng lưới Hứa Gia. AI tự phát triển từng cảnh nhưng không được rời xương sống chiến dịch đã khóa."
+    premise: "Cao Minh, Đạo Tổ của Vạn Ma Đạo Môn, đang uống rượu tại Vạn Hoa Lầu gần Lôi Thiên Sơn thì một vầng sáng lạ nổi dưới chân, ném anh xuống Long Hải năm 1899, ngay trước biệt thự Hứa Gia. Anh cảm nhận một luồng tà khí cực mạnh trong biệt thự, xông vào và phát hiện Hứa Tiểu Lan, tiểu thư Hứa Gia, đã nhiễm tà khí cực nặng. Từ đó chiến dịch là: trừ tà khí trong người cô, truy nguồn tà khí và tìm hiểu vầng sáng đã đưa anh tới đây. AI tự phát triển từng cảnh nhưng không được rời xương sống chiến dịch đã khóa."
   },
   campaignRoute: CAMPAIGN_ROUTE.map((stage) => ({
     id: stage.id,
@@ -31,6 +31,8 @@ export const WORLD_CANON = Object.freeze({
     "AI được tự phát triển cảnh, NPC chức năng, tiểu địa điểm và hậu quả trong khu vực hiện tại; không được nhảy khu vực, bỏ tầng Backrooms hoặc thay đổi thứ tự tuyến.",
     "Nguồn duy nhất cho kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Cao Minh, Iris, Syvial là active-character-codex.js; Cao Minh không thuộc SRU — SRU chỉ là một tổ chức trong thế giới theo sru-codex.js.",
     "Người chơi điều khiển Cao Minh, Đạo Tổ của Vạn Ma Đạo Môn, tôn hiệu Vạn Giới Ma Tổ. Anh là người Trái Đất trọng sinh, giữ nguyên ký ức phàm nhân; thân phận và đạo hạnh thật chỉ được NPC biết khi có nguồn thông tin hợp lệ.",
+    "Cao Minh đến Long Hải năm 1899 do một vầng sáng lạ xuất hiện dưới chân khi anh uống rượu tại Vạn Hoa Lầu gần Lôi Thiên Sơn; nguồn gốc và chủ ý của vầng sáng CHƯA KHÓA — không được tự gán cho bất kỳ nhân vật, tổ chức hay thực thể nào khi chiến dịch chưa tạo đủ bằng chứng.",
+    "Luồng khí đen bao phủ biệt thự Hứa Gia là tà khí — biểu hiện xâm lấn của La Sát Mẫu vào thế giới này. Hứa Tiểu Lan đã nhiễm tà khí cực nặng: lúc chiến dịch bắt đầu, ảnh hưởng của Mẫu trong cô ở mức 25% và sức khỏe chỉ còn 45%.",
     "Cao Minh dùng Thái Cổ Song Sát — Sát Thần Kiếm và Sát Ma Kiếm, hai thanh kiếm riêng biệt — cùng Hắc Long Chiến Khải gồm đúng bốn bộ phận: khải giáp, hộ uyển, hộ thủ và mão (long quan). Anh không dùng súng, đạn hay trang bị công nghệ.",
     "Đạo Tổ Pháp Thể và Vạn Ma Đạo Kinh tăng cường thể chất, giác quan, hồi phục và phân tích chiến trường cho Cao Minh ở cấp Đạo Tổ. Không tự phát sinh thanh năng lượng, giới hạn sử dụng hoặc phản phệ để kéo dài cảnh.",
     "Vạn Giới Thần Niệm của Cao Minh không có trần thời lượng, số lần sử dụng, cooldown hay phản phệ nội tại; anh giữ nguyên ý thức, ký ức, tính cách và phán đoán.",
@@ -89,7 +91,7 @@ export const WORLD_CANON = Object.freeze({
         identity: "Tứ tiểu thư Hứa Gia; mắc bệnh phong; không mang Tử Mẫu Trùng; vật chứa dự kiến của La Sát Mẫu.",
         mind: [
           "Trí tuệ chiến lược cao; nhìn hệ thống, thử giả thuyết, giấu kết luận và chơi đường dài.",
-          "Không biết cha gây bệnh, giáo đoàn chuẩn bị hiến tế và Cao Minh tới cứu cho đến khi có bằng chứng trong chiến dịch.",
+          "Không biết cha gây bệnh, giáo đoàn chuẩn bị hiến tế, và Cao Minh chỉ là người lạ vừa xông vào biệt thự, cho đến khi có bằng chứng trong chiến dịch.",
           "Không phải mục tiêu hộ tống bị động; cô có quyền đặt điều kiện, phản biện, từ chối và tạo kế hoạch."
         ],
         voice: "Bình tĩnh, kín, cụ thể; không trình diễn toàn bộ suy luận."
@@ -148,17 +150,19 @@ export const INITIAL_STATE = Object.freeze({
   turn: 0,
   scene: {
     id: "origin",
+    backgroundId: "long-hai-exterior",
     kicker: "HỒI 1 // LONG HẢI // 1899",
     title: "Biệt thự dưỡng bệnh",
     narration: [
-      "Cao Minh — Đạo Tổ của Vạn Ma Đạo Môn, tôn hiệu Vạn Giới Ma Tổ — đã có mặt tại Long Hải năm 1899, song kiếm Thái Cổ Song Sát theo bên mình. Trước mặt anh là một cơ sở Hứa Gia mang bộ mặt biệt thự dưỡng bệnh, nhưng các tuyến vận chuyển ban đêm, nhịp canh gác và dấu hiệu dị thường dưới nền nhà cho thấy nơi này còn một chức năng khác.",
-      "Mục tiêu không chỉ là tìm Hứa Tiểu Lan. Anh đã nhận bảo hộ cô: phải phá nghi thức, đưa cô rời khỏi Long Hải và phân biệt những gia nhân tự nguyện phục vụ với người bị lừa, bị ép hoặc đã mất quyền kiểm soát."
+      "Vạn Hoa Lầu nằm dưới chân Lôi Thiên Sơn; rượu ở đó không phải ngon nhất vùng, nhưng yên tĩnh nhất. Tối ấy Cao Minh ngồi một mình bên cửa sổ, chén mới nhấp được một nửa — làm Đạo Tổ bao nhiêu năm, anh vẫn giữ cái thói phàm tục là uống chậm. Rồi sàn gỗ dưới chân anh sáng lên: một vầng sáng tròn, lặng lẽ, không một tiếng động, mở ra ngay dưới ghế, và anh lọt thẳng vào trong trước khi kịp đặt chén xuống.",
+      "Anh rơi xuống bãi đất trước cổng một ngôi biệt thự kiểu Tây ở Long Hải. Năm ấy là 1899, Nam Kỳ còn thuộc Pháp — những chuyện đó lúc này không quan trọng. Quan trọng là bên trong biệt thự có một luồng tà khí đặc quánh, nặng đến mức người thường đứng gần hít phải cũng đủ sinh bệnh, và nó đang cuộn chặt quanh một người sống ở gian trong cùng. Cao Minh không gõ cửa xin phép: thứ khí này không chờ ai uống xong chén trà. Anh xông thẳng vào.",
+      "Gia nhân trong nhà kẻ bỏ chạy, người quỳ sụp, chẳng ai kịp hỏi người lạ từ đâu tới. Trong gian phòng trong cùng, Hứa Tiểu Lan — Tứ tiểu thư Hứa Gia — nằm bất động trên giường bệnh, hơi thở mỏng như sợi chỉ: tà khí đã thấm sâu vào kinh mạch, nặng đến mức chỉ chậm thêm nửa ngày là không còn người để cứu. Cao Minh không quen biết nhà họ Hứa, cũng không ai thuê anh tới đây. Nhưng bỏ mặc một người sắp bị tà khí nuốt trọn thì không phải cách làm việc của anh — huống hồ nguồn của luồng tà khí này và vầng sáng vừa ném anh tới 1899, rất có thể, là cùng một mối."
     ],
     dialogue: [],
     choices: [
-      "Dùng Vạn Giới Thần Niệm cảm nhận dị thường và phân tích chiến trường để phân loại điểm neo, vật chủ, dân thường và lối rút trước khi xâm nhập.",
-      "Quan sát nhịp thay ca, khóa đường rút an toàn rồi chọn tuyến vào kín đáo nhất, không để lộ thân phận và đạo hạnh thật.",
-      "Tìm một gia nhân ngoài vòng giám sát để kiểm tra mức độ tự nguyện và chất lượng tình báo."
+      "Ra tay cứu người trước: dùng chân khí cùng kiếm ý trấn áp tà khí trong kinh mạch Hứa Tiểu Lan, giữ lại mạng cô rồi mới tính tiếp.",
+      "Phong tỏa gian phòng, phóng Vạn Giới Thần Niệm truy ngược dòng tà khí để tìm nguồn phát và điểm neo của nó trong biệt thự.",
+      "Giữ lại một gia nhân đang hoảng loạn để tra hỏi: tà khí xuất hiện từ bao giờ, 'bệnh' của tiểu thư thực chất là gì, và những ai đã ra vào phòng cô."
     ]
   },
   currentLocation: "Long Hải, Nam Kỳ",
@@ -213,10 +217,10 @@ export const INITIAL_STATE = Object.freeze({
     facts: [],
     events: [],
     unresolvedThreads: [
-      "Xác định vị trí và tình trạng thật của Hứa Tiểu Lan.",
-      "Tìm chức năng bí mật của biệt thự Long Hải.",
-      "Phân loại gia nhân trước khi quyết định mức độ vũ lực.",
-      "Ngăn nghi thức mà không gây thương vong dân sự không cần thiết."
+      "Trừ tà khí đang xâm thực Hứa Tiểu Lan trước khi nó nuốt trọn cô.",
+      "Truy nguồn tà khí trong biệt thự Long Hải và phá điểm neo của nó.",
+      "Tìm hiểu vầng sáng đã ném Cao Minh từ Vạn Hoa Lầu tới Long Hải năm 1899.",
+      "Phân loại gia nhân trước khi quyết định mức độ vũ lực."
     ],
     resolvedThreads: [],
     characters: ["Cao Minh"],
