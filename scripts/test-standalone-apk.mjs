@@ -74,6 +74,9 @@ for (const modulePath of [
 if (!nativePipeline.includes("https://backrooms-gemini-proxy.onrender.com")) {
   throw new Error("Native pipeline thiếu làn proxy Render đã duyệt cho bản web.");
 }
+if (!nativePipeline.includes("https://backrooms-premium-proxy.onrender.com")) {
+  throw new Error("Native pipeline thiếu làn proxy premium đã duyệt cho bản web.");
+}
 
 const gradle = readFileSync("android/app/build.gradle.kts", "utf8");
 if (!gradle.includes('include("apk-ai/**")')) {

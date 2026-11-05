@@ -71,3 +71,5 @@ Workflow `.github/workflows/build-android-apk.yml` chạy preflight, build APK v
 Khi game chạy ngoài APK (trình duyệt), `src/native-ai-pipeline.js` tự động chuyển sang làn proxy: gọi `POST https://backrooms-gemini-proxy.onrender.com/gemini` với đúng hợp đồng generateContent (model, contents, systemInstruction, generationConfig) và cùng cặp model mặc định như APK. Proxy giữ API key ở server và tự luân phiên key; trang web không chứa bất kỳ API key nào.
 
 Trong APK, cầu nối native luôn được ưu tiên và làn proxy không bao giờ chạy — six-key pool đóng gói vẫn là đường duy nhất. Proxy có cold start (Render free tier) nên bản web ping `/health` ngay khi mở trang để đánh thức proxy trước lượt chơi đầu.
+
+Thứ tự làn web: **proxy premium trước** (`POST https://backrooms-premium-proxy.onrender.com/chat`, chuẩn OpenAI chat completions, model do server cố định — hiện là gemini-3.8-flash — chuyển tiếp nguyên vẹn tin nhắn hệ thống), **proxy Gemini dự phòng** khi premium lỗi. Chỉ thị hệ thống ở làn Gemini-proxy phải gấp vào `contents` vì proxy đó không chuyển tiếp field `systemInstruction` (đã kiểm chứng bằng test đối chứng).

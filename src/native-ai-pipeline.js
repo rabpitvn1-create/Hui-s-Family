@@ -21,9 +21,12 @@ import {
 const pendingRequests = new Map();
 let sequence = 0;
 
-// Làn AI cho bản web (ngoài APK): gọi Gemini qua proxy Render của chủ sở hữu.
+// Làn AI cho bản web (ngoài APK): gọi AI qua các proxy Render của chủ sở hữu.
 // API key chỉ nằm ở server của proxy, tuyệt đối không có trong source trang.
 // Trong APK, cầu nối native luôn được ưu tiên và làn này không chạy.
+// Thứ tự ưu tiên (owner chốt 2026-11-05): proxy premium trước (model mạnh ở
+// server, key riêng), proxy Gemini làm dự phòng khi premium lỗi.
+const PREMIUM_PROXY_URL = "https://backrooms-premium-proxy.onrender.com";
 const PROXY_BASE_URL = "https://backrooms-gemini-proxy.onrender.com";
 const PROXY_CONFIGURATION = Object.freeze({
   apiReady: true,
@@ -42,8 +45,9 @@ export function getProxyAiConfiguration() {
 
 export function warmUpProxyAi() {
   if (!hasProxyAiLane()) return;
-  // Render free tier có cold start: đánh thức proxy ngay khi mở trang để
-  // lượt chơi đầu không phải chờ. Lỗi được bỏ qua có chủ đích.
+  // Render free tier có cold start: đánh thức cả hai proxy ngay khi mở trang
+  // để lượt chơi đầu không phải chờ. Lỗi được bỏ qua có chủ đích.
+  fetch(`${PREMIUM_PROXY_URL}/health`).catch(() => {});
   fetch(`${PROXY_BASE_URL}/health`).catch(() => {});
 }
 
@@ -136,7 +140,70 @@ async function invokeProxyModelOnce(model, body) {
   }
 }
 
-async function invokeProxyModel({ model, systemInstruction, prompt, schema, maxOutputTokens }) {
+async function invokePremiumModel({ systemInstruction, prompt, schema, maxOutputTokens }) {
+  const schemaInstruction = `${systemInstruction}\n\nJSON SCHEMA BẮT BUỘC:\n${JSON.stringify(schema)}`;
+  // Proxy premium chuyển tiếp nguyên vẹn messages (kể cả role "system") tới
+  // provider OpenAI-compatible; model do server cố định, key nằm ở server.
+  const baseBody = {
+    messages: [
+      { role: "system", content: schemaInstruction },
+      { role: "user", content: prompt }
+    ],
+    max_tokens: Math.min(4096, Math.max(256, Number(maxOutputTokens) || 1024))
+  };
+
+  async function attempt(withJsonMode) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 75000);
+    try {
+      const response = await fetch(`${PREMIUM_PROXY_URL}/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(withJsonMode
+          ? { ...baseBody, response_format: { type: "json_object" } }
+          : baseBody),
+        signal: controller.signal
+      });
+      const data = await response.json().catch(() => null);
+      if (!response.ok) {
+        const detail = typeof data?.error === "string"
+          ? data.error
+          : data?.error?.message || `HTTP ${response.status}`;
+        const error = new Error(`Proxy premium lỗi: ${detail}`);
+        error.status = response.status;
+        throw error;
+      }
+      const text = String(data?.choices?.[0]?.message?.content || "").trim();
+      if (!text) throw new Error("Proxy premium không trả nội dung.");
+      return text;
+    } catch (error) {
+      if (error?.name === "AbortError") throw new Error("Proxy premium phản hồi quá thời gian.");
+      throw error instanceof Error ? error : new Error("Không thể gọi proxy premium.");
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  try {
+    return await attempt(true);
+  } catch (error) {
+    // Một số provider từ chối response_format: thử lại một lần không kèm nó.
+    if (error?.status === 400) return attempt(false);
+    throw error;
+  }
+}
+
+async function invokeProxyModel(args) {
+  // Premium trước theo lệnh owner; mọi lỗi của premium đều rơi xuống làn
+  // proxy Gemini bên dưới thay vì làm hỏng lượt chơi.
+  try {
+    return await invokePremiumModel(args);
+  } catch {
+    return invokeGeminiProxyModel(args);
+  }
+}
+
+async function invokeGeminiProxyModel({ model, systemInstruction, prompt, schema, maxOutputTokens }) {
   const schemaInstruction = `${systemInstruction}\n\nJSON SCHEMA BẮT BUỘC:\n${JSON.stringify(schema)}`;
   // Proxy chỉ chuyển tiếp model/contents/generationConfig (không chuyển
   // systemInstruction) nên chỉ thị hệ thống phải gấp vào contents làm phần đầu,
