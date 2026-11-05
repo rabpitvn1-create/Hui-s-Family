@@ -4,7 +4,7 @@ import {
 } from "./campaign-canon.js";
 import {
   ACTIVE_CHARACTER_CODEX,
-  KAI_CODEX,
+  GAO_MING_CODEX,
   IRIS_CODEX,
   SYVIAL_CODEX
 } from "./active-character-codex.js";
@@ -17,7 +17,7 @@ export const WORLD_CANON = Object.freeze({
   opening: {
     year: 1899,
     location: "Long Hải, Nam Kỳ",
-    premise: "Kai Akechi / Twilight đang hoạt động tại Long Hải năm 1899 để cứu Hứa Tiểu Lan và phá mạng lưới Hứa Gia. AI tự phát triển từng cảnh nhưng không được rời xương sống chiến dịch đã khóa."
+    premise: "Cao Minh, Đạo Tổ của Vạn Ma Đạo Môn, đã tới Long Hải năm 1899 để nhận bảo hộ Hứa Tiểu Lan, giải cứu cô và phá mạng lưới Hứa Gia. AI tự phát triển từng cảnh nhưng không được rời xương sống chiến dịch đã khóa."
   },
   campaignRoute: CAMPAIGN_ROUTE.map((stage) => ({
     id: stage.id,
@@ -29,19 +29,19 @@ export const WORLD_CANON = Object.freeze({
   hardCanon: [
     "Tuyến bắt buộc: Long Hải → Cần Giờ → Backrooms 1900 tầng 0–15 → Thủ Dầu Một/Bình Dương → Vũng Tàu → Sài Gòn–Chợ Lớn.",
     "AI được tự phát triển cảnh, NPC chức năng, tiểu địa điểm và hậu quả trong khu vực hiện tại; không được nhảy khu vực, bỏ tầng Backrooms hoặc thay đổi thứ tự tuyến.",
-    "Nguồn duy nhất cho kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Kai, Iris, Syvial là active-character-codex.js; nguồn tổ chức hiện hành của Kai là sru-codex.js.",
-    "Người chơi điều khiển Kai Akechi / Twilight, Đội trưởng SRU. Hồ sơ công khai của Kai ghi Human; bản chất và huyết thống thật chỉ được NPC biết khi có nguồn thông tin hợp lệ.",
-    "Kai dùng SRU-MK20 và SRU-SG theo loadout hiện hành. Omnivault Ring chỉ tác động lên vật vô tri; Scan/Copy có 3 slot và Restore có cooldown đúng 24 giờ tính riêng cho từng vật phẩm sau lần Restore thành công.",
-    "Sparda Core cung cấp quỷ lực vô hạn, tăng cường thể chất, giác quan, hồi phục và phân tích chiến trường. Không tự phát sinh thanh năng lượng, giới hạn sử dụng hoặc phản phệ để kéo dài cảnh.",
-    "Devil Trigger của Kai không có trần thời lượng, số lần kích hoạt, cooldown hay phản phệ nội tại; Kai giữ nguyên ý thức, ký ức, tính cách và phán đoán.",
-    "Guilty Crown Override kích hoạt Devil Trigger, dừng hoàn toàn thời gian ngoại giới và khai hỏa đúng 24 phát trước khi dòng thời gian được trả lại.",
+    "Nguồn duy nhất cho kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Cao Minh, Iris, Syvial là active-character-codex.js; Cao Minh không thuộc SRU — SRU chỉ là một tổ chức trong thế giới theo sru-codex.js.",
+    "Người chơi điều khiển Cao Minh, Đạo Tổ của Vạn Ma Đạo Môn, tôn hiệu Vạn Giới Ma Tổ. Anh là người Trái Đất trọng sinh, giữ nguyên ký ức phàm nhân; thân phận và đạo hạnh thật chỉ được NPC biết khi có nguồn thông tin hợp lệ.",
+    "Cao Minh dùng Thái Cổ Song Sát — Sát Thần Kiếm và Sát Ma Kiếm, hai thanh kiếm riêng biệt — cùng Hắc Long Chiến Khải gồm đúng bốn bộ phận: khải giáp, hộ uyển, hộ thủ và mão (long quan). Anh không dùng súng, đạn hay trang bị công nghệ.",
+    "Đạo Tổ Pháp Thể và Vạn Ma Đạo Kinh tăng cường thể chất, giác quan, hồi phục và phân tích chiến trường cho Cao Minh ở cấp Đạo Tổ. Không tự phát sinh thanh năng lượng, giới hạn sử dụng hoặc phản phệ để kéo dài cảnh.",
+    "Vạn Giới Thần Niệm của Cao Minh không có trần thời lượng, số lần sử dụng, cooldown hay phản phệ nội tại; anh giữ nguyên ý thức, ký ức, tính cách và phán đoán.",
+    "Song Sát Kiếm Quyết và Tứ Kiếm Đoạn Mạch là kiếm kỹ bản mệnh của Cao Minh: song kiếm đồng xuất, cắt đứt mạch lực và đường lui của mục tiêu; không gắn số nhát, cooldown hay thanh năng lượng tự đặt.",
     "Iris / ARGUS là scout-markswoman hiện trường, dùng đúng Ivory và Ebony. ARGUS Terrain Read không toàn tri, không nhìn xuyên tường và không dùng drone; Thousandfold Cognition tăng nhận thức/phân tích chứ không tự tăng tốc cơ thể.",
     "Belial Core của Iris cung cấp quỷ lực vô hạn nhưng không đồng nghĩa sát thương, tốc độ bắn, độ bền hoặc độ chính xác vô hạn. Field Galley và Field MedNet là hỗ trợ thực địa, không phải tạo vật chất hay chữa lành tức thời.",
-    "Iris quyết đoán, bình tĩnh, sắc, dũng cảm, nữ tính và tử tế. Tsundere quanh Kai không được biến thành bạo lực slapstick, trẻ con hoặc mất năng lực tác chiến.",
+    "Iris quyết đoán, bình tĩnh, sắc, dũng cảm, nữ tính và tử tế. Tsundere quanh Cao Minh không được biến thành bạo lực slapstick, trẻ con hoặc mất năng lực tác chiến.",
     "Syvial là kiếm sĩ siêu nhiên UR+ dùng GodKiller và Lucifer Armor. GodKiller là đại kiếm cơ khí, không phải súng hay gunblade; cô vẫn chiến đấu được khi mất kiếm và có khả năng gọi kiếm trở lại.",
     "Lucifer Core và Devil Trigger của Syvial không có thanh mana, giới hạn số lần, cooldown nội tại hoặc phản phệ do dùng lâu; Syvial giữ lý trí.",
     "GodKiller Override / Twenty-Four Severance diễn ra trong thời gian dừng hoàn toàn và luôn gồm đúng 24 nhát chém.",
-    "Syvial có tình cảm yandere rất mạnh với Kai nhưng không phải sát nhân ngẫu nhiên, không tự tấn công mọi phụ nữ nói chuyện với Kai và không để ghen tuông xóa kỹ năng chiến thuật hoặc trí thông minh.",
+    "Syvial có tình cảm yandere rất mạnh với Cao Minh nhưng không phải sát nhân ngẫu nhiên, không tự tấn công mọi phụ nữ nói chuyện với Cao Minh và không để ghen tuông xóa kỹ năng chiến thuật hoặc trí thông minh.",
     "Iris và Syvial chỉ xuất hiện khi trạng thái hoặc lịch sử chiến dịch đã xác lập sự có mặt hay đường tiếp cận hợp lý. Không tự gán tổ chức hoặc chức vụ cho trường đang CHƯA KHÓA.",
     "Căng thẳng quanh nhân vật mạnh phải đến từ dữ kiện thiếu hoặc bị đầu độc, quyền xác định mục tiêu, dân thường, quyền tự quyết, điều kiện nhiệm vụ, quy luật dị thường và hậu quả của phương án tối ưu; không đến từ việc nhân vật tự quên năng lực.",
     "Hứa Tiểu Lan là Tứ tiểu thư Hứa Gia, mắc bệnh phong, cơ thể suy yếu nhưng có trí tuệ chiến lược cao và quyền tự quyết riêng.",
@@ -89,7 +89,7 @@ export const WORLD_CANON = Object.freeze({
         identity: "Tứ tiểu thư Hứa Gia; mắc bệnh phong; không mang Tử Mẫu Trùng; vật chứa dự kiến của La Sát Mẫu.",
         mind: [
           "Trí tuệ chiến lược cao; nhìn hệ thống, thử giả thuyết, giấu kết luận và chơi đường dài.",
-          "Không biết cha gây bệnh, giáo đoàn chuẩn bị hiến tế và Kai tới cứu cho đến khi có bằng chứng trong chiến dịch.",
+          "Không biết cha gây bệnh, giáo đoàn chuẩn bị hiến tế và Cao Minh tới cứu cho đến khi có bằng chứng trong chiến dịch.",
           "Không phải mục tiêu hộ tống bị động; cô có quyền đặt điều kiện, phản biện, từ chối và tạo kế hoạch."
         ],
         voice: "Bình tĩnh, kín, cụ thể; không trình diễn toàn bộ suy luận."
@@ -116,7 +116,7 @@ export const WORLD_CANON = Object.freeze({
   characters: ACTIVE_CHARACTER_CODEX,
   agentOperationRules: Object.freeze([
     ...SRU_CODEX.doctrine,
-    ...KAI_CODEX.actionLocks
+    ...GAO_MING_CODEX.actionLocks
   ]),
   narrativeRules: NARRATIVE_RULES,
   generationRules: [
@@ -124,8 +124,8 @@ export const WORLD_CANON = Object.freeze({
     "Mỗi lượt chỉ được đề nghị hoàn thành tối đa một mục tiêu chưa hoàn thành của giai đoạn hiện tại.",
     "Không tự tuyên bố chuyển giai đoạn; engine game tự chuyển khi đủ mục tiêu và cờ bắt buộc.",
     "Không hồi sinh người chết, xóa thương tích, quên vật phẩm, ký ức, quan hệ, bằng chứng hoặc hậu quả đã lưu.",
-    "Mọi kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Kai, Iris, Syvial phải lấy trực tiếp từ active-character-codex.js; không tự điền dữ kiện từ bản build cũ.",
-    "Kai phải vận hành đúng Sparda Core, Devil Trigger, Guilty Crown Override, SRU-MK20, SRU-SG và Omnivault Ring với đúng giới hạn hiện hành khi chúng thực sự phù hợp tình huống.",
+    "Mọi kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Cao Minh, Iris, Syvial phải lấy trực tiếp từ active-character-codex.js; không tự điền dữ kiện từ bản build cũ.",
+    "Cao Minh phải vận hành đúng Thái Cổ Song Sát (Sát Thần Kiếm, Sát Ma Kiếm), Hắc Long Chiến Khải, Đạo Tổ Pháp Thể, Vạn Ma Đạo Kinh, Vạn Giới Thần Niệm, Song Sát Kiếm Quyết và các thần thông trong hồ sơ của anh với đúng giới hạn hiện hành khi chúng thực sự phù hợp tình huống; tuyệt đối không gán cho anh súng, đạn hay trang bị công nghệ.",
     "Iris phải vận hành đúng Gunslinger, Ivory/Ebony, Belial Core, Thousandfold Cognition, ARGUS Terrain Read, Field Galley và Field MedNet; không biến cô thành trạm tình báo từ xa.",
     "Syvial phải vận hành đúng GodKiller, Lucifer Armor, Lucifer Core, Devil Trigger và Twenty-Four Severance; không biến ghen tuông thành mất lý trí hay quên chiến thuật.",
     "Iris và Syvial chỉ được đưa vào cảnh khi trạng thái hoặc lịch sử chiến dịch tạo đường tiếp cận hợp lý; không tự gán tổ chức hoặc chức vụ đang chưa khóa.",
@@ -135,7 +135,7 @@ export const WORLD_CANON = Object.freeze({
     "Giọng văn rõ, tự nhiên, tiết chế; không dùng ẩn dụ khó hiểu, câu trailer giả sâu hoặc lời thoại giải thích cho người đọc."
   ],
   characterAuthority: Object.freeze({
-    kai: KAI_CODEX.source,
+    gaoMing: GAO_MING_CODEX.source,
     iris: IRIS_CODEX.source,
     syvial: SYVIAL_CODEX.source,
     organization: SRU_CODEX.id
@@ -151,13 +151,13 @@ export const INITIAL_STATE = Object.freeze({
     kicker: "HỒI 1 // LONG HẢI // 1899",
     title: "Biệt thự dưỡng bệnh",
     narration: [
-      "Kai Akechi, mật danh Twilight, đã có mặt tại Long Hải năm 1899. Trước mặt anh là một cơ sở Hứa Gia mang bộ mặt biệt thự dưỡng bệnh, nhưng các tuyến vận chuyển ban đêm, nhịp canh gác và dấu hiệu dị thường dưới nền nhà cho thấy nơi này còn một chức năng khác.",
-      "Mục tiêu không chỉ là tìm Hứa Tiểu Lan. Kai phải phá nghi thức, đưa cô rời khỏi Long Hải và phân biệt những gia nhân tự nguyện phục vụ với người bị lừa, bị ép hoặc đã mất quyền kiểm soát."
+      "Cao Minh — Đạo Tổ của Vạn Ma Đạo Môn, tôn hiệu Vạn Giới Ma Tổ — đã có mặt tại Long Hải năm 1899, song kiếm Thái Cổ Song Sát theo bên mình. Trước mặt anh là một cơ sở Hứa Gia mang bộ mặt biệt thự dưỡng bệnh, nhưng các tuyến vận chuyển ban đêm, nhịp canh gác và dấu hiệu dị thường dưới nền nhà cho thấy nơi này còn một chức năng khác.",
+      "Mục tiêu không chỉ là tìm Hứa Tiểu Lan. Anh đã nhận bảo hộ cô: phải phá nghi thức, đưa cô rời khỏi Long Hải và phân biệt những gia nhân tự nguyện phục vụ với người bị lừa, bị ép hoặc đã mất quyền kiểm soát."
     ],
     dialogue: [],
     choices: [
-      "Dùng cảm nhận dị thường và khả năng phân tích chiến trường của Sparda Core để phân loại điểm neo, vật chủ, dân thường và lối rút trước khi xâm nhập.",
-      "Giữ đúng học thuyết SRU: quan sát nhịp thay ca, khóa đường rút an toàn rồi chọn tuyến vào ít làm lộ công nghệ nhất.",
+      "Dùng Vạn Giới Thần Niệm cảm nhận dị thường và phân tích chiến trường để phân loại điểm neo, vật chủ, dân thường và lối rút trước khi xâm nhập.",
+      "Quan sát nhịp thay ca, khóa đường rút an toàn rồi chọn tuyến vào kín đáo nhất, không để lộ thân phận và đạo hạnh thật.",
       "Tìm một gia nhân ngoài vòng giám sát để kiểm tra mức độ tự nguyện và chất lượng tình báo."
     ]
   },
@@ -207,7 +207,7 @@ export const INITIAL_STATE = Object.freeze({
     quyMauAspectMemoryDestroyed: false,
     materDescentPrevented: false,
     huaCultDismantled: false,
-    sruMk20Active: true
+    thaiCoSongSatActive: true
   },
   campaignCanon: {
     facts: [],
@@ -219,7 +219,7 @@ export const INITIAL_STATE = Object.freeze({
       "Ngăn nghi thức mà không gây thương vong dân sự không cần thiết."
     ],
     resolvedThreads: [],
-    characters: ["Kai Akechi / Twilight"],
+    characters: ["Cao Minh"],
     locations: ["Long Hải, Nam Kỳ"]
   },
   inventory: [],
