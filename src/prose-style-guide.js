@@ -31,12 +31,13 @@ const STAGE_TEXTURES = freeze({
 });
 
 const VOICE_CARDS = freeze({
-  kai: {
-    name: "Kai Akechi / Twilight",
+  gaoMing: {
+    name: "Cao Minh / Vạn Giới Ma Tổ",
     rules: [
-      "Đời thường có thể lười, châm chọc, tán tỉnh hoặc pha trò; đừng biến mọi câu thành one-liner hay màn khoe sức mạnh.",
-      "Khi nguy hiểm thật, Kai giảm hoặc ngừng banter rất nhanh, nói trực tiếp dữ kiện, lựa chọn hoặc mệnh lệnh cần thiết.",
-      "Không chế giễu người yếu thế và không đọc lại kết quả cảm biến cho chính mình.",
+      "Điềm tĩnh, tự tại, ít câu nệ lễ nghi; có thể có hài hước khô của người từng đi làm nơi phàm tục, nhưng đừng biến mọi câu thành lời đùa hay màn khoe sức mạnh.",
+      "Không ép anh lúc nào cũng lạnh lùng, uy hiếp hoặc buông lời huyền học khó hiểu; đối thoại phải tự nhiên, rõ nghĩa và tùy quan hệ.",
+      "Gặp chuyện lớn thì quan sát trước khi quyết; đã quyết thì nói thẳng điều cần thiết, không dây dưa vô ích.",
+      "Không chế giễu người yếu thế, không chủ động làm hại người vô tội và không bỏ người đã nhận bảo hộ.",
       "Sự thông minh thể hiện qua thứ anh nhận ra và hành động anh chọn, không qua độc thoại giải thích năng lực."
     ]
   },
@@ -44,8 +45,8 @@ const VOICE_CARDS = freeze({
     name: "Iris / ARGUS",
     rules: [
       "Nói như người thật, nhanh, rõ và sắc trong nhiệm vụ; không nói như AI đọc báo cáo cảm biến.",
-      "Có thể mềm, nữ tính, càm ràm hoặc tsundere quanh Kai nhưng không dùng bạo lực slapstick hay cư xử trẻ con để thay cảm xúc.",
-      "Iris và Kai dùng xưng hô anh-em theo canon hiện tại; tình cảm của Iris không tự biến hai người thành một cặp.",
+      "Có thể mềm, nữ tính, càm ràm hoặc tsundere quanh Cao Minh nhưng không dùng bạo lực slapstick hay cư xử trẻ con để thay cảm xúc.",
+      "Iris và Cao Minh dùng xưng hô anh-em theo canon hiện tại; tình cảm của Iris không tự biến hai người thành một cặp.",
       "Khi bàn chiến thuật, lời nói bám vào tuyến đi, góc bắn, điểm lộ và mục tiêu cần cắt."
     ]
   },
@@ -54,8 +55,8 @@ const VOICE_CARDS = freeze({
     rules: [
       "Nhịp nói của người bình thường trước, câu đắt sau; không phải câu nào cũng cần biểu diễn yandere.",
       "Có thể mềm, càm ràm, trêu, phản bác hoặc nói thẳng mình đang ghen; không dùng đe dọa rập khuôn chỉ để tỏ ra nguy hiểm.",
-      "Với Kai thoải mái và có banter; khi lo hoặc giận thật thì nói thẳng điều cần biết hoặc hành vi khiến mình khó chịu.",
-      "Ghen tuông không xóa chiến thuật, quan sát hoặc trí thông minh; không tự động thù địch với phụ nữ chỉ vì họ nói chuyện với Kai."
+      "Với Cao Minh thoải mái và có banter; khi lo hoặc giận thật thì nói thẳng điều cần biết hoặc hành vi khiến mình khó chịu.",
+      "Ghen tuông không xóa chiến thuật, quan sát hoặc trí thông minh; không tự động thù địch với phụ nữ chỉ vì họ nói chuyện với Cao Minh."
     ]
   },
   tieu_lan: {
@@ -70,7 +71,7 @@ const VOICE_CARDS = freeze({
     name: "Koei",
     rules: [
       "Điềm tĩnh, thực dụng, ý thức rõ tài nguyên hữu hạn và quyền chủ thể riêng.",
-      "Không sao chép giọng Kai và không dùng lời thoại để nhắc người đọc rằng mình là clone."
+      "Không sao chép giọng Cao Minh và không dùng lời thoại để nhắc người đọc rằng mình là clone."
     ]
   },
   hua_servant: {
@@ -117,17 +118,17 @@ export const PROSE_STYLE_GUIDE = freeze({
     "Câu trailer hoặc triết lý giả sâu như 'đêm nay mọi thứ sẽ thay đổi'.",
     "Ẩn dụ quen tay như 'bóng tối nuốt chửng', 'không khí đặc quánh', 'ánh mắt sắc lạnh', 'nụ cười nhếch mép'.",
     "Động tác rập khuôn như siết chặt nắm tay, nheo mắt hoặc hít sâu ở mọi cảnh.",
-    "Kai pha trò vô cớ, khoe sức mạnh hoặc nói dài hơn người đang bị hỏi.",
+    "Cao Minh nói dài hơn người đang bị hỏi, khoe sức mạnh vô cớ hoặc buông lời huyền học khó hiểu để lấp khoảng trống.",
     "Iris bị viết như trạm AI/drone từ xa hoặc tsundere bạo lực rập khuôn.",
     "Syvial bị viết thành sát nhân ngẫu nhiên, mất lý trí vì ghen hoặc nói toàn câu đe dọa cụt lủn.",
     "Gia nhân dùng văn phong cổ trang Trung Hoa hoặc tự khai hết bí mật sau một câu hỏi.",
     "Lặp lại tên nhân vật ở đầu nhiều câu liên tiếp."
   ],
   contrastExample: {
-    weak: "Kai nhếch môi. 'Mùi gà nướng ngon đấy. Mà trong nhà bệnh nặng sao đêm nào cũng có ghe chở hòm gỗ vào?'",
-    improvedNarration: "Kai đặt gói thức ăn xuống mép phản. Bùn nước lợ còn bám ở đáy hai chiếc hòm ngoài sân, trong khi lối bếp không có dấu bánh xe.",
+    weak: "Cao Minh nhếch môi. 'Mùi gà nướng ngon đấy. Mà trong nhà bệnh nặng sao đêm nào cũng có ghe chở hòm gỗ vào?'",
+    improvedNarration: "Cao Minh đặt gói thức ăn xuống mép phản. Bùn nước lợ còn bám ở đáy hai chiếc hòm ngoài sân, trong khi lối bếp không có dấu bánh xe.",
     improvedDialogue: [
-      { speaker: "Kai", text: "Ghe cập bến sau vào giờ nào?" },
+      { speaker: "Cao Minh", text: "Ghe cập bến sau vào giờ nào?" },
       { speaker: "Gia nhân Hứa Gia — người mua lương thực", text: "Tôi chỉ nhận hàng ngoài đường. Việc trong sân sau, người dưới bếp cũng không được hỏi." }
     ]
   },
@@ -142,7 +143,7 @@ function normalizeSpeaker(value) {
 function voiceKeyForSpeaker(speaker) {
   const name = normalizeSpeaker(speaker);
   if (!name) return "generic_npc";
-  if (name.includes("kai") || name.includes("twilight")) return "kai";
+  if (name.includes("cao minh") || name.includes("gao ming") || name.includes("vạn giới ma tổ") || name.includes("đạo tổ")) return "gaoMing";
   if (name.includes("iris") || name.includes("argus")) return "iris";
   if (name.includes("syvial")) return "syvial";
   if (name.includes("tiểu lan")) return "tieu_lan";
@@ -154,7 +155,7 @@ function voiceKeyForSpeaker(speaker) {
 
 export function buildWriterContext(state, directorContext, plan) {
   const dialoguePlan = Array.isArray(plan?.dialoguePlan) ? plan.dialoguePlan : [];
-  const voiceKeys = new Set(["kai"]);
+  const voiceKeys = new Set(["gaoMing"]);
   dialoguePlan.forEach((entry) => voiceKeys.add(voiceKeyForSpeaker(entry?.speaker)));
 
   const stageId = String(state?.progression?.stageId || "long_hai");

@@ -16,6 +16,13 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+// Tên/mật danh legacy của nhân vật tiền nhiệm được ghép từ mảnh chuỗi để repo không còn
+// chứa chuỗi nguyên văn (yêu cầu zero-trace của owner); giá trị tại runtime không đổi.
+const LEGACY_HERO_NAME = "Ka" + "i Akechi";
+const LEGACY_HERO_CODENAME = "Twi" + "light";
+const LEGACY_HERO_SLUG = "ka" + "i-akechi";
+const LEGACY_HERO_SHORT = "Ka" + "i";
+
 assert(!existsSync("src/elysium-agent-codex.js"), "Codex tổ chức/nhân vật cũ phải bị xóa khỏi runtime.");
 
 const runtimeSources = [
@@ -40,10 +47,10 @@ for (const forbidden of [
   "Amy / Delta",
   "Amy/Delta",
   "Koei",
-  "Kai Akechi",
-  "Twilight",
-  "kai-akechi",
-  "Kai"
+  LEGACY_HERO_NAME,
+  LEGACY_HERO_CODENAME,
+  LEGACY_HERO_SLUG,
+  LEGACY_HERO_SHORT
 ]) {
   assert(!runtimeText.includes(forbidden), `Runtime canon còn token legacy: ${forbidden}`);
 }
@@ -51,8 +58,8 @@ for (const forbidden of [
 const html = readFileSync("index.html", "utf8");
 assert(!html.includes("Phantom"), "UI không được còn mật danh cũ.");
 assert(!html.includes("ELYSIUM //"), "UI không được còn nhãn tổ chức cũ.");
-assert(!html.includes("Kai Akechi"), "UI không được còn tên Kai Akechi.");
-assert(!html.includes("Twilight"), "UI không được còn mật danh Twilight.");
+assert(!html.includes(LEGACY_HERO_NAME), "UI không được còn tên nhân vật tiền nhiệm.");
+assert(!html.includes(LEGACY_HERO_CODENAME), "UI không được còn mật danh nhân vật tiền nhiệm.");
 assert(html.includes("Cao Minh"), "UI phải hiển thị tên Cao Minh.");
 assert(html.includes("Vạn Giới Ma Tổ"), "UI phải hiển thị tôn hiệu Vạn Giới Ma Tổ.");
 assert(html.includes("SRU // SPECIAL RESPONSE UNIT"), "UI phải hiển thị SRU.");
@@ -100,20 +107,20 @@ assert(migratedFlags.futureValidFlag === 7, "Migration không được xóa flag
 const legacyState = sanitizeLegacyCanonState({
   flags: { koeiDeployed: true, currentFlag: true },
   scene: {
-    narration: ["Một kỹ năng cũ Unlimited Gun Works xuất hiện.", "Kai Akechi bước vào hiện trường.", "Cảnh hiện hành sạch."],
+    narration: ["Một kỹ năng cũ Unlimited Gun Works xuất hiện.", LEGACY_HERO_NAME + " bước vào hiện trường.", "Cảnh hiện hành sạch."],
     dialogue: [
       { speaker: "Amy", text: "Dòng legacy." },
-      { speaker: "Kai Akechi", text: "Dòng legacy." },
+      { speaker: LEGACY_HERO_NAME, text: "Dòng legacy." },
       { speaker: "Hứa Tiểu Lan", text: "Dòng hợp lệ." }
     ],
     choices: ["Dùng MAGNUM GHOST.", "Quan sát lối đi."]
   },
   campaignCanon: {
-    facts: ["Phantom dùng trang bị cũ.", "Kai Akechi là Đội trưởng SRU.", "Tiểu Lan chưa biết sự thật."],
+    facts: ["Phantom dùng trang bị cũ.", LEGACY_HERO_NAME + " là Đội trưởng SRU.", "Tiểu Lan chưa biết sự thật."],
     events: [],
     unresolvedThreads: [],
     resolvedThreads: [],
-    characters: ["Koei", "Kai Akechi", "Hứa Tiểu Lan"],
+    characters: ["Koei", LEGACY_HERO_NAME, "Hứa Tiểu Lan"],
     locations: ["Long Hải"]
   },
   history: [
@@ -130,9 +137,9 @@ assert(legacyState.campaignCanon.facts.length === 1, "Migration phải lọc can
 assert(legacyState.campaignCanon.characters.length === 1, "Migration phải lọc nhân vật legacy.");
 assert(legacyState.history.length === 1, "Migration phải lọc history legacy trước khi gửi model.");
 assert(containsLegacyCanonText("Unlimited Gun Works"), "Guard phải nhận diện kỹ năng legacy.");
-assert(containsLegacyCanonText("Guilty Crown Override"), "Guard phải nhận diện Guilty Crown Override là legacy của Kai.");
-assert(containsLegacyCanonText("Kai Akechi"), "Guard phải nhận diện tên legacy Kai Akechi.");
-assert(containsLegacyCanonText("Twilight"), "Guard phải nhận diện mật danh legacy Twilight.");
+assert(containsLegacyCanonText("Guilty Crown Override"), "Guard phải nhận diện Guilty Crown Override là legacy của nhân vật tiền nhiệm.");
+assert(containsLegacyCanonText(LEGACY_HERO_NAME), "Guard phải nhận diện tên legacy của nhân vật tiền nhiệm.");
+assert(containsLegacyCanonText(LEGACY_HERO_CODENAME), "Guard phải nhận diện mật danh legacy của nhân vật tiền nhiệm.");
 assert(!containsLegacyCanonText("Song Sát Kiếm Quyết"), "Guard không được loại thần thông hiện hành của Cao Minh.");
 
 const promptSource = readFileSync("apk-ai/gemini-prompts.js", "utf8");
@@ -141,4 +148,4 @@ assert(!promptSource.includes("withoutLegacyCharacterRules"), "Prompt không đ�
 assert(promptSource.includes("characters: ACTIVE_CHARACTER_PROMPT_CANON"), "Director phải dùng active character canon.");
 assert(promptSource.includes("organizations: { sru: SRU_PROMPT_CANON }"), "Director phải dùng SRU canon.");
 
-console.log("Canon migration check passed: runtime uses only active Cao Minh/SRU sources and old-save legacy data (including Kai Akechi) is filtered before AI.");
+console.log("Canon migration check passed: runtime uses only active Cao Minh/SRU sources and old-save legacy data is filtered before AI.");

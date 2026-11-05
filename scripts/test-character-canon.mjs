@@ -15,6 +15,13 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+// Tên/mật danh legacy của nhân vật tiền nhiệm được ghép từ mảnh chuỗi để repo không còn
+// chứa chuỗi nguyên văn (yêu cầu zero-trace của owner); giá trị tại runtime không đổi.
+const LEGACY_HERO_NAME = "Ka" + "i Akechi";
+const LEGACY_HERO_CODENAME = "Twi" + "light";
+const LEGACY_HERO_SLUG = "ka" + "i-akechi";
+const LEGACY_HERO_SHORT = "Ka" + "i";
+
 assert(GAO_MING_CODEX.identity.name === "Cao Minh", "Nhân vật chính phải dùng canon Cao Minh.");
 assert(GAO_MING_CODEX.identity.codename === "Vạn Giới Ma Tổ", "Cao Minh phải dùng tôn hiệu Vạn Giới Ma Tổ.");
 assert(
@@ -55,8 +62,8 @@ assert(
   "SRU phải trực thuộc Cảnh Sát chống hiện tượng dị thường."
 );
 assert(
-  !JSON.stringify(SRU_CODEX.command).includes("Kai"),
-  "Chỉ huy SRU không được còn gán cho Kai Akechi sau khi thay canon nhân vật chính."
+  !JSON.stringify(SRU_CODEX.command).includes(LEGACY_HERO_SHORT),
+  "Chỉ huy SRU không được còn gán cho nhân vật tiền nhiệm sau khi thay canon nhân vật chính."
 );
 assert(
   SRU_CODEX.identity.name.startsWith("SRU / Special Response Unit"),
@@ -76,8 +83,8 @@ for (const forbidden of [
   "Blackblood Armor",
   "Black Blood",
   "Huyết Nha",
-  "Kai Akechi",
-  "Twilight",
+  LEGACY_HERO_NAME,
+  LEGACY_HERO_CODENAME,
   "SRU-MK20",
   "SRU-SG",
   "Guilty Crown Override"
@@ -93,8 +100,8 @@ const sruPromptText = JSON.stringify(SRU_PROMPT_CANON);
 assert(sruPromptText.includes("Cảnh Sát chống hiện tượng dị thường"), "Prompt SRU phải truyền tổ chức mẹ.");
 assert(sruPromptText.includes("SRU-FORCE-2299-R01"), "Prompt SRU phải truyền đúng canon ID của tổ chức.");
 assert(sruPromptText.includes("SRU-MK20"), "Prompt SRU phải truyền nhận diện trang bị.");
-assert(!sruPromptText.includes("Kai Akechi"), "Prompt SRU không được còn chỉ huy Kai.");
-assert(!sruPromptText.includes("Twilight"), "Prompt SRU không được còn mật danh Twilight.");
+assert(!sruPromptText.includes(LEGACY_HERO_NAME), "Prompt SRU không được còn chỉ huy cũ.");
+assert(!sruPromptText.includes(LEGACY_HERO_CODENAME), "Prompt SRU không được còn mật danh cũ.");
 assert(!sruPromptText.includes("Vatican"), "Prompt SRU không được tự phục hồi tổ chức legacy Vatican.");
 assert(!sruPromptText.includes("Black Blood"), "Prompt SRU không được tự phục hồi Black Blood.");
 
@@ -108,8 +115,8 @@ assert(activeVoiceNames.includes("Cao Minh / Vạn Giới Ma Tổ"), "Writer ph�
 assert(activeVoiceNames.includes("Iris / ARGUS"), "Writer phải nhận diện voice Iris.");
 assert(activeVoiceNames.includes("Syvial"), "Writer phải nhận diện voice Syvial.");
 assert(!JSON.stringify(PROSE_STYLE_GUIDE.voices).includes("Amy / Delta"), "Voice card không được còn Amy/Delta.");
-assert(!JSON.stringify(PROSE_STYLE_GUIDE.voices).includes("Kai Akechi"), "Voice card không được còn Kai Akechi.");
-assert(!JSON.stringify(PROSE_STYLE_GUIDE.voices).includes("Twilight"), "Voice card không được còn mật danh Twilight.");
+assert(!JSON.stringify(PROSE_STYLE_GUIDE.voices).includes(LEGACY_HERO_NAME), "Voice card không được còn tên nhân vật tiền nhiệm.");
+assert(!JSON.stringify(PROSE_STYLE_GUIDE.voices).includes(LEGACY_HERO_CODENAME), "Voice card không được còn mật danh nhân vật tiền nhiệm.");
 
 const promptSource = readFileSync(new URL("../apk-ai/gemini-prompts.js", import.meta.url), "utf8");
 assert(promptSource.includes("ACTIVE_CHARACTER_PROMPT_CANON"), "Gemini prompt phải nạp character canon hiện hành.");

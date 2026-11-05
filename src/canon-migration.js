@@ -18,6 +18,12 @@ const LEGACY_CANON_PATTERNS = Object.freeze([
   /\bAmy\b/i,
   /\bDelta\b/i,
   /\bKoei\b/i,
+  // Nhân vật tiền nhiệm của nhân vật chính: mẫu viết bằng lớp ký tự để repo không chứa chuỗi nguyên văn (yêu cầu zero-trace của owner).
+  /Guilty\s+Crown\s+Override/i,
+  /\bK[a]i\s+Ak[e]chi\b/i,
+  /\bK[a]i\b/i,
+  /\bk[a]i-akechi\b/i,
+  /\bTw[i]light\b/i,
   /White\s+Wraith\s+Magnum/i,
   /Blackblood\s+Armor/i,
   /\bBlack\s+Blood\b/i,

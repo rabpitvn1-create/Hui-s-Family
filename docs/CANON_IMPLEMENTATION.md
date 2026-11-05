@@ -4,22 +4,23 @@
 
 Runtime chỉ có hai nguồn có quyền định nghĩa nhân vật/tổ chức thế kỷ 29:
 
-- `src/active-character-codex.js`: Kai Akechi / Twilight, Iris / ARGUS và Syvial. File này khóa identity, personality, combat, equipment, relationships, voice và action locks của từng người.
-- `src/sru-codex.js`: SRU / Special Response Unit, tổ chức mẹ, học thuyết phản ứng hiện trường, cơ cấu chỉ huy và loadout SRU hiện hành của Kai.
+- `src/active-character-codex.js`: Cao Minh / Vạn Giới Ma Tổ (record CHAR.GAO_MING), Iris / ARGUS và Syvial. File này khóa identity, personality, combat, equipment, relationships, voice và action locks của từng người.
+- `src/sru-codex.js`: SRU / Special Response Unit, tổ chức mẹ, học thuyết phản ứng hiện trường, cơ cấu chỉ huy và trang bị tiêu chuẩn của tổ chức. Cao Minh không thuộc SRU và không giữ chức vụ nào trong SRU.
 
 `src/campaign-canon.js` chỉ giữ xương sống chiến dịch, Backrooms, objective và quy tắc kể chuyện. Nó không được chứa một character codex song song.
 
-`src/world-canon.js` nối xương sống chiến dịch với hai nguồn hiện hành trên. Không module nào khác được tự tạo kỹ năng, trang bị, tổ chức, tính cách hoặc quan hệ cho Kai, Iris và Syvial.
+`src/world-canon.js` nối xương sống chiến dịch với hai nguồn hiện hành trên. Không module nào khác được tự tạo kỹ năng, trang bị, tổ chức, tính cách hoặc quan hệ cho Cao Minh, Iris và Syvial.
 
-## Kai Akechi / Twilight
+## Cao Minh / Vạn Giới Ma Tổ
 
-- Đội trưởng SRU, hồ sơ công khai Human, combat tier UR+.
-- Loadout hiện hành: `SRU-MK20`, `SRU-SG`.
-- Sparda Core: quỷ lực vô hạn, tăng cường thể chất/giác quan, hồi phục và phân tích chiến trường; không tự sinh thanh năng lượng hay phản phệ.
-- Devil Trigger: không có trần thời lượng, số lần, cooldown hoặc phản phệ nội tại; Kai giữ lý trí.
-- Guilty Crown Override: dừng hoàn toàn thời gian ngoại giới và khai hỏa đúng 24 phát.
-- Omnivault Ring: chỉ tác động vật vô tri, Scan/Copy có 3 slot, Restore cooldown đúng 24 giờ cho từng vật phẩm sau lần Restore thành công.
-- Tính cách phải theo `KAI_CODEX.personality`, `principles`, `actionLocks` và `voice`; không lấy tính cách từ story/codex cũ.
+- Nhân vật chính, record `CHAR.GAO_MING` (nguồn: Cao Minh Codex R02 trên Drive, thư mục game/CHAR). Đạo Tổ của Vạn Ma Đạo Môn, đạo trường Lôi Thiên Sơn; không thuộc SRU.
+- Đạo hạnh: Đạo Tổ — không thay bằng cấp bậc số hóa kiểu UR+. Tuổi không rõ, không được ấn định.
+- Xuất thân: người Trái Đất trọng sinh sau khi tăng ca quá độ; ký ức phàm nhân còn nguyên.
+- Vũ khí bản mệnh: Thái Cổ Song Sát — Sát Thần Kiếm và Sát Ma Kiếm, hai thanh riêng biệt.
+- Giáp bản mệnh: Hắc Long Chiến Khải, đúng bốn bộ phận: khải giáp, hộ uyển, hộ thủ, mão.
+- Thần thông theo Codex R02 (13): Vạn Ma Đạo Kinh, Đạo Tổ Pháp Thể, Vạn Giới Thần Niệm, Lôi Thiên Độn Bộ, Hư Không Hoán Ảnh, Song Sát Kiếm Quyết, Tứ Kiếm Đoạn Mạch, Tĩnh Tâm Kiếm Minh, Vạn Ma Quy Tông, Trấn Thiên Đạo Ấn, Cửu Tiêu Lôi Ngục, Hắc Long Quy Nguyên, Vạn Giới Song Sát. Không tự gắn damage/proc/cooldown số cho thần thông.
+- Cấm đối với nhân vật chính: súng, hệ thống đạn cá nhân, giáp công nghệ, quỷ lực Sparda, Devil Trigger.
+- Tính cách phải theo `GAO_MING_CODEX.personality`, `principles`, `actionLocks` và `voice`; không lấy tính cách từ story/codex cũ.
 
 ## Iris / ARGUS
 
@@ -29,7 +30,7 @@ Runtime chỉ có hai nguồn có quyền định nghĩa nhân vật/tổ chức
 - Thousandfold Cognition tăng nhận thức/phân tích tới tỷ lệ đã khóa, không tự tăng tốc cơ thể.
 - ARGUS Terrain Read dựa trên quan sát trực tiếp, cảm biến giáp và địa hình; không toàn tri, không nhìn xuyên tường, không dùng drone.
 - Field Galley và Field MedNet là hỗ trợ thực địa, không phải tạo vật chất hoặc phép chữa lành tức thời.
-- Tsundere quanh Kai không được biến thành slapstick, trẻ con hoặc mất năng lực tác chiến.
+- Tsundere quanh Cao Minh không được biến thành slapstick, trẻ con hoặc mất năng lực tác chiến.
 
 ## Syvial
 
@@ -37,7 +38,7 @@ Runtime chỉ có hai nguồn có quyền định nghĩa nhân vật/tổ chức
 - GodKiller là đại kiếm cơ khí, không phải súng/gunblade. Syvial vẫn chiến đấu được khi mất kiếm và có khả năng gọi kiếm trở lại.
 - Lucifer Core và Devil Trigger không có mana bar, giới hạn số lần, cooldown nội tại hoặc phản phệ do dùng lâu; Syvial giữ lý trí.
 - GodKiller Override / Twenty-Four Severance diễn ra trong thời gian dừng hoàn toàn và luôn đúng 24 nhát chém.
-- Yandere với Kai không đồng nghĩa sát nhân ngẫu nhiên, tấn công mọi phụ nữ hoặc quên chiến thuật vì ghen.
+- Yandere với Cao Minh không đồng nghĩa sát nhân ngẫu nhiên, tấn công mọi phụ nữ hoặc quên chiến thuật vì ghen.
 
 ## Story spine
 
