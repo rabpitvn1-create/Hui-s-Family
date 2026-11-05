@@ -437,6 +437,84 @@ body.character-overlay-open { overflow: hidden; }
   #character-overlay-summary { font-size: .69rem; }
 }
 
+/* === v5 (2026-11-05) — responsive cho layout mới ============================
+   Header burger (#intel-toggle trong .campaign-header) · khung Snapshot
+   #snapshot-stage (overlay #stage-entity trái / #stage-character phải /
+   caption #stage-scene-name) · drawer #intel-panel ở mọi bề rộng · khung GM
+   + thanh Thao Tác/chat.
+   Kiểm tra tràn ngang ở 360px và 412px bằng rà soát thủ công từng rule:
+   mọi cột lưới dưới đây đều minmax(0,1fr) hoặc min-width:0, overlay bị chặn
+   bằng max-width % + object-fit: contain, drawer chốt 92vw, không phần tử
+   nào có bề rộng cố định lớn hơn khung nhìn ở hai mốc này. */
+
+/* Chế độ đọc với cấu trúc v5: ẩn thêm khung Snapshot, chỉ còn văn bản GM. */
+body.focus-mode #snapshot-stage,
+body.focus-mode .snapshot-stage { display: none; }
+
+@media (max-width: 1220px) {
+  #snapshot-stage, .snapshot-stage { height: 19rem; }
+}
+
+@media (max-width: 1020px) {
+  #snapshot-stage, .snapshot-stage { height: 17.5rem; }
+  /* Drawer đã là fixed ở mốc này (khối 1020px phía trên); chỉ chốt thêm trần
+     bề rộng để panel không bao giờ vượt khung nhìn khi safe-area = 0. */
+  .intel-panel { max-width: calc(100vw - 1rem); }
+}
+
+@media (max-width: 760px) {
+  /* 412px: 72vw ≈ 297px — đúng tỉ lệ khung minh họa trong mockup v5. */
+  #snapshot-stage, .snapshot-stage { height: min(72vw, 19rem); }
+
+  /* Overlay không lấn hết chiều ngang và không đè caption ở giữa khung. */
+  #stage-entity, #stage-character {
+    object-fit: contain;
+    max-height: 100%;
+  }
+  #stage-entity { max-width: 44%; }
+  #stage-character { max-width: 56%; }
+  #stage-scene-name, .stage-scene-name {
+    z-index: 5;
+    max-width: min(80%, 24rem);
+    text-align: center;
+  }
+
+  /* Drawer máy nhỏ: 92vw như brief (412px → ~379px, 360px → ~331px). */
+  .intel-panel { width: min(92vw, 24rem); }
+
+  /* Khung GM + thanh Thao Tác/chat: chặn mọi nguồn tràn ngang. */
+  .story-panel, .ai-game-master, .choice-deck, .choices, .choice { min-width: 0; }
+  .choice > * { min-width: 0; }
+  .command-field { grid-template-columns: 2rem minmax(0,1fr); }
+  .ai-game-master textarea { min-width: 0; }
+  .ai-actions { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .ai-actions button { min-width: 0; white-space: normal; }
+  .ai-actions #actions-toggle,
+  .ai-actions #ai-submit { grid-column: 1 / -1; }
+}
+
+@media (max-width: 440px) {
+  /* 360px: 76vw ≈ 274px; trần 17.5rem giữ khung không quá cao. */
+  #snapshot-stage, .snapshot-stage { height: min(76vw, 17.5rem); }
+
+  /* Header thu gọn: bỏ stamp SRU và chữ cạnh burger, chỉ còn icon + tiêu đề. */
+  .elysium-stamp { display: none; }
+  .burger-text { display: none; }
+
+  .intel-panel { width: 92vw; }
+  .ai-status { max-width: 9rem; }
+
+  /* Ghi đè lại lưới 2 cột của mốc 760px phía trên: máy rất hẹp xếp 1 cột. */
+  .ai-actions { grid-template-columns: minmax(0,1fr); }
+  .ai-actions #actions-toggle,
+  .ai-actions #ai-submit { grid-column: auto; }
+}
+
+@media (max-width: 380px) {
+  .campaign-header h1 { font-size: 1.8rem; }
+  #snapshot-stage, .snapshot-stage { height: min(78vw, 16rem); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     scroll-behavior: auto !important;
