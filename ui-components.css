@@ -290,3 +290,147 @@ body[data-threat="critical"] .encounter-visual {
     repeating-linear-gradient(0deg, transparent 0 5px, rgba(173,67,59,.045) 6px, transparent 7px),
     #0d0807;
 }
+
+/* ==========================================================================
+   v5 — Khung GM + components trong drawer (theo mockup v5, 2026-11-05)
+   Chỉ tinh chỉnh component: layout tổng thể thuộc ui-layout.css, font/biến
+   gốc thuộc styles.css. Các selector có ID (#ai-game-master, #actions-toggle…)
+   để thắng ai-styles.css (nạp sau file này) ở đúng các điểm cần thiết.
+   ========================================================================== */
+
+/* --- Khung GM: scene-header gọn như mockup --- */
+.story-panel .scene-header h2 {
+  max-width: 26ch;
+  margin-top: .55rem;
+  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+  letter-spacing: -.02em;
+  line-height: 1.08;
+}
+#scene-kicker { font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.story-panel .turn-seal {
+  padding: .28rem .72rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .25);
+}
+.story-panel .scene-rule { height: 1rem; margin: .55rem 0 1rem; }
+
+/* --- Khung GM: thân truyện dễ đọc --- */
+.story-panel .story-text { font-size: clamp(1.04rem, 1.3vw, 1.2rem); line-height: 1.85; }
+.story-text .dialogue.has-avatar > .dialogue-avatar,
+.ai-dialogue-line.has-avatar > .dialogue-avatar { border-radius: .6rem; }
+
+/* --- Khung GM: deck phương án dạng danh sách nút bo góc --- */
+.story-panel .choice-deck { margin-top: 1.6rem; }
+.choice-deck[hidden] { display: none; }
+.story-panel .section-heading h3 { font-size: 1.15rem; }
+.story-panel .choice {
+  min-height: 3.6rem;
+  border-radius: var(--radius-md);
+}
+.story-panel .choice-number { flex: 0 0 auto; }
+
+/* --- Thanh đáy khung GM: Thao Tác + đoạn chat của player --- */
+#ai-game-master .command-field {
+  border-color: rgba(189, 148, 88, .4);
+  border-radius: 1.6rem;
+  background: #0f0b09;
+}
+#ai-game-master .command-field:focus-within {
+  border-color: var(--brass-pale);
+  box-shadow: 0 0 0 3px rgba(226, 197, 143, .1);
+}
+#ai-game-master #ai-action {
+  min-height: 3.4rem;
+  padding: .8rem 1rem .8rem .35rem;
+  font-size: .92rem;
+  line-height: 1.5;
+}
+#ai-game-master .ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .6rem;
+}
+.ai-actions #actions-toggle {
+  min-height: 2.9rem;
+  padding: .62rem 1.25rem;
+  border: 1px solid var(--brass-pale);
+  border-radius: 999px;
+  color: #24150e;
+  background: linear-gradient(135deg, var(--brass-pale), var(--brass));
+  font-size: .78rem;
+  font-weight: 750;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, .28);
+  cursor: pointer;
+}
+.ai-actions #actions-toggle:hover:not(:disabled) { color: #140c08; border-color: var(--brass-pale); }
+.ai-actions #ai-submit {
+  min-height: 2.9rem;
+  padding: .62rem 1.15rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--brass-pale);
+  background: rgba(189, 148, 88, .14);
+  font-size: .78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ai-actions #ai-clear {
+  min-height: 2.9rem;
+  padding: .62rem 1rem;
+  border: 1px solid rgba(201, 168, 111, .14);
+  border-radius: 999px;
+  color: var(--ink-faint);
+  background: transparent;
+  font-size: .74rem;
+  cursor: pointer;
+}
+.ai-actions #ai-api-keys {
+  min-height: 2.9rem;
+  padding: .62rem 1rem;
+  border: 1px dashed rgba(201, 168, 111, .25);
+  border-radius: 999px;
+  color: var(--ink-faint);
+  background: transparent;
+  font-size: .74rem;
+  cursor: pointer;
+}
+#ai-game-master .ai-note { margin-top: .55rem; }
+
+/* --- Drawer: profile card + avatar tròn --- */
+.intel-panel .profile-card { padding: .85rem; border-radius: var(--radius-md); }
+.intel-panel .portrait-frame {
+  width: 5.4rem;
+  height: 5.4rem;
+  aspect-ratio: 1;
+  border-color: var(--line-strong);
+  border-radius: 50%;
+}
+.intel-panel .portrait-frame img { object-position: 50% 28%; }
+.intel-panel .target-mark { border-radius: 999px; }
+.intel-panel .profile-vitals div { border-radius: var(--radius-sm); }
+
+/* --- Drawer: meter bars bo tròn (+ bản Firefox) --- */
+.status-item dt { letter-spacing: .05em; text-transform: uppercase; }
+meter::-webkit-meter-bar { border-radius: 999px; }
+meter::-webkit-meter-optimum-value { border-radius: 999px; }
+meter::-moz-meter-bar { border-radius: 999px; background: linear-gradient(90deg, #745638, var(--brass-pale)); }
+.danger-metric meter::-moz-meter-bar { background: linear-gradient(90deg, #6f2824, var(--seal-bright)); }
+.safety-metric meter::-moz-meter-bar { background: linear-gradient(90deg, #52654a, #9eb38e); }
+
+/* --- Drawer: nguồn lực, nhật ký, nút điều khiển --- */
+.resource-grid { gap: .55rem; }
+.resource-grid div { border-radius: var(--radius-md); }
+.mission-log { border-radius: var(--radius-md); }
+.controls button { min-height: 2.7rem; border-radius: var(--radius-md); }
+
+/* --- Trạng thái focus dùng chung cho component tương tác --- */
+.choice:focus-visible,
+.ai-actions button:focus-visible,
+.controls button:focus-visible,
+.mission-log summary:focus-visible {
+  outline: 2px solid var(--brass-pale);
+  outline-offset: 2px;
+}
