@@ -33,18 +33,20 @@ const huaServantAvatar = Object.freeze({
   type: "servant"
 });
 
-const kaiAvatar = Object.freeze({
-  src: "assets/avatars/kai.svg",
-  alt: "Chân dung Kai Akechi, mật danh Twilight",
-  type: "sru"
+const caoMinhAvatar = Object.freeze({
+  src: "assets/avatars/main-avatar.jpg",
+  alt: "Chân dung Cao Minh, tôn hiệu Vạn Giới Ma Tổ",
+  type: "protagonist"
 });
 
 const avatarBySpeaker = Object.freeze({
-  kai: kaiAvatar,
-  "kai akechi": kaiAvatar,
-  twilight: kaiAvatar,
-  "kai akechi / twilight": kaiAvatar,
-  "kai akechi/twilight": kaiAvatar,
+  "cao minh": caoMinhAvatar,
+  "gao ming": caoMinhAvatar,
+  "vạn giới ma tổ": caoMinhAvatar,
+  "đạo tổ": caoMinhAvatar,
+  "đạo tổ vạn ma": caoMinhAvatar,
+  "cao minh / vạn giới ma tổ": caoMinhAvatar,
+  "cao minh/vạn giới ma tổ": caoMinhAvatar,
   "tiểu lan": { src: "assets/avatars/tieu-lan.svg", alt: "Chân dung Hứa Tiểu Lan", type: "target" },
   "hứa tiểu lan": { src: "assets/avatars/tieu-lan.svg", alt: "Chân dung Hứa Tiểu Lan", type: "target" },
   "gia nhân": huaServantAvatar,

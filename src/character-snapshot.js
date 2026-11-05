@@ -1,15 +1,11 @@
-import { KAI_CODEX } from "./active-character-codex.js";
-
-const KAI_IDENTITY = KAI_CODEX.identity;
-
 const DEFAULT_CHARACTER = Object.freeze({
-  id: "kai",
-  name: KAI_IDENTITY.name,
-  alias: KAI_IDENTITY.codename,
-  role: `${KAI_IDENTITY.position.toUpperCase()} SRU`,
-  summary: `${KAI_IDENTITY.combatTier} · chỉ huy hiện trường · xạ thủ chủ lực`,
+  id: "gao-minh",
+  name: "Cao Minh",
+  alias: "Vạn Giới Ma Tổ",
+  role: "Đạo Tổ · Vạn Ma Đạo Môn",
+  summary: "Người Trái Đất trọng sinh sau một đêm tăng ca quá độ; song kiếm Thái Cổ Song Sát, Hắc Long Chiến Khải hộ thân; đã nhận bảo hộ Hứa Tiểu Lan.",
   image: "assets/avatars/main-avatar.jpg",
-  alt: `Chân dung ${KAI_IDENTITY.name}, mật danh ${KAI_IDENTITY.codename}`
+  alt: "Chân dung Cao Minh, tôn hiệu Vạn Giới Ma Tổ"
 });
 
 function cleanText(value, fallback, maxLength = 160) {
@@ -81,7 +77,7 @@ function buildOverlay() {
         <p id="character-overlay-role" class="micro-label">${DEFAULT_CHARACTER.role}</p>
         <h2 id="character-overlay-name">${DEFAULT_CHARACTER.name} <span id="character-overlay-alias">/ ${DEFAULT_CHARACTER.alias}</span></h2>
         <p id="character-overlay-summary">${DEFAULT_CHARACTER.summary}</p>
-        <span id="character-overlay-code" class="character-overlay-code">SNAPSHOT // KAI</span>
+        <span id="character-overlay-code" class="character-overlay-code">SNAPSHOT // GAO-MINH</span>
       </div>
     </section>
   `;
