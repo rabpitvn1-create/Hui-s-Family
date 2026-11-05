@@ -98,10 +98,6 @@ export function initMissionInterface() {
   const stageEntity = document.querySelector("#stage-entity");
   const stageSceneName = document.querySelector("#stage-scene-name");
   const stageBackground = document.querySelector("#stage-background");
-  const stageCharacter = document.querySelector("#stage-character");
-  const characterWrap = document.querySelector(".stage-character-wrap");
-  const equipButtons = [...document.querySelectorAll("[data-equip-sword]")];
-  const equipmentName = document.querySelector("#equipment-name");
   let lastSceneId = "";
   let sceneAnimationTimer = 0;
 
@@ -144,57 +140,6 @@ export function initMissionInterface() {
       // Giao diện vẫn hoạt động khi localStorage bị chặn.
     }
   }
-
-  // Trang bị Song Sát: Cao Minh cầm MỘT thanh trên tay (ảnh ghép sẵn, kiếm
-  // nằm dưới mảng bàn tay), thanh còn lại lơ lửng hộ vệ bên thân như cũ.
-  // Ấn lại thanh đang cầm = cất kiếm (cả hai cùng lơ lửng, ảnh gốc).
-  // Lựa chọn lưu localStorage — là tuỳ chọn hiển thị, không thuộc bản lưu chiến dịch.
-  const EQUIPMENT = Object.freeze({
-    a: { src: "assets/overlay/main-character-sword-a.png", name: "Sát Thần Kiếm" },
-    b: { src: "assets/overlay/main-character-sword-b.png", name: "Sát Ma Kiếm" },
-    none: { src: "assets/overlay/main-character.png", name: "Không cầm — Song Sát lơ lửng hộ vệ" }
-  });
-  let equippedSword = "a";
-  let equipSwapTimer = 0;
-
-  function applyEquipment(state, { save = true, instant = false } = {}) {
-    equippedSword = EQUIPMENT[state] ? state : "a";
-    const config = EQUIPMENT[equippedSword];
-    if (characterWrap) characterWrap.dataset.equipped = equippedSword;
-    equipButtons.forEach((button) => {
-      const active = button.dataset.equipSword === equippedSword;
-      button.classList.toggle("is-equipped", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
-    if (equipmentName) equipmentName.textContent = config.name;
-    if (stageCharacter && stageCharacter.getAttribute("src") !== config.src) {
-      window.clearTimeout(equipSwapTimer);
-      if (instant) {
-        stageCharacter.setAttribute("src", config.src);
-        stageCharacter.classList.remove("is-swapping");
-      } else {
-        stageCharacter.classList.add("is-swapping");
-        equipSwapTimer = window.setTimeout(() => {
-          stageCharacter.setAttribute("src", config.src);
-          stageCharacter.classList.remove("is-swapping");
-        }, 140);
-      }
-    }
-    if (save) {
-      try {
-        window.localStorage.setItem("hua-equipment-sword", equippedSword);
-      } catch {
-        // Giao diện vẫn hoạt động khi localStorage bị chặn.
-      }
-    }
-  }
-
-  equipButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const target = button.dataset.equipSword;
-      applyEquipment(target === equippedSword ? "none" : target);
-    });
-  });
 
   function animateScene(sceneId) {
     if (!storyPanel || !sceneId || sceneId === lastSceneId) return;
@@ -328,21 +273,10 @@ export function initMissionInterface() {
   } catch {
     setFocusMode(false);
   }
-  // Trang bị: nạp trước cả ba ảnh nhân vật để đổi kiếm không chớp, rồi áp
-  // lựa chọn đã lưu (mặc định cầm Sát Thần Kiếm như HTML).
-  Object.values(EQUIPMENT).forEach(({ src }) => {
-    const preload = new Image();
-    preload.src = src;
-  });
-  try {
-    applyEquipment(window.localStorage.getItem("hua-equipment-sword") || "a", { save: false, instant: true });
-  } catch {
-    applyEquipment("a", { save: false, instant: true });
-  }
   // Mặc định: deck phương án đang hiện (aria-expanded="true"), trừ khi HTML ghi rõ "false".
   setChoicesOpen(actionsToggle ? actionsToggle.getAttribute("aria-expanded") !== "false" : true);
   syncIntelAccessibility();
   resizeActionInput();
 
-  return Object.freeze({ sync, setIntelOpen, setFocusMode, applyEquipment });
+  return Object.freeze({ sync, setIntelOpen, setFocusMode });
 }
