@@ -627,17 +627,5 @@ body .campaign-header {
   background: var(--brass-pale);
 }
 #intel-toggle .burger-text { display: none; }
-.turn-chip {
-  flex: none;
-  border: 1px solid var(--brass);
-  border-radius: 999px;
-  padding: .34rem .68rem;
-  color: var(--brass-pale);
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
 #intel-panel .elysium-stamp { margin: .85rem .9rem 0; }
 #intel-panel .route-readout { margin: .85rem .9rem 0; }
