@@ -38,20 +38,22 @@ body.focus-mode .story-panel { width: 100%; }
   .game-layout { grid-template-columns: 220px minmax(0,1fr); }
   .field-rail { position: static; }
 
+  /* v5: drawer sát mép phải, full-height ở mọi bề rộng (đồng bộ ui-layout.css). */
   .intel-panel {
     position: fixed;
-    top: max(.5rem, env(safe-area-inset-top));
-    right: max(.5rem, env(safe-area-inset-right));
-    bottom: max(.5rem, env(safe-area-inset-bottom));
-    z-index: 80;
-    width: min(24rem, calc(100vw - 1rem));
+    top: 0;
+    right: 0;
+    bottom: auto;
+    height: 100dvh;
+    z-index: 120;
+    width: min(420px, 92vw);
     max-height: none;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(calc(100% + 1.5rem));
+    transform: translateX(105%);
     transition: transform 230ms ease, opacity 230ms ease, visibility 230ms ease;
   }
-  .intel-scroll { max-height: calc(100vh - 5.6rem); }
+  .intel-scroll { max-height: none; }
   #intel-close { display: grid; place-items: center; }
 
   .intel-scrim {
@@ -81,9 +83,8 @@ body.focus-mode .story-panel { width: 100%; }
 
   .shell { width: 100%; padding-top: 0; }
 
+  /* v5: header luôn là hàng ngang (burger trái, tiêu đề, nút focus). */
   .campaign-header {
-    flex-direction: column;
-    align-items: stretch;
     gap: .85rem;
     min-height: 0;
     padding: max(.9rem, env(safe-area-inset-top)) 1rem 1rem;
@@ -91,7 +92,6 @@ body.focus-mode .story-panel { width: 100%; }
     border-right: 0;
   }
   body.native-apk .campaign-header { padding-right: 4.2rem; }
-  h1 { font-size: clamp(2.15rem,11vw,3.25rem); }
   .elysium-stamp { min-width: 0; padding: .55rem .7rem; }
   .stamp-sigil { width: 2.2rem; height: 2.2rem; font-size: 1.05rem; }
 

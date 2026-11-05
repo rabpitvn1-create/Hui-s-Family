@@ -548,6 +548,7 @@ body.intel-open .intel-scrim {
   transition: opacity 260ms ease, visibility 260ms ease;
 }
 
+#stage-entity.stage-entity-on,
 .snapshot-stage.stage-entity-on #stage-entity,
 body.stage-entity-on #stage-entity {
   opacity: 1;
