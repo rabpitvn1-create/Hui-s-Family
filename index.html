@@ -22,6 +22,13 @@
 
   <div class="shell">
     <header class="campaign-header">
+      <button id="intel-toggle" class="mission-tool burger-toggle" type="button" aria-controls="intel-panel" aria-expanded="false">
+        <span class="burger-line" aria-hidden="true"></span>
+        <span class="burger-line" aria-hidden="true"></span>
+        <span class="burger-line" aria-hidden="true"></span>
+        <span class="burger-text">Hồ sơ hiện trường</span>
+      </button>
+
       <div class="heritage-mark">
         <p class="ledger-tab">HỨA GIA · LONG HẢI · NAM KỲ · 1899</p>
         <h1>Hứa Gia <span>LIBERA-1899</span></h1>
@@ -35,14 +42,13 @@
           <small>FIELD JUDGMENT · CIVILIAN FIRST · 2299</small>
         </span>
       </div>
-    </header>
 
-    <nav class="mission-bar" aria-label="Điều khiển hồ sơ chiến dịch">
-      <button id="intel-toggle" class="mission-tool" type="button" aria-controls="intel-panel" aria-expanded="false">
-        <span aria-hidden="true">☷</span>
-        Hồ sơ hiện trường
+      <button id="focus-toggle" class="mission-tool" type="button" aria-pressed="false">
+        <span aria-hidden="true">◉</span>
+        Chế độ đọc
       </button>
 
+      <div class="sub-strip">
       <div class="route-readout" aria-label="Tiến độ tuyến chiến dịch">
         <div class="route-readout-copy">
           <span id="route-step-label">Hồi 1 · Long Hải</span>
@@ -52,71 +58,18 @@
           <span id="route-progress"></span>
         </div>
       </div>
+      </div>
+    </header>
 
-      <button id="focus-toggle" class="mission-tool" type="button" aria-pressed="false">
-        <span aria-hidden="true">◉</span>
-        Chế độ đọc
-      </button>
-    </nav>
 
     <main class="game-layout">
-      <aside class="field-rail" aria-label="Hồ sơ nhân vật và tuyến hành quân">
-        <section class="profile-card operator-card">
-          <div class="portrait-frame">
-            <img src="assets/avatars/kai.svg" alt="Chân dung Kai Akechi, mật danh Twilight" width="160" height="160">
-            <span class="portrait-corner portrait-corner-a" aria-hidden="true"></span>
-            <span class="portrait-corner portrait-corner-b" aria-hidden="true"></span>
-          </div>
-          <div class="profile-copy">
-            <p class="micro-label">ĐỘI TRƯỞNG SRU</p>
-            <h2>Kai Akechi <span>/ Twilight</span></h2>
-            <p>UR+ · chỉ huy hiện trường · xạ thủ chủ lực</p>
-          </div>
-        </section>
+      <section id="snapshot-stage" class="snapshot-stage" aria-label="Khung Snapshot minh họa">
+        <div class="stage-bg" aria-hidden="true"></div>
+        <img id="stage-entity" class="stage-entity" src="assets/overlay/entity-01.png" alt="" aria-hidden="true">
+        <img id="stage-character" class="stage-character" src="assets/overlay/main-character.png" alt="Nhân vật chính">
+        <div class="stage-caption"><span id="stage-scene-name">Biệt thự dưỡng bệnh</span></div>
+      </section>
 
-        <section class="profile-card target-card">
-          <div class="portrait-frame">
-            <img src="assets/avatars/tieu-lan.svg" alt="Hồ sơ mục tiêu bảo hộ Hứa Tiểu Lan" width="160" height="160">
-            <span class="target-mark" aria-hidden="true">HTL-04</span>
-          </div>
-          <div class="profile-copy">
-            <p class="micro-label">MỤC TIÊU BẢO HỘ</p>
-            <h2>Hứa Tiểu Lan</h2>
-            <p>Tứ tiểu thư · không mang Tử Mẫu Trùng</p>
-          </div>
-          <dl class="profile-vitals">
-            <div><dt>Sức khỏe</dt><dd id="lan-health-rail">100%</dd></div>
-            <div><dt>Ảnh hưởng Mẫu</dt><dd id="lan-influence-rail">0%</dd></div>
-          </dl>
-        </section>
-
-        <section id="encounter-monitor" class="encounter-monitor" aria-live="polite">
-          <div class="encounter-visual" aria-hidden="true">
-            <span class="scan-line"></span>
-            <span class="biological-shadow"></span>
-          </div>
-          <div class="encounter-copy">
-            <p class="micro-label">DẤU SINH HỌC / CHƯA PHÂN LOẠI</p>
-            <strong id="encounter-title">Không có tiếp xúc trực diện</strong>
-            <span id="encounter-caption">Cảm biến chỉ ghi nhận nhiễu nền quanh biệt thự.</span>
-          </div>
-        </section>
-
-        <section class="route-ledger" aria-labelledby="route-ledger-title">
-          <div class="rail-heading">
-            <p class="micro-label">XƯƠNG SỐNG CHIẾN DỊCH</p>
-            <h2 id="route-ledger-title">Tuyến hành quân</h2>
-          </div>
-          <ol id="campaign-route-list">
-            <li data-route-stage="long_hai"><span>01</span><strong>Long Hải</strong><small>Giải cứu Tiểu Lan</small></li>
-            <li data-route-stage="can_gio"><span>02</span><strong>Cần Giờ</strong><small>Đường trùng nước lợ</small></li>
-            <li data-route-stage="backrooms"><span>03</span><strong>Backrooms 1900</strong><small>16 tầng vô nghĩa</small></li>
-            <li data-route-stage="thu_dau_mot"><span>04</span><strong>Thủ Dầu Một</strong><small>Dấu vết La Hầu</small></li>
-            <li data-route-stage="vung_tau"><span>05</span><strong>Vũng Tàu</strong><small>Mộng và ký ức</small></li>
-            <li data-route-stage="sai_gon_cho_lon"><span>06</span><strong>Sài Gòn–Chợ Lớn</strong><small>Nhà chính Hứa Gia</small></li>
-          </ol>
-        </section>
-      </aside>
 
       <section id="story-panel" class="story-panel" aria-labelledby="scene-title">
         <header class="scene-header">
@@ -168,7 +121,8 @@
           </div>
 
           <div class="ai-actions">
-            <button id="ai-submit" type="button">Thi hành hành động</button>
+            <button id="actions-toggle" type="button" aria-expanded="true">Thao Tác</button>
+            <button id="ai-submit" type="button">Gửi</button>
             <button id="ai-clear" type="button">Xóa nội dung</button>
             <button id="ai-api-keys" type="button" hidden>Cấu hình API key</button>
           </div>
@@ -187,6 +141,61 @@
         </header>
 
         <div class="intel-scroll">
+          <section class="profile-card operator-card drawer-profile">
+            <div class="portrait-frame">
+              <img src="assets/avatars/kai.svg" alt="Chân dung Kai Akechi, mật danh Twilight" width="160" height="160">
+              <span class="portrait-corner portrait-corner-a" aria-hidden="true"></span>
+              <span class="portrait-corner portrait-corner-b" aria-hidden="true"></span>
+            </div>
+            <div class="profile-copy">
+              <p class="micro-label">ĐỘI TRƯỞNG SRU</p>
+              <h2>Kai Akechi <span>/ Twilight</span></h2>
+              <p>UR+ · chỉ huy hiện trường · xạ thủ chủ lực</p>
+            </div>
+          </section>
+
+          <section class="profile-card target-card">
+            <div class="portrait-frame">
+              <img src="assets/avatars/tieu-lan.svg" alt="Hồ sơ mục tiêu bảo hộ Hứa Tiểu Lan" width="160" height="160">
+              <span class="target-mark" aria-hidden="true">HTL-04</span>
+            </div>
+            <div class="profile-copy">
+              <p class="micro-label">MỤC TIÊU BẢO HỘ</p>
+              <h2>Hứa Tiểu Lan</h2>
+              <p>Tứ tiểu thư · không mang Tử Mẫu Trùng</p>
+            </div>
+            <dl class="profile-vitals">
+              <div><dt>Sức khỏe</dt><dd id="lan-health-rail">100%</dd></div>
+              <div><dt>Ảnh hưởng Mẫu</dt><dd id="lan-influence-rail">0%</dd></div>
+            </dl>
+          </section>
+
+          <section id="encounter-monitor" class="encounter-monitor" aria-live="polite">
+            <div class="encounter-visual" aria-hidden="true">
+              <span class="scan-line"></span>
+              <span class="biological-shadow"></span>
+            </div>
+            <div class="encounter-copy">
+              <p class="micro-label">DẤU SINH HỌC / CHƯA PHÂN LOẠI</p>
+              <strong id="encounter-title">Không có tiếp xúc trực diện</strong>
+              <span id="encounter-caption">Cảm biến chỉ ghi nhận nhiễu nền quanh biệt thự.</span>
+            </div>
+          </section>
+
+          <section class="route-ledger" aria-labelledby="route-ledger-title">
+            <div class="rail-heading">
+              <p class="micro-label">XƯƠNG SỐNG CHIẾN DỊCH</p>
+              <h2 id="route-ledger-title">Tuyến hành quân</h2>
+            </div>
+            <ol id="campaign-route-list">
+              <li data-route-stage="long_hai"><span>01</span><strong>Long Hải</strong><small>Giải cứu Tiểu Lan</small></li>
+              <li data-route-stage="can_gio"><span>02</span><strong>Cần Giờ</strong><small>Đường trùng nước lợ</small></li>
+              <li data-route-stage="backrooms"><span>03</span><strong>Backrooms 1900</strong><small>16 tầng vô nghĩa</small></li>
+              <li data-route-stage="thu_dau_mot"><span>04</span><strong>Thủ Dầu Một</strong><small>Dấu vết La Hầu</small></li>
+              <li data-route-stage="vung_tau"><span>05</span><strong>Vũng Tàu</strong><small>Mộng và ký ức</small></li>
+              <li data-route-stage="sai_gon_cho_lon"><span>06</span><strong>Sài Gòn–Chợ Lớn</strong><small>Nhà chính Hứa Gia</small></li>
+            </ol>
+          </section>
           <section class="intel-section meter-section">
             <div class="intel-section-heading">
               <h3>Nguy cơ tại chỗ</h3>
@@ -300,15 +309,15 @@
             <button id="restart-button" class="danger-control" type="button">Chiến dịch mới</button>
           </section>
         </div>
+        <footer class="campaign-footer">
+          <p>LIBERA-1899 · cứu người, phá nghi lễ, giữ kín dòng thời gian.</p>
+          <p id="footer-threat-copy">Mức can thiệp: kín · không để lại công nghệ thế kỷ 29.</p>
+        </footer>
       </aside>
 
       <button id="intel-scrim" class="intel-scrim" type="button" aria-label="Đóng hồ sơ hiện trường" tabindex="-1"></button>
     </main>
 
-    <footer class="campaign-footer">
-      <p>LIBERA-1899 · cứu người, phá nghi lễ, giữ kín dòng thời gian.</p>
-      <p id="footer-threat-copy">Mức can thiệp: kín · không để lại công nghệ thế kỷ 29.</p>
-    </footer>
   </div>
 </body>
 </html>
