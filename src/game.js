@@ -110,7 +110,7 @@ function normalizeState(rawState) {
     ...base,
     ...candidate,
     version: base.version,
-    scene: { ...base.scene, ...(candidate.scene || {}) },
+    scene: { ...base.scene, ...(candidate.scene || {}), backgroundId: cleanText(candidate.scene?.backgroundId, 60) },
     progression: normalizeProgression(candidate.progression, base.progression),
     stats: { ...base.stats, ...(candidate.stats || {}) },
     campaignStats: { ...base.campaignStats, ...(candidate.campaignStats || {}) },
@@ -335,6 +335,7 @@ export function initGame() {
     const stage = getStageById(state.progression.stageId);
     const floor = stage.id === "backrooms" ? getBackroomsFloor(state.progression.backroomsFloor) : null;
     state.scene = {
+      backgroundId: cleanText(updates.snapshotBackground, 60),
       id: `turn-${state.turn}`,
       kicker: cleanText(updates.sceneKicker, 120)
         || (floor ? `BACKROOMS // TẦNG ${floor.floor}` : `${stage.act.toUpperCase()} // ${stage.label.toUpperCase()}`),

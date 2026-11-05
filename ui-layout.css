@@ -526,6 +526,15 @@ body.intel-open .intel-scrim {
   box-shadow: var(--shadow-paper);
 }
 
+#stage-background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+#stage-background[hidden] { display: none; }
+
 #stage-entity,
 #stage-character {
   position: absolute;

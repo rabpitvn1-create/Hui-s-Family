@@ -73,6 +73,7 @@ const PROGRESSION_SCHEMA = {
 const WORLD_UPDATE_SCHEMA = {
   type: "object",
   properties: {
+    snapshotBackground: { type: "string", enum: ["long-hai-exterior", "long-hai-corridor", "tieu-lan-room", "none"] },
     sceneTitle: { type: "string" },
     sceneKicker: { type: "string" },
     currentLocation: { type: "string" },
@@ -85,7 +86,7 @@ const WORLD_UPDATE_SCHEMA = {
     itemsFound: { type: "array", maxItems: 3, items: ITEM_SCHEMA }
   },
   required: [
-    "sceneTitle", "sceneKicker", "currentLocation", "eventSummary",
+    "snapshotBackground", "sceneTitle", "sceneKicker", "currentLocation", "eventSummary",
     "newCanonFacts", "newThreads", "resolvedThreads", "newCharacters",
     "newLocations", "itemsFound"
   ]

@@ -148,6 +148,7 @@ export const INITIAL_STATE = Object.freeze({
   turn: 0,
   scene: {
     id: "origin",
+    backgroundId: "long-hai-exterior",
     kicker: "HỒI 1 // LONG HẢI // 1899",
     title: "Biệt thự dưỡng bệnh",
     narration: [

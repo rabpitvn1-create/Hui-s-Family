@@ -1,3 +1,5 @@
+import { SCENE_BACKGROUNDS, resolveSceneBackground } from "./scene-backgrounds.js";
+
 const STAGES = Object.freeze([
   { id: "long_hai", label: "Hồi 1 · Long Hải" },
   { id: "can_gio", label: "Hồi 2 · Cần Giờ" },
@@ -95,6 +97,7 @@ export function initMissionInterface() {
   const actionsToggle = document.querySelector("#actions-toggle");
   const stageEntity = document.querySelector("#stage-entity");
   const stageSceneName = document.querySelector("#stage-scene-name");
+  const stageBackground = document.querySelector("#stage-background");
   let lastSceneId = "";
   let sceneAnimationTimer = 0;
 
@@ -199,6 +202,12 @@ export function initMissionInterface() {
   //   chính #stage-entity (CSS mặc định ẩn #stage-entity, .stage-entity-on thì hiện).
   // - #stage-character: luôn hiển thị, không cần sync.
   function syncStage(snapshot) {
+    const backgroundId = resolveSceneBackground(snapshot);
+    const source = SCENE_BACKGROUNDS[backgroundId];
+    if (stageBackground) {
+      if (source && stageBackground.getAttribute("src") !== source) stageBackground.setAttribute("src", source);
+      stageBackground.hidden = !source;
+    }
     const title = String(snapshot?.scene?.title || "").trim();
     if (stageSceneName && title) stageSceneName.textContent = title;
 

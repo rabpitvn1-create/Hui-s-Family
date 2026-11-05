@@ -76,6 +76,7 @@ export function normalizeState(rawState) {
     currentLocation: cleanText(state.currentLocation, 180),
     progression: normalizeProgression(state.progression),
     scene: {
+      backgroundId: cleanText(scene.backgroundId, 60),
       title: cleanText(scene.title, 200),
       kicker: cleanText(scene.kicker, 120),
       narration: cleanStringArray(scene.narration, 10, 2600),
@@ -223,6 +224,7 @@ export function normalizePlan(rawPlan, state) {
       partySeparated: Boolean(rawPlan.progressionUpdate?.partySeparated)
     },
     worldUpdates: {
+      snapshotBackground: ["long-hai-exterior", "long-hai-corridor", "tieu-lan-room", "none"].includes(updates.snapshotBackground) ? updates.snapshotBackground : "",
       sceneTitle: cleanText(updates.sceneTitle, 200) || "Tình thế mới",
       sceneKicker: cleanText(updates.sceneKicker, 120) || "CHIẾN DỊCH",
       currentLocation: cleanText(updates.currentLocation, 180) || state.currentLocation,
