@@ -584,10 +584,9 @@ body.stage-entity-on #stage-entity {
   max-width: none;
 }
 
-/* Song kiếm bay quanh nhân vật: mỗi thanh là lớp phủ kín khung bọc,
-   kiếm nhỏ ở tâm; quỹ đạo vệ tinh NGANG quanh người bằng keyframes (vòng dẹt, lên/xuống tối thiểu ±6%) — nửa vòng trước mặt
-   (z-index 4, to hơn) và nửa vòng sau lưng (z-index 1, nhỏ hơn).
-   Hai thanh lệch pha nửa vòng nên luôn đối xứng qua nhân vật. */
+/* Song kiếm LƠ LỬNG cố định hai bên nhân vật (lệnh chủ nhân: không xoay nữa):
+   mỗi thanh đậu ở một bên thân Cao Minh, chỉ nhấp nhô nhẹ lên/xuống và lắc rất
+   khẽ, hai thanh lệch nhịp (4.6s / 5.3s) để không lên xuống đồng bộ như máy. */
 .stage-sword {
   position: absolute;
   inset: 0;
@@ -596,7 +595,6 @@ body.stage-entity-on #stage-entity {
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  animation: sword-orbit 13.5s linear infinite;
   will-change: transform, opacity;
 }
 
@@ -609,17 +607,18 @@ body.stage-entity-on #stage-entity {
   filter: drop-shadow(0 0 10px rgba(255, 45, 60, .45)) drop-shadow(0 6px 14px rgba(0, 0, 0, .55));
 }
 
-.stage-sword-b { animation-delay: -6.75s; }
+.stage-sword-a { animation: sword-hover-a 4.6s ease-in-out infinite alternate; }
+.stage-sword-b { animation: sword-hover-b 5.3s ease-in-out infinite alternate; }
 .stage-sword-b img { height: 50%; }
 
-@keyframes sword-orbit {
-  0%   { transform: translate(-49%, 0%) rotate(-1deg) scale(.94); z-index: 4; opacity: 1; }
-  25%  { transform: translate(0, 6%) rotate(0deg) scale(1.05); z-index: 4; opacity: 1; }
-  49%  { z-index: 4; }
-  50%  { transform: translate(49%, 0%) rotate(1deg) scale(.94); z-index: 1; opacity: 1; }
-  75%  { transform: translate(0, -6%) rotate(0deg) scale(.84); z-index: 1; opacity: 1; }
-  99%  { z-index: 1; }
-  100% { transform: translate(-49%, 0%) rotate(-1deg) scale(.94); z-index: 4; opacity: 1; }
+@keyframes sword-hover-a {
+  from { transform: translate(-44%, 0.5%) rotate(-2deg); }
+  to   { transform: translate(-44%, 5.5%) rotate(1.6deg); }
+}
+
+@keyframes sword-hover-b {
+  from { transform: translate(36%, 5%) rotate(2deg); }
+  to   { transform: translate(36%, 0%) rotate(-1.6deg); }
 }
 
 .stage-caption {
