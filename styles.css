@@ -1,3 +1,37 @@
+/* Quicksand (Google Fonts, OFL) — bundled locally for the standalone APK.
+   License: assets/fonts/OFL-Quicksand.txt. No CDN: the APK must work offline. */
+@font-face {
+  font-family: "Quicksand";
+  src: url("assets/fonts/Quicksand-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("assets/fonts/Quicksand-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("assets/fonts/Quicksand-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("assets/fonts/Quicksand-700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color-scheme: dark;
   --ink: #efe4cf;
@@ -22,10 +56,10 @@
   --danger-soft: rgba(173, 67, 59, .15);
   --shadow-deep: 0 22px 58px rgba(0, 0, 0, .46);
   --shadow-paper: 0 10px 30px rgba(0, 0, 0, .32);
-  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
-  --font-reading: Charter, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-display: "Quicksand", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-reading: "Quicksand", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-ui: "Quicksand", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-code: "Quicksand", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --radius-sm: .35rem;
   --radius-md: .65rem;
   --shell-width: 1500px;
