@@ -1,8 +1,8 @@
 import { readFileSync } from "node:fs";
 import {
   ACTIVE_CHARACTER_PROMPT_CANON,
+  GAO_MING_CODEX,
   IRIS_CODEX,
-  KAI_CODEX,
   SYVIAL_CODEX
 } from "../src/active-character-codex.js";
 import { SRU_CODEX, SRU_PROMPT_CANON } from "../src/sru-codex.js";
@@ -15,20 +15,20 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-assert(KAI_CODEX.identity.name === "Kai Akechi", "Kai phải dùng canon Kai Akechi.");
-assert(KAI_CODEX.identity.codename === "Twilight", "Kai phải dùng mật danh Twilight.");
+assert(GAO_MING_CODEX.identity.name === "Cao Minh", "Nhân vật chính phải dùng canon Cao Minh.");
+assert(GAO_MING_CODEX.identity.codename === "Vạn Giới Ma Tổ", "Cao Minh phải dùng tôn hiệu Vạn Giới Ma Tổ.");
 assert(
-  KAI_CODEX.identity.organization.startsWith("SRU / Special Response Unit"),
-  "Kai phải thuộc SRU trong canon hiện hành."
+  GAO_MING_CODEX.identity.organization.startsWith("Vạn Ma Đạo Môn"),
+  "Cao Minh phải thuộc Vạn Ma Đạo Môn trong canon hiện hành."
 );
-assert(KAI_CODEX.identity.publicRecordSpecies === "Human", "Hồ sơ công khai của Kai phải là Human.");
-assert(KAI_CODEX.identity.position === "Đội trưởng", "Kai phải là Đội trưởng SRU.");
-assert(KAI_CODEX.identity.combatTier === "UR+", "Kai phải giữ cấp UR+.");
-assert(KAI_CODEX.equipment.currentWeapons.includes("SRU-MK20"), "Kai phải có SRU-MK20.");
-assert(KAI_CODEX.equipment.currentWeapons.includes("SRU-SG"), "Kai phải có SRU-SG.");
+assert(GAO_MING_CODEX.identity.trueAge === "Không rõ", "Tuổi của Cao Minh phải để Không rõ theo Cao Minh Codex R02.");
+assert(GAO_MING_CODEX.identity.position === "Đạo Tổ", "Cao Minh không giữ chức vụ SRU; vị thế của anh là Đạo Tổ.");
+assert(GAO_MING_CODEX.identity.combatTier === "Đạo Tổ", "Cao Minh phải giữ đạo hạnh Đạo Tổ, không dùng cấp số hóa UR+.");
+assert(GAO_MING_CODEX.equipment.currentWeapons.includes("Sát Thần Kiếm"), "Cao Minh phải có Sát Thần Kiếm thuộc Thái Cổ Song Sát.");
+assert(GAO_MING_CODEX.equipment.currentWeapons.includes("Sát Ma Kiếm"), "Cao Minh phải có Sát Ma Kiếm thuộc Thái Cổ Song Sát.");
 assert(
-  KAI_CODEX.combat.guiltyCrownOverride.some((line) => line.includes("đúng 24 phát")),
-  "Guilty Crown Override phải khóa đúng 24 phát."
+  JSON.stringify(GAO_MING_CODEX.combat).includes("Song Sát Kiếm Quyết"),
+  "Combat của Cao Minh phải khóa Song Sát Kiếm Quyết trong 13 thần thông."
 );
 
 assert(IRIS_CODEX.identity.name === "Iris", "Amy phải được thay bằng Iris trong character canon.");
@@ -54,10 +54,16 @@ assert(
   SRU_CODEX.identity.parentOrganization === "Cảnh Sát chống hiện tượng dị thường",
   "SRU phải trực thuộc Cảnh Sát chống hiện tượng dị thường."
 );
-assert(SRU_CODEX.command.captain === "Kai Akechi / Twilight", "Kai phải là Đội trưởng SRU.");
-assert(SRU_CODEX.command.publicRecord.includes("Human"), "SRU phải giữ public record Human của Kai.");
-assert(SRU_CODEX.equipment.kaiCurrentLoadout.includes("SRU-MK20"), "SRU codex phải khóa SRU-MK20 của Kai.");
-assert(SRU_CODEX.equipment.kaiCurrentLoadout.includes("SRU-SG"), "SRU codex phải khóa SRU-SG của Kai.");
+assert(
+  !JSON.stringify(SRU_CODEX.command).includes("Kai"),
+  "Chỉ huy SRU không được còn gán cho Kai Akechi sau khi thay canon nhân vật chính."
+);
+assert(
+  SRU_CODEX.identity.name.startsWith("SRU / Special Response Unit"),
+  "SRU vẫn là tổ chức trong thế giới 1899 theo canon hiện hành."
+);
+assert(SRU_CODEX.equipment.signatureArmor.includes("SRU-MK20"), "SRU codex phải khóa SRU-MK20 là giáp nhận diện của tổ chức SRU.");
+assert(SRU_CODEX.equipment.signatureArmor.includes("SPECIAL RESPONSE UNIT"), "Giáp nhận diện SRU phải giữ đánh dấu SPECIAL RESPONSE UNIT.");
 assert(SRU_CODEX.doctrine.some((line) => line.includes("quyền phán đoán tại hiện trường")), "SRU phải khóa quyền phán đoán tại hiện trường.");
 assert(SRU_CODEX.lore.includes("SRU là lực lượng bước vào trước"), "Full SRU lore phải giữ câu khóa vai trò phản ứng đầu tiên.");
 
@@ -69,18 +75,26 @@ for (const forbidden of [
   "White Wraith Magnum",
   "Blackblood Armor",
   "Black Blood",
-  "Huyết Nha"
+  "Huyết Nha",
+  "Kai Akechi",
+  "Twilight",
+  "SRU-MK20",
+  "SRU-SG",
+  "Guilty Crown Override"
 ]) {
   assert(!promptCanonText.includes(forbidden), `Prompt canon không được còn legacy token: ${forbidden}`);
 }
-assert(promptCanonText.includes("Special Response Unit"), "Prompt canon phải truyền SRU cho Kai.");
-assert(promptCanonText.includes("SRU-MK20"), "Prompt canon phải truyền SRU-MK20.");
-assert(promptCanonText.includes("SRU-SG"), "Prompt canon phải truyền SRU-SG.");
+assert(promptCanonText.includes("Vạn Ma Đạo Môn"), "Prompt canon phải truyền Vạn Ma Đạo Môn cho Cao Minh.");
+assert(promptCanonText.includes("Sát Thần Kiếm"), "Prompt canon phải truyền Sát Thần Kiếm.");
+assert(promptCanonText.includes("Sát Ma Kiếm"), "Prompt canon phải truyền Sát Ma Kiếm.");
+assert(promptCanonText.includes("Đạo Tổ"), "Prompt canon phải truyền đạo hạnh Đạo Tổ của Cao Minh.");
 
 const sruPromptText = JSON.stringify(SRU_PROMPT_CANON);
 assert(sruPromptText.includes("Cảnh Sát chống hiện tượng dị thường"), "Prompt SRU phải truyền tổ chức mẹ.");
-assert(sruPromptText.includes("Kai Akechi / Twilight"), "Prompt SRU phải truyền chỉ huy Kai.");
+assert(sruPromptText.includes("SRU-FORCE-2299-R01"), "Prompt SRU phải truyền đúng canon ID của tổ chức.");
 assert(sruPromptText.includes("SRU-MK20"), "Prompt SRU phải truyền nhận diện trang bị.");
+assert(!sruPromptText.includes("Kai Akechi"), "Prompt SRU không được còn chỉ huy Kai.");
+assert(!sruPromptText.includes("Twilight"), "Prompt SRU không được còn mật danh Twilight.");
 assert(!sruPromptText.includes("Vatican"), "Prompt SRU không được tự phục hồi tổ chức legacy Vatican.");
 assert(!sruPromptText.includes("Black Blood"), "Prompt SRU không được tự phục hồi Black Blood.");
 
@@ -90,10 +104,12 @@ const writerContext = buildWriterContext(
   { dialoguePlan: [{ speaker: "Iris" }, { speaker: "Syvial" }] }
 );
 const activeVoiceNames = writerContext.activeVoices.map((voice) => voice.name);
-assert(activeVoiceNames.includes("Kai Akechi / Twilight"), "Writer phải luôn có voice Kai mới.");
+assert(activeVoiceNames.includes("Cao Minh / Vạn Giới Ma Tổ"), "Writer phải luôn có voice Cao Minh mới.");
 assert(activeVoiceNames.includes("Iris / ARGUS"), "Writer phải nhận diện voice Iris.");
 assert(activeVoiceNames.includes("Syvial"), "Writer phải nhận diện voice Syvial.");
 assert(!JSON.stringify(PROSE_STYLE_GUIDE.voices).includes("Amy / Delta"), "Voice card không được còn Amy/Delta.");
+assert(!JSON.stringify(PROSE_STYLE_GUIDE.voices).includes("Kai Akechi"), "Voice card không được còn Kai Akechi.");
+assert(!JSON.stringify(PROSE_STYLE_GUIDE.voices).includes("Twilight"), "Voice card không được còn mật danh Twilight.");
 
 const promptSource = readFileSync(new URL("../apk-ai/gemini-prompts.js", import.meta.url), "utf8");
 assert(promptSource.includes("ACTIVE_CHARACTER_PROMPT_CANON"), "Gemini prompt phải nạp character canon hiện hành.");
@@ -104,4 +120,4 @@ assert(promptSource.includes("SRU CANON:"), "Writer prompt phải nhận SRU can
 assert(promptSource.includes("CHARACTER CANON:"), "Writer prompt phải nhận character canon hiện hành.");
 assert(!promptSource.includes("black-blood-character-codex"), "Gemini prompt không được import module tổ chức legacy.");
 
-console.log("Character/SRU canon check passed: Kai=SRU and SRU-FORCE-2299-R01 is active in Director/Writer prompts.");
+console.log("Character/SRU canon check passed: Cao Minh (CHAR.GAO_MING, Đạo Tổ) is active in Director/Writer prompts and SRU-FORCE-2299-R01 remains the world organization canon.");
