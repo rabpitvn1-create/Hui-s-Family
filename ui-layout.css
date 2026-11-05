@@ -510,7 +510,7 @@ body.intel-open .intel-scrim {
 .snapshot-stage {
   position: relative;
   height: clamp(300px, 82vw, 340px);
-  margin-top: .8rem;
+  margin-top: 0;
 }
 
 .stage-bg {

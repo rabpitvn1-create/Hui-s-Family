@@ -105,7 +105,8 @@ body.focus-mode .story-panel { width: 100%; }
   .mission-tool span { font-size: 1rem; }
   .route-readout-copy { font-size: .54rem; }
 
-  .game-layout { grid-template-columns: 1fr; gap: 0; margin-top: 0; }
+  /* v5: header / Snapshot / GM tách nhau vài pixel như mockup (trước đây rule này ép gap: 0). */
+  .game-layout { grid-template-columns: 1fr; gap: .62rem; margin-top: .62rem; }
   .field-rail {
     grid-template-columns: 1fr 1fr;
     gap: .55rem;
