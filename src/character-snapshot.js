@@ -3,7 +3,7 @@ const DEFAULT_CHARACTER = Object.freeze({
   name: "Cao Minh",
   alias: "Vạn Giới Ma Tổ",
   role: "Đạo Tổ · Vạn Ma Đạo Môn",
-  summary: "Người Trái Đất trọng sinh sau một đêm tăng ca quá độ; song kiếm Thái Cổ Song Sát, Hắc Long Chiến Khải hộ thân; đã nhận bảo hộ Hứa Tiểu Lan.",
+  summary: "Người Trái Đất trọng sinh sau một đêm tăng ca quá độ; bị vầng sáng lạ ném từ Vạn Hoa Lầu xuống Long Hải năm 1899; song kiếm Thái Cổ Song Sát, Hắc Long Chiến Khải hộ thân.",
   image: "assets/avatars/main-avatar.jpg",
   alt: "Chân dung Cao Minh, tôn hiệu Vạn Giới Ma Tổ"
 });
