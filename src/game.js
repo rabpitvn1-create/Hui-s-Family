@@ -6,8 +6,9 @@ import {
   getStageById
 } from "./campaign-canon.js";
 
-const AUTO_SAVE_KEY = "hua-family-campaign-v2-auto";
-const MANUAL_SAVE_KEY = "hua-family-campaign-v2-manual";
+// Save version v3: bản lưu v2 thuộc thế hệ nhân vật chính trước, không còn được đọc nữa.
+const AUTO_SAVE_KEY = "hua-family-campaign-v3-auto";
+const MANUAL_SAVE_KEY = "hua-family-campaign-v3-manual";
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
