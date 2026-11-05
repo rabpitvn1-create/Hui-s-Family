@@ -13,6 +13,10 @@ Text game AI sandbox đặt trong thế giới Hứa Gia năm 1899. Bản hiện
 
 Không có `/api/gemini-turn`, serverless function, web backend hoặc biến môi trường chứa API key ở runtime.
 
+## Màn hình chính v5
+
+Bố cục v5: Header với nút burger chứa mọi hệ thống phụ, khung Snapshot dạng minh họa overlay (Entity trái, nhân vật chính phải, trên cảnh nền) và khung GM với nút Thao Tác + ô chat của player. Toàn hệ thống dùng font Quicksand đóng gói local. Chi tiết thiết kế, hợp đồng DOM và nguồn gốc từng tài sản: [docs/MAIN_SCREEN_V5.md](docs/MAIN_SCREEN_V5.md).
+
 ## API key
 
 APK không nhúng sẵn API key. Người dùng nhập Gemini API key sau khi cài đặt; key được lưu mã hóa trên thiết bị bằng Android Keystore. Có thể lưu tối đa 20 key và xoay vòng khi gặp lỗi quota/rate-limit phù hợp.
@@ -51,6 +55,12 @@ Workflow build APK, sau đó kiểm tra trực tiếp nội dung APK để chắ
 
 ```text
 index.html
+assets/
+  overlay/ (entity-01.png, main-character.png)
+  avatars/ (main-avatar.jpg)
+  fonts/ (Quicksand + OFL)
+docs/
+  MAIN_SCREEN_V5.md
 src/
   app.js
   world-canon.js
