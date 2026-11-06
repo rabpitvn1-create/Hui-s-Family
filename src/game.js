@@ -14,6 +14,18 @@ const AUTO_SAVE_KEY = "hua-family-campaign-v4-auto";
 const MANUAL_SAVE_KEY = "hua-family-campaign-v4-manual";
 // Ba ô lưu thủ công (Đợt 1, kết luận tranh luận 2026-11-06): ô 1 dùng lại
 // đúng khóa bản lưu thủ công cũ để tiến độ hiện hữu không bị mồ côi.
+// Nhãn trạng thái cho Hồ sơ vận mệnh (Đợt 2): liên kết chỉ hiện chữ,
+// xu hướng tuyến chỉ hiện hướng nghiêng — không bao giờ hiện điểm số.
+const LINK_PHASE_LABELS = Object.freeze({
+  identified: "Đã nhận diện",
+  intervened: "Đã can thiệp",
+  severed: "Đã cắt đứt"
+});
+const ROUTE_TENDENCY_LABELS = Object.freeze({
+  bao_ho: "Bảo Hộ",
+  tu_quyet: "Tự Quyết",
+  nghi_le: "Nghi Lễ"
+});
 const SAVE_SLOT_KEYS = Object.freeze([
   MANUAL_SAVE_KEY,
   "hua-family-campaign-v4-manual-2",
@@ -173,39 +185,23 @@ export function initGame() {
     title: document.querySelector("#scene-title"),
     story: document.querySelector("#story-text"),
     choices: document.querySelector("#choices"),
-    alertMeter: document.querySelector("#alert-meter"),
-    alertValue: document.querySelector("#alert-value"),
-    ritualMeter: document.querySelector("#ritual-meter"),
-    ritualValue: document.querySelector("#ritual-value"),
-    civilianMeter: document.querySelector("#civilian-meter"),
-    civilianValue: document.querySelector("#civilian-value"),
-    timeMeter: document.querySelector("#time-meter"),
-    timeValue: document.querySelector("#time-value"),
-    controlMeter: document.querySelector("#control-meter"),
-    controlValue: document.querySelector("#control-value"),
-    signalMeter: document.querySelector("#signal-meter"),
-    signalValue: document.querySelector("#signal-value"),
     lanTrustMeter: document.querySelector("#lan-trust-meter"),
     lanTrustValue: document.querySelector("#lan-trust-value"),
     memoryMeter: document.querySelector("#memory-meter"),
     memoryValue: document.querySelector("#memory-value"),
-    partyMeter: document.querySelector("#party-meter"),
-    partyValue: document.querySelector("#party-value"),
-    evidenceValue: document.querySelector("#evidence-value"),
+    lanHealthMeter: document.querySelector("#lan-health-meter"),
+    lanHealthValue: document.querySelector("#lan-health-value"),
+    lanMaterMeter: document.querySelector("#lan-mater-meter"),
+    lanMaterValue: document.querySelector("#lan-mater-value"),
+    routeTendencyValue: document.querySelector("#route-tendency-value"),
     routeValue: document.querySelector("#route-value"),
-    verificationValue: document.querySelector("#verification-value"),
-    contactStyleValue: document.querySelector("#contact-style-value"),
     stageValue: document.querySelector("#campaign-stage-value"),
     toast: document.querySelector("#save-toast"),
     objectiveProgressValue: document.querySelector("#objective-progress-value"),
     backroomsFloorValue: document.querySelector("#backrooms-floor-value"),
-    suppliesValue: document.querySelector("#supplies-value"),
-    ammunitionValue: document.querySelector("#ammunition-value"),
     cluesValue: document.querySelector("#clues-value"),
-    savedValue: document.querySelector("#saved-value"),
     log: document.querySelector("#log-list"),
     threads: document.querySelector("#threads-list"),
-    inventory: document.querySelector("#inventory-list"),
     save: document.querySelector("#save-button"),
     load: document.querySelector("#load-button"),
     restart: document.querySelector("#restart-button")
@@ -614,26 +610,6 @@ export function initGame() {
     renderList(elements.threads, [...objectiveLines, ...extraThreads], "Chưa có mục tiêu.");
   }
 
-  function renderInventory() {
-    if (!elements.inventory) return;
-    elements.inventory.replaceChildren();
-    if (!state.inventory.length) {
-      const li = document.createElement("li");
-      li.textContent = "Chưa có vật phẩm phát sinh.";
-      elements.inventory.append(li);
-      return;
-    }
-    state.inventory.slice(-12).forEach((item) => {
-      const li = document.createElement("li");
-      const name = document.createElement("strong");
-      name.textContent = `${item.name} — ${item.rarity}`;
-      const description = document.createElement("span");
-      description.textContent = item.description ? ` ${item.description}` : "";
-      li.append(name, description);
-      elements.inventory.append(li);
-    });
-  }
-
   function resetReaderScroll() {
     // .game-layout is the reading scroller; the page itself is fixed.
     const scrollRegion = document.querySelector(".game-layout");
@@ -662,30 +638,32 @@ export function initGame() {
     );
     renderChoices();
 
-    setMeter(elements.alertMeter, elements.alertValue, state.stats.alert);
-    setMeter(elements.ritualMeter, elements.ritualValue, state.stats.ritual);
-    setMeter(elements.civilianMeter, elements.civilianValue, state.stats.civilianSafety);
-    setMeter(elements.timeMeter, elements.timeValue, state.stats.time);
-    setMeter(elements.controlMeter, elements.controlValue, state.stats.control);
-    setMeter(elements.signalMeter, elements.signalValue, state.stats.signalRisk);
     setMeter(elements.lanTrustMeter, elements.lanTrustValue, state.campaignStats.lanTrust);
     setMeter(elements.memoryMeter, elements.memoryValue, state.campaignStats.memoryIntegrity);
-    setMeter(elements.partyMeter, elements.partyValue, state.campaignStats.partyHealth);
+    setMeter(elements.lanHealthMeter, elements.lanHealthValue, state.campaignStats.lanHealth);
+    setMeter(elements.lanMaterMeter, elements.lanMaterValue, state.campaignStats.lanMaterInfluence);
+    for (const el of queryAll("[data-link-value]")) {
+      el.textContent = LINK_PHASE_LABELS[state.flags.vnLinks?.[el.getAttribute("data-link-value")]] || "Chưa rõ";
+    }
+    if (elements.routeTendencyValue) {
+      const scores = state.flags.vnRouteScores || {};
+      const ranked = Object.entries(ROUTE_TENDENCY_LABELS)
+        .map(([id, label]) => ({ label, value: Number(scores[id]) || 0 }))
+        .sort((a, b) => b.value - a.value);
+      elements.routeTendencyValue.textContent = ranked[0].value <= 0
+        ? "Chưa rõ"
+        : ranked[0].value === ranked[1].value
+          ? "Đang giằng co"
+          : `Nghiêng về ${ranked[0].label}`;
+    }
 
-    if (elements.evidenceValue) elements.evidenceValue.textContent = state.stats.evidence;
     if (elements.routeValue) elements.routeValue.textContent = state.currentLocation;
-    if (elements.verificationValue) elements.verificationValue.textContent = String(state.turn);
-    if (elements.contactStyleValue) elements.contactStyleValue.textContent = state.currentLocation;
     if (elements.stageValue) elements.stageValue.textContent = `${stage.act} — ${stage.label}`;
     if (elements.objectiveProgressValue) elements.objectiveProgressValue.textContent = `${completedCount}/${objectives.length}`;
     if (elements.backroomsFloorValue) elements.backroomsFloorValue.textContent = floor ? `${floor.floor} — ${floor.name}` : "Chưa vào";
-    if (elements.suppliesValue) elements.suppliesValue.textContent = state.campaignStats.supplies;
-    if (elements.ammunitionValue) elements.ammunitionValue.textContent = state.campaignStats.ammunition;
     if (elements.cluesValue) elements.cluesValue.textContent = state.campaignStats.cluesHuaGia;
-    if (elements.savedValue) elements.savedValue.textContent = state.campaignStats.civiliansSaved;
 
     renderObjectives();
-    renderInventory();
     renderList(elements.log, state.log, "Chưa có sự kiện.");
     for (const meta of queryAll("[data-slot-meta]")) {
       const info = listSaveSlots()[Number(meta.getAttribute("data-slot-meta"))];

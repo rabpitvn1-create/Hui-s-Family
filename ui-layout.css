@@ -806,3 +806,7 @@ body .campaign-header {
 .save-slot-meta { font-size: .78rem; color: var(--ink); letter-spacing: .02em; }
 .save-slot-actions { display: inline-flex; gap: .4rem; flex-shrink: 0; }
 .save-transfer { margin-top: .7rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+
+/* Hàng Thao Tác cạnh deck lựa chọn + danh sách hồ sơ nhân vật (Đợt 2). */
+.choice-deck-tools { margin: .35rem 0 .15rem; }
+.profile-list { display: flex; flex-wrap: wrap; gap: .45rem; }

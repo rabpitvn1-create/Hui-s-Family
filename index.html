@@ -10,9 +10,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="ui-layout.css">
   <link rel="stylesheet" href="ui-components.css?v=start-screen-1">
-  <link rel="stylesheet" href="ai-styles.css">
   <link rel="stylesheet" href="ui-responsive.css">
-  <script src="ai-config.js"></script>
   <script type="module" src="src/app.js?v=start-screen-1"></script>
 </head>
 <body data-stage="long_hai" data-threat="low">
@@ -95,38 +93,13 @@
             </div>
             <span class="choice-hint">Các lựa chọn thay đổi hậu quả</span>
           </div>
+          <div class="choice-deck-tools">
+            <button id="actions-toggle" type="button" aria-expanded="true">Thao Tác</button>
+          </div>
           <div id="choices" class="choices" aria-label="Các hướng hành động gợi ý"></div>
         </section>
 
-        <section id="ai-game-master" class="ai-game-master" hidden aria-labelledby="ai-title">
-          <div class="ai-heading">
-            <div>
-              <h3 id="ai-title">Hành động của Cao Minh</h3>
-            </div>
-            <span id="ai-status" class="ai-status" data-kind="idle">Đang khởi tạo</span>
-          </div>
-
-          <label for="ai-action">Ghi hành động tự do trong giới hạn khu vực hiện tại</label>
-          <div class="command-field">
-            <span class="command-glyph" aria-hidden="true">›</span>
-            <textarea
-              id="ai-action"
-              rows="4"
-              maxlength="600"
-              placeholder="Cao Minh kiểm tra dấu chân ướt quanh kho thuốc, giữ đường rút và không làm kinh động nhóm gia nhân chưa rõ trách nhiệm."
-            ></textarea>
-          </div>
-
-          <div class="ai-actions">
-            <button id="actions-toggle" type="button" aria-expanded="true">Thao Tác</button>
-            <button id="ai-submit" type="button">Gửi</button>
-            <button id="ai-clear" type="button">Xóa nội dung</button>
-            <button id="ai-api-keys" type="button" hidden>Cấu hình API key</button>
-          </div>
-
-          <p id="ai-note" class="ai-note">Visual Novel kịch bản cố định. <kbd>Ctrl</kbd> + <kbd>Enter</kbd> để gửi.</p>
-        </section>
-      </section>
+              </section>
 
       <aside id="intel-panel" class="intel-panel" aria-label="Tình trạng chiến dịch" aria-hidden="false">
         <header class="intel-header">
@@ -167,15 +140,21 @@
             </dl>
           </section>
 
-          <section id="encounter-monitor" class="encounter-monitor" aria-live="polite">
-            <div class="encounter-visual" aria-hidden="true">
-              <span class="scan-line"></span>
-              <span class="biological-shadow"></span>
+          
+          <section class="intel-section profile-index" aria-label="Hồ sơ nhân vật">
+            <div class="intel-section-heading">
+              <h3>Hồ sơ nhân vật</h3>
+              <span class="section-code">NHÂN VẬT</span>
             </div>
-            <div class="encounter-copy">
-              <p class="micro-label">DẤU SINH HỌC / CHƯA PHÂN LOẠI</p>
-              <strong id="encounter-title">Không có tiếp xúc trực diện</strong>
-              <span id="encounter-caption">Cảm biến chỉ ghi nhận nhiễu nền quanh biệt thự.</span>
+            <div class="profile-list">
+              <button type="button" data-profile="gao_minh">Cao Minh</button>
+              <button type="button" data-profile="tieu_lan">Hứa Tiểu Lan</button>
+              <button type="button" data-profile="ba_nam_lien">Bà Năm Liên</button>
+              <button type="button" data-profile="ba_bay">Bà Bảy</button>
+              <button type="button" data-profile="le_thu_nguyet">Lê Thu Nguyệt</button>
+              <button type="button" data-profile="steward">Quản gia</button>
+              <button type="button" data-profile="pham_dinh_nghiem">Phó kiểm Giới Phòng</button>
+              <button type="button" data-profile="npc_doctor">Thầy thuốc</button>
             </div>
           </section>
 
@@ -200,61 +179,38 @@
           <div class="route-readout" aria-label="Tiến độ tuyến chiến dịch">
             <div class="route-readout-copy">
               <span id="route-step-label">Hồi 1 · Long Hải</span>
-              <span id="threat-label">Hiện trường đang kín</span>
             </div>
             <div class="route-track" aria-hidden="true">
               <span id="route-progress"></span>
             </div>
           </div>
 
+          
+          
           <section class="intel-section meter-section">
             <div class="intel-section-heading">
-              <h3>Nguy cơ tại chỗ</h3>
-              <span class="section-code">LHA-01</span>
+              <h3>Hồ sơ vận mệnh</h3>
+              <span class="section-code">LỤC MÔN</span>
             </div>
-            <dl class="status-grid">
-              <div class="status-item danger-metric">
-                <dt>Báo động</dt>
-                <dd><meter id="alert-meter" min="0" max="100" value="0"></meter><span id="alert-value">0%</span></dd>
-              </div>
-              <div class="status-item danger-metric">
-                <dt>Áp lực nghi lễ</dt>
-                <dd><meter id="ritual-meter" min="0" max="100" value="10"></meter><span id="ritual-value">10%</span></dd>
-              </div>
-              <div class="status-item safety-metric">
-                <dt>An toàn dân sự</dt>
-                <dd><meter id="civilian-meter" min="0" max="100" value="100"></meter><span id="civilian-value">100%</span></dd>
-              </div>
+            <dl class="fact-list">
+              <div><dt>Liên kết Danh</dt><dd data-link-value="danh">Chưa rõ</dd></div>
+              <div><dt>Liên kết Nợ</dt><dd data-link-value="no">Chưa rõ</dd></div>
+              <div><dt>Liên kết Lệnh</dt><dd data-link-value="lenh">Chưa rõ</dd></div>
+              <div><dt>Liên kết Ký</dt><dd data-link-value="ky">Chưa rõ</dd></div>
+              <div><dt>Liên kết Thân</dt><dd data-link-value="than">Chưa rõ</dd></div>
+              <div><dt>Liên kết Tử</dt><dd data-link-value="tu">Chưa rõ</dd></div>
+              <div><dt>Xu hướng tuyến</dt><dd id="route-tendency-value">Chưa rõ</dd></div>
+              <div><dt>Đầu mối Hứa Gia</dt><dd id="clues-value">0</dd></div>
             </dl>
-          </section>
-
-          <section id="contact-status" class="intel-section meter-section">
-            <div class="intel-section-heading">
-              <h3>Năng lực chiến dịch</h3>
-              <span class="section-code elysium-code">CD-01</span>
-            </div>
             <dl class="status-grid">
               <div class="status-item">
-                <dt>Ổn định nhiệm vụ</dt>
-                <dd><meter id="time-meter" min="0" max="100" value="100"></meter><span id="time-value">100%</span></dd>
-              </div>
-              <div class="status-item">
-                <dt>Quyền chủ động</dt>
-                <dd><meter id="control-meter" min="0" max="100" value="50"></meter><span id="control-value">50%</span></dd>
+                <dt>Sức khỏe Tiểu Lan</dt>
+                <dd><meter id="lan-health-meter" min="0" max="100" value="45"></meter><span id="lan-health-value">45%</span></dd>
               </div>
               <div class="status-item danger-metric">
-                <dt>Dấu vết thời gian</dt>
-                <dd><meter id="signal-meter" min="0" max="100" value="0"></meter><span id="signal-value">0%</span></dd>
+                <dt>Ảnh hưởng của Mẫu</dt>
+                <dd><meter id="lan-mater-meter" min="0" max="100" value="25"></meter><span id="lan-mater-value">25%</span></dd>
               </div>
-            </dl>
-          </section>
-
-          <section class="intel-section meter-section">
-            <div class="intel-section-heading">
-              <h3>Đội hình và mục tiêu</h3>
-              <span class="section-code">HTL</span>
-            </div>
-            <dl class="status-grid">
               <div class="status-item">
                 <dt>Lòng tin Tiểu Lan</dt>
                 <dd><meter id="lan-trust-meter" min="0" max="100" value="5"></meter><span id="lan-trust-value">5%</span></dd>
@@ -262,10 +218,6 @@
               <div class="status-item danger-metric">
                 <dt>Toàn vẹn ký ức</dt>
                 <dd><meter id="memory-meter" min="0" max="100" value="100"></meter><span id="memory-value">100%</span></dd>
-              </div>
-              <div class="status-item">
-                <dt>Sức khỏe đội</dt>
-                <dd><meter id="party-meter" min="0" max="100" value="100"></meter><span id="party-value">100%</span></dd>
               </div>
             </dl>
           </section>
@@ -283,34 +235,15 @@
             </dl>
           </section>
 
-          <section class="intel-section resource-section">
-            <div class="intel-section-heading">
-              <h3>Nguồn lực và chứng cứ</h3>
-              <span class="section-code">LEDGER</span>
-            </div>
-            <div class="resource-grid">
-              <div><span>Vật tư</span><strong id="supplies-value">6</strong></div>
-              <div><span>Đạn đội (không dùng)</span><strong id="ammunition-value">100</strong></div>
-              <div><span>Chứng cứ</span><strong id="evidence-value">0</strong></div>
-              <div><span>Đầu mối Hứa Gia</span><strong id="clues-value">0</strong></div>
-              <div><span>Dân đã cứu</span><strong id="saved-value">0</strong></div>
-              <div><span>Lượt hiện tại</span><strong id="verification-value">0</strong></div>
-            </div>
-            <p id="contact-style-value" class="current-location">Long Hải, Nam Kỳ</p>
-          </section>
-
+          
           <details class="intel-section mission-log" open>
             <summary>Mục tiêu và đầu mối</summary>
             <ol id="threads-list"></ol>
           </details>
 
+          
           <details class="intel-section mission-log">
-            <summary>Vật phẩm thu hồi</summary>
-            <ol id="inventory-list"></ol>
-          </details>
-
-          <details class="intel-section mission-log">
-            <summary>Nhật ký chiến dịch</summary>
+            <summary>Sự kiện quan trọng</summary>
             <ol id="log-list"></ol>
           </details>
 
@@ -350,7 +283,7 @@
         </div>
         <footer class="campaign-footer">
           <p>LIBERA-1899 · cứu người, phá nghi lễ, giữ kín dòng thời gian.</p>
-          <p id="footer-threat-copy">Mức can thiệp: kín · không để lại công nghệ thế kỷ 29.</p>
+          <p id="footer-threat-copy">Hồ sơ vận mệnh cập nhật theo từng cảnh đã qua.</p>
         </footer>
       </aside>
 

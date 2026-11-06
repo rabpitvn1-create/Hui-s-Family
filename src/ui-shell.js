@@ -41,23 +41,6 @@ const STAGES = Object.freeze([
   }
 ]);
 
-const THREAT_COPY = Object.freeze({
-  low: {
-    label: "Hiện trường đang kín",
-    footer: "Mức can thiệp: kín · bảo vệ vật chủ còn tỉnh táo.",
-    caption: "Cảm biến chỉ ghi nhận nhiễu nền quanh khu vực hiện tại."
-  },
-  watch: {
-    label: "Dấu hiệu ký sinh tăng",
-    footer: "Mức can thiệp: theo dõi · giữ quyền tự quyết của vật chủ.",
-    caption: "Dấu sinh học đã rõ hơn nhưng chưa đủ dữ kiện để định danh."
-  },
-  critical: {
-    label: "Nguy cơ nghi lễ cao",
-    footer: "Mức can thiệp: khẩn · ưu tiên mục tiêu bảo hộ và dân thường.",
-    caption: "Tiếp xúc có khả năng xảy ra ngay trong cảnh hiện tại."
-  }
-});
 
 function numberOr(value, fallback = 0) {
   const numeric = Number(value);
@@ -73,23 +56,6 @@ function isTypingTarget(target) {
     || target instanceof HTMLTextAreaElement
     || target instanceof HTMLSelectElement
     || Boolean(target?.isContentEditable);
-}
-
-function threatFromSnapshot(snapshot) {
-  const stats = snapshot?.stats || {};
-  const campaign = snapshot?.campaignStats || {};
-  const score = Math.max(
-    numberOr(stats.alert),
-    numberOr(stats.ritual),
-    numberOr(stats.signalRisk),
-    numberOr(campaign.lanMaterInfluence),
-    100 - numberOr(stats.civilianSafety, 100),
-    100 - numberOr(campaign.memoryIntegrity, 100)
-  );
-
-  if (score >= 68) return { level: "critical", score };
-  if (score >= 36) return { level: "watch", score };
-  return { level: "low", score };
 }
 
 function routePercent(snapshot) {
@@ -116,11 +82,6 @@ export function initMissionInterface() {
   const storyPanel = document.querySelector("#story-panel");
   const routeProgress = document.querySelector("#route-progress");
   const routeStepLabel = document.querySelector("#route-step-label");
-  const threatLabel = document.querySelector("#threat-label");
-  const footerThreatCopy = document.querySelector("#footer-threat-copy");
-  const encounterMonitor = document.querySelector("#encounter-monitor");
-  const encounterTitle = document.querySelector("#encounter-title");
-  const encounterCaption = document.querySelector("#encounter-caption");
   const lanHealth = document.querySelector("#lan-health-rail");
   const lanInfluence = document.querySelector("#lan-influence-rail");
   const routeItems = [...document.querySelectorAll("[data-route-stage]")];
@@ -201,23 +162,6 @@ export function initMissionInterface() {
     if (routeProgress) routeProgress.style.width = `${routePercent(snapshot).toFixed(1)}%`;
   }
 
-  function syncThreat(snapshot) {
-    const threat = threatFromSnapshot(snapshot);
-    const copy = THREAT_COPY[threat.level];
-    body.dataset.threat = threat.level;
-    if (threatLabel) threatLabel.textContent = copy.label;
-    if (footerThreatCopy) footerThreatCopy.textContent = copy.footer;
-
-    const active = threat.score >= 42 || Boolean(snapshot?.scene?.entity);
-    encounterMonitor?.classList.toggle("is-active", active);
-    if (encounterTitle) {
-      encounterTitle.textContent = active
-        ? String(snapshot?.scene?.title || "Dấu hiệu chưa định danh")
-        : "Không có tiếp xúc trực diện";
-    }
-    if (encounterCaption) encounterCaption.textContent = copy.caption;
-  }
-
   function syncTarget(snapshot) {
     if (lanHealth) lanHealth.textContent = `${clamp(numberOr(snapshot?.campaignStats?.lanHealth, 100), 0, 100)}%`;
     if (lanInfluence) lanInfluence.textContent = `${clamp(numberOr(snapshot?.campaignStats?.lanMaterInfluence), 0, 100)}%`;
@@ -264,9 +208,12 @@ export function initMissionInterface() {
     const title = String(snapshot?.scene?.title || "").trim();
     if (stageSceneName && title) stageSceneName.textContent = title;
 
-    const active = threatFromSnapshot(snapshot).score >= 42 || Boolean(snapshot?.scene?.entity);
-    // Gương mặt thực thể do cảnh chọn (entity: "<id>"); encounter theo điểm
-    // threat mà cảnh không khai báo thì giữ ảnh mặc định trong HTML.
+    // Encounter là chỉ đạo kịch bản thuần túy (lệnh chủ nhân 2026-11-06):
+    // chỉ cảnh VN khai báo entity mới mở encounter — cơ chế điểm threat
+    // thời AI-GM đã gỡ cùng khối cảm biến.
+    const active = Boolean(snapshot?.scene?.entity);
+    // Gương mặt thực thể do cảnh chọn (entity: "<id>"); cảnh không khai
+    // báo thì giữ ảnh mặc định trong HTML.
     const entitySrc = resolveEntitySrc(snapshot?.scene?.entity);
     if (stageEntity && entitySrc && stageEntity.getAttribute("src") !== entitySrc) {
       stageEntity.setAttribute("src", entitySrc);
@@ -314,7 +261,6 @@ export function initMissionInterface() {
   function sync(snapshot) {
     if (!snapshot || typeof snapshot !== "object") return;
     syncRoute(snapshot);
-    syncThreat(snapshot);
     syncTarget(snapshot);
     syncStage(snapshot);
     animateScene(String(snapshot?.scene?.id || `turn-${numberOr(snapshot?.turn)}`));

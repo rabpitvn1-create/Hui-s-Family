@@ -6,18 +6,15 @@ const gradle = readFileSync("android/app/build.gradle.kts", "utf8");
 const requiredIds = [
   "start-screen", "start-game-button", "game-shell",
   "scene-kicker", "scene-progress", "scene-title", "story-text", "choices",
-  "alert-meter", "alert-value", "ritual-meter", "ritual-value",
-  "civilian-meter", "civilian-value", "time-meter", "time-value",
-  "control-meter", "control-value", "signal-meter", "signal-value",
+  "lan-health-meter", "lan-health-value", "lan-mater-meter", "lan-mater-value",
   "lan-trust-meter", "lan-trust-value", "memory-meter", "memory-value",
-  "party-meter", "party-value", "evidence-value", "route-value",
-  "verification-value", "contact-style-value", "campaign-stage-value",
-  "objective-progress-value", "backrooms-floor-value", "supplies-value",
-  "ammunition-value", "clues-value", "saved-value", "log-list",
-  "threads-list", "inventory-list", "save-button", "load-button",
-  "restart-button", "ai-status",
-  "ai-action", "ai-submit", "ai-clear",
-  "ai-note", "ai-api-keys", "intel-panel", "intel-toggle"
+  "route-value", "route-tendency-value",
+  "campaign-stage-value",
+  "objective-progress-value", "backrooms-floor-value",
+  "clues-value", "log-list",
+  "threads-list", "save-button", "load-button",
+  "restart-button",
+  "intel-panel", "intel-toggle"
 ];
 
 const idMatches = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
