@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17100c">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Hứa Gia: LIBERA-1899 — text game điều tra dị thường tại Long Hải, Nam Kỳ, năm 1899.">
+  <meta name="description" content="Hứa Gia: LIBERA-1899 — visual novel kịch bản viết sẵn tại Long Hải, Nam Kỳ, năm 1899.">
   <title>Hứa Gia: LIBERA-1899</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="ui-layout.css">
@@ -67,8 +67,8 @@
       <section id="story-panel" class="story-panel" aria-labelledby="scene-title" tabindex="-1">
         <header class="scene-header">
           <div class="scene-meta">
-            <span id="scene-kicker">HỒI 1 // LONG HẢI // 1899</span>
-            <span class="turn-seal">LƯỢT <strong id="scene-progress">00</strong></span>
+            <span id="scene-kicker">CHẶNG 1 // LONG HẢI // 1899</span>
+            <span class="turn-seal">CẢNH <strong id="scene-progress">00</strong></span>
           </div>
           <h2 id="scene-title">Biệt thự dưỡng bệnh</h2>
           <div class="scene-rule" aria-hidden="true"><span></span></div>
@@ -80,14 +80,14 @@
           <div class="section-heading">
             <div>
               <p class="micro-label">PHƯƠNG ÁN HIỆN TRƯỜNG</p>
-              <h3 id="choice-deck-title">Chọn hướng tiếp cận</h3>
+              <h3 id="choice-deck-title">Chọn quyết định</h3>
             </div>
-            <span class="choice-hint">Phím 1–3 để chọn nhanh</span>
+            <span class="choice-hint">Các lựa chọn thay đổi hậu quả</span>
           </div>
           <div id="choices" class="choices" aria-label="Các hướng hành động gợi ý"></div>
         </section>
 
-        <section id="ai-game-master" class="ai-game-master" aria-labelledby="ai-title">
+        <section id="ai-game-master" class="ai-game-master" hidden aria-labelledby="ai-title">
           <div class="ai-heading">
             <div>
               <h3 id="ai-title">Hành động của Cao Minh</h3>
@@ -113,7 +113,7 @@
             <button id="ai-api-keys" type="button" hidden>Cấu hình API key</button>
           </div>
 
-          <p id="ai-note" class="ai-note">Gemini phát triển từng cảnh trong tuyến canon đã khóa. <kbd>Ctrl</kbd> + <kbd>Enter</kbd> để gửi.</p>
+          <p id="ai-note" class="ai-note">Visual Novel kịch bản cố định. <kbd>Ctrl</kbd> + <kbd>Enter</kbd> để gửi.</p>
         </section>
       </section>
 
@@ -136,7 +136,7 @@
             <div class="profile-copy">
               <p class="micro-label">ĐẠO TỔ · VẠN MA ĐẠO MÔN</p>
               <h2>Cao Minh <span>/ Vạn Giới Ma Tổ</span></h2>
-              <p>Đạo Tổ · song kiếm Thái Cổ Song Sát · Hắc Long Chiến Khải · đang trừ tà khí cho Hứa Tiểu Lan</p>
+              <p>Đạo Tổ · song kiếm Thái Cổ Song Sát · Hắc Long Chiến Khải · đang bảo vệ quyền tự quyết của Hứa Tiểu Lan</p>
             </div>
           </section>
 
@@ -146,9 +146,9 @@
               <span class="target-mark" aria-hidden="true">HTL-04</span>
             </div>
             <div class="profile-copy">
-              <p class="micro-label">NGƯỜI NHIỄM TÀ KHÍ</p>
+              <p class="micro-label">NGƯỜI MANG NGHỊCH TRÙNG</p>
               <h2>Hứa Tiểu Lan</h2>
-              <p>Tứ tiểu thư · không mang Tử Mẫu Trùng</p>
+              <p>Tứ tiểu thư · Nghịch Trùng · giữ quyền từ chối</p>
             </div>
             <dl class="profile-vitals">
               <div><dt>Sức khỏe</dt><dd id="lan-health-rail">100%</dd></div>
@@ -174,12 +174,15 @@
               <h2 id="route-ledger-title">Tuyến hành quân</h2>
             </div>
             <ol id="campaign-route-list">
-              <li data-route-stage="long_hai"><span>01</span><strong>Long Hải</strong><small>Giải cứu Tiểu Lan</small></li>
-              <li data-route-stage="can_gio"><span>02</span><strong>Cần Giờ</strong><small>Đường trùng nước lợ</small></li>
-              <li data-route-stage="backrooms"><span>03</span><strong>Backrooms 1900</strong><small>16 tầng vô nghĩa</small></li>
-              <li data-route-stage="thu_dau_mot"><span>04</span><strong>Thủ Dầu Một</strong><small>Dấu vết La Hầu</small></li>
-              <li data-route-stage="vung_tau"><span>05</span><strong>Vũng Tàu</strong><small>Mộng và ký ức</small></li>
-              <li data-route-stage="sai_gon_cho_lon"><span>06</span><strong>Sài Gòn–Chợ Lớn</strong><small>Nhà chính Hứa Gia</small></li>
+              <li data-route-stage="long_hai"><span>01</span><strong>Long Hải</strong><small>Nhận diện liên kết Danh</small></li>
+              <li data-route-stage="vung_tau"><span>02</span><strong>Vũng Tàu</strong><small>Tuyến quan tài</small></li>
+              <li data-route-stage="can_gio"><span>03</span><strong>Cần Giờ</strong><small>Điểm neo sống</small></li>
+              <li data-route-stage="prenn"><span>04</span><strong>Prenn 200 năm trước</strong><small>Ba dị bản Bạch Y</small></li>
+              <li data-route-stage="backrooms"><span>05</span><strong>Backrooms 16 tầng</strong><small>Lối thoát hợp lệ</small></li>
+              <li data-route-stage="cho_lon_return"><span>06</span><strong>Trở về Chợ Lớn</strong><small>Sáu mảnh Sổ</small></li>
+              <li data-route-stage="dong_thap"><span>07</span><strong>Đồng Tháp</strong><small>Huyết Phòng</small></li>
+              <li data-route-stage="hue"><span>08</span><strong>Huế</strong><small>Thư mật mã</small></li>
+              <li data-route-stage="cho_lon_final"><span>09</span><strong>Chợ Lớn chung kết</strong><small>Đại Lễ Lục Sinh</small></li>
             </ol>
           </section>
 
@@ -276,7 +279,7 @@
             </div>
             <div class="resource-grid">
               <div><span>Vật tư</span><strong id="supplies-value">6</strong></div>
-              <div><span>Đạn đội</span><strong id="ammunition-value">100</strong></div>
+              <div><span>Đạn đội (không dùng)</span><strong id="ammunition-value">100</strong></div>
               <div><span>Chứng cứ</span><strong id="evidence-value">0</strong></div>
               <div><span>Đầu mối Hứa Gia</span><strong id="clues-value">0</strong></div>
               <div><span>Dân đã cứu</span><strong id="saved-value">0</strong></div>
