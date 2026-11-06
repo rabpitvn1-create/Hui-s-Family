@@ -68,34 +68,7 @@ jobs:
       - name: Preflight standalone APK
         run: npm run check
 
-      - name: Verify six Gemini API secrets
-        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
-        shell: bash
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
-          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
-          GEMINI_API_KEY_4: ${{ secrets.GEMINI_API_KEY_4 }}
-          GEMINI_API_KEY_5: ${{ secrets.GEMINI_API_KEY_5 }}
-          GEMINI_API_KEY_6: ${{ secrets.GEMINI_API_KEY_6 }}
-        run: |
-          set -euo pipefail
-          missing=0
-          for name in \
-            GEMINI_API_KEY \
-            GEMINI_API_KEY_2 \
-            GEMINI_API_KEY_3 \
-            GEMINI_API_KEY_4 \
-            GEMINI_API_KEY_5 \
-            GEMINI_API_KEY_6
-          do
-            if [[ -z "${!name:-}" ]]; then
-              echo "::error::Missing repository secret: ${name}"
-              missing=1
-            fi
-          done
-          exit "$missing"
-
+      # Bundled keys are optional. With none configured, the APK uses its device key vault.
       - name: Build debug APK
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

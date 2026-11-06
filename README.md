@@ -19,7 +19,9 @@ Bố cục v5: Header với nút burger chứa mọi hệ thống phụ, khung S
 
 ## API key
 
-APK không nhúng sẵn API key. Người dùng nhập Gemini API key sau khi cài đặt; key được lưu mã hóa trên thiết bị bằng Android Keystore. Có thể lưu tối đa 20 key và xoay vòng khi gặp lỗi quota/rate-limit phù hợp.
+Build không bắt buộc API key. Khi không có key đóng gói, người dùng nhập Gemini API key sau khi cài đặt; key được lưu mã hóa trên thiết bị bằng Android Keystore. Có thể lưu tối đa 20 key và xoay vòng khi gặp lỗi quota/rate-limit phù hợp.
+
+Nếu cấu hình các repository secrets `GEMINI_API_KEY`, `GEMINI_API_KEY_2` đến `GEMINI_API_KEY_6`, build sẽ đóng gói những key có giá trị và app ưu tiên dùng chúng. Không bắt buộc đủ 6 key.
 
 Model mặc định:
 
@@ -28,7 +30,7 @@ Model mặc định:
 Viết văn: gemini-3.6-flash
 ```
 
-Tên model có thể được đặt bằng repository variables `GEMINI_DIRECTOR_MODEL` và `GEMINI_WRITER_MODEL` khi build. API key không đi qua GitHub Actions.
+Tên model có thể được đặt bằng repository variables `GEMINI_DIRECTOR_MODEL` và `GEMINI_WRITER_MODEL` khi build. Khi không cấu hình secrets, API key chỉ được nhập và lưu trên thiết bị.
 
 ## Kiểm tra
 

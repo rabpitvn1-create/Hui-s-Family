@@ -4,7 +4,9 @@ Bản hiện tại dùng Gemini làm đạo diễn logic và biên tập văn xu
 
 ## API key trên thiết bị
 
-APK không nhúng API key vào source hoặc artifact build.
+Build không bắt buộc repository secrets. Khi không cấu hình key lúc build, APK dùng key do người dùng nhập và lưu mã hóa trên thiết bị.
+
+Có thể tùy chọn đóng gói các key từ repository secrets `GEMINI_API_KEY`, `GEMINI_API_KEY_2` đến `GEMINI_API_KEY_6`. App ưu tiên những key đóng gói có giá trị; không bắt buộc đủ 6 key. Không ghi giá trị key trực tiếp vào source.
 
 Khi cài và mở game:
 
@@ -13,7 +15,7 @@ Khi cài và mở game:
 3. APK lưu tối đa 20 key đã mã hóa bằng Android Keystore/AES-GCM.
 4. `GeminiApiClient.kt` gọi Gemini Developer API trực tiếp qua HTTPS và luân phiên key khi gặp lỗi quota/rate-limit phù hợp.
 
-API key không được đưa vào WebView, save game, repository hoặc GitHub Actions.
+Key do người dùng nhập không được đưa vào WebView, save game, repository hoặc GitHub Actions.
 
 ## Model
 
@@ -70,6 +72,6 @@ Workflow `.github/workflows/build-android-apk.yml` chạy preflight, build APK v
 
 Khi game chạy ngoài APK (trình duyệt), `src/native-ai-pipeline.js` tự động chuyển sang làn proxy: gọi `POST https://backrooms-gemini-proxy.onrender.com/gemini` với đúng hợp đồng generateContent (model, contents, systemInstruction, generationConfig) và cùng cặp model mặc định như APK. Proxy giữ API key ở server và tự luân phiên key; trang web không chứa bất kỳ API key nào.
 
-Trong APK, cầu nối native luôn được ưu tiên và làn proxy không bao giờ chạy — six-key pool đóng gói vẫn là đường duy nhất. Proxy có cold start (Render free tier) nên bản web ping `/health` ngay khi mở trang để đánh thức proxy trước lượt chơi đầu.
+Trong APK, cầu nối native luôn được ưu tiên và làn proxy không bao giờ chạy. App dùng các key đóng gói nếu có, hoặc key lưu mã hóa trên thiết bị nếu không có key đóng gói. Proxy có cold start (Render free tier) nên bản web ping `/health` ngay khi mở trang để đánh thức proxy trước lượt chơi đầu.
 
 Thứ tự làn web: **proxy premium trước** (`POST https://backrooms-premium-proxy.onrender.com/chat`, chuẩn OpenAI chat completions, model do server cố định — hiện là gemini-3.8-flash — chuyển tiếp nguyên vẹn tin nhắn hệ thống), **proxy Gemini dự phòng** khi premium lỗi. Chỉ thị hệ thống ở làn Gemini-proxy phải gấp vào `contents` vì proxy đó không chuyển tiếp field `systemInstruction` (đã kiểm chứng bằng test đối chứng).
