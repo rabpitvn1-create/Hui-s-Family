@@ -1,4 +1,5 @@
 import { INITIAL_STATE, WORLD_CANON } from "./world-canon.js";
+import { VN_SCENES, VN_START_SCENE } from "./vn-scenes.js";
 import {
   applyProgressionUpdate,
   getBackroomsFloor,
@@ -7,8 +8,8 @@ import {
 } from "./campaign-canon.js";
 
 // Save version v3: bản lưu v2 thuộc thế hệ nhân vật chính trước, không còn được đọc nữa.
-const AUTO_SAVE_KEY = "hua-family-campaign-v3-auto";
-const MANUAL_SAVE_KEY = "hua-family-campaign-v3-manual";
+const AUTO_SAVE_KEY = "hua-family-campaign-v4-auto";
+const MANUAL_SAVE_KEY = "hua-family-campaign-v4-manual";
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
@@ -92,7 +93,7 @@ function normalizeProgression(rawProgression, baseProgression) {
     ...baseProgression,
     ...candidate,
     stageId: cleanText(candidate.stageId, 60) || baseProgression.stageId,
-    stageIndex: clamp(candidate.stageIndex ?? baseProgression.stageIndex, 0, 5),
+    stageIndex: clamp(candidate.stageIndex ?? baseProgression.stageIndex, 0, 8),
     backroomsFloor: clamp(candidate.backroomsFloor ?? baseProgression.backroomsFloor, -1, 15),
     completedObjectiveIds: (Array.isArray(candidate.completedObjectiveIds) ? candidate.completedObjectiveIds : [])
       .map((item) => cleanText(item, 80)).filter(Boolean).slice(-20),
@@ -118,7 +119,8 @@ function normalizeState(rawState) {
     campaignCanon: { ...base.campaignCanon, ...(candidate.campaignCanon || {}) },
     inventory: Array.isArray(candidate.inventory) ? candidate.inventory : [],
     log: Array.isArray(candidate.log) ? candidate.log.slice(0, 14) : base.log,
-    history: Array.isArray(candidate.history) ? candidate.history.slice(-60) : []
+    history: Array.isArray(candidate.history) ? candidate.history.slice(-60) : [],
+    vnCheckpoint: candidate.vnCheckpoint && typeof candidate.vnCheckpoint === "object" ? candidate.vnCheckpoint : null
   };
 
   state.scene.narration = Array.isArray(state.scene.narration)
@@ -202,6 +204,82 @@ export function initGame() {
 
   const storage = createStorage();
   let state = normalizeState(INITIAL_STATE);
+
+  // VN is the only playable route; legacy AI entrypoints cannot change state.
+  function presentScene(sceneId) {
+    const card = VN_SCENES[sceneId];
+    if (!card) throw new Error("Scene viết sẵn chưa tồn tại: " + sceneId);
+    state.scene = {
+      id: card.id,
+      backgroundId: card.backgroundId || "long-hai-exterior",
+      kicker: "HỒI 1 // LONG HẢI // 1899",
+      title: card.title,
+      narration: [...(card.narration || [])],
+      dialogue: [...(card.dialogue || [])],
+      choices: (card.choices || []).map((item) => item.text)
+    };
+    state.currentLocation = card.location || (card.backgroundId === "tieu-lan-room"
+      ? "Phòng Hứa Tiểu Lan, biệt thự Long Hải" : "Biệt thự Hứa Gia, Long Hải");
+  }
+
+  function applyScriptChoice(index) {
+    const card = VN_SCENES[state.scene.id];
+    const choice = card?.choices?.[index];
+    if (!choice || card.sliceEnd) return false;
+    if (choice.retry) {
+      if (!state.vnCheckpoint) return false;
+      state = normalizeState(state.vnCheckpoint);
+      state.vnCheckpoint = null;
+      presentScene(state.scene.id);
+      autoSave();
+      render();
+      return true;
+    }
+    if (!VN_SCENES[choice.next]) throw new Error("Nhánh không có scene đích: " + choice.next);
+    if (VN_SCENES[choice.next].deadEnd) {
+      state.vnCheckpoint = clone({ ...state, vnCheckpoint: null });
+      presentScene(choice.next);
+      autoSave();
+      render();
+      return true;
+    }
+    const previousProgression = clone(state.progression);
+    applyCampaignEffects(choice.effects || {});
+    if (choice.flags) {
+      for (const [key, value] of Object.entries(choice.flags)) {
+        if (typeof value !== "boolean") throw new Error("Flag VN phải là boolean");
+        state.flags[key] = value;
+      }
+    }
+    const next = VN_SCENES[choice.next];
+    const objective = choice.objective || next.objective;
+    if (objective) {
+      const result = applyProgressionUpdate(state.progression, state.flags, {
+        completedObjectiveIds: [objective]
+      });
+      state.progression = result.progression;
+      state.flags = { ...state.flags, ...result.flags };
+      result.notes.forEach((note) => state.log.unshift(note));
+      updateDerivedCampaignStats(previousProgression);
+    }
+    state.turn += 1;
+    state.history.push({
+      turn: state.turn,
+      action: choice.text,
+      summary: next.title,
+      stageId: state.progression.stageId,
+      sceneTitle: next.title
+    });
+    state.history = state.history.slice(-60);
+    state.log.unshift("Cảnh: " + next.title);
+    state.log = state.log.slice(0, 14);
+    presentScene(next.id);
+    autoSave();
+    render();
+    return true;
+  }
+
+  presentScene(VN_START_SCENE);
 
   function applyStatEffects(rawEffects) {
     const effects = rawEffects && typeof rawEffects === "object" ? rawEffects : {};
@@ -309,6 +387,7 @@ export function initGame() {
   }
 
   function applyAiTurn(rawTurn, playerAction) {
+    throw new Error("AI-GM đã tắt trong Visual Novel kịch bản viết sẵn.");
     const turn = rawTurn && typeof rawTurn === "object" ? rawTurn : {};
     const updates = turn.worldUpdates && typeof turn.worldUpdates === "object" ? turn.worldUpdates : {};
     const narration = cleanText(turn.narration, 8000);
@@ -371,6 +450,7 @@ export function initGame() {
       worldId: WORLD_CANON.id,
       turn: state.turn,
       scene: clone(state.scene),
+      vnCheckpointAvailable: Boolean(state.vnCheckpoint),
       currentLocation: state.currentLocation,
       progression: clone(state.progression),
       stats: clone(state.stats),
@@ -413,9 +493,7 @@ export function initGame() {
       const label = document.createElement("span");
       label.textContent = choice;
       button.append(number, label);
-      button.addEventListener("click", () => {
-        window.dispatchEvent(new CustomEvent("hua:use-suggestion", { detail: { choice } }));
-      });
+      button.addEventListener("click", () => applyScriptChoice(index));
       elements.choices.append(button);
     });
   }
@@ -532,7 +610,16 @@ export function initGame() {
       return;
     }
     try {
-      state = normalizeState(JSON.parse(raw));
+      const decoded = JSON.parse(raw);
+      if (decoded.version !== INITIAL_STATE.version
+        || !VN_SCENES[decoded.scene?.id]) {
+        state.log.unshift("Bản lưu thuộc canon cũ, không tương thích với VN hiện hành.");
+        state.log = state.log.slice(0, 14);
+        render();
+        return;
+      }
+      state = normalizeState(decoded);
+      presentScene(state.scene.id);
       state.log.unshift("Đã tải chiến dịch canon.");
       state.log = state.log.slice(0, 14);
       render();
@@ -546,6 +633,7 @@ export function initGame() {
 
   function restartGame() {
     state = normalizeState(INITIAL_STATE);
+    presentScene(VN_START_SCENE);
     storage.removeItem(AUTO_SAVE_KEY);
     state.log.unshift("Đã khởi tạo lại chiến dịch từ Long Hải.");
     autoSave();
@@ -559,6 +647,7 @@ export function initGame() {
   window.HUA_GAME_BRIDGE = Object.freeze({
     getSnapshot,
     applyAiTurn,
+    applyScriptChoice,
     saveGame,
     loadGame,
     restartGame
