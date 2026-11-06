@@ -271,7 +271,7 @@ export function initGame() {
       state.vnCheckpoint = null;
       presentScene(state.scene.id);
       autoSave();
-      render();
+      render({ resetScroll: true });
       return true;
     }
     if (!VN_SCENES[choice.next]) throw new Error("Nhánh không có scene đích: " + choice.next);
@@ -279,7 +279,7 @@ export function initGame() {
       state.vnCheckpoint = clone({ ...state, vnCheckpoint: null });
       presentScene(choice.next);
       autoSave();
-      render();
+      render({ resetScroll: true });
       return true;
     }
     const previousProgression = clone(state.progression);
@@ -321,7 +321,7 @@ export function initGame() {
     state.log = state.log.slice(0, 14);
     presentScene(next.id);
     autoSave();
-    render();
+    render({ resetScroll: true });
     return true;
   }
 
@@ -589,7 +589,20 @@ export function initGame() {
     });
   }
 
-  function render() {
+  function resetReaderScroll() {
+    // .game-layout is the reading scroller; the page itself is fixed.
+    const scrollRegion = document.querySelector(".game-layout");
+    if (!scrollRegion) return;
+
+    scrollRegion.scrollTop = 0;
+    // Run once more after layout to prevent the old choice-button anchor
+    // from returning the reader to the bottom of the new scene.
+    window.requestAnimationFrame?.(() => {
+      scrollRegion.scrollTop = 0;
+    });
+  }
+
+  function render({ resetScroll = false } = {}) {
     const stage = getStageById(state.progression.stageId);
     const objectives = getCurrentObjectives(state.progression);
     const completedCount = objectives.filter((objective) => state.progression.completedObjectiveIds.includes(objective.id)).length;
@@ -631,6 +644,7 @@ export function initGame() {
     renderList(elements.log, state.log, "Chưa có sự kiện.");
     document.title = `${state.scene.title} — Hứa Gia: LIBERA-1899`;
     window.dispatchEvent(new CustomEvent("hua:game-rendered", { detail: getSnapshot() }));
+    if (resetScroll) resetReaderScroll();
   }
 
   function autoSave() {
@@ -671,13 +685,13 @@ export function initGame() {
       presentScene(state.scene.id);
       state.log.unshift("Đã tải chiến dịch canon.");
       state.log = state.log.slice(0, 14);
-      render();
+      render({ resetScroll: true });
     } catch (error) {
       console.error(error);
       state = normalizeState(INITIAL_STATE);
       presentScene(VN_START_SCENE);
       state.log.unshift("Bản lưu hỏng; đã tạo chiến dịch mới.");
-      render();
+      render({ resetScroll: true });
     }
   }
 
@@ -687,7 +701,7 @@ export function initGame() {
     storage.removeItem(AUTO_SAVE_KEY);
     state.log.unshift("Đã khởi tạo lại chiến dịch từ Long Hải.");
     autoSave();
-    render();
+    render({ resetScroll: true });
   }
 
   elements.save?.addEventListener("click", saveGame);
