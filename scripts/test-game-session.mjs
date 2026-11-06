@@ -47,6 +47,13 @@ assert.equal(game.bridge.getSnapshot().scene.id, "lh_dead_blade");
 assert.equal(game.bridge.applyScriptChoice(0), true);
 assert.equal(game.bridge.getSnapshot().scene.id, VN_START_SCENE);
 assert.equal(game.bridge.applyScriptChoice(0), true);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_gate");
+// Mạch Hồi 1 mở rộng (Phương án B): prologue → gate → saloon → rules → hall.
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_saloon");
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_rules");
+game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_hall");
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes("infiltrate_villa"), true);
 game.bridge.applyScriptChoice(0);
