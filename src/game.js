@@ -564,14 +564,7 @@ export function initGame() {
     restartGame
   });
 
-  const auto = storage.getItem(AUTO_SAVE_KEY);
-  if (auto) {
-    try {
-      state = normalizeState(JSON.parse(auto));
-    } catch {
-      state = normalizeState(INITIAL_STATE);
-    }
-  }
+  // Always open a fresh campaign. Keep existing saves untouched until the player loads or plays.
   render();
   return window.HUA_GAME_BRIDGE;
 }

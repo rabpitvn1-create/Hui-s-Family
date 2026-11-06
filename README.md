@@ -32,6 +32,8 @@ Viết văn: gemini-3.6-flash
 
 Tên model có thể được đặt bằng repository variables `GEMINI_DIRECTOR_MODEL` và `GEMINI_WRITER_MODEL` khi build. Khi không cấu hình secrets, API key chỉ được nhập và lưu trên thiết bị.
 
+Mỗi lần khởi động game đều bắt đầu chiến dịch mới từ Long Hải. Bản lưu cũ được giữ nguyên khi mở game và chỉ được nạp khi người chơi nhấn **Tải bản lưu**; ưu tiên bản lưu thủ công, sau đó đến bản tự lưu. Game vẫn tự lưu tiến độ sau mỗi lượt chơi, và nút **Lưu chiến dịch** tạo bản lưu thủ công.
+
 ## Kiểm tra
 
 Cần Node.js 20+:
