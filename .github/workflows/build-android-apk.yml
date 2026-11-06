@@ -14,6 +14,8 @@ on:
       - "ai-styles.css"
       - "package.json"
       - "scripts/test-ui.mjs"
+      - "scripts/test-game-session.mjs"
+      - "scripts/test-canon-migration.mjs"
       - "scripts/test-standalone-apk.mjs"
       - ".github/workflows/build-android-apk.yml"
   push:
@@ -29,6 +31,8 @@ on:
       - "ai-styles.css"
       - "package.json"
       - "scripts/test-ui.mjs"
+      - "scripts/test-game-session.mjs"
+      - "scripts/test-canon-migration.mjs"
       - "scripts/test-standalone-apk.mjs"
       - ".github/workflows/build-android-apk.yml"
 
