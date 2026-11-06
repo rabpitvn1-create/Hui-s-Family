@@ -769,3 +769,29 @@ body .campaign-header {
 }
 #intel-toggle .burger-text { display: none; }
 #intel-panel .route-readout { margin: .85rem .9rem 0; }
+
+/* Thông báo lưu/tải hiện ngay trong vùng nhìn (kết luận tranh luận
+   2026-11-06: lưu xong chỉ ghi nhật ký trong panel là phản hồi mù). */
+.save-toast {
+  position: fixed;
+  left: 50%;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 60;
+  max-width: calc(100vw - 2rem);
+  padding: .55rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  background: rgba(14, 9, 5, .94);
+  color: var(--ink);
+  font-size: .82rem;
+  letter-spacing: .02em;
+  text-align: center;
+  box-shadow: var(--shadow-paper);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.save-toast.is-visible { opacity: 1; }
+.save-toast.is-error { border-color: #b0492f; color: #f0b9a6; }
