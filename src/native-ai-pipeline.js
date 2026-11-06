@@ -51,6 +51,10 @@ export function hasProxyAiLane() {
   return !hasNativeAiBridge() && typeof fetch === "function";
 }
 
+export function hasVilaoAiLane() {
+  return !hasNativeAiBridge() && Boolean(VILAO_CONFIGURATION);
+}
+
 export function getProxyAiConfiguration() {
   return hasProxyAiLane() ? PROXY_CONFIGURATION : null;
 }

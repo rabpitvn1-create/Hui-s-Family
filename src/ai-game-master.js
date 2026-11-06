@@ -1,6 +1,7 @@
 import {
   hasNativeAiBridge,
   hasProxyAiLane,
+  hasVilaoAiLane,
   getNativeAiConfiguration,
   openNativeApiKeySettings,
   runNativeCampaignTurn,
@@ -78,6 +79,7 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
 
   const nativeMode = hasNativeAiBridge();
   const proxyMode = hasProxyAiLane();
+  const vilaoMode = hasVilaoAiLane();
   let nativeConfigured = false;
   let busy = false;
 
@@ -185,7 +187,7 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
     }
 
     setBusy(true);
-    setStatus(nativeMode ? "Gemini đang dùng nhóm API key…" : "Gemini đang xử lý qua proxy…", "busy");
+    setStatus(nativeMode ? "Gemini đang dùng nhóm API key…" : vilaoMode ? "Vilao AI đang xử lý…" : "Gemini đang xử lý qua proxy…", "busy");
 
     try {
       const payload = await runNativeCampaignTurn(bridge.getSnapshot(), action);
@@ -243,8 +245,13 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
     refreshNativeConfiguration();
   } else if (proxyMode) {
     warmUpProxyAi();
-    setStatus("Sẵn sàng · proxy Render", "ready");
-    elements.note.textContent = "Bản web gọi AI qua proxy Render của chủ sở hữu (ưu tiên proxy premium, dự phòng proxy Gemini); API key nằm ở server của proxy, không có trong trang. Lần gọi đầu có thể chậm khi proxy đang khởi động.";
+    if (vilaoMode) {
+      setStatus("Sẵn sàng · Vilao AI", "ready");
+      elements.note.textContent = "Bản web gọi AI qua Vilao AI (model chib/gemini-3.8-flash) làm lane chính; khi Vilao lỗi, game tự rơi xuống proxy Render của chủ sở hữu (ưu tiên proxy premium, dự phòng proxy Gemini).";
+    } else {
+      setStatus("Sẵn sàng · proxy Render", "ready");
+      elements.note.textContent = "Bản web gọi AI qua proxy Render của chủ sở hữu (ưu tiên proxy premium, dự phòng proxy Gemini); API key nằm ở server của proxy, không có trong trang. Lần gọi đầu có thể chậm khi proxy đang khởi động.";
+    }
   } else {
     setStatus("Chỉ hỗ trợ APK Android", "warning");
     elements.note.textContent = "Môi trường này không có cầu nối APK và cũng không gọi được proxy AI.";
