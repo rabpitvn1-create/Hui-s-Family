@@ -98,6 +98,7 @@ export function initMissionInterface() {
   const stageEntity = document.querySelector("#stage-entity");
   const stageSceneName = document.querySelector("#stage-scene-name");
   const stageBackground = document.querySelector("#stage-background");
+  const stageCharacter = document.querySelector("#stage-character");
   let lastSceneId = "";
   let sceneAnimationTimer = 0;
 
@@ -195,12 +196,20 @@ export function initMissionInterface() {
     if (lanInfluence) lanInfluence.textContent = `${clamp(numberOr(snapshot?.campaignStats?.lanMaterInfluence), 0, 100)}%`;
   }
 
+  // Cao Minh có HAI overlay riêng biệt (lệnh chủ nhân 2026-11-06): ảnh khám phá
+  // bình thường và ảnh lúc gặp thực thể (tư thế giơ tay kết ấn). Cùng ngưỡng
+  // encounter quyết định cả hai: entity hiện + Cao Minh đổi sang tư thế gặp
+  // thực thể; hết encounter thì quay lại ảnh khám phá.
+  const POSE_EXPLORE = "assets/overlay/main-character.png";
+  const POSE_ENCOUNTER = "assets/overlay/main-character-encounter.png";
+  let poseSwapTimer = 0;
+
   // v5: đồng bộ khung Snapshot (#snapshot-stage).
   // - #stage-scene-name: caption cảnh, lấy snapshot.scene.title; rỗng thì giữ text mặc định trong HTML.
   // - #stage-entity: overlay Entity, CHỈ hiện khi encounter active — cùng ngưỡng với
   //   syncThreat (active = threat score >= 42). Cơ chế: class .stage-entity-on trên
   //   chính #stage-entity (CSS mặc định ẩn #stage-entity, .stage-entity-on thì hiện).
-  // - #stage-character: luôn hiển thị, không cần sync.
+  // - #stage-character: đổi tư thế theo encounter (xem POSE_* ở trên), fade 160ms.
   function syncStage(snapshot) {
     const backgroundId = resolveSceneBackground(snapshot);
     const source = SCENE_BACKGROUNDS[backgroundId];
@@ -213,6 +222,16 @@ export function initMissionInterface() {
 
     const active = threatFromSnapshot(snapshot).score >= 42;
     stageEntity?.classList.toggle("stage-entity-on", active);
+
+    const pose = active ? POSE_ENCOUNTER : POSE_EXPLORE;
+    if (stageCharacter && stageCharacter.getAttribute("src") !== pose) {
+      stageCharacter.classList.add("is-swapping");
+      window.clearTimeout(poseSwapTimer);
+      poseSwapTimer = window.setTimeout(() => {
+        stageCharacter.setAttribute("src", pose);
+        stageCharacter.classList.remove("is-swapping");
+      }, 160);
+    }
   }
 
   function sync(snapshot) {
@@ -273,6 +292,9 @@ export function initMissionInterface() {
   } catch {
     setFocusMode(false);
   }
+  // Nạp trước ảnh tư thế gặp thực thể để lần chạm trán đầu không chớp hình.
+  const posePreload = new Image();
+  posePreload.src = POSE_ENCOUNTER;
   // Mặc định: deck phương án đang hiện (aria-expanded="true"), trừ khi HTML ghi rõ "false".
   setChoicesOpen(actionsToggle ? actionsToggle.getAttribute("aria-expanded") !== "false" : true);
   syncIntelAccessibility();

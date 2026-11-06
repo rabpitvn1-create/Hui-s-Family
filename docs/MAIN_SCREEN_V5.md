@@ -51,7 +51,7 @@ Giữ nguyên **toàn bộ 70 element ID hiện có** của `index.html`; v5 ch�
 | `#intel-panel` | Drawer chứa mọi hệ thống phụ; ở v5 là drawer ở **mọi bề rộng màn hình** (không chỉ mobile như bản cũ), kèm `#intel-scrim` và nút `#intel-close` sẵn có. |
 | `#snapshot-stage` | Khung Snapshot (minh họa overlay). |
 | `#stage-entity` | Lớp hình Entity, neo trái trong `#snapshot-stage`. Mặc định ẩn; chỉ hiện khi encounter đang hoạt động (điểm nguy cơ ≥ 42) bằng cách thêm class **`.stage-entity-on`** vào `#snapshot-stage`. Nguồn ảnh: `assets/overlay/entity-01.png`. |
-| `#stage-character` | Lớp hình nhân vật chính, neo phải trong `#snapshot-stage`. Nguồn ảnh: `assets/overlay/main-character.png`. |
+| `#stage-character` | Lớp hình nhân vật chính, neo phải trong `#snapshot-stage`. **Hai overlay riêng biệt** (ruling 2026-11-06): bình thường dùng ảnh khám phá `assets/overlay/main-character.png`; khi encounter active (nguy cơ ≥ 42, cùng lúc `#stage-entity` hiện) JS đổi sang ảnh gặp thực thể `assets/overlay/main-character-encounter.png` (tư thế giơ tay kết ấn — nguồn: file "Cao Minh — Toàn thân — Nền tối.png" trong Drive `/GAOMING`, vốn đã có alpha thật, chỉ chuẩn hoá về canvas 1086×1448), fade 160 ms qua class `.is-swapping`; hết encounter thì đổi lại. |
 | `#stage-scene-name` | Nhãn tên cảnh/địa điểm hiện tại hiển thị trên khung Snapshot (ví dụ "Biệt thự dưỡng bệnh · Long Hải"). |
 | `#actions-toggle` | Nút **Thao Tác** ở đáy khung GM; bấm để mở/đóng deck phương án (`#choices`). |
 | `#ai-action` | Ô chat của player (textarea sẵn có) ở đáy khung GM, cạnh `#actions-toggle`. |

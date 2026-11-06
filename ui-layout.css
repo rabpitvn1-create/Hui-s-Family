@@ -582,7 +582,11 @@ body.stage-entity-on #stage-entity {
   width: 100%;
   height: 100%;
   max-width: none;
+  transition: opacity 160ms ease;
 }
+
+/* Đổi tư thế khám phá <-> gặp thực thể: fade ngắn trong lúc JS thay src. */
+#stage-character.is-swapping { opacity: 0; }
 
 /* Song kiếm LƠ LỬNG cố định hai bên nhân vật (lệnh chủ nhân: không xoay nữa):
    mỗi thanh đậu ở một bên thân Cao Minh, chỉ nhấp nhô nhẹ lên/xuống và lắc rất
