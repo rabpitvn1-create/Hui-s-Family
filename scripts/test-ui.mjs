@@ -4,6 +4,7 @@ const html = readFileSync("index.html", "utf8");
 const gradle = readFileSync("android/app/build.gradle.kts", "utf8");
 
 const requiredIds = [
+  "start-screen", "start-game-button", "game-shell",
   "scene-kicker", "scene-progress", "scene-title", "story-text", "choices",
   "alert-meter", "alert-value", "ritual-meter", "ritual-value",
   "civilian-meter", "civilian-value", "time-meter", "time-value",

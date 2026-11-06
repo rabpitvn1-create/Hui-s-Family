@@ -3,9 +3,12 @@ import { initGame } from "./game.js";
 import { initAiGameMaster } from "./ai-game-master.js";
 import { initDialogueAvatars } from "./dialogue-avatars.js";
 import { initCharacterSnapshot } from "./character-snapshot.js";
+import { initGameStart } from "./game-start.js";
 
-initMissionInterface();
-initDialogueAvatars();
-initCharacterSnapshot();
-const bridge = initGame();
-if (bridge) initAiGameMaster(bridge);
+initGameStart(() => {
+  initMissionInterface();
+  initDialogueAvatars();
+  initCharacterSnapshot();
+  const bridge = initGame();
+  if (bridge) initAiGameMaster(bridge);
+});

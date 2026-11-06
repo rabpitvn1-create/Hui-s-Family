@@ -1,3 +1,57 @@
+#game-shell[hidden],
+#start-screen[hidden] { display: none; }
+
+.start-screen {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: safe center;
+  overflow-y: auto;
+  padding: max(1.5rem, env(safe-area-inset-top)) max(1.5rem, env(safe-area-inset-right)) max(1.5rem, env(safe-area-inset-bottom)) max(1.5rem, env(safe-area-inset-left));
+  background:
+    linear-gradient(180deg, rgba(13,9,7,.5), rgba(13,9,7,.9)),
+    url("assets/snapshots/long-hai-exterior.webp") center / cover;
+}
+
+.start-card {
+  width: min(100%, 28rem);
+  padding: clamp(1.5rem, 6vw, 3rem);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  background: rgba(23,16,13,.88);
+  box-shadow: var(--shadow-deep);
+  text-align: center;
+}
+
+.start-kicker {
+  margin: 0 0 .5rem;
+  color: var(--brass-pale);
+  font-size: .75rem;
+  letter-spacing: .18em;
+}
+
+.start-card h1 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-size: clamp(2.5rem, 10vw, 4rem);
+}
+
+.start-description { margin: .5rem 0 2rem; color: var(--ink-dim); }
+
+.start-game-button {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: .8rem 1.2rem;
+  border: 1px solid var(--brass-pale);
+  border-radius: var(--radius-sm);
+  color: var(--wood);
+  background: var(--brass-pale);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.start-game-button:disabled { opacity: .65; cursor: wait; }
+
 .story-text {
   max-width: 72ch;
   color: var(--ink);

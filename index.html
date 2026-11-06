@@ -16,12 +16,21 @@
   <script type="module" src="src/app.js"></script>
 </head>
 <body data-stage="long_hai" data-threat="low">
-  <a class="skip-link" href="#story-text">Đi thẳng đến nội dung cảnh</a>
   <noscript>Trò chơi cần JavaScript để vận hành.</noscript>
 
   <div class="world-texture" aria-hidden="true"></div>
 
-  <div class="shell">
+  <section id="start-screen" class="start-screen" aria-labelledby="start-title">
+    <div class="start-card">
+      <p class="start-kicker">LIBERA-1899</p>
+      <h1 id="start-title">Hứa Gia</h1>
+      <p class="start-description">Long Hải, Nam Kỳ. Năm 1899.</p>
+      <button id="start-game-button" class="start-game-button" type="button">Bắt đầu game</button>
+    </div>
+  </section>
+
+  <div id="game-shell" class="shell" hidden>
+    <a class="skip-link" href="#story-text">Đi thẳng đến nội dung cảnh</a>
     <header class="campaign-header">
       <button id="intel-toggle" class="mission-tool burger-toggle" type="button" aria-controls="intel-panel" aria-expanded="false">
         <span class="burger-line" aria-hidden="true"></span>
@@ -54,7 +63,7 @@
       </section>
 
 
-      <section id="story-panel" class="story-panel" aria-labelledby="scene-title">
+      <section id="story-panel" class="story-panel" aria-labelledby="scene-title" tabindex="-1">
         <header class="scene-header">
           <div class="scene-meta">
             <span id="scene-kicker">HỒI 1 // LONG HẢI // 1899</span>
