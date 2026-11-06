@@ -556,3 +556,16 @@ body { overflow: hidden; }
 }
 
 .story-panel { flex: 0 0 auto; }
+
+/* Bỏ hẳn hai thanh trượt của vùng cuộn Game Master (owner 2026-11-06):
+   ẩn scrollbar dọc/ngang nhưng vẫn lướt được; tràn ngang bị cắt tại
+   khung Snapshot thay vì đẩy thành thanh trượt ngang. */
+.game-layout {
+  overflow-x: clip;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.game-layout::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+.snapshot-stage { overflow: hidden; }
