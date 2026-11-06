@@ -204,6 +204,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "tieu-lan-room",
     "location": "Phòng Hứa Tiểu Lan, biệt thự Long Hải",
     "companions": ["ba_nam_lien"],
+    "entity": true,
     "narration": [
       "Một mệnh lệnh vô hình bỗng lan qua căn phòng như gợn nước lạnh. Ở hành lang, người gác đứng bật dậy, cánh tay tự giơ lên hướng về phía bà Năm Liên — trong khi miệng anh ta van vỉ thành tiếng, xin đừng để chính tay mình làm điều đó.",
       "Tiểu Lan nhắm mắt lại. Nàng không ra lệnh ngược lại, cũng không tranh giành. Nàng chỉ đẩy vào khoảng ngừng rất nhỏ giữa hai nhịp điều khiển một tiếng phản thanh yếu ớt — như người lấy ngón tay chạm khẽ vào dây đàn đang rung. Cánh tay người gác khựng lại giữa không trung, run lên, rồi buông xuống.",

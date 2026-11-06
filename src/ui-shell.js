@@ -202,7 +202,7 @@ export function initMissionInterface() {
     if (threatLabel) threatLabel.textContent = copy.label;
     if (footerThreatCopy) footerThreatCopy.textContent = copy.footer;
 
-    const active = threat.score >= 42;
+    const active = threat.score >= 42 || snapshot?.scene?.entity === true;
     encounterMonitor?.classList.toggle("is-active", active);
     if (encounterTitle) {
       encounterTitle.textContent = active
@@ -242,9 +242,11 @@ export function initMissionInterface() {
 
   // v5: đồng bộ khung Snapshot (#snapshot-stage).
   // - #stage-scene-name: caption cảnh, lấy snapshot.scene.title; rỗng thì giữ text mặc định trong HTML.
-  // - #stage-entity: overlay Entity, CHỈ hiện khi encounter active — cùng ngưỡng với
-  //   syncThreat (active = threat score >= 42). Cơ chế: class .stage-entity-on trên
-  //   chính #stage-entity (CSS mặc định ẩn #stage-entity, .stage-entity-on thì hiện).
+  // - #stage-entity: overlay Entity, hiện khi encounter active. Encounter active khi
+  //   threat score >= 42 (cơ chế cũ) HOẶC cảnh VN khai báo entity: true — chỉ đạo
+  //   sân khấu của kịch bản (sửa sau chơi thử 2026-11-06: lát cắt Long Hải không
+  //   bao giờ đẩy threat tới 42 nên Thực Thể không xuất hiện được). Cơ chế: class
+  //   .stage-entity-on trên chính #stage-entity (CSS mặc định ẩn, .stage-entity-on thì hiện).
   // - #stage-character: đổi tư thế theo encounter (xem POSE_* ở trên), fade 160ms.
   function syncStage(snapshot) {
     const backgroundId = resolveSceneBackground(snapshot);
@@ -256,7 +258,7 @@ export function initMissionInterface() {
     const title = String(snapshot?.scene?.title || "").trim();
     if (stageSceneName && title) stageSceneName.textContent = title;
 
-    const active = threatFromSnapshot(snapshot).score >= 42;
+    const active = threatFromSnapshot(snapshot).score >= 42 || snapshot?.scene?.entity === true;
     stageEntity?.classList.toggle("stage-entity-on", active);
 
     // Tiểu Lan hiện bên trái Snapshot suốt cảnh có thoại của cô, fade out ở

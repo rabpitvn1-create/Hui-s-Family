@@ -31,6 +31,10 @@ export function validateVnScenes(scenes, startId) {
       && (!Array.isArray(scene.companions) || scene.companions.length > 2
         || scene.companions.some((id) => !Object.hasOwn(CHARACTER_OVERLAYS, id))))
       errors.push(key + ": companions must be <=2 known overlay ids");
+    // entity: chỉ đạo sân khấu của kịch bản — cảnh này Thực Thể hiện hình
+    // trên Snapshot (và Cao Minh đổi tư thế encounter), bất kể điểm threat.
+    if (scene?.entity !== undefined && typeof scene.entity !== "boolean")
+      errors.push(key + ": entity must be boolean");
     if (scene?.link) {
       if (!VN_LINK_IDS.includes(scene.link.id) || !VN_LINK_PHASES.includes(scene.link.phase))
         errors.push(key + ": invalid link milestone");
