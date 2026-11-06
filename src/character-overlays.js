@@ -7,6 +7,7 @@
 // để chọn đúng mẫu (gia nhân nữ / gia nhân lớn tuổi / phu gánh).
 export const CHARACTER_OVERLAYS = Object.freeze({
   "ba_nam_lien": "assets/overlay/ba-nam-lien.webp",
+  "ba_bay": "assets/overlay/ba-bay.webp",
   "le_thu_nguyet": "assets/overlay/le-thu-nguyet.webp",
   "npc_servant_male": "assets/overlay/npc-servant-male.webp",
   "npc_servant_female": "assets/overlay/npc-servant-female.webp",
@@ -23,6 +24,7 @@ export const CHARACTER_OVERLAYS = Object.freeze({
 // Tên người nói (đã bỏ dấu, viết thường) → id overlay, chỉ cho nhân vật có tên.
 const SPEAKER_OVERLAYS = Object.freeze({
   "ba nam lien": "ba_nam_lien",
+  "ba bay": "ba_bay",
   "le thu nguyet": "le_thu_nguyet",
   "thu nguyet": "le_thu_nguyet",
   "pham dinh nghiem": "pham_dinh_nghiem",
@@ -85,6 +87,7 @@ export function resolveCompanionId(scene) {
 // vật có tên trong khung trên đầu để người đọc phân biệt ai là ai).
 export const CHARACTER_DISPLAY_NAMES = Object.freeze({
   "ba_nam_lien": "Bà Năm Liên",
+  "ba_bay": "Bà Bảy",
   "le_thu_nguyet": "Lê Thu Nguyệt",
   "npc_servant_male": "Gia nhân",
   "npc_servant_female": "Gia nhân",

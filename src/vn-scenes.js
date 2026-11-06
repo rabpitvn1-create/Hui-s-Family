@@ -1053,7 +1053,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "kitchen",
     "location": "Nhà bếp biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_female"
+      "ba_bay"
     ],
     "narration": [
       "Căn bếp nằm tách khỏi nhà chính một khoảng sân sau, mái ngói thấp, khói bếp quanh năm không dứt — theo lời quản gia, vì cô chủ thân thể yếu, bếp phải đỏ lửa suốt ngày để lúc nào cũng có nước nóng và cháo nóng. Bà Bảy, người đầu bếp chính, đã đứng bếp cho nhà này hơn hai mươi năm; bà to béo, mặt đỏ au vì hơi lửa, tiếng nói sang sảng — là người ồn ào nhất trong một căn nhà im lặng đến rợn người.",

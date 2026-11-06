@@ -47,6 +47,7 @@ const avatarBySpeaker = Object.freeze({
   "đầy tớ hứa gia": huaServantAvatar,
   "quản gia": overlayCropAvatar("steward", "Quản gia Hứa Gia"),
   "quản gia hứa gia": overlayCropAvatar("steward", "Quản gia Hứa Gia"),
+  "bà bảy": overlayCropAvatar("ba_bay", "Bà Bảy"),
   "lão bộc": elderMaleAvatar,
   "quản kho": elderMaleAvatar,
   "ông tư": elderMaleAvatar,
@@ -124,7 +125,7 @@ function createFallbackAvatar(speakerName) {
   fallback.className = "dialogue-avatar dialogue-avatar-fallback";
   fallback.textContent = initialsFor(speakerName);
   fallback.setAttribute("role", "img");
-  fallback.setAttribute("aria-label", `Avatar tạm của ${speakerName || "nhân vật"}`);
+  fallback.setAttribute("aria-label", `Avatar của ${speakerName || "nhân vật"}`);
   return fallback;
 }
 
