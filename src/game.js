@@ -727,7 +727,13 @@ export function initGame() {
 
   elements.save?.addEventListener("click", saveGame);
   elements.load?.addEventListener("click", loadGame);
-  elements.restart?.addEventListener("click", restartGame);
+  elements.restart?.addEventListener("click", () => {
+    // Chống mất tiến độ vì một cú chạm nhầm (rà soát chơi thật 2026-11-06):
+    // bắt đầu chiến dịch mới phải qua một bước xác nhận tường minh.
+    if (window.confirm("Bắt đầu chiến dịch mới? Tiến độ tự động lưu hiện tại sẽ bị thay thế (bản lưu thủ công vẫn giữ nguyên).")) {
+      restartGame();
+    }
+  });
 
   window.HUA_GAME_BRIDGE = Object.freeze({
     getSnapshot,
