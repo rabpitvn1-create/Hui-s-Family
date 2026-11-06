@@ -193,6 +193,10 @@ old.version = "campaign-v3";
 old.scene.id = "origin";
 saves.set(MANUAL_SAVE_KEY, JSON.stringify(old));
 saves.delete(AUTO_SAVE_KEY);
+// Cô lập kịch bản canon cũ: các ô lưu phụ từ khối đợt 1 phía trên không
+// được rò sang (boot giờ quét cả ba ô).
+saves.delete("hua-family-campaign-v4-manual-2");
+saves.delete("hua-family-campaign-v4-manual-3");
 game = launch(saves);
 game.bridge.loadGame();
 assert.equal(game.bridge.getSnapshot().scene.id,VN_START_SCENE);
