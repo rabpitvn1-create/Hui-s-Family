@@ -5,10 +5,10 @@ export const SCENE_BACKGROUNDS = Object.freeze({
 });
 
 export function resolveSceneBackground(snapshot = {}) {
-  if (snapshot.progression?.stageId !== "long_hai") return "";
   const explicit = snapshot.scene?.backgroundId;
   if (explicit === "none") return "";
   if (Object.hasOwn(SCENE_BACKGROUNDS, explicit)) return explicit;
+  if (snapshot.progression?.stageId !== "long_hai") return "";
   // Compatibility for older saves: use the actual location, never narration
   // that may merely mention a room the player has not entered.
   const location = String(snapshot.currentLocation || "").normalize("NFD")
