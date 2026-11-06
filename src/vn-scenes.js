@@ -490,7 +490,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Chém thì một hơi là xong. Xong rồi thì nàng cũng ngừng thở — phần điều phối sự sống của nàng, nó đang làm thay từ lâu rồi. Còn tháo từng nút: bổn tọa chưa nhìn thấy hết các nút. Biết tới đâu, bổn tọa nói tới đó."
+        "text": "Chém thì một hơi là xong. Nhưng bổn tọa nhìn nhịp thở của nàng chạy theo nhịp của nó — chém nó bây giờ, hơi thở ấy chắc cũng dừng theo. Đó là bổn tọa đoán. Còn tháo từng nút: bổn tọa chưa nhìn thấy hết các nút. Biết tới đâu, bổn tọa nói tới đó."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -1783,7 +1783,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Bổn tọa biết. Đêm rằm, tay ngươi có giơ lên chắn đường, bổn tọa giữ lại — không làm ngươi đau. Cứ yên tâm làm sợi dây của ngươi."
+        "text": "Bổn tọa biết. Đêm rằm, tay ngươi có giơ lên chắn đường, bổn tọa giữ lại — không làm ngươi đau. Còn ngươi, cứ việc làm sợi dây của ngươi."
       }
     ],
     "choices": [
@@ -4659,7 +4659,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Không ai ghét nàng. Họ không dám nhìn, vì nhìn thẳng nàng là chống một mệnh lệnh — mà chống lệnh thì phải trả giá. Đêm nay có người đã trả giá ấy thay nàng, để được ngồi xuống khóc như người thường. Tên của họ, bổn tọa giữ. Cả phần của nàng nữa."
+        "text": "Không phải ghét. Là sợ. Nhìn thẳng nàng tức là chống một mệnh lệnh — mà chống lệnh thì phải trả giá. Đêm nay có người đã trả cái giá ấy, chỉ để được ngồi xuống khóc như một người thường. Tên của họ, bổn tọa giữ."
       }
     ],
     "choices": [
