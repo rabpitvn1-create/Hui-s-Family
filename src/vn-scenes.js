@@ -249,7 +249,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Trước cổng, trời sắp sáng",
-    "backgroundId": "long-hai-exterior",
+    "backgroundId": "long-hai-dawn-gate",
     "location": "Cổng biệt thự Hứa Gia, Long Hải",
     "companions": ["le_thu_nguyet"],
     "narration": [
@@ -293,7 +293,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Dead End · Người được cứu không được hỏi",
-    "backgroundId": "long-hai-exterior",
+    "backgroundId": "long-hai-dawn-gate",
     "location": "Cổng biệt thự Hứa Gia, Long Hải",
     "narration": [
       "Cao Minh đưa nàng qua cổng mà không hỏi một lời. Không một ai trong căn nhà ấy đủ sức ngăn hắn, và nàng cũng không chống cự. Nàng đi theo, yên lặng suốt từ bậc thềm ra đến đường cái.",
@@ -316,7 +316,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Hết hồi một · Long Hải",
-    "backgroundId": "long-hai-exterior",
+    "backgroundId": "long-hai-dawn-gate",
     "location": "Cổng biệt thự Hứa Gia, Long Hải",
     "narration": [
       "Tiểu Lan ngoái nhìn lại tòa biệt thự một lần cuối. Nàng không còn bị khóa sau cánh cửa ấy nữa — nhưng thứ đang sống trong người nàng thì vẫn còn đó, và trên trang giấy cũ của một bà hầu già, cái tên của nàng vẫn còn nguyên vẹn nét mực.",

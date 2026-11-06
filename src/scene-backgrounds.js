@@ -1,7 +1,11 @@
 export const SCENE_BACKGROUNDS = Object.freeze({
   "long-hai-exterior": "assets/snapshots/long-hai-exterior.webp",
   "long-hai-corridor": "assets/snapshots/long-hai-corridor.webp",
-  "tieu-lan-room": "assets/snapshots/tieu-lan-room.webp"
+  "tieu-lan-room": "assets/snapshots/tieu-lan-room.webp",
+  "van-hoa-lau": "assets/snapshots/van-hoa-lau.webp",
+  "long-hai-saloon": "assets/snapshots/long-hai-saloon.webp",
+  "long-hai-dawn-gate": "assets/snapshots/long-hai-dawn-gate.webp",
+  "long-hai-coast": "assets/snapshots/long-hai-coast.webp"
 });
 
 export function resolveSceneBackground(snapshot = {}) {
