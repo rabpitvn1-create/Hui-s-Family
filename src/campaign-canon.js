@@ -2,11 +2,14 @@ const freeze = (value) => Object.freeze(value);
 
 export const CAMPAIGN_STAGE_IDS = freeze([
   "long_hai",
-  "can_gio",
-  "backrooms",
-  "thu_dau_mot",
   "vung_tau",
-  "sai_gon_cho_lon"
+  "can_gio",
+  "prenn",
+  "backrooms",
+  "cho_lon_return",
+  "dong_thap",
+  "hue",
+  "cho_lon_final"
 ]);
 
 export const BACKROOMS_FLOORS = freeze([
@@ -156,111 +159,71 @@ export const BACKROOMS_FLOORS = freeze([
   }
 ]);
 
-const longHaiObjectives = freeze([
-  { id: "infiltrate_villa", label: "Xâm nhập sâu vào biệt thự Hứa Gia mà không làm nghi lễ tăng tốc." },
-  { id: "locate_tieu_lan", label: "Xác định vị trí và tình trạng thật của Hứa Tiểu Lan." },
-  { id: "classify_servants", label: "Phân loại gia nhân: tự nguyện, bị lừa, bị ép hoặc mất quyền kiểm soát." },
-  { id: "break_long_hai_ritual", label: "Phá nghi thức và điểm neo Long Hải." },
-  { id: "escape_long_hai", label: "Đưa Tiểu Lan rời Long Hải còn sống." }
+const objectives = (entries) => freeze(entries.map(([id,label]) => freeze({id,label})));
+const longHaiObjectives = objectives([
+ ["infiltrate_villa","Tiếp cận biệt thự, bảo vệ những gia nhân còn tỉnh táo."],
+ ["locate_tieu_lan","Gặp Hứa Tiểu Lan và nhận diện sự thay thế chức năng tự chủ."],
+ ["classify_servants","Phân biệt gia nhân bị ép, bị lừa và tự nguyện."],
+ ["break_long_hai_ritual","Phá điểm neo nghi thức mà không sát hại vật chủ."],
+ ["escape_long_hai","Đưa Tiểu Lan ra khỏi biệt thự với sự đồng thuận của nàng."]
 ]);
-
-const canGioObjectives = freeze([
-  { id: "secure_transport", label: "Tìm phương tiện đường thủy và bảo đảm Tiểu Lan có thể di chuyển." },
-  { id: "investigate_smuggling_route", label: "Điều tra tuyến trung chuyển người, trùng sống và hàng hóa." },
-  { id: "destroy_anchor_one", label: "Phá điểm neo thứ nhất tại Cần Giờ." },
-  { id: "destroy_anchor_two", label: "Phá điểm neo thứ hai tại Cần Giờ." },
-  { id: "destroy_anchor_three", label: "Phá điểm neo thứ ba tại Cần Giờ." },
-  { id: "confront_phe_gioi", label: "Đối đầu Phệ Giới Quỷ Anh mà không giả định có thể giết hoàn toàn nó." },
-  { id: "survive_reality_breach", label: "Sống sót khi Phệ Giới phá ranh giới và Quỷ Mẫu kéo đội vào Backrooms." }
+const vungTauObjectives = objectives([
+ ["inspect_coffin_route","Khảo sát đường thoát quan tài ở cửa biển."],
+ ["identify_living_hosts","Phân biệt vật chủ còn tỉnh táo với hàng hóa được khai báo."],
+ ["trace_finance","Truy vết việc Tài Phòng tài trợ tuyến vận chuyển."],
+ ["recover_ledger_two","Thu hồi và xác thực mảnh Sổ Lục Môn số hai."],
+ ["secure_sea_exit","Bảo toàn người được cứu và tìm đường tới Cần Giờ."]
 ]);
-
-const thuDauMotObjectives = freeze([
-  { id: "find_shelter", label: "Tìm nơi trú an toàn sau khi thoát Backrooms." },
-  { id: "restore_supplies", label: "Tìm thuốc, lương thực và phục hồi khả năng chiến đấu." },
-  { id: "investigate_labor_camp", label: "Điều tra trại lao động và mạng nợ của Hứa Gia." },
-  { id: "rescue_debt_workers", label: "Giải cứu người mắc nợ hoặc bị ép Nhập Mẫu." },
-  { id: "sever_blood_links", label: "Phá cột máu và liên kết nuôi sức mạnh La Hầu." },
-  { id: "defeat_la_hau", label: "Đánh bại La Hầu Huyết Đồng sau khi đã triệt nguồn tái sinh." }
+const canGioObjectives = objectives([
+ ["secure_transport","Bảo đảm đường thủy và sức khỏe Tiểu Lan."],
+ ["investigate_smuggling_route","Điều tra tuyến ghe, vật chủ và điểm neo."],
+ ["destroy_anchor_one","Vô hiệu điểm neo thứ nhất."],
+ ["destroy_anchor_two","Vô hiệu điểm neo thứ hai."],
+ ["destroy_anchor_three","Vô hiệu điểm neo thứ ba; bảo toàn dấu vết mảnh Sổ."],
+ ["resist_collective_command","Tiểu Lan dùng phản thanh để trì hoãn lệnh tập thể."],
+ ["survive_reality_breach","Sống sót khi điểm neo sống trượt về Prenn hai thế kỷ trước."]
 ]);
-
-const vungTauObjectives = freeze([
-  { id: "recover_and_verify_memories", label: "Dưỡng thương và kiểm tra ký ức của từng thành viên." },
-  { id: "identify_impostors", label: "Xác minh người thật và bản sao do ảo cảnh tạo ra." },
-  { id: "collect_memory_proof", label: "Dùng bằng chứng cũ để khóa các sự kiện không thể bị sửa." },
-  { id: "enter_collective_dream", label: "Chủ động bước vào giấc mơ tập thể với đường rút đã chuẩn bị." },
-  { id: "defeat_vo_dien", label: "Đánh bại Vô Diện Mộng Nương và giữ chủ quyền ký ức." }
+const prennObjectives = objectives([
+ ["establish_survival","Tìm quy luật sinh tồn và tránh phá lịch sử bất biến."],
+ ["compare_three_versions","Đối chiếu ký ức của ba dị bản Bạch Y Vô Danh."],
+ ["separate_true_soul","Tách linh hồn thật khỏi mạng lời đồn mà không chém hủy chứng cứ."],
+ ["reach_backrooms","Tìm lối vào Backrooms độc lập để trở về thực tại gốc."]
 ]);
-
-const finalObjectives = freeze([
-  { id: "map_hua_network", label: "Lập bản đồ nhà chính, kho, hiệu thuốc, từ đường và các điểm neo tại Chợ Lớn." },
-  { id: "confront_chu_hoa", label: "Đối diện Chú Hỏa và phá quyền lực tinh thần của ông đối với Tiểu Lan." },
-  { id: "prevent_mater_descent", label: "Ngăn nghi thức giáng thế của La Sát Mẫu." },
-  { id: "dismantle_cult_network", label: "Phá giáo đoàn, Mẫu Chủng và cơ sở quyền lực; không giết sạch người mang họ Hứa." }
+const returnObjectives = objectives([
+ ["recover_long_hai_ledger","Xác thực mảnh Sổ tại rương thuốc Long Hải."],
+ ["recover_cho_lon_ledger","Nhận và đối chiếu mảnh Sổ Bà Năm Liên giữ."],
+ ["map_six_fragments","Ghép bản đồ truy xuất sáu phần Sổ Lục Môn."],
+ ["restore_name_evidence","Giữ chứng cứ tên Hứa Tiểu Lan đã bị xóa khỏi gia phả."]
 ]);
-
+const dongThapObjectives = objectives([
+ ["investigate_western_branch","Điều tra cánh tay miền Tây của Lục Môn."],
+ ["protect_living_hosts","Bảo vệ những vật chủ còn tỉnh táo."],
+ ["disable_blood_network","Cắt mạng Huyết mà không hủy cơ thể vật chủ."],
+ ["recover_ledger_five","Xác thực mảnh Sổ trong sổ nợ của Tài Phòng."]
+]);
+const hueObjectives = objectives([
+ ["trace_rescue_letter","Truy nguồn thư cầu cứu của vật chủ Huế."],
+ ["verify_image_records","Đối chiếu chứng cứ thật và hồ sơ của Ảnh Phòng."],
+ ["recover_ledger_six","Giải mật mã và xác thực phần thứ sáu của Sổ."],
+ ["protect_memory","Bảo vệ nhân chứng và phần ký ức còn lại của Tiểu Lan."]
+]);
+const finalObjectives = objectives([
+ ["map_hua_network","Lập bản đồ mạng lưới Hứa Gia và đối chiếu sáu mảnh Sổ."],
+ ["confront_hua_bon_hoa","Đối diện Hứa Bổn Hoả, cha ruột và Đại Tế Chủ."],
+ ["prevent_six_birth_rite","Ngăn Đại Lễ Lục Sinh và quyền giáng thế của La Sát Lục Thủ."],
+ ["dismantle_six_gates","Phá Lục Môn mà không giết sạch người họ Hứa."]
+]);
 export const CAMPAIGN_ROUTE = freeze([
-  {
-    id: "long_hai",
-    label: "Long Hải",
-    act: "Hồi 1",
-    allowedLocations: ["Long Hải", "Biệt thự Hứa Gia", "vùng Bà Rịa"],
-    premise: "Người lạ bị vầng sáng ném xuống Long Hải: trừ tà khí trong người Hứa Tiểu Lan, truy nguồn tà khí, phá nghi thức và phân loại gia nhân nhiễm trùng.",
-    boss: "Mẫu Chủng hoặc người giữ nghi lễ, chưa phải Tam Đại Quỷ Tử.",
-    objectives: longHaiObjectives,
-    next: "can_gio"
-  },
-  {
-    id: "can_gio",
-    label: "Cần Giờ",
-    act: "Hồi 2",
-    allowedLocations: ["Bến ghe bỏ hoang", "Xóm nhà sàn", "Rừng ngập mặn", "Kho vận chuyển trùng", "Tổ Phệ Giới Quỷ Anh"],
-    premise: "Bảo vệ Tiểu Lan, phá điểm neo và điều tra cổ họng vận chuyển của giáo đoàn.",
-    boss: "Phệ Giới Quỷ Anh; lần đầu chỉ có thể đánh bại hoặc ép nó phá ranh giới, không giết hoàn toàn.",
-    objectives: canGioObjectives,
-    next: "backrooms"
-  },
-  {
-    id: "backrooms",
-    label: "Backrooms 1900",
-    act: "Chiến dịch 16 tầng",
-    allowedLocations: BACKROOMS_FLOORS.map((floor) => `Tầng ${floor.floor}: ${floor.name}`),
-    premise: "Quần thể ngoài thực tại độc lập; Quỷ Mẫu chỉ phát hiện, mở đường và kéo đội vào.",
-    boss: "Mỗi tầng có một boss và quy luật riêng.",
-    objectives: [],
-    next: "thu_dau_mot"
-  },
-  {
-    id: "thu_dau_mot",
-    label: "Thủ Dầu Một / Bình Dương",
-    act: "Hồi 3",
-    allowedLocations: ["Thủ Dầu Một", "trại lao động", "kho gỗ", "đất nợ", "cột máu"],
-    premise: "Khôi phục đội hình, giải cứu người mắc nợ và triệt mạng vật chủ cơ bắp.",
-    boss: "La Hầu Huyết Đồng; sát thương bừa bãi và máu đổ làm nó mạnh hơn.",
-    objectives: thuDauMotObjectives,
-    next: "vung_tau"
-  },
-  {
-    id: "vung_tau",
-    label: "Vũng Tàu",
-    act: "Hồi 4",
-    allowedLocations: ["Vũng Tàu", "nơi dưỡng thương", "giấc mơ tập thể", "không gian ký ức"],
-    premise: "Điều tra ký ức sai, xác minh người thật và bảo vệ quyền tự quyết của Tiểu Lan.",
-    boss: "Vô Diện Mộng Nương; chiến thắng dựa vào bằng chứng và lòng tin, không chỉ hỏa lực.",
-    objectives: vungTauObjectives,
-    next: "sai_gon_cho_lon"
-  },
-  {
-    id: "sai_gon_cho_lon",
-    label: "Sài Gòn – Chợ Lớn",
-    act: "Hồi cuối",
-    allowedLocations: ["Sài Gòn", "Chợ Lớn", "nhà chính Hứa Gia", "kho ngầm", "nội đường", "hiệu thuốc", "từ đường"],
-    premise: "Dùng mọi hậu quả trước đó để ngăn giáng thế và phá giáo đoàn mà không đồng nhất cả họ Hứa với kẻ thù.",
-    boss: "Chú Hỏa, mạng Hứa Gia, Mẫu Chủng và hình chiếu La Sát Mẫu.",
-    objectives: finalObjectives,
-    next: null
-  }
+ {id:"long_hai",label:"Long Hải",act:"Chặng 1",allowedLocations:["Biệt thự Hứa Gia","Long Hải"],premise:"Giải cứu Tiểu Lan, nhận diện liên kết Danh.",objectives:longHaiObjectives,next:"vung_tau"},
+ {id:"vung_tau",label:"Vũng Tàu",act:"Chặng 2",allowedLocations:["Vũng Tàu","cửa biển","tuyến quan tài"],premise:"Điều tra tuyến vận chuyển và mảnh Sổ số hai.",objectives:vungTauObjectives,next:"can_gio"},
+ {id:"can_gio",label:"Cần Giờ",act:"Chặng 3",allowedLocations:["Cần Giờ","rừng ngập mặn","ba điểm neo"],premise:"Phá ba điểm neo; phản thanh đưa cả đội tới Prenn.",objectives:canGioObjectives,next:"prenn"},
+ {id:"prenn",label:"Prenn 200 năm trước",act:"Chặng 4",allowedLocations:["Đèo Prenn","mạng ký ức Bạch Y"],premise:"Quá khứ bất biến, ba dị bản Bạch Y Vô Danh.",objectives:prennObjectives,next:"backrooms"},
+ {id:"backrooms",label:"Backrooms Chợ Lớn",act:"Chặng 5",allowedLocations:BACKROOMS_FLOORS.map(f=>`Tầng ${f.floor}: ${f.name}`),premise:"16 tầng độc lập; mỗi tầng có luật và điều kiện mở lối riêng.",objectives:[],next:"cho_lon_return"},
+ {id:"cho_lon_return",label:"Trở về Chợ Lớn",act:"Chặng 6",allowedLocations:["Chợ Lớn","nhà Hứa Gia","kho hồ sơ"],premise:"Truy xét sáu mảnh Sổ, phục dựng tên Tiểu Lan.",objectives:returnObjectives,next:"dong_thap"},
+ {id:"dong_thap",label:"Đồng Tháp",act:"Chặng 7",allowedLocations:["Đồng Tháp","tuyến ghe gạo"],premise:"Điều tra Huyết Phòng và mảnh Sổ số năm.",objectives:dongThapObjectives,next:"hue"},
+ {id:"hue",label:"Huế",act:"Chặng 8",allowedLocations:["Huế","Ảnh Phòng"],premise:"Giải thư mật mã và bảo vệ nhân chứng.",objectives:hueObjectives,next:"cho_lon_final"},
+ {id:"cho_lon_final",label:"Chợ Lớn chung kết",act:"Chặng 9",allowedLocations:["Chợ Lớn","nhà chính Hứa Gia","Lục Môn"],premise:"Ngăn Đại Lễ Lục Sinh, trả lại quyền tự quyết cho Tiểu Lan.",objectives:finalObjectives,next:null}
 ]);
-
 export const NARRATIVE_RULES = freeze({
   sourcePriority: [
     "Mệnh lệnh mới nhất của người dùng",
@@ -348,7 +311,7 @@ export function getDirectorContext(state = {}) {
   if (stage.id === "backrooms") {
     context.backrooms = {
       independentReality: true,
-      pulledInByGhostMother: true,
+      independentExitMark: "living_anchor_1899",
       floor: getBackroomsFloor(progression.backroomsFloor),
       floorsCleared: Number(state.campaignStats?.floorsCleared) || 0,
       memoryIntegrity: Number(state.campaignStats?.memoryIntegrity) || 0,
@@ -373,103 +336,63 @@ function appendUnique(target, values) {
 }
 
 export function applyProgressionUpdate(currentProgression = {}, currentFlags = {}, rawUpdate = {}) {
-  const progression = {
-    stageId: CAMPAIGN_STAGE_IDS.includes(currentProgression.stageId) ? currentProgression.stageId : "long_hai",
-    stageIndex: Number.isInteger(currentProgression.stageIndex) ? currentProgression.stageIndex : 0,
-    backroomsFloor: Number.isInteger(currentProgression.backroomsFloor) ? currentProgression.backroomsFloor : -1,
-    completedObjectiveIds: Array.isArray(currentProgression.completedObjectiveIds) ? currentProgression.completedObjectiveIds.slice() : [],
-    backroomsMarks: Array.isArray(currentProgression.backroomsMarks) ? currentProgression.backroomsMarks.slice(-20) : [],
-    partySeparated: Boolean(currentProgression.partySeparated),
-    campaignComplete: Boolean(currentProgression.campaignComplete)
-  };
-  const flags = { ...currentFlags };
-  const notes = [];
-  const objectives = getCurrentObjectives(progression);
-  const allowedIds = new Set(objectives.map((objective) => objective.id));
-  const requested = (Array.isArray(rawUpdate.completedObjectiveIds) ? rawUpdate.completedObjectiveIds : [])
-    .filter((id) => typeof id === "string" && allowedIds.has(id) && !progression.completedObjectiveIds.includes(id));
-
-  if (requested.length) {
-    const objectiveId = requested[0];
-    progression.completedObjectiveIds.push(objectiveId);
-    notes.push(`Hoàn thành mục tiêu: ${objectives.find((item) => item.id === objectiveId)?.label || objectiveId}`);
-  }
-
-  progression.backroomsMarks = appendUnique(
-    progression.backroomsMarks,
-    (Array.isArray(rawUpdate.backroomsMarksAdded) ? rawUpdate.backroomsMarksAdded : []).slice(0, 2)
-  ).slice(-20);
-  if (typeof rawUpdate.partySeparated === "boolean") progression.partySeparated = rawUpdate.partySeparated;
-
-  const completed = new Set(progression.completedObjectiveIds);
-  const allObjectivesDone = objectives.every((objective) => completed.has(objective.id));
-
-  if (progression.stageId === "long_hai") {
-    if (completed.has("break_long_hai_ritual")) flags.longHaiAnchorDestroyed = true;
-    if (completed.has("escape_long_hai")) flags.tieuLanRescued = true;
-    if (allObjectivesDone && flags.longHaiAnchorDestroyed && flags.tieuLanRescued) {
-      progression.stageId = "can_gio";
-      progression.stageIndex = 1;
-      progression.completedObjectiveIds = [];
-      notes.push("Chiến dịch chuyển sang Cần Giờ.");
-    }
-  } else if (progression.stageId === "can_gio") {
-    const anchorIds = ["destroy_anchor_one", "destroy_anchor_two", "destroy_anchor_three"];
-    flags.canGioAnchorCount = anchorIds.filter((id) => completed.has(id)).length;
-    if (completed.has("confront_phe_gioi")) flags.pheGioiDefeated = true;
-    if (completed.has("survive_reality_breach")) flags.enteredBackrooms = true;
-    if (allObjectivesDone && flags.enteredBackrooms) {
-      progression.stageId = "backrooms";
-      progression.stageIndex = 2;
-      progression.backroomsFloor = 0;
-      progression.completedObjectiveIds = [];
-      progression.partySeparated = false;
-      notes.push("Quỷ Mẫu kéo cả đội vào Backrooms 1900, tầng 0.");
-    }
-  } else if (progression.stageId === "backrooms") {
-    if (allObjectivesDone) {
-      if (progression.backroomsFloor < 15) {
-        progression.backroomsFloor += 1;
-        progression.completedObjectiveIds = [];
-        notes.push(`Đã mở lối sang Backrooms tầng ${progression.backroomsFloor}.`);
-      } else {
-        flags.escapedBackrooms = true;
-        progression.stageId = "thu_dau_mot";
-        progression.stageIndex = 3;
-        progression.backroomsFloor = -1;
-        progression.completedObjectiveIds = [];
-        progression.partySeparated = false;
-        notes.push("Cả đội thoát Backrooms và rơi xuống Thủ Dầu Một.");
-      }
-    }
-  } else if (progression.stageId === "thu_dau_mot") {
-    if (completed.has("defeat_la_hau")) {
-      flags.laHauDefeated = true;
-      flags.quyMauAspectWarDestroyed = true;
-    }
-    if (allObjectivesDone && flags.laHauDefeated) {
-      progression.stageId = "vung_tau";
-      progression.stageIndex = 4;
-      progression.completedObjectiveIds = [];
-      notes.push("Chiến dịch chuyển sang Vũng Tàu.");
-    }
-  } else if (progression.stageId === "vung_tau") {
-    if (completed.has("defeat_vo_dien")) {
-      flags.voDienDefeated = true;
-      flags.quyMauAspectMemoryDestroyed = true;
-    }
-    if (allObjectivesDone && flags.voDienDefeated) {
-      progression.stageId = "sai_gon_cho_lon";
-      progression.stageIndex = 5;
-      progression.completedObjectiveIds = [];
-      notes.push("Chiến dịch bước vào hồi cuối tại Sài Gòn – Chợ Lớn.");
-    }
-  } else if (progression.stageId === "sai_gon_cho_lon" && allObjectivesDone) {
-    flags.materDescentPrevented = true;
-    flags.huaCultDismantled = true;
-    progression.campaignComplete = true;
-    notes.push("Chiến dịch LIBERA-1899 đã hoàn tất.");
-  }
-
-  return { progression, flags, notes };
+ const stageId = CAMPAIGN_STAGE_IDS.includes(currentProgression.stageId) ? currentProgression.stageId : "long_hai";
+ const progression = {
+   ...currentProgression,
+   stageId,
+   stageIndex: CAMPAIGN_STAGE_IDS.indexOf(stageId),
+   backroomsFloor: Number.isInteger(currentProgression.backroomsFloor) ? currentProgression.backroomsFloor : -1,
+   completedObjectiveIds: Array.isArray(currentProgression.completedObjectiveIds) ? [...currentProgression.completedObjectiveIds] : [],
+   backroomsMarks: Array.isArray(currentProgression.backroomsMarks) ? [...currentProgression.backroomsMarks] : [],
+   campaignComplete: Boolean(currentProgression.campaignComplete)
+ };
+ const flags = {...currentFlags};
+ const notes = [];
+ const objectives = getCurrentObjectives(progression);
+ const requested = Array.isArray(rawUpdate.completedObjectiveIds) ? rawUpdate.completedObjectiveIds : [];
+ const nextObjective = objectives.find(o => requested.includes(o.id) && !progression.completedObjectiveIds.includes(o.id));
+ if (nextObjective) {
+   progression.completedObjectiveIds.push(nextObjective.id);
+   notes.push("Hoàn thành: " + nextObjective.label);
+ }
+ for (const mark of (rawUpdate.backroomsMarksAdded || []).slice(0,2)) {
+   if (typeof mark === "string" && !progression.backroomsMarks.includes(mark)) progression.backroomsMarks.push(mark);
+ }
+ progression.backroomsMarks = progression.backroomsMarks.slice(-20);
+ if (stageId === "long_hai") {
+   if (progression.completedObjectiveIds.includes("break_long_hai_ritual")) flags.longHaiAnchorDestroyed = true;
+   if (progression.completedObjectiveIds.includes("escape_long_hai")) flags.tieuLanRescued = true;
+ }
+ if (stageId === "can_gio") {
+   flags.canGioAnchorCount = ["destroy_anchor_one","destroy_anchor_two","destroy_anchor_three"]
+     .filter(id=>progression.completedObjectiveIds.includes(id)).length;
+   if (progression.completedObjectiveIds.includes("survive_reality_breach")) {
+     flags.routeLocked = true;
+     if (!progression.backroomsMarks.includes("living_anchor_1899")) progression.backroomsMarks.push("living_anchor_1899");
+   }
+ }
+ const allDone = objectives.every(o=>progression.completedObjectiveIds.includes(o.id));
+ const canAdvance = stageId !== "long_hai" || (flags.longHaiAnchorDestroyed && flags.tieuLanRescued);
+ if (allDone && canAdvance) {
+   if (stageId === "backrooms" && progression.backroomsFloor < 15) {
+     progression.backroomsFloor += 1;
+     progression.completedObjectiveIds = [];
+   } else if (stageId === "cho_lon_final") {
+     flags.materDescentPrevented = true;
+     flags.huaCultDismantled = true;
+     progression.campaignComplete = true;
+   } else {
+     const stage = getStageById(stageId);
+     progression.stageId = stage.next;
+     progression.stageIndex = CAMPAIGN_STAGE_IDS.indexOf(stage.next);
+     progression.completedObjectiveIds = [];
+     if (stage.next === "backrooms") progression.backroomsFloor = 0;
+     if (stageId === "backrooms") {
+       flags.escapedBackrooms = true;
+       progression.backroomsFloor = -1;
+     }
+     notes.push("Chuyển chặng: " + getStageById(stage.next).label);
+   }
+ }
+ return {progression,flags,notes};
 }
