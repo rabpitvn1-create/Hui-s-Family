@@ -325,7 +325,28 @@ export function initGame() {
     return true;
   }
 
-  presentScene(VN_START_SCENE);
+  // Tự khôi phục khi mở lại trang (lệnh chủ nhân 2026-11-06): có bản lưu
+  // canon hợp lệ (thủ công trước, tự động sau — cùng thứ tự với nút Tải) thì
+  // tiếp tục đúng chỗ cũ thay vì bắt đầu lại từ đầu; bản lưu hỏng/khác canon
+  // thì im lặng bắt đầu mới, nút "Chiến dịch mới" vẫn là đường xóa chủ động.
+  function tryRestoreSavedState() {
+    const raw = storage.getItem(MANUAL_SAVE_KEY) || storage.getItem(AUTO_SAVE_KEY);
+    if (!raw) return false;
+    try {
+      const decoded = JSON.parse(raw);
+      if (!isCurrentCanonSave(decoded) || !VN_SCENES[decoded.scene?.id]) return false;
+      state = normalizeState(sanitizeLegacyCanonState(decoded));
+      presentScene(state.scene.id);
+      state.log.unshift("Đã khôi phục tiến độ đã lưu.");
+      state.log = state.log.slice(0, 14);
+      render();
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  if (!tryRestoreSavedState()) presentScene(VN_START_SCENE);
 
   function applyStatEffects(rawEffects) {
     const effects = rawEffects && typeof rawEffects === "object" ? rawEffects : {};

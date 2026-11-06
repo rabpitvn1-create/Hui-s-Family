@@ -147,7 +147,9 @@ assert.ok(JSON.parse(saves.get(AUTO_SAVE_KEY)).scene.id === "lh_slice_end");
 game.bridge.saveGame();
 const saved = saves.get(MANUAL_SAVE_KEY);
 game = launch(saves);
-assert.equal(game.bridge.getSnapshot().scene.id, VN_START_SCENE);
+// Khởi động lại có bản lưu hợp lệ: tự khôi phục đúng cảnh đã lưu (lệnh chủ
+// nhân 2026-11-06), bản lưu thủ công không bị đụng tới.
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_slice_end");
 assert.equal(saves.get(MANUAL_SAVE_KEY), saved);
 game.bridge.loadGame();
 assert.equal(game.bridge.getSnapshot().scene.id,"lh_slice_end");

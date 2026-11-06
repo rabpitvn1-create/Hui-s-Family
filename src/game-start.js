@@ -4,6 +4,17 @@ export function initGameStart(startGame) {
   const shell = document.querySelector("#game-shell");
   let started = false;
 
+  // Có bản lưu thì nút bắt đầu là lời mời tiếp tục (việc khôi phục do
+  // initGame xử lý); không có thì giữ "Bắt đầu game".
+  try {
+    if (window.localStorage.getItem("hua-family-campaign-v4-manual")
+      || window.localStorage.getItem("hua-family-campaign-v4-auto")) {
+      button.textContent = "Tiếp tục chơi";
+    }
+  } catch {
+    // localStorage bị chặn: giữ nhãn mặc định.
+  }
+
   button.addEventListener("click", async () => {
     if (started) return;
     started = true;
