@@ -60,7 +60,7 @@ Workflow build APK, sau đó kiểm tra trực tiếp nội dung APK để chắ
 ```text
 index.html
 assets/
-  overlay/ (entity-01.png, main-character.png)
+  overlay/ (entity-guard.webp + 4 entity-*.webp, main-character.png)
   avatars/ (main-avatar.jpg)
   fonts/ (Quicksand + OFL)
 docs/

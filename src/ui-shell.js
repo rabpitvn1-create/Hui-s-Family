@@ -1,5 +1,6 @@
 import { SCENE_BACKGROUNDS, resolveSceneBackground } from "./scene-backgrounds.js";
 import { CHARACTER_OVERLAYS, resolveCompanionId } from "./character-overlays.js";
+import { ENTITY_OVERLAYS, resolveEntitySrc } from "./entity-overlays.js";
 
 const STAGES = Object.freeze([
   {
@@ -202,7 +203,7 @@ export function initMissionInterface() {
     if (threatLabel) threatLabel.textContent = copy.label;
     if (footerThreatCopy) footerThreatCopy.textContent = copy.footer;
 
-    const active = threat.score >= 42 || snapshot?.scene?.entity === true;
+    const active = threat.score >= 42 || Boolean(snapshot?.scene?.entity);
     encounterMonitor?.classList.toggle("is-active", active);
     if (encounterTitle) {
       encounterTitle.textContent = active
@@ -258,7 +259,13 @@ export function initMissionInterface() {
     const title = String(snapshot?.scene?.title || "").trim();
     if (stageSceneName && title) stageSceneName.textContent = title;
 
-    const active = threatFromSnapshot(snapshot).score >= 42 || snapshot?.scene?.entity === true;
+    const active = threatFromSnapshot(snapshot).score >= 42 || Boolean(snapshot?.scene?.entity);
+    // Gương mặt thực thể do cảnh chọn (entity: "<id>"); encounter theo điểm
+    // threat mà cảnh không khai báo thì giữ ảnh mặc định trong HTML.
+    const entitySrc = resolveEntitySrc(snapshot?.scene?.entity);
+    if (stageEntity && entitySrc && stageEntity.getAttribute("src") !== entitySrc) {
+      stageEntity.setAttribute("src", entitySrc);
+    }
     stageEntity?.classList.toggle("stage-entity-on", active);
 
     // Tiểu Lan hiện bên trái Snapshot suốt cảnh có thoại của cô, fade out ở
@@ -350,6 +357,12 @@ export function initMissionInterface() {
   lanPreload.src = "assets/overlay/tieu-lan.png";
   // Nạp trước các overlay nhân vật phụ (WebP nhẹ) cho lần xuất hiện đầu tiên.
   for (const src of Object.values(CHARACTER_OVERLAYS)) {
+    const preload = new Image();
+    preload.src = src;
+  }
+  // Nạp trước các gương mặt thực thể (gia nhân nhiễm trùng) để lần hiện
+  // hình đầu tiên không chớp hình.
+  for (const src of Object.values(ENTITY_OVERLAYS)) {
     const preload = new Image();
     preload.src = src;
   }

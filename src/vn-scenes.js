@@ -43,7 +43,7 @@ export const VN_SCENES = Object.freeze({
     "title": "Dead End · Một kiếm quá dễ",
     "backgroundId": "long-hai-exterior",
     "location": "Bãi đất hoang trước biệt thự, Long Hải",
-    "entity": true,
+    "entity": "entity_blade",
     "narration": [
       "Kiếm quang đi qua cổng sắt, qua tường gạch, qua bàn thờ, qua từng mắt nối vô hình đang bám lấy tòa nhà. Không trận pháp nào đỡ nổi, không thứ tà khí nào chạy thoát. Trong một nhịp thở, mọi thứ Cao Minh muốn chém đều đã đứt.",
       "Rồi từ dưới đống ngói đổ nát, có tiếng một người đàn bà già khóc gọi tên một cô gái. Gọi mãi, không ai trả lời.",
@@ -68,7 +68,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-corridor",
     "location": "Hành lang biệt thự Hứa Gia, Long Hải",
     "companions": ["npc_servant_male"],
-    "entity": true,
+    "entity": "entity_guard",
     "narration": [
       "Cánh cửa lim mở ra không một tiếng động. Cao Minh bước vào hành lang dài hun hút, nơi chân đèn đã cháy ngắn mà vẫn có người thay dầu đúng giờ — đúng đến mức không giống thói quen của người đang sống, mà giống một mệnh lệnh không cho phép trễ.",
       "Cuối hành lang, trước gian phòng trong cùng, một người gác đứng chắn lối. Khi Cao Minh tới gần, đôi mắt người ấy bỗng trợn lên nhìn hắn — ánh mắt của một người đang van xin. Nhưng đôi tay của người gác lại chậm rãi giơ lên, tự mình kéo then ngang, bịt kín lối vào.",
@@ -112,7 +112,7 @@ export const VN_SCENES = Object.freeze({
     "title": "Gian phòng trong cùng",
     "backgroundId": "tieu-lan-room",
     "location": "Phòng Hứa Tiểu Lan, biệt thự Long Hải",
-    "entity": true,
+    "entity": "entity_claw",
     "narration": [
       "Trên giường bệnh, một thiếu nữ ngồi dựa gối. Nàng vừa tròn mười tám tuổi; làn da vốn phải mịn màng như ngọc, lúc này loang lổ những mảng trắng đỏ sần sùi như vảy cá, vài chỗ lở loét rỉ nước vàng, đầu ngón tay hơi co quắp lại — phàm nhân nhìn vào, chỉ thấy hai chữ: phong cùi. Chẳng trách đại phu mời khắp Nam Kỳ đều lắc đầu, thuốc phong uống đã không biết bao nhiêu thang, và gia nhân trong nhà thà bị đánh đòn cũng không chịu bước qua cửa gian phòng này.",
       "Nhưng dưới thần niệm của Cao Minh, những \"vết phong\" ấy không hề có bệnh căn của phàm nhân. Chúng là tà khí ăn mòn từ trong ra ngoài, mượn đúng hình dạng của căn bệnh bị người đời khiếp sợ và xa lánh nhất làm áo khoác — một lớp vỏ hoàn mỹ, để không ai dám đến gần vật chứa của nó.",
@@ -207,7 +207,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "tieu-lan-room",
     "location": "Phòng Hứa Tiểu Lan, biệt thự Long Hải",
     "companions": ["ba_nam_lien"],
-    "entity": true,
+    "entity": "entity_maid",
     "narration": [
       "Một mệnh lệnh vô hình bỗng lan qua căn phòng như gợn nước lạnh. Ở hành lang, người gác đứng bật dậy, cánh tay tự giơ lên hướng về phía bà Năm Liên — trong khi miệng anh ta van vỉ thành tiếng, xin đừng để chính tay mình làm điều đó.",
       "Tiểu Lan nhắm mắt lại. Nàng không ra lệnh ngược lại, cũng không tranh giành. Nàng chỉ đẩy vào khoảng ngừng rất nhỏ giữa hai nhịp điều khiển một tiếng phản thanh yếu ớt — như người lấy ngón tay chạm khẽ vào dây đàn đang rung. Cánh tay người gác khựng lại giữa không trung, run lên, rồi buông xuống.",
@@ -300,7 +300,7 @@ export const VN_SCENES = Object.freeze({
     "title": "Dead End · Người được cứu không được hỏi",
     "backgroundId": "long-hai-dawn-gate",
     "location": "Cổng biệt thự Hứa Gia, Long Hải",
-    "entity": true,
+    "entity": "entity_hoe",
     "narration": [
       "Cao Minh đưa nàng qua cổng mà không hỏi một lời. Không một ai trong căn nhà ấy đủ sức ngăn hắn, và nàng cũng không chống cự. Nàng đi theo, yên lặng suốt từ bậc thềm ra đến đường cái.",
       "Đi được một quãng, hắn hỏi nàng có đau ở đâu không. Nàng đáp, giọng nhẹ như nói về người khác: lần sau ngài muốn đưa tôi đi đâu, xin cứ quyết định trước. Tôi khỏi cần phải nói nữa.",

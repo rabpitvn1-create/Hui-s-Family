@@ -1,5 +1,6 @@
 // LIBERA VN scene contract v1. Pure structural validation, no prose.
 import { CHARACTER_OVERLAYS } from "./character-overlays.js";
+import { ENTITY_OVERLAYS } from "./entity-overlays.js";
 export const VN_LINK_IDS = Object.freeze(["danh", "no", "lenh", "ky", "than", "tu"]);
 export const VN_LINK_PHASES = Object.freeze(["unknown", "identified", "intervened", "severed"]);
 export const VN_ROUTE_IDS = Object.freeze(["bao_ho", "tu_quyet", "nghi_le"]);
@@ -33,8 +34,10 @@ export function validateVnScenes(scenes, startId) {
       errors.push(key + ": companions must be <=2 known overlay ids");
     // entity: chỉ đạo sân khấu của kịch bản — cảnh này Thực Thể hiện hình
     // trên Snapshot (và Cao Minh đổi tư thế encounter), bất kể điểm threat.
-    if (scene?.entity !== undefined && typeof scene.entity !== "boolean")
-      errors.push(key + ": entity must be boolean");
+    // Giá trị: true (ảnh mặc định) hoặc id trong ENTITY_OVERLAYS.
+    if (scene?.entity !== undefined && typeof scene.entity !== "boolean"
+      && !(typeof scene.entity === "string" && Object.hasOwn(ENTITY_OVERLAYS, scene.entity)))
+      errors.push(key + ": entity must be boolean or a known entity overlay id");
     if (scene?.link) {
       if (!VN_LINK_IDS.includes(scene.link.id) || !VN_LINK_PHASES.includes(scene.link.phase))
         errors.push(key + ": invalid link milestone");
