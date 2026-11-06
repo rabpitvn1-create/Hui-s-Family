@@ -56,9 +56,13 @@ assert.equal(game.bridge.getSnapshot().scene.id, "lh_rules");
 game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_hall");
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes("infiltrate_villa"), true);
-game.bridge.applyScriptChoice(0);
-game.bridge.applyScriptChoice(0);
-game.bridge.applyScriptChoice(0);
+// Mạch Hồi 1 sau Đợt 1B: hall → lan_room → lan_talk → morning_tea →
+// garden → night_bell → night_corridor → doctor_visit → servants →
+// ritual → depart (mọi lựa chọn đều lấy nhánh đầu tiên).
+for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_servants", "lh_ritual"]) {
+  game.bridge.applyScriptChoice(0);
+  assert.equal(game.bridge.getSnapshot().scene.id, expected);
+}
 game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_depart");
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 4);
