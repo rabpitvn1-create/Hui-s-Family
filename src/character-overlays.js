@@ -34,7 +34,10 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "lao boc": "npc_servant_elder_male",
   "quan kho": "npc_servant_elder_male",
   "lao thu ky": "npc_servant_elder_male",
-  "ong ba luoi": "npc_fisherman"
+  "ong ba luoi": "npc_fisherman",
+  "nguoi gac": "npc_servant_male",
+  "nguoi phu": "npc_porter",
+  "anh thoi": "npc_porter"
 });
 
 const COMBINING_MARKS = new RegExp("[\\u0300-\\u036f]", "g");

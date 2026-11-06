@@ -128,4 +128,104 @@ for (const card of Object.values(VN_SCENES)) {
     if (!choice.retry) assert.ok(VN_SCENES[choice.next], "Broken scene link: " + choice.next);
   }
 }
+
+// ===== Đợt sửa lỗi toàn diện 2026-11-06: khóa hồi quy theo Mục VIII của
+// lệnh triển khai (hash prologue, mật độ mọi đường tới được, vắng choice xe
+// tang, overlay theo giới, hai nhánh Thu Nguyệt/đường bộ, effect một lần).
+import { createHash } from "node:crypto";
+import { resolveCompanionId } from "../src/character-overlays.js";
+const prologueHash = createHash("sha256")
+  .update(JSON.stringify(VN_SCENES.lh_prologue)).digest("hex");
+assert.equal(prologueHash, "5ca369503dfaccb474ecbb8b9fa66b400661ee12078a92222d024ea31ae0b9a3",
+  "lh_prologue đã bị thay đổi — cảnh này khóa tuyệt đối");
+// Mật độ: đếm theo đúng công thức của lệnh (narration + dialogue, tách
+// khoảng trắng) trên MỌI tổ hợp flags tới được của từng cảnh.
+const EXCLUSIVE = [["thuNguyetEscorted","thuNguyetSolo"],["councilOath","councilQuiet"],
+  ["boatPromised","boatBought"],["thuNguyetFollows","thuNguyetStays"]];
+function renderedWords(scene, flags) {
+  let n = 0;
+  const vis = (x) => (!x.if || flags.has(x.if)) && (!x.unless || !flags.has(x.unless));
+  for (const item of scene.narration) {
+    if (typeof item === "string") n += item.split(/\s+/).filter(Boolean).length;
+    else if (vis(item)) n += item.text.split(/\s+/).filter(Boolean).length;
+  }
+  for (const line of scene.dialogue) if (vis(line)) n += line.text.split(/\s+/).filter(Boolean).length;
+  return n;
+}
+for (const [sid, scene] of Object.entries(VN_SCENES)) {
+  const keys = new Set();
+  for (const item of scene.narration) if (typeof item === "object") keys.add(item.if || item.unless);
+  for (const line of scene.dialogue) if (line.if || line.unless) keys.add(line.if || line.unless);
+  keys.delete(undefined);
+  const [lo, hi] = scene.deadEnd ? [700, 900] : [1200, 1400];
+  const list = [...keys];
+  for (let mask = 0; mask < (1 << list.length); mask++) {
+    const flags = new Set(list.filter((_, i) => mask & (1 << i)));
+    if (EXCLUSIVE.some(([a, b]) => flags.has(a) && flags.has(b))) continue;
+    const w = renderedWords(scene, flags);
+    assert.ok(w >= lo && w <= hi, `${sid}: ${w} từ ngoài dải ${lo}–${hi} (flags: ${[...flags]})`);
+  }
+}
+// P0-12: choice xe tang đã xóa; choice thay thế đặt đúng flag.
+for (const scene of Object.values(VN_SCENES))
+  for (const choice of scene.choices || [])
+    assert.notEqual(choice.id, "use_their_carriage");
+const delayChoice = VN_SCENES.lh_move_tonight.choices.find((c) => c.id === "delay_the_carriage");
+assert.ok(delayChoice && delayChoice.flags && delayChoice.flags.carriageDelayed === true);
+// G01–G06: companion resolve đúng giới/vai trên sân khấu.
+assert.equal(resolveCompanionId(VN_SCENES.lh_saloon), "npc_servant_elder_male");
+assert.equal(resolveCompanionId(VN_SCENES.lh_rules), "npc_servant_elder_male");
+assert.equal(resolveCompanionId(VN_SCENES.lh_certification), "pham_dinh_nghiem");
+assert.equal(resolveCompanionId({ companions: [], dialogue: [{ speaker: "Người gác", text: "x" }] }), "npc_servant_male");
+assert.equal(resolveCompanionId({ companions: [], dialogue: [{ speaker: "Quản gia", text: "x" }] }), "npc_servant_elder_male");
+// Đi bộ các nhánh: dùng lại mạch chính, ghi đè lựa chọn tại điểm rẽ.
+const MAIN_CHAIN = ["lh_gate","lh_saloon","lh_rules","lh_hall","lh_lan_room","lh_lan_talk","lh_morning_tea","lh_garden","lh_night_bell","lh_night_corridor","lh_doctor_visit","lh_medicine_store","lh_servants","lh_register_room","lh_kitchen","lh_lan_knots","lh_old_servant","lh_well_anchor","lh_lan_sleepwalk","lh_altar","lh_thu_nguyet_errand","lh_market","lh_letter","lh_council","lh_lan_question","lh_anchor_bell","lh_scout_coast","lh_inspector_notice","lh_eve_inspection","lh_accident_beam","lh_poison_tea","lh_corridor_fight","lh_aftermath","lh_lan_pushback_big"];
+function walk(overrides, tail) {
+  const g = launch(new Map());
+  assert.equal(g.bridge.getSnapshot().scene.id, "lh_prologue");
+  for (const expected of [...MAIN_CHAIN, ...tail]) {
+    const current = g.bridge.getSnapshot().scene.id;
+    g.bridge.applyScriptChoice(overrides[current] ?? 0);
+    assert.equal(g.bridge.getSnapshot().scene.id, expected);
+  }
+  return g;
+}
+// Nhánh nghỉ trước: cảnh mới lh_retelling_rest, ký ức −8 đúng một lần kể cả
+// sau save/load tại cảnh đó.
+{
+  const g = walk({ lh_lan_pushback_big: 1 }, ["lh_retelling_rest"]);
+  assert.equal(g.bridge.getSnapshot().campaignStats.memoryIntegrity, 92);
+  g.bridge.saveGame();
+  g.bridge.loadGame();
+  assert.equal(g.bridge.getSnapshot().scene.id, "lh_retelling_rest");
+  assert.equal(g.bridge.getSnapshot().campaignStats.memoryIntegrity, 92);
+}
+// Nhánh Thu Nguyệt ở lại: thuyền ba người. Nhánh đi theo: bốn người.
+// Nhánh đường bộ: đoạn xe cỏ xuất hiện ở lh_last_pushback.
+const TAIL_DEFAULT = ["lh_retelling","lh_kitchen_fire","lh_hearth_anchor","lh_storm","lh_night_attack","lh_blade_wound","lh_ba_confession","lh_lan_plan","lh_inspector_early","lh_ambush_well","lh_hide_lan","lh_first_sweep","lh_audit_table","lh_nghiem","lh_certification","lh_lan_faces","lh_move_tonight","lh_so_retrieval","lh_ngoc_chi_keepsake","lh_nghiem_offer","lh_refusal","lh_lockdown","lh_servants_choose","lh_anchor_map","lh_lan_farewell","lh_ba_stays","lh_thu_nguyet_choice","lh_escape_eve","lh_escape_begins","lh_gate_fight","lh_gate_hold","lh_coast_road","lh_road_choice","lh_last_pushback","lh_names_price","lh_open_road","lh_dawn_after","lh_names_restored","lh_slice_end"];
+{
+  // Đi bộ tới lh_names_restored với lựa chọn Thu Nguyệt ghi đè tại điểm rẽ.
+  function walkToRestored(thuNguyetChoice) {
+    const g = launch(new Map());
+    assert.equal(g.bridge.getSnapshot().scene.id, "lh_prologue");
+    const chain = [...MAIN_CHAIN, ...TAIL_DEFAULT.slice(0, -1)];
+    for (const expected of chain) {
+      const current = g.bridge.getSnapshot().scene.id;
+      g.bridge.applyScriptChoice((current === "lh_thu_nguyet_choice") ? thuNguyetChoice : 0);
+      assert.equal(g.bridge.getSnapshot().scene.id, expected);
+    }
+    return g.bridge.getSnapshot().scene.narration.join(" ");
+  }
+  assert.ok(walkToRestored(1).includes("ba người trên thuyền"), "nhánh ở lại phải kể thuyền ba người");
+  assert.ok(walkToRestored(0).includes("bốn người"), "nhánh đi theo phải kể thuyền bốn người");
+  const cart = launch(new Map());
+  const chainCart = [...MAIN_CHAIN, ...TAIL_DEFAULT.slice(0, TAIL_DEFAULT.indexOf("lh_last_pushback") + 1)];
+  for (const expected of chainCart) {
+    const current = cart.bridge.getSnapshot().scene.id;
+    cart.bridge.applyScriptChoice((current === "lh_road_choice") ? 1 : 0);
+    assert.equal(cart.bridge.getSnapshot().scene.id, expected);
+  }
+  assert.ok(cart.bridge.getSnapshot().scene.narration.join(" ").includes("hết an toàn"),
+    "nhánh đường bộ phải có đoạn chuyển tuyến xe cỏ");
+}
 console.log("VN scene contract and session passed: deterministic scenes, five Long Hai objectives, dead-end rollback, versioned save, AI disabled.");
