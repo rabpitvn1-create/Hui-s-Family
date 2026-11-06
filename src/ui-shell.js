@@ -1,23 +1,53 @@
 import { SCENE_BACKGROUNDS, resolveSceneBackground } from "./scene-backgrounds.js";
 
 const STAGES = Object.freeze([
-  { id: "long_hai", label: "Hồi 1 · Long Hải" },
-  { id: "can_gio", label: "Hồi 2 · Cần Giờ" },
-  { id: "backrooms", label: "Hồi 3 · Backrooms 1900" },
-  { id: "thu_dau_mot", label: "Hồi 4 · Thủ Dầu Một" },
-  { id: "vung_tau", label: "Hồi 5 · Vũng Tàu" },
-  { id: "sai_gon_cho_lon", label: "Hồi 6 · Sài Gòn–Chợ Lớn" }
+  {
+    "id": "long_hai",
+    "label": "Chặng 1 · Long Hải"
+  },
+  {
+    "id": "vung_tau",
+    "label": "Chặng 2 · Vũng Tàu"
+  },
+  {
+    "id": "can_gio",
+    "label": "Chặng 3 · Cần Giờ"
+  },
+  {
+    "id": "prenn",
+    "label": "Chặng 4 · Prenn"
+  },
+  {
+    "id": "backrooms",
+    "label": "Chặng 5 · Backrooms"
+  },
+  {
+    "id": "cho_lon_return",
+    "label": "Chặng 6 · Chợ Lớn"
+  },
+  {
+    "id": "dong_thap",
+    "label": "Chặng 7 · Đồng Tháp"
+  },
+  {
+    "id": "hue",
+    "label": "Chặng 8 · Huế"
+  },
+  {
+    "id": "cho_lon_final",
+    "label": "Chặng 9 · Chung kết"
+  }
 ]);
 
 const THREAT_COPY = Object.freeze({
   low: {
     label: "Hiện trường đang kín",
-    footer: "Mức can thiệp: kín · không để lại công nghệ thế kỷ 29.",
+    footer: "Mức can thiệp: kín · bảo vệ vật chủ còn tỉnh táo.",
     caption: "Cảm biến chỉ ghi nhận nhiễu nền quanh khu vực hiện tại."
   },
   watch: {
     label: "Dấu hiệu ký sinh tăng",
-    footer: "Mức can thiệp: theo dõi · giữ đường rút và phân loại vật chủ.",
+    footer: "Mức can thiệp: theo dõi · giữ quyền tự quyết của vật chủ.",
     caption: "Dấu sinh học đã rõ hơn nhưng chưa đủ dữ kiện để định danh."
   },
   critical: {
