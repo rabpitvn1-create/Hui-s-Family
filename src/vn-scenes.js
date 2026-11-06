@@ -852,6 +852,7 @@ export const VN_SCENES = Object.freeze({
       "id": "danh",
       "phase": "identified"
     },
+    "objective": "classify_servants",
     "narration": [
       "Cao Minh tìm gặp bà Năm Liên vào lúc nhà bếp vừa dọn xong bữa trưa, khi hành lang dãy ngang vắng người qua lại nhất. Bà đã đứng đợi ở khúc quanh hành lang từ lúc nào, tay ôm chặt một bọc vải lót đã sờn, như thể bà biết trước sẽ có người tới hỏi, và đã ôm bọc vải ấy đi đi lại lại trong bụng suốt mấy hôm nay. Bà là người hầu già nhất còn lại trong căn nhà này. Thấy Cao Minh, bà không chạy, cũng không quỳ — bà chỉ nhìn hắn rất lâu, như cân nhắc xem người khách lạ này có đáng để bà đánh cược nốt quãng đời còn lại hay không.",
       "Trong bọc vải là một tập giấy mỏng. Bà mở ra một trang ghi chép cũ của nhà bếp, nơi góc giấy còn chép tay ba chữ: Hứa Tiểu Lan. Bà nói, bà từng nhìn thấy gia phả của Hứa Gia — ở đó, ba chữ ấy bị gạch đi bằng một nét mực khác, lạnh và đều, như gạch bỏ một món nợ đã thanh toán xong. Còn nét chữ trên trang giấy này run và vội, là nét của người chép lén. Bà chép lại từ năm cô chủ mới bị đưa ra Long Hải, chép vào góc sổ bếp — chỗ sổ sách tầm thường nhất, nơi không ai buồn kiểm tra — vì bà sợ một ngày nào đó, trong căn nhà này sẽ không còn một chỗ nào còn ghi đúng tên cô nữa.",
