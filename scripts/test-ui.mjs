@@ -14,8 +14,8 @@ const requiredIds = [
   "objective-progress-value", "backrooms-floor-value", "supplies-value",
   "ammunition-value", "clues-value", "saved-value", "log-list",
   "threads-list", "inventory-list", "save-button", "load-button",
-  "restart-button", "ai-status", "ai-output", "ai-narration",
-  "ai-dialogue", "ai-suggestions", "ai-action", "ai-submit", "ai-clear",
+  "restart-button", "ai-status",
+  "ai-action", "ai-submit", "ai-clear",
   "ai-note", "ai-api-keys", "intel-panel", "intel-toggle", "focus-toggle"
 ];
 

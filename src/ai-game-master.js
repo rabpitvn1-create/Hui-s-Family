@@ -64,10 +64,6 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
 
   const elements = {
     status: document.querySelector("#ai-status"),
-    output: document.querySelector("#ai-output"),
-    narration: document.querySelector("#ai-narration"),
-    dialogue: document.querySelector("#ai-dialogue"),
-    suggestions: document.querySelector("#ai-suggestions"),
     action: document.querySelector("#ai-action"),
     submit: document.querySelector("#ai-submit"),
     clear: document.querySelector("#ai-clear"),
@@ -118,52 +114,6 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
     setBusy(busy);
   }
 
-  function renderSuggestions(choices) {
-    if (!elements.suggestions) return;
-    elements.suggestions.replaceChildren();
-    (Array.isArray(choices) ? choices : []).forEach((choice) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "ai-suggestion";
-      button.textContent = choice;
-      button.addEventListener("click", () => {
-        elements.action.value = choice;
-        elements.action.focus();
-      });
-      elements.suggestions.append(button);
-    });
-  }
-
-  function renderDialogue(dialogue) {
-    if (!elements.dialogue) return;
-    elements.dialogue.replaceChildren();
-    dialogue.forEach((line) => {
-      const row = document.createElement("p");
-      row.className = "ai-dialogue-line";
-
-      const speaker = document.createElement("strong");
-      speaker.textContent = line.speaker;
-
-      const text = document.createElement("span");
-      text.textContent = line.text;
-
-      row.append(speaker, text);
-      elements.dialogue.append(row);
-    });
-  }
-
-  function renderAppliedTurn(turn) {
-    if (!elements.output || !elements.narration || !elements.dialogue) return;
-    elements.output.hidden = false;
-    elements.narration.replaceChildren();
-
-    const notice = document.createElement("p");
-    notice.textContent = turn.summary || "Lượt mới đã được ghi vào cốt truyện chính.";
-    elements.narration.append(notice);
-    renderDialogue(turn.dialogue);
-    renderSuggestions(turn.choices);
-  }
-
   async function submitAction() {
     if (busy) return;
     const action = cleanText(elements.action.value, 600);
@@ -197,7 +147,6 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
       }
 
       bridge.applyAiTurn(turn, action);
-      renderAppliedTurn(turn);
       elements.action.value = "";
       setStatus("Cốt truyện đã cập nhật", "ready");
     } catch (error) {
@@ -232,13 +181,6 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
     elements.action.value = choice;
     elements.action.focus();
   });
-
-  window.addEventListener("hua:game-rendered", (event) => {
-    renderSuggestions(event.detail?.scene?.choices || []);
-  });
-
-  const snapshot = bridge.getSnapshot();
-  renderSuggestions(snapshot.scene?.choices || []);
 
   if (nativeMode) {
     window.__huaApiKeysChanged = refreshNativeConfiguration;
