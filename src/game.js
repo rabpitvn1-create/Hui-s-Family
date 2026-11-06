@@ -1,5 +1,6 @@
 import { INITIAL_STATE, WORLD_CANON } from "./world-canon.js";
 import { VN_SCENES, VN_START_SCENE } from "./vn-scenes.js";
+import { INCOMPATIBLE_SAVE_KEYS, isCurrentCanonSave, sanitizeLegacyCanonState } from "./canon-migration.js";
 import {
   applyProgressionUpdate,
   getBackroomsFloor,
@@ -605,20 +606,23 @@ export function initGame() {
   function loadGame() {
     const raw = storage.getItem(MANUAL_SAVE_KEY) || storage.getItem(AUTO_SAVE_KEY);
     if (!raw) {
-      state.log.unshift("Chưa có bản lưu chiến dịch canon.");
+      const oldSavePresent = INCOMPATIBLE_SAVE_KEYS.some((key) => storage.getItem(key));
+      state.log.unshift(oldSavePresent
+        ? "Phát hiện bản lưu canon cũ; không thể nạp vào tuyến VN chín chặng."
+        : "Chưa có bản lưu chiến dịch canon.");
       render();
       return;
     }
     try {
       const decoded = JSON.parse(raw);
-      if (decoded.version !== INITIAL_STATE.version
+      if (!isCurrentCanonSave(decoded)
         || !VN_SCENES[decoded.scene?.id]) {
         state.log.unshift("Bản lưu thuộc canon cũ, không tương thích với VN hiện hành.");
         state.log = state.log.slice(0, 14);
         render();
         return;
       }
-      state = normalizeState(decoded);
+      state = normalizeState(sanitizeLegacyCanonState(decoded));
       presentScene(state.scene.id);
       state.log.unshift("Đã tải chiến dịch canon.");
       state.log = state.log.slice(0, 14);
