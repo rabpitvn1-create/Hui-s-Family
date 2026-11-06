@@ -136,8 +136,8 @@ import { createHash } from "node:crypto";
 import { resolveCompanionId } from "../src/character-overlays.js";
 const prologueHash = createHash("sha256")
   .update(JSON.stringify(VN_SCENES.lh_prologue)).digest("hex");
-assert.equal(prologueHash, "5ca369503dfaccb474ecbb8b9fa66b400661ee12078a92222d024ea31ae0b9a3",
-  "lh_prologue đã bị thay đổi — cảnh này khóa tuyệt đối");
+assert.equal(prologueHash, "b65b94742f93950cea8f8babdad5830eb26b6688d96cc457221bc94ed1b226ac",
+  "lh_prologue đã bị thay đổi — cảnh này khóa tuyệt đối (chủ nhân mở khóa 2026-11-06 để rà soát theo canon tính cách mới, khóa lại tại hash này)");
 // Mật độ: đếm theo đúng công thức của lệnh (narration + dialogue, tách
 // khoảng trắng) trên MỌI tổ hợp flags tới được của từng cảnh.
 const EXCLUSIVE = [["thuNguyetEscorted","thuNguyetSolo"],["councilOath","councilQuiet"],
