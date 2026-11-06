@@ -59,7 +59,7 @@ assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.include
 // Mạch Hồi 1 sau Đợt 1B: hall → lan_room → lan_talk → morning_tea →
 // garden → night_bell → night_corridor → doctor_visit → servants →
 // ritual → depart (mọi lựa chọn đều lấy nhánh đầu tiên).
-for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_servants", "lh_ritual"]) {
+for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_medicine_store", "lh_servants", "lh_register_room", "lh_kitchen", "lh_lan_knots", "lh_old_servant", "lh_well_anchor", "lh_lan_sleepwalk", "lh_altar", "lh_thu_nguyet_errand", "lh_market", "lh_letter", "lh_council", "lh_lan_question", "lh_anchor_bell", "lh_scout_coast", "lh_inspector_notice", "lh_eve_inspection", "lh_ritual"]) {
   game.bridge.applyScriptChoice(0);
   assert.equal(game.bridge.getSnapshot().scene.id, expected);
 }
