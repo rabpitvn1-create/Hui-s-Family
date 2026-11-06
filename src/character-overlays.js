@@ -1,5 +1,5 @@
 // LIBERA-1899: overlay nhân vật phụ cho khung Snapshot.
-// Nhân vật có tên dùng overlay riêng; người vô danh dùng mẫu "?" chung.
+// Nhân vật có tên dùng overlay riêng; người vô danh dùng mẫu khuôn mặt người thường chung.
 // Cách scene khai báo người xuất hiện:
 //   1) scene.companions: ["ba_nam_lien"] — khai báo tường minh, ưu tiên cao nhất;
 //   2) nếu không khai báo, suy ra từ dialogue[].speaker của nhân vật có tên.
@@ -16,7 +16,8 @@ export const CHARACTER_OVERLAYS = Object.freeze({
   "pham_dinh_nghiem": "assets/overlay/pham-dinh-nghiem.webp",
   "npc_fisherman": "assets/overlay/npc-fisherman.webp",
   "npc_doctor": "assets/overlay/npc-doctor.webp",
-  "npc_official": "assets/overlay/npc-official.webp"
+  "npc_official": "assets/overlay/npc-official.webp",
+  "steward": "assets/overlay/steward.webp"
 });
 
 // Tên người nói (đã bỏ dấu, viết thường) → id overlay, chỉ cho nhân vật có tên.
@@ -29,8 +30,8 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "ngu ong": "npc_fisherman",
   "pho kiem": "npc_official",
   "nguoi cua gioi phong": "npc_official",
-  "quan gia": "npc_servant_elder_male",
-  "quan gia hua gia": "npc_servant_elder_male",
+  "quan gia": "steward",
+  "quan gia hua gia": "steward",
   "lao boc": "npc_servant_elder_male",
   "quan kho": "npc_servant_elder_male",
   "lao thu ky": "npc_servant_elder_male",

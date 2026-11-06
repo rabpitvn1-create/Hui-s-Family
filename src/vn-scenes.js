@@ -120,7 +120,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder_male"
+      "steward"
     ],
     "narration": [
       "Phòng khách của biệt thự bày biện theo lối các nhà giàu Nam Kỳ vẫn chuộng: cột lim đen bóng, tràng kỷ chạm rồng, trên tường treo cặp câu đối sơn son và một bức tranh thủy mặc đã ngả màu. Mọi thứ đều đắt tiền, và mọi thứ đều nằm đúng chỗ của nó — đúng đến mức căn phòng giống một bức ảnh hơn là một nơi có người ở.",
@@ -182,7 +182,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-corridor",
     "location": "Hành lang khu nhà chính, biệt thự Hứa Gia",
     "companions": [
-      "npc_servant_elder_male",
+      "steward",
       "le_thu_nguyet"
     ],
     "narration": [
@@ -770,7 +770,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder_male",
+      "steward",
       "npc_doctor"
     ],
     "narration": [
@@ -1861,7 +1861,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder_male"
+      "steward"
     ],
     "narration": [
       "Sáng hôm sau — ngày thứ hai trong ba ngày đếm ngược — một trát chính thức được đưa tới biệt thự, đóng dấu đỏ của Giới Phòng. Không phải thư của Bổn Hoả. Đây là trát kiểm tra định kỳ của phòng giữ sổ sách Lục Môn: ngày mai, một đoàn kiểm tra sẽ tới biệt thự Long Hải, đối chiếu gia phả, kiểm kê rương thuốc và hồ sơ, và — theo đúng nguyên văn của trát — xác minh tình trạng của người bệnh đang dưỡng tại biệt thự, để sổ sách của phủ được khép lại cho khớp. Cao Minh đọc trát mà thấy rõ chữ ký vô hình của bộ máy: đêm rằm đón người đi là việc của phủ; ngày mai kiểm tra là việc của Giới Phòng. Hai bàn tay của cùng một thân thể, một tay thu hồi, một tay nghiệm thu.",
@@ -1915,7 +1915,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder_male"
+      "steward"
     ],
     "narration": [
       "Đêm trước ngày kiểm tra, biệt thự Long Hải không ngủ. Nó tập diễn. Cao Minh đứng trong bóng tối của hành lang nhìn vào phòng khách sáng đèn, và chứng kiến một trong những cảnh rợn người nhất kể từ khi hắn đặt chân tới thời đại này: toàn bộ gia nhân của căn nhà, dưới sự điều khiển của quản gia, đang tập làm một gia đình bình thường. Một bàn tiệc được bày ra đầy đủ như có khách quý. Gia nhân ngồi vào các vị trí không phải của mình — người đóng vai quản gia tiếp khách, người đóng vai bà chủ nhà, có cả một cô hầu được chọn đóng vai người nhà ra đón đoàn kiểm tra — và họ tập cười, tập nói, tập rót trà, từng động tác một, lặp đi lặp lại.",
@@ -2991,7 +2991,7 @@ export const VN_SCENES = Object.freeze({
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
       "pham_dinh_nghiem",
-      "npc_servant_elder_male"
+      "steward"
     ],
     "narration": [
       "Sau đợt lục soát đầu tiên, phòng khách của biệt thự bị trưng dụng thành một văn phòng. Chiếc bàn dài giữa phòng — nơi ban tối còn bày khay trà tiếp khách — nay chất đầy giấy tờ: từng xấp hồ sơ buộc dây gai, từng cuốn sổ gáy bọc vải xanh, con dấu gỗ của Giới Phòng đặt trên một miếng lót đỏ, và bên cạnh nó, một trát lệnh còn nguyên triện son của Hứa Bổn Hoả, người chủ nhà mà Cao Minh chưa từng gặp mặt, chỉ mới thấy quyền lực của ông ta qua những tờ giấy đi trước ông ta khắp nơi.",
@@ -3279,7 +3279,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-corridor",
     "location": "Hành lang biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder_male"
+      "steward"
     ],
     "narration": [
       "Buổi kiểm tra chưa kịp tan thì lệnh mới đã tới. Một người đưa tin của Giới Phòng phóng ngựa từ đường cái quan vào sân, áo đẫm mồ hôi, tay giữ một ống tre đựng công văn dán kín hai đầu bằng sáp đỏ. Quản gia đón lấy bằng cả hai tay, đưa thẳng vào phòng khách không dám mở. Nghiêm tự tay bẻ sáp, rút ra một tờ lệnh ngắn — ngắn hơn mọi tờ giấy khác trong buổi hôm nay, và nặng hơn tất cả. Ông ta đọc một lượt, gấp lại, rồi tuyên bố bằng giọng điểm việc thường ngày: lệnh của ông chủ, hạn trăng rằm cũ bãi bỏ. Việc chuyển đi làm ngay đêm nay.",

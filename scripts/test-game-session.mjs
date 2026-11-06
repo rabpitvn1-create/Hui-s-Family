@@ -173,11 +173,11 @@ for (const scene of Object.values(VN_SCENES))
 const delayChoice = VN_SCENES.lh_move_tonight.choices.find((c) => c.id === "delay_the_carriage");
 assert.ok(delayChoice && delayChoice.flags && delayChoice.flags.carriageDelayed === true);
 // G01–G06: companion resolve đúng giới/vai trên sân khấu.
-assert.equal(resolveCompanionId(VN_SCENES.lh_saloon), "npc_servant_elder_male");
-assert.equal(resolveCompanionId(VN_SCENES.lh_rules), "npc_servant_elder_male");
+assert.equal(resolveCompanionId(VN_SCENES.lh_saloon), "steward");
+assert.equal(resolveCompanionId(VN_SCENES.lh_rules), "steward");
 assert.equal(resolveCompanionId(VN_SCENES.lh_certification), "pham_dinh_nghiem");
 assert.equal(resolveCompanionId({ companions: [], dialogue: [{ speaker: "Người gác", text: "x" }] }), "npc_servant_male");
-assert.equal(resolveCompanionId({ companions: [], dialogue: [{ speaker: "Quản gia", text: "x" }] }), "npc_servant_elder_male");
+assert.equal(resolveCompanionId({ companions: [], dialogue: [{ speaker: "Quản gia", text: "x" }] }), "steward");
 // Đi bộ các nhánh: dùng lại mạch chính, ghi đè lựa chọn tại điểm rẽ.
 const MAIN_CHAIN = ["lh_gate","lh_saloon","lh_rules","lh_hall","lh_lan_room","lh_lan_talk","lh_morning_tea","lh_garden","lh_night_bell","lh_night_corridor","lh_doctor_visit","lh_medicine_store","lh_servants","lh_register_room","lh_kitchen","lh_lan_knots","lh_old_servant","lh_well_anchor","lh_lan_sleepwalk","lh_altar","lh_thu_nguyet_errand","lh_market","lh_letter","lh_council","lh_lan_question","lh_anchor_bell","lh_scout_coast","lh_inspector_notice","lh_eve_inspection","lh_accident_beam","lh_poison_tea","lh_corridor_fight","lh_aftermath","lh_lan_pushback_big"];
 function walk(overrides, tail) {
