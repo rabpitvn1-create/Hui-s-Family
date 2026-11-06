@@ -10,8 +10,6 @@
   margin-top: .8rem;
 }
 
-body.focus-mode .game-layout { align-items: center; }
-
 .field-rail,
 .story-panel,
 .intel-panel { min-width: 0; }
@@ -441,7 +439,7 @@ body.intel-open .intel-scrim {
 
 /* ===== V5 — Header gọn + dải sub-strip =====
    Header là một hàng ngang: burger (#intel-toggle) trái, heritage-mark
-   ở giữa/trái, #focus-toggle và SRU stamp thu gọn bên phải. */
+   ở giữa/trái và SRU stamp thu gọn bên phải. */
 .campaign-header {
   align-items: center;
   justify-content: flex-start;
@@ -463,8 +461,6 @@ body.intel-open .intel-scrim {
   display: inline;
   margin: 0 0 0 .55rem;
 }
-
-.campaign-header #focus-toggle { flex: 0 0 auto; }
 
 .campaign-header .elysium-stamp {
   flex: 0 1 auto;
@@ -653,8 +649,8 @@ body.stage-entity-on #stage-entity {
 
 /* v5 header fix (theo đúng mockup v5): một hàng gọn — burger trái,
    "Hứa Gia / LIBERA-1899" giữa, chip Lượt ở phải. Các khối di sản
-   (ledger-tab, header-subtitle, tem SRU, route-readout, focus-toggle)
-   không còn nằm trên header: tem + route vào drawer, focus vào controls. */
+   (ledger-tab, header-subtitle, tem SRU, route-readout)
+   không còn nằm trên header: tem + route vào drawer. */
 body .campaign-header {
   display: flex;
   align-items: center;

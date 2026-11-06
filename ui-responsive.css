@@ -1,13 +1,3 @@
-body.focus-mode .field-rail,
-body.focus-mode .intel-panel { display: none; }
-
-body.focus-mode .game-layout {
-  grid-template-columns: minmax(0,58rem);
-  justify-content: center;
-}
-
-body.focus-mode .story-panel { width: 100%; }
-
 .story-panel.is-entering .scene-header,
 .story-panel.is-entering .story-text,
 .story-panel.is-entering .choice-deck {
@@ -71,8 +61,6 @@ body.focus-mode .story-panel { width: 100%; }
   body.intel-open { overflow: hidden; }
   body.intel-open .intel-panel { opacity: 1; visibility: visible; transform: translateX(0); }
   body.intel-open .intel-scrim { opacity: 1; visibility: visible; }
-  body.focus-mode .field-rail { display: none; }
-  body.focus-mode .game-layout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px) {
@@ -83,7 +71,7 @@ body.focus-mode .story-panel { width: 100%; }
 
   .shell { width: 100%; padding-top: 0; }
 
-  /* v5: header luôn là hàng ngang (burger trái, tiêu đề, nút focus). */
+  /* v5: header luôn là hàng ngang (burger trái, tiêu đề, chip Lượt). */
   .campaign-header {
     gap: .85rem;
     min-height: 0;
@@ -447,10 +435,6 @@ body.character-overlay-open { overflow: hidden; }
    mọi cột lưới dưới đây đều minmax(0,1fr) hoặc min-width:0, overlay bị chặn
    bằng max-width % + object-fit: contain, drawer chốt 92vw, không phần tử
    nào có bề rộng cố định lớn hơn khung nhìn ở hai mốc này. */
-
-/* Chế độ đọc với cấu trúc v5: ẩn thêm khung Snapshot, chỉ còn văn bản GM. */
-body.focus-mode #snapshot-stage,
-body.focus-mode .snapshot-stage { display: none; }
 
 @media (max-width: 1220px) {
   #snapshot-stage, .snapshot-stage { height: 19rem; }

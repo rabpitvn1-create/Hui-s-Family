@@ -21,7 +21,6 @@ Màn hình chính chỉ còn 3 tầng, theo đúng thứ tự từ trên xuống
 | `field-rail`: encounter-monitor | Hình overlay Entity bên trái của khung Snapshot |
 | `field-rail`: thẻ Tiểu Lan + tuyến hành quân (route-ledger) | Trong drawer burger |
 | `intel-panel` (chỉ số, tiến độ canon, nguồn lực, mục tiêu/đầu mối, vật phẩm, nhật ký, Lưu/Tải/Mới) | Trong drawer burger |
-| `mission-bar`: Hồ sơ hiện trường, Chế độ đọc | Trong drawer burger |
 | `story-panel` + `ai-game-master` (narration, choices, ô hành động) | Khung GM; choices mở từ nút **Thao Tác**; ô hành động = ô chat của player |
 | `campaign-footer` | Bỏ khỏi màn hình chính (thông tin SRU giữ trong drawer burger) |
 
@@ -43,7 +42,7 @@ Màn hình chính chỉ còn 3 tầng, theo đúng thứ tự từ trên xuống
 
 ## Hợp đồng DOM cho lập trình viên
 
-Giữ nguyên **toàn bộ 70 element ID hiện có** của `index.html`; v5 chỉ bổ sung/di chuyển các nút sau:
+Các element ID đang dùng trong `index.html` được kiểm tra bằng `scripts/test-ui.mjs`. Các nút và khung chính của v5:
 
 | ID / class | Vai trò |
 |---|---|

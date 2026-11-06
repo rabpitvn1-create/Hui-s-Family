@@ -16,7 +16,7 @@ const requiredIds = [
   "threads-list", "inventory-list", "save-button", "load-button",
   "restart-button", "ai-status",
   "ai-action", "ai-submit", "ai-clear",
-  "ai-note", "ai-api-keys", "intel-panel", "intel-toggle", "focus-toggle"
+  "ai-note", "ai-api-keys", "intel-panel", "intel-toggle"
 ];
 
 const idMatches = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);

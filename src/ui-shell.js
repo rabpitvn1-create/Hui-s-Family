@@ -81,7 +81,6 @@ export function initMissionInterface() {
   const intelToggle = document.querySelector("#intel-toggle");
   const intelClose = document.querySelector("#intel-close");
   const intelScrim = document.querySelector("#intel-scrim");
-  const focusToggle = document.querySelector("#focus-toggle");
   const storyPanel = document.querySelector("#story-panel");
   const routeProgress = document.querySelector("#route-progress");
   const routeStepLabel = document.querySelector("#route-step-label");
@@ -129,17 +128,6 @@ export function initMissionInterface() {
     const expanded = Boolean(value);
     storyPanel?.classList.toggle("choices-collapsed", !expanded);
     actionsToggle?.setAttribute("aria-expanded", String(expanded));
-  }
-
-  function setFocusMode(value) {
-    const enabled = Boolean(value);
-    body.classList.toggle("focus-mode", enabled);
-    focusToggle?.setAttribute("aria-pressed", String(enabled));
-    try {
-      window.localStorage.setItem("hua-ui-focus-mode", enabled ? "1" : "0");
-    } catch {
-      // Giao diện vẫn hoạt động khi localStorage bị chặn.
-    }
   }
 
   function animateScene(sceneId) {
@@ -254,7 +242,6 @@ export function initMissionInterface() {
   });
   intelClose?.addEventListener("click", () => setIntelOpen(false));
   intelScrim?.addEventListener("click", () => setIntelOpen(false));
-  focusToggle?.addEventListener("click", () => setFocusMode(!body.classList.contains("focus-mode")));
   actionsToggle?.addEventListener("click", () => {
     const expanded = actionsToggle.getAttribute("aria-expanded") !== "false";
     setChoicesOpen(!expanded);
@@ -279,19 +266,11 @@ export function initMissionInterface() {
     } else if (event.key.toLowerCase() === "i") {
       event.preventDefault();
       setIntelOpen(!body.classList.contains("intel-open"));
-    } else if (event.key.toLowerCase() === "f") {
-      event.preventDefault();
-      setFocusMode(!body.classList.contains("focus-mode"));
     }
   });
 
   window.addEventListener("hua:game-rendered", (event) => sync(event.detail));
 
-  try {
-    setFocusMode(window.localStorage.getItem("hua-ui-focus-mode") === "1");
-  } catch {
-    setFocusMode(false);
-  }
   // Nạp trước ảnh tư thế gặp thực thể để lần chạm trán đầu không chớp hình.
   const posePreload = new Image();
   posePreload.src = POSE_ENCOUNTER;
@@ -300,5 +279,5 @@ export function initMissionInterface() {
   syncIntelAccessibility();
   resizeActionInput();
 
-  return Object.freeze({ sync, setIntelOpen, setFocusMode });
+  return Object.freeze({ sync, setIntelOpen });
 }
