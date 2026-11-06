@@ -21,11 +21,23 @@ import {
 const pendingRequests = new Map();
 let sequence = 0;
 
-// Làn AI cho bản web (ngoài APK): gọi AI qua các proxy Render của chủ sở hữu.
-// API key chỉ nằm ở server của proxy, tuyệt đối không có trong source trang.
-// Trong APK, cầu nối native luôn được ưu tiên và làn này không chạy.
-// Thứ tự ưu tiên (owner chốt 2026-11-05): proxy premium trước (model mạnh ở
-// server, key riêng), proxy Gemini làm dự phòng khi premium lỗi.
+// Làn AI cho bản web (ngoài APK). Trong APK, cầu nối native luôn được ưu
+// tiên và các làn này không chạy.
+// Thứ tự ưu tiên (owner chốt 2026-11-06): Vilao AI gọi thẳng làm làn CHÍNH
+// (base https://api.vilao.ai/v1, model chib/gemini-3.8-flash), sau đó tới
+// proxy premium (model mạnh ở server, key riêng), cuối cùng là proxy Gemini.
+// Key Vilao KHÔNG nằm trong source: file ai-config.js được workflow deploy
+// Pages sinh ra từ GitHub Secret lúc build và nạp trước app.js; chạy local
+// không có file đó thì làn Vilao tự tắt, thứ tự rơi về proxy như trước.
+const VILAO_CONFIGURATION = (() => {
+  const injected = typeof window !== "undefined" ? window.__HUA_VILAO__ : null;
+  if (!injected?.apiKey || !injected?.baseUrl) return null;
+  return Object.freeze({
+    baseUrl: String(injected.baseUrl).replace(/\/+$/, ""),
+    apiKey: String(injected.apiKey),
+    model: String(injected.model || "chib/gemini-3.8-flash")
+  });
+})();
 const PREMIUM_PROXY_URL = "https://backrooms-premium-proxy.onrender.com";
 const PROXY_BASE_URL = "https://backrooms-gemini-proxy.onrender.com";
 const PROXY_CONFIGURATION = Object.freeze({
@@ -193,9 +205,74 @@ async function invokePremiumModel({ systemInstruction, prompt, schema, maxOutput
   }
 }
 
+async function invokeVilaoModel({ systemInstruction, prompt, schema, maxOutputTokens }) {
+  const schemaInstruction = `${systemInstruction}\n\nJSON SCHEMA BẮT BUỘC:\n${JSON.stringify(schema)}`;
+  // Vilao là endpoint OpenAI-compatible: chuyển tiếp nguyên vẹn messages kể
+  // cả role "system"; model do owner chỉ định cố định cho cả hai vai
+  // Director/Writer, giống cách proxy premium cố định model ở server.
+  const baseBody = {
+    model: VILAO_CONFIGURATION.model,
+    messages: [
+      { role: "system", content: schemaInstruction },
+      { role: "user", content: prompt }
+    ],
+    max_tokens: Math.min(4096, Math.max(256, Number(maxOutputTokens) || 1024))
+  };
+
+  async function attempt(withJsonMode) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 90000);
+    try {
+      const response = await fetch(`${VILAO_CONFIGURATION.baseUrl}/chat/completions`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${VILAO_CONFIGURATION.apiKey}`
+        },
+        body: JSON.stringify(withJsonMode
+          ? { ...baseBody, response_format: { type: "json_object" } }
+          : baseBody),
+        signal: controller.signal
+      });
+      const data = await response.json().catch(() => null);
+      if (!response.ok) {
+        const detail = typeof data?.error === "string"
+          ? data.error
+          : data?.error?.message || `HTTP ${response.status}`;
+        const error = new Error(`Vilao AI lỗi: ${detail}`);
+        error.status = response.status;
+        throw error;
+      }
+      const text = String(data?.choices?.[0]?.message?.content || "").trim();
+      if (!text) throw new Error("Vilao AI không trả nội dung.");
+      return text;
+    } catch (error) {
+      if (error?.name === "AbortError") throw new Error("Vilao AI phản hồi quá thời gian.");
+      throw error instanceof Error ? error : new Error("Không thể gọi Vilao AI.");
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  try {
+    return await attempt(true);
+  } catch (error) {
+    // Một số provider từ chối response_format: thử lại một lần không kèm nó.
+    if (error?.status === 400) return attempt(false);
+    throw error;
+  }
+}
+
 async function invokeProxyModel(args) {
-  // Premium trước theo lệnh owner; mọi lỗi của premium đều rơi xuống làn
-  // proxy Gemini bên dưới thay vì làm hỏng lượt chơi.
+  // Vilao là làn chính theo lệnh owner; mọi lỗi của Vilao rơi xuống proxy
+  // premium, lỗi của premium rơi xuống proxy Gemini, thay vì hỏng lượt chơi.
+  if (VILAO_CONFIGURATION) {
+    try {
+      return await invokeVilaoModel(args);
+    } catch {
+      // Rơi xuống làn dự phòng bên dưới.
+    }
+  }
   try {
     return await invokePremiumModel(args);
   } catch {

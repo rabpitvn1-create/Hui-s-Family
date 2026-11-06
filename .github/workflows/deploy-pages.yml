@@ -1,0 +1,39 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject Vilao AI config from secret
+        env:
+          VILAO_API_KEY: ${{ secrets.VILAO_API_KEY }}
+        run: |
+          if [ -n "$VILAO_API_KEY" ]; then
+            printf 'window.__HUA_VILAO__ = { baseUrl: "https://api.vilao.ai/v1", model: "chib/gemini-3.8-flash", apiKey: "%s" };\n' "$VILAO_API_KEY" > ai-config.js
+          else
+            echo "// Vilao chua duoc cau hinh: game dung cac proxy du phong." > ai-config.js
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
