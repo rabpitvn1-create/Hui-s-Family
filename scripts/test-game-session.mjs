@@ -29,7 +29,14 @@ function launch(saves) {
   return { bridge: initGame(), elements };
 }
 assert.deepEqual(validateVnScenes(VN_SCENES, VN_START_SCENE), []);
-assert.equal(VN_SCENES.lh_prologue.contentStatus, "placeholder");
+assert.equal(VN_SCENES.lh_prologue.contentStatus, "approved");
+// Nội dung chính thức đã vào (Muse, 2026-11-06): mọi scene gắn nhãn
+// "approved" tuyệt đối không được còn chữ placeholder kỹ thuật.
+for (const scene of Object.values(VN_SCENES)) {
+  if (scene.contentStatus === "approved") {
+    assert.equal(JSON.stringify(scene).includes("[PLACEHOLDER"), false);
+  }
+}
 const saves = new Map();
 let game = launch(saves);
 assert.equal(game.bridge.getSnapshot().scene.id, VN_START_SCENE);
