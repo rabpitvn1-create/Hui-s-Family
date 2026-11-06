@@ -630,6 +630,7 @@ export function initGame() {
     } catch (error) {
       console.error(error);
       state = normalizeState(INITIAL_STATE);
+      presentScene(VN_START_SCENE);
       state.log.unshift("Bản lưu hỏng; đã tạo chiến dịch mới.");
       render();
     }
