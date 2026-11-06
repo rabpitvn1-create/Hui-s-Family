@@ -810,3 +810,30 @@ body .campaign-header {
 /* Hàng Thao Tác cạnh deck lựa chọn + danh sách hồ sơ nhân vật (Đợt 2). */
 .choice-deck-tools { margin: .35rem 0 .15rem; }
 .profile-list { display: flex; flex-wrap: wrap; gap: .45rem; }
+
+/* Lịch sử đọc (backlog nguyên văn) + nút phát lại (Đợt 3). */
+.choice-deck-tools { display: flex; gap: .5rem; flex-wrap: wrap; }
+.choice-deck-tools button[aria-pressed="true"] { border-color: var(--brass); color: var(--brass-pale); }
+.backlog-overlay {
+  position: fixed; inset: 0; z-index: 55;
+  display: grid; place-items: center; padding: 1rem;
+}
+.backlog-overlay[hidden] { display: none; }
+.backlog-scrim { position: absolute; inset: 0; background: rgba(5, 3, 2, .72); }
+.backlog-card {
+  position: relative; width: min(46rem, 100%); max-height: min(84vh, 60rem);
+  display: flex; flex-direction: column;
+  border: 1px solid var(--line); border-radius: .6rem;
+  background: #17100a; color: var(--ink); box-shadow: var(--shadow-paper);
+  padding: 1rem 1.1rem;
+}
+.backlog-head { display: flex; align-items: center; justify-content: space-between; }
+.backlog-head h2 { margin: 0; font-size: 1.05rem; letter-spacing: .04em; }
+.backlog-note { margin: .35rem 0 .8rem; font-size: .8rem; opacity: .75; }
+.backlog-list { overflow-y: auto; padding-right: .4rem; }
+.backlog-entry { padding: .7rem 0; border-top: 1px solid rgba(214, 178, 106, .16); }
+.backlog-entry h3 { margin: 0 0 .45rem; font-size: .92rem; color: var(--brass-pale); }
+.backlog-entry p { margin: 0 0 .5rem; line-height: 1.55; font-size: .9rem; }
+.backlog-entry .backlog-line { margin: 0 0 .5rem; line-height: 1.55; font-size: .9rem; }
+.backlog-entry .backlog-speaker { font-weight: 700; color: var(--brass-pale); }
+.backlog-choice { font-size: .85rem; color: var(--brass); letter-spacing: .02em; }

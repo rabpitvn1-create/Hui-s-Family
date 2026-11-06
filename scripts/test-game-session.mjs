@@ -186,6 +186,24 @@ const freshSaves = new Map();
 game = launch(freshSaves);
 assert.equal(game.bridge.importSaves(bundle), true);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_saloon");
+// Đợt 3: backlog nguyên văn + điểm lựa chọn. Gói nhập mang runId của lượt
+// chơi gốc nên backlog của lượt tạm ở prologue bị thay bằng lượt được nhập
+// (backlog gắn với runId — chiến dịch mới không bao giờ thấy lịch sử cũ).
+const backlogNow = game.bridge.getBacklog();
+assert.deepEqual(backlogNow.map((entry) => entry.sceneId), ["lh_saloon"]);
+assert.ok(backlogNow[0].narration.length > 0);
+assert.equal(game.bridge.applyScriptChoice(0), true);
+const backlogAfter = game.bridge.getBacklog();
+assert.equal(backlogAfter[0].sceneId, "lh_saloon");
+assert.ok(backlogAfter[0].choiceLabel.length > 0);
+assert.equal(backlogAfter.at(-1).sceneId, "lh_rules");
+// Điểm lựa chọn = cảnh quyết định gần nhất: từ lh_rules đi tiếp tới
+// lh_hall (cũng 2 lựa chọn) thì điểm lựa chọn cập nhật thành lh_hall, và
+// tải điểm lựa chọn đứng yên tại cảnh quyết định hiện tại.
+assert.equal(game.bridge.applyScriptChoice(0), true);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_hall");
+assert.equal(game.bridge.loadChoiceCheckpoint(), true);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_hall");
 assert.equal(game.bridge.importSaves("{not-json"), false);
 assert.equal(game.bridge.importSaves(JSON.stringify({ format: "other" })), false);
 const old = structuredClone(INITIAL_STATE);

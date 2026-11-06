@@ -29,6 +29,18 @@
 
   <div id="save-toast" class="save-toast" role="status" aria-live="polite" hidden></div>
 
+  <div id="backlog-overlay" class="backlog-overlay" aria-hidden="true" hidden>
+    <div class="backlog-scrim" data-backlog-close></div>
+    <section class="backlog-card" role="dialog" aria-modal="true" aria-labelledby="backlog-title">
+      <header class="backlog-head">
+        <h2 id="backlog-title">Lịch sử đọc</h2>
+        <button id="backlog-close" type="button" aria-label="Đóng lịch sử đọc">×</button>
+      </header>
+      <p class="backlog-note">Nguyên văn những gì đã hiển thị trong lượt chơi này — giữ tối đa 200 cảnh gần nhất.</p>
+      <div id="backlog-list" class="backlog-list"></div>
+    </section>
+  </div>
+
   <div id="game-shell" class="shell" hidden>
     <a class="skip-link" href="#story-text">Đi thẳng đến nội dung cảnh</a>
     <header class="campaign-header">
@@ -95,6 +107,9 @@
           </div>
           <div class="choice-deck-tools">
             <button id="actions-toggle" type="button" aria-expanded="true">Thao Tác</button>
+            <button id="backlog-open" type="button">Lịch sử đọc</button>
+            <button id="auto-toggle" type="button" aria-pressed="false">Tự chạy</button>
+            <button id="skip-toggle" type="button" aria-pressed="false">Đọc nhanh</button>
           </div>
           <div id="choices" class="choices" aria-label="Các hướng hành động gợi ý"></div>
         </section>
@@ -251,6 +266,7 @@
             <button id="save-button" type="button">Lưu mốc thủ công</button>
             <button id="load-button" type="button">Tải mốc thủ công</button>
             <button id="restart-button" class="danger-control" type="button">Chiến dịch mới</button>
+            <button id="checkpoint-load-button" type="button">Quay lại điểm lựa chọn</button>
             <div class="save-slots" aria-label="Các ô lưu thủ công">
               <div class="save-slot-row">
                 <span class="save-slot-meta" data-slot-meta="0">Ô 1 — chưa có bản lưu</span>

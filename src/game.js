@@ -26,6 +26,12 @@ const ROUTE_TENDENCY_LABELS = Object.freeze({
   tu_quyet: "Tự Quyết",
   nghi_le: "Nghi Lễ"
 });
+// Đợt 3 (kết luận tranh luận 2026-11-06): backlog lưu NGUYÊN VĂN đã hiển
+// thị (mô hình Rendered History Snapshot), điểm lựa chọn gần nhất, và hai
+// chế độ phát lại (tự chạy / đọc nhanh theo đúng đường đã chọn trước đó).
+const BACKLOG_KEY = "hua-family-campaign-v4-backlog";
+const CHOICE_CHECKPOINT_KEY = "hua-family-campaign-v4-checkpoint";
+const BACKLOG_LIMIT = 200;
 const SAVE_SLOT_KEYS = Object.freeze([
   MANUAL_SAVE_KEY,
   "hua-family-campaign-v4-manual-2",
@@ -197,6 +203,13 @@ export function initGame() {
     routeValue: document.querySelector("#route-value"),
     stageValue: document.querySelector("#campaign-stage-value"),
     toast: document.querySelector("#save-toast"),
+    backlogOpen: document.querySelector("#backlog-open"),
+    autoToggle: document.querySelector("#auto-toggle"),
+    skipToggle: document.querySelector("#skip-toggle"),
+    checkpointLoad: document.querySelector("#checkpoint-load-button"),
+    backlogOverlay: document.querySelector("#backlog-overlay"),
+    backlogList: document.querySelector("#backlog-list"),
+    backlogClose: document.querySelector("#backlog-close"),
     objectiveProgressValue: document.querySelector("#objective-progress-value"),
     backroomsFloorValue: document.querySelector("#backrooms-floor-value"),
     cluesValue: document.querySelector("#clues-value"),
@@ -217,6 +230,11 @@ export function initGame() {
   const sceneErrors = validateVnScenes(VN_SCENES, VN_START_SCENE);
   if (sceneErrors.length) throw new Error("VN scene contract invalid: " + sceneErrors.join("; "));
   let state = normalizeState(INITIAL_STATE);
+  let backlog = { runId: "", entries: [] };
+  let autoPlay = false;
+  let skipping = false;
+  let autoTimer = 0;
+  let skipTimer = 0;
   function applyLinkMilestone(milestone) {
     if (!milestone) return;
     const links = state.flags.vnLinks || {};
@@ -263,6 +281,7 @@ export function initGame() {
     applyLinkMilestone(card.link);
     state.currentLocation = card.location || (card.backgroundId === "tieu-lan-room"
       ? "Phòng Hứa Tiểu Lan, biệt thự Long Hải" : "Biệt thự Hứa Gia, Long Hải");
+    captureBacklogEntry();
   }
 
   function applyScriptChoice(index) {
@@ -277,6 +296,11 @@ export function initGame() {
       autoSave();
       render({ resetScroll: true });
       return true;
+    }
+    const lastEntry = backlog.entries[backlog.entries.length - 1];
+    if (lastEntry && lastEntry.sceneId === state.scene.id && choice.text) {
+      lastEntry.choiceLabel = choice.text;
+      persistBacklog();
     }
     if (!VN_SCENES[choice.next]) throw new Error("Nhánh không có scene đích: " + choice.next);
     if (VN_SCENES[choice.next].deadEnd) {
@@ -366,6 +390,7 @@ export function initGame() {
     }
   }
 
+  loadBacklog();
   if (!tryRestoreSavedState()) presentScene(VN_START_SCENE);
 
   function applyStatEffects(rawEffects) {
@@ -580,7 +605,7 @@ export function initGame() {
       const label = document.createElement("span");
       label.textContent = choice;
       button.append(number, label);
-      button.addEventListener("click", () => applyScriptChoice(index));
+      button.addEventListener("click", () => { stopPlayback(); applyScriptChoice(index); });
       elements.choices.append(button);
     });
   }
@@ -665,6 +690,13 @@ export function initGame() {
 
     renderObjectives();
     renderList(elements.log, state.log, "Chưa có sự kiện.");
+    const currentCard = VN_SCENES[state.scene.id];
+    if (currentCard && !currentCard.deadEnd && (currentCard.choices || []).length >= 2) {
+      try {
+        storage.setItem(CHOICE_CHECKPOINT_KEY, JSON.stringify(state));
+      } catch { /* điểm lựa chọn là tiện ích phụ, lỗi lưu thì bỏ qua */ }
+    }
+    scheduleAuto();
     for (const meta of queryAll("[data-slot-meta]")) {
       const info = listSaveSlots()[Number(meta.getAttribute("data-slot-meta"))];
       if (!info) continue;
@@ -700,6 +732,185 @@ export function initGame() {
   function wireClick(element, handler) {
     if (element && typeof element.addEventListener === "function") {
       element.addEventListener("click", handler);
+    }
+  }
+
+  function ensureRunId() {
+    if (!state.runId) {
+      state.runId = `run-${Date.now().toString(36)}-${Math.floor(Math.random() * 1e6).toString(36)}`;
+    }
+    return state.runId;
+  }
+
+  function loadBacklog() {
+    const runId = ensureRunId();
+    try {
+      const parsed = JSON.parse(storage.getItem(BACKLOG_KEY) || "null");
+      backlog = parsed && parsed.runId === runId && Array.isArray(parsed.entries)
+        ? { runId, entries: parsed.entries.slice(-BACKLOG_LIMIT) }
+        : { runId, entries: [] };
+    } catch {
+      backlog = { runId, entries: [] };
+    }
+  }
+
+  function persistBacklog() {
+    try {
+      storage.setItem(BACKLOG_KEY, JSON.stringify(backlog));
+    } catch {
+      // Hết quota: cắt một phần tư cũ nhất rồi thử lại đúng một lần; vẫn
+      // hỏng thì bỏ qua — backlog không bao giờ được làm hỏng mạch chơi.
+      try {
+        backlog.entries = backlog.entries.slice(Math.ceil(backlog.entries.length / 4));
+        storage.setItem(BACKLOG_KEY, JSON.stringify(backlog));
+      } catch { /* bỏ qua */ }
+    }
+  }
+
+  function captureBacklogEntry() {
+    const runId = ensureRunId();
+    if (backlog.runId !== runId) backlog = { runId, entries: [] };
+    const entry = {
+      sceneId: state.scene.id,
+      title: state.scene.title,
+      narration: [...state.scene.narration],
+      dialogue: state.scene.dialogue.map((line) => ({ speaker: line.speaker, text: line.text })),
+      choiceLabel: ""
+    };
+    const last = backlog.entries[backlog.entries.length - 1];
+    if (last && last.sceneId === entry.sceneId && !last.choiceLabel) {
+      backlog.entries[backlog.entries.length - 1] = entry;
+    } else {
+      backlog.entries.push(entry);
+    }
+    if (backlog.entries.length > BACKLOG_LIMIT) {
+      backlog.entries = backlog.entries.slice(-BACKLOG_LIMIT);
+    }
+    persistBacklog();
+  }
+
+  function getBacklog() {
+    return clone(backlog.entries);
+  }
+
+  function loadChoiceCheckpoint() {
+    const decoded = readSaveCandidate(CHOICE_CHECKPOINT_KEY);
+    if (!decoded) {
+      showToast("Chưa có điểm lựa chọn nào để quay lại.", true);
+      return false;
+    }
+    stopPlayback();
+    state = normalizeState(sanitizeLegacyCanonState(decoded));
+    presentScene(state.scene.id);
+    state.log.unshift("Đã quay lại điểm lựa chọn gần nhất.");
+    state.log = state.log.slice(0, 14);
+    render({ resetScroll: true });
+    showToast(`Đã quay lại điểm lựa chọn — ${state.scene.title}`);
+    return true;
+  }
+
+  function syncPlaybackButtons() {
+    for (const [el, on] of [[elements.autoToggle, autoPlay], [elements.skipToggle, skipping]]) {
+      if (el?.classList) {
+        el.classList.toggle("is-on", on);
+        el.setAttribute("aria-pressed", String(on));
+      }
+    }
+  }
+
+  function stopPlayback() {
+    autoPlay = false;
+    skipping = false;
+    clearTimeout(autoTimer);
+    clearTimeout(skipTimer);
+    syncPlaybackButtons();
+  }
+
+  function scheduleAuto() {
+    clearTimeout(autoTimer);
+    if (!autoPlay) return;
+    const card = VN_SCENES[state.scene.id];
+    const choices = card?.choices || [];
+    if (!card || card.deadEnd || card.sliceEnd || choices.length !== 1 || choices[0].retry) {
+      autoPlay = false;
+      syncPlaybackButtons();
+      return;
+    }
+    const words = state.scene.narration.join(" ").split(/\s+/).length
+      + state.scene.dialogue.reduce((sum, line) => sum + line.text.split(/\s+/).length, 0);
+    const delay = Math.min(12000, Math.max(3000, 2200 + words * 42));
+    autoTimer = setTimeout(() => { if (autoPlay) applyScriptChoice(0); }, delay);
+  }
+
+  function setAutoPlay(on) {
+    autoPlay = Boolean(on);
+    if (autoPlay) skipping = false;
+    syncPlaybackButtons();
+    scheduleAuto();
+  }
+
+  function skipStep() {
+    if (!skipping) return;
+    const card = VN_SCENES[state.scene.id];
+    const recorded = new Map();
+    for (const entry of backlog.entries) {
+      if (entry.choiceLabel) recorded.set(entry.sceneId, entry.choiceLabel);
+    }
+    const label = recorded.get(state.scene.id);
+    const index = card && label ? (card.choices || []).findIndex((choice) => choice.text === label) : -1;
+    if (!card || card.deadEnd || card.sliceEnd || index < 0) {
+      stopPlayback();
+      return;
+    }
+    applyScriptChoice(index);
+    skipTimer = setTimeout(skipStep, 420);
+  }
+
+  function setSkip(on) {
+    skipping = Boolean(on);
+    if (skipping) autoPlay = false;
+    clearTimeout(skipTimer);
+    syncPlaybackButtons();
+    if (skipping) skipStep();
+  }
+
+  function renderBacklogList() {
+    const list = elements.backlogList;
+    if (!list) return;
+    list.replaceChildren();
+    if (!backlog.entries.length) {
+      const empty = document.createElement("p");
+      empty.textContent = "Chưa có cảnh nào trong lượt chơi này.";
+      list.append(empty);
+      return;
+    }
+    for (const entry of backlog.entries) {
+      const section = document.createElement("article");
+      section.className = "backlog-entry";
+      const heading = document.createElement("h3");
+      heading.textContent = entry.title;
+      section.append(heading);
+      for (const paragraph of entry.narration) {
+        const p = document.createElement("p");
+        p.textContent = paragraph;
+        section.append(p);
+      }
+      for (const line of entry.dialogue) {
+        const p = document.createElement("p");
+        p.className = "backlog-line";
+        const speaker = document.createElement("span");
+        speaker.className = "backlog-speaker";
+        speaker.textContent = `${line.speaker}: `;
+        p.append(speaker, document.createTextNode(line.text));
+        section.append(p);
+      }
+      if (entry.choiceLabel) {
+        const marker = document.createElement("p");
+        marker.className = "backlog-choice";
+        marker.textContent = `→ Đã chọn: ${entry.choiceLabel}`;
+        section.append(marker);
+      }
+      list.append(section);
     }
   }
 
@@ -914,6 +1125,27 @@ export function initGame() {
   for (const button of queryAll("[data-slot-load]")) {
     wireClick(button, () => loadFromSlot(Number(button.getAttribute("data-slot-load")) + 1));
   }
+  wireClick(elements.checkpointLoad, loadChoiceCheckpoint);
+  wireClick(elements.autoToggle, () => setAutoPlay(!autoPlay));
+  wireClick(elements.skipToggle, () => setSkip(!skipping));
+  const openBacklog = () => {
+    if (!elements.backlogOverlay) return;
+    renderBacklogList();
+    elements.backlogOverlay.hidden = false;
+    elements.backlogOverlay.setAttribute("aria-hidden", "false");
+  };
+  const closeBacklog = () => {
+    if (!elements.backlogOverlay) return;
+    elements.backlogOverlay.hidden = true;
+    elements.backlogOverlay.setAttribute("aria-hidden", "true");
+  };
+  wireClick(elements.backlogOpen, openBacklog);
+  wireClick(elements.backlogClose, closeBacklog);
+  wireClick(document.querySelector("[data-backlog-close]"), closeBacklog);
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && elements.backlogOverlay && !elements.backlogOverlay.hidden) closeBacklog();
+  });
+
   wireClick(document.querySelector("#export-saves-button"), downloadSaves);
   const importFile = document.querySelector("#import-saves-file");
   wireClick(document.querySelector("#import-saves-button"), () => importFile?.click());
@@ -945,7 +1177,9 @@ export function initGame() {
     loadFromSlot,
     listSaveSlots,
     exportSaves,
-    importSaves
+    importSaves,
+    getBacklog,
+    loadChoiceCheckpoint
   });
 
   // Khởi động đã khôi phục bản mới nhất ở trên (hoặc bắt đầu cảnh đầu);
