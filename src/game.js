@@ -1,5 +1,6 @@
 import { INITIAL_STATE, WORLD_CANON } from "./world-canon.js";
 import { VN_SCENES, VN_START_SCENE } from "./vn-scenes.js";
+import { validateVnScenes, VN_LINK_PHASES } from "./vn-schema.js";
 import { INCOMPATIBLE_SAVE_KEYS, isCurrentCanonSave, sanitizeLegacyCanonState } from "./canon-migration.js";
 import {
   applyProgressionUpdate,
@@ -204,7 +205,17 @@ export function initGame() {
   }
 
   const storage = createStorage();
+  const sceneErrors = validateVnScenes(VN_SCENES, VN_START_SCENE);
+  if (sceneErrors.length) throw new Error("VN scene contract invalid: " + sceneErrors.join("; "));
   let state = normalizeState(INITIAL_STATE);
+  function applyLinkMilestone(milestone) {
+    if (!milestone) return;
+    const links = state.flags.vnLinks || {};
+    const previous = links[milestone.id] || "unknown";
+    if (VN_LINK_PHASES.indexOf(milestone.phase) >= VN_LINK_PHASES.indexOf(previous)) {
+      state.flags.vnLinks = {...links, [milestone.id]: milestone.phase};
+    }
+  }
 
   // VN is the only playable route; legacy AI entrypoints cannot change state.
   function presentScene(sceneId) {
@@ -219,6 +230,7 @@ export function initGame() {
       dialogue: [...(card.dialogue || [])],
       choices: (card.choices || []).map((item) => item.text)
     };
+    applyLinkMilestone(card.link);
     state.currentLocation = card.location || (card.backgroundId === "tieu-lan-room"
       ? "Phòng Hứa Tiểu Lan, biệt thự Long Hải" : "Biệt thự Hứa Gia, Long Hải");
   }
@@ -246,6 +258,13 @@ export function initGame() {
     }
     const previousProgression = clone(state.progression);
     applyCampaignEffects(choice.effects || {});
+    applyLinkMilestone(choice.link);
+    if (choice.route) {
+      const scores = state.flags.vnRouteScores || {};
+      state.flags.vnRouteScores = {
+        ...scores, [choice.route.id]: (scores[choice.route.id] || 0) + choice.route.delta
+      };
+    }
     if (choice.flags) {
       for (const [key, value] of Object.entries(choice.flags)) {
         if (typeof value !== "boolean") throw new Error("Flag VN phải là boolean");
