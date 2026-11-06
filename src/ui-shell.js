@@ -95,6 +95,7 @@ export function initMissionInterface() {
   const actionInput = document.querySelector("#ai-action");
   const actionsToggle = document.querySelector("#actions-toggle");
   const stageEntity = document.querySelector("#stage-entity");
+  const stageTieuLan = document.querySelector("#stage-tieu-lan");
   const stageSceneName = document.querySelector("#stage-scene-name");
   const stageBackground = document.querySelector("#stage-background");
   const stageCharacter = document.querySelector("#stage-character");
@@ -192,6 +193,21 @@ export function initMissionInterface() {
   const POSE_ENCOUNTER = "assets/overlay/main-character-encounter.png";
   let poseSwapTimer = 0;
 
+  // Tiểu Lan đang có thoại trong cảnh hiện tại? Tên người nói do Writer trả
+  // về thường là "Hứa Tiểu Lan" / "Tiểu Lan": bỏ dấu rồi so khớp "tieu lan".
+  function isTieuLanSpeaking(snapshot) {
+    const dialogue = Array.isArray(snapshot?.scene?.dialogue) ? snapshot.scene.dialogue : [];
+    return dialogue.some((line) => {
+      const speaker = String(line?.speaker || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/Đ/g, "D")
+        .toLowerCase();
+      return speaker.includes("tieu lan");
+    });
+  }
+
   // v5: đồng bộ khung Snapshot (#snapshot-stage).
   // - #stage-scene-name: caption cảnh, lấy snapshot.scene.title; rỗng thì giữ text mặc định trong HTML.
   // - #stage-entity: overlay Entity, CHỈ hiện khi encounter active — cùng ngưỡng với
@@ -210,6 +226,11 @@ export function initMissionInterface() {
 
     const active = threatFromSnapshot(snapshot).score >= 42;
     stageEntity?.classList.toggle("stage-entity-on", active);
+
+    // Tiểu Lan hiện bên trái Snapshot suốt cảnh có thoại của cô, fade out ở
+    // cảnh đầu tiên không còn thoại của cô. Encounter active thì Entity
+    // chiếm ô trái, cô không hiện.
+    stageTieuLan?.classList.toggle("stage-lan-on", !active && isTieuLanSpeaking(snapshot));
 
     const pose = active ? POSE_ENCOUNTER : POSE_EXPLORE;
     if (stageCharacter && stageCharacter.getAttribute("src") !== pose) {
@@ -274,6 +295,9 @@ export function initMissionInterface() {
   // Nạp trước ảnh tư thế gặp thực thể để lần chạm trán đầu không chớp hình.
   const posePreload = new Image();
   posePreload.src = POSE_ENCOUNTER;
+  // Nạp trước overlay Tiểu Lan để lần fade in đầu tiên không bị trống hình.
+  const lanPreload = new Image();
+  lanPreload.src = "assets/overlay/tieu-lan.png";
   // Mặc định: deck phương án đang hiện (aria-expanded="true"), trừ khi HTML ghi rõ "false".
   setChoicesOpen(actionsToggle ? actionsToggle.getAttribute("aria-expanded") !== "false" : true);
   syncIntelAccessibility();
