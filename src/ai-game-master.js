@@ -149,6 +149,13 @@ export function initAiGameMaster(bridge = window.HUA_GAME_BRIDGE) {
       bridge.applyAiTurn(turn, action);
       elements.action.value = "";
       setStatus("Cốt truyện đã cập nhật", "ready");
+      // The GM scrolls inside .game-layout; reset it after the new scene is laid out.
+      window.requestAnimationFrame(() => {
+        document.querySelector("#story-panel")?.focus({ preventScroll: true });
+        document.querySelector(".game-layout")?.scrollTo({
+          top: 0, left: 0, behavior: "instant"
+        });
+      });
     } catch (error) {
       console.error(error);
       setStatus(error instanceof Error ? error.message : "Không thể gọi Gemini.", "error");
