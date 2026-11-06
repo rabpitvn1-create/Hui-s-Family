@@ -8,6 +8,7 @@
 export const CHARACTER_OVERLAYS = Object.freeze({
   "ba_nam_lien": "assets/overlay/ba-nam-lien.webp",
   "le_thu_nguyet": "assets/overlay/le-thu-nguyet.webp",
+  "npc_servant_male": "assets/overlay/npc-servant-male.webp",
   "npc_servant_female": "assets/overlay/npc-servant-female.webp",
   "npc_servant_elder": "assets/overlay/npc-servant-elder.webp",
   "npc_porter": "assets/overlay/npc-porter.webp"

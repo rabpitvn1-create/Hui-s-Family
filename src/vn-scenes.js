@@ -66,6 +66,7 @@ export const VN_SCENES = Object.freeze({
     "title": "Hành lang biệt thự",
     "backgroundId": "long-hai-corridor",
     "location": "Hành lang biệt thự Hứa Gia, Long Hải",
+    "companions": ["npc_servant_male"],
     "narration": [
       "Cánh cửa lim mở ra không một tiếng động. Cao Minh bước vào hành lang dài hun hút, nơi chân đèn đã cháy ngắn mà vẫn có người thay dầu đúng giờ — đúng đến mức không giống thói quen của người đang sống, mà giống một mệnh lệnh không cho phép trễ.",
       "Cuối hành lang, trước gian phòng trong cùng, một người gác đứng chắn lối. Khi Cao Minh tới gần, đôi mắt người ấy bỗng trợn lên nhìn hắn — ánh mắt của một người đang van xin. Nhưng đôi tay của người gác lại chậm rãi giơ lên, tự mình kéo then ngang, bịt kín lối vào.",
