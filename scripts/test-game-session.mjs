@@ -59,7 +59,7 @@ assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.include
 // Mạch Hồi 1 sau Đợt 1B: hall → lan_room → lan_talk → morning_tea →
 // garden → night_bell → night_corridor → doctor_visit → servants →
 // ritual → depart (mọi lựa chọn đều lấy nhánh đầu tiên).
-for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_medicine_store", "lh_servants", "lh_register_room", "lh_kitchen", "lh_lan_knots", "lh_old_servant", "lh_well_anchor", "lh_lan_sleepwalk", "lh_altar", "lh_thu_nguyet_errand", "lh_market", "lh_letter", "lh_council", "lh_lan_question", "lh_anchor_bell", "lh_scout_coast", "lh_inspector_notice", "lh_eve_inspection", "lh_ritual"]) {
+for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_medicine_store", "lh_servants", "lh_register_room", "lh_kitchen", "lh_lan_knots", "lh_old_servant", "lh_well_anchor", "lh_lan_sleepwalk", "lh_altar", "lh_thu_nguyet_errand", "lh_market", "lh_letter", "lh_council", "lh_lan_question", "lh_anchor_bell", "lh_scout_coast", "lh_inspector_notice", "lh_eve_inspection", "lh_accident_beam", "lh_poison_tea", "lh_corridor_fight", "lh_aftermath", "lh_lan_pushback_big", "lh_retelling", "lh_kitchen_fire", "lh_hearth_anchor", "lh_storm", "lh_night_attack", "lh_blade_wound", "lh_ba_confession", "lh_lan_plan", "lh_inspector_early", "lh_ambush_well", "lh_hide_lan", "lh_first_sweep", "lh_ritual"]) {
   game.bridge.applyScriptChoice(0);
   assert.equal(game.bridge.getSnapshot().scene.id, expected);
 }
@@ -67,7 +67,8 @@ game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_depart");
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 4);
 assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "identified");
-assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 97);
+// 100 − 3 (phản kháng lớn ở lh_lan_pushback_big) − 3 (phản kháng ở lh_ritual).
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 94);
 const beforeDead = structuredClone(game.bridge.getSnapshot());
 game.bridge.applyScriptChoice(1);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_dead_consent");
