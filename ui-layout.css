@@ -795,3 +795,14 @@ body .campaign-header {
 
 .save-toast.is-visible { opacity: 1; }
 .save-toast.is-error { border-color: #b0492f; color: #f0b9a6; }
+
+/* Ô lưu thủ công + xuất/nhập file (Đợt 1, kết luận tranh luận 2026-11-06). */
+.save-slots { margin-top: .7rem; display: grid; gap: .45rem; }
+.save-slot-row {
+  display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+  padding: .45rem .6rem; border: 1px solid var(--line); border-radius: .45rem;
+  background: rgba(255, 244, 214, .03);
+}
+.save-slot-meta { font-size: .78rem; color: var(--ink); letter-spacing: .02em; }
+.save-slot-actions { display: inline-flex; gap: .4rem; flex-shrink: 0; }
+.save-transfer { margin-top: .7rem; display: flex; gap: .5rem; flex-wrap: wrap; }

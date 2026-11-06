@@ -165,6 +165,29 @@ saves.set(MANUAL_SAVE_KEY, JSON.stringify(olderManual));
 saves.set(AUTO_SAVE_KEY, JSON.stringify(newerAuto));
 game = launch(saves);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_saloon");
+// Đợt 1 (kết luận tranh luận 2026-11-06): ô lưu riêng + xuất/nhập file.
+// Lưu ô 2 tại lh_saloon, đi tiếp một cảnh, tải ô 2 phải quay lại lh_saloon.
+assert.equal(game.bridge.saveToSlot(2), true);
+assert.equal(game.bridge.listSaveSlots()[1].sceneId, "lh_saloon");
+assert.equal(game.bridge.applyScriptChoice(0), true);
+assert.notEqual(game.bridge.getSnapshot().scene.id, "lh_saloon");
+assert.equal(game.bridge.loadFromSlot(2), true);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_saloon");
+assert.equal(game.bridge.loadFromSlot(3), false);
+// Ghi lại ô 2 sau khi tải để nó thành bản mới nhất trong gói xuất (bản tự
+// động trong gói đang ở cảnh kế tiếp với dấu thời gian sớm hơn).
+assert.equal(game.bridge.saveToSlot(2), true);
+// Xuất gói bản lưu rồi nhập vào một môi trường trắng: khởi động tiếp tục
+// được đúng tiến độ mới nhất trong gói.
+const bundle = game.bridge.exportSaves();
+assert.equal(JSON.parse(bundle).format, "hua-family-saves");
+assert.equal(JSON.parse(bundle).slots[1].scene.id, "lh_saloon");
+const freshSaves = new Map();
+game = launch(freshSaves);
+assert.equal(game.bridge.importSaves(bundle), true);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_saloon");
+assert.equal(game.bridge.importSaves("{not-json"), false);
+assert.equal(game.bridge.importSaves(JSON.stringify({ format: "other" })), false);
 const old = structuredClone(INITIAL_STATE);
 old.version = "campaign-v3";
 old.scene.id = "origin";

@@ -12,6 +12,13 @@ import {
 // Save version v3: bản lưu v2 thuộc thế hệ nhân vật chính trước, không còn được đọc nữa.
 const AUTO_SAVE_KEY = "hua-family-campaign-v4-auto";
 const MANUAL_SAVE_KEY = "hua-family-campaign-v4-manual";
+// Ba ô lưu thủ công (Đợt 1, kết luận tranh luận 2026-11-06): ô 1 dùng lại
+// đúng khóa bản lưu thủ công cũ để tiến độ hiện hữu không bị mồ côi.
+const SAVE_SLOT_KEYS = Object.freeze([
+  MANUAL_SAVE_KEY,
+  "hua-family-campaign-v4-manual-2",
+  "hua-family-campaign-v4-manual-3"
+]);
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
@@ -336,7 +343,7 @@ export function initGame() {
     // về tiến độ CŨ hơn bản tự động). Bản lưu đời trước không có savedAt thì
     // tính là 0 và vẫn giữ thứ tự thủ công trước khi hòa.
     const candidates = [];
-    for (const key of [MANUAL_SAVE_KEY, AUTO_SAVE_KEY]) {
+    for (const key of [...SAVE_SLOT_KEYS, AUTO_SAVE_KEY]) {
       try {
         const raw = storage.getItem(key);
         if (!raw) continue;
@@ -680,6 +687,13 @@ export function initGame() {
     renderObjectives();
     renderInventory();
     renderList(elements.log, state.log, "Chưa có sự kiện.");
+    for (const meta of queryAll("[data-slot-meta]")) {
+      const info = listSaveSlots()[Number(meta.getAttribute("data-slot-meta"))];
+      if (!info) continue;
+      meta.textContent = info.empty
+        ? `Ô ${info.slot} — chưa có bản lưu`
+        : `Ô ${info.slot} — ${info.sceneTitle}${info.savedAt ? ` · ${new Date(info.savedAt).toLocaleString("vi-VN")}` : ""}`;
+    }
     document.title = `${state.scene.title} — Hứa Gia: LIBERA-1899`;
     window.dispatchEvent(new CustomEvent("hua:game-rendered", { detail: getSnapshot() }));
     if (resetScroll) resetReaderScroll();
@@ -691,6 +705,164 @@ export function initGame() {
       storage.setItem(AUTO_SAVE_KEY, JSON.stringify(state));
     } catch (error) {
       console.warn("Không thể tự động lưu chiến dịch.", error);
+    }
+  }
+
+  // Môi trường kiểm thử dùng DOM giả: querySelectorAll có thể không trả
+  // danh sách duyệt được — luôn qua helper này để không sập khởi động.
+  function queryAll(selector) {
+    try {
+      const nodes = document.querySelectorAll(selector);
+      return nodes && typeof nodes.forEach === "function" ? [...nodes] : [];
+    } catch {
+      return [];
+    }
+  }
+
+  function wireClick(element, handler) {
+    if (element && typeof element.addEventListener === "function") {
+      element.addEventListener("click", handler);
+    }
+  }
+
+  function readSaveCandidate(key) {
+    try {
+      const raw = storage.getItem(key);
+      if (!raw) return null;
+      const decoded = JSON.parse(raw);
+      if (!isCurrentCanonSave(decoded) || !VN_SCENES[decoded.scene?.id]) return null;
+      return decoded;
+    } catch {
+      return null;
+    }
+  }
+
+  function listSaveSlots() {
+    return SAVE_SLOT_KEYS.map((key, index) => {
+      const decoded = readSaveCandidate(key);
+      if (!decoded) return { slot: index + 1, empty: true, sceneId: "", sceneTitle: "", savedAt: 0 };
+      return {
+        slot: index + 1,
+        empty: false,
+        sceneId: decoded.scene.id,
+        sceneTitle: VN_SCENES[decoded.scene.id]?.title || decoded.scene.id,
+        savedAt: Number(decoded.savedAt) || 0
+      };
+    });
+  }
+
+  function writeSaveSlot(index, logMessage) {
+    state.savedAt = Date.now();
+    try {
+      storage.setItem(SAVE_SLOT_KEYS[index], JSON.stringify(state));
+    } catch (error) {
+      console.error(error);
+      showToast("Không lưu được — bộ nhớ trình duyệt đã đầy hoặc bị chặn.", true);
+      return false;
+    }
+    state.log.unshift(logMessage);
+    state.log = state.log.slice(0, 14);
+    render();
+    showToast(`Đã lưu vào ô ${index + 1} — ${state.scene.title}`);
+    return true;
+  }
+
+  function saveToSlot(slot) {
+    const index = Number(slot) - 1;
+    if (!SAVE_SLOT_KEYS[index]) return false;
+    return writeSaveSlot(index, `Đã lưu mốc thủ công vào ô ${slot}.`);
+  }
+
+  function loadFromSlot(slot) {
+    const index = Number(slot) - 1;
+    if (!SAVE_SLOT_KEYS[index]) return false;
+    const decoded = readSaveCandidate(SAVE_SLOT_KEYS[index]);
+    if (!decoded) {
+      showToast(`Ô ${slot} chưa có bản lưu hợp lệ.`, true);
+      return false;
+    }
+    state = normalizeState(sanitizeLegacyCanonState(decoded));
+    presentScene(state.scene.id);
+    state.log.unshift(`Đã tải bản lưu ở ô ${slot}.`);
+    state.log = state.log.slice(0, 14);
+    render({ resetScroll: true });
+    showToast(`Đã tải ô ${slot} — ${state.scene.title}`);
+    return true;
+  }
+
+  function buildSavesBundle() {
+    const readRaw = (key) => {
+      try {
+        const raw = storage.getItem(key);
+        return raw ? JSON.parse(raw) : null;
+      } catch {
+        return null;
+      }
+    };
+    return {
+      format: "hua-family-saves",
+      formatVersion: 1,
+      exportedAt: new Date().toISOString(),
+      auto: readRaw(AUTO_SAVE_KEY),
+      slots: SAVE_SLOT_KEYS.map((key) => readRaw(key))
+    };
+  }
+
+  function exportSaves() {
+    return JSON.stringify(buildSavesBundle(), null, 2);
+  }
+
+  function importSaves(jsonText) {
+    let bundle;
+    try {
+      bundle = JSON.parse(jsonText);
+    } catch {
+      showToast("File bản lưu không đọc được (không phải JSON hợp lệ).", true);
+      return false;
+    }
+    if (!bundle || bundle.format !== "hua-family-saves" || !Array.isArray(bundle.slots)) {
+      showToast("File này không phải file bản lưu của Hứa Gia.", true);
+      return false;
+    }
+    let written = 0;
+    const writeIfValid = (key, candidate) => {
+      if (!candidate || typeof candidate !== "object") return;
+      if (!isCurrentCanonSave(candidate) || !VN_SCENES[candidate.scene?.id]) return;
+      try {
+        storage.setItem(key, JSON.stringify(candidate));
+        written += 1;
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    writeIfValid(AUTO_SAVE_KEY, bundle.auto);
+    bundle.slots.slice(0, SAVE_SLOT_KEYS.length).forEach((candidate, index) => {
+      writeIfValid(SAVE_SLOT_KEYS[index], candidate);
+    });
+    if (!written) {
+      showToast("Không có bản lưu hợp lệ nào trong file.", true);
+      return false;
+    }
+    if (!tryRestoreSavedState()) render();
+    showToast(`Đã nhập ${written} bản lưu từ file.`);
+    return true;
+  }
+
+  function downloadSaves() {
+    try {
+      const blob = new Blob([exportSaves()], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = `hua-gia-ban-luu-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+      showToast("Đã xuất file bản lưu — hãy giữ file này ở nơi an toàn (ví dụ Google Drive).");
+    } catch (error) {
+      console.error(error);
+      showToast("Không xuất được file bản lưu trên trình duyệt này.", true);
     }
   }
 
@@ -712,18 +884,7 @@ export function initGame() {
   }
 
   function saveGame() {
-    state.savedAt = Date.now();
-    try {
-      storage.setItem(MANUAL_SAVE_KEY, JSON.stringify(state));
-    } catch (error) {
-      console.error(error);
-      showToast("Không lưu được — bộ nhớ trình duyệt đã đầy hoặc bị chặn.", true);
-      return;
-    }
-    state.log.unshift("Đã tạo bản lưu thủ công.");
-    state.log = state.log.slice(0, 14);
-    render();
-    showToast(`Đã lưu mốc thủ công — ${state.scene.title}`);
+    writeSaveSlot(0, "Đã tạo bản lưu thủ công.");
   }
 
   function loadGame() {
@@ -769,6 +930,22 @@ export function initGame() {
     render({ resetScroll: true });
   }
 
+  for (const button of queryAll("[data-slot-save]")) {
+    wireClick(button, () => saveToSlot(Number(button.getAttribute("data-slot-save")) + 1));
+  }
+  for (const button of queryAll("[data-slot-load]")) {
+    wireClick(button, () => loadFromSlot(Number(button.getAttribute("data-slot-load")) + 1));
+  }
+  wireClick(document.querySelector("#export-saves-button"), downloadSaves);
+  const importFile = document.querySelector("#import-saves-file");
+  wireClick(document.querySelector("#import-saves-button"), () => importFile?.click());
+  importFile?.addEventListener("change", async () => {
+    const file = importFile.files?.[0];
+    if (!file) return;
+    importSaves(await file.text());
+    importFile.value = "";
+  });
+
   elements.save?.addEventListener("click", saveGame);
   elements.load?.addEventListener("click", loadGame);
   elements.restart?.addEventListener("click", () => {
@@ -785,10 +962,16 @@ export function initGame() {
     applyScriptChoice,
     saveGame,
     loadGame,
-    restartGame
+    restartGame,
+    saveToSlot,
+    loadFromSlot,
+    listSaveSlots,
+    exportSaves,
+    importSaves
   });
 
-  // Always open a fresh campaign. Keep existing saves untouched until the player loads or plays.
+  // Khởi động đã khôi phục bản mới nhất ở trên (hoặc bắt đầu cảnh đầu);
+  // render cuối để panel và các ô lưu khớp trạng thái.
   render();
   return window.HUA_GAME_BRIDGE;
 }

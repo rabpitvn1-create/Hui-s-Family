@@ -317,9 +317,37 @@
           </details>
 
           <section class="intel-section controls" aria-label="Điều khiển trò chơi">
-            <button id="save-button" type="button">Lưu chiến dịch</button>
+            <button id="save-button" type="button">Lưu mốc thủ công</button>
             <button id="load-button" type="button">Tải mốc thủ công</button>
             <button id="restart-button" class="danger-control" type="button">Chiến dịch mới</button>
+            <div class="save-slots" aria-label="Các ô lưu thủ công">
+              <div class="save-slot-row">
+                <span class="save-slot-meta" data-slot-meta="0">Ô 1 — chưa có bản lưu</span>
+                <span class="save-slot-actions">
+                  <button type="button" data-slot-save="0">Lưu ô 1</button>
+                  <button type="button" data-slot-load="0">Tải ô 1</button>
+                </span>
+              </div>
+              <div class="save-slot-row">
+                <span class="save-slot-meta" data-slot-meta="1">Ô 2 — chưa có bản lưu</span>
+                <span class="save-slot-actions">
+                  <button type="button" data-slot-save="1">Lưu ô 2</button>
+                  <button type="button" data-slot-load="1">Tải ô 2</button>
+                </span>
+              </div>
+              <div class="save-slot-row">
+                <span class="save-slot-meta" data-slot-meta="2">Ô 3 — chưa có bản lưu</span>
+                <span class="save-slot-actions">
+                  <button type="button" data-slot-save="2">Lưu ô 3</button>
+                  <button type="button" data-slot-load="2">Tải ô 3</button>
+                </span>
+              </div>
+            </div>
+            <div class="save-transfer">
+              <button id="export-saves-button" type="button">Xuất file bản lưu</button>
+              <button id="import-saves-button" type="button">Nhập file bản lưu</button>
+              <input id="import-saves-file" type="file" accept="application/json,.json" hidden>
+            </div>
           </section>
         </div>
         <footer class="campaign-footer">
