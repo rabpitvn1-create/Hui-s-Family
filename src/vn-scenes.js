@@ -4901,8 +4901,13 @@ export const VN_SCENES = Object.freeze({
         "text": "Đi thôi, thưa ngài. Lần này, là tôi tự mình muốn đi."
       }
     ],
-    "choices": [],
-    "sliceEnd": true
+    "choices": [
+      {
+        "id": "to_vung_tau",
+        "text": "Xuôi xuống cửa biển — theo dấu tuyến quan tài tới Vũng Tàu.",
+        "next": "vt_arrival"
+      }
+    ]
   },
   "lh_dead_consent": {
     "id": "lh_dead_consent",
@@ -5022,5 +5027,727 @@ export const VN_SCENES = Object.freeze({
         }
       }
     ]
+  },
+  "vt_arrival": {
+    "id": "vt_arrival",
+    "contentStatus": "approved",
+    "stageId": "vung_tau",
+    "title": "Cửa biển",
+    "backgroundId": "vung-tau-roadstead",
+    "location": "Cửa biển Vũng Tàu — buổi trưa",
+    "narration": [
+      "Ra khỏi vùng nước lặng sau lưng biệt thự Long Hải, mặt nước bắt đầu đổi tính. Sóng không còn vỗ đều vào mạn thuyền như lúc rạng sáng nữa; nó chồm lên từng đợt ngắn, xô chiếc thuyền đánh cá chao đi chao lại như một cái thúng bị ai thỉnh thoảng đá vào từ phía dưới. Nắng lên nhanh. Phía trước, một dải đất nhô ra biển, trên cao có tháp trắng của ngọn đèn biển đứng im giữa trời trong.",
+      "Tiểu Lan ngồi trong mui thuyền, lưng tựa vào vách gỗ, hai tay đặt lên đầu gối. Mỗi lần thuyền chao mạnh, nàng lại phải vịn vào mép mui mới ngồi yên được. Có lúc cần nhích người sang bên cho Thu Nguyệt đi qua, nàng không đứng lên ngay: nàng nhìn xuống đôi chân mình một thoáng, rồi mới chậm rãi ra lệnh cho chúng — gót nhích trước, mũi chân theo sau — như người ta điều một đôi tay mượn. Thu Nguyệt rót nước vào chén sành, đưa tận tay nàng, đợi nàng uống xong mới lấy lại chén, rồi kéo tấm khăn che mặt của nàng xuống thấp thêm một phân cho kín.",
+      "Đây là lần thứ hai trong đời Cao Minh ngồi trên mặt biển. Hắn đứng ở mũi thuyền, hai thanh kiếm lơ lửng sau lưng không chạm vào đâu cả, áo choàng bay phần phật mà người thì đứng vững như đóng cọc. Hắn nhìn mặt nước mở ra hai bên như nhìn một thứ đồ chơi mới, thỉnh thoảng lại quay đầu nhìn ngọn tháp trắng trên núi nhỏ, nhìn rất lâu.",
+      "Nàng nói những điều ấy như đọc một cuốn sách mình đã đọc nhiều lần — không phải sách trong thư phòng, mà là sách của những năm nằm trong phòng bệnh nghe người nhà và gia nhân nói chuyện qua vách: giá chợ, lệ cảng, thói đời, nàng gom góp từng mảnh một từ những tiếng nói vọng vào, và giữ chúng ngăn nắp hơn cả người đã từng đi qua những nơi ấy. Phía ngoài cửa biển, mấy chiếc tàu hơi nước neo thành hàng, khói than đùn lên chậm chạp; ghe nhỏ chèo qua chèo lại giữa tàu và bờ, chở nước ngọt trong những thùng gỗ lớn.",
+      "Câu ấy thốt ra đã mất hẳn vẻ chắc nịch ban đầu — chỉ còn sự ghi nhận phẳng lặng của người vừa bị sửa một điều mình tưởng đã biết chắc. Hắn không cãi, không chữa thẹn. Ở thế giới của hắn, tháp cao đốt lửa chỉ có một việc là báo động; ở thế giới này, người ta xây tháp cao để đưa nhau về nhà. Hắn gật đầu một cái như người vừa thuộc thêm một chữ trong thứ tiếng mình đang học, rồi quay ra nhìn mặt nước, để cho bài học tự ngấm.",
+      "Chiếc thuyền lướt qua một thuyền cá đang kéo lưới gần cửa lạch. Người đàn ông trên thuyền ấy ngẩng lên, thấy hai thanh kiếm treo lơ lửng sau lưng vị khách đứng ở mũi thuyền — tay kéo lưới của ông ta chậm lại một nhịp, rồi ông ta lặng lẽ quay mũi thuyền chèo tránh sang phía bên kia lạch, không một lời, không một tiếng chào. Tin đồn ở cửa biển này đi bằng mắt, nhanh hơn đi bằng miệng.",
+      "Thuyền áp vào cầu tàu phụ. Và Tiểu Lan nghe thấy nó trước khi bất cứ ai trên thuyền kịp nhìn rõ bờ.",
+      "Trên cầu tàu chính phía xa, một đội khiêng đang xuống hàng theo đúng thứ nhịp nàng đã nghe sáng nay ở bến cá — nhịp ấy không lạ với nàng nữa; nàng nhận ra nó ngay, như nhận ra giọng một người quen trong đám đông. Nhưng ở đây nhịp không đi một mình. Từ phía chòi bến, một nhịp ngắn nổi lên, ăn khớp vào nhịp của đội đầu rồi truyền tiếp xuống cầu tàu xa hơn, nơi một đội khiêng thứ hai nhấc hàng lên đúng vào cái nhịp vừa truyền tới. Rồi một đội nữa, ở tận phía kho than. Từng đội một nối vào nhau quanh một điểm phát không ai nhìn thấy, như nhiều sợi dây cùng buộc vào một cái trục khuất trong sương nắng. Ở bến cá, chỉ có một chuyến hàng lẻ đi qua trong một buổi sáng. Ở đây, nhịp có đường đi của nó. Nó có trạm.",
+      "Cao Minh không hỏi hàng gì, cũng không nhìn lên bờ. Hắn nhìn nàng — nhìn người vừa nói câu ấy bằng giọng của kẻ đã biết mình đang nghe thứ gì, chỉ chưa biết nó lớn tới đâu. Mũi thuyền chạm vào cầu ván, kêu một tiếng khô. Chặng mới bắt đầu từ đôi tai của nàng, không phải từ mắt của hắn."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, thuyền sắp vào cửa biển. Từ đây trở đi, ngài cứ để tôi nói trước. Đất này không giống đất Long Hải."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa nghe nàng. Ở đây, bổn tọa là người mù."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dưới mặt nước kia không phải chỗ nào cũng sâu như nhau. Có lạch — là đường nước sâu chạy giữa hai bãi cạn, thuyền lớn thuyền nhỏ đều phải đi đúng lạch ấy, như đi đúng cửa vào nhà người ta. Lệch ra một chút là mắc cạn, nằm phơi bụng cho cả bến nhìn. Thuyền lạ vào bến phải chờ hoa tiêu — là người của cảng, thuộc lạch như thuộc lòng bàn tay, lên thuyền cầm lái thay. Không có hoa tiêu, thuyền Tây to mấy cũng phải neo ngoài mà chờ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Dẫn đường vào bến cũng phải có phép riêng của nó. Nghe như người dẫn khách qua trận pháp: sai một bước là kẹt giữa hai lớp đá."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Cũng gần như vậy, thưa ngài. Vào tới cầu tàu còn có giấy kiểm dịch: quan cảng hỏi thuyền từ đâu tới, có người bệnh không, có người chết không. Giấy ấy không xong thì hàng không xuống được, người cũng không. Thuyền nào bị nghi có bệnh thì phải neo ngoài cửa, treo cờ vàng, chờ quan y tế ra tận nơi khám — có khi chờ ba bốn ngày, hàng hóa thối rữa trong khoang mà không ai dám trách."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Còn mấy chiếc tàu hơi nước đen kia, chúng vào đây để lấy than và nước ngọt — than chất ở kho gần bến, nước thì ghe nhỏ chở ra tận nơi. Cửa biển này nuôi cả vùng bằng hai thứ ấy đấy, thưa ngài. Ngài thấy kho than kia không — nửa cái bến này sống nhờ nó."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Còn cái tháp trắng kia. Đứng cao, nhìn xa, đốt đèn cả đêm — là tháp canh phải không? Có giặc biển thì đốt lửa báo về cho đồn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Không phải, thưa ngài. Nó là đèn cho người đi biển. Đêm xuống, thuyền ở ngoài khơi nhìn vào ngọn đèn mà biết đá ngầm ở đâu, cửa lạch ở phía nào, để khỏi đâm vào bờ mà chìm. Nó không dọa ai cả. Nó chỉ đường cho người ta về."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "…Ra là đèn dẫn về. Ngọn đèn tử tế nhất mà bổn tọa từng nghe nói tới, lại không phải để dọa ai."
+      },
+      {
+        "speaker": "Lão ngư ông",
+        "text": "Thưa ông thầy, cập bến phụ đằng kia là yên nhất. Tôi nói với người bến rằng ông thầy là thầy thuốc ở xa tới, đưa cô chủ đi dưỡng khí biển cho mau lại sức. Người ta nghe chữ dưỡng bệnh là người ta tránh ra — khỏi ai hỏi han nhiều."
+      },
+      {
+        "speaker": "Lão ngư ông",
+        "text": "Tới nơi thì ông thầy cứ đi thẳng vào, đừng đứng ngoài cầu tàu chính giờ này. Giờ trưa là giờ phu khuân đổi tay, người đông, mắt cũng đông. Bến này hiền, nhưng bến càng hiền thì càng hay nhìn."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ông chu đáo. Bổn tọa nhớ rồi."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Cô cứ để em nói chuyện với người bến. Cô ngồi trong bóng mát, khăn cứ che kín như vầy là được. Ai hỏi, em trả lời thay hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Vẫn là nhịp ấy, thưa ngài. Nhưng ở đây… nó có trạm."
+      }
+    ],
+    "companions": [
+      "le_thu_nguyet"
+    ],
+    "choices": [
+      {
+        "id": "land_quiet",
+        "text": "Lên bến phụ vắng người trước — lo chỗ nghỉ chân cho nàng, chuyện trên cầu tàu để sau.",
+        "next": "vt_coffin_wharf",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "flags": {
+          "vtLandedQuiet": true
+        }
+      },
+      {
+        "id": "land_open",
+        "text": "Đi thẳng về phía cầu tàu chính, lẫn vào đám đông bến — nàng nói có \"hàng\" của nhà ở đó.",
+        "next": "vt_coffin_wharf",
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanTrustDelta": -1
+        },
+        "flags": {
+          "vtLandedOpen": true
+        }
+      }
+    ]
+  },
+  "vt_coffin_wharf": {
+    "id": "vt_coffin_wharf",
+    "contentStatus": "approved",
+    "stageId": "vung_tau",
+    "title": "Bến quan tài",
+    "backgroundId": "coffin-wharf",
+    "location": "Bến Phúc Thọ, Vũng Tàu — trưa đứng bóng",
+    "narration": [
+      "Phúc Thọ Tang Quán nằm ngay sau cầu tàu chính, mặt tiền quét vôi trắng đã ngả màu khói, sân trước lát gạch tàu, và dọc hai bên sân là quan tài — xếp thành dãy dài như hàng hóa chờ cân: cỗ mới đánh vecni còn thơm mùi gỗ, cỗ cũ sơn đen, cỗ nhỏ cỗ lớn, có cỗ đã đóng triện đỏ trên nắp. Trưa đứng bóng. Mùi gỗ mới, mùi vôi và mùi than đá từ kho bên hông quyện vào nhau, nóng và đặc.",
+      "Người tiếp đoàn là người trông bến. Hắn ngồi trên chiếc ghế đẩu cạnh chồng sổ giao ca, một tay cầm que tính, mắt không rời dãy quan tài đang được kiểm đếm. Thu Nguyệt bước lên trước, nói năng lễ phép và rành rọt như một người đã quen đi chợ thay chủ.",
+      "Hắn chấm que tính lên sổ, gạch một vạch chéo, lật sang trang mới — động tác của một người đã làm đúng việc này hàng nghìn buổi trưa, đến mức tay hắn đếm quan tài như tay người ta đếm tiền lẻ. Trên góc mỗi trang sổ, dấu triện đỏ của tang quán đóng chồng lên nhau, trang nào cũng có, đều như đóng máy. Một nơi lo việc chết chóc mà giấy tờ ngăn nắp hơn cả một hiệu buôn sống.",
+      "Hắn nói mà không ngẩng mặt lên khỏi que tính. Nhưng trong lúc đếm, mắt hắn có một lần — chỉ một lần — liếc nhanh về phía kho than ở hông sân, một cái liếc thừa ra khỏi công việc đang làm, như người ngồi giữ cửa mà thỉnh thoảng phải kiểm tra xem ổ khóa sau lưng mình còn nguyên không. Cao Minh đứng ở rìa sân, dưới bóng mái hiên, nhìn dãy quan tài như nhìn một sạp hàng lạ. Hắn không nói gì. Hắn cũng đang đếm.",
+      "Một cỗ quan tài được bốn người khiêng ngang qua sân để xuống tàu. Khi nó đi qua gánh hàng rong ở góc sân, người đàn bà bán hàng tự động dẹp gánh sát vào tường, cúi mặt xuống nhìn chằm chằm vào mớ rau của mình. Một bà già dắt đứa cháu nhỏ đứng gần đó lặng lẽ kéo đứa bé ra khỏi lối đi, vòng ra sau lưng quầy nước. Đứa bé còn ngoái đầu lại nhìn — nó là người duy nhất trong sân nhìn thẳng vào cỗ quan tài — cho tới khi bàn tay bà nó che mắt nó lại. Không ai nói một câu nào. Cỗ quan tài đi qua giữa một khoảng im lặng được dọn sẵn, như người ta dọn đường cho một thứ mà ai cũng biết là không nên nhìn thẳng.",
+      "Đến cả mấy người phu khuân đang nghỉ tay ở góc sân cũng vậy. Họ ngồi ăn cơm nắm, mắt nhìn xuống chén của mình; khi cỗ quan tài đi ngang, không một ai ngẩng lên, không một ai hạ chén xuống. Sự không-nhìn ấy đã thành một thứ lễ nghi của bến này — ai mới tới mà nhìn lâu một chút là biết ngay người lạ.",
+      "Tiểu Lan đứng trong bóng mái hiên, một tay vịn vào cột gỗ. Nàng nghe thấy trước.",
+      "Cỗ quan tài vừa được đặt xuống ở đầu cầu tàu, chờ xếp xuống khoang. Nó khác những cỗ xung quanh ở một chỗ rất nhỏ: gần đầu nắp, có mấy lỗ khoan tròn, nhỏ và khéo, khoan thành một hàng ngắn như lỗ thông hơi của một cái hộp đựng chim. Quan tài cho người chết không cần lỗ thở.",
+      "Rồi từ bên trong cỗ quan tài ấy, có tiếng gõ. Rất khẽ. Ba tiếng. Nghỉ. Ba tiếng. Nghỉ. Đều như người ta đếm.",
+      "Đứng canh gần đó là một người gác của bến, hai tay chắp sau lưng, chân dậm nhịp xuống nền gạch theo một tiết tấu chậm mà chính ông ta cũng không để ý. Tiếng gõ trong quan tài đi đúng theo nhịp chân của người gác — không nhanh hơn, không chậm hơn, không lệch một tiếng nào. Như một cái máy đếm bị buộc phải đếm theo nhịp của kẻ khác.",
+      "Có một lúc, người gác khựng chân lại để cúi xuống nhặt sợi dây thừng rơi — nhịp chân đứt quãng đúng hai nhịp. Bên trong quan tài, tiếng gõ cũng khựng theo… rồi vội vàng gõ dồn thêm một tiếng, như kẻ đi sau bị vấp phải chạy hai bước cho kịp hàng. Khi chân người gác đều lại, tiếng gõ cũng đều lại. Không phải người trong quan tài nghe tiếng chân. Là anh ta không được phép gõ khác.",
+      "Cao Minh im lặng lâu hơn thường lệ của hắn rất nhiều. Trong cái im lặng ấy không có chỗ cho một câu đùa nào, và hắn biết điều đó rõ hơn ai hết. Khi hắn lên tiếng, giọng hắn ngắn và lạnh, và câu nói không hướng về người trong quan tài.",
+      "Người trông bến ngẩng mặt lên. Hắn đã nghe thấy — không phải câu nói, mà là khoảng dừng quá lâu của cô gái che mặt bên cạnh cỗ quan tài ấy. Hắn đứng dậy nhanh hơn mức cần thiết, chen vào giữa đoàn và dãy quan tài, giọng cộc hẳn đi.",
+      "Sự hung hăng ấy vượt quá việc đuổi khách. Cao Minh nhìn người trông bến như nhìn một người đang nói dối bằng cả thân mình: mắt hắn, trong lúc mắng khách, lại liếc về phía kho than lần nữa — và lần này cái liếc ấy ở lại lâu hơn. Đây không phải ghét khách. Đây là một người đang lấy thân mình che một cánh cửa.",
+      "Đoàn rút ra khỏi sân, bề ngoài như một đoàn khách bị đuổi thật. Sau lưng họ, người trông bến đã ngồi xuống ghế đẩu, que tính lại chạy trên sổ — nhanh hơn lúc nãy một chút, như người muốn dùng công việc để đè một ý nghĩ vừa bị khơi lên. Cỗ quan tài có lỗ thở vẫn nằm ở đầu cầu tàu, chờ chuyến xếp xuống khoang. Ra tới ngoài cổng, Tiểu Lan đi chậm lại nửa bước, nói nhỏ vừa đủ cho Thu Nguyệt nghe."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa ông, đoàn chúng tôi lỡ đường biển, muốn thuê một chỗ nghỉ chân qua trưa, với lại hỏi đường thuê thuyền đi tiếp ít hôm nữa. Ông làm ơn chỉ giúp."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Nghỉ chân: gian sau, hai đồng một buổi. Thuyền: hỏi bến dưới. Ở đây chỉ có quan tài."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ, thuyền đi về phía cửa sông thì mấy ngày có một chuyến, thưa ông? Đoàn tôi có người bệnh, không chờ lâu được."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Có hàng thì có thuyền. Không hàng thì… tùy."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ, gian sau cũng được. Ông cho người dẫn đoàn tôi vào —"
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Tự đi. Cửa thứ hai, đừng vào cửa thứ nhất. Đụng vào cỗ nào, đền cỗ đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài… người trong đó còn tỉnh."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa nghe thấy rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Họ bắt anh ta gõ theo nhịp của người gác. Gõ để trên này biết anh ta còn… nghe lời. Hễ còn gõ đúng nhịp, là còn dùng được."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ở căn nhà tôi ở, người ta cũng sống trong một nhịp không phải của mình. Chỉ là ở đó, nhịp đi qua trong tường, không ai nghe thấy ngoài tôi. Ở đây nó gõ ra thành tiếng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Chủ của nhịp này hẳn tự hào về sự đều đặn của mình lắm."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Gian sau hết chỗ rồi. Bến này không tiếp khách lạ. Mấy người đi ngay đi. Chuyến bảy còn chưa xếp xong, đừng có đứng chắn lối khiêng."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Ơ, thưa ông, ông vừa nói còn gian —"
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Vừa rồi khác. Đi. Hỏi thuyền thì xuống bến dưới mà hỏi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Người trông bến ấy… anh ta sợ cho phía kho than. Không phải sợ cho quan tài."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Sao cô biết?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Mắt anh ta, Thu Nguyệt. Người ta lo cho thứ gì, mắt sẽ tới đó trước. Từ lúc đoàn mình bước vào sân, mắt anh ta đã về phía kho than hai lần."
+      }
+    ],
+    "companions": [
+      "le_thu_nguyet",
+      "npc_porter"
+    ],
+    "choices": [
+      {
+        "id": "watch_store",
+        "text": "Rút lui hẳn, vòng ra sau bến theo lối chợ cá — quan sát kho than từ xa, không để Bá Hòe biết mình còn ở gần.",
+        "next": "vt_coal_store",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "flags": {
+          "vtWatchedStore": true
+        }
+      },
+      {
+        "id": "linger_wharf",
+        "text": "Ở lại rìa bến, mua nước và ngồi nghỉ như khách chờ thuyền — để Bá Hòe quen mặt, chờ hắn đổi ca.",
+        "next": "vt_coal_store",
+        "effects": {
+          "lanMaterInfluenceDelta": 2
+        },
+        "flags": {
+          "vtLingeredWharf": true
+        }
+      }
+    ]
+  },
+  "vt_coal_store": {
+    "id": "vt_coal_store",
+    "contentStatus": "approved",
+    "stageId": "vung_tau",
+    "title": "Kho than",
+    "backgroundId": "coal-store",
+    "location": "Kho than bến Phúc Thọ — buổi chiều",
+    "narration": [
+      "Chiều xuống, sân bến vắng dần. Thu Nguyệt đứng ở cửa kho than, quay lưng vào trong, mắt nhìn ra sân như một người đang chờ mua hàng — vị trí của một người canh cửa biết điều: không nhìn vào việc không phải của mình, và không để ai nhìn vào thay nàng.",
+      "Rắc rối tới trước cả đoàn. Phu trưởng bến bước vào kho, tay cầm sổ giao ca, giọng đã cao sẵn: số quan tài giao ca trưa nay lệch một cỗ so với sổ của hắn, và hắn chọn ngay người trông bến để trút. Ở bến này, lệch một cỗ quan tài không phải chuyện tiền — nó là chuyện có thể bị quy là ăn cắp xác, nhẹ thì mất việc, nặng thì đòn và tù.",
+      "Cao Minh đang đứng cách đó mấy bước, trước một sạp cá khô dựng tạm ở góc kho, tay cầm một con cá khô lên xem như khách hàng khó tính nhất đời. Hắn không quay đầu lại. Hắn chỉ nói, bằng giọng của người đang mặc cả cá:",
+      "Phu trưởng bến khựng lại. Hắn lật sổ, lật ngược hai trang, ngón tay dò xuống… rồi mặt hắn đổi sắc theo cách của một người vừa thấy cái bẫy mình giăng nằm ngay dưới chân mình. Hắn hắng giọng, gấp sổ lại, và bỏ đi mà không nói thêm một câu nào — đi nhanh, như người có việc gấp ở đầu kia bến. Cao Minh đặt con cá khô xuống, phủi tay, quay lại nhìn trời như chưa từng mở miệng.",
+      "Người trông bến đứng nhìn theo bóng phu trưởng một lúc lâu. Rồi hắn nhìn vị khách lạ — nhìn thật, lần đầu tiên trong ngày. Hắn ghét cái cảm giác đang hình thành trong bụng mình; người bến gọi nó là mắc nợ, và hắn thà bị đánh còn hơn mắc nợ người lạ.",
+      "Hắn mở hé cánh cửa kho than — chỉ hé đúng một người lách — rồi đóng sập lại sau lưng đoàn. Trong kho tối và đặc bụi than; những bao than xếp thành từng vách cao quá đầu người, chừa lại những lối đi hẹp như ngõ. Hắn dẫn đoàn vào lối trong cùng, dừng lại trước một vách bao, và kéo một bao than ở tầm thấp sang bên.",
+      "Sau vách bao ấy là một khoảng trống vừa đủ cho một người nằm. Và trong khoảng trống ấy có một người thật: một thanh niên gầy đến mức hai xương gò má nhô ra như đá, nằm trên tấm chiếu rách, một bát cơm và một ca nước đặt ngay tầm tay. Anh ta không ngủ. Đôi mắt anh ta mở, sáng, và tỉnh táo một cách đau đớn — thứ tỉnh táo của người đã lâu lắm rồi không được phép không tỉnh.",
+      "Hắn nói câu ấy như nói về thời tiết. Rồi, như bị chính mình bắt gặp đang kể lể, hắn thêm một câu ngắn ngủn, mắt nhìn vào vách bao:",
+      "Người thanh niên trong khoảng tối chớp mắt mấy lần, như người vừa bị gọi về từ một nơi rất xa. Anh ta mở miệng nói — và đoàn nghe thấy ngay vì sao giọng anh ta ngắt quãng: cứ nói được một đoạn ngắn, thân người anh ta lại khựng lại một nhịp rất nhỏ, ngón tay trỏ gõ xuống chiếu hai tiếng không thành tiếng, rồi anh ta giật mình, hoảng hốt nhìn xuống tay mình, và cố nói tiếp.",
+      "Cao Minh vẫn đứng yên từ nãy. Giờ hắn mới đưa tay vào trong áo, lấy ra một bản kê gấp tư, giữ sát ngực từ Long Hải tới đây. Hắn mở nó ra dưới ánh sáng lọt qua khe cửa kho, và ngón tay hắn chạy chậm xuống cột đầu tiên — cột tên, viết bằng nét chữ thư lại ngay ngắn của nhà họ Hứa. Rồi ngón tay dừng lại.",
+      "Hắn không nói gì trong mấy hơi thở. Tiểu Lan nhìn bản kê — nhìn nét chữ thư lại của nhà mình trên tờ giấy nàng đã xé ra và giấu đi từ năm mười một, mười hai tuổi, trong ngăn thứ ba của rương thuốc. Chữ trên tờ giấy này không phải chữ của nàng. Chữ của nàng chỉ nằm trên một tờ danh sách đóng gói khác, tờ giấy đã dẫn cả đoàn tìm tới tờ giấy này. Còn cái tên vừa được đọc lên trong bóng tối của kho than — nó nằm đây, bằng mực, trong danh sách những đứa trẻ được \"tiếp nhận\".",
+      "Cao Minh nhìn người thanh niên. Hắn nói thẳng, không vòng vo và không an ủi dối — giọng của một người coi việc nói thật là thứ tôn trọng tối thiểu còn lại dành cho kẻ nằm trong bóng tối.",
+      "Khi đoàn đi qua Thu Nguyệt ở cửa kho, Cao Minh đang bước ra ngoài thì dừng lại đúng nửa bước — vừa đủ để đặt vào tay nàng một nắm tiền, không một lời, không nhìn lại, rồi đi thẳng ra sân như người vừa rảnh tay khỏi một thứ vướng víu. Thu Nguyệt nắm chặt tay lại. Nàng hiểu, và nàng không hỏi. Tiền ấy sẽ thành phần cơm trước mắt cho một người không có tên trong bất cứ quyển sổ nào của bến — một lần, như thời tiết ghé qua, không thành lệ, không ai ghi công.",
+      "Cửa kho khép lại sau lưng đoàn. Trong bóng tối sau vách bao than, tiếng gõ nhịp rất khẽ của một ngón tay lên tấm chiếu còn vọng lại một lúc — rồi tắt, như một ngọn đèn được ai đó nhẹ nhàng che đi chứ không phải thổi tắt."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Phu trưởng bến",
+        "text": "Sổ của ta ghi bốn mươi mốt. Ngươi đếm lại cho ta nghe: ở sân còn bao nhiêu? Lệch một cỗ, cái đầu ngươi đền hay cái lưng ngươi đền?"
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Tôi đếm ba lần. Bốn mươi."
+      },
+      {
+        "speaker": "Phu trưởng bến",
+        "text": "Ba lần mà vẫn sai. Người như ngươi giữ bến này, có ngày —"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Trang trước của quyển sổ ấy, dòng thứ ba từ dưới lên — chủ sổ cộng thừa một cỗ từ hôm qua. Lệch là lệch từ đó. Lật ra mà xem."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "…Theo tôi. Nhanh. Đừng có hỏi gì hết."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Nó là hàng thất lạc. Sổ của tuyến gạch nó ra rồi — ghi là mất hàng, coi như… hàng hỏng. Mất thì không ai đi tìm. Tôi giấu nó ở đây."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Anh cho anh ta ăn bằng gì?"
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Cơm của tôi. Chia đôi. Nó ăn được bao nhiêu thì ăn."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Hồi trước, có chuyến hàng đói. Nó chia cho tôi nửa ổ bánh của nó. Nửa ổ. Tôi nhớ."
+      },
+      {
+        "speaker": "Người bị giấu",
+        "text": "Tôi… tôi khiêng cho tuyến này… hai năm. Quan tài chở ra biển… là một đường. Còn một đường nữa… (gõ) …chở vào trong. Ban đêm. Quan tài nhỏ… nhẹ… (gõ) …là trẻ con, ông ạ. Trẻ con thật. Tôi khiêng một chuyến như vậy… tay tôi biết. Nhẹ mà… nặng lắm."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh còn nhớ gì về chuyến ấy? Chỉ cần điều anh tận tai nghe được thôi."
+      },
+      {
+        "speaker": "Người bị giấu",
+        "text": "Lúc giao ca… người gác đọc nhỏ một cái tên… tên một đứa nhỏ trong quan tài đầu… (gõ) …Lê Văn Tí. Tôi nhớ vì… vì tên nó giống tên em tôi. Người trong các cỗ quan tài… lúc đầu đều tỉnh hết, cô ạ. Về sau… (gõ) …về sau thì tùy đứa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Khớp. Cột đầu, dòng thứ bảy. Lê Văn Tí."
+      },
+      {
+        "speaker": "Người bị giấu",
+        "text": "Ông… ông ơi, tôi xin ông một điều thôi. Đừng… (gõ) …đừng để anh Hòe vì tôi mà chết. Anh ấy giấu tôi… là tôi nợ anh ấy. Ông đừng để món nợ ấy… (gõ) …giết anh ấy."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hôm nay bổn tọa chưa đưa ngươi đi được. Đưa ngươi ra bây giờ là lộ cả ngươi lẫn người giấu ngươi, mà thân ngươi cũng không chịu nổi nắng gió ngoài kia. Ngươi nghe rõ chứ?"
+      },
+      {
+        "speaker": "Người bị giấu",
+        "text": "…Dạ. Tôi nghe rõ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh Hòe. Từ nay, đừng gọi anh ấy là hàng nữa. Gọi bằng tên của anh ấy."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "…Ừ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Đoàn tôi chưa rời bến này đâu. Trước khi rời Vũng Tàu, chúng tôi sẽ quay lại đây. Tôi chỉ nói tới đó thôi — nhưng lời tôi nói ra, tôi giữ."
+      }
+    ],
+    "companions": [
+      "npc_porter"
+    ],
+    "choices": [
+      {
+        "id": "ledger_rush",
+        "text": "Đối chiếu giấy tờ của tuyến ngay chiều nay, khi sổ giao ca còn ở chòi bến.",
+        "next": "vt_ledger",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "flags": {
+          "vtLedgerRush": true
+        }
+      },
+      {
+        "id": "ledger_wait",
+        "text": "Để Bá Hòe yên một đêm — sáng mai hẵng động vào sổ, tránh hắn bị để ý hai lần một ngày.",
+        "next": "vt_ledger",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "flags": {
+          "vtLedgerWait": true
+        }
+      }
+    ]
+  },
+  "vt_ledger": {
+    "id": "vt_ledger",
+    "contentStatus": "approved",
+    "stageId": "vung_tau",
+    "title": "Sổ cước",
+    "backgroundId": "coffin-wharf",
+    "location": "Chòi bến Phúc Thọ — đối chiếu sổ cước",
+    "narration": [
+      {
+        "text": "Sáng hôm sau, sổ giao ca và quyển cước sao vẫn nằm nguyên trong chòi bến. Người của tuyến lẽ ra tới thu sổ từ đêm qua đã không tới — có lẽ bị giữ lại ở đầu kia của tuyến vì chuyện gì đó không ai ở bến này biết. Bá Hòe mở cửa chòi cho đoàn với vẻ mặt của một người vừa được trời cho thêm một ngày: \"Nó còn ở đây. Người thu chưa tới. Xem nhanh đi.\"",
+        "if": "vtLedgerWait"
+      },
+      "Chòi bến là một gian nhà nhỏ bằng gỗ, trong chỉ có một cái bàn, một chồng sổ bọc vải dầu, dăm que tính và một xấp giấy thông hành quan tài đã đóng triện đỏ sẵn. Bá Hòe đứng ở cửa, nửa người trong nửa người ngoài — hắn chỉ cho đoàn xem đúng phần hắn giữ: sổ giao ca của ca hắn, và một quyển cước sao chép tay. Ngoài hai thứ ấy ra, hắn không mở thêm ngăn nào, và không ai trong đoàn đòi mở.",
+      "Hai thứ chữ trên bàn thuộc về hai thế giới. Sổ cước ghi bằng lối ký hiệu thương hồ — chữ tắt, dấu ngắt, con số viết chéo — thứ chữ mà Thu Nguyệt đọc được như người nhà quê đọc đường về nhà. Còn những dòng chữ thường xen giữa — tên người, tuổi, quê quán — là phần của Tiểu Lan. Hai nàng ngồi hai bên chiếc bàn, một người là tay, một người là mắt, và quyển sổ đi qua giữa họ như một con thoi.",
+      "Một cột tiền bỏ trống đều khắp cả quyển sổ, trang nào cũng trống đúng một kiểu như nhau — ở nghề buôn, một sự trống như vậy không phải là sơ ý. Nó là một cái hẹn không được viết ra giấy.",
+      "Cao Minh đặt bản kê của nhà họ Hứa lên bàn — nhưng chỉ mở ở hai cột đầu. Cột thứ ba của bản kê, thứ lối ghi riêng của nhà, nằm ngoài tầm đọc của cả hai nàng: Thu Nguyệt ghé mắt vào một lần, lắc đầu, và không ai cố đọc nó nữa. Những cái tên và tuổi, quê quán ở hai cột đầu lần lượt khớp với các khoản \"hàng nhẹ\" không cước trong sổ cước: trẻ con, từng đứa một. Chúng đi qua bến này bằng giấy tờ như đi qua một trạm thu phí mà không ai phải trả tiền — vì tiền của chúng đã được ghi ở một nơi khác, vào một món nợ khác.",
+      "Cao Minh đứng ở cửa chòi từ đầu tới giờ, tựa lưng vào khung cửa, không chen vào việc đọc sổ — đó là lãnh địa của hai nàng, hắn biết rõ mình là người ngoài. Nhưng hắn đã nghe đủ để tự đếm phần của mình. Muốn chặt đứt cái vòng này ngay chiều nay không khó: khó là ở chỗ, sáng mai thức dậy, người thanh niên sau vách bao than sẽ không còn phần cơm chia đôi, mấy người nằm trong các cỗ quan tài chờ xếp xuống tàu sẽ không còn thuốc — họ sẽ thoát nợ bằng cách chết trước. Thanh kiếm trong tay hắn bỗng thành một thứ đồ rất vụng về.",
+      "Ra sân sau chòi bến là nơi phơi những nắp quan tài rỗng chờ sơn lại. Nắng cuối ngày rọi xiên qua hàng nắp dựng đứng. Thu Nguyệt đi dọc hàng nắp, tay lướt qua từng mép sơn như người kiểm hàng — rồi nàng dừng lại ở một chiếc nắp cũ, sơn đã phai hai lớp.",
+      "Dưới mép sơn của chiếc nắp, có khắc một ký hiệu nhỏ — khắc sâu, đã bị sơn phủ qua ít nhất hai lần mà vẫn còn đọc được nét. Tiểu Lan bước tới. Nàng chưa kịp nghĩ gì thì ngón tay nàng đã tự đi theo đúng đường khắc ấy, từ nét đầu tới nét cuối, không vấp một chỗ nào — như tay người ta đi lại con đường đã đi hàng trăm lần trong bóng tối của một căn phòng cũ. Đó là lối ký hiệu của chính nàng, thứ nàng dùng từ những năm còn ở Tây Viện, khắc lên đồ của mình để biết đâu là của mình trong một nơi mà mọi thứ đều có thể bị lấy đi. Ngón tay nàng biết nó trước cả nàng.",
+      "Cao Minh nhìn nàng một lúc, rồi gật đầu — cái gật đầu của người tôn trọng một quyết định không phải của mình trên đồ vật không phải của mình. Sổ là của nàng, do nàng giấu, do nàng xé; quyền động vào hay không động vào cũng là của nàng.",
+      "Trời sập tối rất nhanh trên cửa biển. Ở phía chòi bến, có một tiếng chuông nhỏ khẽ rung lên — đúng một nhịp thử, ngắn và khô, như ai đó chạm vào dây chuông để kiểm tra xem nó còn ăn hay không. Đoàn người đứng yên trong bóng tối vừa xuống. Đêm nay, bến này sẽ không ngủ yên như mọi đêm."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Phần chữ này là cước thu theo chuyến, cô ạ. Chuyến ra biển tính theo cỗ, chuyến vào trong tính theo… ơ, chuyến vào trong không tính theo cỗ. Nó tính theo đầu người, mà lại không ghi tiền ở cột cước. Để em xem lại… đúng là không ghi. Cột này để trống hết, cả quyển."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Tiền của bến này đi một vòng rồi về đâu? Bổn tọa đứng ngoài nghề, hai nàng cứ nói như nói với người không biết chữ."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ, để em đếm thành tiếng cho dễ. Tiền cước thu vào — vào một quỹ chung của tang quán. Từ quỹ ấy chi ra: tiền thuốc, tiền gạo, tiền người trông kho, tiền dầu đèn cho… cho những người nằm chờ trong kho. Rồi cuối tháng, phần chi ấy lại được ghi ngược vào sổ — ghi vào phần của từng người được nuôi. Tức là tiền nuôi người ta sống, lại thành tiền người ta nợ thêm, thưa ông."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Còn những khoản \"hàng nhẹ\" không cước trong sổ của anh Hòe — Thu Nguyệt, đối chiếu với tờ này."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Đếm xong rồi, thưa ông, thưa cô. Tiền nuôi người bệnh trong kho, tiền thuốc, tiền cơm — tất cả chảy ra từ cùng một quỹ thu tiền cước. Người còn sống ngày nào là ngày ấy còn được nuôi, mà càng được nuôi thì nợ càng dày. Đến lúc tất toán… em chưa thấy trong sổ có một khoản nào được tất toán hết. Không một khoản nào."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Nhà không nuôi người. Nhà nuôi khoản nợ biết thở."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa chém được sổ. Không đọc được sổ."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Cô ơi. Cái này… không phải ký hiệu của tuyến. Em đọc hết sổ cước rồi — ký hiệu tính cước của họ không có nét này. Nó không thuộc về chuyến nào hết."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Cái nắp đó… sơn mấy lần rồi cũng phải chừa ký hiệu đó ra. Người chèo đò trước dặn vậy. Ông ấy đi khỏi tuyến này lâu rồi — mất, hay lìa đi, không ai rõ. Chỉ còn cái dặn đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Mảnh còn lại của cuốn sổ… đang ở đâu đó trên tuyến này. Cái nắp này chỉ là biển chỉ đường thôi. Chưa phải là nó."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Lấy được không?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Lấy được thì tôi đã không đứng yên thế này, thưa ngài. Động vào bây giờ là đốt hết: người đã khắc biển chỉ đường thì đã khuất, còn người đang giữ đường đi thì còn sống. Bàn tay trả tiền của tuyến này ngó bến rất kỹ — hễ có một mắt xích rung lên là nó biết có người đang lần theo. Tôi biết nó ở đâu là đủ cho hôm nay. Biết mà không động vào — cũng là một cách can thiệp, thưa ngài."
+      }
+    ],
+    "companions": [
+      "le_thu_nguyet"
+    ],
+    "choices": [
+      {
+        "id": "rest_evening",
+        "text": "Rời chòi trước khi trời tối hẳn, về chỗ trọ ăn uống và để Tiểu Lan nghỉ — đêm nay chưa biết có chuyện gì.",
+        "next": "vt_first_jamming",
+        "effects": {
+          "lanHealthDelta": 4
+        },
+        "flags": {
+          "vtRestedEvening": true
+        }
+      },
+      {
+        "id": "hear_inspection",
+        "text": "Ở lại quanh bến đến tối, ăn cơm hàng quán để nghe ngóng giờ giấc đổi ca và tin đồn kiểm tra cảng.",
+        "next": "vt_first_jamming",
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanMaterInfluenceDelta": 2
+        },
+        "flags": {
+          "vtHeardInspection": true
+        }
+      }
+    ]
+  },
+  "vt_first_jamming": {
+    "id": "vt_first_jamming",
+    "contentStatus": "approved",
+    "stageId": "vung_tau",
+    "title": "Lệnh trong đêm",
+    "backgroundId": "coffin-wharf",
+    "location": "Bến Phúc Thọ — đêm dọn bến",
+    "narration": [
+      {
+        "text": "Đoàn đã biết trước từ chập tối: mai có kiểm tra cảng. Tin ấy đi từ miệng phu khuân tới tai Thu Nguyệt qua hai bát cơm hàng — viên chức kiểm dịch đã hỏi về những cỗ quan tài \"bất thường\" từ buổi chiều, hỏi rất lịch sự, như người chỉ hỏi cho có. Cho nên khi bến bắt đầu động, đoàn đang ở sẵn trong bóng tối của chòi bến. Biết trước không làm việc ấy bớt lạnh hơn khi nó xảy ra thật.",
+        "if": "vtHeardInspection"
+      },
+      {
+        "text": "Đoàn về trọ chưa được bao lâu thì Thu Nguyệt quay lại, áo còn ướt sương. Nàng nghe được hai việc ở hàng cơm tối: mai có kiểm tra cảng — viên chức kiểm dịch đã hỏi về những cỗ quan tài \"bất thường\" từ buổi chiều — và đêm nay bến sẽ động, phu trưởng đã cho gọi các ca ngủ dậy sớm hơn lệ thường. Không ai bàn lâu. Đoàn quay lại bến trong bóng tối, nấp vào chòi bến còn bỏ trống, vừa kịp lúc tiếng chuông nhỏ đầu tiên rung lên.",
+        "if": "vtRestedEvening"
+      },
+      "Tin kiểm tra tới bến bằng miệng người. Còn lệnh dọn bến tới bằng đường khác: tiếng chuông nhỏ trong chòi rung lên — không thành hồi, chỉ là nhịp, đều và khô. Trạm kho bên bắt lấy nhịp ấy bằng tiếng gõ vào ống đồng, truyền tiếp xuống cầu tàu, nơi ai đó gõ vào mạn thuyền. Không một chữ nào được truyền đi. Chỉ có nhịp.",
+      "Và quanh bến, những người đang ngủ bắt đầu đứng dậy. Họ đứng dậy bằng thân thể trước, bằng ý thức sau: một phu khuân ngồi bật dậy trong khi mắt còn chưa mở hẳn, tay đã tự tìm tới đòn khiêng; một người chèo đò đứng lên giữa bãi, ngơ ngác một lúc mới nhớ ra mình là ai. Không ai gọi ai. Không ai hỏi vì sao. Nhịp đã gọi thay.",
+      "Từ trong bóng tối, đoàn đếm được việc đang chạy — ba việc cùng lúc, như ba sợi dây cùng bị kéo. Việc thứ nhất: các cỗ quan tài \"hàng sống\" ở sân trước được khiêng gấp xuống tàu chờ ngoài lạch, nhanh, im lặng khác hẳn ban ngày. Việc thứ hai do Bá Hòe ghé sát nói khẽ, gấp gáp, trong lúc giả vờ đi kiểm đòn khiêng:",
+      "Việc thứ ba không cần ai nói: ở đầu kia sân, một tốp phu thắp đèn đang đi thành hàng về phía kho than — việc cuối của lệnh dọn bến là lục soát các kho. Người thanh niên sau vách bao than còn cách đoàn người ấy đúng một sân gạch và một cánh cửa gỗ.",
+      "Trong chòi bến, Cao Minh nói kế hoạch của hắn bằng giọng nói chuyện phàm, ngắn gọn như một người thợ nói về cái máy mình sắp tháo:",
+      "Rồi Tiểu Lan bước vào mạng.",
+      "Không có gì để nhìn. Nàng đứng trong bóng tối của chòi, mắt nhắm, và lắng nghe nhịp đang chạy qua người mình như nàng đã nghe nó mười tám năm — rồi nàng chen nhịp của chính mình vào. Đầu tiên, ở tốp phu cầm đèn gần kho than: một người khựng lại giữa bước, cả tốp chững theo; người đi đầu rẽ sang hướng kho dầu thay vì kho than, và cả hàng người — như một thân thể bị gõ lệch một khớp — đi chệch trong sương, mất mấy phút quý báu. Rồi tới đội khiêng quan tài xuống tàu: bước chân họ chậm lại như đi trong nước, đòn khiêng trĩu xuống, một cỗ phải đặt xuống nghỉ giữa cầu tàu.",
+      "Trong chòi, Cao Minh ra tay cùng lúc. Không có ánh sáng rực, không có tiếng nổ. Chỉ có một cái rung nhẹ trong không khí — và tiếng chuông nhỏ trong chòi rung lên đúng nửa nhịp rồi câm hẳn, như một câu nói bị cắt ngang cổ. Hắn thu kiếm ngay, mặt đã quay sang chuyện khác, như người vừa xong một việc vặt.",
+      "Lệnh mất đầu phát, lại bị nhiễu giữa đường — cả bến trượt khỏi tay kẻ ra lệnh lặng lẽ. Tốp phu đi lục kho than, mất nhịp thúc sau lưng, tan hàng giữa sân: người quay về chỗ ngủ, người đứng ngơ nhìn nhau, không ai còn nhớ rõ mình vừa định đi đâu. Các đội khiêng xếp thiếu một cỗ quan tài bị đánh dấu — nó vẫn nằm lẫn trong đống quan tài thường ở góc sân, bị bỏ sót chỉ vì không còn ai ra lệnh nhắc tới nó nữa. Chiếc tàu hàng sống rời bến trong đêm, nhẹ hơn một chuyến.",
+      "Khi mọi thứ yên lại, Thu Nguyệt đưa cho Tiểu Lan một chén nước. Tay nàng không cầm nổi. Chén nước sánh ra, tay nàng run từng đợt như vừa chạm phải nước lạnh buốt xương; Thu Nguyệt phải đỡ cả tay lẫn chén, đưa lên tận miệng cho nàng. Nàng nhắm mắt, nói rất khẽ: mọi người làm ơn nói nhỏ thôi, đầu nàng đang như có ai gõ nhịp ở bên trong.",
+      "Rồi, giữa lúc mọi người tưởng nàng chỉ mệt, nàng mở mắt ra và hỏi Cao Minh một câu — bằng giọng của người hỏi về một việc mình vừa đánh rơi đâu đó rất gần:",
+      "Nàng nhớ mình đã quyết — cái quyết định còn nguyên, chắc như một cái nút đã thắt. Nhưng cuộc trò chuyện vừa diễn ra trong chòi này: lời nàng tự nói ra, lý do của nàng, lời dặn của nàng — đã không còn ở đó nữa, như một căn phòng vừa bị ai dọn trống trong lúc nàng quay lưng.",
+      "Cao Minh kể lại. Hắn kể đều đều, đúng thứ tự, không một lời bình: kế hoạch cắt chuông; câu hỏi hắn đã hỏi; câu nàng đáp về Long Hải và về việc đêm nay không ai đuổi nàng; người trong quan tài ban trưa; đứa nhỏ tên Tí; lời dặn kể lại không thêm không bớt; và cái hẹn chợ cá sáng mai — mua cá khô với muối, tự tay trả tiền. Hắn kể cả lời dặn về việc kể lại, như trả lại một món đồ đánh rơi nguyên vẹn, không giữ lại mảnh nào cho mình.",
+      "Tiểu Lan nghe chuyện của chính mình như nghe chuyện một người khác mà nàng tin là có thật — vì giọng kể ấy không chỗ nào giống bịa. Nhưng tin không phải là nhớ.",
+      "Nàng không nói thêm gì. Nàng lần tìm cuộn chỉ đếm ngày trong tay áo, bằng đôi tay đang run, thắt lên đó một nút khác hẳn mọi nút trước — một nút to, xấu, không thể nhầm với bất cứ ngày thường nào."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Có một cỗ bị đánh dấu riêng. Cỗ của người… người từng cứu thằng chèo đò ở bến này. Đêm nay nó thuộc diện xử lý. Đưa ra khỏi tuyến, không qua sổ, không để lại giấy. Mấy người hiểu chữ \"xử lý\" ở bến này là gì chưa?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Trạm chuông ở chòi này là đầu phát của bến. Bổn tọa cắt điểm nối — một nhát thôi. Chuông câm, lệnh mất đầu, cả bến này sẽ như đàn gà mất tiếng gọi. Nhưng phần máy là phần dễ. Khi nhịp gãy, người bị nó kéo đi sẽ khựng lại giữa chừng — có người hoảng, có người chạy loạn, có người ngã xuống khoang tàu. Giữ cho họ không loạn, chỉ nàng làm được. Và nàng có quyền không làm."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ở Long Hải, tôi đẩy lùi để tự cứu mình. Đêm nay không ai đuổi tôi cả."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Người trong cỗ quan tài ban trưa còn tỉnh, thưa ngài. Anh ta gõ cả buổi chiều để người ta biết mình còn nghe lời. Còn đứa nhỏ tên Tí trong tờ giấy kia — nó đã đi qua bến này trên tay người ta. Tôi không làm việc này vì ngài bảo tôi làm. Tôi làm vì nếu tôi im lặng ngồi yên trong chòi này, tôi sẽ nghe hết — và tôi nghe đủ rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Nhưng tôi dặn ngài một điều trước. Sau việc này, nếu tôi có quên — ngài phải kể lại cho tôi đúng những gì đã nói ở đây. Không thêm một chữ, không bớt một chữ. Cả điều tôi sắp nói thêm đây nữa: sáng mai, khi chợ cá vừa mở, tôi đi cùng Thu Nguyệt ra chợ. Tôi muốn tự tay mua ít cá khô với muối, và tự trả tiền một lần cho đàng hoàng."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ, em nhớ. Chợ mở là em gọi cô."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Được. Bổn tọa kể lại đúng. Không thêm, không bớt."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài… vừa rồi, tôi có nói vì sao tôi làm việc này không?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Nghe như lời của tôi. Mà tôi không nhớ đã nói."
+      }
+    ],
+    "sceneEffects": {
+      "memoryIntegrityDelta": -5
+    },
+    "choices": [
+      {
+        "id": "withdraw_night",
+        "text": "Rút khỏi bến ngay trong đêm, về chỗ trọ trước khi trời sáng — càng ít người thấy đoàn ở bến càng tốt.",
+        "next": "vt_restitution",
+        "effects": {
+          "lanHealthDelta": 3
+        },
+        "flags": {
+          "vtWithdrewNight": true
+        }
+      },
+      {
+        "id": "saw_dawn",
+        "text": "Nán lại tới gần sáng, giả làm người chờ đò sớm — tận mắt xem bến tự giải thích chuyện đêm nay thế nào.",
+        "next": "vt_restitution",
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanHealthDelta": -3
+        },
+        "flags": {
+          "vtSawDawnExcuses": true
+        }
+      }
+    ]
+  },
+  "vt_restitution": {
+    "id": "vt_restitution",
+    "contentStatus": "approved",
+    "stageId": "vung_tau",
+    "title": "Hoàn trả",
+    "backgroundId": "coffin-wharf",
+    "location": "Bến Phúc Thọ — sáng sớm",
+    "narration": [
+      {
+        "text": "Đoàn đã ở lại tới gần sáng, giả làm người chờ đò sớm, và đã tận mắt nghe bến tự kể câu chuyện của nó — một câu chuyện khớp nhau đến từng chữ, kể cả trong miệng những người đêm qua đứng ngơ giữa sân không nhớ mình định đi đâu. Đến khi trời sáng hẳn, câu chuyện ấy đã thành sự thật chính thức của bến.",
+        "if": "vtSawDawnExcuses"
+      },
+      "Sáng sớm, bến quan tài tự bịt mắt mình một cách gọn gàng. Chuông hỏng. Phu say. Sương lạc hướng. Phu trưởng bến là người chọn tin phiên bản ấy to tiếng nhất — vì nó là phiên bản duy nhất mà trong đó hắn không phải trả lời câu hỏi nào. Một phu trẻ buột miệng hỏi sao chuông hỏng mà cả bến lại cùng đứng dậy giữa đêm, bị phu trưởng quát cho một trận trước mặt mọi người — quát to hơn mức cần thiết, như quát cho cả sân nghe. Từ đó không ai hỏi nữa. Một viên chức kiểm dịch người Pháp đi ngang qua sân cùng người thông ngôn, dừng lại đúng một nhịp, hỏi lịch sự về \"những cỗ quan tài đêm qua\"; không ai đáp được gì ngoài chữ chuông hỏng; ông ta ghi một dòng vào cuốn sổ tay nhỏ, gật đầu, và đi tiếp xuống bến dưới. Dòng chữ ấy sẽ đi xa hơn bất cứ ai trong sân này tưởng.",
+      "Điều đáng sợ nhất của buổi sáng ấy là nó bình thường. Bến lại ồn ào như mọi buổi sáng: tiếng rao, tiếng đòn khiêng kẽo kẹt, mùi cá khô và mùi nhang. Mấy người phu đêm qua đứng ngơ giữa sân giờ đang cười nói bên ấm trà, không một ai có vẻ vừa bị một thứ gì đó đi xuyên qua người. Nếu đoàn không tự mình đứng trong chòi bến đêm qua, có lẽ đoàn cũng sẽ tin rằng chẳng có chuyện gì xảy ra ngoài một cái chuông hỏng. Chỉ có một thứ khác mọi ngày: chiếc chuông nhỏ trong chòi đã được tháo xuống đem đi sửa từ sớm tinh mơ — gỡ đi rất kịp lúc, như để không còn vật gì ở bến này có thể gợi lại một câu hỏi nào nữa.",
+      "Người đầu tiên nhận ra cỗ quan tài bị đánh dấu vẫn còn nằm lẫn trong đống quan tài thường ở góc sân — là một người chèo đò.",
+      "Hắn nói ít, và nói như nói về một việc đã quyết từ lâu chứ không phải vừa nảy ra trong buổi sáng này. Hắn không xin đoàn giúp, cũng không nhìn về phía đoàn như chờ một bàn tay nào lớn hơn chìa ra. Hắn chỉ báo cho Bá Hòe — người duy nhất ở bến này hắn nể — rồi quay đi xem lại mái chèo của mình, thử dây, thử nước, như một người thợ chuẩn bị cho một chuyến đò thường.",
+      "Trước khi đi, hắn ra góc sân, tự tay kiểm lại dây buộc của cỗ quan tài bị đánh dấu, ngồi xổm xuống nghe ngóng một lúc lâu bên thành gỗ — như người quen nghe tiếng nước để đoán đường. Rồi hắn đứng dậy, phủi tay, và nói một câu cuối cùng, không nhìn ai:",
+      "Bá Hòe đứng yên một lúc. Rồi hắn làm việc thứ hai trong hai ngày mà cái giá có thể là đầu hắn: hắn lấy từ trong người ra một tờ giấy gấp tư, đưa cho Thu Nguyệt — đưa nhanh, không nhìn quanh, bằng động tác của người vừa trút một vật nóng khỏi tay.",
+      "Tờ giấy mở ra trên tay Thu Nguyệt: một lệnh chi của tang quán, ghi tiền cước và tiền \"chăm sóc\" cho chuyến đêm qua — kể cả phần chuyến đã hỏng. Cuối tờ, dưới triện đỏ của phòng chi tiền, là một hàng chữ viết tay của người duyệt chi. Thu Nguyệt đọc thành tiếng, chậm rãi, và chậm hẳn lại ở hai chỗ.",
+      "Cái tên đến bằng giấy, không ai giới thiệu, không ai giảng giải — một nét chữ viết tay ở cuối một tờ lệnh chi bị giữ lại. Rồi Thu Nguyệt đọc tới danh sách khoản chi, và bàn tay nàng khựng lại ở một dòng gần cuối.",
+      "Cao Minh cầm tờ lệnh chi lên, nhìn hàng chữ viết tay ở cuối một lúc. Hắn đã gặp nhiều thứ trong đời: tông môn ghi tên đệ tử lên bia đá, triều đình ghi tên tội nhân lên chiếu chỉ. Nhưng chưa từng có ai ghi tên hắn và người của hắn vào một quyển sổ bằng cách này — bằng tiền, bằng triện, bằng một hệ thống không cần gặp mặt hắn lần nào.",
+      "Hắn không nói thêm. Hắn gấp tờ lệnh chi lại cẩn thận, đưa trả cho Thu Nguyệt. Nàng cất nó vào tay áo, ngay bên cạnh bản sao danh sách đóng gói của rương thuốc: hai tờ giấy nằm cạnh nhau trong một tay áo — một tờ đã dẫn cả đoàn tìm tới mảnh đầu tiên của cuốn Sổ, và một tờ vừa cho cái vòng tiền trói người này một cái tên."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Anh Hòe. Cỗ đó còn đây. Đêm qua lệnh trật, người ta xếp sót nó."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Tao thấy rồi. Mày đừng có —"
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Người trong cỗ đó, anh biết là ai không. Hồi tôi mới xuống bến này, có lần ghe lật ngoài cửa, tôi uống nước đầy bụng, tay không còn quờ được bờ. Chính anh ấy kéo tôi lên, cởi cái áo khô của anh ấy khoác cho tôi, mình thì ướt hết cả đoạn chèo về. Anh Hòe, tôi chèo hàng cho tuyến này ba năm. Đêm nay tôi chèo một chuyến không có trong sổ: tôi đưa anh ấy ra khỏi tuyến. Đưa về quê anh ấy, chôn cho đàng hoàng như anh ấy từng nói. Người ta đã rỉ tai nhau tôi là đứa buôn xác từ lâu rồi. Kệ họ."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Anh ấy nằm trong đó mà còn tỉnh được hay không, tôi không biết. Nhưng đường về tôi biết. Đêm nay thủy triều lên sớm, đi thuận nước."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Cái này không phải của tôi. Tôi chỉ… giữ hộ từ tối qua. Lệnh chi cho chuyến đêm. Đáng lẽ nó phải đi theo sổ. Tôi giữ lại. Đọc đi, rồi muốn làm gì thì làm — đừng nói là tôi đưa."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Người duyệt chi ký ở cuối… thưa cô, thưa ông. Tên là… Trần Khắc Tín."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Các khoản \"chăm sóc\" này ghi tỉ mỉ lắm, thưa cô: tiền thuốc thang, tiền gạo, tiền dầu đèn cho kho người nằm chờ, tiền người trực đêm… chi nào cũng nhỏ và đều. Còn khoản này… tiền chăm sóc cho một người nằm chờ, ghi đều mỗi tháng. Mà ở cột ghi chú của sổ cước hôm qua, người này… thưa cô, người này đã chết từ năm ngoái rồi. Chết rồi mà tiền vẫn chi đều. Cuối dòng có hai chữ viết tay: \"hoàn trả\"."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Đừng vội kết án người ký, Thu Nguyệt. Có hai cách đọc hai chữ ấy. Một là: có một người đang trả một món nợ không còn người nhận — trả cho một cái tên, vì không trả thì không ngủ được. Hai là: có một người dùng hai chữ \"hoàn trả\" để giữ một khoản chi không bao giờ được phép đóng lại — vì hễ khoản chi còn mở, thì cả dây người quanh nó còn bị buộc vào sổ. Tôi sống trong cả hai thứ ấy đủ lâu để biết: trông chúng giống hệt nhau."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Giết chủ nợ thì dễ. Nợ của người khác vẫn nằm nguyên trong sổ."
+      }
+    ],
+    "companions": [
+      "le_thu_nguyet"
+    ],
+    "link": {
+      "id": "no",
+      "phase": "identified"
+    },
+    "choices": [
+      {
+        "id": "keep_order",
+        "text": "Giữ nguyên bản lệnh chi làm chứng cứ — cất cùng bản sao danh sách đóng gói của Thu Nguyệt.",
+        "next": "vt_hook",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "flags": {
+          "vtKeptOrder": true
+        }
+      },
+      {
+        "id": "copy_order",
+        "text": "Chép lại toàn bộ lệnh chi rồi nhờ Bá Hòe trả bản gốc về chỗ cũ trước giờ điểm danh.",
+        "next": "vt_hook",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "flags": {
+          "vtCopiedOrder": true
+        }
+      }
+    ]
+  },
+  "vt_hook": {
+    "id": "vt_hook",
+    "contentStatus": "approved",
+    "stageId": "vung_tau",
+    "title": "Ghi nợ",
+    "backgroundId": "vung-tau-roadstead",
+    "location": "Chỗ trọ gần bến, Vũng Tàu — buổi sáng",
+    "narration": [
+      "Trở về chỗ trọ, việc đầu tiên đoàn làm là việc phàm nhất: tính tiền. Tiền thuyền của lão ngư ông hai ngày, tiền trọ, tiền cơm nước — Thu Nguyệt đã đếm sẵn trong tay, tính toán như mọi lần. Nhưng chủ trọ xua tay, cười hề hề như người vừa được quý nhân chiếu cố:",
+      "\"Cái này\" là một tờ biên nhận gấp làm ba, giấy tốt, mép cắt ngay ngắn. Người của tang quán tới từ lúc trời chưa sáng rõ, trả tiền không mặc cả, nói năng lịch sự, và đi trước khi bến thức giấc — một bộ máy làm việc không cần ai nhìn thấy nó làm. Lão ngư ông chèo thuyền cho đoàn hai ngày nay cũng vừa ghé trọ, mặt còn ngơ ngác: tiền thuyền của lão cũng đã có người trả trước, trả dư một ít \"để ông cụ uống trà\", như lời người trả dặn lại. Lão chưa từng gặp ân nhân nào chu đáo mà không cần gặp mặt như vậy. Thu Nguyệt đưa tờ giấy cho Tiểu Lan.",
+      "Nàng mở ra đọc. Các khoản tiền được kê rõ ràng, từng món một, dưới một tên người nhận dịch vụ. Cái tên viết đúng từng nét, đầy đủ cả họ: cái tên đã bị nhà họ Hứa xóa khỏi giấy tờ công khai — cái tên mà ở Long Hải, nàng vừa mới được gọi lại bằng tiếng người sau mười một năm. Ở đây, trên giấy của tang quán, nó nằm ngay ngắn như chưa từng bị xóa bao giờ. Dòng ghi chú ở cuối, chữ viết nhỏ và lịch sự đến lạnh người: nhà họ Hứa \"lo liệu cho cô chủ đi đường xa\"; các khoản này sẽ ghi nợ, chờ hoàn trả khi cô chủ về.",
+      "Thu Nguyệt đứng bên cạnh bỗng nhắc một việc rất nhỏ, bằng giọng nhắc việc nhà:",
+      "Tiểu Lan nhìn nàng. Nàng gật đầu — cái gật đầu của người vừa được kể lại đúng từng chữ một việc của chính mình và nhận ra nó khớp hoàn toàn với con người mình, chỉ trừ một điều: nàng không nhớ đã nói. Lỗ hổng của đêm qua không nằm lại ở đêm qua; nó có tên, có chỗ nằm trong ngày hôm nay của nàng, và nàng biết nó nằm ở đâu. Nàng sống chung với nó một cách tỉnh táo, không hoảng, không giấu.",
+      "Cao Minh nhìn tờ biên nhận trên tay nàng. Với hắn, giấy của nhà họ Hứa chỉ là giấy — hắn định xử lý nó theo cách của hắn vẫn xử lý những thứ vô giá trị: cho nó biến mất, như chưa từng tới tay. Hắn vừa đưa tay ra thì Tiểu Lan đã gấp tờ biên nhận lại, bằng đôi tay hôm nay đã hết run, và cất vào người mình.",
+      "Cao Minh nghe hết, và hắn hiểu ra cấu trúc của đòn vừa đánh vào đoàn mình. Ở Long Hải, viên quan của nhà họ Hứa từng ném vào mặt hắn một câu hỏi bằng giấy tờ: ông lấy gì chịu trách nhiệm cho cô ta, ngoài một thanh kiếm? Hắn đã đáp câu hỏi ấy bằng thái độ của mình. Còn bây giờ, có một bàn tay khác — bàn tay không cần gặp hắn, không cần thắng hắn — đang trình diễn thứ \"chịu trách nhiệm\" của riêng nó: nuôi, trả tiền, ghi sổ, chờ hoàn trả. Một thứ trách nhiệm bằng giấy, bọc nhung, và không cần ai đồng ý.",
+      "Cùng lúc ấy, ở đầu kia của bến chính, một việc khác bắt đầu. Những cỗ quan tài nhỏ — nhỏ hơn hẳn quan tài người lớn, nhẹ đến mức hai người khiêng cũng thừa sức — lần lượt được xếp xuống một chiếc tàu đang chờ ở cầu tàu xa. Mỗi cỗ đều có một miếng giấy thông hành mới đóng triện gắn ở đầu nắp, giấy còn thơm mùi hồ. Phu khuân làm việc nhanh và không ai nói chuyện: hàng này, như mọi người ở bến đều tự biết, phải xuống xong trước khi thủy triều rút hết vào đầu giờ chiều. Tiểu Lan nhìn theo hướng tàu: mũi tàu quay về phía cửa sông.",
+      "Người thanh niên sau vách bao than đã nói đúng: tuyến này có lịch trình, và lịch trình ấy không chờ ai. Chiếc tàu kia sẽ nhổ neo trong ngày hôm nay.",
+      "Hai con đường đặt lên bàn cùng một lúc. Một: theo con tàu trẻ con ngay — vào cửa sông, đi sâu vào tuyến trong khi dấu còn nóng, bỏ lại cái vòng nợ vừa chụp xuống đầu đoàn chưa gỡ. Hai: ở lại Vũng Tàu — gỡ cái vòng này trước khi nó thắt lại, đối mặt với bàn tay trả tiền trên đúng sân giấy của nó, và cứu cho trọn những người của bến này trước. Cao Minh không chọn. Hắn quay sang nàng, và hỏi đúng một câu — hỏi như một người đã học được rằng có những câu trả lời không phải của mình:",
+      "Phần truyện khép lại ở đó: quyết định đã có chủ, hành trình chưa bắt đầu."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Chủ trọ",
+        "text": "Khỏi, khỏi cô ơi. Sáng nay trời chưa sáng rõ, người của Phúc Thọ đã tới trả hết rồi — thuyền, trọ, cơm, cả tiền dầu đèn. Họ còn gửi cái này cho cô chủ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ở Long Hải, họ gọi lại tên tôi. Ở đây, họ ghi tên tôi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ngài nghe cho rõ sự khác nhau, thưa ngài. Được gọi tên là có người nhìn vào mặt mình. Bị ghi tên… là có người nhìn vào giá của mình."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Cô ơi, hôm qua cô dặn em: sáng nay chợ cá vừa mở thì cô đi với em ra chợ, mua ít cá khô với muối, cô tự trả tiền một lần cho đàng hoàng. Cô còn nhớ không, để em còn biết đường gọi cô dậy sớm?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Em nhắc đúng đấy. Vậy mà tôi không nhớ đã dặn. Đi, em — chợ mở rồi. Việc tôi đã hẹn thì tôi giữ, dù là tôi nào đã hẹn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Đừng, thưa ngài. Tờ giấy này ghi tên tôi. Nó ở trong tay kẻ khác thì là xiềng. Ở trong tay tôi, nó là chứng cứ đầu tiên của cái vòng này — mà trên chứng cứ ấy, tên bị ghi là tên của chính tôi. Đồ của tôi, tôi giữ."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Cô giữ thì em cũng nói luôn cho hết, để cô liệu: từ nay đoàn mình ăn ở đâu, nghỉ ở đâu, thuê thuyền của ai trong vùng này, người ta cũng sẽ… ghi hết vào đó. Cơm mình ăn đã thành nợ ghi dưới tên cô rồi, cô ạ. Em đếm mà em lạnh cả người."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Kiếm của bổn tọa không biết viết chữ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Hướng ấy là vào cửa sông, thưa ngài. Qua cửa sông là vào sâu đất liền — đường về phía Chợ Lớn, qua vùng sông nước ở giữa. Hàng xếp xuống tàu đi hướng ấy không phải hàng chở ra biển chôn. Đó là hàng đi vào trong tuyến, đi tiếp vào nhà."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng chọn đi. Bổn tọa nghe."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi đã bị người ta chọn đường cho mười tám năm. Đường nào trong hai đường này — theo tàu vào cửa sông, hay ở lại gỡ món nợ vừa ghi dưới tên tôi — từ nay là đường của tôi. Không ai chọn thay tôi nữa. Để tôi chọn."
+      }
+    ],
+    "companions": [
+      "le_thu_nguyet"
+    ],
+    "choices": [],
+    "sliceEnd": true
   }
 });

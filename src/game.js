@@ -256,7 +256,7 @@ export function initGame() {
     state.scene = {
       id: card.id,
       backgroundId: card.backgroundId || "long-hai-exterior",
-      kicker: "HỒI 1 // LONG HẢI // 1899",
+      kicker: { long_hai: "HỒI 1 // LONG HẢI // 1899", vung_tau: "HỒI 2 // VŨNG TÀU // 1899" }[card.stageId] || "HỒI 1 // LONG HẢI // 1899",
       title: card.title,
       narration: (card.narration || []).filter((item) => typeof item === "string" || condVisible(item))
         .map((item) => typeof item === "string" ? item : item.text),

@@ -141,8 +141,9 @@ assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "intervened");
 assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 84);
 assert.equal(game.bridge.getSnapshot().flags.lanDepartureConsent, true);
 assert.equal(game.bridge.getSnapshot().progression.stageId, "vung_tau");
-assert.equal(game.bridge.getSnapshot().scene.choices.length, 0);
-assert.equal(game.bridge.applyScriptChoice(0), false);
+// Hồi 1 khép ở lh_slice_end nhưng mạch truyện đi tiếp xuống Vũng Tàu
+// (phần mở đầu chặng 2, hệ thống 5 agent 2026-11-06): đúng một lựa chọn.
+assert.equal(game.bridge.getSnapshot().scene.choices.length, 1);
 assert.ok(JSON.parse(saves.get(AUTO_SAVE_KEY)).scene.id === "lh_slice_end");
 game.bridge.saveGame();
 const saved = saves.get(MANUAL_SAVE_KEY);
@@ -153,6 +154,21 @@ assert.equal(game.bridge.getSnapshot().scene.id, "lh_slice_end");
 assert.equal(saves.get(MANUAL_SAVE_KEY), saved);
 game.bridge.loadGame();
 assert.equal(game.bridge.getSnapshot().scene.id,"lh_slice_end");
+// Phần mở đầu chặng 2 — Vũng Tàu (hệ thống 5 agent, 2026-11-06): đi tiếp
+// từ lh_slice_end qua 7 cảnh vt_*, khép phần ở vt_hook.
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "vt_arrival");
+assert.equal(game.bridge.getSnapshot().scene.kicker, "HỒI 2 // VŨNG TÀU // 1899");
+for (const expected of ["vt_coffin_wharf", "vt_coal_store", "vt_ledger", "vt_first_jamming", "vt_restitution", "vt_hook"]) {
+  game.bridge.applyScriptChoice(0);
+  assert.equal(game.bridge.getSnapshot().scene.id, expected);
+}
+// Giá của lần gây nhiễu chủ động đầu tiên (hiệu ứng bắt buộc tại
+// vt_first_jamming): 84 − 5 = 79. Mắt xích Nợ nhận diện tại vt_restitution.
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.no, "identified");
+assert.equal(game.bridge.getSnapshot().scene.choices.length, 0);
+assert.equal(game.bridge.applyScriptChoice(0), false);
 // Khôi phục khi khởi động chọn bản MỚI NHẤT theo savedAt (phản biện ChatGPT
 // vòng 1): bản thủ công cũ (lh_gate, t=1000) thua bản tự động mới (lh_saloon, t=2000).
 const olderManual = JSON.parse(saved);
@@ -240,7 +256,8 @@ assert.equal(prologueHash, "b65b94742f93950cea8f8babdad5830eb26b6688d96cc457221b
 // Mật độ: đếm theo đúng công thức của lệnh (narration + dialogue, tách
 // khoảng trắng) trên MỌI tổ hợp flags tới được của từng cảnh.
 const EXCLUSIVE = [["thuNguyetEscorted","thuNguyetSolo"],["councilOath","councilQuiet"],
-  ["boatPromised","boatBought"],["thuNguyetFollows","thuNguyetStays"]];
+  ["boatPromised","boatBought"],["thuNguyetFollows","thuNguyetStays"],
+  ["vtHeardInspection","vtRestedEvening"]];
 function renderedWords(scene, flags) {
   let n = 0;
   const vis = (x) => (!x.if || flags.has(x.if)) && (!x.unless || !flags.has(x.unless));

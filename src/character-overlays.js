@@ -28,6 +28,8 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "le thu nguyet": "le_thu_nguyet",
   "thu nguyet": "le_thu_nguyet",
   "pham dinh nghiem": "pham_dinh_nghiem",
+  "truong ba hoe": "npc_porter",
+  "ta van do": "npc_servant_male",
   "thay thuoc": "npc_doctor",
   "ngu ong": "npc_fisherman",
   "pho kiem": "npc_official",
@@ -107,7 +109,12 @@ const CHARACTER_DISPLAY_NAMES = Object.freeze({
 // không được đi trước văn bản. Điểm phản biện ChatGPT vòng 1, Muse kiểm
 // chứng theo tuyến chính: audit_table ở vị trí 47, lh_nghiem ở 48.
 const SCENE_DISPLAY_NAME_OVERRIDES = Object.freeze({
-  lh_audit_table: Object.freeze({ pham_dinh_nghiem: "Phó kiểm Giới Phòng" })
+  lh_audit_table: Object.freeze({ pham_dinh_nghiem: "Phó kiểm Giới Phòng" }),
+  // Chặng 2: Trương Bá Hòe và Tạ Văn Độ chưa có overlay riêng — dùng mẫu
+  // phu bến/gia nhân nam làm giữ chỗ, bảng tên theo đúng nhân vật của cảnh.
+  vt_coffin_wharf: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  vt_coal_store: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  vt_restitution: Object.freeze({ npc_servant_male: "Tạ Văn Độ" })
 });
 
 export function companionDisplayName(id, scene) {

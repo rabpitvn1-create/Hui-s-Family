@@ -1,4 +1,9 @@
 export const SCENE_BACKGROUNDS = Object.freeze({
+  // Chặng 2 (Vũng Tàu): ảnh riêng chưa sản xuất — tạm dùng ảnh nền hiện có
+  // gần nhất làm giữ chỗ, thay khi có ảnh của tuyến Phúc Thọ.
+  "vung-tau-roadstead": "assets/snapshots/long-hai-coast.webp",
+  "coffin-wharf": "assets/snapshots/long-hai-exterior.webp",
+  "coal-store": "assets/snapshots/medicine-store.webp",
   "long-hai-exterior": "assets/snapshots/long-hai-exterior.webp",
   "long-hai-corridor": "assets/snapshots/long-hai-corridor.webp",
   "tieu-lan-room": "assets/snapshots/tieu-lan-room.webp",
