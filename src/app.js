@@ -1,6 +1,5 @@
 import { initMissionInterface } from "./ui-shell.js";
 import { initGame } from "./game.js";
-import { initAiGameMaster } from "./ai-game-master.js";
 import { initDialogueAvatars } from "./dialogue-avatars.js";
 import { initCharacterSnapshot } from "./character-snapshot.js";
 import { initGameStart } from "./game-start.js";
@@ -10,5 +9,5 @@ initGameStart(() => {
   initDialogueAvatars();
   initCharacterSnapshot();
   const bridge = initGame();
-  if (bridge) initAiGameMaster(bridge);
+  // AI-GM intentionally disabled: VN choices are played by initGame().
 });
