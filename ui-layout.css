@@ -579,29 +579,37 @@ body.stage-entity-on #stage-entity {
   visibility: visible;
 }
 
-/* Nhân vật phụ (lệnh chủ nhân 2026-11-06): đứng giữa khung, thấp hơn Tiểu
-   Lan một bậc và ở lớp sau cô; JS gắn .stage-companion-on khi scene có
-   nhân vật phụ xuất hiện. Encounter active thì ẩn như Tiểu Lan. */
+/* Nhân vật phụ (lệnh chủ nhân 2026-11-06, hiệu chỉnh sau chơi thử cùng
+   ngày): NPC đứng ĐÚNG VỊ TRÍ CỦA ENTITY (ô trái, bottom 0, cao 92%) và
+   kích cỡ cùng tầm với Cao Minh — không đứng giữa khung, không thấp hơn.
+   Khi Tiểu Lan cũng đang hiện ở ô trái, JS gắn .stage-companion-shifted:
+   nhân vật phụ lùi sang vị trí thứ hai nhưng GIỮ NGUYÊN chiều cao 92%.
+   Encounter active thì ẩn như Tiểu Lan. */
 #stage-companion {
   position: absolute;
   bottom: 0;
-  left: 23%;
-  z-index: 1;
+  left: 0;
+  z-index: 2;
   display: block;
-  height: 82%;
-  max-width: 40%;
+  height: 92%;
+  max-width: 55%;
   object-fit: contain;
   border: 0;
   background: transparent;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 600ms ease, visibility 600ms ease;
+  transition: opacity 600ms ease, visibility 600ms ease, left 600ms ease;
 }
 
 #stage-companion.stage-companion-on {
   opacity: 1;
   visibility: visible;
+}
+
+#stage-companion.stage-companion-shifted {
+  left: 25%;
+  z-index: 1;
 }
 
 /* Khung bọc nhân vật chính: giữ đúng vị trí/kích thước overlay cũ,

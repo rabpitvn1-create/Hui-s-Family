@@ -262,11 +262,14 @@ export function initMissionInterface() {
     // Tiểu Lan hiện bên trái Snapshot suốt cảnh có thoại của cô, fade out ở
     // cảnh đầu tiên không còn thoại của cô. Encounter active thì Entity
     // chiếm ô trái, cô không hiện.
-    stageTieuLan?.classList.toggle("stage-lan-on", !active && isTieuLanSpeaking(snapshot));
+    const lanOn = !active && isTieuLanSpeaking(snapshot);
+    stageTieuLan?.classList.toggle("stage-lan-on", lanOn);
 
     // Nhân vật phụ: hiện khi scene khai báo companions hoặc có thoại của
-    // nhân vật có tên (xem character-overlays.js). Encounter active thì
-    // Entity chiếm khung, nhân vật phụ không hiện — cùng luật với Tiểu Lan.
+    // nhân vật có tên (xem character-overlays.js). NPC đứng đúng ô trái
+    // của Entity với cùng chiều cao; nếu Tiểu Lan cũng đang hiện ở ô trái
+    // thì NPC lùi sang vị trí thứ hai (.stage-companion-shifted) nhưng giữ
+    // nguyên kích cỡ. Encounter active thì ẩn — cùng luật với Tiểu Lan.
     const companionId = active ? null : resolveCompanionId(snapshot?.scene);
     const companionSrc = companionId ? CHARACTER_OVERLAYS[companionId] : "";
     if (stageCompanion) {
@@ -274,6 +277,7 @@ export function initMissionInterface() {
         stageCompanion.setAttribute("src", companionSrc);
       }
       stageCompanion.classList.toggle("stage-companion-on", Boolean(companionSrc));
+      stageCompanion.classList.toggle("stage-companion-shifted", Boolean(companionSrc) && lanOn);
     }
 
     const pose = active ? POSE_ENCOUNTER : POSE_EXPLORE;
