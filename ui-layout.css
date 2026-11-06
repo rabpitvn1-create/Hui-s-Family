@@ -586,11 +586,13 @@ body.stage-entity-on #stage-entity {
 
 /* Song kiếm LƠ LỬNG cố định hai bên nhân vật (lệnh chủ nhân: không xoay nữa):
    mỗi thanh đậu ở một bên thân Cao Minh, chỉ nhấp nhô nhẹ lên/xuống và lắc rất
-   khẽ, hai thanh lệch nhịp (4.6s / 5.3s) để không lên xuống đồng bộ như máy. */
+   khẽ, hai thanh lệch nhịp (4.6s / 5.3s) để không lên xuống đồng bộ như máy.
+   Lớp kiếm nằm SAU nhân vật (z-index 1 < #stage-character z-index 2) theo
+   lệnh chủ nhân 2026-11-06: kiếm lấp sau thân Cao Minh, không đè lên người. */
 .stage-sword {
   position: absolute;
   inset: 0;
-  z-index: 4;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
