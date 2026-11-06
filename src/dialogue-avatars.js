@@ -8,6 +8,7 @@ function overlayCropAvatar(id, alt) {
 }
 
 const huaServantAvatar = overlayCropAvatar("npc_servant_female", "Gia nhân Hứa Gia");
+const elderMaleAvatar = overlayCropAvatar("npc_servant_elder_male", "Lão bộc nam");
 
 const caoMinhAvatar = Object.freeze({
   src: "assets/avatars/main-avatar.jpg",
@@ -44,7 +45,13 @@ const avatarBySpeaker = Object.freeze({
   "người ở hứa gia": huaServantAvatar,
   "người làm hứa gia": huaServantAvatar,
   "đầy tớ hứa gia": huaServantAvatar,
-  "quản gia hứa gia": huaServantAvatar
+  "quản gia": elderMaleAvatar,
+  "quản gia hứa gia": elderMaleAvatar,
+  "lão bộc": elderMaleAvatar,
+  "quản kho": elderMaleAvatar,
+  "ông tư": elderMaleAvatar,
+  "ông sáu": elderMaleAvatar,
+  "lão thư ký": elderMaleAvatar
 });
 
 const genericServantLabels = Object.freeze([
@@ -55,7 +62,6 @@ const genericServantLabels = Object.freeze([
   "đầy tớ",
   "a hoàn",
   "hầu gái",
-  "quản gia",
   "phu bếp",
   "phu xe"
 ]);

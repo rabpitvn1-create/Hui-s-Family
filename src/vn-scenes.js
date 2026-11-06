@@ -120,7 +120,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Phòng khách của biệt thự bày biện theo lối các nhà giàu Nam Kỳ vẫn chuộng: cột lim đen bóng, tràng kỷ chạm rồng, trên tường treo cặp câu đối sơn son và một bức tranh thủy mặc đã ngả màu. Mọi thứ đều đắt tiền, và mọi thứ đều nằm đúng chỗ của nó — đúng đến mức căn phòng giống một bức ảnh hơn là một nơi có người ở.",
@@ -756,6 +756,9 @@ export const VN_SCENES = Object.freeze({
           "cluesHuaGiaDelta": 1
         }
       }
+    ],
+    "companions": [
+      "npc_servant_elder_male"
     ]
   },
   "lh_doctor_visit": {
@@ -766,7 +769,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Sáng hôm sau, biệt thự Hứa Gia lại khoác lên vẻ bình thường của nó như người ta khoác áo đi lễ. Một chiếc xe ngựa dừng ở cổng trước giờ Tỵ; quản gia đích thân ra đón, gia nhân đứng hai hàng cúi chào. Vị khách được đón trọng thể ấy là thầy thuốc của nhà này — người mà mỗi kỳ lại tới một lần, để làm một việc duy nhất: ký tên vào tờ giấy chứng bệnh của vị tiểu thư trong gian phòng trong cùng.",
@@ -836,7 +839,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "medicine-store",
     "location": "Kho thuốc biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Sáng hôm sau, Cao Minh nói với quản gia rằng hắn muốn xem thang thuốc mà vị tiểu thư trong nhà đang dùng. Quản gia ngần ngừ đúng một nhịp, rồi cười xởi lởi dẫn đường. Căn nhà này có một bài bản ứng khách rất giỏi: bất cứ chỗ nào khách đòi xem, nó đều có sẵn một bộ mặt sạch sẽ để đưa ra xem. Kho thuốc nằm ở dãy nhà ngang phía đông, cửa gỗ lim khóa hai lớp, chìa khóa đeo ở thắt lưng một ông lão quản kho đã ngoài bảy mươi.",
@@ -970,7 +973,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "register-room",
     "location": "Gian lưu trữ gia phả, biệt thự Hứa Gia",
     "companions": [
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Gian lưu trữ nằm kề bên từ đường, là căn phòng khô nhất của biệt thự: nền lát gạch cao, bốn phía là tủ gỗ đóng kín, trong không khí có mùi long não và giấy cũ. Muốn vào đây phải qua quản gia, mà quản gia thì chỉ đồng ý sau khi Cao Minh nói một câu rất nhẹ: hắn là khách của phủ, muốn thắp cho tổ tiên Hứa Gia một nén nhang và xem qua gia phả để biết mà xưng hô cho phải phép. Bài bản lễ nghĩa là thứ căn nhà này không từ chối được, vì chính nó sống bằng bài bản.",
@@ -1172,7 +1175,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-corridor",
     "location": "Gian nhà ngang phía sau biệt thự Hứa Gia",
     "companions": [
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Ở gian nhà ngang phía sau, nơi gia nhân già yếu được cho ở lại dưỡng già thay vì bị trả về quê, có một ông lão ngoài tám mươi mà cả nhà gọi là ông Sáu. Ông vào làm cho họ Hứa từ năm mười bốn tuổi, chèo đò, gánh nước, rồi giữ ngựa, rồi chẳng giữ gì nữa ngoài trí nhớ. Người trong nhà nói ông lẩm cẩm. Nhưng khi Cao Minh ngồi xuống bên chiếc chõng tre của ông, đôi mắt đục của ông nhìn hắn một lúc, rồi sáng lên cái sáng của người chờ câu hỏi này đã rất lâu.",
@@ -1339,8 +1342,7 @@ export const VN_SCENES = Object.freeze({
         "text": "Chặn nàng lại trước cửa từ đường, chấp nhận giật nàng ra khỏi mệnh lệnh giữa chừng.",
         "next": "lh_altar",
         "effects": {
-          "lanMaterInfluenceDelta": -3,
-          "memoryIntegrityDelta": -2
+          "lanMaterInfluenceDelta": -3
         }
       }
     ]
@@ -1393,9 +1395,7 @@ export const VN_SCENES = Object.freeze({
         "id": "incense_properly",
         "text": "Thắp nhang đủ lễ cho cả ô trống, không nói thêm lời nào.",
         "next": "lh_thu_nguyet_errand",
-        "effects": {
-          "lanMaterInfluenceDelta": -1
-        }
+        "effects": {}
       },
       {
         "id": "ask_missing_tablet",
@@ -1846,7 +1846,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Sáng hôm sau — ngày thứ hai trong ba ngày đếm ngược — một trát chính thức được đưa tới biệt thự, đóng dấu đỏ của Giới Phòng. Không phải thư của Bổn Hoả. Đây là trát kiểm tra định kỳ của phòng giữ sổ sách Lục Môn: ngày mai, một đoàn kiểm tra sẽ tới biệt thự Long Hải, đối chiếu gia phả, kiểm kê rương thuốc và hồ sơ, và — theo đúng nguyên văn của trát — xác minh tình trạng của người bệnh đang dưỡng tại biệt thự, để sổ sách của phủ được khép lại cho khớp. Cao Minh đọc trát mà thấy rõ chữ ký vô hình của bộ máy: đêm rằm đón người đi là việc của phủ; ngày mai kiểm tra là việc của Giới Phòng. Hai bàn tay của cùng một thân thể, một tay thu hồi, một tay nghiệm thu.",
@@ -1888,9 +1888,7 @@ export const VN_SCENES = Object.freeze({
         "id": "watch_from_outside",
         "text": "Rút về vai khách ngoài, quan sát đoàn kiểm tra từ xa mà không ló mặt.",
         "next": "lh_eve_inspection",
-        "effects": {
-          "lanMaterInfluenceDelta": -1
-        }
+        "effects": {}
       }
     ]
   },
@@ -1902,7 +1900,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Đêm trước ngày kiểm tra, biệt thự Long Hải không ngủ. Nó tập diễn. Cao Minh đứng trong bóng tối của hành lang nhìn vào phòng khách sáng đèn, và chứng kiến một trong những cảnh rợn người nhất kể từ khi hắn đặt chân tới thời đại này: toàn bộ gia nhân của căn nhà, dưới sự điều khiển của quản gia, đang tập làm một gia đình bình thường. Một bàn tiệc được bày ra đầy đủ như có khách quý. Gia nhân ngồi vào các vị trí không phải của mình — người đóng vai quản gia tiếp khách, người đóng vai bà chủ nhà, có cả một cô hầu được chọn đóng vai người nhà ra đón đoàn kiểm tra — và họ tập cười, tập nói, tập rót trà, từng động tác một, lặp đi lặp lại.",
@@ -2000,7 +1998,6 @@ export const VN_SCENES = Object.freeze({
         "text": "Ở lại thêm một lúc, chờ cô hầu hết run rồi mới xuống — để căn nhà thấy rằng người của nó không bị bỏ mặc.",
         "next": "lh_poison_tea",
         "effects": {
-          "lanTrustDelta": 2,
           "cluesHuaGiaDelta": 1
         }
       },
@@ -2063,7 +2060,6 @@ export const VN_SCENES = Object.freeze({
         "text": "Không cho quản gia đưa cô hầu đi 'dạy lại' — giữ cô ở lại gian ngoài, dưới mắt mình.",
         "next": "lh_corridor_fight",
         "effects": {
-          "lanTrustDelta": 2,
           "civiliansSavedDelta": 1
         }
       },
@@ -2239,7 +2235,6 @@ export const VN_SCENES = Object.freeze({
     "id": "lh_lan_pushback_big",
     "contentStatus": "approved",
     "stageId": "long_hai",
-    "objective": "break_long_hai_ritual",
     "title": "Một giờ tự do",
     "backgroundId": "long-hai-corridor",
     "location": "Hành lang và sân trong, biệt thự Long Hải",
@@ -2276,7 +2271,6 @@ export const VN_SCENES = Object.freeze({
         "text": "Kể lại ngay trong đêm — từ Vạn Hoa Lầu, từ lần bắt mạch đầu tiên, không giấu nàng điều gì, kể cả việc nàng vừa quên.",
         "next": "lh_retelling",
         "effects": {
-          "memoryIntegrityDelta": -3,
           "lanHealthDelta": -2,
           "lanMaterInfluenceDelta": 6,
           "lanTrustDelta": 3
@@ -2287,13 +2281,15 @@ export const VN_SCENES = Object.freeze({
         "text": "Để nàng ngủ yên một đêm trước đã; lời kể có thể chờ đến sáng, sức nàng thì không.",
         "next": "lh_retelling",
         "effects": {
-          "memoryIntegrityDelta": -3,
           "lanHealthDelta": -2,
           "lanMaterInfluenceDelta": 6,
           "lanTrustDelta": 1
         }
       }
-    ]
+    ],
+    "sceneEffects": {
+      "memoryIntegrityDelta": -8
+    }
   },
   "lh_retelling": {
     "id": "lh_retelling",
@@ -2454,8 +2450,7 @@ export const VN_SCENES = Object.freeze({
         "text": "Ngồi lại ăn bữa trưa cùng đám gia nhân khu bếp — bữa ăn đầu tiên trong nhà này mà mọi người được tự gắp cho mình.",
         "next": "lh_storm",
         "effects": {
-          "civiliansSavedDelta": 2,
-          "lanTrustDelta": 2
+          "civiliansSavedDelta": 2
         }
       },
       {
@@ -2463,7 +2458,7 @@ export const VN_SCENES = Object.freeze({
         "text": "Lên gian trong ngay, kể cho Tiểu Lan nghe khu bếp đã tự do — nàng cần biết mỗi chiến thắng nhỏ này, bằng lời kể rõ ràng.",
         "next": "lh_storm",
         "effects": {
-          "lanTrustDelta": 3,
+          "lanTrustDelta": 1,
           "cluesHuaGiaDelta": 1
         }
       }
@@ -2618,8 +2613,7 @@ export const VN_SCENES = Object.freeze({
         "text": "Không chữa lành vết thương ngay — để cả nhà nhìn thấy nó suốt mấy ngày, như một lời nhắc không cần nói thành lời.",
         "next": "lh_ba_confession",
         "effects": {
-          "partyHealthDelta": -3,
-          "lanTrustDelta": 3
+          "partyHealthDelta": -3
         }
       },
       {
@@ -2959,7 +2953,6 @@ export const VN_SCENES = Object.freeze({
         "text": "Trước mặt những gia nhân đang có mặt, gọi Thới bằng tên đầy đủ và cảm ơn anh ta như một người ngang hàng — để cả nhà cùng nghe thấy lòng can đảm có tên gọi là gì.",
         "next": "lh_audit_table",
         "effects": {
-          "lanTrustDelta": 2,
           "civiliansSavedDelta": 1
         }
       },
@@ -2982,7 +2975,7 @@ export const VN_SCENES = Object.freeze({
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
       "pham_dinh_nghiem",
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Sau đợt lục soát đầu tiên, phòng khách của biệt thự bị trưng dụng thành một văn phòng. Chiếc bàn dài giữa phòng — nơi hôm qua còn bày khay trà tiếp khách — nay chất đầy giấy tờ: từng xấp hồ sơ buộc dây gai, từng cuốn sổ gáy bọc vải xanh, con dấu gỗ của Giới Phòng đặt trên một miếng lót đỏ, và bên cạnh nó, một trát lệnh còn nguyên triện son của Hứa Bổn Hoả, người chủ nhà mà Cao Minh chưa từng gặp mặt, chỉ mới thấy quyền lực của ông ta qua những tờ giấy đi trước ông ta khắp nơi.",
@@ -3118,7 +3111,7 @@ export const VN_SCENES = Object.freeze({
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
       "pham_dinh_nghiem",
-      "npc_servant_elder"
+      "npc_doctor"
     ],
     "link": {
       "id": "danh",
@@ -3270,7 +3263,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-corridor",
     "location": "Hành lang biệt thự Hứa Gia, Long Hải",
     "companions": [
-      "npc_servant_elder"
+      "npc_servant_elder_male"
     ],
     "narration": [
       "Buổi kiểm tra chưa kịp tan thì lệnh mới đã tới. Một người đưa tin của Giới Phòng phóng ngựa từ đường cái quan vào sân, áo đẫm mồ hôi, tay giữ một ống tre đựng công văn dán kín hai đầu bằng sáp đỏ. Quản gia đón lấy bằng cả hai tay, đưa thẳng vào phòng khách không dám mở. Nghiêm tự tay bẻ sáp, rút ra một tờ lệnh ngắn — ngắn hơn mọi tờ giấy khác trong buổi hôm nay, và nặng hơn tất cả. Ông ta đọc một lượt, gấp lại, rồi tuyên bố bằng giọng điểm việc thường ngày: lệnh của ông chủ, hạn trăng rằm cũ bãi bỏ. Việc chuyển đi làm ngay đêm nay.",
@@ -3986,8 +3979,7 @@ export const VN_SCENES = Object.freeze({
         "text": "«Ngủ một giấc ngắn đi. Tới giờ, bổn tọa sẽ gọi nàng dậy — gọi bằng tên của nàng.»",
         "next": "lh_escape_begins",
         "effects": {
-          "lanTrustDelta": 2,
-          "memoryIntegrityDelta": 1
+          "lanTrustDelta": 2
         }
       }
     ]
@@ -4049,8 +4041,7 @@ export const VN_SCENES = Object.freeze({
         },
         "flags": {
           "lanDepartureConsent": true
-        },
-        "objective": "escape_long_hai"
+        }
       },
       {
         "id": "carry_her",
@@ -4184,7 +4175,8 @@ export const VN_SCENES = Object.freeze({
           "lanHealthDelta": -2
         }
       }
-    ]
+    ],
+    "objective": "break_long_hai_ritual"
   },
   "lh_wrong_order": {
     "id": "lh_wrong_order",
@@ -4229,6 +4221,9 @@ export const VN_SCENES = Object.freeze({
         "effects": {
           "memoryIntegrityDelta": -3,
           "lanHealthDelta": -3
+        },
+        "flags": {
+          "gateRescueDone": true
         }
       },
       {
@@ -4332,11 +4327,10 @@ export const VN_SCENES = Object.freeze({
         "id": "casuarina_grove",
         "text": "Lánh vào rặng phi lao — chậm hơn, nhưng sương và bóng cây che đi sợi chỉ truy đuổi.",
         "next": "lh_road_choice",
-        "effects": {
-          "lanMaterInfluenceDelta": -3
-        }
+        "effects": {}
       }
-    ]
+    ],
+    "objective": "escape_long_hai"
   },
   "lh_road_choice": {
     "id": "lh_road_choice",
@@ -4441,7 +4435,6 @@ export const VN_SCENES = Object.freeze({
         "text": "Nói thật ngay tại đây: đêm nay đã xảy ra những gì, và chính nàng là người đã chọn tất cả.",
         "next": "lh_names_price",
         "effects": {
-          "memoryIntegrityDelta": -8,
           "lanTrustDelta": 1
         }
       },
@@ -4450,11 +4443,13 @@ export const VN_SCENES = Object.freeze({
         "text": "Đỡ nàng ngồi xuống nghỉ một nhịp trước — sự thật có thể chờ, người thì không.",
         "next": "lh_names_price",
         "effects": {
-          "memoryIntegrityDelta": -8,
           "lanHealthDelta": -2
         }
       }
-    ]
+    ],
+    "sceneEffects": {
+      "memoryIntegrityDelta": -8
+    }
   },
   "lh_names_price": {
     "id": "lh_names_price",
@@ -4510,7 +4505,6 @@ export const VN_SCENES = Object.freeze({
         "text": "Hứa với ngư ông: những cái tên còn thiếu, một ngày hắn sẽ biết đủ — và sẽ có người làm chứng cho họ.",
         "next": "lh_open_road",
         "effects": {
-          "lanMaterInfluenceDelta": -1,
           "civiliansSavedDelta": 1
         }
       }
@@ -4644,7 +4638,7 @@ export const VN_SCENES = Object.freeze({
     "location": "Trên thuyền, mặt nước buổi sớm — ngoài tầm điểm neo của biệt thự",
     "link": {
       "id": "danh",
-      "phase": "severed"
+      "phase": "intervened"
     },
     "narration": [
       "Mặt trời đã lên trọn vẹn khỏi mặt biển. Ánh nắng đầu ngày rải xuống mặt nước lặng một lớp vàng mỏng, và chiếc thuyền gỗ của lão ngư ông trôi chậm trong cái sáng trong trẻo ấy, như thể cả một đêm dài vừa qua chỉ là một giấc mơ mà ba người trên thuyền cùng mơ chung. Bờ Long Hải đã ở xa sau lưng — xa ngoài tầm của mọi điểm neo, mọi sợi chỉ, mọi tờ giấy của tòa nhà kia.",

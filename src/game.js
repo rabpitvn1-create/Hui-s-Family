@@ -125,6 +125,11 @@ function normalizeState(rawState) {
     vnCheckpoint: candidate.vnCheckpoint && typeof candidate.vnCheckpoint === "object" ? candidate.vnCheckpoint : null
   };
 
+  // Cặp flags loại trừ lẫn nhau không bao giờ cùng đúng sau load: lựa chọn
+  // đặt ra sau trong mạch thắng (đợt sửa lỗi toàn diện 2026-11-06).
+  if (state.flags.thuNguyetFollows && state.flags.thuNguyetStays) state.flags.thuNguyetStays = false;
+  if (state.flags.thuNguyetEscorted && state.flags.thuNguyetSolo) state.flags.thuNguyetSolo = false;
+
   state.scene.narration = Array.isArray(state.scene.narration)
     ? state.scene.narration.map((item) => cleanText(item, 2800)).filter(Boolean).slice(0, 12)
     : base.scene.narration;
@@ -221,17 +226,36 @@ export function initGame() {
   function presentScene(sceneId) {
     const card = VN_SCENES[sceneId];
     if (!card) throw new Error("Scene viết sẵn chưa tồn tại: " + sceneId);
+    // Văn bản có điều kiện theo flags (đợt sửa lỗi toàn diện 2026-11-06):
+    // đoạn narration/dialogue mang { if } chỉ hiện khi flag đúng, { unless }
+    // hiện khi flag không đúng; thiếu flags luôn rơi về văn bản mặc định.
+    const flagOn = (key) => state.flags?.[key] === true;
+    const condVisible = (item) => (!item.if || flagOn(item.if)) && (!item.unless || !flagOn(item.unless));
     state.scene = {
       id: card.id,
       backgroundId: card.backgroundId || "long-hai-exterior",
       kicker: "HỒI 1 // LONG HẢI // 1899",
       title: card.title,
-      narration: [...(card.narration || [])],
-      dialogue: [...(card.dialogue || [])],
+      narration: (card.narration || []).filter((item) => typeof item === "string" || condVisible(item))
+        .map((item) => typeof item === "string" ? item : item.text),
+      dialogue: (card.dialogue || []).filter((line) => condVisible(line))
+        .map((line) => ({ speaker: line.speaker, text: line.text })),
       companions: [...(card.companions || [])],
       entity: card.entity || false,
       choices: (card.choices || []).map((item) => item.text)
     };
+    // Hiệu ứng bắt buộc tại cảnh: áp đúng MỘT lần cho mỗi lượt chơi, kể cả
+    // khi load save tại cảnh đó hay retry dead end quay lại (dấu đã áp được
+    // lưu trong flags.vnSceneEffects và đi cùng save/checkpoint).
+    if (card.sceneEffects) {
+      const applied = state.flags.vnSceneEffects || {};
+      if (!applied[card.id]) {
+        const previousProgression = state.progression;
+        applyCampaignEffects(card.sceneEffects);
+        state.flags.vnSceneEffects = { ...applied, [card.id]: true };
+        updateDerivedCampaignStats(previousProgression);
+      }
+    }
     applyLinkMilestone(card.link);
     state.currentLocation = card.location || (card.backgroundId === "tieu-lan-room"
       ? "Phòng Hứa Tiểu Lan, biệt thự Long Hải" : "Biệt thự Hứa Gia, Long Hải");

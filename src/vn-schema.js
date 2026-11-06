@@ -23,10 +23,21 @@ export function validateVnScenes(scenes, startId) {
     if (scene?.contentStatus !== "placeholder" && scene?.contentStatus !== "approved")
       errors.push(key + ": contentStatus must be placeholder or approved");
     if (typeof scene?.backgroundId !== "string") errors.push(key + ": backgroundId required");
-    if (!Array.isArray(scene?.narration) || !scene.narration.every(x=>typeof x==="string"))
+    const condOk = (x) => (x?.if === undefined || (typeof x.if === "string" && x.if))
+      && (x?.unless === undefined || (typeof x.unless === "string" && x.unless));
+    if (!Array.isArray(scene?.narration) || !scene.narration.every(x=>typeof x==="string" || (typeof x?.text==="string" && condOk(x))))
       errors.push(key + ": narration must be string array");
-    if (!Array.isArray(scene?.dialogue) || !scene.dialogue.every(x=>typeof x?.speaker==="string" && typeof x?.text==="string"))
+    if (!Array.isArray(scene?.dialogue) || !scene.dialogue.every(x=>typeof x?.speaker==="string" && typeof x?.text==="string" && condOk(x)))
       errors.push(key + ": dialogue must be speaker/text array");
+    if (scene?.sceneEffects !== undefined) {
+      if (typeof scene.sceneEffects !== "object" || scene.sceneEffects === null || Array.isArray(scene.sceneEffects))
+        errors.push(key + ": sceneEffects must be an object");
+      else for (const [effect,amount] of Object.entries(scene.sceneEffects)) {
+        const range = VN_EFFECT_LIMITS[effect];
+        if (!range || !Number.isInteger(amount) || amount<range[0] || amount>range[1])
+          errors.push(key + ": invalid sceneEffect " + effect);
+      }
+    }
     if (!Array.isArray(scene?.choices) || scene.choices.length > 3) errors.push(key + ": choices must contain <=3 options");
     if (scene?.companions !== undefined
       && (!Array.isArray(scene.companions) || scene.companions.length > 2

@@ -65,7 +65,12 @@ for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_gard
   assert.equal(game.bridge.getSnapshot().scene.id, expected);
 }
 assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "intervened");
-assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 4);
+// Đợt sửa 2026-11-06 (P0-06/P0-08): tại lh_escape_begins mới xong 3 mục
+// tiêu — break_long_hai_ritual chỉ hoàn thành khi cụm khóa cổng bị vô hiệu
+// thật ở lh_gate_hold, escape_long_hai khi đoàn đã ra tới lh_coast_road.
+// Hiệu ứng bắt buộc tại cảnh lh_lan_pushback_big đã trừ ký ức đúng một lần.
+assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 3);
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 92);
 // Dead end đồng thuận rẽ từ lh_escape_begins: bế nàng đi không hỏi.
 const beforeDead = structuredClone(game.bridge.getSnapshot());
 game.bridge.applyScriptChoice(1);
@@ -74,16 +79,27 @@ game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_escape_begins");
 assert.deepEqual(game.bridge.getSnapshot().campaignStats, beforeDead.campaignStats);
 // Hỏi nàng (ask_her) rồi đánh ra cổng, khép chặng ở lh_slice_end.
-for (const expected of ["lh_gate_fight", "lh_gate_hold", "lh_coast_road", "lh_road_choice", "lh_last_pushback", "lh_names_price", "lh_open_road", "lh_dawn_after", "lh_names_restored", "lh_slice_end"]) {
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_gate_fight");
+// Tại trận cổng, cả hai mục tiêu cuối vẫn chưa hoàn thành.
+assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 3);
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_gate_hold");
+assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes("break_long_hai_ritual"), true);
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_coast_road");
+for (const expected of ["lh_road_choice", "lh_last_pushback", "lh_names_price", "lh_open_road", "lh_dawn_after", "lh_names_restored", "lh_slice_end"]) {
   game.bridge.applyScriptChoice(0);
   assert.equal(game.bridge.getSnapshot().scene.id, expected);
 }
-// ask_her hoàn thành mục tiêu thứ 5 (escape_long_hai) → engine lật chặng:
+// escape_long_hai hoàn thành tại lh_coast_road → engine lật chặng:
 // stageId sang vung_tau và danh sách mục tiêu làm mới cho chặng mới.
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 0);
-assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "severed");
-// 100 − 3 (phản kháng lớn lh_lan_pushback_big) − 8 (phản kháng cuối lh_last_pushback).
-assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 89);
+// Đợt sửa 2026-11-06 (II.B): DANH kết thúc chặng Long Hải ở intervened —
+// quyền hồ sơ của Giới Phòng trên toàn mạng chưa bị cắt.
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "intervened");
+// 100 − 8 (phản kháng lớn, hiệu ứng bắt buộc tại cảnh) − 8 (phản kháng cuối).
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 84);
 assert.equal(game.bridge.getSnapshot().flags.lanDepartureConsent, true);
 assert.equal(game.bridge.getSnapshot().progression.stageId, "vung_tau");
 assert.equal(game.bridge.getSnapshot().scene.choices.length, 0);

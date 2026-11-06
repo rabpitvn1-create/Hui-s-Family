@@ -11,6 +11,7 @@ export const CHARACTER_OVERLAYS = Object.freeze({
   "npc_servant_male": "assets/overlay/npc-servant-male.webp",
   "npc_servant_female": "assets/overlay/npc-servant-female.webp",
   "npc_servant_elder": "assets/overlay/npc-servant-elder.webp",
+  "npc_servant_elder_male": "assets/overlay/npc-servant-elder-male.webp",
   "npc_porter": "assets/overlay/npc-porter.webp",
   "pham_dinh_nghiem": "assets/overlay/pham-dinh-nghiem.webp",
   "npc_fisherman": "assets/overlay/npc-fisherman.webp",
@@ -27,7 +28,13 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "thay thuoc": "npc_doctor",
   "ngu ong": "npc_fisherman",
   "pho kiem": "npc_official",
-  "nguoi cua gioi phong": "npc_official"
+  "nguoi cua gioi phong": "npc_official",
+  "quan gia": "npc_servant_elder_male",
+  "quan gia hua gia": "npc_servant_elder_male",
+  "lao boc": "npc_servant_elder_male",
+  "quan kho": "npc_servant_elder_male",
+  "lao thu ky": "npc_servant_elder_male",
+  "ong ba luoi": "npc_fisherman"
 });
 
 const COMBINING_MARKS = new RegExp("[\\u0300-\\u036f]", "g");
@@ -43,14 +50,29 @@ function normalizeSpeaker(value) {
 }
 
 export function resolveCompanionId(scene) {
-  const declared = Array.isArray(scene?.companions) ? scene.companions : [];
-  for (const id of declared) {
-    if (Object.hasOwn(CHARACTER_OVERLAYS, id)) return id;
-  }
+  const declared = (Array.isArray(scene?.companions) ? scene.companions : [])
+    .filter((id) => Object.hasOwn(CHARACTER_OVERLAYS, id));
   const dialogue = Array.isArray(scene?.dialogue) ? scene.dialogue : [];
+  // Ưu tiên speaker chiếm ưu thế trong cảnh (G03/G06, đợt sửa 2026-11-06):
+  // nếu một speaker có overlay hợp lệ và số dòng thoại của họ NHIỀU HƠN hẳn
+  // người đứng sân khấu được khai báo, sân khấu thuộc về speaker đó — một
+  // cảnh do Quản gia dẫn dắt không còn hiển thị người khác chỉ vì mảng
+  // companions xếp họ trước. Khai báo vẫn thắng khi bằng điểm hoặc hơn.
+  const counts = new Map();
+  const speakerOrder = [];
   for (const line of dialogue) {
     const id = SPEAKER_OVERLAYS[normalizeSpeaker(line?.speaker)];
-    if (id) return id;
+    if (id && Object.hasOwn(CHARACTER_OVERLAYS, id)) {
+      if (!counts.has(id)) { counts.set(id, 0); speakerOrder.push(id); }
+      counts.set(id, counts.get(id) + 1);
+    }
   }
-  return null;
+  let dominant = null;
+  let dominantCount = 0;
+  for (const id of speakerOrder) {
+    if (counts.get(id) > dominantCount) { dominant = id; dominantCount = counts.get(id); }
+  }
+  if (dominant && dominantCount > (declared.length ? (counts.get(declared[0]) || 0) : 0)) return dominant;
+  if (declared.length) return declared[0];
+  return dominant;
 }
