@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { initGame } from "../src/game.js";
 import { INITIAL_STATE } from "../src/world-canon.js";
 import { VN_SCENES, VN_START_SCENE } from "../src/vn-scenes.js";
+import { validateVnScenes } from "../src/vn-schema.js";
 const AUTO_SAVE_KEY = "hua-family-campaign-v4-auto";
 const MANUAL_SAVE_KEY = "hua-family-campaign-v4-manual";
 class Element extends EventTarget {
@@ -27,6 +28,8 @@ function launch(saves) {
   };
   return { bridge: initGame(), elements };
 }
+assert.deepEqual(validateVnScenes(VN_SCENES, VN_START_SCENE), []);
+assert.equal(VN_SCENES.lh_prologue.contentStatus, "placeholder");
 const saves = new Map();
 let game = launch(saves);
 assert.equal(game.bridge.getSnapshot().scene.id, VN_START_SCENE);
@@ -45,6 +48,7 @@ game.bridge.applyScriptChoice(0);
 game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_depart");
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 4);
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "identified");
 assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 97);
 const beforeDead = structuredClone(game.bridge.getSnapshot());
 game.bridge.applyScriptChoice(1);
@@ -82,4 +86,4 @@ for (const card of Object.values(VN_SCENES)) {
     if (!choice.retry) assert.ok(VN_SCENES[choice.next], "Broken scene link: " + choice.next);
   }
 }
-console.log("VN session passed: deterministic scenes, five Long Hai objectives, dead-end rollback, versioned save, AI disabled.");
+console.log("VN scene contract and session passed: deterministic scenes, five Long Hai objectives, dead-end rollback, versioned save, AI disabled.");
