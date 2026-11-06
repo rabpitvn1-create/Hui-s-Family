@@ -29,6 +29,45 @@ function launch(saves) {
   return { bridge: initGame(), elements };
 }
 assert.deepEqual(validateVnScenes(VN_SCENES, VN_START_SCENE), []);
+
+{
+  // Regression: the fixed game-layout scroller must return to the beginning
+  // after every scene-changing choice, including dead ends and retries.
+  const reader = launch(new Map());
+  const scroller = document.querySelector(".game-layout");
+  const frames = [];
+  window.requestAnimationFrame = callback => frames.push(callback);
+  scroller.scrollTop = 800;
+  assert.equal(reader.bridge.applyScriptChoice(99), false);
+  assert.equal(scroller.scrollTop, 800, "invalid choice must not change scroll");
+
+  assert.equal(reader.bridge.applyScriptChoice(1), true); // dead end
+  assert.equal(scroller.scrollTop, 0, "dead-end scene must start at top");
+  scroller.scrollTop = 600; // emulate browser scroll anchoring after DOM replacement
+  frames.shift()();
+  assert.equal(scroller.scrollTop, 0, "next frame must also restore the reader");
+
+  scroller.scrollTop = 700;
+  assert.equal(reader.bridge.applyScriptChoice(0), true); // retry checkpoint
+  assert.equal(scroller.scrollTop, 0, "retry must start at top");
+  scroller.scrollTop = 900;
+  assert.equal(reader.bridge.applyScriptChoice(0), true); // normal transition
+  assert.equal(scroller.scrollTop, 0, "ordinary choice must start at top");
+
+  scroller.scrollTop = 300;
+  reader.bridge.saveGame();
+  assert.equal(scroller.scrollTop, 300, "saving must preserve manual scroll");
+  reader.bridge.applyScriptChoice(0);
+  scroller.scrollTop = 500;
+  reader.bridge.loadGame();
+  assert.equal(reader.bridge.getSnapshot().scene.id, "lh_gate");
+  assert.equal(scroller.scrollTop, 0, "loading a scene must start at top");
+
+  scroller.scrollTop = 400;
+  reader.bridge.restartGame();
+  assert.equal(reader.bridge.getSnapshot().scene.id, VN_START_SCENE);
+  assert.equal(scroller.scrollTop, 0, "new campaign must start at top");
+}
 assert.equal(VN_SCENES.lh_prologue.contentStatus, "approved");
 // Nội dung chính thức đã vào (Muse, 2026-11-06): mọi scene gắn nhãn
 // "approved" tuyệt đối không được còn chữ placeholder kỹ thuật.
