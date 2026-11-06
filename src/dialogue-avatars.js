@@ -164,7 +164,7 @@ function createAvatar(speakerName) {
   return image;
 }
 
-export function decorateDialogueElement(element, explicitSpeaker = "") {
+function decorateDialogueElement(element, explicitSpeaker = "") {
   if (!(element instanceof Element) || element.dataset.avatarChecked === "true") return element;
 
   const speakerNode = element.querySelector(".speaker, strong");

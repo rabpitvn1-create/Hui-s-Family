@@ -1,6 +1,6 @@
 // Fixed-script VN stores only campaign-v4 snapshots. Previous stage graphs
 // cannot be safely replayed as the new nine-stage campaign.
-export const ACTIVE_CANON_VERSION = "campaign-v4";
+const ACTIVE_CANON_VERSION = "campaign-v4";
 export const INCOMPATIBLE_SAVE_KEYS = Object.freeze([
   "hua-family-campaign-v3-manual",
   "hua-family-campaign-v3-auto"
@@ -73,7 +73,7 @@ export function stripLegacyFlags(rawFlags) {
   );
 }
 
-export function sanitizeCanonTextArray(values, limit = 80) {
+function sanitizeCanonTextArray(values, limit = 80) {
   return (Array.isArray(values) ? values : [])
     .filter((value) => typeof value === "string" && !containsLegacyCanonText(value))
     .slice(-limit);
@@ -122,7 +122,3 @@ export function sanitizeLegacyCanonState(rawState) {
   };
 }
 
-export const LEGACY_CANON_GUARD = Object.freeze({
-  flagKeys: [...LEGACY_FLAG_KEYS],
-  patterns: LEGACY_CANON_PATTERNS.map((pattern) => pattern.source)
-});

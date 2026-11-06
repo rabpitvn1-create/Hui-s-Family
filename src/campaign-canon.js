@@ -12,7 +12,7 @@ export const CAMPAIGN_STAGE_IDS = freeze([
   "cho_lon_final"
 ]);
 
-export const BACKROOMS_FLOORS = freeze([
+const BACKROOMS_FLOORS = freeze([
   {
     floor: 0,
     name: "Khu mê cung văn phòng không người",
@@ -264,7 +264,7 @@ export const NARRATIVE_RULES = freeze({
   ]
 });
 
-export const BACKROOMS_OBJECTIVES = freeze([
+const BACKROOMS_OBJECTIVES = freeze([
   { id: "discover_floor_rule", label: "Phát hiện và kiểm chứng quy luật vô nghĩa của tầng." },
   { id: "secure_floor_requirement", label: "Thu thập vật, dữ kiện hoặc điều kiện cần để mở lối." },
   { id: "resolve_floor_boss", label: "Tiêu diệt, vô hiệu hóa hoặc vượt boss bằng cái giá hợp lệ." },
@@ -323,17 +323,6 @@ export function getDirectorContext(state = {}) {
   return context;
 }
 
-function appendUnique(target, values) {
-  const output = Array.isArray(target) ? target.slice() : [];
-  const seen = new Set(output);
-  for (const value of Array.isArray(values) ? values : []) {
-    if (typeof value === "string" && value && !seen.has(value)) {
-      output.push(value);
-      seen.add(value);
-    }
-  }
-  return output;
-}
 
 export function applyProgressionUpdate(currentProgression = {}, currentFlags = {}, rawUpdate = {}) {
  const stageId = CAMPAIGN_STAGE_IDS.includes(currentProgression.stageId) ? currentProgression.stageId : "long_hai";

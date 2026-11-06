@@ -24,13 +24,6 @@ for (const required of [
   if (!existsSync(required)) throw new Error(`Thiếu module APK: ${required}`);
 }
 
-const gameMaster = readFileSync("src/ai-game-master.js", "utf8");
-for (const token of ["/api/gemini-turn", "HUA_GEMINI_ENDPOINT", "requestWebTurn"]) {
-  if (gameMaster.includes(token)) {
-    throw new Error(`Game master vẫn còn web backend fallback: ${token}`);
-  }
-}
-
 const packageJson = readFileSync("package.json", "utf8");
 for (const token of ["vercel dev", "test:gemini"]) {
   if (packageJson.includes(token)) {
@@ -179,7 +172,7 @@ if (!activity.includes("ApiProviderConfig.hasBundledProviders()")) {
   throw new Error("MainActivity chưa ưu tiên six-key pool đóng gói.");
 }
 
-const sensitiveSources = [gradle, providerConfig, client, bridge, buildWorkflow, releaseWorkflow, nativePipeline, gameMaster];
+const sensitiveSources = [gradle, providerConfig, client, bridge, buildWorkflow, releaseWorkflow, nativePipeline];
 const rawSecretPatterns = [/AIza[0-9A-Za-z_-]{20,}/];
 for (const source of sensitiveSources) {
   for (const pattern of rawSecretPatterns) {

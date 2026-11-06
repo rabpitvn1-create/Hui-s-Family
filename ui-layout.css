@@ -571,13 +571,6 @@ body.intel-open .intel-scrim {
   pointer-events: none;
 }
 
-/* Cao Minh cao 100% khung nên bảng tên nằm ở mép trên của khung bọc. */
-.stage-nameplate-hero {
-  top: .3rem;
-  bottom: auto;
-  z-index: 3;
-}
-
 /* Entity chỉ hiện khi encounter đang active (JS gắn .stage-entity-on). */
 #stage-entity-figure {
   left: 0;

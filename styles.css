@@ -333,13 +333,6 @@ h1 span {
   transition: width 520ms cubic-bezier(.2,.75,.2,1);
 }
 
-body[data-threat="watch"] { --line-strong: rgba(205,137,68,.58); }
-body[data-threat="critical"] { --line-strong: rgba(195,75,63,.62); --brass-pale: #e5b18e; }
-body[data-threat="critical"] #threat-label { color: #efaaa2; }
-body[data-threat="critical"] .route-track span {
-  background: linear-gradient(90deg, #701f1b, #d65f52);
-  box-shadow: 0 0 14px rgba(214,95,82,.48);
-}
 
 kbd {
   padding: .08rem .28rem;

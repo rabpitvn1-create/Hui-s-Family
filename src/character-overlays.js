@@ -85,7 +85,7 @@ export function resolveCompanionId(scene) {
 
 // Bảng tên trên đầu nhân vật ở Snapshot (lệnh chủ nhân 2026-11-06: mỗi nhân
 // vật có tên trong khung trên đầu để người đọc phân biệt ai là ai).
-export const CHARACTER_DISPLAY_NAMES = Object.freeze({
+const CHARACTER_DISPLAY_NAMES = Object.freeze({
   "ba_nam_lien": "Bà Năm Liên",
   "ba_bay": "Bà Bảy",
   "le_thu_nguyet": "Lê Thu Nguyệt",
