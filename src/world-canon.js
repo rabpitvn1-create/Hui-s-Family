@@ -61,15 +61,17 @@ export const WORLD_CANON = Object.freeze({
     ],
     huaFamily: {
       publicFace: "Đại gia tộc người Hoa có nhà chính tại Chợ Lớn, hoạt động thương nghiệp, tín dụng, vận tải, từ thiện và dưỡng bệnh.",
-      hiddenNature: "Giáo đoàn Quỷ Tử Mẫu kết hợp huyết tộc, thương nghiệp, ký sinh và thần học của sự lệ thuộc.",
+      hiddenNature: "Giáo đoàn La Sát Lục Thủ kết hợp huyết tộc, thương nghiệp, ký sinh và thần học của sự lệ thuộc.",
       expansion: "Lãnh địa được tạo bằng nợ, cơm ăn, việc làm, chỗ ở, bến ghe, thuốc và người đã Nhập Mẫu.",
       visualLanguage: ["miếu kín", "nhà dưỡng bệnh", "kho hàng", "bến ghe", "chuông đồng nhỏ", "bài khấn nửa Hoa nửa Việt", "tiếng trẻ khóc ở nơi không có trẻ"]
     },
     locales: {
       longHai: "Thánh địa giả dạng biệt thự dưỡng bệnh, đồng thời là nơi trung chuyển, giữ người và chuẩn bị vật chứa.",
       canGio: "Cổ họng đường thủy của giáo đoàn, mê cung bùn, rễ cây, nước lợ và vật chủ định hướng bằng rung động.",
-      thuDauMot: "Xương sống lao động, đất nợ, gỗ, kho nội địa và dòng trùng thiên về cơ bắp.",
-      vungTau: "Không gian dưỡng thương bị ký ức và ảo cảnh xâm lấn.",
+      prenn: "Đèo Prenn 200 năm trước, mạng ký ức và ba dị bản Bạch Y.",
+      dongThap: "Cánh tay miền Tây của Huyết Phòng và mạng vật chủ.",
+      hue: "Thư cứu người và hồ sơ của Ảnh Phòng.",
+      vungTau: "Cửa biển và tuyến quan tài vận chuyển vật chủ còn tỉnh táo.",
       saiGonChoLon: "Trung tâm thuộc địa, thương nghiệp, nhà chính, kho ngầm và nội đường của Hứa Gia."
     },
     storyCharacters: {
