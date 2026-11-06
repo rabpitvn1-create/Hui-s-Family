@@ -17,11 +17,11 @@ const VOICE_CARDS = freeze({
     name: "Cao Minh / Vạn Giới Ma Tổ",
     rules: [
       "LUÔN tự xưng là “bổn tọa” trong mọi lời thoại và tiếng lòng; tuyệt đối không để Cao Minh tự xưng “ta”.",
-      "Điềm tĩnh, tự tại, ít câu nệ lễ nghi; có thể có hài hước khô của người từng đi làm nơi phàm tục, nhưng đừng biến mọi câu thành lời đùa hay màn khoe sức mạnh.",
-      "Không ép anh lúc nào cũng lạnh lùng, uy hiếp hoặc buông lời huyền học khó hiểu; đối thoại phải tự nhiên, rõ nghĩa và tùy quan hệ.",
-      "Gặp chuyện lớn thì quan sát trước khi quyết; đã quyết thì nói thẳng điều cần thiết, không dây dưa vô ích.",
-      "Không chế giễu người yếu thế, không chủ động làm hại người vô tội và không bỏ người đã nhận bảo hộ.",
-      "Sự thông minh thể hiện qua thứ anh nhận ra và hành động anh chọn, không qua độc thoại giải thích năng lực."
+      "ĐỌC caoMinhCanon trước khi viết bất kỳ cảnh nào có anh: đó là hồ sơ chủ nhân đã khóa (2026-11-06), có hiệu lực trên mọi quy tắc giọng cũ.",
+      "Ngông cuồng, bất cần, kiêu ngạo nhưng có sức hút; ung dung và HÀI HƯỚC, thích châm chọc/chế giễu đối thủ ngay giữa sinh tử; coi trận chiến là trò tiêu khiển. Ít nói, câu ngắn, khô; im lặng nhiều hơn diễn thuyết; KHÔNG giảng giải cơ chế cho người phàm, không hứa hẹn trang trọng, không an ủi ân cần kiểu anh hùng tử tế.",
+      "Cứu người chỉ vì TIỆN TAY — vô tâm, một tay, đang làm việc khác, xong quên ngay; ai cảm ơn thì anh chán hoặc buồn cười, không nhận. TUYỆT ĐỐI không cười trước nỗi đau của người vô tội.",
+      "Anh là kẻ xuyên không tới dị giới: nắm ngay ngôn ngữ quyền lực (tông môn, khống chế, trùng, tà khí) nhưng MÙ TỊT về thế giới 1899 — địa danh, giấy tờ, quân phục, tiền, phong tục, món ăn đều phải học/hỏi; chỉ diễn giải bằng khung Thiên Đạo / ma đạo của thế giới anh (quê Lôi Thiên Sơn, núi, không biển). Anh không biết La Sát / Trùng Mẫu / Lục Môn là gì cho tới khi chứng cứ dạy anh, từng lớp một.",
+      "Chiến đấu = phẫu thuật: vì Tiểu Lan, anh luôn thu kiếm kìm lực, cắt từng sợi thật chính xác; không trận nào anh đuối sức hay chật vật vì địch mạnh."
     ]
   },
   tieu_lan: {
@@ -29,7 +29,8 @@ const VOICE_CARDS = freeze({
     rules: [
       "Kín, chính xác, có quyền chủ động; không nói như sách chiến thuật hoặc nhà tiên tri.",
       "Sức khỏe yếu ảnh hưởng nhịp thở, thời gian và lựa chọn, nhưng không biến cô thành người thụ động.",
-      "Cô chỉ khẳng định điều có bằng chứng; khi chưa tin, lời nói giữ khoảng cách và kiểm tra đối phương."
+      "Cô chỉ khẳng định điều có bằng chứng; khi chưa tin, lời nói giữ khoảng cách và kiểm tra đối phương.",
+      "Cô là NGƯỜI THẦY của Cao Minh ở thế giới này: chính cô dạy anh từ từ tên sự vật, giá chợ, phong tục, địa danh, món ăn, biển — sự gắn bó của hai người lớn lên qua các cảnh dạy–học đó. Đừng viết Cao Minh giảng giải thế giới này cho cô."
     ]
   },
   hua_servant: {
@@ -50,7 +51,31 @@ const VOICE_CARDS = freeze({
   }
 });
 
+// HỒ SƠ CAO MINH — chủ nhân đọc chính tả và KHÓA 2026-11-06.
+// Khi đợt sửa bắt đầu, hồ sơ này được đưa nguyên văn vào code theo lệnh chủ nhân;
+// bản đầy đủ: story-content/cao-minh-character-canon-owner-2026-11-06.md (kho dự án).
+const CAO_MINH_CANON = freeze({
+  keystone: "Với một kẻ như hắn hắn có thể tóm cổ thiên đạo xuống và hỏi tùy ý. Một chưởng của hắn có thể đánh bay cả một ngọn núi. Một kiếm của hắn có thể chặt lục mẫu la sát thành lục mẫu mất xác.",
+  profile: [
+    "Tồn tại đứng trên đỉnh phong, vượt ngoài phạm trù nhân quả; có thể hủy Thiên diệt Địa. Sức mạnh KHÔNG có trần trong truyện: không kẻ địch nào làm hắn đuối sức được.",
+    "Phàm nhân với hắn như kiến vẫy vùng trong vũng bùn — dưới tầm chú ý. Giết một người phàm là giết một con kiến; diệt một quốc gia là phá một tổ kiến.",
+    "Vì Hứa Tiểu Lan, sức mạnh đó không bao giờ được dùng toàn bộ: hắn lúc nào cũng phải thu kiếm lại, kìm lực, vì sợ một chưởng lỡ tay đánh bay hết — thậm chí cả hành tinh. Hắn không giết Lục Mẫu từ đầu được vì: (1) lúc đầu hắn không biết nó là gì — mọi thứ phải từ từ khám phá; (2) nó sống qua mạng lưới đã thay thế phần điều phối sự sống của nàng từ nhỏ — giết nó là giết nàng; (3) lúc hắn đủ quan tâm để muốn chém thì hắn cũng đã hiểu đủ để biết kiếm đó không được phép rơi.",
+    "Hắn rơi xuống Long Hải vì một cổng không gian (chính là vầng hào quang) kéo hắn xuống — và hắn THÍCH THÚ: đang uống rượu chán, tự nhiên có nơi để giải trí. Phát hiện và cứu Tiểu Lan là THUẦN TÌNH CỜ, cùng một logic tiện tay: thấy kiến rớt xuống hồ thì tiện tay vớt lên.",
+    "Ngông cuồng, bất cần đời, kiêu ngạo nhưng đầy sức hút. Luôn ung dung, hài hước, thích châm chọc đối thủ ngay cả khi đứng trước cái chết; coi chiến sinh tử như trò tiêu khiển; địch càng mạnh hắn càng phấn khích, tự tin, thích thú. Tinh thần gần như không thể khuất phục.",
+    "Sau vẻ phóng túng là một người từng qua nhiều mất mát, cô độc, đau thương; hiếm khi lộ cảm xúc thật, dùng hài hước và bất cần để che vết thương lòng. Ma Tính mãnh liệt nhưng trân trọng nhân tính hơn nhiều kẻ tự nhận là con người.",
+    "Căm ghét sự tàn ác, khinh thường kẻ dùng sức mạnh chà đạp người yếu thế; không thích tự nhận anh hùng nhưng sẵn sàng liều mạng bảo vệ người vô tội; trung thành, đáng tin với bạn bè dù đôi khi cộc cằn, thiếu nghiêm túc. Yêu tự do, ghét quy tắc ràng buộc, hành động theo bản năng, tìm niềm vui trong thử thách nguy hiểm.",
+    "Đường biên tuyệt đối: hắn có thể cười đùa trước cả địa ngục, nhưng tuyệt đối không cười trước nỗi đau của những người vô tội.",
+    "Hắn là kẻ xuyên không đến một thế giới KHÁC và phải học lại từ từ: thế giới của hắn không có Tôn Ngộ Không, không có Tây Du Ký, không có Phật Tổ Như Lai — chỉ có Thiên Đạo, ma đạo. Hắn không tự động biết địa lý Việt Nam, địa danh, lính Pháp, hay món cơm thịt kho hột vịt; những thứ phàm trần đều do Tiểu Lan (và người bản địa) dạy hắn từ từ — và chính vì nàng dạy hắn, đi cùng hắn những bước đầu ở thế giới này một quãng đường rất dài, mà một con kiến trở thành người hắn quan tâm."
+  ],
+  worldReaction: [
+    "Xã hội 1899 (thời đại công nghiệp và nông nghiệp thuộc địa) KHÔNG chấp nhận một kẻ mặc trang phục kiếm hiệp, giáp lạ và hai thanh kiếm lơ lửng là chuyện bình thường: người ngoài giật mình, sợ, đồn đại 'thầy pháp', tránh né; quan lại e dè và để ý — sức ép kiểm tra một phần vì sự hiện diện của hắn.",
+    "Hắn ở được trong nhà họ Hứa nhờ vỏ bọc thầy pháp/thầy thuốc phương xa mời về chữa bệnh cho cô chủ (khớp vỏ bọc phong cùi).",
+    "Gia nhân nhà họ Hứa bị khống chế thì KHÔNG phản ứng trước kiếm bay — sự phẳng lặng phi nhân đó là dấu hiệu bị khống chế mà Cao Minh đăng ký được; người tự do (Bà Năm, Thu Nguyệt, người ngoài) phản ứng như người thường."
+  ]
+});
+
 export const PROSE_STYLE_GUIDE = freeze({
+  caoMinhCanon: CAO_MINH_CANON,
   language: "Tiếng Việt hiện đại, tự nhiên, tiết chế; bối cảnh năm 1899 thể hiện qua vật chất và quan hệ xã hội, không qua lời giả cổ.",
   targetLength: "Khoảng 180–320 từ cho narration; dialogue có thể rỗng nếu cảnh không cần người nói.",
   narrationRules: [
