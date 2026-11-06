@@ -1,33 +1,15 @@
 const freeze = (value) => Object.freeze(value);
 
 const STAGE_TEXTURES = freeze({
-  long_hai: [
-    "Không gian dưỡng bệnh ven biển che giấu kho, bến ghe, khu giữ người và nghi thức.",
-    "Ưu tiên chi tiết vật chất: mùi thuốc, muối biển, vôi tường, gỗ ẩm, đèn dầu, tiếng chân và luồng hàng.",
-    "Nguy hiểm đến từ việc bị nhận diện, người vô tội lẫn trong giáo đoàn và nghi lễ đang tiến triển."
-  ],
-  can_gio: [
-    "Rừng ngập mặn, nước lợ, bùn, rễ cây, ghe nhỏ và âm thanh truyền qua mặt nước.",
-    "Không viết Cần Giờ như khu rừng fantasy; địa hình phải có trọng lượng, độ lún, thủy triều và tầm nhìn cụ thể.",
-    "Phệ Giới Quỷ Anh gây áp lực bằng không gian, rung động và đường nước, không chỉ bằng sức bền."
-  ],
-  backrooms: [
-    "Mỗi tầng có kiến trúc, quy luật và nhịp sợ riêng; không trộn chi tiết của tầng khác.",
-    "Nỗi sợ đến từ logic sai lệch nhưng nhất quán, không từ việc liên tục gọi mọi thứ là vô nghĩa hoặc kinh hoàng.",
-    "Miêu tả vật thể bình thường bị đặt sai chức năng trước khi phô bày quái vật."
-  ],
-  thu_dau_mot: [
-    "Đất nợ, trại lao động, kho gỗ, đường sông và cơ thể bị khai thác như công cụ.",
-    "Nhịp cảnh nặng, thực dụng; ưu tiên hậu quả kiệt sức, thiếu vật tư và quan hệ lao động."
-  ],
-  vung_tau: [
-    "Ký ức, người giả và bằng chứng mâu thuẫn quan trọng hơn hỏa lực trực diện.",
-    "Phân biệt rõ điều nhân vật thấy, điều họ nhớ và điều đã được kiểm chứng."
-  ],
-  sai_gon_cho_lon: [
-    "Trung tâm thương nghiệp và quyền lực: kho, sổ nợ, nhà chính, bến hàng, đường phố và bộ máy thuộc địa.",
-    "Cảnh cuối phải có nhiều lực lượng với lợi ích khác nhau, không thu nhỏ thành một hành lang và một con trùm."
-  ]
+  long_hai: ["Biệt thự dưỡng bệnh, thuốc, vôi tường, tiếng chân và những gia nhân còn tỉnh nhưng bị ép làm theo lệnh.", "Tiểu Lan giữ quyền từ chối; ký ức mất từng chi tiết nhỏ."],
+  vung_tau: ["Cửa biển, quan tài và người sống bị khai như hàng hóa; tuyến Tài Phòng."],
+  can_gio: ["Bùn, nước lợ, ba điểm neo và phản thanh của Nghịch Trùng; quyền tự quyết dẫn đến điểm neo sống."],
+  prenn: ["Prenn 200 năm trước: lịch sử bất biến, ba dị bản Bạch Y, sinh tồn và ký ức mâu thuẫn."],
+  backrooms: ["Mỗi tầng có luật, boss và điều kiện mở lối riêng; boss bị vô hiệu không tự mở cửa."],
+  cho_lon_return: ["Sáu mảnh Sổ Lục Môn, gia phả và tên bị xóa; không cho nhân vật nhớ bằng chứng chưa có."],
+  dong_thap: ["Huyết Phòng, vật chủ tỉnh táo, những người sống phụ thuộc vào cơ chế cần phá."],
+  hue: ["Ảnh Phòng, thư mật mã, ký ức bị chỉnh sửa và chứng cứ xác thực."],
+  cho_lon_final: ["Đại Lễ Lục Sinh, quyền được chết là mình, nhát cắt hoàn hảo và câu cuối nguyên văn."]
 });
 
 const VOICE_CARDS = freeze({
@@ -48,13 +30,6 @@ const VOICE_CARDS = freeze({
       "Kín, chính xác, có quyền chủ động; không nói như sách chiến thuật hoặc nhà tiên tri.",
       "Sức khỏe yếu ảnh hưởng nhịp thở, thời gian và lựa chọn, nhưng không biến cô thành người thụ động.",
       "Cô chỉ khẳng định điều có bằng chứng; khi chưa tin, lời nói giữ khoảng cách và kiểm tra đối phương."
-    ]
-  },
-  koei: {
-    name: "Koei",
-    rules: [
-      "Điềm tĩnh, thực dụng, ý thức rõ tài nguyên hữu hạn và quyền chủ thể riêng.",
-      "Không sao chép giọng Cao Minh và không dùng lời thoại để nhắc người đọc rằng mình là clone."
     ]
   },
   hua_servant: {
