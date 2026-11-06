@@ -2186,6 +2186,7 @@ export const VN_SCENES = Object.freeze({
     "id": "lh_lan_pushback_big",
     "contentStatus": "approved",
     "stageId": "long_hai",
+    "objective": "break_long_hai_ritual",
     "title": "Một giờ tự do",
     "backgroundId": "long-hai-corridor",
     "location": "Hành lang và sân trong, biệt thự Long Hải",
@@ -2903,7 +2904,7 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "honor_thoi",
         "text": "Trước mặt những gia nhân đang có mặt, gọi Thới bằng tên đầy đủ và cảm ơn anh ta như một người ngang hàng — để cả nhà cùng nghe thấy lòng can đảm có tên gọi là gì.",
-        "next": "lh_ritual",
+        "next": "lh_audit_table",
         "effects": {
           "lanTrustDelta": 2,
           "civiliansSavedDelta": 1
@@ -2912,110 +2913,1749 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "prepare_audit",
         "text": "Không lãng phí một khắc: về phòng khách trước, sắp lại toàn bộ bằng chứng — ống trúc, rương thuốc, danh sách tên người — cho cuộc đối diện sắp tới.",
-        "next": "lh_ritual",
+        "next": "lh_audit_table",
         "effects": {
           "cluesHuaGiaDelta": 2
         }
       }
     ]
   },
-  "lh_ritual": {
-    "id": "lh_ritual",
+  "lh_audit_table": {
+    "id": "lh_audit_table",
     "contentStatus": "approved",
     "stageId": "long_hai",
-    "title": "Lời từ chối đầu tiên",
+    "title": "Bàn kiểm tra",
+    "backgroundId": "long-hai-saloon",
+    "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
+    "companions": [
+      "npc_servant_elder"
+    ],
+    "narration": [
+      "Sau đợt lục soát đầu tiên, phòng khách của biệt thự bị trưng dụng thành một văn phòng. Chiếc bàn dài giữa phòng — nơi hôm qua còn bày khay trà tiếp khách — nay chất đầy giấy tờ: từng xấp hồ sơ buộc dây gai, từng cuốn sổ gáy bọc vải xanh, con dấu gỗ của Giới Phòng đặt trên một miếng lót đỏ, và bên cạnh nó, một trát lệnh còn nguyên triện son của Hứa Bổn Hoả, người chủ nhà mà Cao Minh chưa từng gặp mặt, chỉ mới thấy quyền lực của ông ta qua những tờ giấy đi trước ông ta khắp nơi.",
+      "Người chủ trì buổi kiểm tra là phó kiểm của Giới Phòng, một người đàn ông ngoài bốn mươi, gầy, đeo kính gọng đồng, tên gọi Trần Văn Lễ. Ông ta không có vẻ gì là người ác. Ông ta có vẻ của một người đã quen tin rằng thế gian này vận hành được là nhờ mọi thứ đều có tên trong sổ, có dấu trong mục, có người chịu trách nhiệm cho từng dòng chữ — và bất cứ thứ gì nằm ngoài sổ sách đều là một mối nguy, không phải vì nó xấu, mà vì nó không ai quản.",
+      "Quản gia lần lượt bày từng thứ lên bàn theo đúng thứ tự phó kiểm yêu cầu, hai tay nâng như nâng đồ thờ. Trước hết là mười hai kỳ giấy chứng bệnh, xếp theo năm tháng, mỗi tờ đều có chữ ký của thầy thuốc Nguyễn Văn Sáu và triện của nhà. Kế đến là sổ gia nhân: bốn mươi bảy cái tên, mỗi tên kèm theo quê quán, năm vào phủ, việc được giao — và lác đác vài cái tên có một chấm son đỏ nhỏ bên cạnh, là những người đã chết trong phủ những năm qua, chết có ghi, có ngày, có người đứng ra lo liệu. Giới Phòng, hóa ra, ghi chép cái chết của gia nhân tử tế hơn nhiều gia đình tử tế khác.",
+      "Sau cùng mới là cuốn gia phả. Nó nặng hơn hẳn các cuốn sổ khác, bìa da đã mòn góc, và khi quản gia đặt nó xuống, phó kiểm vô thức đưa cả hai tay ra đỡ. Ông ta mở đến trang giữa, dừng lại lâu hơn mọi trang khác. Cao Minh không cần dùng thần niệm cũng biết đó là trang nào: trang có một cái tên đã bị gạch đi bằng một nét mực đều và lạnh, gạch từ nhiều năm trước, và bên dưới, trong cột ghi chú, chỉ vỏn vẹn mấy chữ viết tay: đã xử lý, không còn trách nhiệm.",
+      "Xấp hồ sơ thứ tư là sổ thuốc thang — cuốn sổ ghi từng thang thuốc đã sắc cho 'người bệnh' suốt mười hai năm, vị nào, lượng bao nhiêu, ngày nào, ai ký nhận. Phó kiểm lật từng trang, đối chiếu với một bản kê khác rút từ hồ sơ Tây Viện chuyển sang: bản kê đóng gói của chiếc rương thuốc theo hầu cô chủ từ ngày nàng về Long Hải, một tờ danh sách viết bằng một lối ký hiệu tính toán lạ mà phó kiểm phải nheo mắt nhìn hồi lâu mới bỏ qua, ghi vào biên bản vỏn vẹn một dòng: 'rương thuốc còn nguyên niêm phong, chưa từng mở.' Cao Minh ngồi ở cuối bàn, nghe tới dòng ấy thì khẽ đổi thế ngồi. Một chiếc rương mười mấy năm không ai mở, một tờ danh sách không ai đọc được — trong một buổi làm việc mà mọi thứ đều phải có người chịu trách nhiệm, đó là hai thứ duy nhất không ai chịu trách nhiệm cả. Hắn ghi nhớ điều ấy, như ghi nhớ một cánh cửa không khóa trong một tòa nhà khóa kín.",
+      "Buổi kiểm tra diễn ra như một buổi điểm danh của cả tòa nhà, chỉ khác là điểm bằng giấy. Phó kiểm đọc từng tên trong sổ gia nhân bằng giọng đều đều; quản gia đáp 'có' cho mỗi cái tên, thi thoảng thêm một câu giải thích ngắn: người này đau chân, người kia mới vào thay chỗ người chết hồi tháng ba. Mỗi lần ghi nhận xong một mục, phó kiểm chấm bút hai lần vào nghiên, gạch một nét kiểm — và rồi, theo một thói quen mà Cao Minh phải nhìn tới lần thứ ba mới nhận ra, ông ta ghi lại y hệt nét kiểm ấy vào một cuốn sổ tay riêng mang theo bên mình. Mọi thứ, ở Giới Phòng, đều có hai bản. Một bản cho người ta xem. Một bản cho người chịu trách nhiệm.",
+      "Cao Minh ngồi ở chiếc ghế phía cuối bàn, vị trí của một người khách chưa được mời mà cũng không ai dám đuổi. Phó kiểm đã hai lần liếc về phía hắn với vẻ khó xử: trong mọi cuốn sổ trên bàn này đều không có một dòng nào dành cho người khách lạ mặt đang ngồi xem nhà người ta kiểm sổ, và sự tồn tại của hắn, đối với bộ máy giấy tờ này, là một lỗi không có mục để ghi. Cuối cùng phó kiểm cũng phải lên tiếng hỏi, lịch sự mà rành rọt, rằng ông khách đây là ai, thuộc phần trách nhiệm của ai trong nhà này.",
+      "Trước khi quản gia kịp tìm được một câu trả lời an toàn, bên ngoài sân có tiếng xe ngựa thắng lại gấp, tiếng vó ngựa gõ xuống nền gạch, và tiếng gia nhân chạy ra đón rộn lên một lượt rồi im bặt — cái im bặt đột ngột của một đám người vừa nhận ra ai là người mới tới. Phó kiểm đứng bật dậy, lưng thẳng như thước. Quản gia hai tay chắp trước bụng. Ngay cả ngọn đèn dầu trên bàn cũng như chao đi một cái, dù trong phòng không có gió."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Phó kiểm",
+        "text": "Thưa ông, quản gia, sổ sách nhà này tôi xem qua thì nền nếp lắm. Mười hai kỳ giấy chứng bệnh, đủ cả. Sổ gia nhân bốn mươi bảy người, kẻ mất người còn đều có ghi. Giới Phòng làm việc chỉ cần có thế: mỗi cái tên một người chịu trách nhiệm, mỗi việc làm một dòng trong sổ. Còn ông khách đây… thứ lỗi, tôi chưa rõ ông thuộc phần ai quản trong nhà này?"
+      },
+      {
+        "speaker": "Quản gia",
+        "text": "Dạ, thưa ngài phó kiểm, ông đây là khách lạ ghé qua xin tá túc ít hôm, không phải người của nhà. Nhà con đã thưa rồi mà ông chưa chịu đi, nhà con thiệt tình không dám…"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa là khách. Khách không thuộc phần ai quản cả. Bổn tọa ngồi đây là để xem một điều: sổ sách của các ngươi ghi người sống, hay ghi người đã bị các ngươi cho là chết?"
+      },
+      {
+        "speaker": "Phó kiểm",
+        "text": "Thưa ông, ông nói vậy là nặng lời. Giới Phòng không giết ai bằng giấy cả. Giấy chỉ ghi lại sự thật mà thôi. Có điều… có những sự thật, ghi ra thì hại người, giấu đi thì cứu người. Phần ấy, không phải ai cũng hiểu được."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Vậy thì bổn tọa càng phải ngồi xem cho hết buổi hôm nay."
+      },
+      {
+        "speaker": "Quản gia",
+        "text": "Dạ… thưa ngài phó kiểm, xe đã vào sân rồi. Ngài… ngài chủ phòng đã tới."
+      }
+    ],
+    "choices": [
+      {
+        "id": "watch_register",
+        "text": "Ngồi yên, xem cho hết buổi điểm danh bằng giấy này, ghi nhớ từng cái tên và từng chấm son đỏ.",
+        "next": "lh_nghiem",
+        "effects": {
+          "cluesHuaGiaDelta": 2
+        }
+      },
+      {
+        "id": "ask_unmarked",
+        "text": "Hỏi phó kiểm vì sao trong sổ gia nhân có một cái tên không chấm son mà cũng không còn ai trong nhà nhắc tới nữa.",
+        "next": "lh_nghiem",
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanMaterInfluenceDelta": 1
+        }
+      }
+    ]
+  },
+  "lh_nghiem": {
+    "id": "lh_nghiem",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Người của Giới Phòng",
+    "backgroundId": "long-hai-saloon",
+    "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
+    "narration": [
+      "Phạm Đình Nghiêm bước vào phòng không ồn ào. Ông ta ngoài năm mươi, người gầy và cao, mặc áo dài gấm đen đã cũ nhưng phẳng phiu đến mức không tìm thấy một nếp gấp thừa, khăn xếp ngay ngắn, tay không cầm gì ngoài một cuốn sổ nhỏ bọc da đã mòn. Gia nhân hai bên cúi đầu thấp hơn hẳn lúc nãy. Phó kiểm đứng nghiêm như lính. Nhưng điều khiến căn phòng lặng đi không phải là uy quyền của ông ta — mà là cảm giác mọi thứ trong phòng, kể cả những xấp giấy, vừa được sắp lại đúng vị trí của chúng chỉ vì ông ta đã có mặt.",
+      "Ông ta cúi chào Cao Minh trước, một cái cúi chào đúng lễ đến từng phân — lễ dành cho một vị khách không rõ lai lịch, không thừa không thiếu. Rồi ông ta mới ngồi xuống đầu bàn, tự tay mở cuốn gia phả tới đúng trang có cái tên bị gạch, không cần lật tìm, như một người mở cuốn sổ của chính mình ra ở trang mình đã đọc một nghìn lần. Ông ta đặt một ngón tay khô và sạch lên nét gạch ấy, rất nhẹ, như người ta chạm vào một vết sẹo cũ trên thân thể mình.",
+      "Giọng ông ta đều, rõ, không cao không thấp, là thứ giọng của người cả đời chỉ nói những câu đã cân nhắc xong. Ông ta không giấu Cao Minh điều gì về nét gạch ấy: chính tay ông ta đã gạch, mười một năm trước, sau chuyện ở Tây Viện. Và ông ta nói lý do của mình ra rành rọt như đọc một bản kê: một người thừa kế còn mang tên trong sổ là một món nợ treo trên đầu cả nhà — chủ nợ sẽ đòi, đối thủ sẽ dùng, quan Tây sẽ vin vào mà tra xét, các phòng khác trong Lục Môn sẽ lấy đó làm cớ để chia phần. Một cái tên còn sống trong giấy tờ là một cánh cửa mở cho tai họa bước vào. Gạch nó đi, tai họa không còn chỗ bám. Cô gái ấy, từ ngày bị gạch tên, chưa từng bị một kẻ thù nào của nhà họ Hứa tìm tới — vì trên đời này, đối với mọi sổ sách, cô ta đã không còn tồn tại.",
+      "Ông ta nói tiếp, vẫn bằng giọng ấy, về bốn mươi bảy người làm trong tòa nhà này. Họ ăn cơm của nhà họ Hứa được là vì tòa nhà này, trong sổ sách, chỉ là một nơi dưỡng bệnh kín đáo và yên tĩnh. Nếu cái tên kia còn đó, nếu người ta biết nhà họ Hứa giấu một người thừa kế ở đây, thì nơi này thành một điểm tranh chấp, và điểm tranh chấp thì không nuôi nổi bốn mươi bảy miệng ăn. Ông ta hỏi Cao Minh, không một chút khiêu khích, như hỏi một phép tính: một cái tên trên giấy, đổi lấy bốn mươi bảy con người bằng xương bằng thịt đang sống — ông là người ngoài, ông thử tính xem, vế nào nặng hơn?",
+      "Rồi ông ta hỏi lại, và đây mới là câu hỏi mà cả buổi kiểm tra thực ra chỉ để dẫn tới. Ông ta hỏi Cao Minh chịu trách nhiệm cho cô gái ấy được không. Không phải che chở một buổi, một đêm — che chở là việc của lòng tốt; chịu trách nhiệm là việc của sổ sách: nếu mai này cô ta bệnh, ai ký? Nếu cô ta gây ra chuyện, ai đứng tên? Nếu ông, vị khách không tên không tuổi không gia phả này, một ngày nào đó bỏ đi như cách ông đã tới, thì cái tên ông khăng khăng đòi giữ lại ấy sẽ rơi xuống đầu ai? Ông ta nói: tôi gạch tên cô ta, ít nhất tôi biết rõ mình đã làm gì, và tôi ký tên mình dưới nét gạch ấy. Còn ông, ông giữ tên cô ta bằng cái gì — bằng một lời nói gió bay?",
+      "Cao Minh nghe hết, không ngắt lời một lần nào. Hắn nhìn người đàn ông ngồi ở đầu bàn — một kẻ đã tự tay xóa bỏ một con người khỏi thế gian bằng một nét mực, và mười một năm nay ngủ yên vì tin rằng đó là việc làm có trách nhiệm nhất đời mình. Hắn hiểu ra điều đáng sợ nhất ở Giới Phòng: nơi này không cần người ác. Nó chỉ cần những người tin rằng sổ sách quan trọng hơn người thật, và tin một cách hoàn toàn thành thật.",
+      "Cuối cùng, Nghiêm gấp cuốn gia phả lại, vuốt phẳng bìa sách bằng lòng bàn tay, rồi thông báo phần còn lại của buổi làm việc bằng giọng điểm lại lịch trình: trước giờ Ngọ hôm nay, giấy chứng nhận sau cùng sẽ được ký xong. Không phải vì ông ta vội. Mà vì việc gì đã vào sổ thì phải xong đúng kỳ của nó — kỳ này, đã trễ mười hai năm rồi."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Thưa ông, tôi là Phạm Đình Nghiêm, giữ Giới Phòng của nhà họ Hứa. Việc trong nhà này, phần giấy tờ, phần trách nhiệm, đều qua tay tôi. Nét gạch trong gia phả mà ông đang nhìn — là của tôi. Tôi không chối, cũng không giấu. Giới Phòng làm việc gì cũng ký tên mình vào việc ấy."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngươi gạch tên một người còn sống, rồi gọi đó là chịu trách nhiệm."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Thưa ông, ông nói chưa hết. Tôi gạch tên cô ta trong sổ, để không một ai có thể vin vào cái tên ấy mà làm hại cô ta, hay làm hại cả nhà này. Mười một năm nay, cô ta sống yên ở đây, có người hầu hạ, có thầy thuốc ký giấy, có cơm ăn áo mặc. Người chết trên giấy thì không ai truy nữa. Đó là cái yên ổn duy nhất mà cái thế gian này cho phép cô ta có."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cái yên ổn mà ngươi nói, là yên ổn của một người không được quyền tự xưng tên mình. Bổn tọa đã vào gian phòng trong cùng. Người con gái ấy còn thở, còn nói, còn nhớ được những gì chưa bị lấy mất. Trong sổ của ngươi, nàng là một món nợ đã thanh toán. Ngoài sổ, nàng là một người."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Ông là khách lạ, ông nói chữ 'người' nghe nhẹ lắm. Tôi ở trong nhà này, tôi phải nói chữ 'trách nhiệm'. Ông che chở cô ta được một đêm nay. Nhưng sổ sách thì tính bằng năm. Ông đi rồi, cái tên ấy ở lại với ai? Tôi hỏi ông một câu thôi, và tôi mong ông trả lời cho thật: ông lấy gì để chịu trách nhiệm cho cô ta — ngoài một thanh kiếm?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa lấy chính bổn tọa. Không cần sổ, không cần ai làm chứng. Ngươi gạch tên nàng vì ngươi sợ cái tên ấy rơi xuống mà không ai đỡ. Từ hôm nay, có người đỡ rồi."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "…Ông nói nghe như một người chưa từng phải ký tên vào cái gì cả. Thôi được. Buổi nay, Giới Phòng còn một việc phải làm cho xong kỳ: giấy chứng sau cùng. Ký xong, mọi trách nhiệm của nhà này đối với cô ta sẽ chấm dứt một cách sạch sẽ. Ông cứ ngồi xem, như ông đã muốn."
+      }
+    ],
+    "choices": [
+      {
+        "id": "answer_accountability",
+        "text": "Đáp lại câu hỏi của Nghiêm đến cùng: bổn tọa chịu trách nhiệm bằng chính mình, không cần một cuốn sổ nào.",
+        "next": "lh_certification",
+        "route": {
+          "id": "bao_ho",
+          "delta": 2
+        }
+      },
+      {
+        "id": "question_eraser",
+        "text": "Hỏi ngược lại Nghiêm: kẻ gạch tên người khác thì ai ghi tên kẻ ấy vào sổ — và ai chịu trách nhiệm cho nét gạch?",
+        "next": "lh_certification",
+        "effects": {
+          "cluesHuaGiaDelta": 2
+        }
+      }
+    ]
+  },
+  "lh_certification": {
+    "id": "lh_certification",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Giấy khai tử",
+    "backgroundId": "long-hai-saloon",
+    "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
+    "companions": [
+      "npc_servant_elder"
+    ],
+    "link": {
+      "id": "danh",
+      "phase": "intervened"
+    },
+    "narration": [
+      "Trước giờ Ngọ, tờ giấy chứng sau cùng được trải ra giữa bàn. Nó đã được viết sẵn từ trước bằng một nét chữ thư lại đẹp và đều, chỉ chừa lại ngày tháng và chỗ ký tên: 'Hứa Tiểu Lan, con gái ông Hứa Bổn Hoả, mắc bệnh phong quái ác, thuốc thang không chữa được, đã chết tại biệt thự Long Hải, gia đình đã lo liệu xong xuôi, nay làm giấy này để trình các nơi liên quan, từ nay không còn ai phải chịu trách nhiệm về người này nữa.' Mười hai kỳ giấy trước chứng nhận nàng bệnh. Tờ giấy này chứng nhận nàng chết. Cao Minh đọc hết một lượt và hiểu ra bước đi cuối cùng của Giới Phòng: người bệnh thì còn có thể bị đòi xem mặt; người chết thì không ai đòi nữa. Từ hôm nay, thân thể còn sống của nàng sẽ được đưa đi như người ta đưa một cái xác — hợp lệ, kín đáo, không một ai có quyền hỏi han.",
+      "Nghiêm giải thích việc này bằng đúng cái giọng điểm lịch trình của ông ta, và đó là điều khiến nó rợn người hơn bất cứ lời đe dọa nào. Ông ta nói đây là ân huệ sau cùng mà Giới Phòng dành cho cô gái: một cái chết trên giấy, sạch sẽ, có chữ ký, có làm chứng — để đổi lấy một đời còn lại không ai truy tìm. Ông ta nói: người sống mà không tên thì khổ vì người ta còn đòi hỏi ở cái tên; người đã chết hẳn trên giấy thì được yên. Ông ta tin điều đó. Ông ta tin đến mức có thể nói nó ra trước mặt chính người con gái mà tờ giấy sắp sửa giết chết lần thứ hai.",
+      "Bởi vì nàng đang ở trong phòng. Theo đúng phép của buổi làm việc, 'người bệnh vô danh' được đưa vào ngồi ở ghế bên để đoàn kiểm tra đối chiếu — một người sống bị bắt ngồi nghe người ta làm giấy khai tử cho chính mình. Nàng ngồi rất thẳng, hai tay đặt trên gối, mắt nhìn xuống một điểm cố định trên mặt bàn, bình tĩnh như một người khách dự một buổi lễ không liên quan tới mình. Chỉ có Cao Minh, bằng thần niệm, mới nghe được nhịp tim của nàng đang chạy nhanh gấp đôi người thường — và mới thấy được rằng sự bình tĩnh ấy không phải là cam chịu: đó là một người đang dùng hết sức mình để không run, vì nàng đã quyết rằng buổi hôm nay, nàng sẽ không cho những người này thấy nàng run.",
+      "Thầy thuốc Nguyễn Văn Sáu được dẫn vào sau cùng, hai người gia nhân đi hai bên như áp giải mà lại như dìu đỡ. Chiếc cặp da của ông run lên từng hồi. Mười hai lần trước, ông ký giấy chứng bệnh cho một người ông chưa từng gặp mặt. Lần này, người ấy ngồi ngay trong phòng, sống, thở, và nhìn ông — ông nhìn nàng đúng một cái rồi vội cúi mặt xuống, như người vừa bị ánh sáng chói vào mắt. Nghiêm tự tay đặt cây bút vào tay ông, lịch sự như mời trà, và nói một câu duy nhất: 'Thầy cứ ký như mọi kỳ. Kỳ này là kỳ chót, ký xong thì thầy cũng được yên.'",
+      "Bàn tay của thầy thuốc viết hai chữ đầu của tên mình theo cái run quen thuộc của người già — rồi đến nét thứ ba, cái trơn tru lạnh lẽo ấy lại tới, như mười hai lần trước: bàn tay bỗng đi đều, đi đẹp, đi như của một người khác. Nhưng lần này, ở nét cuối cùng của chữ ký, bàn tay khựng lại. Cả căn phòng nghe được tiếng ngòi bút rít trên giấy rồi dừng hẳn, một giọt mực đọng lại, đen và tròn như một con mắt. Mồ hôi trên trán ông Sáu rơi xuống mặt bàn. Miệng ông mấp máy một câu xin lỗi không thành tiếng, hướng về phía cô gái đang ngồi — người duy nhất trong phòng mà câu xin lỗi ấy thuộc về. Quản gia khẽ ho một tiếng. Bàn tay lại chuyển động, hoàn thành nét cuối, đều và đẹp như chưa từng khựng lại.",
+      "Tờ giấy được phó kiểm cầm lên bằng hai tay, đọc lại một lượt để đối chiếu chữ nghĩa, rồi sao thêm một bản vào cuốn sổ tay riêng của Giới Phòng như lệ thường — mọi việc hôm nay đều có hai bản. Khi sao tới dòng ghi tên người chết, cây bút của phó kiểm đi chậm hẳn lại, dù nét chữ vẫn đều. Ông ta là người của sổ sách, và sổ sách thì không biết đau; nhưng bàn tay cầm bút của ông ta, trong một thoáng rất ngắn, đã biết thay cho cả cuốn sổ. Không ai trong phòng nói gì về sự chậm lại ấy. Nó không được ghi vào bất cứ biên bản nào.",
+      "Giấy được nhấc lên, hơ qua hơi đèn cho mực khô, rồi đặt vào xấp hồ sơ đã hoàn tất. Từ giờ phút ấy, trong mọi sổ sách của nhà họ Hứa và của Giới Phòng, Hứa Tiểu Lan đã chết. Nghiêm nhìn tờ giấy một lúc, gật đầu rất khẽ — cái gật đầu của người vừa thanh toán xong một món nợ mười hai năm. Rồi ông ta cho người đưa 'người bệnh vô danh' về phòng trong, và quay sang phần việc tiếp theo của buổi kiểm tra như không có chuyện gì vừa xảy ra.",
+      "Cao Minh không động đậy trong suốt buổi ký. Hắn ngồi yên, nhìn từng khuôn mặt, từng bàn tay, từng nét bút — và ghi nhớ tất cả, theo đúng cái cách mà Giới Phòng vẫn tự hào: không sót một chi tiết nào, không tha một chi tiết nào. Chỉ đến khi tờ giấy đã khô mực, hắn mới nói một câu, không lớn, nhưng rõ đến mức phó kiểm đang ghi chép cũng phải ngừng bút."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Thầy Sáu, mời thầy ngồi. Giấy đã viết sẵn, thầy chỉ việc ký tên và điểm chỉ như mọi kỳ. Mười hai kỳ trước thầy ký chứng bệnh. Kỳ này, thầy ký chứng tử. Ký xong kỳ này, từ nay thầy không còn phải tới đây nữa. Đó cũng là một cách nhà này trả ơn thầy hai mươi năm qua."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Dạ… thưa ngài… tôi… hai mươi năm hành nghề, tôi ký giấy cho người chết nhiều rồi. Nhưng người chết thì người ta nằm yên cho tôi ký. Còn cô… cô ấy đang ngồi kia, cô ấy đang nhìn tôi…"
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Thầy nhìn lầm rồi. Trong phòng này không có cô nào cả. Chỉ có một người bệnh vô danh mà nhà này giữ hộ. Thầy cứ ký cho đúng phép. Phép thì không có mắt, thầy ạ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa thầy, thầy cứ ký đi. Tay thầy run, tôi thấy được. Người ta bắt thầy ký, cũng như người ta bắt tôi ngồi đây. Tôi không trách thầy đâu."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Cô ơi… tôi… cô tha cho tôi…"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Khoan. Trước khi mực khô, bổn tọa nói một câu để các ngươi ghi vào trí nhớ, vì sổ của các ngươi không có mục nào ghi được câu này: người còn sống."
+      }
+    ],
+    "choices": [
+      {
+        "id": "hold_back",
+        "text": "Ngồi yên đến cùng, ghi nhớ từng khuôn mặt và từng nét bút — sự trả thù của bổn tọa không nằm ở buổi hôm nay.",
+        "next": "lh_lan_faces",
+        "effects": {
+          "cluesHuaGiaDelta": 2
+        }
+      },
+      {
+        "id": "speak_record",
+        "text": "Nói câu ấy cho cả phòng nghe và nhìn thẳng Nghiêm: một người còn sống vừa bị các ngươi ký giấy giết chết.",
+        "next": "lh_lan_faces",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        }
+      }
+    ]
+  },
+  "lh_lan_faces": {
+    "id": "lh_lan_faces",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Đối diện",
+    "backgroundId": "long-hai-saloon",
+    "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
+    "narration": [
+      "Sau khi tờ giấy khai tử đã vào hồ sơ, buổi kiểm tra còn một mục chót, ghi trong trát bằng mấy chữ khô khốc: đối chiếu người bệnh. Đây là mục mà cả đoàn kiểm tra đều muốn làm cho qua thật nhanh, vì nó là mục duy nhất trong buổi hôm nay không thể làm bằng giấy. Nàng được đưa trở lại phòng khách — lần này không phải để ngồi bên lề, mà để đứng giữa phòng, dưới ánh đèn, cho những người vừa ký giấy giết nàng được nhìn nàng cho rõ. Nàng đứng thẳng, áo bà ba trắng đã cũ nhưng sạch, tóc chải gọn, hai tay buông xuôi. Một người con gái mười tám tuổi đứng giữa một phòng đầy đàn ông và giấy tờ, bình tĩnh như đang đứng trong sân nhà mình ngày Tết.",
+      "Nghiêm chủ trì mục này bằng đúng phép tắc của ông ta. Ông ta không hỏi nàng. Ông ta hỏi quản gia về nàng, từng câu một, như hỏi về một món đồ trong kho: người bệnh ăn uống thế nào — dạ, cháo loãng ngày hai bữa. Ngủ có yên không — dạ, ngủ nhiều, có khi ngủ suốt ngày không dậy. Có nói năng gì lạ không — dạ, thưa, ít nói, hỏi gì đáp nấy, không quấy phá. Mỗi câu trả lời đều được phó kiểm ghi vào biên bản. Trong biên bản ấy, nàng hiện lên như một thân thể biết ăn biết ngủ và không gây phiền hà cho ai — một vật chủ hoàn hảo, một món đồ không có ý kiến. Cao Minh ngồi nghe, và thấy rõ hơn bao giờ hết cái cách mà căn nhà này giết người: không phải bằng dao, mà bằng cách nói về họ như thể họ không có mặt trong phòng.",
+      "Trong phòng, ngoài đoàn kiểm tra, còn có những người phải đứng dự vì phận sự: hai gia nhân nam đứng hai bên cửa, mắt nhìn xuống đất theo đúng phép; cô hầu bưng khay nước đứng ở góc phòng, là người duy nhất trong số gia nhân dám thỉnh thoảng ngước lên nhìn cô chủ của mình bằng ánh mắt của một con người nhìn một con người. Ở dãy ghế bên, bà Năm Liên không có mặt — bà đã bị giữ lại ở khu nhà trong với lý do 'người bệnh cần yên tĩnh', một sự vắng mặt được sắp đặt để buổi đối chiếu này không có lấy một người nào đứng về phía cô gái đang đứng giữa phòng. Cao Minh nhận ra sự sắp đặt ấy và ghi nhớ nó như ghi nhớ một tội chứng khác: họ sợ cả một bà già.",
+      "Rồi Nghiêm làm một việc không ai ngờ tới. Có lẽ vì phép tắc của Giới Phòng đòi hỏi mọi mục đều phải khép kín, ông ta quay sang nàng và hỏi trực tiếp — câu hỏi duy nhất trong cả buổi hôm nay được đặt cho chính nàng, và cũng là câu hỏi tàn nhẫn nhất, dù ông ta hỏi bằng giọng hoàn toàn vô tư của người đọc một mục trong danh sách: 'Cô có tên không?'",
+      "Một chi tiết nhỏ nữa không qua được mắt hắn: cô hầu bưng khay ở góc phòng, khi nàng đi ngang qua, đã rất khẽ — khẽ tới mức chỉ người trong nhà mới hiểu — nghiêng khay sang một bên nhường lối, đúng như cách gia nhân vẫn nhường lối cho cô chủ trong những ngày thường, trước mặt cả đoàn kiểm tra. Một phép tắc bé nhỏ, và là một sự phản kháng bé nhỏ.",
+      "Căn phòng yên lặng hẳn. Quản gia cúi đầu. Phó kiểm ngừng bút giữa chừng. Thầy thuốc Sáu, ngồi ở góc phòng với chiếc cặp ôm trong lòng, ngẩng lên nhìn nàng bằng đôi mắt đỏ hoe của một người vừa ký tên mình vào tội lỗi và giờ phải ngồi xem nốt hậu quả của nó. Nàng im lặng một lúc lâu — lâu đến mức Nghiêm khẽ nhíu mày, chuẩn bị ghi vào biên bản hai chữ 'không đáp' — rồi nàng trả lời, giọng nhỏ, đều, đúng mực, là câu trả lời mà căn nhà này đã dạy nàng suốt mười một năm:",
+      "Nàng nói: người bệnh thì không cần tên. Nghiêm gật đầu, thỏa mãn như người vừa đóng được nắp một cái hòm, và ra hiệu ghi vào biên bản. Nhưng Cao Minh thấy — chỉ mình hắn thấy, vì chỉ mình hắn đang nhìn nàng bằng cả thần niệm — rằng trong khoảnh khắc nàng cúi đầu sau câu trả lời, đôi môi nàng đã mấp máy thêm một lần nữa, không thành tiếng, tự nói với chính mình như người ta lẩm nhẩm một bài kinh giữ mạng: tên của nàng, nàng vẫn còn thuộc. Căn nhà này lấy được tiếng nói của nàng trước mặt người đời, nhưng chưa lấy được tiếng nói nàng dành cho chính nàng.",
+      "Khi mục đối chiếu kết thúc, hai gia nhân đưa nàng ra khỏi phòng khách để về gian trong. Hàng người trong phòng tự động dạt ra nhường lối. Nàng đi qua dãy ghế, qua chiếc bàn đầy hồ sơ, qua ông thầy thuốc đang cúi gằm mặt — và khi đi ngang chiếc ghế của Cao Minh, ở khoảng cách của một hơi thở, không dừng bước, không quay đầu, nàng nói một câu rất khẽ, khẽ tới mức trong căn phòng đầy người ấy chỉ có một người nghe được. Nàng xưng tên mình. Đầy đủ. Rõ ràng. Có họ, có tên, có cả tên người mẹ đã sinh ra nàng — như một người đọc lại gia phả của chính mình từ một cuốn sách mà không một nét mực nào gạch nổi.",
+      "Ngòi bút của phó kiểm khựng lại nửa nhịp — ông ta hình như vừa nghe thấy một tiếng gì đó rất nhỏ, như tiếng lá chạm vào cửa sổ. Nghiêm ngẩng lên, nhìn về phía nàng đang đi khuất qua khung cửa, rồi nhìn sang Cao Minh. Cao Minh ngồi yên, mặt bình thản như mặt nước không gió, tay đặt trên gối, không một biểu cảm nào để ghi vào sổ. Hai người đàn ông nhìn nhau qua chiếc bàn đầy giấy tờ. Rồi Nghiêm cúi xuống trước, tiếp tục buổi làm việc của mình — nhưng Cao Minh biết, từ giây phút ấy, trong cuốn sổ tay riêng của người chủ Giới Phòng, có một mục vừa bị ghi thêm mà ông ta chưa biết phải ghi vào cột nào."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Mục chót: đối chiếu người bệnh. Quản gia, người bệnh ăn uống thế nào?"
+      },
+      {
+        "speaker": "Quản gia",
+        "text": "Dạ, thưa ngài, cháo loãng ngày hai bữa, thuốc thang đủ kỳ, không bỏ bữa nào."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Có nói năng gì không? Có quấy phá gì không?"
+      },
+      {
+        "speaker": "Quản gia",
+        "text": "Dạ, thưa, cô… người bệnh ít nói lắm. Hỏi gì đáp nấy. Mười mấy năm nay không gây một điều phiền hà nào cho nhà."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Tốt. Còn một điều theo phép tôi phải hỏi cho đủ mục. Cô — cô có tên không?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, người bệnh thì không cần tên. Ở nhà này, tôi chỉ là người bệnh thôi."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Ghi vào: người bệnh không có tên, không tự xưng tên. Mục đối chiếu xong. Đưa người bệnh về phòng trong."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Hứa Tiểu Lan. Con gái của Lâm Ngọc Chi. Tên của tôi, thưa ngài, tôi vẫn còn nhớ."
+      }
+    ],
+    "choices": [
+      {
+        "id": "let_her",
+        "text": "Để nàng tự mình đi qua buổi đối chiếu này — không đỡ lời, không che chắn. Nàng đã làm được, bằng chính sức của nàng.",
+        "next": "lh_move_tonight",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 2
+        }
+      },
+      {
+        "id": "shield_her",
+        "text": "Đáp thay câu hỏi sau cùng của Nghiêm để kéo sự chú ý của cả phòng về phía bổn tọa, cho nàng được đi qua nhẹ nhàng hơn.",
+        "next": "lh_move_tonight",
+        "route": {
+          "id": "bao_ho",
+          "delta": 2
+        }
+      }
+    ]
+  },
+  "lh_move_tonight": {
+    "id": "lh_move_tonight",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Lệnh chuyển đi",
+    "backgroundId": "long-hai-corridor",
+    "location": "Hành lang biệt thự Hứa Gia, Long Hải",
+    "companions": [
+      "npc_servant_elder"
+    ],
+    "narration": [
+      "Buổi kiểm tra chưa kịp tan thì lệnh mới đã tới. Một người đưa tin của Giới Phòng phóng ngựa từ đường cái quan vào sân, áo đẫm mồ hôi, tay giữ một ống tre đựng công văn dán kín hai đầu bằng sáp đỏ. Quản gia đón lấy bằng cả hai tay, đưa thẳng vào phòng khách không dám mở. Nghiêm tự tay bẻ sáp, rút ra một tờ lệnh ngắn — ngắn hơn mọi tờ giấy khác trong buổi hôm nay, và nặng hơn tất cả. Ông ta đọc một lượt, gấp lại, rồi tuyên bố bằng giọng điểm việc thường ngày: lệnh của ông chủ, hạn trăng rằm cũ bãi bỏ. Việc chuyển đi làm ngay đêm nay.",
+      "Người đưa thư thứ hai được phái đi ngay sau đó, về hướng bến tàu, mang theo một trát khác niêm kín: giữ một chiếc ghe lớn neo sẵn từ nửa đêm, không hỏi lý do. Chi tiết ấy cho hắn biết thêm một điều: đoàn chuyển đi đêm nay không chỉ có xe — chúng đã chuẩn bị cả đường thủy dự phòng, như thể chúng đã tính trước rằng con đường bộ có thể không dùng được.",
+      "Theo tờ lệnh ấy, đúng canh ba đêm nay, một chiếc xe kín mui cùng sáu người hộ tống từ phía Tây Viện sẽ tới cổng biệt thự. Người bệnh — mà từ trưa nay, trên giấy tờ, đã là một người chết — sẽ được đưa lên xe như người ta đưa một quan tài chưa đóng nắp về nơi an táng. Mọi giấy tờ đã đủ: giấy chứng tử ký lúc giờ Ngọ, biên bản đối chiếu ký lúc xế chiều. Trên đường đi, nếu có ai hỏi, đoàn xe chỉ việc chìa giấy ra: nhà họ Hứa đang đưa người chết về quê. Không một trạm gác nào, không một quan chức nào, không một người quen nào có quyền mở mui xe ra nhìn vào trong.",
+      "Cao Minh đứng ở hành lang ngoài phòng khách, nghe qua cánh cửa khép hờ từng chữ của bản lệnh được đọc lại cho quản gia ghi chép. Hắn tính lại thời gian trong đầu như tính một nước cờ vừa bị đối thủ đi trước: kế hoạch của hắn cần thêm một ngày nữa — một ngày để bản đồ điểm neo được kiểm lại, để đường ra bến được dò lần chót, để nàng được ngủ một đêm tử tế trước chuyến đi dài nhất đời nàng. Nay cái ngày ấy bị cắt mất. Đêm nay, hoặc là họ đưa nàng đi theo cách của họ, hoặc là hắn đưa nàng đi theo cách của hắn — và giờ giấc không còn do hắn chọn nữa, mà do canh ba quyết định.",
+      "Hắn xếp lại những việc còn phải xong trước canh ba trong đầu, việc nào việc nấy rõ như các mục trong chính sổ sách của kẻ thù: chiếc hộp của bà Năm Liên phải tới tay nàng; chiếc rương ở kho thuốc phải được mở trước khi đoàn xe tới — vì sau canh ba, kho thuốc sẽ là nơi đầu tiên bị niêm phong lại khi có biến; bản đồ điểm neo phải đi lại một lượt chót bằng thần niệm; và Thu Nguyệt phải được dặn dò vị trí của mình trong đêm. Bốn việc, chưa đầy hai canh giờ. Hắn đã từng chỉ huy những trận đánh có trăm vạn quân và ít thời gian hơn thế này. Nhưng chưa có trận nào mà cái giá của một bước chậm lại là một cô gái bị đưa đi như một cái xác, về một nơi mà hắn chưa từng đặt chân tới.",
+      "Nhưng tin tức trong căn nhà này không chỉ chạy theo đường giấy. Trước khi quản gia kịp bước ra khỏi phòng khách, ở gian phòng trong cùng, Tiểu Lan đã biết. Nàng nghe thấy nó — không phải qua vách tường, mà qua cái mạng vô hình đang căng lên trong thân thể nàng như một sợi dây đàn bị lên dây quá mức: cả tòa nhà vừa nhận được một mệnh lệnh mới, và mệnh lệnh ấy đi qua người nàng trước khi tới tai bất cứ gia nhân nào. Các điểm neo trong nhà bắt đầu giật đều hơn, nhanh hơn, như một trái tim vừa nghe tin dữ. Nàng ngồi dậy trên giường, ôm lấy hai vai mình, và chờ — chờ một người duy nhất trong nhà này sẽ tới nói cho nàng biết bằng lời của con người, thay vì bằng những sợi chỉ trong máu.",
+      "Người tới phòng nàng trước tiên lại là Thu Nguyệt. Cô được giao một việc mà quản gia nói ra nhẹ như giao việc quét sân: chuẩn bị vải liệm và dây buộc cho 'người chết' — để tới canh ba, khi xe tới, mọi thứ đã sẵn sàng theo đúng nghi thức của một đám đưa tang. Cô ôm bó vải trắng đứng ở cửa phòng nàng một lúc lâu, không dám bước vào, mặt cắt không còn giọt máu. Rồi, thay vì đi lo việc được giao, cô chạy thẳng tới tìm Cao Minh ở hành lang — lần đầu tiên trong đời làm gia nhân của mình, cô bỏ một mệnh lệnh giữa chừng để đi báo một tin mà cô biết là sẽ giết nàng nếu tới tai nàng qua đường khác.",
+      "Hành lang chạng vạng tối nhanh. Đèn dầu được thắp sớm hơn lệ thường — không phải vì trời tối, mà vì cả nhà phải 'lo liệu cho xong việc đêm nay'. Cao Minh nhìn dãy đèn cháy đều hai bên hành lang, nhìn những bóng gia nhân đi lại nhanh hơn, lặng hơn thường ngày, và biết rằng từ giờ phút này, mỗi canh giờ trôi qua là một vòng dây siết thêm quanh cổ tất cả những người trong nhà mà hắn đã học thuộc tên. Hắn quyết định rất nhanh, theo cái cách hắn vẫn quyết định mọi việc hệ trọng trong đời: không bàn, không dền dứ — chỉ dời giờ hành động lên trước mũi đối thủ một bước."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Quản gia",
+        "text": "Dạ, thưa ông, lệnh trên mới về: đêm nay canh ba, xe của Tây Viện tới đón… đón người đi. Nhà con phải lo liệu vải vóc, giấy tờ cho xong trước giờ ấy. Ông là khách, xin ông cứ yên giấc trong phòng, đêm nay nhà có việc tang, không tiện tiếp đãi."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa ông… em không dám giấu ông. Họ biểu em chuẩn bị vải liệm cho cô. Vải liệm, thưa ông! Cô còn sống mà họ biểu em may vải liệm. Em chạy tới đây, em bỏ việc giữa chừng — ông liệu mà tính, chớ để tới canh ba thì không còn kịp nữa đâu."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngươi làm đúng. Từ giờ, việc của ngươi không phải là may vải liệm. Việc của ngươi là nhớ cho kỹ: xe tới cổng lúc canh ba, thì chúng ta đi khỏi nhà này trước đó một canh giờ. Không đi bằng cổng chính. Không theo đường của chúng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi đã nghe rồi. Cả căn nhà này vừa rung lên một lượt, như người ta rung một tấm lưới. Đêm nay, phải không thưa ngài? Đêm nay họ đưa tôi đi — hay là… đêm nay ngài đưa tôi đi?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đêm nay bổn tọa đưa nàng đi. Nhưng còn mấy việc phải xong trước giờ ấy. Nàng ở yên trong phòng, nghe lời bà Năm Liên. Dù nghe thấy gì ngoài hành lang, cũng không được ra."
+      }
+    ],
+    "choices": [
+      {
+        "id": "move_dusk",
+        "text": "Dời giờ hành động lên chạng vạng: đi trước xe hộ tống một canh giờ, theo đường đã dò từ trước.",
+        "next": "lh_so_retrieval",
+        "effects": {
+          "lanTrustDelta": 1,
+          "cluesHuaGiaDelta": 1
+        }
+      },
+      {
+        "id": "use_their_carriage",
+        "text": "Tính nước cờ ngược: dùng chính chiếc xe tang và tờ giấy chứng tử của chúng làm vỏ bọc để ra khỏi cổng.",
+        "next": "lh_so_retrieval",
+        "route": {
+          "id": "nghi_le",
+          "delta": 2
+        }
+      }
+    ]
+  },
+  "lh_so_retrieval": {
+    "id": "lh_so_retrieval",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Mảnh sổ thứ nhất",
+    "backgroundId": "long-hai-corridor",
+    "location": "Kho thuốc, biệt thự Hứa Gia, Long Hải",
+    "companions": [
+      "le_thu_nguyet"
+    ],
+    "narration": [
+      "Trong lúc phòng khách còn đang bận rộn với giấy tờ chuyển giao, Thu Nguyệt dẫn Cao Minh vòng qua sân bếp tới kho thuốc ở dãy nhà ngang — nơi hắn chưa từng bước vào. Cô đi trước, tay cầm một chiếc đèn nhỏ che gần hết ánh sáng, bước chân thuộc lòng từng phiến gạch gồ. Kho thuốc mở ra sau một cánh cửa gỗ lim nặng: mùi dược liệu khô xộc lên, đăng sâm, xuyên khung, bạch truật, và bên dưới tất cả là cái mùi đắng lạ hắn đã ngửi thấy một lần trong khay thuốc của Thu Nguyệt — mùi của đất sâu và nước ngầm, thứ không thuộc về bất cứ vị thuốc nào. Hai dãy tủ trăm ngăn kéo chạy dài theo tường, trên mỗi ngăn là một nhãn chữ Hán viết tay đã ngả vàng.",
+      "Chiếc rương nằm ở góc trong cùng, dưới mấy bao tải dược liệu khô chất chồng. Đó là rương thuốc theo hầu cô chủ từ Tây Viện sang ngày nàng được đưa về Long Hải — một chiếc rương gỗ cẩm lai nẹp đồng, khóa đồng đã xanh, và trên nắp còn nguyên dấu niêm phong bằng sáp của Giới Phòng từ ngày nó được chở vào nhà này. Suốt mười mấy năm, không ai trong biệt thự được phép mở nó; nó nằm đó như một món đồ của người chết — mà thật ra, đối với căn nhà này, chủ nhân của nó đã chết trên giấy từ lâu rồi, chỉ là đến hôm nay giấy tờ mới theo kịp sự bịa đặt ấy.",
+      "Thu Nguyệt lấy từ trong tay áo ra một tờ giấy đã mềm vì gấp nhiều lần: bản sao tờ danh sách đóng gói của chiếc rương, thứ cô đã lén chép và dúi cho bà Năm Liên giữ từ mấy hôm trước, và bà vừa trao lại cho cô sáng nay với một câu dặn duy nhất. Thu Nguyệt trải tờ giấy lên nắp rương, tay run đến mức phải đè cả hai tay xuống mới giữ yên được. Cô nói, giọng đứt quãng: danh sách này không viết bằng chữ thường. Nó viết bằng ký hiệu tính toán của dân thương hồ Chợ Lớn — thứ ký hiệu cô học lỏm được hồi còn chạy việc ở bến tàu, trước khi bị đưa vào nhà này. Mỗi dòng là một món đồ và số cân lạng của nó, ký hiệu nào cũng có nghĩa — trừ một dòng.",
+      "Dòng ấy kê: 'sơn tra khô, ba cân'. Thu Nguyệt nói, trong rương thuốc theo hầu một cô chủ bệnh phong, không bao giờ có sơn tra khô — đó là thứ quả rẻ tiền bán ngoài chợ cho trẻ con ăn vặt, không phải thuốc. Và ký hiệu ghi số lượng của dòng ấy cũng không giống các dòng khác: thay vì ký hiệu cân lạng, nó là một chuỗi chấm và vạch mà dân thương hồ chỉ dùng khi cần ghi một điều không muốn cho người ngoài đọc được. Cô đọc chậm rãi, môi mấp máy đếm từng chấm: chuỗi ký hiệu ấy không nói về số lượng. Nó nói về một vị trí — ngăn thứ ba từ dưới lên, phía sau lớp lót, bên tay trái khi mở rương. Nói cách khác: nhiều năm về trước, có một người đã dùng chính bản danh sách đóng gói của chiếc rương này để giấu đi đường tới một thứ nằm trong rương — và người viết được lối ký hiệu thương hồ ấy, theo lời bà Năm Liên, là một cô bé mới mười mấy tuổi, viết trong những ngày cuối cùng trước khi bị đưa khỏi Tây Viện.",
+      "Cao Minh tự tay bẻ dấu niêm phong. Trong rương, các gói dược liệu xếp ngay ngắn theo đúng danh sách, khô và giòn sau mười mấy năm. Hắn luồn tay vào sau lớp lót phía tay trái, ở ngăn thứ ba từ dưới lên, và chạm vào một gói vải dầu mỏng, dẹt, được khâu kín bằng một đường chỉ đều đặn. Hắn rạch lớp vải dầu bằng đầu ngón tay. Bên trong là mấy tờ giấy gấp tư, giấy đã ngả màu nhưng chữ còn rõ: một bản kê viết tay bằng nét chữ thư lại, có đóng dấu triện của Giới Phòng ở cuối mỗi trang — cùng một con dấu, cùng một nét triện mà hắn vừa nhìn thấy trên bàn kiểm tra cách đây một canh giờ.",
+      "Bản kê ấy là một danh sách. Cột thứ nhất là tên người — tên của những đứa trẻ được 'tiếp nhận' ở Tây Viện trong mấy năm liền, đứa nhỏ nhất mới lên sáu. Cột thứ hai ghi tuổi và quê quán. Cột thứ ba ghi những ký hiệu hắn chưa đọc được hết, nhưng đoán được là ký hiệu phân loại của nhà họ Hứa dành cho những đứa trẻ ấy. Và ở trang cuối cùng, kẹp riêng như một phụ lục, là bản sao của một tờ lệnh chuyển đi cũ: lệnh đưa một cô gái từ Tây Viện về biệt thự Long Hải để 'dưỡng bệnh', có đủ chữ ký, đủ triện — con đường của chính nàng, được ghi lại bằng giấy tờ, từng chặng một. Đây là mảnh thứ nhất của cuốn Sổ mà nàng đã xé ra và giấu đi khắp nơi khi còn là một đứa trẻ — không phải phép thuật, không phải bùa chú. Là bằng chứng. Là tên người, ngày tháng, và con dấu của chính những kẻ đã làm việc ấy.",
+      "Cao Minh không đọc hết ngay tại chỗ. Hắn nhìn Thu Nguyệt đang đứng chết lặng nhìn danh sách những cái tên — có thể trong đó có những cái tên cô từng biết mặt. Hắn gấp các tờ giấy lại theo đúng nếp gấp cũ, bọc lại trong vải dầu, và cất vào trong áo, sát ngực. Rồi hắn niêm phong lại chiếc rương bằng chính dấu sáp đã bẻ — không, hắn không niêm lại được, và cả hai đều biết: từ giờ, chiếc rương trống này là một cái đồng hồ đếm ngược khác. Khi có người phát hiện dấu niêm đã bị bẻ, căn nhà này sẽ biết có kẻ đã lấy được thứ nó giấu kín nhất. Nhưng đến lúc ấy — nếu mọi việc đúng kế — thì người và bằng chứng đều đã ở ngoài cổng."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa ông, dòng này… dòng này không phải kê thuốc đâu. Sơn tra khô thì trị bệnh gì cho cô được? Mà ký hiệu số lượng của nó… em chạy việc ở bến Chợ Lớn hai năm, em nhận ra: đây là ký hiệu ghi chỗ, không phải ghi cân. Ngăn thứ ba… phía sau lớp lót… bên tay trái. Thưa ông, là có người giấu đồ trong rương, rồi ghi lại chỗ giấu bằng chính tờ danh sách này."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Người viết tờ danh sách này năm ấy bao nhiêu tuổi?"
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ… bà Năm Liên nói, hồi rương này đóng ở Tây Viện, cô chủ mới mười một, mười hai. Thưa ông, một đứa nhỏ mười mấy tuổi mà đã biết… biết giấu một thứ như vầy, và viết ra được một tờ giấy mà mười mấy năm sau đọc lại vẫn dẫn tới nơi…"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng không giấu đồ chơi. Nàng giấu bằng chứng. Từ năm mười mấy tuổi, nàng đã biết nhà này sẽ chối — nên nàng để lại giấy tờ cho một người chưa từng gặp, ở một ngày chưa từng biết. Cô nương, giữ chặt tờ danh sách. Nó cũng là bằng chứng."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa ông, trong danh sách này… em đọc mấy cái tên đầu. Có đứa mới sáu tuổi. Sáu tuổi, thưa ông. Em xin ông — ông mang được tờ này ra ngoài, thì mang. Để ở đây, sớm muộn họ cũng đốt hết."
+      }
+    ],
+    "choices": [
+      {
+        "id": "read_now",
+        "text": "Đọc kỹ bản kê ngay tại chỗ, ghi nhớ từng cột, từng con dấu — bằng chứng phải được hiểu trước khi được mang đi.",
+        "next": "lh_ngoc_chi_keepsake",
+        "effects": {
+          "cluesHuaGiaDelta": 3
+        }
+      },
+      {
+        "id": "seal_first",
+        "text": "Niêm phong gói giấy vào trong áo ngay, không đọc thêm — đêm nay thời gian quý hơn sự tò mò.",
+        "next": "lh_ngoc_chi_keepsake",
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanTrustDelta": 2
+        }
+      }
+    ]
+  },
+  "lh_ngoc_chi_keepsake": {
+    "id": "lh_ngoc_chi_keepsake",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Vật lưu của người mẹ",
+    "backgroundId": "long-hai-corridor",
+    "location": "Buồng nhỏ của bà Năm Liên, khu gia nhân, biệt thự Long Hải",
+    "companions": [
+      "ba_nam_lien"
+    ],
+    "narration": [
+      "Bà Năm Liên đợi hắn ở buồng nhỏ của bà ở khu gia nhân — một căn buồng vừa đủ kê một chiếc chõng tre, một rương gỗ nhỏ và một bàn thờ con trên vách, nơi chỉ có một bát hương và một tấm bài vị không khắc chữ, chỉ khắc một đóa lan. Bà đóng cửa lại, cài then, rồi quỳ xuống bên chõng, lật tấm ván thứ ba từ trong ra — tấm ván bà đã lật như thế không biết bao nhiêu lần trong mười một năm qua, đến mức mép gỗ mòn bóng. Dưới ván là một chiếc hộp gỗ sơn then, bọc trong hai lớp vải thô đã mục, mà bà nâng lên bằng cả hai tay như nâng một đứa trẻ đang ngủ.",
+      "Bà kể, và khi bà kể tới những năm tháng ấy, giọng bà đổi khác — không còn là giọng của một người hầu đang thưa trình, mà là giọng của một người đàn bà già đang mở ra phần đời mình đã chôn kín nhất. Bà theo hầu nhị phu nhân Lâm Ngọc Chi từ ngày phu nhân về làm dâu nhà họ Hứa. Phu nhân là người thế nào, bà không cần kể dài: chỉ một điều thôi — phu nhân ký tên vào sổ sách nhà chồng luôn tự tay mình viết, không bao giờ cho người làm viết thay, và nói rằng tên của một người là thứ duy nhất người ấy dùng để tự xưng với trời đất. Một người đàn bà như thế, bà nói, khi bắt đầu giấu đồ vào những chỗ không ai ngờ tới, thì cả nhà nên biết là bà đã nhìn thấy trước một điều gì rất xấu đang tới.",
+      "Năm Tiểu Lan lên bảy, mọi thứ đổi khác. Bà không kể hết — có những đoạn bà chỉ lắc đầu, nói rằng người chết rồi thì để họ yên, và người sống thì chưa tới lúc phải biết. Chỉ biết rằng trong những ngày cuối cùng còn được gần con gái, phu nhân làm hai việc rất lạ. Việc thứ nhất: bà giấu một thứ gì đó — một phần của thứ mà sau này người ta gọi là cuốn Sổ — vào 'nơi con bé hay trốn', một chỗ trốn của trẻ con trong tòa nhà cũ ở Chợ Lớn, nơi cô bé Lan hay chui vào đọc sách một mình mỗi khi nhà có khách. Việc thứ hai: bà soạn chiếc hộp này, và trao nó cho bà Năm Liên trong một đêm không đèn, với lời dặn mà bà lão thuộc lòng như thuộc kinh.",
+      "Trong hộp, đặt trên một lớp vải lụa đã ngả màu, là hai thứ. Thứ nhất: một tờ giấy viết tay của chính phu nhân — chữ viết chậm, đều, đẹp, là một đoạn như thư mà như ghi chép, mở đầu bằng tên con gái mình viết đầy đủ cả họ lẫn tên. Bà Năm Liên nói, phu nhân viết tờ này không phải để gửi ai: bà viết để làm mẫu — mẫu chữ của bà, để sau này, bất cứ thứ gì xưng là do bà để lại, đều phải đối chiếu với nét chữ này mà phân thật giả. Thứ hai: một vuông vải thêu nhỏ, đường kim mũi chỉ vụng về của một đứa trẻ lên sáu — một đóa lan thêu lệch, chỉ thừa thòi ra ở mặt sau. Đó là thứ đầu tiên Tiểu Lan tự tay thêu, và là dấu riêng của nàng trước khi nàng biết chữ ký là gì: hễ thứ gì là của nàng, nàng đều muốn đánh dấu bằng một đóa lan thêu tay của chính mình.",
+      "Bà đọc lại lời dặn của phu nhân, từng chữ một, bằng cái giọng của người đã giữ một câu nói suốt mười một năm như giữ một ngọn lửa trong tay áo: 'Sau này, nếu có người tới hỏi con gái tôi bằng đúng tên của nó, thì đưa hộp này cho người ấy. Và nói với người ấy: thứ tôi giấu, chỉ mở ra được khi thấy chữ của tôi đi cùng với dấu tay của con bé. Thiếu một trong hai, đừng tin.' Cao Minh nghe xong, im lặng một lúc lâu. Người đàn bà đã mất cách đây mười một năm ấy — một người hắn chưa từng gặp — hóa ra đã tính trước cả việc thế gian này sẽ có kẻ giả mạo di vật của bà để lừa con gái bà. Bà không để lại cho con mình một món đồ. Bà để lại cho nó một cách để phân biệt thật giả giữa một rừng dối trá.",
+      "Bà Năm Liên chắp tay, và lần đầu tiên trong buổi hôm ấy, bà khóc — khóc không thành tiếng, nước mắt chảy xuống theo những nếp nhăn đã sâu như rãnh. Bà nói bà giữ hộp này mười một năm, qua bốn đời quản gia, qua bao nhiêu kỳ ký giấy chứng bệnh, chưa từng hé với một ai, kể cả với chính cô chủ — vì phu nhân dặn: đưa sớm thì mất sớm. Bà đã chờ một người 'hỏi tới cô bằng đúng tên của cô' — và suốt mười một năm, trong căn nhà này, không một ai gọi cô gái ấy bằng tên của nàng. Cho tới khi có một người khách lạ bước vào, gọi nàng bằng cả họ lẫn tên, và ngồi xuống ngang tầm mắt nàng mà nói chuyện.",
+      "Bà đẩy chiếc hộp về phía Cao Minh — nhưng không phải để hắn giữ. Bà xin hắn một việc: đêm nay, trước giờ đi, hắn hãy trao hộp này tận tay cô chủ, và nói với nàng rằng mẹ nàng đã sắp đặt việc này từ khi nàng còn nhỏ, rằng trên đời này đã từng có một người tính trước để bảo vệ nàng bằng cả cái chết của mình. 'Cô nó chưa từng được ai trao cho một thứ gì của mẹ nó,' bà nói. 'Đồ của phu nhân trong nhà này, họ đốt hết từ lâu rồi. Chỉ còn cái này, vì nó nằm dưới ván giường của một bà già không ai thèm để ý.'"
+    ],
+    "dialogue": [
+      {
+        "speaker": "Bà Năm Liên",
+        "text": "Dạ, thưa ông, hộp này là của nhị phu nhân gửi tôi giữ. Phu nhân mất năm cô chủ lên bảy. Trước đó ít lâu, phu nhân gọi tôi vào, trao hộp này, dặn đi dặn lại: sau này có người hỏi tới con gái tôi bằng đúng tên của nó, thì đưa. Mười một năm nay, thưa ông, tôi chờ hoài mà không thấy ai hỏi như vậy hết."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Trong hộp có gì, bà nói cho bổn tọa nghe trước khi bổn tọa nhận."
+      },
+      {
+        "speaker": "Bà Năm Liên",
+        "text": "Dạ, một tờ giấy chữ của phu nhân, viết tay đàng hoàng — phu nhân viết để làm mẫu chữ, phòng sau này có kẻ giả chữ của phu nhân mà lừa cô. Với một vuông vải, cô chủ thêu hồi lên sáu, thêu đóa lan, vụng lắm, chỉ thòi ra cả mặt sau. Phu nhân nói: thứ phu nhân giấu, chỉ mở khi thấy chữ của phu nhân đi cùng dấu tay của con bé. Thiếu một trong hai thì đừng tin, thưa ông."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Người mẹ ấy mất đã mười một năm, mà vẫn còn đang che chở cho con mình bằng một cái hộp giấu dưới ván giường. Bà giữ được nó mười một năm không hé một lời — bổn tọa thay mặt người đã khuất, cảm ơn bà."
+      },
+      {
+        "speaker": "Bà Năm Liên",
+        "text": "Dạ, ông đừng cảm ơn tôi. Tôi chỉ xin ông một điều: đêm nay ông trao hộp này tận tay cô, ông nói với cô là mẹ cô sắp đặt hết rồi. Cô nó lớn lên trong cái nhà này, ai cũng nói mẹ cô bỏ cô. Cô phải được biết — mẹ cô không bỏ cô ngày nào hết, thưa ông."
+      }
+    ],
+    "choices": [
+      {
+        "id": "take_box",
+        "text": "Nhận chiếc hộp, hứa sẽ trao tận tay nàng trước giờ đi và nói rõ từng lời bà dặn.",
+        "next": "lh_nghiem_offer",
+        "effects": {
+          "lanTrustDelta": 2,
+          "cluesHuaGiaDelta": 1
+        }
+      },
+      {
+        "id": "ask_hiding",
+        "text": "Hỏi thêm cho kỹ về 'nơi con bé hay trốn' mà phu nhân nhắc — manh mối cho một ngày rất xa sau này.",
+        "next": "lh_nghiem_offer",
+        "effects": {
+          "cluesHuaGiaDelta": 3
+        }
+      }
+    ]
+  },
+  "lh_nghiem_offer": {
+    "id": "lh_nghiem_offer",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Cái giá của Giới Phòng",
+    "backgroundId": "long-hai-exterior",
+    "location": "Sân trước biệt thự Hứa Gia, chạng vạng",
+    "narration": [
+      "Chạng vạng, khi Cao Minh vừa từ khu gia nhân trở ra sân trước, Phạm Đình Nghiêm đã đứng đợi ở đó — một mình, không phó kiểm, không gia nhân, đứng bên gốc cây sứ già ngoài sân với cuốn sổ nhỏ cất trong tay áo. Ông ta nói ngay lý do, không vòng vo: việc ông ta sắp nói đây không nằm trong biên bản nào, và ông ta xin nói như hai người đàn ông nói chuyện phải trái với nhau, ngoài sổ sách. Đây là lần đầu tiên trong ngày, Cao Minh nghe người chủ Giới Phòng xin một điều gì đó — và hắn hiểu, chính sự ngoài-lề ấy mới là phần việc quan trọng nhất của buổi kiểm tra hôm nay.",
+      "Cái giá được đưa ra rành rọt như một bản kê, đúng phong cách của người đàn ông ấy. Một: nếu Cao Minh giao nàng lại cho đoàn chuyển đi đêm nay, không chống cự, không gây chuyện, thì Giới Phòng cam kết bằng chính chữ ký của Phạm Đình Nghiêm — thứ duy nhất ông ta coi là nặng hơn vàng — rằng nàng về Tây Viện sẽ được ở một gian riêng, có người hầu hạ tử tế, thuốc thang đầy đủ, và trong vòng một năm, không một nghi lễ nào của Lục Môn được động tới nàng. Hai: toàn bộ gia nhân trong biệt thự này sẽ được gạch khỏi danh sách xét hỏi — những việc họ đã làm, những chậm trễ, những sơ suất, những lần 'không nghe lời' trong mấy ngày qua, Giới Phòng sẽ không ghi, không truy, kể cả việc của cô hầu Thu Nguyệt và bà già Năm Liên. Ba: Cao Minh ra đi với một rương vàng của nhà họ Hứa để làm lộ phí, và Giới Phòng sẽ quên khuôn mặt của hắn như chưa từng gặp.",
+      "Ông ta nói tiếp, và đây là phần khiến cái giá ấy trở nên khó từ chối hơn bất cứ lời đe dọa nào: ông ta tính cho Cao Minh nghe bài toán của một người giữ sổ. Một bên là một cô gái — đã chết trên giấy, thân thể bị một thứ không ai hiểu nổi chiếm giữ từng phần, mà ngay cả Cao Minh, theo lời ông ta dò hỏi được, cũng không dám hứa sẽ chữa khỏi. Một bên là bốn mươi bảy con người trong tòa nhà này, toàn những người Cao Minh đã nhìn thấy mặt, đã biết tên — người gác, người phu, bà bếp, cô hầu — những người sẽ phải trả giá đầu tiên nếu đêm nay có chuyện, vì Giới Phòng không bắt được kẻ mạnh thì sẽ ghi sổ lên đầu kẻ yếu. Ông ta hỏi: ông cứu một người mà làm hại bốn mươi bảy người, thì trong sổ của ông, món nợ ấy ghi vào đâu?",
+      "Khi nói tới rương vàng, Nghiêm làm một việc rất nhỏ mà chỉ một người làm nghề sổ sách mới làm: ông ta rút cuốn sổ tay riêng ra, mở tới một trang còn trống, và đặt nó lên bàn tay mình như một lời hứa chưa viết. 'Trang này,' ông ta nói, 'là trang tôi để dành cho việc đêm nay. Ông nhận lời, tôi ghi một cách. Ông không nhận, tôi ghi một cách khác. Nhưng dù ghi cách nào, tôi cũng ký tên tôi ở dưới. Ở Giới Phòng, không có việc gì quan trọng mà lại không có người ký tên chịu trách nhiệm — kể cả việc mua sự im lặng.'",
+      "Và rồi, nhẹ nhàng như đặt một con dấu, ông ta nói thêm một câu cho thấy người đàn ông này biết nhiều hơn những gì buổi kiểm tra đã lộ ra. Ông ta nói: trong nhà này, hôm nay đã có những thứ bị động vào. Có một dấu niêm phong không còn nguyên. Có những ngăn kéo đã mở ra rồi đóng lại không đúng nếp cũ. Ông ta chưa ghi những điều ấy vào sổ. Ông ta nói: 'Tôi chưa ghi, nghĩa là chúng chưa từng xảy ra. Nhưng tôi ghi hay không, là tùy ở câu trả lời của ông đêm nay.' Đó không còn là một lời đề nghị. Đó là một bàn tay đang nắm sẵn cán cân: một bên là sự im lặng của Giới Phòng về mọi việc đã xảy ra trong ngày, một bên là sự truy cứu đến từng người một.",
+      "Cao Minh đứng yên giữa sân nghe hết. Trời chạng vạng, đèn trong nhà lần lượt sáng lên sau lưng Nghiêm — từng ngọn, từng ngọn, đều đặn như mọi đêm, như thể căn nhà không hề biết rằng đêm nay là đêm cuối cùng của một thời kỳ. Hắn nhìn người đàn ông trước mặt: một kẻ ra giá bằng mạng người mà giọng nói không hề run, vì trong lòng ông ta, đây là một cuộc mua bán công bằng, thậm chí là nhân từ. Và Cao Minh hiểu rằng cái lồng mà Giới Phòng dọn sẵn cho nàng — gian phòng riêng ở Tây Viện, thuốc thang đầy đủ, một năm bình yên có chữ ký bảo đảm — là một cái lồng êm ái thật sự. Êm đến mức, nếu nàng nghe được, có thể chính nàng cũng sẽ phải nghĩ ngợi. Đó mới là chỗ đáng sợ nhất của lời đề nghị này: nó không dối trá một chữ nào."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Thưa ông, tôi nói ngoài sổ sách, chỉ một lần này. Đêm nay, ông giao cô ta lại cho đoàn xe. Đổi lại, tôi lấy tên tôi ra mà bảo đảm: về Tây Viện, cô ta ở gian riêng, hầu hạ tử tế, một năm không nghi lễ nào động tới. Bốn mươi bảy người làm trong nhà này, việc hôm nay tôi không ghi một chữ. Còn ông, nhà họ Hứa gửi ông một rương vàng lộ phí. Ông đi đường ông, tôi làm sổ của tôi, cô ta sống yên phần cô ta. Ba bên đều có lợi, thưa ông."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngươi ra giá rất rành rọt. Chỉ có một điều ngươi tính thiếu: ngươi đang ra giá cho một người không thuộc về ngươi, với một người không có quyền bán nàng."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Tôi không mua bán ai cả. Tôi đang dọn một con đường ít đổ máu nhất cho tất cả mọi người. Ông tưởng tượng thử đêm nay của ông đi: ông đánh ra cổng, gia nhân của tôi — những người ông đã biết tên — sẽ phải đứng ra cản ông, vì đó là việc của họ trong sổ. Ông không nỡ giết họ, tôi biết. Vậy thì sẽ có người chết vì những việc ở giữa: chết vì chen lấn, vì ngã, vì những thứ trong người họ giật họ vào lưỡi kiếm của ông. Những cái chết ấy, ông ghi vào đâu?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngươi vừa nói một điều thật lòng hiếm có: ngươi biết bổn tọa không giết người vô tội. Ngươi đang dùng chính điều ấy làm dây trói bổn tọa."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Tôi dùng sự thật, thưa ông. Đó là nghề của tôi. Còn một sự thật nữa ông nên biết trước khi trả lời: hôm nay, trong nhà này, có dấu niêm bị động vào. Tôi chưa ghi. Ông trả lời khéo, thì tôi sẽ không bao giờ ghi. Ông trả lời dở… thì đêm nay, trước khi xe tới, tôi sẽ phải làm một cuộc điểm danh rất kỹ, bắt đầu từ kho thuốc."
+      }
+    ],
+    "choices": [
+      {
+        "id": "feign_weigh",
+        "text": "Gật đầu chậm rãi, nói cần nghĩ tới trước canh hai — câu giờ cho kế hoạch đêm nay, và để Nghiêm tin rằng cái giá của hắn đang có tác dụng.",
+        "next": "lh_refusal",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "nghi_le",
+          "delta": 2
+        }
+      },
+      {
+        "id": "shut_now",
+        "text": "Ngắt lời ngay tại sân: đừng ra giá nữa. Có những thứ, nghe hết câu đã là một sự xúc phạm đối với người bị ra giá.",
+        "next": "lh_refusal",
+        "route": {
+          "id": "bao_ho",
+          "delta": 2
+        }
+      }
+    ]
+  },
+  "lh_refusal": {
+    "id": "lh_refusal",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Lời từ chối",
+    "backgroundId": "long-hai-exterior",
+    "location": "Sân trước biệt thự Hứa Gia, chạng vạng",
+    "narration": [
+      "Một canh giờ sau, buổi làm việc được nhóm lại lần chót ở phòng khách, để Giới Phòng làm cho xong thủ tục sau cùng của một cuộc bàn giao: tờ biên bản. Phó kiểm đọc to từng điều khoản bằng giọng trịnh trọng — việc tiếp nhận người bệnh, việc chấm dứt trách nhiệm của biệt thự, việc xác nhận không còn khiếu nại nào giữa các bên — rồi đặt biên bản lên bàn, chừa một ô trống ở cuối trang, ghi sẵn hai chữ: người làm chứng. Theo phép của Giới Phòng, một cuộc bàn giao chỉ có giá trị khi có một người ngoài đứng ra làm chứng và ký tên. Và người ngoài duy nhất trong tòa nhà này, từ sáng tới giờ, chính là vị khách mà không cuốn sổ nào ghi nổi.",
+      "Nghiêm tự tay đẩy tờ biên bản về phía Cao Minh, cùng với cây bút đã chấm sẵn mực. Ông ta không nói lại cái giá ban chiều — người như ông ta không bao giờ ra giá hai lần. Ông ta chỉ nói: ký vào đây, thì mọi việc hôm nay đều thành việc đã có người chịu trách nhiệm; không ký, thì đêm nay sẽ là một đêm không ai chịu trách nhiệm cho ai cả, và những đêm như thế, trong kinh nghiệm mấy chục năm giữ sổ của ông ta, luôn là những đêm có người chết mà không ai biết ghi vào đâu. Đó là lời đe dọa cuối cùng, và cũng là lời thật lòng cuối cùng: người đàn ông này sợ sự hỗn loạn hơn sợ bất cứ điều gì, kể cả sợ cái chết.",
+      "Cao Minh cầm tờ biên bản lên. Hắn đọc nó từ đầu tới cuối, chậm rãi, đúng cái phép lịch sự mà cả buổi hôm nay hắn vẫn giữ — đọc như một người tôn trọng giấy tờ của đối thủ, dù sắp sửa xé bỏ giá trị của chúng. Đọc xong, hắn đặt tờ giấy xuống bàn, ngay ngắn, đúng vào vị trí cũ của nó, và đẩy cây bút trở lại phía Nghiêm bằng một ngón tay. Rồi hắn nói lời từ chối của mình — không lớn tiếng, không giận dữ, bằng cái giọng trầm và đều của một người đã nói là không bao giờ nói lại lần thứ hai.",
+      "Hắn nói: người còn sống không phải một món nợ để các ngươi thanh toán cho xong sổ. Cô gái trong gian phòng kia có tên, có mẹ, có một ý chí mà chính các ngươi cũng chưa lấy nổi — bằng chứng là mười một năm nay các ngươi vẫn phải canh giữ nàng như canh một tội nhân, chứ không phải cất nàng đi như cất một món đồ. Bổn tọa không ký vào sổ của các ngươi. Bổn tọa không làm chứng cho một cuộc bàn giao người như bàn giao một kiện hàng. Và cái giá ngươi ra lúc chạng vạng — vàng, sự im lặng, một năm bình yên — bổn tọa trả lại cả, không thiếu một phần. Từ giờ phút này, nếu Giới Phòng muốn lấy nàng, thì đừng nói chuyện giấy tờ với bổn tọa nữa. Cứ việc tới mà lấy, bằng cách của các ngươi.",
+      "Ở cửa phòng khách, một gia nhân trẻ đang đứng hầu trà nghe được hết những lời ấy qua cánh cửa khép hờ. Đôi tay bưng khay của cậu ta — đôi tay đã run suốt từ sáng vì những mệnh lệnh không phải của mình — bỗng yên lại được một lúc. Không phải vì cái mạng trong người cậu buông tha. Mà vì có một điều vừa xảy ra trong căn nhà này mà cậu chưa từng thấy trong mười mấy năm làm người ở: một người đã nói 'không' với Giới Phòng, nói rõ ràng, nói đến nơi đến chốn, và vẫn còn đứng vững ở đó sau khi nói. Cậu ta không biết điều ấy sẽ thay đổi được gì. Cậu chỉ biết, đêm nay, khi tới lượt đôi tay mình phải làm một việc gì đó, có thể chúng sẽ nhớ lại khoảnh khắc yên lại này.",
+      "Căn phòng lặng đi rất lâu. Phó kiểm ngồi chết trân với cây bút ghi chép trong tay, không biết có nên ghi lại những lời vừa rồi hay không — và ghi vào mục nào. Quản gia cúi đầu nhìn xuống chân mình. Chỉ có Nghiêm là không đổi sắc mặt. Ông ta thong thả cầm lấy tờ biên bản chưa ai ký, gấp làm tư, rồi mở cuốn sổ tay riêng của mình ra — cuốn sổ thứ hai, cuốn sổ không cho ai xem — và viết vào đó mấy dòng, ngay trước mặt Cao Minh, nét chữ chậm và rõ như khắc. Viết xong, ông ta ngẩng lên, và trong một khoảnh khắc rất ngắn, hai người đàn ông nhìn nhau với một thứ gần như là kính trọng: một người vừa nhận ra đối thủ của mình cũng là kẻ có nguyên tắc, chỉ là nguyên tắc ấy nằm ở phía bên kia của thế gian.",
+      "Nghiêm gấp sổ lại và đứng dậy. Ông ta nói, vẫn bằng giọng điểm việc: vậy thì Giới Phòng sẽ làm theo cách của Giới Phòng. Kể từ giờ này, biệt thự này đặt dưới sự phong tỏa của Giới Phòng cho tới khi việc chuyển đi hoàn tất: cổng khóa, người không ra vào, gia nhân về đúng vị trí trong sổ. Ông ta nói cảm ơn người khách đã ngồi dự suốt buổi, và rằng trong sổ của ông ta, ngày hôm nay sẽ được ghi là một ngày có một vị khách lạ từ chối ký tên — điều duy nhất trong mấy chục năm làm nghề mà ông ta chưa biết phải xếp vào loại nào. Rồi ông ta bước ra sân, và tiếng lệnh truyền đi dọc hành lang như một làn sóng lạnh."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Thưa ông, biên bản đã sẵn. Ông chỉ cần ký vào ô người làm chứng. Ký, thì đêm nay mọi việc đều có người chịu trách nhiệm. Không ký… thưa ông, tôi giữ sổ mấy chục năm, tôi sợ nhất là những việc không ai chịu trách nhiệm. Những việc ấy bao giờ cũng kết thúc bằng người chết không ai ghi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa đã đọc kỹ biên bản của ngươi. Giấy rất đẹp. Chữ rất đều. Chỉ có một điều sai: ở trang đầu, các ngươi viết về một người còn sống như viết về một món hàng đã kiểm kê xong."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "Đó là phép làm việc, thưa ông."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Phép của các ngươi, bổn tọa không theo. Nghe cho rõ, bổn tọa chỉ nói một lần: bổn tọa không ký vào sổ của Giới Phòng. Không làm chứng cho việc bàn giao một con người. Cái giá ngươi ra lúc chạng vạng, bổn tọa trả lại nguyên vẹn. Nàng không phải món nợ để các ngươi thanh toán. Nàng là một người — và từ đêm nay, người ấy ở dưới sự che chở của bổn tọa."
+      },
+      {
+        "speaker": "Phạm Đình Nghiêm",
+        "text": "…Mấy chục năm giữ sổ, tôi gặp nhiều người từ chối ký. Người ta từ chối vì sợ, vì giận, vì tham. Ông là người đầu tiên từ chối vì một lý do không có trong danh mục của tôi. Tôi sẽ ghi lại ngày hôm nay, thưa ông — dù tôi chưa biết ghi vào đâu. Còn bây giờ, Giới Phòng làm theo cách của Giới Phòng: phong tỏa biệt thự. Xin ông lượng thứ."
+      }
+    ],
+    "choices": [
+      {
+        "id": "warn_house",
+        "text": "Quay vào trong ngay: báo cho bà Năm Liên và Thu Nguyệt biết giờ hành động không đổi, và căn nhà sắp bị khóa lại.",
+        "next": "lh_lockdown",
+        "effects": {
+          "lanTrustDelta": 2
+        }
+      },
+      {
+        "id": "check_gate_anchor",
+        "text": "Đi thẳng ra cổng, kiểm tra lại điểm neo ở cổng và nhịp canh giữ của đoàn Giới Phòng trước khi phong tỏa khép kín.",
+        "next": "lh_lockdown",
+        "effects": {
+          "cluesHuaGiaDelta": 2
+        }
+      }
+    ]
+  },
+  "lh_lockdown": {
+    "id": "lh_lockdown",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Phong tỏa",
+    "backgroundId": "long-hai-dawn-gate",
+    "location": "Cổng biệt thự Hứa Gia, Long Hải",
+    "entity": "entity_guard",
+    "narration": [
+      "Phong tỏa đến với biệt thự như một cơn thủy triều ngược: nhanh, lặng, và không gì cản được. Cổng chính được kéo khép lại và quấn hai vòng xích sắt, khóa bằng hai ổ khóa đồng của Giới Phòng; cổng phụ phía bếp bị chèn then từ bên ngoài; các cửa sổ dọc hành lang lần lượt đóng sập. Người của đoàn kiểm tra không ở lại trong nhà — họ rút ra chòi gác ngoài cổng, thắp đèn, và ngồi đó như những người thợ săn không cần vào rừng, vì khu rừng đã tự khóa mình lại. Từ giờ phút ấy, tòa nhà này không cần ai canh giữ nữa. Chính nó là nhà tù, và chính những người trong nó là khóa.",
+      "Người của đoàn kiểm tra rút ra chòi gác và dãy nhà ngang ngoài cổng, nhưng trước khi rút, họ làm một việc sau cùng theo đúng bài bản phong tỏa của Giới Phòng: đi một vòng quanh tường rào, kiểm tra từng cổng, từng cửa sổ, từng chỗ tường thấp, và ghi lại tất cả vào biên bản bàn giao cho người gác đêm. Họ làm việc ấy thong thả, chuyên nghiệp, không một chút ác ý — những người thợ khóa đang kiểm tra một ổ khóa lớn trước khi ra về. Chính sự thong thả ấy làm cho buổi phong tỏa trở nên đáng sợ hơn mọi tiếng quát tháo: từ đầu tới cuối, không một ai trong đoàn này coi việc nhốt hơn bốn mươi con người trong một tòa nhà qua đêm là một việc gì khác thường.",
+      "Đèn trong nhà bị tắt đi từng dãy, theo đúng thứ tự ngược lại của buổi sáng: nhà ngang trước, rồi dãy bếp, rồi hành lang — chỉ còn phòng khách của đoàn kiểm tra và gian phòng trong cùng là sáng đèn. Gia nhân được lệnh về phòng: tiếng cửa đóng vang lên khắp nhà, không phải từng cái một như mọi đêm, mà gần như cùng một lúc, như một tiếng vỗ tay khổng lồ bằng gỗ. Cao Minh đứng giữa sân trong, nghe căn nhà tự khép mình lại, và cảm nhận qua thần niệm cái mạng lưới vô hình đang căng lên: các điểm neo giật đều hơn, mạnh hơn — căn nhà vừa được lệnh siết chặt, và nó đang vâng lời theo cái cách mà nó vâng mọi mệnh lệnh: hoàn toàn, im lặng, không một chút do dự của con người.",
+      "Cao Minh đếm lại số người trong sổ điểm danh khi tiếng chuông cuối dứt: bốn mươi bảy người, không thiếu một ai. Bốn mươi bảy con người bị khóa lại trong một tòa nhà cùng với thứ đang sống trong người họ — và trong số bốn mươi bảy người ấy, chỉ có ba người biết rằng đêm nay, tòa nhà này sẽ mất đi thứ quý nhất nó từng giữ.",
+      "Ở cổng chính, người gác Văn Bảy bị đưa ra đứng gác bên trong cánh cổng đã xích — vị trí danh dự của một buổi phong tỏa, và cũng là vị trí của một con tin. Khi Cao Minh đi ngang qua để xem xét cổng, anh ta đang đứng thẳng như một pho tượng, hai tay buông xuôi, mắt trắng dã nhìn thẳng vào khoảng không — thứ trong người anh ta đang cầm quyền hoàn toàn, không cần giấu giếm nữa vì trong nhà này không còn ai ngoài để mà giấu. Cái cảnh ấy chỉ kéo dài mấy nhịp thở: rồi đôi mắt anh ta chớp một cái, rất khẽ, và trong một khoảnh khắc ngắn ngủi, ánh nhìn của chính anh ta trở về — nhìn Cao Minh, nhận ra hắn, và khẩn cầu không thành tiếng. Rồi sự trắng dã lại phủ xuống như mặt nước khép lại. Cao Minh gật đầu với anh ta rất nhẹ, một cái gật đầu dành cho người đàn ông bên trong, không phải cho thứ đang đứng gác.",
+      "Thu Nguyệt tìm tới hắn ở góc sân tối, bước chân nhẹ như mèo, mang theo tin tức mà cô đổi bằng cách lén nghe ở cửa phòng khách: đoàn xe sẽ tới sớm hơn dự kiến nếu đường khô; Nghiêm đã cho người về Tây Viện báo trước; và quan trọng nhất — bà Năm Liên sai cô nhắn một câu: 'Bà già này vẫn còn ở đúng vị trí của bà.' Còn Tiểu Lan, qua cái mạng đang siết chặt trong người, đã cảm nhận được lệnh phong tỏa trước cả khi xích cổng khép lại; nàng sai Thu Nguyệt nói lại đúng bốn chữ: 'Nó đang siết lại.' — và thêm một câu của riêng nàng, câu khiến Cao Minh đứng yên thêm một lúc giữa sân tối: 'Ngài đừng vì tôi mà chậm tay.'",
+      "Trong dãy cửa sổ đã tối om của khu nhà chính, chỉ còn hai ô cửa sáng đèn: phòng khách của đoàn kiểm tra ở phía trước, và — cách hai dãy hành lang — ô cửa nhỏ của gian phòng trong cùng. Cao Minh nhìn ô cửa ấy một lúc lâu. Ở đó, một cô gái vừa bị cả thế gian này ký giấy giết chết vào buổi trưa, đang ngồi chờ một cuộc ra đi vào ban đêm — và ô cửa của nàng là ô cửa sáng duy nhất trong nhà còn thuộc về một người đang tự quyết định đời mình. Hắn quay đi, bước tiếp vòng tuần cuối, và nhẩm lại trong đầu từng bước chân từ ô cửa ấy ra tới cổng: mười bảy bước trong phòng, một hành lang, một sân trong, một dãy bếp, một khoảng sân trước — và hai vòng xích sắt.",
+      "Cao Minh đi một vòng quanh tường rào trong bóng tối, đếm lại những gì một vòng phong tỏa đã thay đổi: cổng chính hai xích, cổng bếp chèn ngoài, tường phía đông cao hai thước có mảnh chai, tường phía sau giếng thấp hơn một đoạn vì đất bồi — điểm yếu duy nhất của vòng vây, và cũng là nơi hắn đã tính từ trước. Hắn thử đặt một bàn tay lên sợi xích cổng: lạnh, chắc, và rung rất nhẹ theo một nhịp mà người thường không cảm được — sợi xích này, qua ổ khóa, qua cánh cổng sắt, cũng đã thành một phần của cái mạng đang giữ cả nhà. Hắn rút tay về. Mọi thứ đã vào vị trí của nó, kể cả hắn. Giờ chỉ còn chờ nhịp chuông điểm danh cuối cùng của đêm — và sau nhịp chuông ấy, một khoảng lỏng ngắn ngủi mà cả hắn lẫn căn nhà đều biết là có thật."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa ông, bà Năm Liên nhắn: bà vẫn ở đúng vị trí của bà, ông đừng lo phần trong này. Còn cô… cô biểu em nói lại với ông: nó đang siết lại. Và cô nói thêm một câu nữa, em không dám bớt chữ nào: ngài đừng vì tôi mà chậm tay."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngươi về nói với nàng: bổn tọa nghe rõ cả hai câu. Câu sau, bổn tọa không vâng theo được. Tay của bổn tọa chậm hay nhanh là việc của bổn tọa — chưa tới lượt nàng phải lo thay."
+      },
+      {
+        "speaker": "Người gác",
+        "text": "Ông… ông Cao… cổng… xích… hai vòng… tay tôi… nó khóa… nó không cho tôi… mở…"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Văn Bảy. Bổn tọa nhớ tên ngươi. Đêm nay ngươi cứ đứng đó. Phần việc mở cổng, để bổn tọa lo — ngươi không phải mang tội ấy một mình."
+      }
+    ],
+    "choices": [
+      {
+        "id": "calm_lan",
+        "text": "Tới phòng nàng ngay: trấn an nàng bằng chính giọng nói của mình và nói rõ giờ đi đêm nay.",
+        "next": "lh_servants_choose",
+        "effects": {
+          "lanTrustDelta": 3
+        }
+      },
+      {
+        "id": "test_chain",
+        "text": "Thử sợi xích cổng một lần nữa cho chắc — đo xem cái mạng giữ cổng chặt tới đâu và lỏng ra vào lúc nào.",
+        "next": "lh_servants_choose",
+        "effects": {
+          "cluesHuaGiaDelta": 2,
+          "lanMaterInfluenceDelta": 1
+        }
+      }
+    ]
+  },
+  "lh_servants_choose": {
+    "id": "lh_servants_choose",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Những bàn tay chậm lại",
+    "backgroundId": "long-hai-exterior",
+    "location": "Sân trong biệt thự Hứa Gia, Long Hải",
+    "companions": [
+      "npc_porter"
+    ],
+    "narration": [
+      "Buổi phong tỏa có một vòng tuần tra chót trước giờ điểm danh: người của đoàn kiểm tra đi dọc hành lang đọc tên từng phòng, quản gia theo sau điểm lại gia nhân theo sổ. Đáng lẽ vòng tuần ấy phải xong trong một khắc. Nó kéo dài gần gấp đôi — và nguyên do nằm ở những sự chậm trễ nhỏ đến mức không một biên bản nào ghi nổi. Ở cổng, phu khuân Thới kéo vòng xích thứ hai chậm như kéo một gánh nước đầy, và khi khóa lại, có một mắc xích ở phía sau trụ cổng — đúng chỗ khuất mắt người đứng ngoài — đã không móc vào nhau. Đôi tay ông ta run đến mức sợi xích hát lên khe khẽ, vậy mà ông ta vẫn làm xong việc, cúi đầu, và lùi về vị trí của mình như không có gì xảy ra.",
+      "Ở nhà bếp, bà bếp — người đàn bà đã nếm mỗi món ăn hai lần suốt bao nhiêu năm theo lệnh của cái mạng trong nhà — bưng một khay bát ra sân thì vấp phải bậc thềm mà bà đã bước qua mười mấy năm không hề vấp. Khay bát vỡ tan trên nền gạch, mảnh sành văng khắp lối đi hẹp nhất giữa bếp và nhà ngang. Bà quỳ xuống nhặt, nhặt rất chậm, miệng rối rít xin lỗi, và cứ nhặt được một mảnh lại đặt chéo qua đường đi thay vì dọn sang một bên. Ai muốn chạy qua lối ấy đêm nay sẽ phải chậm lại mà tránh mảnh vỡ — hoặc dẫm lên và kêu thành tiếng. Bà bếp không nhìn ai khi làm việc ấy. Bà chỉ làm, như một người vừa nhớ ra rằng đôi tay mình, trước khi thuộc về cái mạng kia, đã từng thuộc về mình.",
+      "Người gánh nước để quên hai thùng nước đầy ở khúc quanh hẹp nhất của hành lang nhà ngang — quên một cách rất đúng chỗ. Cô hầu có đôi tay hay vươn ra như móng vuốt, người mà cái mạng vẫn mượn mặt mỗi khi nó muốn hiện hình trong phòng cô chủ, được giao việc gấp đống vải liệm cho đêm nay: cô gấp chậm hơn lệ thường một nửa, và gấp mặt trái ra ngoài — một lỗi mà khi tới giờ dùng, người ta sẽ phải tháo ra gấp lại, mất thêm một khắc quý giá. Cô không biết vì sao mình gấp như thế. Hỏi cô, chắc cô sẽ khóc. Nhưng đôi tay cô, trong một khoảnh khắc hiếm hoi, đã tự quyết định thay cho cô.",
+      "Cao Minh đi qua sân trong giữa những việc ấy và không dừng lại một lần nào. Hắn không cảm ơn, không gật đầu, không để lại một dấu hiệu nào cho thấy hắn đã trông thấy — vì hắn biết, trong căn nhà này, sự biết ơn cũng có thể bị ghi vào sổ. Nếu Giới Phòng biết những con người này đã chậm lại vì ai, thì món nợ của họ sẽ được tính ngay trong đêm nay. Cách duy nhất để bảo vệ họ là đi qua như một người khách dửng dưng, để những hành động ấy mãi mãi vô danh trong mọi cuốn sổ — những việc tốt không ai ghi, của những người không ai hay. Hắn chỉ ghi hết vào trí nhớ của chính mình, nơi không một con dấu nào chạm tới được.",
+      "Và ở lối ra giếng sau — con đường ít ai để ý nhất của tòa nhà — người quét sân già đã quét đi quét lại cùng một lối đi đến lần thứ ba trong buổi tối hôm ấy. Ông quét sạch lá, sạch sỏi, sạch cả những mảnh sành lạc từ khay bát vỡ của bà bếp, để lại một lối đi bằng phẳng và im lặng dưới chân người nào sẽ đi qua đó trong đêm. Ông không biết ai sẽ đi, cũng không biết đi lối nào; ông chỉ biết rằng mười mấy năm nay, hễ nhà này sắp có việc lớn, là tự nhiên tay ông lại muốn quét cái lối ấy cho sạch. Có những sự giúp đỡ trong căn nhà này không có người ra lệnh, không có người nhận — chúng chỉ đơn giản xảy ra, như nước chảy về chỗ trũng, như một thứ bản năng của những con người đã bị lấy đi gần hết mọi thứ, chỉ còn chừa lại mỗi việc tử tế là chưa bị lấy mất.",
+      "Khi đi ngang qua góc bếp tối, hắn ngửi được mùi khói nhang rất nhẹ lẫn trong mùi tro lạnh: ở bếp Táo Quân, ai đó vừa thắp thêm một nén nhang mới — có lẽ là cô hầu nhỏ, cầu cho một đêm mà cô không biết rõ sẽ ra sao. Hắn không dừng lại. Nhưng trong cuốn sổ riêng của lòng mình, hắn ghi thêm một dòng nữa vào danh sách những người trong căn nhà này mà hắn mắc nợ.",
+      "Bởi vì đây là bộ mặt thật của cuộc kháng cự trong căn nhà này: không có gươm đao, không có tiếng hô, không có ai đứng dậy. Chỉ có một mắc xích không khép, một khay bát vỡ, hai thùng nước quên, một đống vải gấp sai — những giây, những khắc nhỏ nhoi được đánh cắp từ một cỗ máy khổng lồ bằng chính đôi tay của những người đang bị cỗ máy ấy cầm giữ. Mỗi người trong số họ, khi làm việc ấy, đều phải trả một giá mà Cao Minh cảm được qua thần niệm: một cơn đau đầu như búa bổ, một khoảng ký ức nhỏ nữa vừa bị rút đi, một đêm nữa không ngủ được vì tiếng thở sau vách. Họ biết giá ấy. Họ trả nó, vì một cô gái mà hầu hết trong số họ chưa từng được nói chuyện tử tế, và vì một người khách lạ là người đầu tiên trong mười mấy năm gọi họ bằng tên.",
+      "Khi vòng tuần tra cuối cùng cũng khép lại và phó kiểm quay về phòng khách, có phần bực dọc vì 'gia nhân nhà này hôm nay lóng ngóng lạ', Cao Minh đứng ở góc sân tối nhìn lên dãy cửa đã đóng của khu gia nhân. Đêm nay, khi hắn hành động, những con người này sẽ không ra theo hắn. Họ ở lại — ở lại với căn nhà, với sổ sách, với những gì sẽ tới sau khi hắn đi. Hắn ghi nhớ điều đó như một món nợ của chính mình: có những người giúp hắn không phải bằng cách đi cùng hắn, mà bằng cách ở lại chịu phần còn lại."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Người phu",
+        "text": "Dạ… thưa ông… xích con khóa xong rồi. Hai vòng, chắc lắm. Ông… ông đi đường ông, đừng có… đừng có lo cái cổng này quá. Xích sắt thì nó cũng có mắc yếu của nó, thưa ông."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Thới. Bổn tọa nghe rồi. Ngươi về vị trí đi — và đêm nay, dù nghe thấy gì, cũng đừng chạy ra sân."
+      },
+      {
+        "speaker": "Bà bếp",
+        "text": "Ối giời ơi, già này lú lẫn quá, có cái khay bát cũng làm vỡ. Thưa ông, ông đi qua thì coi chừng mảnh sành, kẻo đứt chân. Lối này trơn lắm, ai đi nhanh cũng phải chậm lại thôi…"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bà cứ nhặt thong thả. Đêm còn dài. Phần đường này, để bổn tọa lo."
+      }
+    ],
+    "choices": [
+      {
+        "id": "memorize_names",
+        "text": "Ghi nhớ từng người, từng việc chậm lại ấy vào lòng — vô danh trong sổ của Giới Phòng, nhưng phải có tên trong trí nhớ của bổn tọa.",
+        "next": "lh_anchor_map",
+        "effects": {
+          "cluesHuaGiaDelta": 2
+        }
+      },
+      {
+        "id": "silent_thanks",
+        "text": "Để lại một dấu hiệu cảm ơn không lời trên đường đi — một ngọn đèn được chỉnh lại cho ngay, như một câu đáp lễ chỉ người trong nhà mới hiểu.",
+        "next": "lh_anchor_map",
+        "effects": {
+          "lanTrustDelta": 2
+        }
+      }
+    ]
+  },
+  "lh_anchor_map": {
+    "id": "lh_anchor_map",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Bản đồ điểm neo",
+    "backgroundId": "long-hai-corridor",
+    "location": "Hành lang biệt thự Hứa Gia, đêm",
+    "narration": [
+      "Quá nửa đêm, khi cả biệt thự đã chìm vào cái im lặng đặc quánh của một tòa nhà bị phong tỏa, Cao Minh mở mắt và đi một vòng cuối cùng — không phải bằng chân, mà bằng thần niệm trải ra khắp tòa nhà như một tấm lưới ngược lại tấm lưới đang trùm lên nó. Suốt những ngày qua, hắn đã tìm thấy từng điểm neo một: cái giếng sau nhà, nơi sợi chỉ đầu tiên chạm vào nước ngầm; bếp lửa nhà ngang, nơi một điểm neo khác uống nhiệt của bếp lửa không bao giờ tắt hẳn; từ đường, nơi các bài vị giữ một đầu của cái mạng bằng chính lòng thờ kính của con cháu; chuông cổng, nơi mệnh lệnh được gõ thành tiếng mà lan đi; và cổng chính, nơi hai vòng xích đêm nay vừa khép thêm một lớp neo bằng sắt thật. Đêm nay, lần đầu tiên, hắn nhìn thấy tất cả cùng một lúc — và thấy chúng nối với nhau thành một hình thù hoàn chỉnh: một cái sao năm cánh úp xuống tòa nhà, với tâm sao nằm đúng ở gian phòng trong cùng.",
+      "Và hắn hiểu ra luật của thứ tự — điều mà cả chuyến đi này đã dạy hắn bằng từng mảnh rời rạc. Các điểm neo không đứng riêng: chúng chia nhau gánh nặng điều phối của cái mạng, như năm người cùng khiêng một cái kiệu. Cắt một điểm, phần gánh của nó dồn sang bốn điểm còn lại — và dồn về tâm, nơi nàng nằm. Cắt điểm gần tâm trước, cái kiệu nghiêng, sức nặng dội thẳng xuống người ở giữa. Cho nên thứ tự duy nhất đúng là cắt từ ngoài vào trong, từ xa tới gần: giếng trước hết — điểm xa nhất, yếu nhất; rồi bếp; rồi từ đường; rồi chuông cổng; và cổng chính — điểm neo cuối cùng — phải được cắt đúng vào khoảnh khắc nàng bước qua nó, không sớm một khắc, không muộn một khắc. Cắt cổng sớm, toàn bộ sức nặng còn lại sẽ đổ xuống nàng khi nàng còn đang ở giữa sân. Cắt cổng muộn, nàng đã qua mà mạng vẫn còn một tay nắm lấy cổng — và nắm lấy nàng.",
+      "Hắn dừng thần niệm lại ở điểm neo giếng sau lâu hơn các điểm khác, vì đó là điểm hắn biết rõ nhất — nơi hắn đã đứng, đã chạm vào sợi chỉ vô hình căng trên mặt nước tối. Sợi chỉ ấy đêm nay căng hơn mọi đêm: cái mạng đang dồn sức về phía tâm sao, và các điểm vòng ngoài chính là những cái van giữ cho sức ép ấy khỏi vỡ tung. Hắn ghi nhớ độ căng ấy như một người thợ đàn ghi nhớ âm của dây đàn trước buổi diễn — vì sáng mai, khi hắn tự tay mình cắt từng sợi một, hắn sẽ phải nhận ra ngay sợi nào đang chịu lực đến đâu, chỉ bằng cái rung đầu tiên dưới đầu ngón tay.",
+      "Hắn diễn lại toàn bộ cuộc ra đi trong đầu, từng bước một, như một người chơi cờ diễn lại ván cờ trước khi ngồi vào bàn. Từ phòng nàng ra hành lang: mười bảy bước. Hành lang tới sân trong: qua khúc quanh có hai thùng nước — cảm ơn người gánh nước vô danh. Sân trong tới nhà ngang: điểm neo bếp phải tắt trước khi qua bếp một khắc. Từ đường nằm ở cánh đông: điểm neo ở đó cắt từ xa bằng một sợi kiếm khí mảnh như tơ, không cần tới gần. Chuông cổng: cắt khi còn cách cổng ba mươi bước, để tiếng chuông câm đi trước khi đoàn gác kịp nghe sự im lặng của nó. Và cổng: hai vòng xích, một mắc xích yếu ở sau trụ — cảm ơn Thới, người phu khuân — cùng một điểm neo sắt phải đứt đúng lúc nàng đi qua. Mỗi bước một nhịp chuông trong đầu hắn. Sai một nhịp, cái giá không phải do hắn trả.",
+      "Có một điều hắn quyết định giữ cho riêng mình: toàn bộ bản đồ này. Không nói hết cho Thu Nguyệt, không nói hết cho bà Năm Liên, và chỉ nói với nàng phần nàng cần biết — rằng khi đi, nàng chỉ việc nắm tay áo hắn và bước đều, còn mọi việc còn lại cứ để hắn. Không phải vì hắn không tin họ. Mà vì căn nhà này có tai ở trong vách, và tệ hơn nữa — cái mạng kia, khi cần, có thể nghe qua tai của chính những người đang bị nó cầm giữ, kể cả khi họ không hề muốn phản bội ai. Một kế hoạch chỉ có một người biết hết là một kế hoạch mà kẻ địch không moi ra được từ bất cứ ai. Hắn đã học được điều ấy từ chính đối thủ của mình: Giới Phòng giữ hai cuốn sổ; hắn giữ một bản đồ không nằm trên giấy.",
+      "Gần cuối vòng tuần thần niệm, hắn dừng lại lâu nhất ở tâm sao — gian phòng trong cùng. Nàng chưa ngủ. Nàng ngồi trên giường trong bóng tối, cuộn chỉ thêu đếm ngày đã quấn quanh cổ tay, chiếc hộp của mẹ đặt trên gối, hai tay đặt yên trên hộp như người giữ của. Qua cái mạng đang căng trong nhà, nàng cảm được có một sự chú ý rất lớn đang dừng ở phòng mình — và khác với mọi lần trước, lần này nàng không sợ, vì nàng đã học được cách phân biệt: cái mạng nhìn nàng như nhìn một món đồ trong kho; còn sự chú ý này nhìn nàng như nhìn một người sắp cùng mình đi qua một cánh cửa khó. Nàng ngẩng đầu lên trong bóng tối, về đúng hướng hắn đang đứng cách hai dãy hành lang, và gật đầu một cái rất nhẹ, như đáp lễ.",
+      "Cao Minh thu thần niệm về. Trong đầu hắn, bản đồ đã khép kín, thứ tự đã thuộc lòng, từng bước chân đã được đếm. Phần còn lại của đêm nay không còn là việc tính toán nữa. Hắn ngồi xuống ở đầu hành lang, hai thanh kiếm lơ lửng yên hai bên như hai con thú đã ngủ, và chờ — chờ nhịp chuông điểm danh cuối cùng vang lên, chờ khoảng lỏng ngắn ngủi sau nhịp chuông ấy, chờ một cô gái mười tám tuổi tự đứng dậy khỏi giường của mình và bước ra khỏi căn phòng đã giam nàng nửa đời người."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Năm điểm neo. Một trái tim ở giữa. Cắt từ ngoài vào trong, cổng sau cùng, đúng lúc nàng bước qua. Sai thứ tự này, người trả giá không phải bổn tọa. Cho nên đêm nay, bổn tọa không được phép sai."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa ông, em bưng trà lên cho ông. Ông… ông ngắm gì ngoài hành lang mà lâu vậy? Cả nhà ngủ hết rồi, chỉ còn ông với cô là thức thôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa ngắm đường đi. Ngươi nhớ một điều thôi: khi chuông điểm danh cuối cùng dứt tiếng, ngươi đưa bà Năm Liên về buồng, đóng cửa lại, dù nghe gì cũng không mở. Phần còn lại, ngươi không cần biết — không biết là phúc của ngươi đêm nay."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ… em nhớ. Thưa ông, trà em để đây. Ông uống cho ấm. Đêm nay… em chỉ xin ông một điều: ông đưa được cô đi cho trót."
+      }
+    ],
+    "choices": [
+      {
+        "id": "rehearse",
+        "text": "Diễn tập thầm một lượt chót trong đầu theo nhịp chuông của nhà — từng điểm neo, từng bước chân, từng khắc giờ.",
+        "next": "lh_lan_farewell",
+        "effects": {
+          "cluesHuaGiaDelta": 2
+        }
+      },
+      {
+        "id": "rest_breath",
+        "text": "Ngồi dưỡng thần một canh giờ trước giờ hành động — thân phải tĩnh thì kiếm mới không sai một phân.",
+        "next": "lh_lan_farewell",
+        "effects": {
+          "partyHealthDelta": 3
+        }
+      }
+    ]
+  },
+  "lh_lan_farewell": {
+    "id": "lh_lan_farewell",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Lần cuối trong phòng",
+    "backgroundId": "tieu-lan-room",
+    "location": "Phòng Hứa Tiểu Lan, biệt thự Long Hải",
+    "narration": [
+      "Theo lệnh chuyển đi, nàng được phép về phòng mình 'nghỉ ngơi' mấy canh giờ chót trước khi xe tới — phép lịch sự cuối cùng của một thủ tục giết người bằng giấy: để cho người sắp bị đưa đi được nằm lại trên chiếc giường của mình một lần chót. Thu Nguyệt đưa nàng về tới cửa rồi lui ra, vì nàng xin được ở một mình. Nhưng nàng không nằm. Khi Cao Minh bước vào, nàng đang đi chậm rãi quanh căn phòng nhỏ ấy — căn phòng nàng đã ở mười một năm, từ khi còn là một đứa trẻ bị đưa từ Tây Viện sang — và chạm tay, rất nhẹ, vào từng thứ một, như người ta chào từ biệt từng người quen trong một buổi tiễn đưa không có ai khác dự.",
+      "Căn phòng còn những thứ nhỏ hơn mà nàng cũng chào từng thứ một: chiếc lược gỗ bà Năm Liên vẫn chải tóc cho nàng mỗi sáng, mặt gương đồng đã mờ chỉ còn soi được một cái bóng nhòe, bình hoa khô trên bậu cửa sổ mà không ai nhớ đã đặt từ năm nào, và tấm tranh thêu phong cảnh treo trên vách — một bức tranh thêu núi sông của người thầy dạy chữ gửi vào, là 'thế giới bên ngoài' duy nhất mà bức tường này cho phép nàng ngắm trong mười một năm. Nàng ngắm bức tranh ấy lần cuối rồi khẽ cười: núi trong tranh thì nàng thuộc từng nét, còn núi thật ngoài kia, nàng chưa từng thấy bao giờ. Đêm nay, có lẽ nàng sắp được thấy — dù chỉ là một vệt tối chạy qua bên ngoài một con đường tối hơn.",
+      "Nàng chạm vào chiếc giường gỗ: nơi nàng đã nằm nghe tiếng thở sau vách suốt thời con gái, nơi nàng học được cách từ chối những mệnh lệnh không thành tiếng và trả giá cho từng lần từ chối bằng những mảnh trí nhớ rơi đi như lá rụng. Nàng chạm vào chồng sách sờn gáy trên bàn: sách của một người thầy dạy chữ đã khuất gửi vào cho nàng qua tay bà Năm Liên, là cửa sổ duy nhất của nàng ra thế gian trong mười một năm — nàng không mang theo, chỉ vuốt gáy sách một lượt rồi nói, nửa như nói với sách: 'Ở đâu cũng có sách. Còn mười một năm ở đây thì chỉ có ở đây thôi.' Nàng chạm vào dãy chén thuốc xếp theo giờ trên khay — rồi, bằng một động tác bình thản nhất trong buổi tối hôm ấy, nàng lật úp chiếc chén của giờ tới xuống khay. Từ nay, không còn giờ thuốc nào nữa.",
+      "Có một lúc, nàng mở cánh cửa sổ — cửa sổ có chấn song, mở ra chỉ được một gang tay, là khoảng trời duy nhất căn phòng này có. Tiếng sóng biển vọng vào rõ hơn hẳn: Long Hải đêm nay biển động nhẹ, sóng vỗ vào ghềnh đá dưới chân đồi theo một nhịp chậm và đều, hoàn toàn khác với mọi nhịp điệu trong căn nhà này — nhịp của một thứ không nghe lệnh ai, không thuộc về sổ sách nào, đã vỗ như thế từ trước khi có nhà họ Hứa và sẽ còn vỗ sau khi nhà họ Hứa không còn nữa. Nàng đứng nghe sóng một lúc, rồi nói, như nói với chính mình: 'Mười một năm, tôi nghe tiếng sóng này mỗi đêm. Nó là thứ duy nhất trong đời tôi chưa từng bị ai ra lệnh phải im.'",
+      "Bên cửa sổ là khung thêu căng sẵn, đóa sen thêu dở vẫn còn dang dở ở cánh thứ ba, kim còn găm trên vải. Nàng đứng nhìn khung thêu một lúc lâu nhất. Rồi nàng tháo khung ra, không mang theo đóa sen — nàng chỉ rút lấy cuộn chỉ đỏ chạy dọc mép vải: cuộn chỉ thêu đếm ngày của nàng, hàng trăm nút thắt, mỗi nút là một ngày nàng còn nhớ được mình đã sống, và những khoảng trống giữa các nút là những ngày đã bị lấy mất mà nàng chỉ biết đếm bằng sự thiếu vắng của chúng. Nàng quấn cuộn chỉ quanh cổ tay mình, thắt một nút chót — nút thắt của ngày hôm nay, ngày nàng còn nhớ đầy đủ: ngày nàng bị ký giấy khai tử, ngày nàng tự xưng tên mình, ngày nàng sắp bước ra khỏi căn phòng này bằng chính đôi chân của mình.",
+      "Nàng hỏi hắn một câu rất nhỏ, câu hỏi của một người sắp bước ra một thế giới mà mình chỉ biết qua sách vở và qua lời kể của gia nhân: ngoài cổng kia, có ồn lắm không? Hắn đáp thật: có tiếng xe, tiếng người, tiếng chó sủa, tiếng chợ xa — ồn hơn căn phòng này nhiều. Nàng gật đầu như người nghe một tin vừa mừng vừa sợ. Mười một năm, thế giới của nàng rộng bằng căn phòng này và dài bằng hành lang tới nhà bếp. Cái ồn ào của thế gian, đối với người khác là phiền nhiễu, đối với nàng là một thứ xa xỉ nàng chưa từng dám mơ được nghe.",
+      "Trước khi ra khỏi phòng, nàng làm một việc sau cùng: nàng dọn lại căn phòng cho ngay ngắn. Chăn gấp lại, gối vuốt phẳng, chén thuốc xếp thẳng hàng, khung thêu dựng lại bên cửa sổ như cũ. Cao Minh đứng nhìn và hiểu: đây là thói quen của một người cả đời sống trong cảnh bị người ta săm soi, rằng mình ra sao không quan trọng bằng việc mình để lại sau lưng cái gì cho người ta nói. Rồi nàng làm một việc chưa từng làm trong mười một năm ở căn phòng này: nàng bước ra và để nguyên cánh cửa mở sau lưng mình. Không khép, không cài then, không xin phép. Cánh cửa mở toang ra hành lang tối — cánh cửa đầu tiên trong đời nàng tự ý mở và tự ý bỏ ngỏ."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, ngài xem, tôi ở đây mười một năm, mà đồ đạc mang theo được chỉ có một cuộn chỉ. Người ta mà biết, chắc họ cười: cô chủ nhà họ Hứa ra đi với một cuộn chỉ đỏ quấn quanh tay."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cuộn chỉ ấy nặng hơn mọi thứ trong căn nhà này cộng lại. Mỗi nút thắt là một ngày nàng giành lại được từ tay kẻ khác. Mang theo nó là đúng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Còn đóa sen thêu dở, tôi để lại. Ở đây mười một năm, tôi thêu mãi không xong một đóa sen. Ra ngoài kia rồi… thưa ngài, ra ngoài kia, nếu tôi còn nhớ được, tôi sẽ thêu một đóa khác. Thêu từ đầu, và thêu cho xong."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng sẽ thêu cho xong. Còn nếu có nút nào đứt giữa đường, bổn tọa kể lại cho nàng nghe từ đầu — kể cả đóa sen này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi để cửa mở. Mười một năm, cửa phòng này chưa từng do tôi mở mà không có người đứng canh. Hôm nay tôi mở, và tôi không đóng lại nữa."
+      }
+    ],
+    "choices": [
+      {
+        "id": "offer_frame",
+        "text": "Đề nghị mang theo cả khung thêu cho nàng — đóa sen dở dang ấy cũng là một phần đời của nàng, không nên bỏ lại cho căn nhà này.",
+        "next": "lh_ba_stays",
+        "effects": {
+          "lanTrustDelta": 2
+        }
+      },
+      {
+        "id": "honor_choice",
+        "text": "Chỉ gật đầu với cuộn chỉ trên tay nàng — tôn trọng lựa chọn của nàng về thứ đáng mang theo khỏi mười một năm đời mình.",
+        "next": "lh_ba_stays",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 2
+        }
+      }
+    ]
+  },
+  "lh_ba_stays": {
+    "id": "lh_ba_stays",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Người ở lại",
     "backgroundId": "tieu-lan-room",
     "location": "Phòng Hứa Tiểu Lan, biệt thự Long Hải",
     "companions": [
       "ba_nam_lien"
     ],
-    "entity": "entity_maid",
     "narration": [
-      "Một mệnh lệnh vô hình bỗng lan qua căn phòng như gợn nước lạnh. Ở hành lang, người gác đứng bật dậy, cánh tay tự giơ lên hướng về phía bà Năm Liên — trong khi miệng anh ta van vỉ thành tiếng, xin đừng để chính tay mình làm điều đó.",
-      "Tiểu Lan nhắm mắt lại. Nàng không ra lệnh ngược lại, cũng không tranh giành. Nàng chỉ đẩy vào khoảng ngừng rất nhỏ giữa hai nhịp điều khiển một tiếng phản thanh yếu ớt — như người lấy ngón tay chạm khẽ vào dây đàn đang rung. Cánh tay người gác khựng lại giữa không trung, run lên, rồi buông xuống.",
-      "Chỉ chờ đúng khoảnh khắc ấy, Cao Minh ra tay. Tứ Kiếm Đoạn Mạch điểm vào những mắt nối của nghi thức nằm ngoài cơ thể nàng; Sát Ma Kiếm chém đứt ma chướng bám trên ngưỡng cửa. Điểm neo trong gian phòng vỡ tan. Người gác ngã khuỵu xuống nền gạch — nhưng ngực anh ta vẫn phập phồng, và lần này, đôi tay buông thõng là do chính anh ta buông.",
-      "Trong phòng, Tiểu Lan mở mắt. Trán nàng rịn mồ hôi, đầu ngón tay vẫn còn run vì cơn đau chạy dọc thần kinh. Nàng nhìn bà Năm Liên, mỉm cười rất nhẹ — rồi nụ cười chợt khựng lại. Nàng nhớ bà vừa đưa cho người khách lạ xem một tập giấy. Nhưng bà đã nói câu gì khi đưa nó… thì nàng không còn nhớ nữa. Chỉ một câu nói thôi, vừa rời khỏi trí nhớ của nàng như chưa từng tồn tại.",
-      "Cao Minh đã nghe rõ câu nói ấy. Và hắn hiểu, từ giây phút này, mỗi lần nàng chống lại thứ trong người mình, cái giá sẽ được tính bằng chính ký ức của nàng."
+      "Bà Năm Liên vào phòng khi trời đã khuya hẳn, tay ôm chiếc hộp sơn then bọc vải — chiếc hộp của nhị phu nhân mà bà đã giữ mười một năm dưới ván giường của mình. Bà đặt hộp lên giường, trước mặt Tiểu Lan, và làm một việc mà bà đã chờ mười một năm để được làm: bà mở hộp ra cho cô chủ của mình xem, ngay trước mặt nàng, bằng chính đôi tay của nàng. Tờ giấy viết tay của Lâm Ngọc Chi. Vuông vải thêu đóa lan vụng về của một đứa bé lên sáu. Tiểu Lan cầm vuông vải lên trước — đóa lan của chính mình, thêu từ một đời khác mà nàng chỉ còn nhớ được một nửa — rồi mới cầm tờ giấy của mẹ. Nàng đọc dòng đầu tiên, nơi tên nàng được viết đầy đủ bằng nét chữ của người đã sinh ra nàng, và nàng khóc — khóc lặng lẽ, đúng mực, như mọi việc nàng làm trong căn nhà này, chỉ có hai hàng nước mắt là không kìm được.",
+      "Bà để cho nàng khóc một lúc, rồi mới nói điều bà tới để nói — và bà nói nó ra một cách bình thản, như người thông báo một việc đã sắp xếp xong từ lâu: bà sẽ ở lại. Không đi theo. Khi Cao Minh khẽ nhíu mày, bà trình bày lý lẽ của mình rành rọt không kém gì người chủ Giới Phòng trình bày sổ sách của ông ta hồi ban ngày — vì bà cũng có một cuốn sổ của riêng bà, cuốn sổ của một người hầu già đã chứng kiến hết mọi việc trong căn nhà này từ đầu tới cuối. Bà nói: đêm nay cô đi, ngày mai nhà này sẽ nói với cả thế gian rằng cô chủ bệnh chết, khách lạ cướp xác, gia nhân bị ép buộc — giấy của họ sẽ viết như thế, và giấy thì đi xa hơn tiếng người. Phải có một người ở lại, một người biết hết, còn sống, còn tỉnh, để một ngày kia đứng ra mà nói: không phải vậy. Cô chủ còn sống. Tên cô là Hứa Tiểu Lan. Tôi là người đã bưng thuốc cho cô từ ngày cô đỏ hỏn.",
+      "Trước khi nói chuyện ở lại, bà làm thêm một việc của người giữ nhà lâu năm: bà buộc vào cổ tay Tiểu Lan một sợi chỉ đỏ nhỏ, lấy từ chính cuộn chỉ thêu đếm ngày của nàng, và thắt một nút thật chắc. 'Cái này không phải bùa,' bà nói nhanh, như sợ cô chủ hiểu lầm mà từ chối, 'bà già này không biết bùa phép gì đâu. Đây là nút thắt của bà. Mai sau, dù cô ở đâu, cô nhìn sợi chỉ này thì nhớ: ở cái nhà này, có một bà già đã thắt nó, và bà già ấy còn sống ngày nào thì còn nói tên cô ra ngày ấy.' Một sợi chỉ đỏ nữa — ngoài những nút đếm ngày của chính nàng, đây là nút thắt đầu tiên do một bàn tay khác thắt cho đời nàng, và nó đếm không phải ngày tháng đã mất, mà là một lời hứa còn đang được giữ.",
+      "Bà nói thêm phần thực tế, lạnh lùng như một người đã tính hết mọi nước: điểm danh sáng mai, thiếu một cô chủ thì đã có giấy chứng tử lo liệu; thiếu một Thu Nguyệt thì còn có thể nói nó trốn theo; nhưng thiếu một bà già giữ kho thuốc và hầu hạ lâu đời nhất nhà thì đoàn kiểm tra sẽ hỏi ngay trong đêm — và hỏi là lộ. Bà ở lại, số người trong sổ vẫn đủ, câu chuyện của nhà này vẫn khép kín thêm được mấy canh giờ quý giá cho người đi đường xa. 'Giới Phòng nó trọng sổ sách,' bà nói, với một nụ cười mỏng mà Cao Minh chưa từng thấy ở bà, 'thì bà già này dùng chính sổ sách của nó mà che cho cô một đoạn đường.'",
+      "Phần khó nhất là với Tiểu Lan. Nàng nắm chặt tay bà, không chịu buông, và lần đầu tiên trong suốt những ngày qua, giọng nàng mất đi sự điềm tĩnh của một tiểu thư nhà có học — nó thành giọng của một đứa trẻ sắp mất người thân cuối cùng còn lại trên đời. Vì đúng là như thế: bà Năm Liên không phải mẹ nàng, nhưng bà là người đã rửa mặt cho nàng mỗi sáng mười một năm, là người duy nhất trong nhà này gọi nàng bằng tiếng 'cô' với đầy đủ tình thương, là gia đình duy nhất mà nàng còn nhớ được. Bà gỡ tay nàng ra — nhẹ nhàng, từng ngón một, như gỡ một cuộn chỉ rối — và nói câu bà đã dặn lòng sẽ nói cho bằng được mà không khóc: 'Cô đi đi. Đi cho xa. Rồi sống cho lâu — lâu hơn cả cái nhà này. Bà ở lại đây, bà trông nhà. Mà nhà này thì có gì đáng trông đâu… bà trông cái tên của cô. Bao giờ người ta hỏi tới, bà nói.'",
+      "Bà quay đi trước, rất nhanh, lấy cớ ra xem lại khay trà đã nguội — phép tắc của một người hầu già không cho phép mình khóc trước mặt cô chủ, kể cả trong một buổi chia tay như thế này. Nhưng ở cửa, bà dừng lại và làm một việc không nằm trong phép tắc nào: bà quay lại, cúi đầu chào Tiểu Lan một cái chào thật sâu và thật trang trọng — không phải chào cô chủ của mình, mà chào một người sắp đi xa mà bà không biết bao giờ gặp lại. Rồi bà nói với Cao Minh câu chót của buổi tối, giọng đã vững lại: 'Ông đưa cô đi. Còn cái nhà này — để bà ở lại nhìn nó. Nhìn cho tới ngày bà được nói hết ra.'"
     ],
     "dialogue": [
       {
+        "speaker": "Bà Năm Liên",
+        "text": "Dạ, cô ơi, hộp này của phu nhân gửi bà giữ cho cô. Mười một năm rồi, bữa nay bà mới dám trao. Trong này có chữ của phu nhân, với đóa lan cô thêu hồi lên sáu. Cô cầm lấy — từ nay đồ của mẹ cô, cô tự giữ."
+      },
+      {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi vẫn nghe được tiếng lệnh đó, thưa ngài. Nhưng tôi có thể không làm theo. Chỉ là… khi nãy, bà ấy đã nói gì với ngài vậy?"
+        "text": "Bà… bà đi với tôi, bà. Mình đi hết đi. Tôi không để bà ở lại một mình trong cái nhà này được. Họ sẽ hỏi bà, họ sẽ làm khó bà — bà già rồi, bà chịu sao nổi…"
+      },
+      {
+        "speaker": "Bà Năm Liên",
+        "text": "Cô nghe bà nói một lần này thôi. Bà ở lại là có việc của bà. Mai mốt người ta hỏi: cô chủ đâu, cô chủ thế nào rồi — phải có một người còn sống mà trả lời cho đúng. Bà trả lời. Bà chờ được tới ngày đó, cô đừng lo. Còn đêm nay, bà ở lại thì sổ người vẫn đủ, họ khỏi sinh nghi sớm. Bà che cho cô được mấy canh giờ, là bà mừng rồi."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Bổn tọa nhớ từng chữ. Bổn tọa sẽ kể lại cho nàng nghe — nhưng nàng phải nhớ rõ một điều: đó là lời bổn tọa kể, không phải ký ức của nàng. Bổn tọa không cho phép ai, kể cả chính bổn tọa, bảo nàng rằng nàng đã nhớ những gì nàng không còn nhớ."
+        "text": "Bà ở lại, nguy hiểm sẽ tới với bà trước tiên. Bổn tọa nói rõ để bà khỏi lầm: khi họ phát hiện ra, người đầu tiên họ hỏi sẽ là bà."
+      },
+      {
+        "speaker": "Bà Năm Liên",
+        "text": "Dạ, thưa ông, tôi biết. Tôi già rồi, tôi còn sợ gì nữa đâu. Hồi cô mới về đây, đỏ hỏn có chút xíu, tôi bồng cô mà tôi tự hứa: đứa nhỏ này, mình hầu nó tới chừng nào nó không cần mình nữa. Bữa nay nó đi được rồi, là tôi hết nợ. Ông đưa cô đi cho trót — còn phần nói lại sự thật, để bà lo."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Bà… bà nhớ giữ sức khỏe. Bà nhớ… nếu một ngày tôi quay lại được, tôi sẽ quay lại tìm bà trước nhất."
       }
     ],
     "choices": [
       {
-        "id": "listen",
-        "text": "Để nàng tự quyết định khi nào muốn nghe lại — không ép nàng nhận lại ký ức ngay.",
-        "next": "lh_depart",
+        "id": "promise_testimony",
+        "text": "Hứa trước mặt nàng: sẽ có một ngày bổn tọa đưa bà ra trước người đời, để bà nói hết những gì bà đã chứng kiến trong căn nhà này.",
+        "next": "lh_thu_nguyet_choice",
         "effects": {
-          "lanTrustDelta": 3,
-          "memoryIntegrityDelta": -3,
-          "lanHealthDelta": -2
+          "lanTrustDelta": 2
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
         }
       },
       {
-        "id": "repeat",
-        "text": "Kể lại nguyên văn lời bà Năm Liên, nói rõ ngay từ đầu đây là lời thuật lại.",
-        "next": "lh_depart",
-        "effects": {
-          "lanTrustDelta": 2,
-          "memoryIntegrityDelta": -3,
-          "lanHealthDelta": -2
+        "id": "swear_return",
+        "text": "Thề sẽ quay lại đón bà ra khỏi căn nhà này — món nợ này, bổn tọa không để bà gánh một mình tới cuối đời.",
+        "next": "lh_thu_nguyet_choice",
+        "route": {
+          "id": "bao_ho",
+          "delta": 2
         }
       }
-    ],
-    "objective": "break_long_hai_ritual"
+    ]
   },
-  "lh_depart": {
-    "id": "lh_depart",
+  "lh_thu_nguyet_choice": {
+    "id": "lh_thu_nguyet_choice",
     "contentStatus": "approved",
     "stageId": "long_hai",
-    "title": "Trước cổng, trời sắp sáng",
-    "backgroundId": "long-hai-dawn-gate",
-    "location": "Cổng biệt thự Hứa Gia, Long Hải",
+    "title": "Đi theo, hay ở lại",
+    "backgroundId": "long-hai-corridor",
+    "location": "Khúc quanh hành lang khu gia nhân, biệt thự Long Hải",
     "companions": [
       "le_thu_nguyet"
     ],
     "narration": [
-      "Nghi thức trong gian phòng đã bị phá, nhưng tiếng gọi từ mạng lưới ngoài biệt thự vẫn chưa dừng — nó chỉ lùi ra xa, như thủy triều rút mà chưa tan. Bà Năm Liên khép lại bọc vải của mình. Người gác ngồi tựa vào cột hiên, lần đầu tiên sau nhiều năm được tự chọn có đứng dậy hay không.",
-      "Trời gần sáng. Ở bậc thềm, con Thu Nguyệt đứng nép bên cánh cổng, tay vẫn ôm khay trà đã nguội từ lúc nào. Nó lấy hết can đảm nói nhanh một câu: xe ngựa của nhà sẽ về Chợ Lớn trong hôm nay, và đường xuống Vũng Tàu mấy bữa nay có người lạ mặt canh ở bến. Nó nói xong liền cúi đầu, như sợ chính cái bóng của mình nghe thấy.",
-      "Tiểu Lan vịn tay vào khung cửa, tự mình bước qua ngưỡng cửa mà nàng đã bị giam sau nó không biết bao nhiêu lâu. Những vết sẹo trên mặt nàng không biến mất. Nàng cũng không đòi Cao Minh hứa một điều gì mà chính hắn chưa biết có làm được hay không.",
-      "Cao Minh nhìn cánh cổng đang mở. Một kiếm của hắn đủ dọn sạch mọi vật cản từ đây đến tận chân trời. Nhưng người đang đứng cạnh hắn không phải một món đồ được mang đi — và quyền quyết định bước tiếp hay dừng lại, từ giây phút này, phải là của nàng."
+      "Thu Nguyệt đợi ở khúc quanh hành lang khu gia nhân, nơi ánh đèn không chiếu tới, với một gói đồ nhỏ đã buộc sẵn trên lưng — mấy bộ quần áo, một đôi guốc mộc, và tờ danh sách đóng gói rương thuốc bản sao thứ hai mà cô đã tự chép thêm một bản từ bao giờ. Cô đã tự quyết định trước khi được hỏi: gói đồ đã sẵn, tóc đã vấn gọn, giày đã xỏ. Chỉ đến khi Cao Minh bước tới, sự quyết tâm ấy mới run lên: cô sực nhớ mình chỉ là một đứa gia nhân chạy việc, và việc tự ý gói đồ đi theo cô chủ là một việc tày trời — cô ôm chặt gói đồ, cúi đầu, nói một hơi như người nhận tội: 'Em gói sẵn rồi. Em biết em không có phận sự gì mà đòi đi theo. Nhưng em gói sẵn rồi, thưa ông.'",
+      "Cao Minh không trách cô. Hắn đặt hai con đường ra trước mặt cô, nói rõ từng đường một, không giấu phần nguy hiểm của đường nào — vì cô gái này, suốt những ngày qua, đã chứng tỏ mình xứng đáng được nghe sự thật như một người lớn. Đường thứ nhất: đi theo. Cô biết đường ra bến, biết mật mã thương hồ mà không ai trong đoàn biết, biết tên và mặt của từng người trong nhà này — một người làm chứng còn sống, có tên, có tiếng nói, là thứ mà mọi cuốn sổ của Giới Phòng đều sợ nhất. Đổi lại: đường đi đêm nay không ai bảo đảm được an toàn, và một khi đã ra khỏi cổng, cô không còn đường quay lại làm người của nhà này nữa. Đường thứ hai: ở lại. Ở lại làm tai mắt trong nhà — chậm lại những việc có thể chậm, gửi tin ra ngoài khi có thể, che chở cho bà Năm Liên đã già — và chờ một ngày được gọi ra làm chứng từ bên trong. Đổi lại: ở lại nghĩa là ở trong tay của cái mạng và của Giới Phòng, sau một đêm mà họ đã mất thứ quý nhất họ giữ.",
+      "Cô còn cho hắn xem một thứ nữa, lấy từ dưới đáy gói đồ: một miếng vải gói mấy đồng bạc lẻ và một chiếc thẻ bài bằng tre đã cũ — thẻ bài của người chạy việc ở bến tàu Chợ Lớn, thứ duy nhất còn lại từ quãng đời trước khi cô vào nhà này. Cô nói, nếu đi theo, cô sẽ dẫn đoàn tới đúng bến mà cô quen: ở đó có một người chèo thuyền tên Tư Lực, nợ cô một ơn cứu mạng từ hồi cô còn chạy việc — cha con nhà ấy trọng chữ tín hơn trọng tiền, và ghe của họ đi đêm không bao giờ bị xét. Còn nếu ở lại, cô cũng đã tính sẵn: cô sẽ xin quản gia cho đổi sang chân bưng bê ở dãy nhà ngang, gần kho thuốc nhất, để mắt cô còn trông được chiếc rương và buồng của bà Năm Liên. Cả hai đường, cô đều đã tự mình dò trước từng bước — chỉ còn chờ một tiếng của hắn để biết mình sẽ đi đường nào.",
+      "Hắn nói thêm một điều nữa, điều hắn hiếm khi nói với ai: quyết định này, hắn sẽ không làm thay cô — không phải vì hắn không quyết được, mà vì cả cuộc đi này, từ đầu tới cuối, là để giành lại cho con người ta cái quyền tự quyết lấy đời mình, và quyền ấy phải bắt đầu có giá trị ngay từ đêm nay, ngay với cô hầu nhỏ nhất trong nhà. Thu Nguyệt đứng yên rất lâu. Cô nhìn về phía gian phòng trong cùng — nơi cô chủ của cô đang chờ giờ đi — rồi nhìn về phía dãy buồng gia nhân tối om, nơi bà Năm Liên vừa quay về và sẽ ở lại một mình trong căn nhà đã khóa. Nước mắt cô rơi xuống, nhưng giọng cô, khi cất lên, lại không hề run như Cao Minh tưởng.",
+      "Dù người chơi chọn đường nào, có một việc Thu Nguyệt tự làm trước khi nghe quyết định — cô nói ra như một lời thú tội và cũng là một niềm tự hào nho nhỏ: cô đã chép bản danh sách đóng gói thành hai bản từ trước. Một bản bà Năm Liên giữ. Một bản cô giấu sau tượng ông Táo trong bếp — chỗ mà người trong nhà, dù có lục soát, cũng ít ai dám động vào vì kiêng. 'Em học cô chủ,' cô nói, lần đầu tiên mỉm cười trong suốt buổi tối, 'cô giấu đồ khắp nơi để còn có cái mà chứng. Em cũng giấu. Lỡ em có bề gì, thì sau tượng ông Táo vẫn còn một bản, thưa ông.' Cô bé mười chín tuổi, xuất thân chạy việc ở bến tàu, vừa tự mình học được bài học lớn nhất của căn nhà này: giấy tờ, nếu biết giấu đi và chia ra, có thể sống lâu hơn cả con người.",
+      "Ngoài sân, tiếng chuông điểm danh cuối cùng của đêm chưa vang. Bên trong hành lang tối, một cô hầu nhỏ đứng chờ nghe quyết định về đời mình — và dù quyết định ấy là gì, thì từ giây phút này, cô không còn là một con số trong sổ gia nhân của Giới Phòng nữa. Cô là một người vừa được hỏi ý, và câu trả lời của cô — hay sự lựa chọn thay cho cô — sẽ đi theo cuộc ra đi này tới tận cùng, như mọi lựa chọn khác trong đêm nay: được ghi nhớ, được chịu trách nhiệm, và không bao giờ bị gạch đi."
     ],
     "dialogue": [
       {
         "speaker": "Lê Thu Nguyệt",
-        "text": "Dạ… thưa ông, em chỉ dám nói một câu này thôi. Đường xuống Vũng Tàu không yên đâu. Ông đi thì… ông coi chừng ở bến."
+        "text": "Thưa ông, em gói đồ sẵn rồi. Em biết thân phận em, em không dám đòi hỏi. Nhưng em nghĩ… em biết đường ra bến, em đọc được ký hiệu thương hồ, em biết mặt biết tên hết người trong nhà này. Em đi theo, may ra em còn có ích cho cô. Em ở lại… em cũng có ích, em làm tai mắt cho ông trong nhà này, em che cho bà Năm Liên. Ông biểu sao, em nghe vậy — chỉ xin ông đừng đuổi em về buồng nằm ngủ như không có chuyện gì. Em không ngủ nổi nữa đâu, thưa ông."
       },
       {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Đã lâu lắm rồi, tôi mới lại nhìn thấy trời sắp sáng ở bên ngoài cánh cổng này."
+        "speaker": "Cao Minh",
+        "text": "Thu Nguyệt. Ngươi đã tự gói đồ, tự chép thêm một bản danh sách giấu sau tượng ông Táo — ngươi không còn là đứa chạy việc chỉ biết nghe lệnh nữa. Cho nên việc này, bổn tọa hỏi ngươi một lần, và ngươi phải tự trả lời cho ra lẽ: ngươi muốn đi, hay muốn ở?"
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ… thưa ông cho em nghĩ một chút… Em sợ cả hai đường, em nói thật. Nhưng em sợ nhất là sáng mai thức dậy, cô đi rồi, nhà này lại như cũ, mà em thì vẫn bưng thuốc vào một căn phòng trống. Thưa ông, em theo cô mười mấy năm nay là phận sự. Còn từ đêm nay… từ đêm nay là em tự chọn."
       }
     ],
     "choices": [
       {
-        "id": "ask",
-        "text": "Hỏi Tiểu Lan: nàng có muốn rời khỏi biệt thự này cùng mình không.",
-        "next": "lh_slice_end",
+        "id": "take_her",
+        "text": "«Đi theo. Làm chứng.» — Thu Nguyệt ra khỏi cổng cùng đoàn, mang theo tiếng nói và trí nhớ của một người trong nhà.",
+        "next": "lh_escape_eve",
         "effects": {
-          "lanTrustDelta": 3
+          "lanTrustDelta": 1
         },
-        "objective": "escape_long_hai",
+        "route": {
+          "id": "tu_quyet",
+          "delta": 2
+        },
         "flags": {
-          "lanDepartureConsent": true
+          "thuNguyetFollows": true
         }
       },
       {
-        "id": "order",
-        "text": "Không cần hỏi — tự quyết định đưa Tiểu Lan rời khỏi đây ngay.",
+        "id": "leave_her",
+        "text": "«Ở lại. Làm tai mắt của bổn tọa trong nhà này.» — Thu Nguyệt ở lại với bà Năm Liên, giữ đường tin và bản danh sách thứ hai.",
+        "next": "lh_escape_eve",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 2
+        },
+        "flags": {
+          "thuNguyetStays": true
+        }
+      }
+    ]
+  },
+  "lh_escape_eve": {
+    "id": "lh_escape_eve",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Đêm trước giờ đi",
+    "backgroundId": "tieu-lan-room",
+    "location": "Phòng Hứa Tiểu Lan, biệt thự Long Hải",
+    "narration": [
+      "Đêm trước giờ đi, căn phòng nhỏ sáng một ngọn đèn duy nhất. Mọi sự chuẩn bị đã xong: bản đồ điểm neo đã thuộc lòng, thứ tự cắt đã diễn đi diễn lại trong đầu, gói đồ của nàng chỉ có chiếc hộp của mẹ và cuộn chỉ đỏ quấn quanh cổ tay. Cao Minh ngồi trên chiếc ghế đẩu bên cửa — vị trí của một người canh gác một căn phòng — hai thanh kiếm lơ lửng yên hai bên, không phát ra một tiếng động. Bên ngoài, căn nhà bị phong tỏa ngủ trong cái im lặng của nó; bên trong, một cô gái mười tám tuổi ngồi đối diện với đêm tự do đầu tiên của đời mình, và thấy nó lớn quá, tối quá, không biết mừng hay sợ trước.",
+      "Nàng hỏi những câu rất thực tế, theo cái cách của một người cả đời chỉ biết thế giới qua sách: từ đây ra bến đi mất bao lâu; tới lúc cắt những sợi chỉ thì có đau không, đau như thế nào; qua cổng rồi thì đi bộ hay đi xe; và — câu này nàng hỏi khẽ nhất — ở ngoài kia, người ta có nhìn nàng như người ta nhìn một người bệnh không. Hắn trả lời từng câu một, không giấu, không thêm bớt, như hắn vẫn trả lời nàng từ ngày đầu: đường ra bến đi trong bóng tối mất gần một canh giờ; khi cắt chỉ sẽ đau, đau như một hơi thở bị giữ lại quá lâu rồi được thả ra — đau một lúc, rồi nhẹ đi; và ở ngoài kia, người ta chưa biết nàng là ai — lần đầu tiên trong đời, nàng sẽ được người lạ nhìn như một người lạ bình thường, không hơn không kém. Nghe tới đó, nàng im lặng một lúc, rồi nói: được người ta nhìn như người bình thường, hóa ra là một điều đáng để đi xa như vậy.",
+      "Rồi nàng hỏi câu mà cả buổi tối nàng đã giữ lại sau cùng — câu hỏi mà hắn biết trước sau gì cũng sẽ tới, vì nó nằm ở trung tâm của mọi việc đã xảy ra trong căn nhà này. Nàng hỏi: nếu đêm nay nàng quên cả chuyện này thì sao. Quên chiếc hộp của mẹ. Quên lời bà Năm Liên. Quên cả việc chính nàng đã đồng ý ra đi — quên rằng cuộc ra đi này là do nàng chọn, chứ không phải do ai ép. 'Ngày mai, nếu tôi tỉnh dậy ở một nơi lạ, và trong đầu tôi không còn gì của đêm nay,' nàng nói, giọng rất khẽ mà rất rõ, 'thì làm sao tôi biết được là tôi đã tự đi, chứ không phải bị người ta mang đi như họ vẫn mang tôi đi suốt mười một năm nay?'",
+      "Hắn đáp bằng câu trả lời đã thành lời hứa giữa hai người từ cái đêm nàng quên mất một câu nói của bà Năm Liên: bổn tọa kể lại. Kể lại hết — từng việc một, theo đúng thứ tự, không thêm một chữ nào có lợi cho mình. Nhưng hắn nói rõ thêm một điều mà hắn đã nói từ lần đầu tiên, và lần này nàng nghe với một sự thấu hiểu khác hẳn: lời hắn kể sẽ mãi mãi chỉ là lời kể của hắn, không phải ký ức của nàng. Hắn sẽ không bao giờ nói dối nàng rằng nàng đã nhớ lại. Một ký ức vay mượn, dù vay của người tốt, vẫn là một thứ không phải của mình — và nàng đã bị lấy cắp quá nhiều thứ không phải của mình rồi. Cái hắn giữ cho nàng không phải là quá khứ. Cái hắn giữ là sự thật, để nàng muốn tin hay muốn ngờ tùy ý nàng — vì quyền được tin hay không tin, cũng là một quyền của người tự do.",
+      "Điều nàng xin sau chót làm hắn im lặng lâu hơn mọi câu hỏi khác. Nàng xin hắn nhớ thay nàng một thứ không phải là sự kiện, mà là một quyết định: quyết định của chính nàng trong đêm nay. Rằng nàng đã nghe hết, đã cân nhắc hết, và đã tự mình chọn ra đi. 'Nếu tôi quên,' nàng nói, 'thì ít nhất trên đời còn một người nhớ rằng tôi đã tự chọn. Ngài nhớ thay tôi điều ấy — không phải nhớ thay tôi đã làm gì, mà nhớ thay tôi đã muốn gì.' Hắn đồng ý. Đó là lời thề thứ hai giữa hai người, và có lẽ là lời thề nặng nhất: một người sẽ giữ hộ cho một người khác chính ý chí của nàng, để nếu một mai ý chí ấy bị đánh cắp, nó vẫn còn một nơi trên đời này mà cái mạng kia không chạm tới được.",
+      "Chuông điểm danh cuối cùng của đêm vang lên ngoài hành lang — tiếng chuông mà mười một năm nay nàng nghe như nghe tiếng khóa cửa phòng mình. Nhưng đêm nay, trong tiếng chuông ấy, nàng đứng dậy. Tự mình đứng dậy, không ai đỡ, không ai ra lệnh, tay ôm chiếc hộp của mẹ, cuộn chỉ đỏ trên cổ tay, và nhìn ra cánh cửa mà ban chiều nàng đã để mở. Ngoài kia là hành lang tối, là sân trong, là cổng xích, là đường ra bến, là cả một thế gian ồn ào và không biết trước. Nàng hít một hơi thật sâu — hơi thở của chính nàng, theo nhịp của chính nàng — và bước bước đầu tiên."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi hỏi ngài một điều chót, điều này tôi giữ từ đầu buổi tối tới giờ. Nếu đêm nay tôi quên hết thì sao? Quên hộp của mẹ, quên lời của bà, quên cả việc tôi đã đồng ý đi. Mai này tôi tỉnh dậy ở một nơi lạ, làm sao tôi biết được là tôi đã tự đi — chứ không phải bị mang đi như mười một năm nay?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa kể lại. Kể từ đầu, từng việc một, đúng như nó đã xảy ra. Nhưng nàng nhớ cho rõ điều bổn tọa đã nói từ trước: đó là lời kể của bổn tọa, không phải ký ức của nàng. Bổn tọa giữ sự thật cho nàng — còn tin hay không, là quyền của nàng. Bổn tọa không lấy thêm của nàng một quyền nào nữa, dù là quyền được nhớ thay."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi biết. Và chính vì ngài nói vậy, tôi mới dám đi. Một ký ức mượn của người khác… nghe qua thì tử tế, mà nghĩ kỹ thì cũng là một cách bị người ta sống thay. Thà tôi quên, rồi nghe ngài kể lại như nghe chuyện của một người thân — còn hơn là mang một thứ không phải của mình mà tưởng là của mình."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng hiểu được điều ấy, thì bổn tọa yên tâm một nửa rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Còn một điều, thưa ngài. Ngài nhớ thay tôi một thứ: không phải việc tôi đã làm, mà việc tôi đã chọn. Đêm nay, tôi, Hứa Tiểu Lan, tự chọn ra đi. Nếu mai này tôi quên, ngài nói lại cho tôi nghe đúng câu ấy. Để tôi biết — dù không nhớ — rằng mình đã từng là người tự quyết định đời mình."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa nhớ. Câu ấy, bổn tọa giữ cho nàng — giữ kỹ hơn cả bản đồ đêm nay. Đi thôi. Chuông dứt rồi. Tới giờ của chúng ta."
+      }
+    ],
+    "choices": [
+      {
+        "id": "promise_keep",
+        "text": "«Bổn tọa nhớ thay nàng — cả những điều nàng đã chọn.» Khắc lời thề thứ hai vào lòng trước khi bước ra hành lang.",
+        "next": "lh_escape_begins",
+        "effects": {
+          "lanTrustDelta": 3
+        }
+      },
+      {
+        "id": "rest_now",
+        "text": "«Ngủ một giấc ngắn đi. Tới giờ, bổn tọa sẽ gọi nàng dậy — gọi bằng tên của nàng.»",
+        "next": "lh_escape_begins",
+        "effects": {
+          "lanTrustDelta": 2,
+          "memoryIntegrityDelta": 1
+        }
+      }
+    ]
+  },
+  "lh_escape_begins": {
+    "id": "lh_escape_begins",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Cánh cửa đầu tiên",
+    "backgroundId": "long-hai-corridor",
+    "location": "Khu nhà trong, biệt thự Hứa Gia, Long Hải — giờ hành động",
+    "narration": [
+      "Giờ hành động đến trong cái lặng thinh sâu nhất của đêm. Biệt thự đã phong tỏa từ chập tối: cổng xích, đèn hành lang tắt theo lệnh, gia nhân ai về vị trí nấy như quân cờ đã xếp xong ván. Nhưng một ván cờ thì chỉ yên khi người chơi còn ngồi nhìn — và đêm nay, có hai người trong tòa nhà này không chịu làm quân cờ nữa.",
+      "Cao Minh đến trước cửa phòng nàng không một tiếng động. Hắn không gõ. Hắn đứng ngoài rèm, nghe nhịp thở của người con gái bên trong chậm rãi và đều — không phải nhịp thở của người ngủ say, mà của một người đang nằm thức, đếm từng khắc trôi qua, chờ một điều mình đã tự quyết. Hắn khẽ gọi tên nàng — chỉ gọi tên, không thêm một chữ nào.",
+      "Bên trong, tiếng áo sột soạt. Tiểu Lan bước ra, đã mặc sẵn chiếc áo dài màu chàm cũ nàng chọn từ chiều, tóc vấn gọn, tay ôm trước ngực một cuộn chỉ thêu nhỏ — cuộn chỉ đếm ngày tháng của nàng, thứ duy nhất nàng mang theo khỏi căn phòng đã giam mình mười tám năm đời người và không biết bao nhiêu năm tháng bị đánh cắp. Nàng không mang vàng bạc, không mang áo quần. Nàng mang theo cái lịch của riêng mình.",
+      "Phòng nàng không khóa. Đó là điều hắn đã biết từ lâu, và cũng là điều tàn nhẫn nhất của tòa nhà này: nó không cần khóa cửa phòng nàng, vì cả tòa nhà là một cái khóa lớn hơn, và chính thân thể nàng là ổ khóa cuối cùng. Trên bàn, chén thuốc tối đã cạn — nàng uống cạn như mọi đêm, một nghi thức ngoan ngoãn sau chót trước khi làm kẻ đào tẩu. Bên cửa sổ, khung thêu còn căng dở đóa sen; nàng nhìn nó một thoáng rồi quay đi, không mang theo — có những thứ phải để lại cho căn phòng này, để sau này nếu có ai vào đây, họ còn thấy rằng nơi đây từng có một người con gái sống thật, chứ không phải một cái xác được cất giữ.",
+      "Ngưỡng cửa phòng nàng chỉ cao hơn nền nhà một tấc. Vậy mà nàng dừng lại trước nó lâu hơn dừng trước bất cứ cánh cửa nào khác trong đêm nay. Mười tám năm, nàng đã qua ngưỡng cửa này không biết bao nhiêu lần — vịn tay bà Năm Liên, được bế, được dìu, được đưa đi như một món đồ quý dễ vỡ. Chưa một lần nào nàng qua nó hoàn toàn bằng ý muốn của riêng mình, vào giờ của riêng mình, vì một lý do của riêng mình. Nàng hít một hơi, và bước qua — một bước nhỏ, lặng lẽ, mà Cao Minh đứng bên cạnh bỗng thấy đáng ghi nhớ hơn nhiều trận phá thành diệt quốc trong đời mình.",
+      "Hành lang khu trong tối om. Hai người đi chưa được mười bước thì ngọn đèn dầu ở đầu hồi bỗng tự cháy lên — không ai châm, không một tiếng đóm. Rồi ngọn thứ hai. Rồi ngọn thứ ba, lần lượt theo đúng thứ tự từ xa tới gần, như một hàng mắt mở ra dọc đường đi của họ. Căn nhà đã thức. Nó không ngăn, chưa ngăn. Nó chỉ mở mắt ra mà nhìn.",
+      "Qua dãy cửa phòng gia nhân đóng kín, Cao Minh nghe tiếng người trở mình — không phải từng người một, mà đồng loạt, như một thân thể lớn trở mình trong giấc ngủ chập chờn. Có tiếng thì thầm rất khẽ sau một cánh cửa, một giọng đàn bà mớ ngủ gọi một cái tên không rõ. Rồi tất cả lại im, im đến mức nghe được tiếng tim của người con gái đang đi bên cạnh hắn đập nhanh hơn bình thường một chút.",
+      "Qua khung cửa tò vò nhìn ra sân trước, quang cảnh hiện ra như một bức tranh tĩnh: hai hàng gia nhân đứng ngủ dọc hiên, người tựa cột, người ngồi bó gối, đầu gục xuống ngực — tất cả đều thở cùng một nhịp, lên xuống đều đặn như mặt nước hồ không gió. Trên chòi cổng, chiếc chuông đồng treo im trong bóng tối; đôi đèn cổng cháy leo lét; sợi xích sắt vắt ngang cổng nằm cuộn như con trăn ngủ. Ba điểm neo ấy, trong thần niệm của hắn, sáng lên mờ mờ như ba nốt nhạc trầm đang chờ bị gảy — chỉ cần hắn gảy sai một nốt, cả bản nhạc sẽ đổ xuống đầu người con gái bên cạnh.",
+      "Ở cửa sổ cuối dãy nhà đông, một ngọn đèn chớp hai lần — tín hiệu của Thu Nguyệt, con người ở lại trong lòng nhà như một con mắt mở. Nàng đã chọn ở lại làm tai mắt, và đêm nay đôi mắt ấy đang thức thay cho cả những người không được phép thức. Cao Minh khẽ gật đầu về phía ánh đèn ấy, dù biết cô không nhìn thấy.",
+      "Họ đi qua sân trong. Giếng đá nằm im trong sương, mặt nước đen không một gợn — điểm neo thứ nhất của tòa nhà ngủ yên dưới lớp nước ấy, và đêm nay nó sẽ không bị động đến: bản đồ neo của hắn đã tính cả rồi, con đường ra cổng chỉ cần ba neo ở cổng, cắt đúng thứ tự là đủ, không cần — và không được — đánh động toàn bộ mạng lưới cùng một lúc. Mỗi mắt nối bị cắt thừa là một lần nàng phải gánh thêm một phần tải không đáng có.",
+      "Đến ngưỡng cửa dãy nhà ngoài, nơi hành lang mở ra khoảng sân trước cổng, Cao Minh dừng lại. Trước mặt là ba mươi bước sân gạch, rồi đến cánh cổng sắt đang xích và hàng gia nhân ngủ đứng dọc hai bên hiên như những pho tượng chưa được gọi tên. Hắn biết chỉ cần hắn muốn, hắn có thể bế nàng lên và đi qua ba mươi bước ấy trong một nhịp thở, không ai kịp mở mắt. Hắn cũng biết cái giá của việc đó — không phải giá bằng máu, mà bằng thứ nàng vừa mới giành lại được trong những ngày qua: quyền được tự mình quyết định.",
+      "Hắn quay sang nàng. Người con gái đứng thẳng, cuộn chỉ ôm chặt trong tay, mặt tái đi vì căng thẳng nhưng mắt không tránh đi đâu cả. Ngoài sân, ngọn đèn cổng đầu tiên vừa tự cháy lên."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, bà Năm… bà có kịp ra khỏi nhà ngoài không? Tôi không nghe tiếng bà ho như mọi đêm."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bà ấy ở lại theo ý nguyện của chính mình, để làm chứng cho nàng. Bổn tọa đã dặn Thu Nguyệt trông chừng. Nàng đừng mang thêm nợ vào lòng — người ở lại cũng là người tự chọn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ. Tôi hiểu. Ở nhà này, được tự chọn một việc gì đó… là thứ xa xỉ nhất."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Cuộn chỉ này, tôi thắt một nút cho mỗi ngày mà tôi còn nhớ được. Có những quãng dài chỉ toàn là… trống. Đêm nay ra khỏi cổng, tôi muốn tự tay thắt thêm một nút nữa — nút đầu tiên ở bên ngoài căn nhà này."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Tiểu Lan. Trước cánh cửa đầu tiên này, bổn tọa hỏi nàng một lần cuối. Không phải vì bổn tọa do dự — mà vì từ bước này trở đi, không còn đường quay lại nữa. Nàng có muốn tự mình bước ra khỏi tòa nhà này, cùng bổn tọa, đêm nay không?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "ask_her",
+        "text": "Chờ nàng tự mình trả lời — dù câu trả lời có làm chậm cả kế hoạch.",
+        "next": "lh_gate_fight",
+        "effects": {
+          "lanTrustDelta": 3
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "lanDepartureConsent": true
+        },
+        "objective": "escape_long_hai"
+      },
+      {
+        "id": "carry_her",
+        "text": "Không cần hỏi nữa — bế nàng lên, đi thẳng qua cổng trong một nhịp thở.",
         "next": "lh_dead_consent"
       }
     ]
+  },
+  "lh_gate_fight": {
+    "id": "lh_gate_fight",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Trận cổng",
+    "backgroundId": "long-hai-dawn-gate",
+    "location": "Cổng biệt thự Hứa Gia, Long Hải — giờ Dần",
+    "entity": "entity_guard",
+    "narration": [
+      "Câu trả lời của nàng vừa dứt, cả tòa nhà chuyển mình. Không chuông, không trống — chỉ là hàng chục cánh cửa mở ra cùng một lúc sau lưng họ, và tiếng chân trần, chân dép, chân đất đổ ra sân như nước tràn. Gia nhân của biệt thự Hứa Gia đứng đầy khoảng sân trước cổng: phu khuân, người bếp, cô hầu, lão bộc — và đi đầu, chắn ngang cánh cổng sắt, là người gác Văn Bảy, đôi mắt trắng dã, hai tay đã kéo then cổng xuống từ lúc nào.",
+      "Họ không gào thét. Họ không ùa lên loạn xạ như một đám đông. Họ tiến lên từng hàng, khép dần thành một vòng cung sống, mỗi người đúng vị trí của mình như đã tập dượt trong mơ suốt nhiều năm: gã cầm cuốc đứng chếch bên trái, gã cầm dao phay lặng lẽ vòng ra phía sau, cô hầu má rách đứng ngay giữa lối đi, hai tay buông thõng, mắt nhìn thẳng vào Tiểu Lan như nhìn một cái neo bằng thịt. Mạng lưới không cần họ thắng. Nó cần họ làm một việc duy nhất: đứng giữa hắn và cánh cổng, bằng chính thân thể của họ.",
+      "Trên hiên nhà chính, ông quản gia già đứng thẳng như một cây cột, hai tay chắp trước bụng, miệng đều đều đọc lại gia quy của nhà — thay dầu đèn đúng giờ, đóng then đúng lệ, khách lạ không được vào khu trong — đọc như đọc một bài kinh, và kỳ lạ thay, bước chân của đám gia nhân dưới sân dường như đang khớp theo nhịp đọc ấy. Bài gia quy mà ban ngày chỉ là nề nếp, đêm nay đã trở thành một thứ khác: kênh truyền mệnh lệnh khoác áo thói quen, thứ mà mỗi người trong nhà đã thuộc lòng từ lâu trước khi họ biết mình bị điều khiển.",
+      "Giữa vòng vây, một thằng nhỏ chừng mười lăm tuổi — đứa nhỏ vẫn hay bưng nước rửa mặt cho khách — bị đẩy lên hàng đầu, hai tay ôm một cây đòn gánh, mặt trắng bệch vì sợ, nước mắt chảy mà chân vẫn cứ bước tới. Cao Minh đón cây đòn gánh bằng hai ngón tay, nhìn thẳng vào đôi mắt còn tỉnh táo của đứa nhỏ trong một thoáng, rồi điểm nhẹ vào sợi chỉ ở khuỷu tay nó. Cây đòn gánh rơi xuống. Thằng nhỏ ngồi phịch xuống nền gạch, ôm mặt khóc nức nở — tiếng khóc đầu tiên hoàn toàn là của chính nó trong đêm nay.",
+      "Tiểu Lan không núp hẳn sau lưng hắn. Nàng đứng chếch sang một bên, ở nơi nàng nhìn thấy được mặt của từng người trong vòng vây — những gương mặt đã bưng thuốc, giặt áo, chải tóc cho nàng suốt bao năm. Hắn hiểu ý nàng mà không cần hỏi: nếu đêm nay có ai phải ngã xuống, nàng muốn mình là người nhìn thấy, chứ không phải người được che mắt. Và có một điều nữa, sâu hơn: đám người kia, dù đang bị giật dây, vẫn nhận ra nàng — qua sợi chỉ điều phối, sự hiện diện của nàng ở giữa sân là một điểm tựa mà mệnh lệnh của căn nhà phải liên tục tính tới. Nàng đứng đó, tự nguyện, như một cái neo sống đối trọng lại ba cái neo chết của cánh cổng.",
+      "Cao Minh bước lên nửa bước, chắn nàng ra sau lưng. Kiếm của hắn chưa rời vỏ. Hắn nhìn vòng người đang khép lại và thấy, rõ như nhìn một bản đồ đã thuộc lòng, ba điểm neo đang giữ cánh cổng này trong tay mạng lưới: neo chuông cổng — tiếng chuông ra lệnh cho cả sân; neo đôi đèn cổng — đôi mắt canh giữ, điều phối từng bước chân; và neo xích cổng — sợi xích sắt to bằng cổ tay, mắt neo chịu tải nặng nhất, gánh thay cho cả hai neo kia. Thứ tự cắt hắn đã tính từ đêm hoàn tất bản đồ neo: cắt chuông trước, cho mệnh lệnh câm đi; cắt đèn sau, cho vòng vây mù đi; cắt xích cuối cùng, thật chậm, để phần tải dồn ra ngoài theo sợi xích mà tan, chứ không giật ngược vào người con gái đứng sau lưng hắn — người mà toàn bộ hệ thống điều phối này đang mượn thân thể làm đường dẫn.",
+      "Hắn ra tay. Kiếm quang không hướng vào một con người nào. Lưỡi kiếm lướt qua đầu Văn Bảy đúng một sợi tóc và cắt phăng sợi dây vô hình buộc vào chiếc chuông đồng trên chòi cổng. Chuông không kêu — nó nứt. Một tiếng «keng» cụt, nghẹn, như một mệnh lệnh bị cắt ngang cổ họng. Cả sân khựng lại: hàng chục thân người đang tiến lên bỗng mất nhịp nửa bước, những bước chân vốn khớp nhau như một người bỗng lệch đi, va vào nhau, chao đảo.",
+      "Neo thứ hai: đôi đèn cổng. Hai đốm lửa trong lồng sắt bỗng phụt tắt cùng lúc khi kiếm quang đi qua, dù dầu trong đèn còn đầy. Vòng vây mù đi thật — những đôi mắt trắng dã chớp liên hồi, đầu quay qua quay lại tìm một nhịp điều phối không còn nữa; có người quay hẳn về phía tường, có người đứng yên như tượng. Nhưng sợi xích cổng thì vẫn còn đó, và qua nó, mạng lưới dồn hết sức nặng còn lại vào một mệnh lệnh cuối cùng, đơn giản nhất: giữ cổng.",
+      "Đúng lúc ấy, một bà lão ở hàng sau ngã khuỵu. Cao Minh đã ở đó trước khi bà chạm đất — tay áo của hắn đỡ lấy lưng bà, đặt bà ngồi tựa vào cột hiên, nhẹ như đặt một món đồ dễ vỡ. Gã cầm cuốc chém xuống theo phản xạ của kẻ khác; hắn nghiêng đầu tránh, điểm hai ngón tay vào cổ tay gã — chỉ cắt sợi chỉ điều khiển ở cổ tay, không chạm một sợi gân. Lưỡi cuốc rơi xuống gạch, gã gia nhân ôm lấy cổ tay mình, và lần đầu tiên trong đêm, một tiếng kêu đau vang lên bằng giọng của chính chủ nhân nó.",
+      "Chỉ còn neo xích. Sợi xích sắt rung lên từng hồi, căng như dây đàn sắp đứt, và hắn nghe — qua mặt đất, qua không khí — phần tải của cả hệ thống cổng đang chạy rần rật tìm đường thoát. Hắn đặt một tay lên sợi xích lạnh. Sau lưng hắn, Tiểu Lan nắm chặt cuộn chỉ, đứng thẳng giữa sân, không lùi một bước. Hắn biết mình phải cắt mắt neo này như thế nào: chậm, từng phân một, cho sức nặng tan ra ngoài như nước rút — và hắn cũng biết mạng lưới đang chờ đúng khoảnh khắc ấy để giật ngược tất cả vào nàng."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Tất cả các ngươi nghe cho rõ. Bổn tọa không đến để giết người của nhà này. Đêm nay, kẻ nào ngã xuống, là ngã vì sợi dây đang buộc vào cổ mình — không phải vì kiếm của bổn tọa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Chuông trước. Cho cái miệng ra lệnh của căn nhà này câm đi đã — rồi mới tới mắt của nó, và cuối cùng là tay của nó."
+      },
+      {
+        "speaker": "Người gác",
+        "text": "Thưa… thưa ông… tay tôi… nó kéo then… ông coi chừng… coi chừng phía sau…"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, cứ làm theo bản đồ của ngài. Tôi đứng được. Đừng vì tôi mà cắt sai thứ tự."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Tốt. Vậy nàng nhìn cho kỹ — đây là cách bổn tọa mở một cánh cổng mà không cần ai phải chết thay nó."
+      }
+    ],
+    "choices": [
+      {
+        "id": "order_right",
+        "text": "Cắt neo xích cuối cùng thật chậm, đúng thứ tự bản đồ: chuông — đèn — xích.",
+        "next": "lh_gate_hold",
+        "effects": {
+          "civiliansSavedDelta": 2,
+          "lanTrustDelta": 1
+        }
+      },
+      {
+        "id": "shield_first",
+        "text": "Lấy thân che cho Tiểu Lan, một tay giữ nàng, một tay cắt neo — chậm mà chắc.",
+        "next": "lh_gate_hold",
+        "effects": {
+          "lanTrustDelta": 2,
+          "lanMaterInfluenceDelta": 2
+        }
+      },
+      {
+        "id": "chain_first",
+        "text": "Cắt thẳng neo xích cổng trước cho nhanh — mở đường rồi tính sau.",
+        "next": "lh_wrong_order"
+      }
+    ]
+  },
+  "lh_gate_hold": {
+    "id": "lh_gate_hold",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Nàng gọi tên họ",
+    "backgroundId": "long-hai-dawn-gate",
+    "location": "Cổng biệt thự Hứa Gia, Long Hải — trời chưa sáng hẳn",
+    "narration": [
+      "Mắt neo xích đứt lìa, sợi xích sắt to bằng cổ tay tuột xuống nền gạch thành từng vòng, kêu loảng xoảng rồi nằm im như một con rắn chết. Cánh cổng sắt nặng nề tự trượt mở ra một khe — không ai đẩy, chỉ là lần đầu tiên sau nhiều năm, không còn thứ gì giữ nó đóng lại nữa. Con đường đất chạy xuống phía biển hiện ra trong sương sớm, trống và thẳng.",
+      "Nhưng gia nhân thì vẫn đứng đó. Chuông đã câm, đèn đã tắt, xích đã đứt — vậy mà hàng chục con người vẫn đứng nguyên vị trí vòng vây, tay còn giơ lên lưng chừng, mắt trắng dã nhìn vào khoảng không. Mệnh lệnh cuối cùng — «giữ cổng» — vẫn còn vang vọng trong họ như tiếng chuông ngân trong đầu sau khi chuông đã vỡ: thân thể họ chưa nhận được lệnh mới, cũng chưa ai cho phép họ buông xuống. Họ đứng như một đội quân bị bỏ quên giữa trận, không tiến, không lui, chỉ run lên rất khẽ.",
+      "Có một khoảnh khắc rất ngắn, sau khi xích đứt và trước khi nàng lên tiếng, cả sân cổng im lặng đến mức nghe được tiếng sương rơi trên mái ngói. Rồi từ trong nhà chính, một ngọn đèn tự cháy lên — dư chấn cuối cùng của hệ thống — cháy đúng một nhịp rồi tắt ngấm như một tiếng nấc. Căn nhà đã buông tay khỏi cánh cổng này. Phần còn lại đang đứng giữa sân kia không còn là quân lính của nó nữa; họ chỉ là những con người chưa biết mình đã được trả tự do, như người tù đứng trước cửa ngục đã mở mà chưa dám bước vì chưa nghe tiếng ai bảo đi.",
+      "Nàng gọi đến bà lão nhặt đậu ở sân trong — «Bà Chín, bà bỏ cái rổ xuống đi, đậu nhặt cả đời cũng không hết đâu» — và đôi tay của bà lão, đôi tay đã nhặt những hạt đậu không có thật suốt không biết bao nhiêu buổi chiều, từ từ dừng lại, úp xuống đùi, yên như hai con chim về tổ. Nàng gọi ông quản gia đang đứng chết trân trên hiên, miệng còn mấp máy gia quy: «Bác quản, thôi, đừng đọc nữa. Hôm nay nhà mình… nghỉ một bữa.» Ông lão khựng lại giữa một câu đọc, và gương mặt già nua ấy bỗng sụp xuống như của một đứa trẻ bị bắt gặp đang làm điều sai — rồi ông ngồi xuống bậc thềm, hai tay ôm đầu.",
+      "Giữa chừng, giọng nàng khàn đi, người run lên vì kiệt sức. Một cô hầu trẻ — chính là Hường — bỗng bước lên một bước, không ai ra lệnh, tay bưng một gáo nước dừa đưa ra phía nàng. Đó là hành động tự do đầu tiên của căn nhà này trong đêm nay: nhỏ, run rẩy, và không thuộc về bất cứ bản đồ điểm neo nào. Nàng đón lấy gáo nước bằng cả hai tay, uống một ngụm, rồi gật đầu cảm ơn cô hầu như cảm ơn một người đã cứu mạng mình.",
+      "Cao Minh đã toan bước qua. Nhưng Tiểu Lan đặt tay lên tay áo hắn — nhẹ thôi — và tự mình bước lên phía trước, đứng giữa khoảng sân, đối diện với những gương mặt đã hầu hạ, giam giữ, và sợ hãi nàng suốt bao nhiêu năm. Nàng hít một hơi. Và nàng gọi tên họ.",
+      "Văn Bảy là người đứng dậy cuối cùng. Anh ta nhìn đôi tay mình — đôi tay vừa kéo then, vừa suýt cầm vũ khí chĩa vào khách — rồi nhìn nàng, và bằng một giọng khàn đặc như vừa khóc xong một trận lớn, anh ta nói được một câu trọn vẹn của chính mình. Cả sân nghe câu ấy mà im phăng phắc: đó là âm thanh của một con người vừa trở về trong thân thể của chính mình, sau nhiều năm phải đứng ngoài mà nhìn nó làm những việc mình không hề muốn.",
+      "Nàng gọi người gác trước: «Anh Bảy. Văn Bảy.» Cái tên khâu bằng chỉ đỏ trên cổ áo anh ta — cái tên mà người đàn bà ở quê đã khâu vào để anh ta đừng lạc mất mình. Thân người cao lớn ấy giật mạnh một cái, như bị ai lay tỉnh giữa cơn mộng dữ; đôi tay đang kéo then từ từ, từ từ buông xuống. Rồi nàng gọi người phu gánh nước: «Chú Thới.» Gọi bà bếp: «Dì Sáu.» Gọi cô hầu trẻ má còn nguyên vẹn đứng nép bên cột: «Hường, em ra đây.» Từng cái tên rơi xuống sân gạch như từng hạt mưa đầu mùa rơi xuống mặt đất khô — chậm, riêng rẽ, và ở đâu chúng chạm tới, ở đó một con người khựng lại.",
+      "Điều kỳ lạ là mạng lưới không hề chống cự. Mệnh lệnh của nó không có tên. Nó gọi các vật chủ bằng số, bằng vị trí, bằng việc phải làm — nó chưa từng cần biết người gác tên Bảy hay cô hầu tên Hường. Còn nàng, người con gái bị nó dùng làm trục điều phối mười tám năm, lại thuộc tên từng người trong nhà này: thuộc từ những lần họ bưng thuốc vào phòng nàng mà không dám nhìn, từ những tiếng ho, tiếng dép, tiếng gọi nhau ăn cơm vọng qua vách. Nàng trả lại cho họ chính cái mà tờ gia phả đã xóa của nàng: một cái tên để được gọi bằng, và để tự trả lời.",
+      "Gã cầm cuốc là người cuối cùng buông vũ khí. Khi nàng gọi tên gã — «Anh Tư Lực, đặt cuốc xuống, tay anh chảy máu rồi» — gã nhìn xuống bàn tay mình như lần đầu tiên nhìn thấy nó, rồi quỳ sụp xuống sân, ôm mặt khóc bằng tiếng khóc của chính mình. Hàng người tan ra như một đàn chim được mở lồng mà chưa dám bay: kẻ ngồi bệt xuống bậc thềm, kẻ vịn cột mà nôn khan, kẻ nhìn nàng, nhìn Cao Minh, rồi nhìn đôi tay mình, như thể cả ba đều là những điều khó tin như nhau.",
+      "Nàng đứng thêm được một lát nữa rồi người lảo đảo — cái giá của việc đứng giữa dư chấn của ba điểm neo vừa đứt, bằng một thân thể mà phần điều phối sự sống đã bị mượn gần hết. Cao Minh đỡ lấy khuỷu tay nàng. Chỉ đỡ. Không bế. Nàng vịn vào tay hắn, tự đứng thẳng lại, và gật đầu về phía khe cổng đang mở."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Mọi người… ở yên đó. Không ai đuổi theo nữa đâu. Tay ai còn cầm gì, thì buông xuống đi. Tôi xin mọi người."
+      },
+      {
+        "speaker": "Người gác",
+        "text": "Cô… cô gọi tôi… lâu lắm rồi… không ai gọi tôi bằng tên… trong nhà này…"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh Bảy, anh về nhà đi. Má anh còn chờ. Đừng để bà chờ thêm một mùa nữa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng vừa làm điều mà kiếm của bổn tọa không làm được. Bổn tọa cắt được dây. Còn nàng — nàng gọi được người ở đầu dây bên kia."
+      }
+    ],
+    "choices": [
+      {
+        "id": "call_all_names",
+        "text": "Để nàng gọi hết tên từng người, dù trời sắp sáng và thời gian không còn nhiều.",
+        "next": "lh_coast_road",
+        "effects": {
+          "civiliansSavedDelta": 3,
+          "lanTrustDelta": 2
+        }
+      },
+      {
+        "id": "hurry_through",
+        "text": "Dìu nàng đi nhanh qua cổng — người trong nhà sẽ tự tỉnh sau.",
+        "next": "lh_coast_road",
+        "effects": {
+          "civiliansSavedDelta": 1,
+          "lanHealthDelta": -2
+        }
+      }
+    ]
+  },
+  "lh_wrong_order": {
+    "id": "lh_wrong_order",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Thứ tự sai",
+    "backgroundId": "long-hai-dawn-gate",
+    "location": "Cổng biệt thự Hứa Gia, Long Hải — giờ Dần",
+    "entity": "entity_guard",
+    "narration": [
+      "Kiếm quang chém thẳng vào neo xích. Ý nghĩ ấy nghe rất phải: cổng mở trước, đường thoát trước, mọi chuyện khác tính sau. Sợi xích sắt đứt phăng trong một tiếng nổ khô khốc, hai đầu xích văng ra như hai con rắn bị chém, cánh cổng sắt bật mở tung — và trong đúng khoảnh khắc ấy, Cao Minh hiểu mình đã sai.",
+      "Cần phải nói cho công bằng: nhát kiếm ấy không sinh ra từ ngu dốt. Lúc đó, trời đã gần sáng, một lưỡi dao phay trong tay kẻ bị điều khiển vừa sượt qua tay áo hắn để lại một vệt rách, Tiểu Lan sau lưng đang lảo đảo vì đứng quá lâu giữa dư chấn của các điểm neo, và hàng đuốc tiếp viện của Giới Phòng có thể xuất hiện ở đầu đường bất cứ lúc nào. Mở cổng trước — ý nghĩ ấy có đủ mọi lý do chính đáng của một người chỉ huy đang bị ép vào chân tường. Chỉ có một điều nó không có: thời gian để nhớ lại bài học ở giếng sau, rằng trong hệ thống này, «nhanh» và «đúng» là hai thứ không bao giờ được phép đánh đổi cho nhau.",
+      "Trong thần niệm của hắn, cảnh tượng diễn ra rõ đến tàn nhẫn: ba dòng sức nặng đang chạy trong hệ thống cổng bỗng mất đi dòng lớn nhất làm chỗ dựa, hai dòng còn lại không tan đi mà hợp lại, xiết lại, và cùng lao về một cửa thoát duy nhất — sống lưng của người con gái kia, nơi mọi sợi chỉ điều phối trong tòa nhà này đều từng chạy qua. Hắn nhìn thấy chúng hội lại như trăm con sông bị ép vào một khe đá hẹp, và hắn biết, trước cả khi nàng đổ xuống, rằng tiếng kêu sắp tới sẽ không thành tiếng.",
+      "Neo xích là mắt neo chịu tải. Nó gánh sức nặng của cả chuông lẫn đèn, và toàn bộ sức nặng ấy từ lâu đã chạy qua một đường dẫn duy nhất: thân thể của người con gái đứng sau lưng hắn, kẻ mà mạng lưới đã dùng làm trục điều phối thay cho chính cơ thể nàng. Khi mắt gánh tải đứt trước, chuông và đèn không mất đi sức nặng của chúng — chúng dồn toàn bộ, cùng một lúc, giật ngược theo đường dẫn ấy mà đổ vào nàng, như nước của cả một hồ chứa bị tháo cống ngược vào một ống nhỏ.",
+      "Hỗn loạn lan ra khắp sân như lửa gặp cỏ khô. Ông quản gia trên hiên đọc gia quy nhanh dần, nhanh dần, như một cái máy bị kẹt vòng lặp; đứa nhỏ bưng nước ôm đầu lăn ra giữa sân; một người đàn bà tự cào cấu hai tai mình như muốn móc ra một âm thanh chỉ mình cô nghe thấy. Không ai tấn công ai nữa — cơn quá tải không cần mệnh lệnh, nó tự nó đã là sự tra tấn đồng loạt, và mỗi con người trong sân đang phải một mình chịu phần của mình mà không hiểu chuyện gì đang xảy ra với thân thể họ.",
+      "Ngón tay nàng bấu chặt vào tay áo hắn, chặt đến mức móng tay xuyên qua lớp vải. Giữa cơn co giật, nàng cố thốt ra được mấy tiếng rời rạc — không phải kêu cứu cho mình, mà là lo cho những người xung quanh, đúng như con người nàng vẫn thế từ ngày đầu hắn gặp. Chính mấy tiếng rời rạc ấy kéo hắn ra khỏi cơn sững sờ: nàng còn đó, phần người của nàng còn đang cố nói, nghĩa là đường dẫn chưa cháy đứt, nghĩa là còn kịp — nếu hắn đủ nhanh lần này theo đúng nghĩa của bài học: nhanh trong quyết định, và chậm, thật chậm, trong thứ tự ra tay.",
+      "Chân khí của hắn tràn vào kinh mạch nàng như một dòng nước lạnh đổ vào lò lửa. Cơn quá tải chạm phải nó và khựng lại — không tan, chỉ chuyển hướng: nó chạy ngược lên cánh tay hắn, lạnh buốt và sắc như ngậm một miệng đầy mảnh sành, leo thẳng vào những kinh mạch đã mấy trăm năm không có thứ gì lạ dám xâm nhập. Tay phải của hắn — bàn tay cầm kiếm — run lên một cái rất nhẹ khi hắn giơ nó lên cắt neo chuông. Một cái run không đáng kể với người ngoài. Nhưng chính hắn thì biết: trong đời tu luyện của mình, số lần bàn tay này run có thể đếm trên đầu ngón tay, và chưa lần nào nó run vì phải gánh thay phần đau của một người khác.",
+      "Tiểu Lan không kịp kêu. Người nàng cứng lại như bị điện giật, lưng cong lên, hai tay co quắp, cuộn chỉ thêu văng xuống nền gạch lăn vào bóng tối. Mắt nàng trợn lên — và trong một khoảnh khắc kinh hoàng nhất kể từ ngày hắn đặt chân đến thời đại này, tròng mắt nàng trắng dã đi, đúng màu mắt của hàng chục con người đang đứng quanh sân: phần điều phối bị chiếm đoạt trong nàng đang nuốt trọn phần còn lại dưới sức ép của cơn quá tải.",
+      "Ngoài sân, gia nhân rú lên bằng hai thứ tiếng chồng lên nhau — tiếng của chính họ, và một thứ âm thanh khác đều đều, vô hồn, phát ra từ những cái miệng không còn nghe lời chủ nhân nữa. Vòng vây không tan mà siết lại, mù quáng, như một bàn tay bị co giật. Văn Bảy đập đầu vào cột cổng, tự làm mình bị thương mà không dừng lại được. Mạng lưới không hề ra lệnh mới. Nó không cần. Cơn quá tải tự nó đã là một mệnh lệnh.",
+      "Cao Minh quỳ xuống bên nàng ngay trên nền gạch lạnh. Hắn đã học thuộc bài học này từ giếng sau, từ chuông cổng, từ đêm hắn hoàn tất bản đồ neo: tải phải được tháo ra ngoài, từng phần một, theo đúng thứ tự — không bao giờ được giật ngược vào trong. Hắn vừa phạm đúng điều ấy, bằng một nhát kiếm nóng vội, và người trả giá đang co giật trong tay hắn với đôi mắt không còn là của mình.",
+      "Nhưng cánh cửa sửa sai chưa đóng hẳn. Chuông và đèn — hai mắt neo kia — vẫn còn đó, vẫn đang dồn tải. Nếu hắn kịp bắc một đường dẫn khác chịu thay cơn quá tải trong chốc lát, rồi cắt chuông, cắt đèn đúng thứ tự, dòng sức nặng sẽ lại chảy ra ngoài và tan đi. Đường dẫn khác ấy, trong sân này, chỉ có một: chính thân thể của hắn. Hắn nắm lấy cổ tay nàng, và mở kinh mạch của mình ra."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Giữ lấy. Nghe bổn tọa nói: giữ lấy tiếng của bổn tọa. Đừng nghe tiếng trong đầu nàng — nghe bổn tọa đây."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ngài… ngài… tay tôi… tôi không… đừng để tôi… làm hại ai…"
+      },
+      {
+        "speaker": "Người gác",
+        "text": "Cô ơi! Cô đừng có bề gì! Tôi… tôi không giữ cổng nữa đâu, cô bảo nó buông tôi ra đi!"
+      }
+    ],
+    "choices": [
+      {
+        "id": "bridge_with_qi",
+        "text": "Dùng chân khí của chính mình bắc cầu chịu tải thay nàng, rồi cắt lại từ neo chuông, đúng thứ tự.",
+        "next": "lh_gate_hold",
+        "effects": {
+          "memoryIntegrityDelta": -3,
+          "lanHealthDelta": -3
+        }
+      },
+      {
+        "id": "panic_cut",
+        "text": "Hoảng loạn — chém phăng cả neo chuông lẫn neo đèn cùng một lúc cho dứt điểm.",
+        "next": "lh_dead_order"
+      }
+    ]
+  },
+  "lh_dead_order": {
+    "id": "lh_dead_order",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Dead End · Cắt sai thứ tự",
+    "backgroundId": "long-hai-dawn-gate",
+    "location": "Cổng biệt thự Hứa Gia, Long Hải",
+    "entity": "entity_maid",
+    "narration": [
+      "Hai mắt neo còn lại bị chém đứt cùng một lúc. Trong một phần nghìn của nhịp thở, sân cổng sáng lên như có chớp — rồi tất cả im bặt. Chuông nứt làm đôi rơi xuống. Đôi đèn vỡ tung. Sức nặng của toàn bộ hệ thống cổng, không còn đường nào để tan ra ngoài, quật ngược vào đường dẫn duy nhất còn lại và cháy xuyên qua nó như lửa chạy theo dây dẫn đã tẩm dầu.",
+      "Người con gái trong tay Cao Minh mềm xuống. Không co giật nữa. Không đau nữa. Đó mới là điều khiến hắn lạnh sống lưng hơn bất cứ tiếng thét nào: nàng nằm yên, ngực vẫn phập phồng đều đặn — quá đều đặn, đều như một cái máy được lên dây cót, đều như nhịp thay dầu đèn của căn nhà này. Phần điều phối sự sống của nàng, sau cơn quá tải, đã không còn giành lại được chút quyền nào: những gì từng là phản xạ tự chủ cuối cùng đã cháy mất trong dòng tải giật ngược, và giờ đây thân thể nàng chạy hoàn toàn bằng nhịp của kẻ khác, trơn tru và trống rỗng.",
+      "Ngoài sân, sự yên tĩnh cũng trở lại theo cách đáng sợ nhất: gia nhân lần lượt đứng thẳng dậy, phủi áo, và bắt đầu dọn dẹp — nhặt chiếc chuông nứt, dựng lại đôi đèn vỡ, xếp những vũ khí rơi vãi thành một đống ngay ngắn ở góc sân. Có người còn nhặt được cuộn chỉ thêu của nàng lăn dưới đất, phủi sạch bụi, gấp lại cẩn thận và đặt lên bậc thềm — như cách người ta chăm sóc đồ đạc của một vị chủ nhân vắng mặt. Căn nhà đã có lại trật tự của nó. Nó ân cần, chu đáo, và hoàn toàn không còn cần đến ý kiến của người con gái mà nó phục vụ.",
+      "Cao Minh bế nàng lên bậc thềm. Lần này nàng không phản đối việc được bế — nàng không phản đối bất cứ điều gì nữa, và khi hắn đặt nàng ngồi xuống chiếc ghế mà một gia nhân đã lặng lẽ mang ra đặt sẵn, nàng ngồi xuống đúng tư thế được sắp đặt, hai tay đặt ngay ngắn lên đùi, mắt nhìn thẳng về phía trước, chờ. Một cơn gió sớm thổi qua sân, vạt áo nàng bay phần phật; nàng không đưa tay giữ. Đến cả phản xạ ấy — phản xạ của một con người với cơn gió — giờ cũng phải chờ được ra lệnh mới có.",
+      "Nàng mở mắt. Đôi mắt trong veo, bình thản, trắng dã. Nàng nhìn hắn, nhận ra hắn — trí nhớ của nàng vẫn còn nguyên, đó là sự tàn nhẫn sau chót — và nàng hỏi, bằng giọng của chính nàng nhưng đã mòn đi hết những gợn sóng của một con người: có lệnh gì cho nàng không. Nàng sẽ làm theo. Nàng sẽ làm theo bất cứ điều gì, từ nay, mãi mãi, không cần hỏi lại, không cần từ chối, không cần được hỏi ý kiến.",
+      "Cô hầu đứng gần cổng nhất nghiêng đầu nhìn cảnh ấy, gương mặt rách nát không biểu lộ gì. Trong sân, gia nhân dần đứng thẳng dậy, hết co giật, hết hoảng loạn — mạng lưới đã có lại trật tự của nó, một trật tự hoàn hảo hơn trước, vì trục điều phối của nó giờ đã thôi chống cự. Nó thắng mà không cần đánh thêm một trận nào. Người duy nhất trong sân còn tự do là Cao Minh, và tự do của hắn giờ vô dụng như một thanh kiếm sắc để cắt một sợi dây đã thắt chết nút.",
+      "Hắn vẫn có thể chém. Hắn luôn có thể chém. Nhưng hắn đã thuộc lòng bài học bằng cái giá đắt nhất: cắt hết mọi mắt nối lúc này, thân thể kia sẽ ngừng thở — vì giờ đây không còn phần nào của sự sống trong nàng nằm ngoài hệ thống đó nữa. Giữ nàng sống thì giữ luôn cái ách. Cắt cái ách thì mất nàng. Và người con gái từng trả bằng ký ức để được nói tiếng từ chối, giờ không còn ở đây để được hỏi ý kiến về bất cứ lựa chọn nào trong hai lựa chọn ấy.",
+      "Đây không phải con đường mà câu chuyện này có thể đi tiếp."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài. Ngài có lệnh gì cho tôi không? Ngài cứ dạy, tôi xin làm theo."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "…Bổn tọa không có lệnh gì cho nàng cả. Chưa bao giờ có."
+      }
+    ],
+    "choices": [
+      {
+        "id": "retry",
+        "text": "Trở lại khoảnh khắc trước nhát kiếm vào neo xích",
+        "retry": true
+      }
+    ],
+    "deadEnd": true
+  },
+  "lh_coast_road": {
+    "id": "lh_coast_road",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Đường ven biển",
+    "backgroundId": "long-hai-coast",
+    "location": "Đường ven biển Long Hải — rạng sáng",
+    "narration": [
+      "Con đường đất chạy dọc bờ biển hiện ra khỏi sương như một sợi chỉ xám. Bên trái là biển, mặt nước lúc rạng sáng phẳng và lạnh, từng đợt sóng nhỏ vỗ vào bãi cát nghe như tiếng ai đếm nhịp. Bên phải là hàng phi lao đứng im trong sương mù, thân cây ướt đẫm, và xa hơn nữa — khuất sau màn sương — là mái ngói của tòa biệt thự vừa bị bỏ lại, nơi những ngọn đèn đang lần lượt cháy lên trở lại, từng ngọn một, theo một thứ tự sai lạc hẳn.",
+      "Tiểu Lan đi chậm. Không phải vì nàng yếu theo cách của người bệnh thường: thân thể nàng đang chạy bằng phần sinh lực dự trữ cuối cùng của chính mình, sau khi ba điểm neo ở cổng đứt và hệ thống điều phối bị giật khỏi nàng từng phần. Mỗi bước chân là một lần nàng tự ra lệnh cho đôi chân mình — điều mà người thường làm mà không cần nghĩ, còn nàng thì phải nghĩ, từng bước một, như người mới học đi lại sau một cơn bạo bệnh. Vậy mà khi Cao Minh khẽ nghiêng người, đưa mắt hỏi mà không thành lời, nàng lắc đầu ngay.",
+      "Đi được một quãng, đường men theo một triền đá thấp, mặt đá ướt sương trơn như bôi mỡ. Tiểu Lan dừng lại trước triền đá, tự nhìn nó một lúc như người ta tính một bài toán khó, rồi vén áo, bám vào một cành phi lao chìa ra mà leo qua — chậm, vụng, hai lần suýt trượt — nhưng nàng không đưa tay ra cầu cứu, và hắn cũng không đưa tay ra đỡ, chỉ đi sát phía dưới triền đá, ở đúng vị trí mà nếu nàng ngã, nàng sẽ ngã vào hắn chứ không ngã xuống đá. Sang được bên kia, nàng đứng thở hổn hển, mặt đỏ lên vì mệt và vì một thứ hả hê rất trẻ con: một triền đá nhỏ xíu, mà là triền đá đầu tiên trong đời nàng tự mình leo qua.",
+      "Trong làng chài phía xa, một con chó sủa lên mấy tiếng — sủa vu vơ, lộn xộn, chán thì thôi. Cao Minh nghe tiếng chó ấy mà bỗng thấy nó quý: đó là âm thanh của một sinh linh làm việc hoàn toàn theo ý mình, không theo nhịp nào, không vì mệnh lệnh nào. Cả tòa biệt thự hắn vừa rời khỏi, với hàng chục con người, không sản sinh nổi một âm thanh tự do như thế trong suốt những ngày hắn ở đó — cho đến đêm nay.",
+      "Đám đuốc đuổi theo không phải ai cũng còn sức. Một người trong bọn — thằng nhỏ bưng nước ở biệt thự, mới mười lăm tuổi — vẫn chạy ở hàng đầu, nước mắt chảy ròng ròng trên mặt, miệng há ra như đang cố gọi một cái gì đó mà cổ họng không cho phép; thân thể nó bị đẩy đi quá giới hạn của một đứa trẻ, hai chân đã không còn biết tránh đá nhọn. Phía sau nó, một người đàn ông trung niên bỗng đổ gục mặt xuống đường, nằm im không dậy nữa — và người chạy sau anh ta, cũng đang bị điều khiển như thế, lặng lẽ bước vòng qua thân người ấy mà đi tiếp, không dừng, không nhìn. Cao Minh ghi nhớ cả hai hình ảnh ấy vào lòng như ghi hai món nợ: món nợ của đứa trẻ phải chạy bằng đôi chân rướm máu, và món nợ của người đàn ông nằm lại trên đường mà không một ai được phép cúi xuống đỡ.",
+      "Sau lưng họ, đuốc đã cháy lên. Không nhiều — dăm bảy ngọn, chập chờn trong sương, di chuyển theo một hàng dọc mé đường biển: những người nhanh chân nhất của biệt thự, được phần dư lệnh cuối cùng trong hệ thống đẩy đi truy đuổi. Họ không chạy theo dấu chân. Họ chạy theo một thứ khác: sợi chỉ vô hình nối về phía người con gái đang đi — mạng lưới tìm trục của nó như kim địa bàn tìm hướng bắc, không cần mắt, không cần đường.",
+      "Nhưng có một điều đang thay đổi, chậm rãi như thủy triều rút. Càng đi xa khỏi biệt thự, hàng đuốc sau lưng càng loạng choạng. Một ngọn đuốc bỗng khựng lại giữa đường rất lâu, rồi tắt ngấm — người cầm nó, một gã phu trẻ, đã ngồi bệt xuống vệ đường ôm đầu, ngoài tầm với của những điểm neo còn lại, và lần đầu tiên sau nhiều năm anh ta tỉnh dậy ở một nơi do chính đôi chân mình chọn dừng. Tầm của điểm neo có giới hạn. Căn nhà kia dù lớn đến đâu cũng không ôm được cả bờ biển này.",
+      "Trời sáng dần. Ánh sáng đầu tiên rải lên mặt biển một lớp bạc mỏng, và lần đầu tiên kể từ khi đặt chân đến Long Hải, Cao Minh nghe thấy tiếng chim biển — những âm thanh hoàn toàn không thuộc về nhịp nào của tòa nhà kia. Tiểu Lan cũng nghe thấy. Nàng ngẩng mặt lên một thoáng, hít vào một hơi dài, và dù đôi chân vẫn đang run, khóe miệng nàng khẽ động đậy như muốn cười mà chưa dám tin là mình được phép.",
+      "Phía trước, con đường bắt đầu rẽ: một nhánh ôm sát mé biển đi xuống phía lạch nước nơi thuyền của ngư ông đang chờ trong bóng tối cuối cùng của đêm; một nhánh vòng vào đất liền, qua lũy tre và vườn dừa, nơi chiếc xe chở cỏ của người nhà Thu Nguyệt đã đậu sẵn từ trước giờ gà gáy. Cả hai con đường đều đã được chuẩn bị, bằng những con người đã chọn đứng về phía nàng — mỗi đường một cái giá, mỗi đường một niềm tin phải đáp lại."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi còn đi được. Ngài đừng… đừng nhìn tôi như nhìn một món đồ sắp vỡ. Tôi đã đi được tới đây bằng chân của mình, thì đi thêm được nữa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa không nhìn nàng như đồ dễ vỡ. Bổn tọa nhìn một người đang tự đi ra khỏi nhà tù của mình — cảnh ấy đáng để đi chậm mà xem cho hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, mùi này… là mùi biển phải không? Hồi nhỏ tôi chỉ được ngửi mùi biển qua cửa sổ, lẫn với mùi thuốc. Hóa ra khi đứng ngay bên nó, nó… nó to thế này."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Quê của bổn tọa là núi — Lôi Thiên Sơn, mây phủ quanh năm, không có biển. Lần đầu bổn tọa thấy biển, bổn tọa đứng nhìn nó còn lâu hơn nàng nhìn bây giờ. Có những thứ sinh ra đã rộng hơn mọi căn nhà người ta xây để nhốt nhau."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Phía sau… họ còn đuổi theo kịp không, thưa ngài?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Họ đuổi theo sợi chỉ, không phải đuổi theo nàng. Mà sợi chỉ ấy thì ngắn dần theo từng bước chân nàng đi. Cứ đi tiếp — mỗi bước là một phần của nàng mà căn nhà kia không với tới được nữa."
+      }
+    ],
+    "choices": [
+      {
+        "id": "open_shore",
+        "text": "Đi thẳng đường mé biển trống trải — nhanh, nhưng phơi mình dưới mắt kẻ đuổi theo.",
+        "next": "lh_road_choice",
+        "effects": {
+          "lanHealthDelta": -2
+        }
+      },
+      {
+        "id": "casuarina_grove",
+        "text": "Lánh vào rặng phi lao — chậm hơn, nhưng sương và bóng cây che đi sợi chỉ truy đuổi.",
+        "next": "lh_road_choice",
+        "effects": {
+          "lanMaterInfluenceDelta": -3
+        }
+      }
+    ]
+  },
+  "lh_road_choice": {
+    "id": "lh_road_choice",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Ngã rẽ cuối đường",
+    "backgroundId": "long-hai-coast",
+    "location": "Ngã rẽ xuống lạch thuyền, bờ biển Long Hải",
+    "narration": [
+      "Ngã rẽ nằm ngay sau một mỏm đá phủ phi lao. Từ đây, tiếng sóng nghe rõ hơn, và trong bóng tối xanh xám của rạng sáng, Cao Minh thấy cả hai con đường cùng lúc: phía dưới mỏm đá, mặt lạch nước phẳng lặng như gương, chiếc thuyền gỗ của lão ngư ông nằm im sát bờ, bóng người gầy gò của ông ngồi ở mũi thuyền, không đốt đèn, không gây một tiếng động — ông đã chờ ở đó từ lúc trời còn tối mịt, như đã hứa trong buổi dò đường hôm trước. Phía đất liền, qua màn sương mỏng, chiếc xe bò chất đầy cỏ khô đứng khuất sau lũy tre; người đánh xe là anh họ của Thu Nguyệt, một nông dân ít nói, đã nhận lời chở «cỏ» xuống bến dưới mà không hỏi trong cỏ có gì.",
+      "Lão ngư ông đã chờ ở lạch từ khi trời còn tối mịt — chờ một mình, không bạn chài, vì ông không muốn kéo thêm ai vào việc này. Chiếc thuyền của ông không lớn, ván gỗ đã vá hai chỗ, nhưng được chèn chống cẩn thận, nước ngọt và một bọc cơm nắm gói lá chuối đặt sẵn ở khoang sau — phần của người khách mà ông không hề được dặn phải chuẩn bị. Bên đất liền, anh họ của Thu Nguyệt cũng đã làm phần của mình chu đáo không kém: dưới lớp cỏ khô của xe là một lớp chiếu cói và một ấm nước, và vợ anh ta — một người đàn bà không hề biết mặt cô chủ — đã nhét thêm mấy củ khoai nướng vào trong cỏ, «cho người bệnh ăn dọc đường», như lời anh ta kể lại ngắn gọn.",
+      "Gió sớm thổi qua ngã rẽ mang theo mùi muối và mùi khói bếp của làng chài xa — hai thứ mùi của một buổi sáng bình thường, thứ buổi sáng mà mười tám năm nay nàng chỉ được ngửi qua song cửa. Nàng nhắm mắt một thoáng, để mặc cơn gió lùa qua mặt: không ai ra lệnh cho cơn gió này, và nó cũng không cần ai cho phép mới được chạm vào nàng.",
+      "Cao Minh quan sát cả hai sự chuẩn bị ấy và bỗng hiểu thêm một điều về cách đánh lại căn nhà kia: mạng lưới của nó mạnh vì nó vô danh và đồng loạt; còn những con người này mạnh theo cách ngược lại — từng người một, bằng tên tuổi, bằng một bọc cơm nắm, một ấm nước, một củ khoai nướng không ai yêu cầu. Đêm nay, con đường thoát của Tiểu Lan không được mở bằng kiếm. Nó được mở bằng một chuỗi những ân tình nhỏ mà không một bản đồ điểm neo nào của Giới Phòng ghi lại được.",
+      "Trời đã sáng rõ hơn một chút; ở phía làng chài xa xa, khói bếp đầu tiên bắt đầu bốc lên, thẳng và yên, báo hiệu một ngày hoàn toàn bình thường đang bắt đầu cho những con người không hề biết đêm nay, cách họ vài dặm đường, một cuộc đời vừa được giành lại.",
+      "Nàng ngồi xuống một tảng đá bên đường, làm một việc khiến hắn chú ý: nàng đặt hai ngón tay lên cổ tay mình, nhắm mắt, đếm — bắt chước đúng cách hắn đã bắt mạch cho nàng lần đầu, vụng về mà nghiêm túc, như một học trò nhỏ đang tập lại bài học về chính cơ thể mình. Hồi lâu, nàng mở mắt: «Mạch vẫn chạy. Chạy theo nhịp của tôi.» Nàng nói câu ấy nhỏ thôi, mà như tuyên bố một chủ quyền. Trong mười tám năm, nhịp mạch ấy đã từng là tài sản của kẻ khác; đêm nay nàng đang học cách nghe nó như nghe tiếng của mình.",
+      "Sau lưng, tiếng chân của đám truy đuổi đã nghe rõ hơn — không nhanh, vì họ cũng đang ở cuối giới hạn của những điểm neo xa, nhưng đều và không nghỉ, như tiếng nước rỉ không bao giờ cạn. Sương đang tan dần; một khi mặt trời lên hẳn, hai người sẽ không còn gì che chắn trên con đường trống này. Ngã rẽ không cho phép chần chừ lâu — và nàng, như cảm được điều đó, đứng dậy trước cả khi hắn lên tiếng, phủi lại vạt áo, sẵn sàng cho lựa chọn của chính mình.",
+      "Cả hai con đường đều là những món nợ ân tình mà nàng và hắn đã gieo trong những ngày qua, giờ đến lúc thu về. Đường biển nhanh và thẳng: thuyền ra khỏi lạch là vào vùng nước mở, đuốc trên bờ có cháy sáng đến đâu cũng không đuổi theo được một con thuyền. Nhưng gió sớm nay đang lên, mặt nước ngoài khơi không yên, và thân thể nàng — đang chạy bằng phần sinh lực dự trữ mỏng manh — sẽ phải chịu những đợt sóng dồi liên tiếp không ngừng nghỉ.",
+      "Đường bộ chậm và vòng: xe cỏ đi qua hai thôn, qua một trạm gác đường mà người của Giới Phòng thỉnh thoảng vẫn ghé uống nước chè — nhưng người đánh xe thuộc lòng từng ổ gà, từng lối mòn sau vườn dừa, và quan trọng hơn, chiếc xe ấy là một phần của đời sống bình thường nơi này: không ai chặn một xe cỏ lúc rạng sáng để xem trong cỏ có một vị tiểu thư bị xóa tên hay không. Ẩn mình giữa cái thường ngày đôi khi chắc hơn ẩn mình giữa biển khơi.",
+      "Sau lưng, hàng đuốc trong sương đã gần hơn một quãng — những bước chân không biết mệt, vì cái mệt của họ không được phép lên tiếng. Tiểu Lan nhìn hai con đường, rồi nhìn hắn. Lần này nàng không chờ hắn quyết. Nàng đang tự cân nhắc, bằng cái đầu tỉnh táo đáng kinh ngạc của một người vừa giành lại quyền cân nhắc chưa đầy một đêm — và hắn để yên cho nàng cân nhắc, dù từng nhịp thở trôi qua đều có giá của nó.",
+      "Cuối cùng, dù chọn đường nào, điểm đến vẫn là một: chiếc bến nhỏ ở cuối lạch, nơi mọi con đường của Long Hải đều đổ về mặt nước. Ngư ông đã hẹn sẽ gặp lại ở đó dầu họ đi đường nào — thuyền của ông sẽ đưa họ qua khúc nước cuối cùng, ra khỏi vùng đất mà tên của nàng đã bị xóa. Câu hỏi chỉ là họ sẽ tới bến ấy bằng cách nào, và phải trả thêm những gì trên đường tới đó."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, hai con đường này… đều là người ta liều mình vì tôi. Tôi không muốn chọn sai, để rồi ân tình của họ thành vô ích."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ân tình không vô ích vì ta không dùng đến. Người đánh xe kia, dù đêm nay xe của anh ta chạy không, cũng đã làm xong phần của mình: anh ta đã dám đậu xe ở đó. Nàng cứ chọn theo thân thể mình — đêm nay nó là của nàng, nàng nghe nó rõ hơn bổn tọa."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ. Vậy thì tôi xin được chọn một lần này nữa."
+      }
+    ],
+    "choices": [
+      {
+        "id": "sea_route",
+        "text": "Đường biển — xuống lạch, lên thuyền của ngư ông, ra thẳng vùng nước mở.",
+        "next": "lh_last_pushback",
+        "effects": {
+          "lanHealthDelta": -1,
+          "cluesHuaGiaDelta": 1
+        }
+      },
+      {
+        "id": "land_route",
+        "text": "Đường bộ — nằm trong xe cỏ của người nhà Thu Nguyệt, vòng qua các thôn xuống bến.",
+        "next": "lh_last_pushback",
+        "effects": {
+          "lanTrustDelta": 1,
+          "civiliansSavedDelta": 1
+        }
+      }
+    ]
+  },
+  "lh_last_pushback": {
+    "id": "lh_last_pushback",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Lần phản kháng cuối cùng",
+    "backgroundId": "long-hai-coast",
+    "location": "Cuối đường xuống bến, bờ biển Long Hải",
+    "entity": "entity_maid",
+    "narration": [
+      "Họ chỉ còn cách chiếc bến một quãng ngắn thì đám truy đuổi tới nơi. Họ đến không thành hàng ngũ nữa — điểm neo đã ở xa sau lưng, mệnh lệnh trong họ đã loãng đi như tiếng gọi qua mấy lớp sương — nhưng phần dư lệnh cuối cùng vẫn đẩy họ đi: những thân người lảo đảo trên đôi chân đã rớm máu vì đá nhọn, mắt trắng dã, tay vươn ra phía trước. Đi đầu là cô hầu má rách, gương mặt quen thuộc của những đêm nghi lễ; sau cô là bà bếp, hai người phu, và một lão bộc già đi bằng cả hai chân trần trên sỏi mà không hề biết đau.",
+      "Cao Minh đã tính xong thế kiếm. Hắn có thể quét ngã cả đám người ấy mà không làm ai gãy một cái xương — điểm vào các khớp đang bị điều khiển, cắt những sợi chỉ còn sót, để họ ngồi xuống như những con rối hết dây. Mất chừng mười nhịp thở. Nhưng phía sau đám này, trong sương, còn những bóng người khác đang tới; và mỗi lần hắn ra tay là một lần những thân thể kia bị dùng làm khiên thịt, bị giật đi giật lại giữa hai thứ sức mạnh không thuộc về họ. Hắn chưa kịp rút kiếm thì nàng đã bước lên trước hắn.",
+      "Nhìn gần, đám truy đuổi không còn đáng sợ nữa — họ đáng thương đến mức khó nhìn thẳng. Thằng nhỏ bưng nước chạy bằng hai bàn tay đã rách vì ngã; bà bếp thở khò khè như ống bễ thủng; lão bộc già hai chân trần lê trên sỏi, mỗi bước để lại một dấu máu mờ. Và trong đôi mắt trắng dã của từng người, phần người của họ vẫn còn đó, nhìn ra ngoài như nhìn qua một lớp băng mỏng — van xin một điều mà miệng họ không được phép nói: đừng để chúng tôi làm điều này. Cô hầu má rách đi đầu, miệng mấp máy mãi mới thành được mấy tiếng vỡ vụn, không phải mệnh lệnh, mà là một lời kêu cứu bị xé ra khỏi cổ họng bằng tất cả sức lực còn lại của cô.",
+      "Một người phu trẻ trong đám, khi đôi chân bị điều khiển khựng lại, đã kịp thốt ra một câu trọn vẹn đầu tiên của chính mình — anh ta xin lỗi. Xin lỗi cô chủ vì đang đuổi theo cô chủ. Cái nghịch lý ấy — một con người phải xin lỗi vì hành động của chính đôi chân mình — là toàn bộ sự tàn ác của căn nhà kia gói gọn trong một câu nói, và nó khiến bàn tay đặt trên chuôi kiếm của Cao Minh siết chặt lại, dù hắn biết rõ cơn giận của mình không được phép nhắm vào những con người này.",
+      "Trước khi bước lên, nàng làm một việc rất nhỏ: nàng mở cuộn chỉ thêu, nhìn hàng nút thắt đếm ngày của mình một lúc lâu. Hắn không biết nàng nghĩ gì trong khoảnh khắc ấy — sau này cũng không bao giờ biết trọn — nhưng có lẽ nàng đang tự hỏi, nếu cái giá lần này là những ngày tháng mà hàng nút thắt kia đại diện, nàng có dám trả không. Rồi nàng cuộn chỉ lại, cất vào tay áo, và bước lên. Người con gái đã từng không dám bước qua ngưỡng cửa phòng mình, giờ tự mình bước ra đứng chắn giữa hai thứ sức mạnh không thuộc về nàng, bằng thứ vũ khí duy nhất nàng có: tư cách của một con người từ chối.",
+      "Những âm thanh đầu tiên của tự do vang lên rời rạc và vụng về: bà bếp bật cười một tiếng — rồi giật mình vì chính tiếng cười của mình, đưa tay lên bịt miệng như đứa trẻ vừa lỡ lời. Lão bộc già ngồi bệt xuống đường, nhìn đôi chân đầy máu, thẫn thờ hỏi có ai có nước không. Thằng nhỏ bưng nước thì khóc — khóc to, khóc như trẻ con, không giấu giếm, hai tay dụi mắt đến lem luốc cả mặt. Không ai trong bọn họ hiểu vì sao mình lại ở ngoài đường lúc trời sắp sáng. Nhưng lần đầu tiên sau rất nhiều năm, sự không hiểu ấy là của chính họ — một sự bối rối hoàn toàn thuộc về con người.",
+      "Nàng đứng giữa đường, đối diện với những gương mặt đã hầu hạ mình. Và nàng làm điều mà chỉ một mình nàng trong cõi đời này làm được: nàng không ra lệnh ngược lại, không tranh giành quyền điều khiển như mọi lần trước. Nàng đẩy ngược vào toàn bộ mạng lưới còn sót lại ở bờ biển này một tiếng từ chối — không phải bằng sức, mà bằng chính tư cách của cái trục mà mạng lưới đang mượn: mọi mệnh lệnh chạy qua nàng đều phải qua được nàng, và nàng nói không. Không với cái lệnh «bắt lấy». Không với bàn tay đang vươn ra. Không, thay cho tất cả những người đang bị buộc phải chạy trên đôi chân rớm máu của chính mình.",
+      "Đám người khựng lại như đâm sầm vào một bức tường vô hình. Rồi, từng người một, họ ngồi xuống — không phải ngã quỵ, mà ngồi xuống từ từ, như những con rối được một bàn tay dịu dàng đặt xuống đất. Bà bếp òa khóc thành tiếng, khóc bằng giọng của chính bà, tay ôm lấy đôi chân trần đầy máu của mình. Lão bộc già ngơ ngác nhìn quanh, hỏi một câu ngớ ngẩn và đau lòng: «Ủa, sao tui ra tới ngoài này?» Cô hầu má rách là người cuối cùng ngồi xuống; cô nhìn Tiểu Lan rất lâu, và trong đôi mắt trắng dã ấy, một giọt nước mắt thật — của chính cô — lặng lẽ lăn xuống.",
+      "Nhưng cái giá thì nàng đã biết trước, và nàng trả không chút do dự nào để hắn kịp ngăn. Lần phản kháng này lớn hơn mọi lần trước cộng lại: nàng đã đẩy ngược qua toàn bộ phần mạng lưới còn chạm tới mình, và mạng lưới, khi rút lui, kéo theo những gì nó đang nắm giữ trong nàng. Nàng quay lại phía hắn, mỉm cười như vừa làm xong một việc rất phải — rồi nụ cười đông cứng. Nàng nhìn chiếc bến, nhìn mặt nước, nhìn hắn, với ánh mắt của người tỉnh dậy giữa một nơi hoàn toàn xa lạ.",
+      "Nàng hỏi rất khẽ, rất lễ phép, như hỏi một người khách mới gặp: chúng ta đang ở đâu đây, và vì sao tay nàng lại run thế này. Nàng không nhớ cánh cổng. Không nhớ những cái tên vừa gọi. Không nhớ mình đã tự trả lời «có» trước ngưỡng cửa. Cả cuộc ra đi — toàn bộ đêm nay — đã bị lấy đi như một trang sách bị xé khỏi cuốn sổ, chỉ còn lại mép giấy rách và một nỗi hoảng sợ mơ hồ không rõ nguyên do trong ngực nàng."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài… xin ngài đừng trách họ. Họ không muốn chạy đâu. Chân họ… chân họ chảy máu cả rồi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa biết. Và bổn tọa cũng biết nàng sắp làm gì. Tiểu Lan — lần này cái giá sẽ không nhỏ đâu."
+      },
+      {
+        "speaker": "Cô hầu",
+        "text": "Cô ơi… cô… cứu… tay em nó cứ đi… em không muốn… cô ơi…"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi biết. Nhưng nếu phải có người trả giá để họ được ngồi xuống… thì để tôi. Họ đã trả thay tôi mười tám năm rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa… thưa ngài, chúng ta… đây là đâu? Sao trời đã sáng rồi? Tôi… tôi có làm gì sai không?"
+      }
+    ],
+    "choices": [
+      {
+        "id": "truth_now",
+        "text": "Nói thật ngay tại đây: đêm nay đã xảy ra những gì, và chính nàng là người đã chọn tất cả.",
+        "next": "lh_names_price",
+        "effects": {
+          "memoryIntegrityDelta": -8,
+          "lanTrustDelta": 1
+        }
+      },
+      {
+        "id": "rest_first",
+        "text": "Đỡ nàng ngồi xuống nghỉ một nhịp trước — sự thật có thể chờ, người thì không.",
+        "next": "lh_names_price",
+        "effects": {
+          "memoryIntegrityDelta": -8,
+          "lanHealthDelta": -2
+        }
+      }
+    ]
+  },
+  "lh_names_price": {
+    "id": "lh_names_price",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Cái giá là tên người",
+    "backgroundId": "long-hai-coast",
+    "location": "Bến thuyền nhỏ ở cuối lạch, Long Hải",
+    "narration": [
+      "Chiếc bến nhỏ nằm khuất sau rặng phi lao cuối cùng: mấy cọc gỗ đen nước, một cầu ván ọp ẹp, và chiếc thuyền gỗ của lão ngư ông buộc hờ vào cọc, mũi thuyền hướng ra mặt nước đang sáng dần. Ông lão đã chờ sẵn ở đó đúng như lời hẹn — dù họ tới bằng đường biển hay đường bộ, ông cũng là người cầm lái khúc nước cuối cùng này. Thấy hai người, ông không hỏi một câu nào về đám người ngồi khóc trên đường phía sau. Ông chỉ lặng lẽ tháo dây, rồi nhìn cô gái mặt tái nhợt đang được dìu xuống cầu ván, và gật đầu như chào một người quen cũ.",
+      "Ông biết nàng. Cả vùng Long Hải này ai cũng biết có một vị tiểu thư bị bệnh phong ở biệt thự họ Hứa — biết như người ta biết một câu chuyện ma: không tên, không mặt, chỉ có bệnh và sự xa lánh. Giờ đây cô gái ấy đang ngồi ở mạn thuyền của ông, ôm một cuộn chỉ thêu, và ông lão ngư ông — người từng làm thuê trong chính tòa nhà ấy, từng bỏ việc mà mất hai ngón tay và một đoạn ký ức không bao giờ lấy lại được — nhìn nàng một lúc lâu rồi quay mặt đi, giả vờ bận rộn với cuộn dây thừng đã gọn gàng sẵn.",
+      "Cao Minh lấy trong tay áo ra một thỏi bạc, rồi một lá vàng mỏng — với hắn, những thứ ấy chẳng đáng gì hơn sỏi đá ven đường, và hắn đưa ra như người ta trả tiền đò. Ông lão nhìn thỏi bạc, nhìn lá vàng, rồi lắc đầu. Ông đẩy tay hắn lại, chậm rãi và dứt khoát, bằng bàn tay chỉ còn tám ngón của một người đã trả đủ thứ giá đắt hơn thế này nhiều.",
+      "Chuyện hai ngón tay của ông, vùng này ai cũng biết một nửa: năm ấy biệt thự sửa lại nhà kho giữa mùa đông, gia nhân bị gọi dậy làm việc suốt mấy đêm liền không ngủ — kể cả những người làm thuê theo ngày như ông. Đêm thứ ba, ông tỉnh dậy thấy mình đang đứng ngoài sân tuyết… không, Long Hải không có tuyết — ông tỉnh dậy trong sương muối lạnh buốt, hai tay ôm một phiến đá lớn, hai ngón tay đã tím đen vì lạnh và vì bị đá đè mà không biết rút ra. Ông bỏ việc ngay hôm sau, mang theo hai ngón tay cụt và một khoảng trống trong trí nhớ dài đúng ba đêm. «Người ta bảo già bị ma làm,» ông nói, «già thì biết là không phải ma. Ma không biết đọc gia quy.»",
+      "Khi hắn đọc tên, nàng có một câu hỏi dành cho ông lão — câu hỏi nàng đã giữ suốt từ lúc lên thuyền. Nàng hỏi, rất khẽ, rằng trong những năm nàng ở trong căn nhà đó, đám gia nhân có bao giờ nhắc tới nàng không, có ai ghét nàng không — vì nàng là cái cớ để tất cả bị giam chung trong một tòa nhà không ai được rời đi. Ông lão ngẫm nghĩ rồi kể: ghét thì không, nhưng có một việc mà già này tận mắt thấy — bà bếp, mỗi tối, đều để thêm một chén cơm nhỏ ở cửa bếp, nói là «để đó, lỡ cô chủ đói». Mười tám năm, gần như không thiếu một tối nào. Nàng nghe xong thì im lặng rất lâu, hai tay ôm chặt cuộn chỉ vào lòng.",
+      "Cái giá ông đòi không phải tiền. Ông nói, giọng khàn của người quen nói ngược gió biển: người trong căn nhà đó, đám gia nhân ấy, cả vùng này chỉ biết họ là «người của biệt thự» — không ai nhớ tên ai, kể cả chính họ đôi khi cũng quên mất mình tên gì sau những năm tháng bị gọi bằng công việc. Cô chủ của họ thì bị xóa tên khỏi gia phả. Nếu đêm nay ông chở hai người đi, ông chỉ xin một điều: ngài — cái ông khách lạ mặt có thể hủy thiên diệt địa này — hãy nhớ tên của họ, và đọc cho ông nghe một lần, ở đây, trên mặt nước, để ít nhất có một người ngoài căn nhà đó còn biết họ là ai.",
+      "Và Cao Minh đọc. Hắn đọc chậm, rõ từng chữ, như đọc một bản danh sách thiêng liêng: Văn Bảy, người gác, có vợ ở quê khâu tên vào cổ áo. Thới, phu gánh nước ở bếp, tay run mà lòng không run. Dì Sáu, người bếp, nếm mỗi món ăn hai lần. Con Hường, cô hầu trẻ, mắt lúc nào cũng như muốn nói điều không được nói. Bà lão nhặt đậu ngoài sân trong, mà tên thì — hắn dừng lại một nhịp — hắn chưa kịp biết tên; và ông quản gia già giữ gia quy như giữ kinh, tên ông ta, hắn cũng chưa kịp hỏi. Hắn nói cả những thiếu sót ấy, không giấu: còn mấy người nữa trong căn nhà đó, bổn tọa nợ họ một lần nhớ.",
+      "Tiểu Lan ngồi ở mạn thuyền, nghe hết. Những cái tên ấy là tên của chính những người đã sống quanh nàng mười tám năm — có người nàng thuộc, có người nàng chỉ biết mặt mà chưa từng dám hỏi tên, vì trong căn nhà ấy, gọi nhau bằng tên là một thứ thân mật đã bị cấm từ lúc nào không ai nhớ. Nàng nghe người đàn ông ngồi cạnh đọc tên gia nhân của nhà mình như đọc tên những người thân, và nước mắt nàng rơi xuống lúc nào không hay — một phần vì những cái tên ấy, một phần vì một nỗi buồn nàng không gọi được thành lời, như thể nàng vừa đánh mất một điều gì quý lắm trong đêm nay mà không tài nào nhớ ra nó là gì."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Ngư ông",
+        "text": "Tiền của ngài, ngài cất đi. Già này chở người qua nước không lấy vàng bạc. Già chỉ xin ngài một việc: người trong căn nhà đó, ngài nhớ được tên ai, ngài đọc cho già nghe. Để lỡ mai này họ có bề gì, còn có người ngoài kia biết mà gọi đúng tên họ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Được. Bổn tọa đọc. Và những ai bổn tọa chưa biết tên — bổn tọa nợ căn nhà đó một lần quay lại hỏi cho đủ."
+      },
+      {
+        "speaker": "Ngư ông",
+        "text": "Ngài lạ thiệt. Người ta sợ căn nhà đó như sợ mả. Còn ngài thì… ngài nhớ tên từng đứa ở trong đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài… những người đó, họ đối với tôi… họ có từng ghét tôi không? Tôi không nhớ rõ nữa. Tôi chỉ nhớ là… là không ai dám nhìn thẳng tôi cả."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Không ai ghét nàng. Họ không dám nhìn, vì nhìn thẳng nàng là chống lại một mệnh lệnh — mà chống lệnh thì phải trả giá. Đêm nay có người đã trả giá ấy thay nàng, để được ngồi xuống khóc như người thường. Tên của họ, bổn tọa sẽ giữ. Cả phần của nàng nữa."
+      }
+    ],
+    "choices": [
+      {
+        "id": "recite_all",
+        "text": "Đọc hết tên từng người một lần nữa, chậm rãi, cho cả nàng cùng nghe.",
+        "next": "lh_open_road",
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanTrustDelta": 2
+        }
+      },
+      {
+        "id": "promise_return",
+        "text": "Hứa với ngư ông: những cái tên còn thiếu, một ngày hắn sẽ biết đủ — và sẽ có người làm chứng cho họ.",
+        "next": "lh_open_road",
+        "effects": {
+          "lanMaterInfluenceDelta": -1,
+          "civiliansSavedDelta": 1
+        }
+      }
+    ]
+  },
+  "lh_open_road": {
+    "id": "lh_open_road",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Ngoài tầm với",
+    "backgroundId": "long-hai-coast",
+    "location": "Mặt nước ngoài lạch, nhìn về bờ Long Hải",
+    "entity": "entity_guard",
+    "narration": [
+      "Thuyền rời bến không một tiếng động lớn. Lão ngư ông chống sào, rồi buông chèo, để chiếc thuyền gỗ trượt ra khỏi lạch theo con nước đang lên. Mặt nước buổi sớm phẳng lặng đến mức tiếng chèo khua nghe rõ từng nhịp, và sau mỗi nhịp chèo, bờ Long Hải lại nhỏ đi một chút: rặng phi lao, mỏm đá, con đường đất xám — và xa hơn, trên cao, mái ngói của tòa biệt thự hiện ra lần cuối qua màn sương đang tan, bất động như một con thú già nằm nhìn con mồi vuột khỏi tầm vuốt.",
+      "Ở mép nước, những gương mặt nhiễm trùng đang đứng nhìn theo. Họ đã tới được bờ — phần dư lệnh cuối cùng kéo họ đi xa tới mức ấy — và họ dừng lại ở đúng vạch nước, hàng người lặng im như những cây cọc cắm dọc bãi: người gác, gã cầm cuốc, cô hầu má rách, bà bếp ôm đôi chân đầy máu của mình mà đứng. Không ai lội xuống nước. Không ai giơ tay. Không phải vì họ không muốn — mà vì sợi chỉ nối họ với tòa nhà kia đã căng đến giới hạn cuối cùng của nó: tầm của điểm neo kết thúc ngay ở đây, ở mép nước của vùng đất thuộc về căn nhà, như một sợi dây xích vô hình đã hết chiều dài.",
+      "Mũi đất cuối cùng của Long Hải trượt qua bên mạn thuyền như một cái bóng đen dài. Chính ở đó — hắn cảm nhận được rõ như người ta cảm nhận sợi dây căng bỗng chùng xuống — phần kéo vô hình cuối cùng vẫn bám theo thân thể đang ngủ của nàng bỗng buông ra: hai vai nàng, cứng lại suốt từ lúc rời cổng, từ từ hạ xuống trong giấc ngủ; hơi thở nàng sâu thêm một nhịp, thành hơi thở của một người ngủ thật. Điểm neo có tầm, và tầm ấy vừa kết thúc ở mũi đất kia. Từ đây trở đi, dù chỉ là trong một khoảnh khắc, nàng thuộc về chính nàng một cách trọn vẹn — điều mà mười tám năm qua chưa từng xảy ra một lần nào, kể cả trong giấc ngủ.",
+      "Lão ngư ông chèo thuyền bằng những nhịp chèo thong thả của người không việc gì phải vội: ông biết con nước này như biết lòng bàn tay mình, biết chỗ nào xoáy, chỗ nào cạn, chỗ nào cá đang ăn sáng. Có lúc ông khẽ hát một câu hò ngắn, lạc giọng và chẳng theo điệu nào — rồi tự cười một mình vì câu hò dở của mình. Những âm thanh vô tổ chức ấy, kỳ lạ thay, lại là thứ nhạc êm tai nhất trên thuyền lúc bấy giờ.",
+      "Hắn ngồi ở mũi thuyền, lần đầu tiên cho phép mình nghĩ xa hơn đêm nay. Long Hải chỉ là một biệt thự — một mắt xích nhỏ mang tên Danh trong một hệ thống có tới sáu mắt xích, sáu gian phòng, và những điểm neo lớn hơn nhiều đang nằm ở Vũng Tàu, ở Cần Giờ, ở những nơi mà những cỗ quan tài không tên đang hướng tới. Đánh lại thứ này không thể bằng cách của một kiếm khách: nó phải bằng cách của một người thầy thuốc mổ — từng sợi chỉ một, đúng thứ tự, đúng lúc, với cái giá được tính trước và được người bệnh đồng ý. Hắn nhìn xuống đôi tay mình: đôi tay hủy thiên diệt địa, đêm nay vừa học được bài học đầu tiên của nghề mổ — bài học về sự chậm rãi.",
+      "Trên bờ xa, đám người đứng ở mép nước cũng bắt đầu tan: từng người một quay lưng lại mặt biển, đi ngược lên con đường đất — không còn hàng ngũ, không còn đồng nhịp, kẻ nhanh kẻ chậm, có người còn dừng lại ngồi xuống vệ đường như đi hết nổi. Họ trở về tòa nhà kia, hay trở về nhà của chính mình, không ai trên thuyền biết được. Nhưng cách họ bước đi — lộn xộn, riêng rẽ, mệt mỏi — chính là bằng chứng đẹp nhất của đêm nay: mạng lưới đã mất họ, ít nhất là ở bờ biển này, ít nhất là trong buổi sáng này.",
+      "Người gác là người đứng gần nhất. Khi thuyền đi ngang qua tầm mắt của anh ta, anh ta chậm rãi giơ một tay lên — cao ngang vai, lòng bàn tay hướng ra ngoài. Cao Minh nhìn cánh tay ấy rất lâu mà không đoán được, và có lẽ chính anh ta cũng không biết: đó là dư chấn của một mệnh lệnh chưa tan, là một lời chào, hay là ý chí của chính anh ta vừa nhú lên được một phân sau nhiều năm bị dìm xuống. Khoảng cách và mặt nước nuốt trọn câu trả lời. Thuyền đi qua. Cánh tay hạ xuống, hay vẫn còn giơ lên, không ai trên thuyền còn nhìn rõ nữa.",
+      "Trong biệt thự, những ngọn đèn đang lần lượt tắt — lần này theo đúng thứ tự của một căn nhà bình thường thức dậy buổi sáng, vì không còn ai — không còn cái gì — điều phối chúng nữa, hoặc vì kẻ điều phối đã lùi về rất xa, về phía Chợ Lớn, về những điểm neo lớn hơn đang chờ ở các chặng đường sắp tới. Cao Minh nhìn tòa nhà nhỏ dần và ghi nhớ điều vừa học được bằng mắt: mạng lưới này có tầm, có giới hạn, có những biên giới bằng địa lý và bằng chính những điểm neo của nó. Kẻ thù của hắn không phải vô biên. Nó chỉ rất lớn, rất kiên nhẫn — và đêm nay, nó vừa mất một vật chứa mà nó đã nuôi mười tám năm.",
+      "Tiểu Lan ngủ thiếp đi ở khoang thuyền lúc nào không hay, đầu tựa vào thành gỗ, cuộn chỉ thêu vẫn nắm chặt trong tay dù trong giấc ngủ. Đó là giấc ngủ đầu tiên của nàng ngoài tầm với của căn nhà — ngủ không theo giờ, không theo lệnh điểm danh, ngủ lệch nhịp với mọi nhịp thở bị áp đặt. Lão ngư ông nhìn nàng, rồi lặng lẽ chèo nhẹ tay hơn, tránh làm thuyền chao. Cao Minh cởi chiếc áo ngoài, đắp lên vai nàng, rồi ngồi xuống ở mũi thuyền, quay mặt về hướng con đường phía trước."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Ngư ông",
+        "text": "Qua khỏi mũi đất kia là hết đất của nhà họ Hứa rồi, thưa ngài. Từ đó trở đi, nước là nước của trời, đường là đường của người đi đường."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ông chèo thuyền ở vùng này bao nhiêu năm rồi?"
+      },
+      {
+        "speaker": "Ngư ông",
+        "text": "Từ hồi còn để chỏm. Già thấy căn nhà đó xây lên, thấy người ta đưa cô chủ ra đây, thấy gia nhân đổi lớp này tới lớp khác mà không ai trở về quê. Đêm nay là lần đầu già thấy có người đi ra khỏi cổng nhà đó mà còn… còn là người."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nhớ lấy câu đó của ông. Rồi sẽ có ngày bổn tọa cần một người làm chứng đã nhìn thấy nàng đi ra khỏi đó — bằng chân của chính nàng."
+      }
+    ],
+    "choices": [
+      {
+        "id": "sit_with_her",
+        "text": "Ngồi yên bên khoang thuyền, để nàng ngủ cho trọn giấc ngủ đầu tiên ngoài tầm căn nhà.",
+        "next": "lh_dawn_after",
+        "effects": {
+          "lanTrustDelta": 2
+        }
+      },
+      {
+        "id": "watch_bow",
+        "text": "Ra mũi thuyền đứng gác, mắt quét mặt nước và bờ xa — đường còn dài, nhà họ Hứa còn lớn.",
+        "next": "lh_dawn_after",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        }
+      }
+    ]
+  },
+  "lh_dawn_after": {
+    "id": "lh_dawn_after",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Buổi sớm trên mặt nước",
+    "backgroundId": "long-hai-coast",
+    "location": "Trên thuyền, mặt nước hướng về Vũng Tàu — sau khi trời sáng",
+    "narration": [
+      "Nàng tỉnh dậy khi nắng đã lên khỏi mặt biển. Trong một thoáng, nàng chỉ nằm yên, nhìn trời — một bầu trời không bị khung cửa sổ cắt thành từng ô, không có mùi thuốc thang, không có tiếng điểm danh nào sắp sửa vang lên. Rồi nàng ngồi bật dậy, hoảng hốt, vì trong đầu nàng là một khoảng trống nguyên vẹn hình một đêm: nàng nhớ mình đã nằm xuống giường trong căn phòng ở biệt thự, nhớ tiếng Thu Nguyệt khép cửa — và sau đó là không có gì, cho tới mặt nước này, chiếc thuyền này, và người đàn ông đang ngồi ở mũi thuyền nhìn nàng không một chút ngạc nhiên.",
+      "Việc đầu tiên nàng làm khi ngồi dậy là tìm cuộn chỉ thêu. Nàng lăn nó trong tay, dùng ngón tay cái lướt qua từng nút thắt, đếm thầm — một, hai, mười, ba mươi — và hắn thấy nét mặt nàng dần căng ra khi nàng đếm tới đoạn cuối: hàng nút thắt kết thúc ở ngày hôm qua, đúng như trí nhớ của nàng, nhưng giữa ngày hôm qua và buổi sáng này có một khoảng hở mà các nút thắt không giải thích được — như một cuốn sổ bị mất một trang ở đúng chỗ quan trọng nhất. Nàng ngẩng lên nhìn hắn, không trách móc, chỉ có một câu hỏi rất nhỏ: «Đêm qua… phải không, thưa ngài?»",
+      "Cách hắn kể cũng đáng nói: hắn không kể như người đọc cáo trạng. Hắn kể theo mặt nước — chỉ tay về phía mỏm đá khi nói đến triền đá nàng tự leo qua, chỉ về dải bờ xa khi nói đến đám đuốc đuổi theo, để câu chuyện của nàng có một phong cảnh mà bám vào, để khi nàng nhìn lại bờ biển này, các địa điểm sẽ tự kể lại phần của chúng. Hắn kể cả những điều nhỏ: gáo nước dừa của cô hầu, câu nói của Văn Bảy, tiếng khóc của thằng nhỏ bưng nước. Hắn kể cả phần của chính mình — rằng có lúc hắn đã suýt cắt sai, rằng đã có một con đường khác, ngắn hơn và tàn nhẫn hơn, mà hắn đã không đi — vì nàng xứng đáng được biết cả những gì suýt xảy ra với mình.",
+      "Nàng hỏi mình đang ở đâu. Nàng hỏi vì sao mình lại ở trên thuyền. Và nàng hỏi — câu hỏi khiến tay chèo của lão ngư ông khựng lại giữa chừng — rằng có phải trong đêm qua, có chuyện gì rất quan trọng đã xảy ra với nàng hay không, sao trong ngực nàng lại có cảm giác như vừa tiễn đưa một người thân mà không nhớ nổi mặt.",
+      "Có một lúc, nàng hỏi hắn một câu rất lạ: rằng trong đêm qua, có lúc nào nàng khóc không. Hắn trả lời đúng sự thật: không — nàng không khóc; nàng gọi tên người ta, nàng đứng thẳng, nàng tự chọn. Nàng nghe xong thì khẽ «dạ» một tiếng, rồi quay mặt ra phía biển — và lúc ấy, lần đầu tiên kể từ khi tỉnh dậy, nước mắt nàng mới rơi, rơi vì một người con gái trong lời kể của người khác hóa ra đã can đảm hơn nàng tưởng về chính mình rất nhiều. Nàng không nhớ được đêm ấy. Nhưng nàng nhận ra người đã sống nó — như nhận ra một giọng hát quen thuộc vọng qua vách tường: không thấy mặt, mà biết chắc đó là tiếng của mình.",
+      "Cao Minh ngồi xuống đối diện với nàng, và hắn làm điều hắn đã hứa — không phải hứa với nàng đêm nay, vì lời hứa ấy nàng cũng đã quên mất rồi — mà hứa với chính cái nguyên tắc hắn tự đặt ra từ ngày biết ký ức của nàng là một thứ có thể bị lấy đi từng mảnh: hắn kể lại. Từ đầu. Chậm rãi. Hắn kể về bản đồ điểm neo và ba mắt neo ở cổng, theo đúng thứ tự chuông — đèn — xích. Hắn kể về cánh cửa đầu tiên và câu hỏi hắn đã đặt ra ở ngưỡng cửa. Hắn kể về những cái tên nàng đã gọi giữa sân. Hắn kể về lần phản kháng cuối cùng trên đường xuống bến, về đám người được ngồi xuống khóc như người thường, và về cái giá của nó.",
+      "Và hai lần trong câu chuyện, hắn dừng lại, nói rõ từng chữ: đoạn này là lời kể của bổn tọa — không phải ký ức của nàng. Nàng nghe để biết con đường mình đã đi qua, chứ không phải để lấy lời kể của người khác đắp vào chỗ trống trong đầu mình rồi gọi đó là nhớ. Chỗ trống ấy là của nàng; một ngày nào đó, nếu nó tự đầy lại, nó sẽ đầy bằng chính nàng. Còn nếu nó không bao giờ đầy lại, thì nàng vẫn là người đã đi qua con đường đó — vì người đi đường không cần phải nhớ từng hòn đá dưới chân mình thì con đường mới có thật.",
+      "Nàng nghe hết, không ngắt lời một lần nào. Khi hắn kể đến đoạn nàng tự trả lời «có» ở ngưỡng cửa đầu tiên — câu trả lời mà chính nàng đã quên — nàng im lặng rất lâu, nhìn xuống đôi tay mình đang ôm cuộn chỉ thêu. Rồi nàng khẽ gật đầu, một cái gật đầu chậm và chắc, như người ký nhận một món đồ quý mà người ta trao lại.",
+      "Lão ngư ông, từ đầu đến cuối, chèo thuyền và không nói một lời nào. Nhưng khi câu chuyện kể xong, ông lão bỗng ho khan một tiếng và nói, giọng khàn đi, rằng già này chèo đò mấy chục năm, chở qua mặt nước này đủ hạng người, mà chưa từng nghe ai kể lại một đêm cho một người đã quên — kể cho đúng sự thật, mà lại không nhân đó bắt người ta phải biết ơn mình. Ông nói xong thì quay mặt ra phía mũi thuyền, giả vờ ngắm đường nước."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, trong lời kể của ngài… người con gái đó, cô ấy có được hỏi ý kiến không? Hay là… người ta cứ thế đưa cô ấy đi?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng ấy được hỏi. Trước cánh cửa đầu tiên, bổn tọa hỏi nàng có muốn tự mình bước ra không. Và nàng ấy — nàng — đã tự mình trả lời."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ. Vậy thì… tôi tin người con gái trong lời kể của ngài. Cô ấy nghe giống tôi lắm. Nếu là tôi, tôi cũng sẽ trả lời như thế."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng không cần tin thay phần của ai cả. Đó là nàng. Chỉ là trí nhớ của nàng về đêm nay đang nằm ở chỗ bổn tọa giữ hộ — khi nào nàng muốn nghe lại, bổn tọa kể lại. Bấy nhiêu thôi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài… cảm ơn ngài. Không phải vì ngài đưa tôi ra khỏi nhà đó. Mà vì ngài kể cho tôi nghe như kể với một người… còn nguyên là người."
+      }
+    ],
+    "choices": [
+      {
+        "id": "tell_everything",
+        "text": "Kể hết — cả tên những người ở lại, cả cái giá nàng đã trả, không giấu một chi tiết nào.",
+        "next": "lh_names_restored",
+        "effects": {
+          "lanTrustDelta": 3
+        }
+      },
+      {
+        "id": "let_her_rest",
+        "text": "Để phần còn lại kể sau — cho nàng ngồi yên ngắm mặt trời lên hết đã.",
+        "next": "lh_names_restored",
+        "effects": {
+          "lanTrustDelta": 1,
+          "lanHealthDelta": 2
+        }
+      }
+    ]
+  },
+  "lh_names_restored": {
+    "id": "lh_names_restored",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Gọi đầy đủ họ tên",
+    "backgroundId": "long-hai-coast",
+    "location": "Trên thuyền, mặt nước buổi sớm — ngoài tầm điểm neo của biệt thự",
+    "link": {
+      "id": "danh",
+      "phase": "severed"
+    },
+    "narration": [
+      "Mặt trời đã lên trọn vẹn khỏi mặt biển. Ánh nắng đầu ngày rải xuống mặt nước lặng một lớp vàng mỏng, và chiếc thuyền gỗ của lão ngư ông trôi chậm trong cái sáng trong trẻo ấy, như thể cả một đêm dài vừa qua chỉ là một giấc mơ mà ba người trên thuyền cùng mơ chung. Bờ Long Hải đã ở xa sau lưng — xa ngoài tầm của mọi điểm neo, mọi sợi chỉ, mọi tờ giấy của tòa nhà kia.",
+      "Cao Minh bỗng đứng dậy ở mũi thuyền. Hắn không làm gì lớn lao: không rút kiếm, không vận công, không có một chút dị tượng nào của bậc hủy thiên diệt địa. Hắn chỉ quay về phía người con gái đang ngồi ở khoang thuyền, và gọi nàng — lần đầu tiên kể từ khi hắn biết đến sự tồn tại của nàng, và có lẽ là lần đầu tiên trong đời nàng có người gọi như thế đối diện mặt nàng — bằng đầy đủ họ tên.",
+      "Cần phải hiểu cái tên ấy đã chết như thế nào thì mới hiểu nó sống lại ra sao. Nó không chết trong một đêm: nó chết trên giấy trước — một nét xóa trong gia phả, một tờ giấy chứng tử ký sẵn khi người còn đang ngồi uống thuốc trong phòng, một cái tên bị thay bằng «người bệnh» trong mọi sổ sách của căn nhà. Rồi nó chết trong miệng người khác: gia nhân được dạy gọi nàng bằng chức phận, khách khứa được kể rằng cô chủ đã mất. Cuối cùng nó suýt chết trong chính nàng, khi nàng bắt đầu tự nghĩ về mình như người ta nghĩ về một căn bệnh biết đi. Một cái tên bị giết bài bản như thế không thể sống lại bằng một tờ giấy khác. Nó chỉ sống lại khi có người gọi nó lên, đối diện, giữa trời đất — và khi chính chủ nhân của nó dám đáp lại.",
+      "Nắng lên cao dần, mặt nước bắt đầu lấp lánh. Nàng ngồi thẳng lưng ở khoang thuyền, hai tay đặt ngay ngắn trên đùi — nhưng lần này, đó là tư thế nàng tự chọn cho mình, không phải tư thế được sắp đặt. Khác biệt giữa hai điều ấy, nhìn bề ngoài, nhỏ đến mức không ai phân biệt nổi. Chỉ có người đã sống cả hai mới biết chúng cách nhau mười tám năm.",
+      "Nàng tập giới thiệu mình, như một đứa trẻ tập một bài học vỡ lòng mà người lớn nào cũng thuộc từ lâu: «Tôi là Hứa Tiểu Lan.» Rồi nàng nói tiếp, chậm hơn: con gái của Hứa Bổn Hoả — đến hai chữ sau, giọng nàng khựng lại, vì đó là tên của người cha đã ký tên lên cả cuộc giam cầm của nàng; một thoáng im lặng dài trôi qua trên mặt nước. Nhưng nàng không bỏ dở câu nói. Nàng nói hết, đến chữ cuối cùng, bằng giọng của chính mình — vì cái tên là của nàng, cả phần đẹp lẫn phần đau, và từ nay nàng sẽ là người quyết định nó có ý nghĩa gì.",
+      "Trong thần niệm của Cao Minh, có một sợi chỉ rất mảnh — mảnh cuối cùng buộc cái tên ấy vào hệ thống giấy tờ và điểm neo của Long Hải — vừa tự buông ra, không phải vì bị cắt, mà vì thứ nó buộc vào đã không còn tồn tại nữa: không còn một «vật chứa vô danh» nào để nó buộc. Hắn không nói điều này với nàng. Có những chiến thắng không cần được giải thích; chúng chỉ cần được chứng kiến — và buổi sáng nay, trên mặt nước này, đã có đủ người chứng kiến rồi.",
+      "Cái tên ấy đã bị xóa khỏi gia phả họ Hứa bằng một nét bút lạnh lùng. Nó đã bị thay bằng hai chữ «đã chết» trên một tờ giấy chứng ký bởi bàn tay bị kẻ khác dẫn dắt. Nó đã bị cả một hệ thống — giấy tờ, điểm neo, nghi lễ, sự im lặng của hàng chục con người — hợp sức chôn đi, để một vật chứa vô danh có thể được dùng mà không ai phải áy náy. Nhưng mọi thứ giấy tờ ấy chỉ có quyền trên đất của căn nhà kia, trong tầm của những điểm neo kia. Còn ở đây, trên mặt nước buổi sớm này, không có gia phả, không có giấy chứng, không có điểm neo — chỉ có một người con gái, và cái tên của cô ấy, được nói ra thành tiếng.",
+      "Nàng nghe cái tên ấy như nghe một tiếng chuông từ rất xa vọng về. Môi nàng mấp máy nhắc lại — chậm rãi, từng tiếng một, như người tập đọc một chữ vừa thiêng liêng vừa lạ lẫm: họ của cha, tên của mình. Nàng nhắc lại lần thứ hai, chắc hơn. Lần thứ ba, nàng tự nói mà không cần ai dẫn: nàng nói nàng là ai, con của ai, và nàng vừa từ đâu đi ra. Giọng nàng run, nhưng câu chữ không run.",
+      "Không có gì nổ tung, không có sợi chỉ nào đứt phựt trong không khí. Mắt xích mang tên DANH khép lại lặng lẽ như thế: không phải bằng một nhát kiếm cắt đứt, mà bằng cách đối ngược hoàn toàn với cách nó được tạo ra. Người ta xóa nàng bằng cách ngừng gọi tên nàng. Hắn trả lại nàng bằng cách gọi tên nàng — và để chính nàng tự gọi lại, trên mặt nước, ngoài tầm với của mọi thứ đã từng xóa nàng.",
+      "Lão ngư ông nghe hết, rồi bỗng khẽ nói rằng già này xin được làm chứng: sáng nay, trên thuyền của già, có một cô gái tên như thế đã ngồi ở khoang thuyền này, tỉnh táo, tự mình nói tên mình. Ông nói câu ấy trịnh trọng như người đọc một tờ khai — vì ông hiểu, ở cái thời buổi này, một cái tên đôi khi chỉ sống được nếu có người ngoài chịu nhớ và chịu làm chứng cho nó."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Hứa Tiểu Lan."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài… đã bao lâu rồi, tôi mới nghe có người gọi cả họ lẫn tên tôi như thế. Ở nhà đó, người ta gọi tôi là «cô chủ», là «người bệnh», là… những tiếng không phải tên."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Từ nay, bổn tọa gọi nàng là Hứa Tiểu Lan. Ai muốn xóa cái tên ấy lần nữa, kẻ đó phải bước qua bổn tọa trước."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Hứa Tiểu Lan. Dạ — tôi xin giữ cái tên này. Dù sau này tôi có quên thêm nhiều chuyện nữa, thưa ngài, xin ngài đừng để tôi quên mất tên mình."
+      },
+      {
+        "speaker": "Ngư ông",
+        "text": "Già xin làm chứng. Sáng nay, trên thuyền của già, cô Hứa Tiểu Lan đã tự miệng nói tên mình, tỉnh táo, rõ ràng. Mai này ai hỏi, già xin nói lại đúng như vậy."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa hứa. Tên của nàng, bổn tọa giữ cùng một chỗ với tên của những người trong căn nhà đó — ở nơi không một tờ gia phả nào với tới được."
+      }
+    ],
+    "choices": [
+      {
+        "id": "by_her_full_name",
+        "text": "Từ nay chỉ gọi nàng bằng đầy đủ họ tên — Hứa Tiểu Lan — như một người ngang hàng.",
+        "next": "lh_slice_end",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "flags": {
+          "lanNameRestored": true
+        }
+      }
+    ]
+  },
+  "lh_slice_end": {
+    "id": "lh_slice_end",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Hết hồi một · Long Hải",
+    "backgroundId": "long-hai-coast",
+    "location": "Bến thuyền Long Hải — rạng sáng, nhìn về hướng Vũng Tàu",
+    "narration": [
+      "Thuyền ghé vào bến nhỏ cho lão ngư ông lấy thêm nước ngọt và cho người con gái vừa trải qua một đêm dài nhất đời mình được đặt chân lên đất cứng một lần nữa. Nắng đã lên cao hơn, bến cá bắt đầu nhộn nhịp những tiếng người hoàn toàn bình thường: tiếng quang gánh kẽo kẹt, tiếng mặc cả cá tôm, tiếng trẻ con chạy trên ván cầu. Tiểu Lan đứng giữa cái ồn ào tầm thường ấy mà ngơ ngác như người lạc vào một cõi khác — vì đó là thứ ồn ào không theo một nhịp điều phối nào cả, thứ ồn ào của những con người đang sống phần đời của riêng mình.",
+      "Nàng đi một mình hết chiều dài cầu ván của bến — không vịn, không dìu, bước chân còn chậm nhưng là bước chân của người đi dạo buổi sáng chứ không phải của người bệnh được đưa đi. Ở đầu cầu, nàng dừng lại nhìn một đứa bé bán bánh đang ngủ gật bên thúng bánh của mẹ nó, nhìn một ông lão vá lưới ngáp dài, nhìn hai người đàn bà mặc cả một con cá với tất cả sự nghiêm túc của một cuộc đàm phán quốc tế. Nàng xem những cảnh ấy như xem một thứ kịch lạ lùng và quý giá: người ta sống, ồn ào và lộn xộn, không ai phải xin phép ai để được ngáp, được ngủ gật, được mặc cả thua một con cá.",
+      "Nhưng chính nàng là người nhận ra trước cả hắn. Khi cỗ quan tài được khiêng ngang qua đầu bến, nàng khẽ nắm lấy tay áo hắn và nói, giọng hạ xuống: ngài nhìn bước chân họ kìa. Tám người khiêng, mười sáu bàn chân — và tất cả đều bước cùng một nhịp, chân trái trước, khoảng cách đều nhau như đo bằng thước. Nàng đã sống mười tám năm trong nhịp bước ấy; nàng nhận ra nó như người ta nhận ra tiếng nói của kẻ đã giam mình, dù nó phát ra từ những cái miệng xa lạ. Đám khiêng quan tài kia, dù là ai, cũng đang đi bằng đôi chân của kẻ khác — và cỗ quan tài không tên kia, rất có thể, cũng chỉ là một thứ «hàng» trong cùng một mạng lưới.",
+      "Hắn nghĩ về tòa biệt thự một lần nữa — không phải với cơn giận, mà với sự tỉnh táo của một người vừa đo được kích thước thật của đối thủ qua một trận đầu tiên. Căn nhà ấy tối nay sẽ điểm danh và thấy thiếu một người. Nó sẽ báo về Chợ Lớn bằng những sợi chỉ nhanh hơn bất cứ con ngựa nào. Và ở Chợ Lớn, trong gian phòng không có trên bất cứ bản đồ nào của phủ họ Hứa, có kẻ sẽ lần đầu tiên phải tự hỏi: kẻ nào đã dám lấy đi vật chứa của chúng ta, và lấy bằng cách nào mà không làm nó vỡ.",
+      "Cao Minh nhìn nàng, và lần đầu tiên trong suốt chặng đường, hắn mỉm cười — một nụ cười hiếm hoi và không giấu giếm. Căn nhà kia đã lấy của nàng mười tám năm, lấy cả ký ức của một đêm vừa qua; nhưng nó cũng vô tình rèn cho nàng một thứ vũ khí mà chính nó phải sợ: một đôi tai nghe ra được nhịp của nó giữa chợ đời, một đôi mắt nhận ra được sợi chỉ của nó trên cổ tay người lạ. Từ nay, trong cuộc chiến dài với mạng lưới này, hắn không còn là người duy nhất nhìn thấy kẻ thù nữa.",
+      "Sáu mắt xích đã được đặt tên trong những ngày qua: Danh, Nợ, Lệnh, Ký, Thân, Tử. Một mắt xích vừa khép lại trên mặt nước buổi sớm — không phải bằng kiếm, mà bằng một cái tên được gọi lên. Năm mắt xích còn lại đang nằm rải trên con đường phía trước: ở những bến cảng mà quan tài không tên hướng tới, ở những cửa sông mà người ta bán mua bằng những món nợ không giấy tờ, ở những nơi mà ký ức của con người bị viết lại như viết lại một trang sổ. Hắn chưa biết hết chúng ở đâu. Nhưng hắn biết cách đi tìm: theo những cái tên bị xóa, theo những bước chân quá đều, theo những con người còn tỉnh táo trong những thân thể không nghe lời mình.",
+      "Nàng ngoái nhìn lại một lần cuối về hướng tòa biệt thự, xa tít sau rặng phi lao và màn sương đã tan gần hết. Nàng không còn bị khóa sau cánh cổng ấy nữa. Nhưng thứ đang sống trong người nàng thì vẫn còn đó — yên lặng hơn, lùi xa hơn, sau khi mất đi những điểm neo của Long Hải, nhưng chưa chết và chưa hề bỏ cuộc; và nàng biết, bằng một trực giác của người đã sống chung với nó mười tám năm, rằng nó chỉ đang chờ những điểm neo khác, ở những vùng đất khác. Cuộc ra đi này không phải là kết thúc. Nó chỉ là lần đầu tiên nàng thắng một trận — và thắng bằng chính đôi chân, cái tên, và tiếng nói của mình.",
+      "Ở đầu kia của bến, khuất sau những đống lưới và thùng cá, có một cảnh mà ít người để ý: một cỗ quan tài đen bóng đang được khiêng lên một chiếc thuyền lớn hơn, bởi những người đàn ông mặc đồ sẫm màu, lặng lẽ và nhịp nhàng đến mức nổi bật giữa cái nhộn nhịp của bến cá. Không kèn, không trống, không người đưa tang. Lão ngư ông nhìn theo hướng mắt của Cao Minh, hạ giọng: những cỗ quan tài như thế đã rời bến này vào lúc trời chưa sáng suốt nhiều tháng nay — luôn hướng về phía Vũng Tàu, luôn không có tên người chết được đọc lên, và người của nhà họ Hứa ở bến này mỗi lần như thế đều tránh mặt đi nơi khác.",
+      "Cao Minh đứng rất lâu nhìn cỗ quan tài được chằng dây trên khoang thuyền xa xa. Một tòa biệt thự giam một cô gái bị xóa tên. Một mạng lưới có tầm, có điểm neo, có bàn tay vươn tới tận những bến thuyền. Và giờ là những cỗ quan tài không tên đi về Vũng Tàu trong đêm. Các mảnh của một bức tranh lớn hơn đang lần lượt hiện ra — và hắn biết, con đường phía trước sẽ dài hơn con đường vừa đi qua rất nhiều.",
+      "Hắn quay lại. Tiểu Lan đang đứng ở đầu cầu ván, nắng sớm rọi lên gương mặt mà người đời vẫn quen quay đi không dám nhìn. Nàng không còn đòi hắn hứa điều gì mà chính hắn chưa biết có làm được không. Nàng chỉ chỉnh lại cuộn chỉ thêu trong tay áo — cuộn chỉ đếm ngày của những ngày đã qua — và bắt đầu, bằng một nút thắt mới, đếm những ngày sắp tới.",
+      "Phía trước là con đường xuống Vũng Tàu, nơi bến nước, những chuyến hàng không có tên, và những cỗ quan tài đi trong đêm đang chờ. HỒI 1 · LONG HẢI — HOÀN THÀNH."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Đi thôi, thưa ngài. Lần này, là tôi tự mình muốn đi."
+      }
+    ],
+    "choices": [],
+    "sliceEnd": true
   },
   "lh_dead_consent": {
     "id": "lh_dead_consent",
@@ -3026,12 +4666,26 @@ export const VN_SCENES = Object.freeze({
     "location": "Cổng biệt thự Hứa Gia, Long Hải",
     "entity": "entity_hoe",
     "narration": [
-      "Cao Minh đưa nàng qua cổng mà không hỏi một lời. Không một ai trong căn nhà ấy đủ sức ngăn hắn, và nàng cũng không chống cự. Nàng đi theo, yên lặng suốt từ bậc thềm ra đến đường cái.",
-      "Đi được một quãng, hắn hỏi nàng có đau ở đâu không. Nàng đáp, giọng nhẹ như nói về người khác: lần sau ngài muốn đưa tôi đi đâu, xin cứ quyết định trước. Tôi khỏi cần phải nói nữa.",
-      "Con đường thoát đã mở. Nhưng quyền được từ chối — thứ nàng vừa phải trả bằng một phần trí nhớ để giành lại trong đêm nay — đã bị chính người cứu nàng tước mất, nhẹ nhàng và không hề ác ý.",
+      "Cao Minh bế nàng lên và đi. Không một ai trong căn nhà ấy đủ sức ngăn hắn, và thật ra cũng không cần ai ngăn: hắn đi qua sân gạch, qua hàng gia nhân đang mở mắt trừng trừng mà thân thể chưa kịp nhận lệnh, qua cánh cổng sắt bị một chưởng đánh bung xích — tất cả chỉ trong vài nhịp thở. Một gã gia nhân cầm cuốc đứng chết trân giữa sân, lưỡi cuốc giơ lưng chừng, mắt trắng dã nhìn theo; hắn lướt qua gã như lướt qua một cái cọc.",
+      "Có một bà lão trong đám gia nhân vừa tỉnh giấc giơ tay ra phía họ — một bàn tay già nua vươn tới như muốn níu lấy vạt áo cô chủ — rồi khựng lại giữa không trung, vì trong kho tàng mệnh lệnh của căn nhà này không có mệnh lệnh nào dành cho cảnh tượng đang diễn ra. Gã cầm cuốc đứng ngay giữa lối đi, lưỡi cuốc đã giơ lên nửa chừng theo một mệnh lệnh chưa kịp thành hình; hắn chỉ cần nghiêng người nửa bước là tránh được gã, nhẹ nhàng như tránh một cái cọc cắm bên đường. Không một ai trong sân ấy, kể cả những kẻ bị điều khiển đến tận xương tủy, đủ sức làm chậm bước chân hắn dù chỉ một nhịp thở. Đó chính là vấn đề: chẳng có gì phải trả giá, nên hắn đã không trả cái giá rẻ nhất trong tất cả — một câu hỏi.",
+      "Nàng không chống cự. Đó là điều đáng sợ nhất. Nàng nằm yên trong tay hắn, nhẹ và lặng, hai tay xếp gọn trước ngực ôm cuộn chỉ thêu — ngoan ngoãn như nàng đã ngoan ngoãn suốt mười tám năm với mọi mệnh lệnh đưa tới, từ chén thuốc đắng đến tờ giấy ký tên người khác. Hắn đã gặp nàng lần đầu trong tư thế ấy: một người đã học cách không phản kháng, vì phản kháng lần nào cũng phải trả bằng chính trí nhớ của mình.",
+      "Suốt quãng đường từ cổng ra đến đường cái, nàng không hỏi một câu nào. Không hỏi đi đâu, không hỏi vì sao, không hỏi bà Năm Liên còn ở đâu, không hỏi vì sao trời chưa sáng mà đèn trong nhà đã cháy hết lên. Sự im lặng ấy khác hẳn sự im lặng của cô gái đã từng hỏi tên hắn để «nhớ cho kỹ», từng dặn hắn đừng coi nàng như món đồ sắp vỡ, từng xin được tự mình chọn một con đường. Cô gái ấy hỏi rất nhiều, vì cô ấy còn tin rằng câu trả lời có phần của mình trong đó. Người con gái đang đứng bên vệ đường này thì đã thôi tin, chỉ sau một lần bị bế qua cổng mà không được hỏi.",
+      "Khi hắn đặt nàng xuống, nàng cúi đầu, nói một tiếng «cảm ơn ngài» rất khẽ và rất đúng mực — tiếng cảm ơn tự động của một người đã được huấn luyện để cảm ơn bất cứ ai quyết định thay cho mình, từ người bưng thuốc đến người ký giấy. Hắn nghe tiếng cảm ơn ấy mà lạnh cả sống lưng: nó giống hệt tiếng cảm ơn nàng dành cho những kẻ đã giam nàng, không khác một phân. Trong mắt nàng lúc này, hắn và căn nhà kia đã đứng chung một phía — phía của những kẻ không cần hỏi ý kiến Hứa Tiểu Lan.",
+      "Ra khỏi cổng một quãng, trời hừng sáng. Hắn đặt nàng xuống vệ đường, hỏi nàng có đau ở đâu không, có choáng không. Nàng đứng thẳng dậy, phủi lại vạt áo cho ngay ngắn, và đáp — giọng nhẹ như đang nói về một người nào khác, một người mà nàng không còn quen thân nữa.",
+      "Hắn sững lại. Trong những ngày qua, nàng đã trả giá từng mảnh ký ức một để giành lại một thứ duy nhất: quyền được nói tiếng «không» và tiếng «có» của chính mình. Đêm qua, nàng vừa dùng cái quyền ấy để từ chối cả một nghi lễ. Rạng sáng nay, người đến cứu nàng đã bước qua cái quyền ấy nhẹ nhàng như bước qua một ngưỡng cửa — không ác ý, không hề hay biết, và chính vì thế mà không còn cách nào gỡ ra được nữa.",
+      "Con đường thoát đã mở toang trước mặt. Nhưng từ giây phút này, dù đi đến đâu, nàng cũng sẽ chỉ đi theo — yên lặng, thuận ý, không đòi hỏi, không từ chối. Thứ mà mạng lưới trong tòa nhà kia mất mười tám năm vẫn chưa làm trọn được với nàng, thì người cứu nàng đã làm xong trong một nhịp thở: dạy nàng rằng tiếng nói của nàng không cần thiết cho cuộc đời của chính nàng.",
       "Đây không phải con đường mà câu chuyện này có thể đi tiếp."
     ],
-    "dialogue": [],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng có đau ở đâu không?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi không sao. Lần sau ngài muốn đưa tôi đi đâu, xin cứ quyết định trước. Tôi khỏi cần phải nói nữa."
+      }
+    ],
     "choices": [
       {
         "id": "retry",
@@ -3040,26 +4694,5 @@ export const VN_SCENES = Object.freeze({
       }
     ],
     "deadEnd": true
-  },
-  "lh_slice_end": {
-    "id": "lh_slice_end",
-    "contentStatus": "approved",
-    "stageId": "long_hai",
-    "title": "Hết hồi một · Long Hải",
-    "backgroundId": "long-hai-dawn-gate",
-    "location": "Cổng biệt thự Hứa Gia, Long Hải",
-    "narration": [
-      "Tiểu Lan ngoái nhìn lại tòa biệt thự một lần cuối. Nàng không còn bị khóa sau cánh cửa ấy nữa — nhưng thứ đang sống trong người nàng thì vẫn còn đó, và trên trang giấy cũ của một bà hầu già, cái tên của nàng vẫn còn nguyên vẹn nét mực.",
-      "Cao Minh không nói lời an ủi nào. Hắn chỉ đi chậm lại, để người con gái với đôi chân còn yếu có thể bước ngang hàng với mình, thay vì bị kéo theo phía sau.",
-      "Phía trước là con đường xuống Vũng Tàu, nơi bến nước và những chuyến hàng không có tên đang chờ. Hồi một khép lại ở đây — câu chuyện thì chưa."
-    ],
-    "dialogue": [
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Đi thôi, thưa ngài. Lần này, là tôi tự mình muốn đi."
-      }
-    ],
-    "choices": [],
-    "sliceEnd": true
   }
 });

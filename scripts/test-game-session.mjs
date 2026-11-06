@@ -57,26 +57,33 @@ game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_hall");
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes("infiltrate_villa"), true);
 // Mạch Hồi 1 sau Đợt 1B: hall → lan_room → lan_talk → morning_tea →
-// garden → night_bell → night_corridor → doctor_visit → servants →
-// ritual → depart (mọi lựa chọn đều lấy nhánh đầu tiên).
-for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_medicine_store", "lh_servants", "lh_register_room", "lh_kitchen", "lh_lan_knots", "lh_old_servant", "lh_well_anchor", "lh_lan_sleepwalk", "lh_altar", "lh_thu_nguyet_errand", "lh_market", "lh_letter", "lh_council", "lh_lan_question", "lh_anchor_bell", "lh_scout_coast", "lh_inspector_notice", "lh_eve_inspection", "lh_accident_beam", "lh_poison_tea", "lh_corridor_fight", "lh_aftermath", "lh_lan_pushback_big", "lh_retelling", "lh_kitchen_fire", "lh_hearth_anchor", "lh_storm", "lh_night_attack", "lh_blade_wound", "lh_ba_confession", "lh_lan_plan", "lh_inspector_early", "lh_ambush_well", "lh_hide_lan", "lh_first_sweep", "lh_ritual"]) {
+// Mạch chính 80 cảnh (mọi lựa chọn đều lấy nhánh đầu tiên) đi liền một
+// mạch tới lh_escape_begins, thử dead end đồng thuận, rồi ra cổng tới
+// lh_slice_end.
+for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_medicine_store", "lh_servants", "lh_register_room", "lh_kitchen", "lh_lan_knots", "lh_old_servant", "lh_well_anchor", "lh_lan_sleepwalk", "lh_altar", "lh_thu_nguyet_errand", "lh_market", "lh_letter", "lh_council", "lh_lan_question", "lh_anchor_bell", "lh_scout_coast", "lh_inspector_notice", "lh_eve_inspection", "lh_accident_beam", "lh_poison_tea", "lh_corridor_fight", "lh_aftermath", "lh_lan_pushback_big", "lh_retelling", "lh_kitchen_fire", "lh_hearth_anchor", "lh_storm", "lh_night_attack", "lh_blade_wound", "lh_ba_confession", "lh_lan_plan", "lh_inspector_early", "lh_ambush_well", "lh_hide_lan", "lh_first_sweep", "lh_audit_table", "lh_nghiem", "lh_certification", "lh_lan_faces", "lh_move_tonight", "lh_so_retrieval", "lh_ngoc_chi_keepsake", "lh_nghiem_offer", "lh_refusal", "lh_lockdown", "lh_servants_choose", "lh_anchor_map", "lh_lan_farewell", "lh_ba_stays", "lh_thu_nguyet_choice", "lh_escape_eve", "lh_escape_begins"]) {
   game.bridge.applyScriptChoice(0);
   assert.equal(game.bridge.getSnapshot().scene.id, expected);
 }
-game.bridge.applyScriptChoice(0);
-assert.equal(game.bridge.getSnapshot().scene.id, "lh_depart");
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "intervened");
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 4);
-assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "identified");
-// 100 − 3 (phản kháng lớn ở lh_lan_pushback_big) − 3 (phản kháng ở lh_ritual).
-assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 94);
+// Dead end đồng thuận rẽ từ lh_escape_begins: bế nàng đi không hỏi.
 const beforeDead = structuredClone(game.bridge.getSnapshot());
 game.bridge.applyScriptChoice(1);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_dead_consent");
 game.bridge.applyScriptChoice(0);
-assert.equal(game.bridge.getSnapshot().scene.id, "lh_depart");
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_escape_begins");
 assert.deepEqual(game.bridge.getSnapshot().campaignStats, beforeDead.campaignStats);
-game.bridge.applyScriptChoice(0);
-assert.equal(game.bridge.getSnapshot().scene.id, "lh_slice_end");
+// Hỏi nàng (ask_her) rồi đánh ra cổng, khép chặng ở lh_slice_end.
+for (const expected of ["lh_gate_fight", "lh_gate_hold", "lh_coast_road", "lh_road_choice", "lh_last_pushback", "lh_names_price", "lh_open_road", "lh_dawn_after", "lh_names_restored", "lh_slice_end"]) {
+  game.bridge.applyScriptChoice(0);
+  assert.equal(game.bridge.getSnapshot().scene.id, expected);
+}
+// ask_her hoàn thành mục tiêu thứ 5 (escape_long_hai) → engine lật chặng:
+// stageId sang vung_tau và danh sách mục tiêu làm mới cho chặng mới.
+assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 0);
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "severed");
+// 100 − 3 (phản kháng lớn lh_lan_pushback_big) − 8 (phản kháng cuối lh_last_pushback).
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 89);
 assert.equal(game.bridge.getSnapshot().flags.lanDepartureConsent, true);
 assert.equal(game.bridge.getSnapshot().progression.stageId, "vung_tau");
 assert.equal(game.bridge.getSnapshot().scene.choices.length, 0);
