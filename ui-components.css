@@ -356,14 +356,6 @@ meter::-webkit-meter-optimum-value { background: linear-gradient(90deg, #745638,
 .controls button:hover { color: var(--ink-strong); border-color: var(--line-strong); }
 .controls .danger-control { grid-column: 1 / -1; color: #d9aaa4; border-color: rgba(173,67,59,.34); }
 
-body[data-threat="critical"] .campaign-header,
-body[data-threat="critical"] .story-panel { box-shadow: 0 20px 60px rgba(80,18,14,.22), var(--shadow-deep); }
-body[data-threat="critical"] .encounter-visual {
-  background:
-    radial-gradient(circle at 50% 52%, rgba(173,67,59,.18), transparent 42%),
-    repeating-linear-gradient(0deg, transparent 0 5px, rgba(173,67,59,.045) 6px, transparent 7px),
-    #0d0807;
-}
 
 /* ==========================================================================
    v5 — Khung GM + components trong drawer (theo mockup v5, 2026-11-05)
