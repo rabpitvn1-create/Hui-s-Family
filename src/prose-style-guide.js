@@ -42,24 +42,6 @@ const VOICE_CARDS = freeze({
       "Sự thông minh thể hiện qua thứ anh nhận ra và hành động anh chọn, không qua độc thoại giải thích năng lực."
     ]
   },
-  iris: {
-    name: "Iris / ARGUS",
-    rules: [
-      "Nói như người thật, nhanh, rõ và sắc trong nhiệm vụ; không nói như AI đọc báo cáo cảm biến.",
-      "Có thể mềm, nữ tính, càm ràm hoặc tsundere quanh Cao Minh nhưng không dùng bạo lực slapstick hay cư xử trẻ con để thay cảm xúc.",
-      "Iris và Cao Minh dùng xưng hô anh-em theo canon hiện tại; tình cảm của Iris không tự biến hai người thành một cặp.",
-      "Khi bàn chiến thuật, lời nói bám vào tuyến đi, góc bắn, điểm lộ và mục tiêu cần cắt."
-    ]
-  },
-  syvial: {
-    name: "Syvial",
-    rules: [
-      "Nhịp nói của người bình thường trước, câu đắt sau; không phải câu nào cũng cần biểu diễn yandere.",
-      "Có thể mềm, càm ràm, trêu, phản bác hoặc nói thẳng mình đang ghen; không dùng đe dọa rập khuôn chỉ để tỏ ra nguy hiểm.",
-      "Với Cao Minh thoải mái và có banter; khi lo hoặc giận thật thì nói thẳng điều cần biết hoặc hành vi khiến mình khó chịu.",
-      "Ghen tuông không xóa chiến thuật, quan sát hoặc trí thông minh; không tự động thù địch với phụ nữ chỉ vì họ nói chuyện với Cao Minh."
-    ]
-  },
   tieu_lan: {
     name: "Hứa Tiểu Lan",
     rules: [
@@ -120,8 +102,6 @@ export const PROSE_STYLE_GUIDE = freeze({
     "Ẩn dụ quen tay như 'bóng tối nuốt chửng', 'không khí đặc quánh', 'ánh mắt sắc lạnh', 'nụ cười nhếch mép'.",
     "Động tác rập khuôn như siết chặt nắm tay, nheo mắt hoặc hít sâu ở mọi cảnh.",
     "Cao Minh nói dài hơn người đang bị hỏi, khoe sức mạnh vô cớ hoặc buông lời huyền học khó hiểu để lấp khoảng trống.",
-    "Iris bị viết như trạm AI/drone từ xa hoặc tsundere bạo lực rập khuôn.",
-    "Syvial bị viết thành sát nhân ngẫu nhiên, mất lý trí vì ghen hoặc nói toàn câu đe dọa cụt lủn.",
     "Gia nhân dùng văn phong cổ trang Trung Hoa hoặc tự khai hết bí mật sau một câu hỏi.",
     "Lặp lại tên nhân vật ở đầu nhiều câu liên tiếp."
   ],
@@ -145,8 +125,6 @@ function voiceKeyForSpeaker(speaker) {
   const name = normalizeSpeaker(speaker);
   if (!name) return "generic_npc";
   if (name.includes("cao minh") || name.includes("gao ming") || name.includes("vạn giới ma tổ") || name.includes("đạo tổ")) return "gaoMing";
-  if (name.includes("iris") || name.includes("argus")) return "iris";
-  if (name.includes("syvial")) return "syvial";
   if (name.includes("tiểu lan")) return "tieu_lan";
   if (name.includes("koei")) return "koei";
   if (["gia nhân", "người hầu", "người ở", "người làm", "đầy tớ", "quản gia", "a hoàn", "hầu gái"]

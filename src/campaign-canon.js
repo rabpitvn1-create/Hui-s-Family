@@ -271,7 +271,7 @@ export const NARRATIVE_RULES = freeze({
     "Sáng tạo của model"
   ],
   abilities: [
-    "Chỉ active-character-codex.js và sru-codex.js được định nghĩa kỹ năng, trang bị, tính cách và quan hệ của Cao Minh, Iris, Syvial.",
+    "Chỉ active-character-codex.js được định nghĩa kỹ năng, trang bị, tính cách và quan hệ của Cao Minh.",
     "Không hạ thấp nhân vật để bảo vệ cốt truyện; đối trọng phải đến từ quy luật, thông tin, mục tiêu, môi trường hoặc hậu quả có căn cứ.",
     "Nhân vật luôn nhớ kỹ năng, trang bị, khả năng tiếp cận, thương tích và giới hạn đã khóa trong canon hiện hành.",
     "Không hồi tố rằng thiết bị hết pin, bị bỏ quên hoặc kỹ năng bị khóa nếu canon hiện hành không thiết lập điều đó.",

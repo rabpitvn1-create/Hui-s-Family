@@ -439,7 +439,7 @@ body.intel-open .intel-scrim {
 
 /* ===== V5 — Header gọn + dải sub-strip =====
    Header là một hàng ngang: burger (#intel-toggle) trái, heritage-mark
-   ở giữa/trái và SRU stamp thu gọn bên phải. */
+   ở giữa/trái bên phải. */
 .campaign-header {
   align-items: center;
   justify-content: flex-start;
@@ -460,12 +460,6 @@ body.intel-open .intel-scrim {
 .campaign-header h1 span {
   display: inline;
   margin: 0 0 0 .55rem;
-}
-
-.campaign-header .elysium-stamp {
-  flex: 0 1 auto;
-  min-width: 0;
-  padding: .5rem .7rem;
 }
 
 /* Ba vạch burger (JS/HTML bọc trong .burger-icon nếu có). */
@@ -496,7 +490,6 @@ body.intel-open .intel-scrim {
 .sub-strip .route-readout { flex: 1 1 auto; }
 
 @media (max-width: 760px) {
-  .campaign-header .elysium-stamp { display: none; }
   .campaign-header .header-subtitle { display: none; }
 }
 
@@ -675,8 +668,8 @@ body.stage-entity-on #stage-entity {
 
 /* v5 header fix (theo đúng mockup v5): một hàng gọn — burger trái,
    "Hứa Gia / LIBERA-1899" giữa, chip Lượt ở phải. Các khối di sản
-   (ledger-tab, header-subtitle, tem SRU, route-readout)
-   không còn nằm trên header: tem + route vào drawer. */
+   (ledger-tab, header-subtitle, route-readout)
+   không còn nằm trên header: route vào drawer. */
 body .campaign-header {
   display: flex;
   align-items: center;
@@ -718,5 +711,4 @@ body .campaign-header {
   background: var(--brass-pale);
 }
 #intel-toggle .burger-text { display: none; }
-#intel-panel .elysium-stamp { margin: .85rem .9rem 0; }
 #intel-panel .route-readout { margin: .85rem .9rem 0; }

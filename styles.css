@@ -209,7 +209,7 @@ a:focus-visible {
   transform: rotate(-10deg);
 }
 
-.heritage-mark, .elysium-stamp { position: relative; z-index: 1; }
+.heritage-mark { position: relative; z-index: 1; }
 
 .ledger-tab,
 .header-subtitle,
@@ -267,37 +267,7 @@ h1 span {
   font-size: .67rem;
 }
 
-.elysium-stamp {
-  display: flex;
-  align-items: center;
-  gap: .8rem;
-  min-width: 19rem;
-  padding: .75rem .9rem;
-  border-left: 2px solid var(--elysium);
-  color: #b8d8df;
-  background: linear-gradient(90deg, var(--elysium-soft), transparent);
-}
 
-.stamp-sigil {
-  display: grid;
-  place-items: center;
-  flex: 0 0 auto;
-  width: 2.7rem;
-  height: 2.7rem;
-  border: 1px solid rgba(114,169,181,.54);
-  border-radius: 50%;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-}
-
-.elysium-stamp strong,
-.elysium-stamp small {
-  display: block;
-  font-family: var(--font-code);
-  letter-spacing: .07em;
-}
-.elysium-stamp strong { font-size: .72rem; }
-.elysium-stamp small { margin-top: .24rem; color: rgba(184,216,223,.66); font-size: .56rem; }
 
 .mission-bar {
   position: sticky;

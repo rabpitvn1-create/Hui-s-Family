@@ -31,7 +31,22 @@ const LEGACY_CANON_PATTERNS = Object.freeze([
   /\bEYE∞\b/i,
   /Command\s+Slate/i,
   /drone\s+mesh/i,
-  /infinite\s+drones?/i
+  /infinite\s+drones?/i,
+  // Cụm nhân vật/tổ chức legacy bị gỡ theo lệnh chủ nhân 2026-11-06: mẫu viết bằng
+  // lớp ký tự để repo không chứa chuỗi nguyên văn (cùng quy ước zero-trace ở trên).
+  /\bI[r]is\b/i,
+  /\bA[R]GUS\b/,
+  /\bS[y]vial\b/i,
+  /\bS[R]U\b/,
+  /Special\s+Response\s+Unit/i,
+  /S[R]U-MK20/,
+  /God[K]iller/i,
+  /Bel[i]al\s+Core/i,
+  /Luc[i]fer/i,
+  /Devil\s+Trigger/i,
+  /Thousandfold\s+Cognition/i,
+  /Twenty-Four\s+Severance/i,
+  /Field\s+(Galley|MedNet)/i
 ]);
 
 export function containsLegacyCanonText(value) {

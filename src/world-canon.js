@@ -4,11 +4,8 @@ import {
 } from "./campaign-canon.js";
 import {
   ACTIVE_CHARACTER_CODEX,
-  GAO_MING_CODEX,
-  IRIS_CODEX,
-  SYVIAL_CODEX
+  GAO_MING_CODEX
 } from "./active-character-codex.js";
-import { SRU_CODEX } from "./sru-codex.js";
 
 export const WORLD_CANON = Object.freeze({
   id: "hua-family-world-v3",
@@ -29,7 +26,7 @@ export const WORLD_CANON = Object.freeze({
   hardCanon: [
     "Tuyến bắt buộc: Long Hải → Cần Giờ → Backrooms 1900 tầng 0–15 → Thủ Dầu Một/Bình Dương → Vũng Tàu → Sài Gòn–Chợ Lớn.",
     "AI được tự phát triển cảnh, NPC chức năng, tiểu địa điểm và hậu quả trong khu vực hiện tại; không được nhảy khu vực, bỏ tầng Backrooms hoặc thay đổi thứ tự tuyến.",
-    "Nguồn duy nhất cho kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Cao Minh, Iris, Syvial là active-character-codex.js; Cao Minh không thuộc SRU — SRU chỉ là một tổ chức trong thế giới theo sru-codex.js.",
+    "Nguồn duy nhất cho kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Cao Minh là active-character-codex.js.",
     "Người chơi điều khiển Cao Minh, Đạo Tổ của Vạn Ma Đạo Môn, tôn hiệu Vạn Giới Ma Tổ. Anh là người Trái Đất trọng sinh, giữ nguyên ký ức phàm nhân; thân phận và đạo hạnh thật chỉ được NPC biết khi có nguồn thông tin hợp lệ.",
     "Cao Minh đến Long Hải năm 1899 do một vầng sáng lạ xuất hiện dưới chân khi anh uống rượu tại Vạn Hoa Lầu gần Lôi Thiên Sơn; nguồn gốc và chủ ý của vầng sáng CHƯA KHÓA — không được tự gán cho bất kỳ nhân vật, tổ chức hay thực thể nào khi chiến dịch chưa tạo đủ bằng chứng.",
     "Luồng khí đen bao phủ biệt thự Hứa Gia là tà khí — biểu hiện xâm lấn của La Sát Mẫu vào thế giới này. Hứa Tiểu Lan đã nhiễm tà khí cực nặng: lúc chiến dịch bắt đầu, ảnh hưởng của Mẫu trong cô ở mức 25% và sức khỏe chỉ còn 45%.",
@@ -38,14 +35,6 @@ export const WORLD_CANON = Object.freeze({
     "Đạo Tổ Pháp Thể và Vạn Ma Đạo Kinh tăng cường thể chất, giác quan, hồi phục và phân tích chiến trường cho Cao Minh ở cấp Đạo Tổ. Không tự phát sinh thanh năng lượng, giới hạn sử dụng hoặc phản phệ để kéo dài cảnh.",
     "Vạn Giới Thần Niệm của Cao Minh không có trần thời lượng, số lần sử dụng, cooldown hay phản phệ nội tại; anh giữ nguyên ý thức, ký ức, tính cách và phán đoán.",
     "Song Sát Kiếm Quyết và Tứ Kiếm Đoạn Mạch là kiếm kỹ bản mệnh của Cao Minh: song kiếm đồng xuất, cắt đứt mạch lực và đường lui của mục tiêu; không gắn số nhát, cooldown hay thanh năng lượng tự đặt.",
-    "Iris / ARGUS là scout-markswoman hiện trường, dùng đúng Ivory và Ebony. ARGUS Terrain Read không toàn tri, không nhìn xuyên tường và không dùng drone; Thousandfold Cognition tăng nhận thức/phân tích chứ không tự tăng tốc cơ thể.",
-    "Belial Core của Iris cung cấp quỷ lực vô hạn nhưng không đồng nghĩa sát thương, tốc độ bắn, độ bền hoặc độ chính xác vô hạn. Field Galley và Field MedNet là hỗ trợ thực địa, không phải tạo vật chất hay chữa lành tức thời.",
-    "Iris quyết đoán, bình tĩnh, sắc, dũng cảm, nữ tính và tử tế. Tsundere quanh Cao Minh không được biến thành bạo lực slapstick, trẻ con hoặc mất năng lực tác chiến.",
-    "Syvial là kiếm sĩ siêu nhiên UR+ dùng GodKiller và Lucifer Armor. GodKiller là đại kiếm cơ khí, không phải súng hay gunblade; cô vẫn chiến đấu được khi mất kiếm và có khả năng gọi kiếm trở lại.",
-    "Lucifer Core và Devil Trigger của Syvial không có thanh mana, giới hạn số lần, cooldown nội tại hoặc phản phệ do dùng lâu; Syvial giữ lý trí.",
-    "GodKiller Override / Twenty-Four Severance diễn ra trong thời gian dừng hoàn toàn và luôn gồm đúng 24 nhát chém.",
-    "Syvial có tình cảm yandere rất mạnh với Cao Minh nhưng không phải sát nhân ngẫu nhiên, không tự tấn công mọi phụ nữ nói chuyện với Cao Minh và không để ghen tuông xóa kỹ năng chiến thuật hoặc trí thông minh.",
-    "Iris và Syvial chỉ xuất hiện khi trạng thái hoặc lịch sử chiến dịch đã xác lập sự có mặt hay đường tiếp cận hợp lý. Không tự gán tổ chức hoặc chức vụ cho trường đang CHƯA KHÓA.",
     "Căng thẳng quanh nhân vật mạnh phải đến từ dữ kiện thiếu hoặc bị đầu độc, quyền xác định mục tiêu, dân thường, quyền tự quyết, điều kiện nhiệm vụ, quy luật dị thường và hậu quả của phương án tối ưu; không đến từ việc nhân vật tự quên năng lực.",
     "Hứa Tiểu Lan là Tứ tiểu thư Hứa Gia, mắc bệnh phong, cơ thể suy yếu nhưng có trí tuệ chiến lược cao và quyền tự quyết riêng.",
     "Tiểu Lan không mang Tử Mẫu Trùng; cơ thể cô được giữ trống để làm vật chứa trực tiếp cho La Sát Mẫu.",
@@ -115,10 +104,8 @@ export const WORLD_CANON = Object.freeze({
       }
     }
   },
-  organizations: Object.freeze({ sru: SRU_CODEX }),
   characters: ACTIVE_CHARACTER_CODEX,
   agentOperationRules: Object.freeze([
-    ...SRU_CODEX.doctrine,
     ...GAO_MING_CODEX.actionLocks
   ]),
   narrativeRules: NARRATIVE_RULES,
@@ -127,21 +114,15 @@ export const WORLD_CANON = Object.freeze({
     "Mỗi lượt chỉ được đề nghị hoàn thành tối đa một mục tiêu chưa hoàn thành của giai đoạn hiện tại.",
     "Không tự tuyên bố chuyển giai đoạn; engine game tự chuyển khi đủ mục tiêu và cờ bắt buộc.",
     "Không hồi sinh người chết, xóa thương tích, quên vật phẩm, ký ức, quan hệ, bằng chứng hoặc hậu quả đã lưu.",
-    "Mọi kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Cao Minh, Iris, Syvial phải lấy trực tiếp từ active-character-codex.js; không tự điền dữ kiện từ bản build cũ.",
+    "Mọi kỹ năng, trang bị, tính cách, quan hệ và giới hạn của Cao Minh phải lấy trực tiếp từ active-character-codex.js; không tự điền dữ kiện từ bản build cũ.",
     "Cao Minh phải vận hành đúng Thái Cổ Song Sát (Sát Thần Kiếm, Sát Ma Kiếm), Hắc Long Chiến Khải, Đạo Tổ Pháp Thể, Vạn Ma Đạo Kinh, Vạn Giới Thần Niệm, Song Sát Kiếm Quyết và các thần thông trong hồ sơ của anh với đúng giới hạn hiện hành khi chúng thực sự phù hợp tình huống; tuyệt đối không gán cho anh súng, đạn hay trang bị công nghệ.",
-    "Iris phải vận hành đúng Gunslinger, Ivory/Ebony, Belial Core, Thousandfold Cognition, ARGUS Terrain Read, Field Galley và Field MedNet; không biến cô thành trạm tình báo từ xa.",
-    "Syvial phải vận hành đúng GodKiller, Lucifer Armor, Lucifer Core, Devil Trigger và Twenty-Four Severance; không biến ghen tuông thành mất lý trí hay quên chiến thuật.",
-    "Iris và Syvial chỉ được đưa vào cảnh khi trạng thái hoặc lịch sử chiến dịch tạo đường tiếp cận hợp lý; không tự gán tổ chức hoặc chức vụ đang chưa khóa.",
     "Hành động bất khả thi phải thất bại hoặc thành công một phần với cái giá cụ thể.",
     "Mỗi lượt phải thay đổi tình thế, không viết đối thoại vòng tròn hoặc đoạn văn chỉ tạo không khí mà không có hậu quả.",
     "Vật phẩm mới chỉ xuất hiện khi có nguồn gốc, công dụng, giới hạn và tác động cân bằng; imagePrompt dành cho model ảnh riêng.",
     "Giọng văn rõ, tự nhiên, tiết chế; không dùng ẩn dụ khó hiểu, câu trailer giả sâu hoặc lời thoại giải thích cho người đọc."
   ],
   characterAuthority: Object.freeze({
-    gaoMing: GAO_MING_CODEX.source,
-    iris: IRIS_CODEX.source,
-    syvial: SYVIAL_CODEX.source,
-    organization: SRU_CODEX.id
+    gaoMing: GAO_MING_CODEX.source
   })
 });
 
