@@ -1,3 +1,15 @@
+// Fixed-script VN stores only campaign-v4 snapshots. Previous stage graphs
+// cannot be safely replayed as the new nine-stage campaign.
+export const ACTIVE_CANON_VERSION = "campaign-v4";
+export const INCOMPATIBLE_SAVE_KEYS = Object.freeze([
+  "hua-family-campaign-v3-manual",
+  "hua-family-campaign-v3-auto"
+]);
+export function isCurrentCanonSave(raw) {
+  return Boolean(raw && typeof raw === "object"
+    && raw.version === ACTIVE_CANON_VERSION
+    && typeof raw.scene?.id === "string");
+}
 const LEGACY_FLAG_KEYS = Object.freeze(new Set([
   "phantomRingAvailable",
   "unlimitedGunWorksAvailable",
