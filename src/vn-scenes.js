@@ -7,11 +7,15 @@ export const VN_SCENES = Object.freeze({
     id: "lh_prologue", title: "Vầng sáng dưới Vạn Hoa Lầu",
     backgroundId: "long-hai-exterior", location: "Long Hải, Nam Kỳ",
     narration: [
-      "Lôi Thiên Sơn chìm trong mây. Tại Vạn Hoa Lầu, Cao Minh vừa nâng chén rượu thì một vòng sáng không mang lấy nửa điểm linh lực bỗng mở ra dưới chân.",
-      "Hắn chưa từng gặp một vật nào có thể vượt khỏi thần niệm mình mà không lưu lại dấu. Nhưng lần này, cả chén rượu và người uống đã rơi khỏi phương trời quen thuộc.",
-      "Long Hải, năm 1899. Trước mắt hắn là tòa biệt thự của Hứa Gia. Đèn dầu còn cháy sau cửa sổ, ngoài sân có tiếng người cố nén một cơn ho.",
-      "Bên trong ngôi nhà, một mạng liên kết đang vận hành qua những con người vẫn còn tỉnh táo. Hắn có thể chém nát cả tòa biệt thự. Vấn đề là những người bên trong cũng sẽ chết."
-    ],
+      "Lôi Thiên Sơn quanh năm mây phủ, dưới chân núi có một tòa tửu lâu tên gọi Vạn Hoa Lầu. Rượu nơi ấy chẳng phải danh tửu đệ nhất thiên hạ, song thắng ở một chữ \"tĩnh\". Đêm nay, Cao Minh độc ẩm bên cửa sổ, chén ngọc trong tay mới vơi quá nửa. Đường đường là Đạo Tổ của Vạn Ma Đạo Môn, tôn hiệu truyền khắp vạn giới, vậy mà hắn vẫn giữ một thói quen phàm tục khó bỏ: uống rượu phải uống chậm, như sợ tháng năm trôi qua quá vội.",
+      "Chén chưa kịp đặt xuống, sàn gỗ dưới chân bỗng nhiên sáng rực.",
+      "Một vầng hào quang tròn trĩnh lặng lẽ nở ra ngay dưới ghế, không một tiếng động, không nửa điểm linh khí ba động. Cao Minh nhíu mày — tu vi đến cảnh giới của hắn, thiên địa dị biến há có thể qua mặt được thần niệm? Vậy mà vầng sáng này xuất hiện không chút dấu vết, tựa như nó vốn dĩ không thuộc về phương thiên địa này. Hắn chưa kịp đứng dậy, vầng sáng đã há miệng nuốt trọn cả người lẫn chén rượu, nhanh đến mức một giọt rượu cũng không kịp sánh ra ngoài.",
+      "Trời đất đảo lộn. Không gian như bị một bàn tay vô hình xé toạc rồi khâu lại một cách thô bạo.",
+      "Khi hai chân chạm đất, trước mắt Cao Minh là một bãi đất hoang ẩm mùi biển, phía trước sừng sững một tòa biệt thự kiểu Tây với mái ngói âm dương, cửa gỗ lim chạm trổ, đèn dầu leo lét sau rèm cửa. Hắn ngẩng đầu nhìn trời — tinh tú vẫn là tinh tú ấy, mà linh khí trong không khí loãng đến đáng thương, lẫn theo mùi khói than, mùi thuốc súng và hơi muối mặn của một thời đại thuộc về phàm nhân. Thần niệm khẽ quét ra ngoài, hắn liền hiểu: nơi này là Long Hải, năm 1899 của nhân gian. Cách Lôi Thiên Sơn của hắn, không chỉ là vạn dặm sơn hà, mà là cả một dòng thời gian không thể đo đếm.",
+      "Nhưng Cao Minh không có thời gian để cảm khái.",
+      "Cao Minh không gõ cửa ngay. Thần niệm chỉ cho hắn thấy những cử động trái ý chí, những con người vẫn còn tỉnh nhưng bị ép phục tùng.",
+      "Có thứ đang ở trong biệt thự. Hắn có thể chém nát cả tòa nhà, nhưng người bị giam sau các bức tường ấy sẽ không sống sót cùng lưỡi kiếm."
+],
     choices: [
       { id:"enter", text:"Bước vào biệt thự, giữ nguyên mạng sống của gia nhân.", next:"lh_hall", effects:{lanTrustDelta:0} },
       { id:"strike", text:"Một kiếm phá hết cả biệt thự để kết thúc tà khí.", next:"lh_dead_blade" }
