@@ -696,17 +696,18 @@ export function initGame() {
 
   let toastTimer = 0;
   function showToast(message, isError = false) {
-    if (!elements.toast) return;
-    elements.toast.textContent = message;
-    elements.toast.classList.toggle("is-error", isError);
-    elements.toast.hidden = false;
+    const toast = elements.toast;
+    if (!toast?.classList) return;
+    toast.textContent = message;
+    toast.classList.toggle("is-error", isError);
+    toast.hidden = false;
     // Buộc trình duyệt áp trạng thái đầu trước khi bật transition.
-    void elements.toast.offsetWidth;
-    elements.toast.classList.add("is-visible");
+    void toast.offsetWidth;
+    toast.classList.add("is-visible");
     window.clearTimeout(toastTimer);
     toastTimer = window.setTimeout(() => {
-      elements.toast.classList.remove("is-visible");
-      window.setTimeout(() => { elements.toast.hidden = true; }, 240);
+      toast.classList.remove("is-visible");
+      window.setTimeout(() => { toast.hidden = true; }, 240);
     }, 2600);
   }
 
