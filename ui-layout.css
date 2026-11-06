@@ -602,25 +602,29 @@ body.stage-entity-on #stage-entity {
 
 .stage-sword img {
   display: block;
-  height: 54%;
+  height: 67%;
   width: auto;
   border: 0;
   background: transparent;
   filter: drop-shadow(0 0 10px rgba(255, 45, 60, .45)) drop-shadow(0 6px 14px rgba(0, 0, 0, .55));
 }
 
-.stage-sword-a { animation: sword-hover-a 4.6s ease-in-out infinite alternate; }
-.stage-sword-b { animation: sword-hover-b 5.3s ease-in-out infinite alternate; }
-.stage-sword-b img { height: 50%; }
+/* Thông số chủ nhân chỉnh trên bảng v7, áp dụng 2026-11-06: khoảng cách hai
+   bên 32%, tâm ngang 0%, tầm cao −7.5%, biên độ lơ lửng 3%, nhịp 3.8s
+   (thanh B lệch nhịp ×1.15 = 4.37s), lắc 0°, kích thước Sát Thần 67% /
+   Sát Ma 70%, phát sáng 10px, cả hai đều hiện, lớp kiếm vẫn sau nhân vật. */
+.stage-sword-a { animation: sword-hover-a 3.8s ease-in-out infinite alternate; }
+.stage-sword-b { animation: sword-hover-b 4.37s ease-in-out infinite alternate; }
+.stage-sword-b img { height: 70%; }
 
 @keyframes sword-hover-a {
-  from { transform: translate(-44%, 0.5%) rotate(-2deg); }
-  to   { transform: translate(-44%, 5.5%) rotate(1.6deg); }
+  from { transform: translate(-32%, -10.5%) rotate(0deg); }
+  to   { transform: translate(-32%, -4.5%) rotate(0deg); }
 }
 
 @keyframes sword-hover-b {
-  from { transform: translate(36%, 5%) rotate(2deg); }
-  to   { transform: translate(36%, 0%) rotate(-1.6deg); }
+  from { transform: translate(32%, -4.5%) rotate(0deg); }
+  to   { transform: translate(32%, -10.5%) rotate(0deg); }
 }
 
 .stage-caption {
