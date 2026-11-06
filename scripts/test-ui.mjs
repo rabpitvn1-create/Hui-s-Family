@@ -32,13 +32,14 @@ if (missingIds.length) {
 }
 
 const stylesheetPaths = [...html.matchAll(/<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"/g)]
-  .map((match) => match[1]);
+  .map((match) => match[1].split(/[?#]/, 1)[0]);
 const missingStyles = stylesheetPaths.filter((path) => !existsSync(path));
 if (missingStyles.length) {
   throw new Error(`Không tìm thấy stylesheet: ${missingStyles.join(", ")}`);
 }
 
-const scriptPaths = [...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map((match) => match[1]);
+const scriptPaths = [...html.matchAll(/<script[^>]+src="([^"]+)"/g)]
+  .map((match) => match[1].split(/[?#]/, 1)[0]);
 const missingScripts = scriptPaths.filter((path) => !existsSync(path));
 if (missingScripts.length) {
   throw new Error(`Không tìm thấy script giao diện: ${missingScripts.join(", ")}`);
