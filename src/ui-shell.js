@@ -1,6 +1,6 @@
 import { SCENE_BACKGROUNDS, resolveSceneBackground } from "./scene-backgrounds.js";
-import { CHARACTER_OVERLAYS, resolveCompanionId } from "./character-overlays.js";
-import { ENTITY_OVERLAYS, resolveEntitySrc } from "./entity-overlays.js";
+import { CHARACTER_OVERLAYS, CHARACTER_DISPLAY_NAMES, resolveCompanionId } from "./character-overlays.js";
+import { ENTITY_OVERLAYS, ENTITY_DISPLAY_NAMES, resolveEntityId, resolveEntitySrc } from "./entity-overlays.js";
 
 const STAGES = Object.freeze([
   {
@@ -129,6 +129,11 @@ export function initMissionInterface() {
   const stageEntity = document.querySelector("#stage-entity");
   const stageTieuLan = document.querySelector("#stage-tieu-lan");
   const stageCompanion = document.querySelector("#stage-companion");
+  const stageEntityFigure = document.querySelector("#stage-entity-figure");
+  const stageLanFigure = document.querySelector("#stage-lan-figure");
+  const stageCompanionFigure = document.querySelector("#stage-companion-figure");
+  const stageEntityName = document.querySelector("#stage-entity-name");
+  const stageCompanionName = document.querySelector("#stage-companion-name");
   const stageSceneName = document.querySelector("#stage-scene-name");
   const stageBackground = document.querySelector("#stage-background");
   const stageCharacter = document.querySelector("#stage-character");
@@ -266,13 +271,16 @@ export function initMissionInterface() {
     if (stageEntity && entitySrc && stageEntity.getAttribute("src") !== entitySrc) {
       stageEntity.setAttribute("src", entitySrc);
     }
-    stageEntity?.classList.toggle("stage-entity-on", active);
+    stageEntityFigure?.classList.toggle("stage-entity-on", active);
+    if (stageEntityName) {
+      stageEntityName.textContent = ENTITY_DISPLAY_NAMES[resolveEntityId(snapshot?.scene?.entity)] || "Gia nhân bị khống chế";
+    }
 
     // Tiểu Lan hiện bên trái Snapshot suốt cảnh có thoại của cô, fade out ở
     // cảnh đầu tiên không còn thoại của cô. Encounter active thì Entity
     // chiếm ô trái, cô không hiện.
     const lanOn = !active && isTieuLanSpeaking(snapshot);
-    stageTieuLan?.classList.toggle("stage-lan-on", lanOn);
+    stageLanFigure?.classList.toggle("stage-lan-on", lanOn);
 
     // Nhân vật phụ: hiện khi scene khai báo companions hoặc có thoại của
     // nhân vật có tên (xem character-overlays.js). NPC đứng đúng ô trái
@@ -285,8 +293,11 @@ export function initMissionInterface() {
       if (companionSrc && stageCompanion.getAttribute("src") !== companionSrc) {
         stageCompanion.setAttribute("src", companionSrc);
       }
-      stageCompanion.classList.toggle("stage-companion-on", Boolean(companionSrc));
-      stageCompanion.classList.toggle("stage-companion-shifted", Boolean(companionSrc) && lanOn);
+      stageCompanionFigure?.classList.toggle("stage-companion-on", Boolean(companionSrc));
+      stageCompanionFigure?.classList.toggle("stage-companion-shifted", Boolean(companionSrc) && lanOn);
+      if (stageCompanionName) {
+        stageCompanionName.textContent = companionId ? (CHARACTER_DISPLAY_NAMES[companionId] || "") : "";
+      }
     }
 
     const pose = active ? POSE_ENCOUNTER : POSE_EXPLORE;

@@ -30,3 +30,20 @@ export function resolveEntitySrc(entity) {
   if (entity) return ENTITY_OVERLAYS[DEFAULT_ENTITY_ID];
   return "";
 }
+
+// Bảng tên trên đầu Thực Thể ở Snapshot: gia nhân bị mạng lưới khống chế.
+export const ENTITY_DISPLAY_NAMES = Object.freeze({
+  entity_guard: "Gia nhân bị khống chế",
+  entity_hoe: "Gia nhân bị khống chế",
+  entity_blade: "Gia nhân bị khống chế",
+  entity_claw: "Gia nhân bị khống chế",
+  entity_maid: "Gia nhân bị khống chế",
+  entity_maid2: "Gia nhân bị khống chế",
+  entity_youth: "Gia nhân bị khống chế"
+});
+
+export function resolveEntityId(entity) {
+  if (typeof entity === "string" && Object.hasOwn(ENTITY_OVERLAYS, entity)) return entity;
+  if (entity) return DEFAULT_ENTITY_ID;
+  return "";
+}

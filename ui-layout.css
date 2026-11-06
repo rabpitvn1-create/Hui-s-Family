@@ -524,11 +524,7 @@ body.intel-open .intel-scrim {
 }
 #stage-background[hidden] { display: none; }
 
-#stage-entity,
 #stage-character {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
   display: block;
   object-fit: contain;
   border: 0;
@@ -536,8 +532,54 @@ body.intel-open .intel-scrim {
   pointer-events: none;
 }
 
+/* Khung bọc từng nhân vật bên trái Snapshot (lệnh chủ nhân 2026-11-06: mỗi
+   nhân vật có BẢNG TÊN trong khung trên đầu để người đọc phân biệt ai là
+   ai). Khung mang vị trí/kích thước/trạng thái hiện — ảnh lấp đầy khung
+   theo chiều cao; bảng tên .stage-nameplate nằm ngay trên đầu nhân vật. */
+.stage-figure {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.stage-figure img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border: 0;
+  background: transparent;
+}
+
+.stage-nameplate {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% - 5px);
+  transform: translateX(-50%);
+  z-index: 4;
+  padding: .12rem .5rem;
+  border: 1px solid var(--line);
+  border-radius: .35rem;
+  background: rgba(14, 9, 5, .85);
+  color: var(--ink);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Cao Minh cao 100% khung nên bảng tên nằm ở mép trên của khung bọc. */
+.stage-nameplate-hero {
+  top: .3rem;
+  bottom: auto;
+  z-index: 3;
+}
+
 /* Entity chỉ hiện khi encounter đang active (JS gắn .stage-entity-on). */
-#stage-entity {
+#stage-entity-figure {
   left: 0;
   height: 92%;
   max-width: 55%;
@@ -546,9 +588,7 @@ body.intel-open .intel-scrim {
   transition: opacity 260ms ease, visibility 260ms ease;
 }
 
-#stage-entity.stage-entity-on,
-.snapshot-stage.stage-entity-on #stage-entity,
-body.stage-entity-on #stage-entity {
+#stage-entity-figure.stage-entity-on {
   opacity: 1;
   visibility: visible;
 }
@@ -557,24 +597,16 @@ body.stage-entity-on #stage-entity {
    có thoại của cô — JS gắn .stage-lan-on; hội thoại kết thúc (cảnh sau
    không còn thoại của cô) thì fade out. Cùng ô trái với Entity nên khi
    encounter active, Entity chiếm chỗ và cô không hiện (xem syncStage). */
-#stage-tieu-lan {
-  position: absolute;
-  bottom: 0;
+#stage-lan-figure {
   left: 0;
-  z-index: 2;
-  display: block;
   height: 94%;
   max-width: 52%;
-  object-fit: contain;
-  border: 0;
-  background: transparent;
-  pointer-events: none;
   opacity: 0;
   visibility: hidden;
   transition: opacity 600ms ease, visibility 600ms ease;
 }
 
-#stage-tieu-lan.stage-lan-on {
+#stage-lan-figure.stage-lan-on {
   opacity: 1;
   visibility: visible;
 }
@@ -585,29 +617,21 @@ body.stage-entity-on #stage-entity {
    Khi Tiểu Lan cũng đang hiện ở ô trái, JS gắn .stage-companion-shifted:
    nhân vật phụ lùi sang vị trí thứ hai nhưng GIỮ NGUYÊN chiều cao 92%.
    Encounter active thì ẩn như Tiểu Lan. */
-#stage-companion {
-  position: absolute;
-  bottom: 0;
+#stage-companion-figure {
   left: 0;
-  z-index: 2;
-  display: block;
   height: 92%;
   max-width: 55%;
-  object-fit: contain;
-  border: 0;
-  background: transparent;
-  pointer-events: none;
   opacity: 0;
   visibility: hidden;
   transition: opacity 600ms ease, visibility 600ms ease, left 600ms ease;
 }
 
-#stage-companion.stage-companion-on {
+#stage-companion-figure.stage-companion-on {
   opacity: 1;
   visibility: visible;
 }
 
-#stage-companion.stage-companion-shifted {
+#stage-companion-figure.stage-companion-shifted {
   left: 25%;
   z-index: 1;
 }

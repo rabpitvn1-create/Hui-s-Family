@@ -80,3 +80,20 @@ export function resolveCompanionId(scene) {
   if (declared.length) return declared[0];
   return dominant;
 }
+
+// Bảng tên trên đầu nhân vật ở Snapshot (lệnh chủ nhân 2026-11-06: mỗi nhân
+// vật có tên trong khung trên đầu để người đọc phân biệt ai là ai).
+export const CHARACTER_DISPLAY_NAMES = Object.freeze({
+  "ba_nam_lien": "Bà Năm Liên",
+  "le_thu_nguyet": "Lê Thu Nguyệt",
+  "npc_servant_male": "Gia nhân",
+  "npc_servant_female": "Gia nhân",
+  "npc_servant_elder": "Gia nhân lớn tuổi",
+  "npc_servant_elder_male": "Gia nhân lớn tuổi",
+  "npc_porter": "Phu khuân vác",
+  "pham_dinh_nghiem": "Phạm Đình Nghiêm",
+  "npc_fisherman": "Ngư dân",
+  "npc_doctor": "Thầy thuốc",
+  "npc_official": "Người của Giới Phòng",
+  "steward": "Quản gia"
+});

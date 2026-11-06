@@ -448,12 +448,12 @@ body.character-overlay-open { overflow: hidden; }
   #snapshot-stage, .snapshot-stage { height: min(72vw, 19rem); }
 
   /* Overlay không lấn hết chiều ngang và không đè caption ở giữa khung. */
-  #stage-entity, #stage-character {
+  #stage-character {
     object-fit: contain;
     max-height: 100%;
   }
-  #stage-entity { max-width: 44%; }
-  #stage-companion { max-width: 44%; }
+  #stage-entity-figure { max-width: 44%; }
+  #stage-companion-figure { max-width: 44%; }
   .stage-character-wrap { max-width: 56%; }
   #stage-scene-name, .stage-scene-name {
     z-index: 5;
