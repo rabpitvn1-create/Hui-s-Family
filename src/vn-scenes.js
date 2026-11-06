@@ -28,7 +28,7 @@ export const VN_SCENES = Object.freeze({
     choices:[{id:"retry",text:"Trở lại trước lựa chọn",retry:true}]
   },
   lh_hall:{
-    id:"lh_hall", title:"Hành lang biệt thự", backgroundId:"long-hai-hallway",
+    id:"lh_hall", title:"Hành lang biệt thự", backgroundId:"long-hai-corridor",
     objective:"infiltrate_villa",
     narration:[
       "Cánh cửa lim mở ra không cần một tiếng động. Cao Minh đi qua hành lang, nơi chân đèn đã cháy ngắn mà vẫn có người thay dầu đúng giờ.",
@@ -42,7 +42,7 @@ export const VN_SCENES = Object.freeze({
     ]
   },
   lh_lan_room:{
-    id:"lh_lan_room",title:"Tên nàng dưới lớp vải",backgroundId:"long-hai-lan-room",
+    id:"lh_lan_room",title:"Tên nàng dưới lớp vải",backgroundId:"tieu-lan-room",
     objective:"locate_tieu_lan",
     narration:[
       "Hứa Tiểu Lan ngồi dựa gối. Trên gương mặt và đôi tay là những vết sẹo đỏ sần khiến người ngoài chỉ muốn quay đi. Nàng không quay đi khi thấy khách lạ.",
@@ -60,7 +60,7 @@ export const VN_SCENES = Object.freeze({
     ]
   },
   lh_servants:{
-    id:"lh_servants",title:"Bà Năm Liên và trang sổ cũ",backgroundId:"long-hai-hallway",
+    id:"lh_servants",title:"Bà Năm Liên và trang sổ cũ",backgroundId:"long-hai-corridor",
     objective:"classify_servants",
     narration:[
       "Bà Năm Liên giữ một tập giấy mỏng trong lớp vải lót đã sờn. Bà không tự nhận mình dũng cảm. Bà chỉ nói từng được nhị phu nhân Lâm Ngọc Chi giúp một lần, rất lâu trước khi bà dám quay lại.",
@@ -78,7 +78,7 @@ export const VN_SCENES = Object.freeze({
     ]
   },
   lh_ritual:{
-    id:"lh_ritual",title:"Lời từ chối đầu tiên",backgroundId:"long-hai-lan-room",
+    id:"lh_ritual",title:"Lời từ chối đầu tiên",backgroundId:"tieu-lan-room",
     objective:"break_long_hai_ritual",
     narration:[
       "Một mệnh lệnh lan qua căn phòng. Người gác bỗng giơ tay về phía bà Năm Liên, trong khi miệng anh ta van đừng để mình làm thế.",
