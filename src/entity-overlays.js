@@ -14,7 +14,9 @@ export const ENTITY_OVERLAYS = Object.freeze({
   entity_hoe: "assets/overlay/entity-hoe.webp",
   entity_blade: "assets/overlay/entity-blade.webp",
   entity_claw: "assets/overlay/entity-claw.webp",
-  entity_maid: "assets/overlay/entity-maid.webp"
+  entity_maid: "assets/overlay/entity-maid.webp",
+  entity_maid2: "assets/overlay/entity-maid2.webp",
+  entity_youth: "assets/overlay/entity-youth.webp"
 });
 
 export const DEFAULT_ENTITY_ID = "entity_guard";

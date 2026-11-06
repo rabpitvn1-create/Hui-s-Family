@@ -11,14 +11,23 @@ export const CHARACTER_OVERLAYS = Object.freeze({
   "npc_servant_male": "assets/overlay/npc-servant-male.webp",
   "npc_servant_female": "assets/overlay/npc-servant-female.webp",
   "npc_servant_elder": "assets/overlay/npc-servant-elder.webp",
-  "npc_porter": "assets/overlay/npc-porter.webp"
+  "npc_porter": "assets/overlay/npc-porter.webp",
+  "pham_dinh_nghiem": "assets/overlay/pham-dinh-nghiem.webp",
+  "npc_fisherman": "assets/overlay/npc-fisherman.webp",
+  "npc_doctor": "assets/overlay/npc-doctor.webp",
+  "npc_official": "assets/overlay/npc-official.webp"
 });
 
 // Tên người nói (đã bỏ dấu, viết thường) → id overlay, chỉ cho nhân vật có tên.
 const SPEAKER_OVERLAYS = Object.freeze({
   "ba nam lien": "ba_nam_lien",
   "le thu nguyet": "le_thu_nguyet",
-  "thu nguyet": "le_thu_nguyet"
+  "thu nguyet": "le_thu_nguyet",
+  "pham dinh nghiem": "pham_dinh_nghiem",
+  "thay thuoc": "npc_doctor",
+  "ngu ong": "npc_fisherman",
+  "pho kiem": "npc_official",
+  "nguoi cua gioi phong": "npc_official"
 });
 
 const COMBINING_MARKS = new RegExp("[\\u0300-\\u036f]", "g");

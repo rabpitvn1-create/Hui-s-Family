@@ -833,7 +833,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Kho thuốc và rương thuốc",
-    "backgroundId": "long-hai-corridor",
+    "backgroundId": "medicine-store",
     "location": "Kho thuốc biệt thự Hứa Gia, Long Hải",
     "companions": [
       "npc_servant_elder"
@@ -967,7 +967,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Gian gia phả",
-    "backgroundId": "long-hai-saloon",
+    "backgroundId": "register-room",
     "location": "Gian lưu trữ gia phả, biệt thự Hứa Gia",
     "companions": [
       "npc_servant_elder"
@@ -1034,7 +1034,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Nhà bếp nếm hai lần",
-    "backgroundId": "long-hai-exterior",
+    "backgroundId": "kitchen",
     "location": "Nhà bếp biệt thự Hứa Gia, Long Hải",
     "companions": [
       "npc_servant_female"
@@ -1350,7 +1350,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Ô bài vị trống",
-    "backgroundId": "long-hai-saloon",
+    "backgroundId": "altar-hall",
     "location": "Từ đường biệt thự Hứa Gia, Long Hải",
     "narration": [
       "Sáng hôm sau, lấy cớ là khách phương xa muốn thắp nhang tạ ơn gia chủ đã tiếp đãi, Cao Minh bước vào từ đường một lần nữa — lần này là ban ngày, cửa mở, và hắn có đủ thời gian để nhìn kỹ nơi mà đêm qua Tiểu Lan đã bị dắt tới đứng chào. Từ đường của biệt thự là một gian nhà ba gian xây gạch, bàn thờ sơn son thếp vàng, hai bên là các kệ cao xếp bài vị của nhiều đời họ Hứa — từ đời ông tổ vào đất Nam Kỳ lập nghiệp, xuống tới các chi, các phòng. Hương khói ngát một mùi trầm cũ, thứ mùi của những nơi người sống nói chuyện với người chết bằng lễ nghi.",
@@ -1480,7 +1480,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Chợ Long Hải",
-    "backgroundId": "long-hai-exterior",
+    "backgroundId": "long-hai-market",
     "location": "Chợ Long Hải, Nam Kỳ",
     "narration": [
       "Chợ Long Hải họp trên một bãi đất ven đường cái, lều lá chen nhau, hàng cá hàng muối, tiếng mặc cả, tiếng gà vịt, mùi nước mắm và mùi khói — tất cả những ồn ào lộn xộn của một buổi chợ quê Nam Kỳ. Cao Minh đi vào chợ như đi vào một thế giới khác hẳn biệt thự: ở đây không ai bước cùng nhịp với ai, không ai nói cùng một câu, người ta chen nhau, cãi nhau, cười đùa — một sự hỗn loạn đầy sinh khí. Hắn mới đi được một vòng đã thấy rõ: mỗi khi có gia nhân của biệt thự Hứa Gia lách vào chợ, đám đông tự động dạt ra nhường đường, tiếng nói nhỏ xuống, rồi mới rộ lên lại sau lưng họ — như người ta tránh một đám tang đi ngang.",
@@ -2418,7 +2418,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Điểm neo ở bếp",
-    "backgroundId": "long-hai-exterior",
+    "backgroundId": "kitchen",
     "location": "Nhà bếp sau, biệt thự Long Hải",
     "entity": "entity_hoe",
     "narration": [
@@ -2474,7 +2474,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Bão biển",
-    "backgroundId": "long-hai-coast",
+    "backgroundId": "storm-coast",
     "location": "Biệt thự Long Hải và bờ biển, chiều bão tới",
     "narration": [
       "Bão tới Long Hải vào buổi chiều, báo trước bằng một thứ im lặng còn đáng sợ hơn cả gió. Biển rút ra xa bất thường, chim biển bay vào bờ thành đàn kêu inh ỏi, và những người dân chài già nhất xóm nhìn trời rồi lắc đầu: cơn bão này không nhỏ. Trong biệt thự, quản gia cho đóng hết cửa chớp, chằng chống các mái hiên — mọi việc đâu ra đấy, nhanh và gọn, như thể căn nhà đã chờ cơn bão này từ lâu. Cao Minh đứng ở hành lang nhìn ra biển, và hiểu rằng đúng là nó đã chờ.",
@@ -2529,7 +2529,7 @@ export const VN_SCENES = Object.freeze({
     "title": "Đêm nhà tấn công",
     "backgroundId": "long-hai-exterior",
     "location": "Sân và các hành lang biệt thự, đêm bão",
-    "entity": "entity_blade",
+    "entity": "entity_youth",
     "narration": [
       "Chúng đến không một tiếng hô. Hàng chục người — phu khuân, gia nhân bếp, người làm vườn, mấy cô hầu, cả lão quản gia tóc bạc — từ ba phía sân và hai hành lang cùng lúc tiến vào, ướt sũng nước mưa, tay cầm bất cứ thứ gì họ vẫn cầm ban ngày: cuốc, dao phay, đòn gánh, kéo cắt cành, gậy gộc. Mặt ai cũng trắng dã, miệng ai cũng mím chặt. Tiếng duy nhất là tiếng mưa và tiếng chân trần dẫm trên nền gạch ngập nước. Một đạo quân lặng im nhất mà Cao Minh từng đối mặt trong vạn năm — và cũng là đạo quân duy nhất mà hắn không được phép đánh trả.",
       "Hắn lùi dần theo hành lang, giữ mình luôn ở giữa đám người và cánh cửa gian phòng trong cùng. Chiến thuật của hắn đêm nay không có trong bất cứ binh pháp nào: hắn không tấn công, hắn mở đường. Mỗi khi một nhóm gia nhân dồn tới, hắn điểm nhẹ vào những sợi nối ngoài thân mà thần niệm bắt được, tháo từng nút một — người được tháo nút gục xuống ngủ say như trẻ con, và hắn đỡ họ nằm xuống chỗ khô ráo trước khi nhóm tiếp theo kéo tới. Đánh nhau với một tòa nhà, hóa ra là công việc của một người đỡ đẻ và một người gác đêm cộng lại.",
@@ -2981,6 +2981,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
+      "pham_dinh_nghiem",
       "npc_servant_elder"
     ],
     "narration": [
@@ -3103,6 +3104,9 @@ export const VN_SCENES = Object.freeze({
           "cluesHuaGiaDelta": 2
         }
       }
+    ],
+    "companions": [
+      "pham_dinh_nghiem"
     ]
   },
   "lh_certification": {
@@ -3113,6 +3117,7 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-saloon",
     "location": "Phòng khách biệt thự Hứa Gia, Long Hải",
     "companions": [
+      "pham_dinh_nghiem",
       "npc_servant_elder"
     ],
     "link": {
@@ -3252,6 +3257,9 @@ export const VN_SCENES = Object.freeze({
           "delta": 2
         }
       }
+    ],
+    "companions": [
+      "pham_dinh_nghiem"
     ]
   },
   "lh_move_tonight": {
@@ -3322,7 +3330,7 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "stageId": "long_hai",
     "title": "Mảnh sổ thứ nhất",
-    "backgroundId": "long-hai-corridor",
+    "backgroundId": "medicine-store",
     "location": "Kho thuốc, biệt thự Hứa Gia, Long Hải",
     "companions": [
       "le_thu_nguyet"
@@ -3498,6 +3506,9 @@ export const VN_SCENES = Object.freeze({
           "delta": 2
         }
       }
+    ],
+    "companions": [
+      "pham_dinh_nghiem"
     ]
   },
   "lh_refusal": {
@@ -3555,6 +3566,9 @@ export const VN_SCENES = Object.freeze({
           "cluesHuaGiaDelta": 2
         }
       }
+    ],
+    "companions": [
+      "pham_dinh_nghiem"
     ]
   },
   "lh_lockdown": {
@@ -4386,7 +4400,7 @@ export const VN_SCENES = Object.freeze({
     "title": "Lần phản kháng cuối cùng",
     "backgroundId": "long-hai-coast",
     "location": "Cuối đường xuống bến, bờ biển Long Hải",
-    "entity": "entity_maid",
+    "entity": "entity_maid2",
     "narration": [
       "Họ chỉ còn cách chiếc bến một quãng ngắn thì đám truy đuổi tới nơi. Họ đến không thành hàng ngũ nữa — điểm neo đã ở xa sau lưng, mệnh lệnh trong họ đã loãng đi như tiếng gọi qua mấy lớp sương — nhưng phần dư lệnh cuối cùng vẫn đẩy họ đi: những thân người lảo đảo trên đôi chân đã rớm máu vì đá nhọn, mắt trắng dã, tay vươn ra phía trước. Đi đầu là cô hầu má rách, gương mặt quen thuộc của những đêm nghi lễ; sau cô là bà bếp, hai người phu, và một lão bộc già đi bằng cả hai chân trần trên sỏi mà không hề biết đau.",
       "Cao Minh đã tính xong thế kiếm. Hắn có thể quét ngã cả đám người ấy mà không làm ai gãy một cái xương — điểm vào các khớp đang bị điều khiển, cắt những sợi chỉ còn sót, để họ ngồi xuống như những con rối hết dây. Mất chừng mười nhịp thở. Nhưng phía sau đám này, trong sương, còn những bóng người khác đang tới; và mỗi lần hắn ra tay là một lần những thân thể kia bị dùng làm khiên thịt, bị giật đi giật lại giữa hai thứ sức mạnh không thuộc về họ. Hắn chưa kịp rút kiếm thì nàng đã bước lên trước hắn.",
@@ -4500,6 +4514,9 @@ export const VN_SCENES = Object.freeze({
           "civiliansSavedDelta": 1
         }
       }
+    ],
+    "companions": [
+      "npc_fisherman"
     ]
   },
   "lh_open_road": {
