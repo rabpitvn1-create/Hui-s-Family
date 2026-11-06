@@ -73,6 +73,10 @@ saves.set(MANUAL_SAVE_KEY, JSON.stringify(old));
 game = launch(saves);
 game.bridge.loadGame();
 assert.equal(game.bridge.getSnapshot().scene.id,VN_START_SCENE);
+const malformed = new Map([[AUTO_SAVE_KEY, "{not-json}"]]);
+game = launch(malformed);
+game.bridge.loadGame();
+assert.equal(game.bridge.getSnapshot().scene.id, VN_START_SCENE);
 for (const card of Object.values(VN_SCENES)) {
   for (const choice of card.choices || []) {
     if (!choice.retry) assert.ok(VN_SCENES[choice.next], "Broken scene link: " + choice.next);
