@@ -97,3 +97,18 @@ export const CHARACTER_DISPLAY_NAMES = Object.freeze({
   "npc_official": "Người của Giới Phòng",
   "steward": "Quản gia"
 });
+
+// Tên trên bảng tên có thể khác theo cảnh khi danh tính chưa được lộ trong
+// văn: ở lh_audit_table, Phạm Đình Nghiêm mới chỉ được gọi là "phó kiểm"
+// (tên đầy đủ lộ ở cảnh lh_nghiem ngay sau đó trên tuyến chính) — bảng tên
+// không được đi trước văn bản. Điểm phản biện ChatGPT vòng 1, Muse kiểm
+// chứng theo tuyến chính: audit_table ở vị trí 47, lh_nghiem ở 48.
+const SCENE_DISPLAY_NAME_OVERRIDES = Object.freeze({
+  lh_audit_table: Object.freeze({ pham_dinh_nghiem: "Phó kiểm Giới Phòng" })
+});
+
+export function companionDisplayName(id, scene) {
+  const override = scene?.id ? SCENE_DISPLAY_NAME_OVERRIDES[scene.id] : null;
+  if (override && Object.hasOwn(override, id)) return override[id];
+  return CHARACTER_DISPLAY_NAMES[id] || "";
+}

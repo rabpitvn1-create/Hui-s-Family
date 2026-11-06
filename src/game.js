@@ -330,11 +330,27 @@ export function initGame() {
   // tiếp tục đúng chỗ cũ thay vì bắt đầu lại từ đầu; bản lưu hỏng/khác canon
   // thì im lặng bắt đầu mới, nút "Chiến dịch mới" vẫn là đường xóa chủ động.
   function tryRestoreSavedState() {
-    const raw = storage.getItem(MANUAL_SAVE_KEY) || storage.getItem(AUTO_SAVE_KEY);
-    if (!raw) return false;
+    // Chọn bản lưu MỚI NHẤT theo dấu thời gian đã đóng khi lưu (phản biện
+    // ChatGPT vòng 1, 2026-11-06: ưu tiên cứng bản thủ công có thể khôi phục
+    // về tiến độ CŨ hơn bản tự động). Bản lưu đời trước không có savedAt thì
+    // tính là 0 và vẫn giữ thứ tự thủ công trước khi hòa.
+    const candidates = [];
+    for (const key of [MANUAL_SAVE_KEY, AUTO_SAVE_KEY]) {
+      try {
+        const raw = storage.getItem(key);
+        if (!raw) continue;
+        const decoded = JSON.parse(raw);
+        if (isCurrentCanonSave(decoded) && VN_SCENES[decoded.scene?.id]) {
+          candidates.push({ decoded, savedAt: Number(decoded.savedAt) || 0 });
+        }
+      } catch {
+        // Bản lưu hỏng ở một khóa không được chặn bản còn lại.
+      }
+    }
+    if (!candidates.length) return false;
+    candidates.sort((a, b) => b.savedAt - a.savedAt);
     try {
-      const decoded = JSON.parse(raw);
-      if (!isCurrentCanonSave(decoded) || !VN_SCENES[decoded.scene?.id]) return false;
+      const decoded = candidates[0].decoded;
       state = normalizeState(sanitizeLegacyCanonState(decoded));
       presentScene(state.scene.id);
       state.log.unshift("Đã khôi phục tiến độ đã lưu.");
@@ -670,6 +686,7 @@ export function initGame() {
 
   function autoSave() {
     try {
+      state.savedAt = Date.now();
       storage.setItem(AUTO_SAVE_KEY, JSON.stringify(state));
     } catch (error) {
       console.warn("Không thể tự động lưu chiến dịch.", error);
@@ -677,6 +694,7 @@ export function initGame() {
   }
 
   function saveGame() {
+    state.savedAt = Date.now();
     storage.setItem(MANUAL_SAVE_KEY, JSON.stringify(state));
     state.log.unshift("Đã tạo bản lưu thủ công.");
     state.log = state.log.slice(0, 14);

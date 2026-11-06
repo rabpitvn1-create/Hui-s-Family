@@ -1,5 +1,5 @@
 import { SCENE_BACKGROUNDS, resolveSceneBackground } from "./scene-backgrounds.js";
-import { CHARACTER_OVERLAYS, CHARACTER_DISPLAY_NAMES, resolveCompanionId } from "./character-overlays.js";
+import { CHARACTER_OVERLAYS, companionDisplayName, resolveCompanionId } from "./character-overlays.js";
 import { ENTITY_OVERLAYS, ENTITY_DISPLAY_NAMES, resolveEntityId, resolveEntitySrc } from "./entity-overlays.js";
 
 const STAGES = Object.freeze([
@@ -296,7 +296,7 @@ export function initMissionInterface() {
       stageCompanionFigure?.classList.toggle("stage-companion-on", Boolean(companionSrc));
       stageCompanionFigure?.classList.toggle("stage-companion-shifted", Boolean(companionSrc) && lanOn);
       if (stageCompanionName) {
-        stageCompanionName.textContent = companionId ? (CHARACTER_DISPLAY_NAMES[companionId] || "") : "";
+        stageCompanionName.textContent = companionId ? companionDisplayName(companionId, snapshot?.scene) : "";
       }
     }
 

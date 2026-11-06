@@ -153,10 +153,23 @@ assert.equal(game.bridge.getSnapshot().scene.id, "lh_slice_end");
 assert.equal(saves.get(MANUAL_SAVE_KEY), saved);
 game.bridge.loadGame();
 assert.equal(game.bridge.getSnapshot().scene.id,"lh_slice_end");
+// Khôi phục khi khởi động chọn bản MỚI NHẤT theo savedAt (phản biện ChatGPT
+// vòng 1): bản thủ công cũ (lh_gate, t=1000) thua bản tự động mới (lh_saloon, t=2000).
+const olderManual = JSON.parse(saved);
+olderManual.scene.id = "lh_gate";
+olderManual.savedAt = 1000;
+const newerAuto = JSON.parse(saved);
+newerAuto.scene.id = "lh_saloon";
+newerAuto.savedAt = 2000;
+saves.set(MANUAL_SAVE_KEY, JSON.stringify(olderManual));
+saves.set(AUTO_SAVE_KEY, JSON.stringify(newerAuto));
+game = launch(saves);
+assert.equal(game.bridge.getSnapshot().scene.id, "lh_saloon");
 const old = structuredClone(INITIAL_STATE);
 old.version = "campaign-v3";
 old.scene.id = "origin";
 saves.set(MANUAL_SAVE_KEY, JSON.stringify(old));
+saves.delete(AUTO_SAVE_KEY);
 game = launch(saves);
 game.bridge.loadGame();
 assert.equal(game.bridge.getSnapshot().scene.id,VN_START_SCENE);
