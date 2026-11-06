@@ -1,4 +1,5 @@
 // LIBERA VN scene contract v1. Pure structural validation, no prose.
+import { CHARACTER_OVERLAYS } from "./character-overlays.js";
 export const VN_LINK_IDS = Object.freeze(["danh", "no", "lenh", "ky", "than", "tu"]);
 export const VN_LINK_PHASES = Object.freeze(["unknown", "identified", "intervened", "severed"]);
 export const VN_ROUTE_IDS = Object.freeze(["bao_ho", "tu_quyet", "nghi_le"]);
@@ -26,6 +27,10 @@ export function validateVnScenes(scenes, startId) {
     if (!Array.isArray(scene?.dialogue) || !scene.dialogue.every(x=>typeof x?.speaker==="string" && typeof x?.text==="string"))
       errors.push(key + ": dialogue must be speaker/text array");
     if (!Array.isArray(scene?.choices) || scene.choices.length > 3) errors.push(key + ": choices must contain <=3 options");
+    if (scene?.companions !== undefined
+      && (!Array.isArray(scene.companions) || scene.companions.length > 2
+        || scene.companions.some((id) => !Object.hasOwn(CHARACTER_OVERLAYS, id))))
+      errors.push(key + ": companions must be <=2 known overlay ids");
     if (scene?.link) {
       if (!VN_LINK_IDS.includes(scene.link.id) || !VN_LINK_PHASES.includes(scene.link.phase))
         errors.push(key + ": invalid link milestone");

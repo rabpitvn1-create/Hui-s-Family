@@ -579,6 +579,31 @@ body.stage-entity-on #stage-entity {
   visibility: visible;
 }
 
+/* Nhân vật phụ (lệnh chủ nhân 2026-11-06): đứng giữa khung, thấp hơn Tiểu
+   Lan một bậc và ở lớp sau cô; JS gắn .stage-companion-on khi scene có
+   nhân vật phụ xuất hiện. Encounter active thì ẩn như Tiểu Lan. */
+#stage-companion {
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+  z-index: 1;
+  display: block;
+  height: 82%;
+  max-width: 40%;
+  object-fit: contain;
+  border: 0;
+  background: transparent;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 600ms ease, visibility 600ms ease;
+}
+
+#stage-companion.stage-companion-on {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Khung bọc nhân vật chính: giữ đúng vị trí/kích thước overlay cũ,
    làm sân cho Thái Cổ Song Sát xoay quanh Cao Minh. */
 .stage-character-wrap {

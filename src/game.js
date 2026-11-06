@@ -228,6 +228,7 @@ export function initGame() {
       title: card.title,
       narration: [...(card.narration || [])],
       dialogue: [...(card.dialogue || [])],
+      companions: [...(card.companions || [])],
       choices: (card.choices || []).map((item) => item.text)
     };
     applyLinkMilestone(card.link);

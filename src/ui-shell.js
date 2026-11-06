@@ -1,4 +1,5 @@
 import { SCENE_BACKGROUNDS, resolveSceneBackground } from "./scene-backgrounds.js";
+import { CHARACTER_OVERLAYS, resolveCompanionId } from "./character-overlays.js";
 
 const STAGES = Object.freeze([
   {
@@ -126,6 +127,7 @@ export function initMissionInterface() {
   const actionsToggle = document.querySelector("#actions-toggle");
   const stageEntity = document.querySelector("#stage-entity");
   const stageTieuLan = document.querySelector("#stage-tieu-lan");
+  const stageCompanion = document.querySelector("#stage-companion");
   const stageSceneName = document.querySelector("#stage-scene-name");
   const stageBackground = document.querySelector("#stage-background");
   const stageCharacter = document.querySelector("#stage-character");
@@ -262,6 +264,18 @@ export function initMissionInterface() {
     // chiếm ô trái, cô không hiện.
     stageTieuLan?.classList.toggle("stage-lan-on", !active && isTieuLanSpeaking(snapshot));
 
+    // Nhân vật phụ: hiện khi scene khai báo companions hoặc có thoại của
+    // nhân vật có tên (xem character-overlays.js). Encounter active thì
+    // Entity chiếm khung, nhân vật phụ không hiện — cùng luật với Tiểu Lan.
+    const companionId = active ? null : resolveCompanionId(snapshot?.scene);
+    const companionSrc = companionId ? CHARACTER_OVERLAYS[companionId] : "";
+    if (stageCompanion) {
+      if (companionSrc && stageCompanion.getAttribute("src") !== companionSrc) {
+        stageCompanion.setAttribute("src", companionSrc);
+      }
+      stageCompanion.classList.toggle("stage-companion-on", Boolean(companionSrc));
+    }
+
     const pose = active ? POSE_ENCOUNTER : POSE_EXPLORE;
     if (stageCharacter && stageCharacter.getAttribute("src") !== pose) {
       stageCharacter.classList.add("is-swapping");
@@ -328,6 +342,11 @@ export function initMissionInterface() {
   // Nạp trước overlay Tiểu Lan để lần fade in đầu tiên không bị trống hình.
   const lanPreload = new Image();
   lanPreload.src = "assets/overlay/tieu-lan.png";
+  // Nạp trước các overlay nhân vật phụ (WebP nhẹ) cho lần xuất hiện đầu tiên.
+  for (const src of Object.values(CHARACTER_OVERLAYS)) {
+    const preload = new Image();
+    preload.src = src;
+  }
   // Mặc định: deck phương án đang hiện (aria-expanded="true"), trừ khi HTML ghi rõ "false".
   setChoicesOpen(actionsToggle ? actionsToggle.getAttribute("aria-expanded") !== "false" : true);
   syncIntelAccessibility();
