@@ -1,37 +1,13 @@
-import { HUA_SERVANT_AVATAR } from "./hua-servant-avatar.js";
+import { CHARACTER_OVERLAYS } from "./character-overlays.js";
 
-function createObjectUrlFromDataUri(dataUri) {
-  const value = String(dataUri || "");
-  if (!value.startsWith("data:") || typeof URL === "undefined" || typeof Blob === "undefined") {
-    return value;
-  }
-
-  try {
-    const commaIndex = value.indexOf(",");
-    if (commaIndex < 0) return value;
-
-    const metadata = value.slice(5, commaIndex);
-    const payload = value.slice(commaIndex + 1);
-    const mimeType = metadata.split(";")[0] || "application/octet-stream";
-    const binary = /;base64/i.test(metadata) ? atob(payload) : decodeURIComponent(payload);
-    const bytes = new Uint8Array(binary.length);
-
-    for (let index = 0; index < binary.length; index += 1) {
-      bytes[index] = binary.charCodeAt(index);
-    }
-
-    return URL.createObjectURL(new Blob([bytes], { type: mimeType }));
-  } catch (error) {
-    console.warn("Không thể chuyển avatar gia nhân sang Blob URL; dùng dữ liệu gốc.", error);
-    return value;
-  }
+// Avatar NPC (lệnh chủ nhân 2026-11-06): dùng LUÔN ảnh overlay của nhân
+// vật, cắt phần vai → đỉnh đầu (CSS .dialogue-avatar-crop lo phần cắt).
+// Không tạo tệp avatar riêng cho NPC nữa.
+function overlayCropAvatar(id, alt) {
+  return Object.freeze({ src: CHARACTER_OVERLAYS[id], alt, type: "npc", crop: true });
 }
 
-const huaServantAvatar = Object.freeze({
-  src: createObjectUrlFromDataUri(HUA_SERVANT_AVATAR),
-  alt: "Chân dung gia nhân Hứa Gia",
-  type: "servant"
-});
+const huaServantAvatar = overlayCropAvatar("npc_servant_female", "Gia nhân Hứa Gia");
 
 const caoMinhAvatar = Object.freeze({
   src: "assets/avatars/main-avatar.jpg",
@@ -49,6 +25,10 @@ const avatarBySpeaker = Object.freeze({
   "cao minh/vạn giới ma tổ": caoMinhAvatar,
   "tiểu lan": { src: "assets/avatars/tieu-lan.svg", alt: "Chân dung Hứa Tiểu Lan", type: "target" },
   "hứa tiểu lan": { src: "assets/avatars/tieu-lan.svg", alt: "Chân dung Hứa Tiểu Lan", type: "target" },
+  "bà năm liên": overlayCropAvatar("ba_nam_lien", "Chân dung bà Năm Liên"),
+  "lê thu nguyệt": overlayCropAvatar("le_thu_nguyet", "Chân dung Lê Thu Nguyệt"),
+  "thu nguyệt": overlayCropAvatar("le_thu_nguyet", "Chân dung Lê Thu Nguyệt"),
+  "người gác": overlayCropAvatar("npc_servant_male", "Người gác biệt thự"),
   "gia nhân": huaServantAvatar,
   "gia nhân hứa gia": huaServantAvatar,
   "gia nhân nhà họ hứa": huaServantAvatar,
@@ -139,6 +119,23 @@ function createFallbackAvatar(speakerName) {
 function createAvatar(speakerName) {
   const avatar = resolveAvatar(speakerName);
   if (!avatar) return createFallbackAvatar(speakerName);
+
+  if (avatar.crop) {
+    const frame = document.createElement("span");
+    frame.className = "dialogue-avatar dialogue-avatar-crop";
+    frame.setAttribute("role", "img");
+    frame.setAttribute("aria-label", avatar.alt);
+    const cropped = document.createElement("img");
+    cropped.src = avatar.src;
+    cropped.alt = "";
+    cropped.decoding = "async";
+    cropped.loading = "eager";
+    cropped.addEventListener("error", () => {
+      frame.replaceWith(createFallbackAvatar(speakerName));
+    }, { once: true });
+    frame.append(cropped);
+    return frame;
+  }
 
   const image = document.createElement("img");
   image.className = "dialogue-avatar";

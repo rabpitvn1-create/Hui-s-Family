@@ -112,6 +112,25 @@
   filter: saturate(.82) contrast(1.04);
 }
 
+/* Avatar NPC cắt từ overlay (lệnh chủ nhân 2026-11-06): khung vẫn là ô
+   .dialogue-avatar 4.8rem; ảnh toàn thân bên trong phóng theo chiều cao
+   385% và neo trên cùng, nên dải nhìn thấy là ~26% trên cùng của nhân
+   vật — đúng phần vai → đỉnh đầu. */
+.dialogue-avatar-crop {
+  overflow: hidden;
+  padding: 0;
+}
+
+.dialogue-avatar-crop > img {
+  display: block;
+  height: 385%;
+  width: auto;
+  max-width: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .dialogue-avatar-fallback {
   display: grid;
   place-items: center;
