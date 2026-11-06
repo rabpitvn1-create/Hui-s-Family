@@ -3,7 +3,7 @@
 // truyện — không hé lộ thông tin phía tác giả. Nhân vật chính và Tiểu Lan
 // có hồ sơ chi tiết; vai có tên có hồ sơ ngắn; người vô danh chỉ có bảng
 // tên trên sân khấu, không có trang hồ sơ.
-export const CHARACTER_PROFILES = Object.freeze({
+const CHARACTER_PROFILES = Object.freeze({
   gao_minh: Object.freeze({
     id: "gao-minh",
     name: "Cao Minh",

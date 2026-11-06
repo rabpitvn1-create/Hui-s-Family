@@ -19,7 +19,7 @@ export const ENTITY_OVERLAYS = Object.freeze({
   entity_youth: "assets/overlay/entity-youth.webp"
 });
 
-export const DEFAULT_ENTITY_ID = "entity_guard";
+const DEFAULT_ENTITY_ID = "entity_guard";
 
 // entity có thể là true (mặc định), một id trong ENTITY_OVERLAYS, hoặc
 // trống/false (không hiện). Trả về đường dẫn ảnh hoặc "" khi không hiện.

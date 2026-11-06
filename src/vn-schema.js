@@ -1,10 +1,10 @@
 // LIBERA VN scene contract v1. Pure structural validation, no prose.
 import { CHARACTER_OVERLAYS } from "./character-overlays.js";
 import { ENTITY_OVERLAYS } from "./entity-overlays.js";
-export const VN_LINK_IDS = Object.freeze(["danh", "no", "lenh", "ky", "than", "tu"]);
+const VN_LINK_IDS = Object.freeze(["danh", "no", "lenh", "ky", "than", "tu"]);
 export const VN_LINK_PHASES = Object.freeze(["unknown", "identified", "intervened", "severed"]);
-export const VN_ROUTE_IDS = Object.freeze(["bao_ho", "tu_quyet", "nghi_le"]);
-export const VN_EFFECT_LIMITS = Object.freeze({
+const VN_ROUTE_IDS = Object.freeze(["bao_ho", "tu_quyet", "nghi_le"]);
+const VN_EFFECT_LIMITS = Object.freeze({
   lanHealthDelta: [-12,8], lanTrustDelta: [-10,12],
   lanMaterInfluenceDelta: [-8,12], memoryIntegrityDelta: [-15,5],
   cluesHuaGiaDelta: [0,3], civiliansSavedDelta: [0,5],
