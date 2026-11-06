@@ -189,6 +189,7 @@ export function initGame() {
     verificationValue: document.querySelector("#verification-value"),
     contactStyleValue: document.querySelector("#contact-style-value"),
     stageValue: document.querySelector("#campaign-stage-value"),
+    toast: document.querySelector("#save-toast"),
     objectiveProgressValue: document.querySelector("#objective-progress-value"),
     backroomsFloorValue: document.querySelector("#backrooms-floor-value"),
     suppliesValue: document.querySelector("#supplies-value"),
@@ -693,12 +694,35 @@ export function initGame() {
     }
   }
 
+  let toastTimer = 0;
+  function showToast(message, isError = false) {
+    if (!elements.toast) return;
+    elements.toast.textContent = message;
+    elements.toast.classList.toggle("is-error", isError);
+    elements.toast.hidden = false;
+    // Buộc trình duyệt áp trạng thái đầu trước khi bật transition.
+    void elements.toast.offsetWidth;
+    elements.toast.classList.add("is-visible");
+    window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => {
+      elements.toast.classList.remove("is-visible");
+      window.setTimeout(() => { elements.toast.hidden = true; }, 240);
+    }, 2600);
+  }
+
   function saveGame() {
     state.savedAt = Date.now();
-    storage.setItem(MANUAL_SAVE_KEY, JSON.stringify(state));
+    try {
+      storage.setItem(MANUAL_SAVE_KEY, JSON.stringify(state));
+    } catch (error) {
+      console.error(error);
+      showToast("Không lưu được — bộ nhớ trình duyệt đã đầy hoặc bị chặn.", true);
+      return;
+    }
     state.log.unshift("Đã tạo bản lưu thủ công.");
     state.log = state.log.slice(0, 14);
     render();
+    showToast(`Đã lưu mốc thủ công — ${state.scene.title}`);
   }
 
   function loadGame() {
@@ -725,6 +749,7 @@ export function initGame() {
       state.log.unshift("Đã tải chiến dịch canon.");
       state.log = state.log.slice(0, 14);
       render({ resetScroll: true });
+      showToast(`Đã tải mốc thủ công — ${state.scene.title}`);
     } catch (error) {
       console.error(error);
       state = normalizeState(INITIAL_STATE);
