@@ -14,9 +14,10 @@ function uniformRule(src, period, scene, until = null) {
   });
 }
 
-// `from` is inclusive, `until` is exclusive. Tống Nguyên Phúc's exact
-// deposition scene in Kỳ V is intentionally not invented here. Set his
-// `until` when that scene is authored; no save migration is needed.
+// `from` is inclusive, `until` is exclusive. Tống Nguyên Phúc bị phế
+// truất trong V27 (ky5_27) và vẫn mặc đồng phục suốt cảnh đó; `until`
+// loại trừ tại {period: 5, scene: 28} đưa hắn về overlay thường từ V28
+// (Kỳ V bước 9, 2026-11-07). No save migration is needed.
 export const CHARACTER_UNIFORM_RULES = Object.freeze({
   nguyen_van_thao: uniformRule("assets/overlay/nguyen-van-thao-uniform.webp", 3, 4),
   tran_thi_men: uniformRule("assets/overlay/tran-thi-men-uniform.webp", 3, 4),
@@ -25,7 +26,7 @@ export const CHARACTER_UNIFORM_RULES = Object.freeze({
   dao_nhat_but: uniformRule("assets/overlay/dao-nhat-but-uniform.webp", 3, 4),
   do_thi_hanh: uniformRule("assets/overlay/do-thi-hanh-uniform.webp", 3, 4),
   bui_tan_le: uniformRule("assets/overlay/bui-tan-le-uniform.webp", 3, 4),
-  tong_nguyen_phuc: uniformRule("assets/overlay/tong-nguyen-phuc-uniform.webp", 3, 4),
+  tong_nguyen_phuc: uniformRule("assets/overlay/tong-nguyen-phuc-uniform.webp", 3, 4, { period: 5, scene: 28 }),
   bay_luoc: uniformRule("assets/overlay/bay-luoc-uniform.webp", 4, 3),
   be_sau: uniformRule("assets/overlay/be-sau-uniform.webp", 3, 1)
 });

@@ -40,7 +40,18 @@ export const SCENE_BACKGROUNDS = Object.freeze({
   "kitchen": "assets/snapshots/kitchen.webp",
   "register-room": "assets/snapshots/register-room.webp",
   "storm-coast": "assets/snapshots/storm-coast.webp",
-  "long-hai-market": "assets/snapshots/long-hai-market.webp"
+  "long-hai-market": "assets/snapshots/long-hai-market.webp",
+  // Kỳ V (hệ 9 agent, 2026-11-07): bảy nền mới của bước 7 — đội tàu
+  // tuần cửa sông, lạch sơ tán rừng ngập mặn, Hắc Thủy Đài, Bạch Cốt
+  // Bến, Mẫu Triều Đàn, rừng sương mù không tên (khóa che giấu: không
+  // dấu hiệu địa danh/thời đại) và ghế đá trống ở bản đàn Long Hải.
+  "can-gio-patrol-fleet": "assets/snapshots/can-gio-patrol-fleet.webp",
+  "mangrove-evacuation-channel": "assets/snapshots/mangrove-evacuation-channel.webp",
+  "blackwater-anchor-platform": "assets/snapshots/blackwater-anchor-platform.webp",
+  "whitebone-coffin-wharf": "assets/snapshots/whitebone-coffin-wharf.webp",
+  "mau-trieu-altar": "assets/snapshots/mau-trieu-altar.webp",
+  "unnamed-mist-forest": "assets/snapshots/unnamed-mist-forest.webp",
+  "long-hai-empty-chair": "assets/snapshots/long-hai-empty-chair.webp"
 });
 
 export function resolveSceneBackground(snapshot = {}) {

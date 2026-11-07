@@ -62,7 +62,21 @@ export const CHARACTER_OVERLAYS = Object.freeze({
   "vo_van_duc": "assets/overlay/vo-van-duc-uniform.webp",
   "lucien_vauclerc": "assets/overlay/lucien-vauclerc.webp",
   "truong_ba_hoe": "assets/overlay/truong-ba-hoe.webp",
-  "le_thi_nhien": "assets/overlay/le-thi-nhien.webp"
+  "le_thi_nhien": "assets/overlay/le-thi-nhien.webp",
+  // Kỳ V (hệ 9 agent, 2026-11-07): chín overlay NEED của bước 7 — Hến
+  // Cụt, Pierre Vallon, Năm Cua, hai người chèo ghe của biên bản IV41
+  // và ba vật chủ còn tỉnh ở Bạch Cốt Bến cùng Lê Văn Cừ ở Hắc Thủy Đài.
+  // Năm Cua, Lê Văn Cừ, Bà Tư Lành, Ba Đạt, Ông Bảy Thìn: tên tạm phía
+  // Muse, chờ ChatGPT chuẩn thuận theo phân công đặt tên.
+  "hen_cut": "assets/overlay/hen-cut.webp",
+  "pierre_vallon": "assets/overlay/pierre-vallon.webp",
+  "nam_cua": "assets/overlay/nam-cua.webp",
+  "huynh_van_quoi": "assets/overlay/huynh-van-quoi.webp",
+  "doan_van_buu": "assets/overlay/doan-van-buu.webp",
+  "le_van_cu": "assets/overlay/le-van-cu.webp",
+  "ba_tu_lanh": "assets/overlay/ba-tu-lanh.webp",
+  "ba_dat": "assets/overlay/ba-dat.webp",
+  "ong_bay_thin": "assets/overlay/ong-bay-thin.webp"
 });
 
 // Tên người nói (đã bỏ dấu, viết thường) → id overlay, chỉ cho nhân vật có tên.
@@ -132,7 +146,19 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "cai bien": "cai_bien",
   "vo van duc": "vo_van_duc",
   "lucien vauclerc": "lucien_vauclerc",
-  "le thi nhien": "le_thi_nhien"
+  "le thi nhien": "le_thi_nhien",
+  // Kỳ V (hệ 9 agent, 2026-11-07): chín khóa mới của bước 7. Hệ quả sân
+  // khấu đã mô phỏng ở bước 7/9: cảnh đã phát hành 0 lật; trong Kỳ V,
+  // Hến Cụt thắng khung ở cảnh chết V07 là có chủ ý (xem đặc tả bước 7).
+  "hen cut": "hen_cut",
+  "pierre vallon": "pierre_vallon",
+  "nam cua": "nam_cua",
+  "huynh van quoi": "huynh_van_quoi",
+  "doan van buu": "doan_van_buu",
+  "le van cu": "le_van_cu",
+  "ba tu lanh": "ba_tu_lanh",
+  "ba dat": "ba_dat",
+  "ong bay thin": "ong_bay_thin"
 });
 
 const COMBINING_MARKS = new RegExp("[\\u0300-\\u036f]", "g");
@@ -241,7 +267,16 @@ const CHARACTER_DISPLAY_NAMES = Object.freeze({
   "vo_van_duc": "Võ Văn Đực",
   "lucien_vauclerc": "Lucien Vauclerc",
   "truong_ba_hoe": "Trương Bá Hòe",
-  "le_thi_nhien": "Lê Thị Nhiên"
+  "le_thi_nhien": "Lê Thị Nhiên",
+  "hen_cut": "Hến Cụt",
+  "pierre_vallon": "Pierre Vallon",
+  "nam_cua": "Năm Cua",
+  "huynh_van_quoi": "Huỳnh Văn Quới",
+  "doan_van_buu": "Đoàn Văn Bửu",
+  "le_van_cu": "Lê Văn Cừ",
+  "ba_tu_lanh": "Bà Tư Lành",
+  "ba_dat": "Ba Đạt",
+  "ong_bay_thin": "Ông Bảy Thìn"
 });
 
 // Tên trên bảng tên có thể khác theo cảnh khi danh tính chưa được lộ trong

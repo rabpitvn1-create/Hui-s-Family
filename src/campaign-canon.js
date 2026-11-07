@@ -205,7 +205,7 @@ const canGioObjectives = objectives([
  ["destroy_anchor_two","Vô hiệu điểm neo thứ hai."],
  ["destroy_anchor_three","Vô hiệu điểm neo thứ ba; bảo toàn dấu vết mảnh Sổ."],
  ["resist_collective_command","Tiểu Lan dùng phản thanh để trì hoãn lệnh tập thể."],
- ["survive_reality_breach","Vòng Không Gian đưa Cao Minh và Tiểu Lan về Prenn hai thế kỷ trước; những người còn lại ở lại năm 1899."]
+ ["survive_reality_breach","Sống sót qua biến cố không gian; những người còn lại ở lại năm 1899."]
 ]);
 const prennObjectives = objectives([
  ["establish_survival","Tìm quy luật sinh tồn và tránh phá lịch sử bất biến."],
@@ -240,8 +240,11 @@ const finalObjectives = objectives([
 export const CAMPAIGN_ROUTE = freeze([
  {id:"long_hai",label:"Long Hải",act:"Chặng 1",allowedLocations:["Biệt thự Hứa Gia","Long Hải"],premise:"Giải cứu Tiểu Lan, nhận diện liên kết Danh.",objectives:longHaiObjectives,next:"vung_tau"},
  {id:"vung_tau",label:"Vũng Tàu",act:"Chặng 2",allowedLocations:["Vũng Tàu","cửa biển","tuyến quan tài"],premise:"Điều tra tuyến vận chuyển và mảnh Sổ số hai.",objectives:vungTauObjectives,next:"can_gio"},
- {id:"can_gio",label:"Cần Giờ",act:"Chặng 3",allowedLocations:["Cần Giờ","rừng ngập mặn","ba điểm neo"],premise:"Phá ba điểm neo; Vòng Không Gian đưa Cao Minh và Tiểu Lan tới Prenn, mọi người còn lại ở lại năm 1899.",objectives:canGioObjectives,next:"prenn"},
- {id:"prenn",label:"Prenn 200 năm trước",act:"Chặng 4",allowedLocations:["Đèo Prenn","mạng ký ức Bạch Y"],premise:"Quá khứ bất biến, ba dị bản Bạch Y Vô Danh.",objectives:prennObjectives,next:"backrooms"},
+ {id:"can_gio",label:"Cần Giờ",act:"Chặng 3",allowedLocations:["Cần Giờ","rừng ngập mặn","ba điểm neo"],premise:"Phá ba điểm neo; hai người rời khỏi năm 1899, nơi đến chưa rõ.",objectives:canGioObjectives,next:"prenn"},
+ // Nhãn chặng 4 trên bề mặt người chơi giữ trung tính theo luật che
+ // giấu kết Arc I (Kỳ V bước 9, 2026-11-07): không nêu điểm đến hay
+ // mốc thời đại; dữ kiện canon nội bộ nằm ở hồ sơ hậu trường.
+ {id:"prenn",label:"Chặng chưa rõ",act:"Chặng 4",allowedLocations:["Đèo Prenn","mạng ký ức Bạch Y"],premise:"Quá khứ bất biến, ba dị bản Bạch Y Vô Danh.",objectives:prennObjectives,next:"backrooms"},
  {id:"backrooms",label:"Backrooms Chợ Lớn",act:"Chặng 5",allowedLocations:BACKROOMS_FLOORS.map(f=>`Tầng ${f.floor}: ${f.name}`),premise:"16 tầng độc lập; mỗi tầng có luật và điều kiện mở lối riêng.",objectives:[],next:"cho_lon_return"},
  {id:"cho_lon_return",label:"Trở về Chợ Lớn",act:"Chặng 6",allowedLocations:["Chợ Lớn","nhà Hứa Gia","kho hồ sơ"],premise:"Truy xét sáu mảnh Sổ, phục dựng tên Tiểu Lan.",objectives:returnObjectives,next:"dong_thap"},
  {id:"dong_thap",label:"Đồng Tháp",act:"Chặng 7",allowedLocations:["Đồng Tháp","tuyến ghe gạo"],premise:"Điều tra Huyết Phòng và mảnh Sổ số năm.",objectives:dongThapObjectives,next:"hue"},

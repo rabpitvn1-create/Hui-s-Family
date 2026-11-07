@@ -251,6 +251,51 @@ assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "intervened");
 for (const flag of ["ky4CensusRefusedAtGate", "ky4BayLuocEnteredSect", "ky4BlackScarfDuesDropped", "ky4TripleTaxExposed", "ky4ChinLaiRouteBypassed", "ky4LyKhaTwoListsSeen", "ky4TwoMastersOneWrit", "ky4DoanDaoPricedProtection", "ky4FalseHoPhapExposed", "ky4FieldDebtNamed", "ky4MarketScaleLawBroken", "ky4NineBoatsHeldCourse", "ky4DucKeptLaneForPeople", "ky4TuongSoldOneHeadThrice", "ky4RiverProtectionPapersSeen", "ky4FalsePillDeathWitnessed", "ky4CoffinDebtConfronted", "ky4LabelsSwappedAtSource", "ky4BaHoeRefusedTheBoats", "ky4RefugeeRouteSold", "ky4FuneralWithoutMiracle", "ky4TollsBeforeTheBoats", "ky4OneWordMadeACrime", "ky4TaiPhongSealedLedgers", "ky4SectDeclaredUnlicensed", "ky4ChinLaiArrested", "ky4LyKhaBroughtTwoLedgers", "ky4MarketBurnedByHiredHand", "ky4CaiLamExecuted", "ky4AshesNamesCounted", "ky4SneezeWitnessed", "ky4NightOfBurningWrits", "ky4QuanHauKilledByUprising", "ky4BaHoeKeptTheLedger", "ky4LedgerTwoVerified", "ky4BranchAtTamGiangRaised", "ky4KyLuongVanished", "ky4ForestMarketOpened", "ky4PhucThoAllianceFormed", "ky4TongFactionDeclared", "ky4NoShotsAtTheMaTo", "ky4TwoLedgersOneWharf", "ky4DaySixtyThreeDeclared", "ky4NightWatchAtTamGiang"]) {
   assert.equal(game.bridge.getSnapshot().flags[flag], true, "thiếu cờ Kỳ IV: " + flag);
 }
+// Kỳ V — Tam Giang Huyết Chiến (hệ 9 agent, 2026-11-07): ky5_01_stub
+// đã là cảnh V01 chính thức (giữ id, thay nội dung, bỏ sliceEnd), mạch
+// 49 cảnh chạy liền tới V49 (sliceEnd, hết Arc I). Đi nhánh đầu tiên
+// mọi cảnh. Vào V01 ký ức vẫn 79; khoản −11 khóa nằm ở sceneEffects
+// của V42 (áp khi VÀO cảnh) — trước V42 ký ức nguyên 79, từ V42 là 68.
+assert.equal(game.bridge.getSnapshot().scene.id, "ky5_01_stub");
+assert.equal(game.bridge.getSnapshot().scene.choices.length, 2);
+for (const expected of ["ky5_02_hai_nguoi_o_tram", "ky5_03_khong_trao_nguoi", "ky5_04_giay_doi_tin", "ky5_05_bai_dat_moi_dung", "ky5_06_ghe_cho_nguoi", "ky5_07_hen_cut_noi_khong", "ky5_08_ham_doi_biet_ten_han", "ky5_09_khep_mach_trung", "ky5_10_thuy_xa_tu_xu", "ky5_11_ham_doi_tat_hoa_luc", "ky5_12_khau_sung_dat_xuong", "ky5_13_cua_bien_khong_chu", "ky5_14_nhung_nguoi_con_cheo", "ky5_15_bun_giu_dau_chan", "ky5_16_duong_nuoc_qua_rung", "ky5_17_bien_ban_cho_nguoi", "ky5_18_hac_thuy_dai", "ky5_19_cat_diem_noi_thu_nhat", "ky5_20_nguoi_con_tinh", "ky5_21_giua_hai_tieng_keng", "ky5_22_ban_sao_o_sai_ban", "ky5_23_so_de_tu_mat_dau", "ky5_24_ban_giay_cua_phan_tuong", "ky5_25_hai_ban_danh_sach", "ky5_26_sau_ghe_mot_chuc_su", "ky5_27_phe_tong_bi_phe", "ky5_28_phe_khong_con_chu", "ky5_29_men_mo_so_tai", "ky5_30_gioi_phong_doi_nguoi", "ky5_31_bach_cot_ben", "ky5_32_nguoi_duoc_hoi", "ky5_33_cat_diem_noi_thu_hai", "ky5_34_men_doc_so_cua_song", "ky5_35_lien_minh_tu_can", "ky5_36_duong_toi_mau_trieu", "ky5_37_khong_phai_cho_chem", "ky5_38_thieu_than_truoc_den", "ky5_39_bay_muoi_chin", "ky5_40_hai_con_duong_that", "ky5_41_khong_phai_van_co", "ky5_42_phan_thanh_lan_ba", "ky5_43_dan_im_mach_con", "ky5_44_vong_sang_tren_nuoc", "ky5_45_nguoi_di_nguoi_o", "ky5_46_can_rung_khong_ten", "ky5_47_sau_ghe_khong_chu", "ky5_48_nhung_nguoi_con_o", "ky5_49_chiec_ghe_da_va_vo_ruou"]) {
+  game.bridge.applyScriptChoice(0);
+  assert.equal(game.bridge.getSnapshot().scene.id, expected);
+  // Chặng KHÔNG được lật khỏi Cần Giờ trong toàn Kỳ V: objective
+  // survive_reality_breach bị hoãn có chủ ý (Mục C.3) để engine không
+  // tự nhảy sang chặng kế và lộ điểm đến.
+  assert.equal(game.bridge.getSnapshot().progression.stageId, "can_gio");
+  if (expected === "ky5_37_khong_phai_cho_chem") {
+    // Link Lệnh khai báo CẤP CẢNH tại V37 (áp khi vào cảnh).
+    assert.equal(game.bridge.getSnapshot().flags.vnLinks.lenh, "identified");
+    assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+  }
+  if (expected === "ky5_41_khong_phai_van_co") {
+    assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+  }
+  if (expected === "ky5_42_phan_thanh_lan_ba") {
+    // Đúng một lần −11 tại neo ba + Lệnh lên intervened (cấp cảnh V42).
+    assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 68);
+    assert.equal(game.bridge.getSnapshot().flags.vnLinks.lenh, "intervened");
+  }
+}
+// Hết Kỳ V: ký ức 68 (sổ 100→92→84→79→68 khóa cứng), Lệnh intervened
+// (không bao giờ severed trong Arc I), Danh/Nợ giữ intervened, đủ sáu
+// objective Cần Giờ nghiệm thu đúng một lần trên các choice rời cảnh,
+// survive_reality_breach KHÔNG được cấp, chặng vẫn can_gio 6/7.
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 68);
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.lenh, "intervened");
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "intervened");
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.no, "intervened");
+for (const objective of ["secure_transport", "investigate_smuggling_route", "destroy_anchor_one", "destroy_anchor_two", "destroy_anchor_three", "resist_collective_command"]) {
+  assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes(objective), true, "thiếu objective Kỳ V: " + objective);
+}
+assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes("survive_reality_breach"), false);
+assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.length, 6);
+assert.equal(game.bridge.getSnapshot().progression.stageId, "can_gio");
+for (const flag of ["ky5RowersHeldAtStation", "ky5NoHandoverDeclared", "ky5HencutKilled", "ky5NetworkContained", "ky5MuoiRoKilled", "ky5FleetFirepowerDisabled", "ky5RowersReleased", "ky5AnchorOneDisabled", "ky5TongDeposed", "ky5AnchorTwoDisabled", "ky5FinancialEvidencePublished", "ky5CounterResonanceChosen", "ky5AnchorThreeDisabled", "ky5SpaceRingAppeared", "ky5RouteBaoHo", "ky5TwoTravellersDeparted", "ky5ArcOneEnded"]) {
+  assert.equal(game.bridge.getSnapshot().flags[flag], true, "thiếu cờ Kỳ V: " + flag);
+}
 assert.equal(game.bridge.getSnapshot().scene.choices.length, 0);
 assert.equal(game.bridge.applyScriptChoice(0), false);
 // IV35, lựa chọn thứ hai: nạp lại bản lưu tự động bắt tại IV35 trong
@@ -356,7 +401,10 @@ assert.equal(prologueHash, "b65b94742f93950cea8f8babdad5830eb26b6688d96cc457221b
 // khoảng trắng) trên MỌI tổ hợp flags tới được của từng cảnh.
 const EXCLUSIVE = [["thuNguyetEscorted","thuNguyetSolo"],["councilOath","councilQuiet"],
   ["boatPromised","boatBought"],["thuNguyetFollows","thuNguyetStays"],
-  ["vtHeardInspection","vtRestedEvening"]];
+  ["vtHeardInspection","vtRestedEvening"],
+  // Kỳ V (2026-11-07): ba cờ route của V45 loại trừ lẫn nhau từng đôi.
+  ["ky5RouteBaoHo","ky5RouteTuQuyet"],["ky5RouteBaoHo","ky5RouteNghiLe"],
+  ["ky5RouteTuQuyet","ky5RouteNghiLe"]];
 function renderedWords(scene, flags) {
   let n = 0;
   const vis = (x) => (!x.if || flags.has(x.if)) && (!x.unless || !flags.has(x.unless));

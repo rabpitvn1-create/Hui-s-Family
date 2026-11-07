@@ -18,7 +18,7 @@ const STAGES = Object.freeze([
   },
   {
     "id": "prenn",
-    "label": "Chặng 4 · Prenn"
+    "label": "Chặng 4 · Chưa rõ"
   },
   {
     "id": "backrooms",
