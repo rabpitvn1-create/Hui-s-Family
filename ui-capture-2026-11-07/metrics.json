@@ -1,0 +1,51 @@
+{
+  "scenes": 1,
+  "dialogueCount": 6,
+  "errors": [],
+  "geometry": {
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 464,
+      "height": 64
+    },
+    "stage": {
+      "x": 10.5,
+      "y": 76,
+      "width": 443,
+      "height": 303.53125
+    },
+    "stageBg": {
+      "x": 13.5,
+      "y": 79,
+      "width": 437,
+      "height": 297.53125
+    },
+    "dialogue": {
+      "x": 17,
+      "y": -51.15625,
+      "width": 430,
+      "height": 108.5
+    },
+    "dialogueAvatar": {
+      "x": 32,
+      "y": -41.15625,
+      "width": 52,
+      "height": 52
+    },
+    "choice": {
+      "x": 17,
+      "y": 670.09375,
+      "width": 430,
+      "height": 62.21875
+    },
+    "drawer": {
+      "x": 81.671875,
+      "y": 0,
+      "width": 382.328125,
+      "height": 831
+    },
+    "characterTransform": "matrix(1, 0, 0, 1, 10, 0)",
+    "title": "Cổng biệt thự"
+  }
+}
