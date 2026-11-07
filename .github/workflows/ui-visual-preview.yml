@@ -1,0 +1,87 @@
+name: UI visual preview (temporary branch)
+on:
+  push:
+    branches:
+      - ui-capture-2026-11-07-preview
+permissions:
+  contents: write
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser
+        run: |
+          npm install --no-save --no-package-lock playwright
+          npx playwright install --with-deps chromium
+      - name: Play actual game and take mobile screenshots
+        shell: bash
+        run: |
+          python3 -m http.server 4173 > /tmp/hui-http.log 2>&1 &
+          sleep 2
+          mkdir -p ui-capture-2026-11-07
+          node --input-type=module <<'JS'
+          import { chromium } from "playwright";
+          import { writeFileSync } from "node:fs";
+          const browser = await chromium.launch({headless:true, args:["--no-sandbox"]});
+          const context = await browser.newContext({viewport:{width:464,height:831},deviceScaleFactor:2,isMobile:true,hasTouch:true});
+          const page = await context.newPage();
+          const errors = [];
+          page.on("pageerror", e=>errors.push(String(e)));
+          await page.goto("http://127.0.0.1:4173", {waitUntil:"networkidle",timeout:30000});
+          await page.screenshot({path:"ui-capture-2026-11-07/game-start.png"});
+          await page.locator("#start-game-button").click();
+          await page.waitForTimeout(900);
+          await page.screenshot({path:"ui-capture-2026-11-07/game-main.png"});
+          let scenes=0;
+          for(;scenes<24;scenes++){
+            const dialogueCount=await page.locator("#story-text .dialogue.has-avatar").count();
+            if(dialogueCount>0) break;
+            const choices=page.locator("#choices .choice");
+            if(await choices.count()===0) break;
+            await choices.first().click();
+            await page.waitForTimeout(650);
+          }
+          const dialogueCount=await page.locator("#story-text .dialogue.has-avatar").count();
+          if(dialogueCount>0){
+            await page.locator("#story-text .dialogue.has-avatar").first().scrollIntoViewIfNeeded();
+          }
+          await page.screenshot({path:"ui-capture-2026-11-07/game-dialogue.png"});
+          const choices=page.locator("#choices .choice");
+          if(await choices.count()>0) await choices.first().scrollIntoViewIfNeeded();
+          await page.screenshot({path:"ui-capture-2026-11-07/game-decisions.png"});
+          await page.locator("#intel-toggle").click();
+          await page.waitForTimeout(300);
+          await page.screenshot({path:"ui-capture-2026-11-07/game-drawer.png"});
+          const geometry=await page.evaluate(()=>{
+            const rect=(selector)=>{const node=document.querySelector(selector);if(!node)return null;const r=node.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}};
+            return {
+              header:rect(".campaign-header"),stage:rect("#snapshot-stage"),stageBg:rect(".stage-bg"),
+              dialogue:rect(".dialogue.has-avatar"),dialogueAvatar:rect(".dialogue.has-avatar .dialogue-avatar"),
+              choice:rect(".choice"),drawer:rect("#intel-panel"),characterTransform:getComputedStyle(document.querySelector(".stage-character-wrap")).transform,
+              title:document.querySelector("#scene-title")?.textContent
+            };
+          });
+          const metrics={scenes,dialogueCount,errors,geometry};
+          writeFileSync("ui-capture-2026-11-07/metrics.json",JSON.stringify(metrics,null,2));
+          console.log(JSON.stringify(metrics));
+          await browser.close();
+          JS
+      - name: Keep visual evidence on preview branch only
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f ui-capture-2026-11-07/
+          if ! git diff --cached --quiet; then
+            git commit -m "test(ui): capture real mobile game screenshots"
+            git push origin HEAD:ui-capture-2026-11-07-preview
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ui-capture-2026-11-07
+          path: ui-capture-2026-11-07/
