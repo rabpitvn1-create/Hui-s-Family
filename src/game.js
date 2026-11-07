@@ -1,4 +1,5 @@
 import { INITIAL_STATE, WORLD_CANON } from "./world-canon.js";
+import { requestGameFullscreen } from "./game-start.js";
 import { VN_SCENES, VN_START_SCENE } from "./vn-scenes.js";
 import { validateVnScenes, VN_LINK_PHASES } from "./vn-schema.js";
 import { INCOMPATIBLE_SAVE_KEYS, coerceCanonSave, sanitizeLegacyCanonState } from "./canon-migration.js";
@@ -1170,6 +1171,8 @@ export function initGame() {
     // Chống mất tiến độ vì một cú chạm nhầm (rà soát chơi thật 2026-11-06):
     // bắt đầu chiến dịch mới phải qua một bước xác nhận tường minh.
     if (window.confirm("Bắt đầu chiến dịch mới? Tiến độ tự động lưu hiện tại sẽ bị thay thế (bản lưu thủ công vẫn giữ nguyên).")) {
+      // Re-enter fullscreen if the player previously left it.
+      void requestGameFullscreen();
       restartGame();
     }
   });
