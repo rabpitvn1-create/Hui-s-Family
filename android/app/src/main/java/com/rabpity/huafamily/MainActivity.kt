@@ -20,12 +20,16 @@ import android.webkit.WebResourceResponse
 import android.webkit.WebView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.webkit.WebViewAssetLoader
 import androidx.webkit.WebViewClientCompat
 
 class MainActivity : AppCompatActivity() {
     private lateinit var webView: WebView
     private lateinit var keyVault: ApiKeyVault
+    private var gameFullscreenRequested = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +42,21 @@ class MainActivity : AppCompatActivity() {
         if (!ApiProviderConfig.hasBundledProviders() && keyVault.getKeys().isEmpty()) {
             webView.postDelayed({ showApiKeyDialog() }, 650)
         }
+    }
+
+    // The launch screen keeps system bars; immersive mode begins with gameplay.
+    fun enterGameFullscreen() {
+        gameFullscreenRequested = true
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowCompat.getInsetsController(window, window.decorView).apply {
+            systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            hide(WindowInsetsCompat.Type.systemBars())
+        }
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus && gameFullscreenRequested) enterGameFullscreen()
     }
 
     private fun createRootView(): FrameLayout {
