@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { initGameStart } from "../src/game-start.js";
 
-function setup({ request, webkitRequest, fullscreen = false, native = false } = {}) {
+function setup({ request, webkitRequest, fullscreen = false, native = false, enterFullscreen } = {}) {
   let click;
   let starts = 0;
   let focused = false;
@@ -17,7 +17,7 @@ function setup({ request, webkitRequest, fullscreen = false, native = false } = 
     "#start-game-button": button,
     "#story-panel": { focus() { focused = true; } }
   };
-  globalThis.window = { HuaAndroid: native ? {} : undefined };
+  globalThis.window = { HuaAndroid: native ? { enterFullscreen: enterFullscreen || (() => {}) } : undefined };
   globalThis.document = {
     documentElement: { requestFullscreen: request, webkitRequestFullscreen: webkitRequest },
     fullscreenElement: fullscreen ? {} : null,
@@ -55,13 +55,15 @@ assert.equal(game.focused(), true);
 await game.click();
 assert.equal(game.starts(), 1, "The game must initialize only once.");
 
+let nativeRequests = 0;
 for (const options of [
   {},
   { request: () => Promise.reject(new Error("Fullscreen denied")) },
   { request: () => { throw new Error("Fullscreen unavailable"); } },
+  { native: true, enterFullscreen: () => { throw new Error("Old native bridge"); }, request: () => { requests += 1; } },
   { webkitRequest: () => { requests += 1; } },
   { fullscreen: true, request: () => assert.fail("Already in fullscreen") },
-  { native: true, request: () => assert.fail("Native bridge does not need browser fullscreen") }
+  { native: true, enterFullscreen: () => { nativeRequests += 1; }, request: () => assert.fail("Native bridge must own fullscreen") }
 ]) {
   const fallback = setup(options);
   assert.equal(fallback.starts(), 0);
@@ -70,6 +72,7 @@ for (const options of [
   assert.equal(fallback.screen.hidden, true);
   assert.equal(fallback.shell.hidden, false);
 }
-assert.equal(requests, 2, "The prefixed browser fullscreen API must also work.");
+assert.equal(requests, 3, "The browser fallback must work if the native bridge throws.");
+assert.equal(nativeRequests, 1, "Native APK must request immersive mode on Start Game.");
 
 console.log("Game start check passed: wait for Start, request fullscreen from the click, initialize once and keep playing when fullscreen is unavailable.");
