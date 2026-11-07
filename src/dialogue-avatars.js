@@ -1,10 +1,10 @@
-import { CHARACTER_OVERLAYS } from "./character-overlays.js";
+import { resolveCharacterOverlay } from "./character-appearance.js";
 
 // Avatar NPC (lệnh chủ nhân 2026-11-06): dùng LUÔN ảnh overlay của nhân
 // vật, cắt phần vai → đỉnh đầu (CSS .dialogue-avatar-crop lo phần cắt).
 // Không tạo tệp avatar riêng cho NPC nữa.
 function overlayCropAvatar(id, alt) {
-  return Object.freeze({ src: CHARACTER_OVERLAYS[id], alt, type: "npc", crop: true });
+  return Object.freeze({ overlayId: id, src: resolveCharacterOverlay(id), alt, type: "npc", crop: true });
 }
 
 const huaServantAvatar = overlayCropAvatar("npc_servant_female", "Gia nhân Hứa Gia");
@@ -51,6 +51,17 @@ const avatarBySpeaker = Object.freeze({
   "quản gia": overlayCropAvatar("steward", "Quản gia Hứa Gia"),
   "quản gia hứa gia": overlayCropAvatar("steward", "Quản gia Hứa Gia"),
   "bà bảy": overlayCropAvatar("ba_bay", "Bà Bảy"),
+  "nguyễn văn thạo": overlayCropAvatar("nguyen_van_thao", "Nguyễn Văn Thạo"),
+  "trần thị mến": overlayCropAvatar("tran_thi_men", "Trần Thị Mến"),
+  "dương thất nương": overlayCropAvatar("duong_that_nuong", "Dương Thất Nương"),
+  "phan bảy nện": overlayCropAvatar("phan_bay_nen", "Phan Bảy Nện"),
+  "đào nhất bút": overlayCropAvatar("dao_nhat_but", "Đào Nhất Bút"),
+  "đỗ thị hạnh": overlayCropAvatar("do_thi_hanh", "Đỗ Thị Hạnh"),
+  "bùi tấn lễ": overlayCropAvatar("bui_tan_le", "Bùi Tấn Lễ"),
+  "tống nguyên phúc": overlayCropAvatar("tong_nguyen_phuc", "Tống Nguyên Phúc"),
+  "bảy lược": overlayCropAvatar("bay_luoc", "Bảy Lược"),
+  "bé sáu": overlayCropAvatar("be_sau", "Bé Sáu"),
+  "võ văn đức": overlayCropAvatar("vo_van_duc", "Võ Văn Đức"),
   "lão bộc": elderMaleAvatar,
   "quản kho": elderMaleAvatar,
   "ông tư": elderMaleAvatar,
@@ -108,10 +119,13 @@ function isHuaServantSpeaker(normalizedName) {
   );
 }
 
-function resolveAvatar(speakerName) {
+export function resolveDialogueAvatar(speakerName, scene) {
   const normalizedName = normalizeSpeaker(speakerName);
-  return avatarBySpeaker[normalizedName]
+  const avatar = avatarBySpeaker[normalizedName]
     || (isHuaServantSpeaker(normalizedName) ? huaServantAvatar : null);
+  return avatar?.overlayId
+    ? { ...avatar, src: resolveCharacterOverlay(avatar.overlayId, scene) }
+    : avatar;
 }
 
 function initialsFor(name) {
@@ -132,8 +146,8 @@ function createFallbackAvatar(speakerName) {
   return fallback;
 }
 
-function createAvatar(speakerName) {
-  const avatar = resolveAvatar(speakerName);
+function createAvatar(speakerName, scene) {
+  const avatar = resolveDialogueAvatar(speakerName, scene);
   if (!avatar) return createFallbackAvatar(speakerName);
 
   if (avatar.crop) {
@@ -167,36 +181,49 @@ function createAvatar(speakerName) {
   return image;
 }
 
-function decorateDialogueElement(element, explicitSpeaker = "") {
-  if (!(element instanceof Element) || element.dataset.avatarChecked === "true") return element;
+function decorateDialogueElement(element, scene, explicitSpeaker = "") {
+  if (!(element instanceof Element)) return element;
+  const sceneId = String(scene?.id || "");
+  if (element.dataset.avatarChecked === "true" && element.dataset.avatarSceneId === sceneId) return element;
 
   const speakerNode = element.querySelector(".speaker, strong");
   const speakerName = String(explicitSpeaker || speakerNode?.textContent || "Nhân vật").trim();
-  const avatar = resolveAvatar(speakerName);
+  const avatar = resolveDialogueAvatar(speakerName, scene);
 
   element.dataset.avatarChecked = "true";
+  element.dataset.avatarSceneId = sceneId;
   element.dataset.speakerType = avatar?.type || "unknown";
   element.classList.add("has-avatar");
-  element.prepend(createAvatar(speakerName));
+  element.querySelector(".dialogue-avatar")?.remove();
+  element.prepend(createAvatar(speakerName, scene));
   return element;
 }
 
-function decorateRoot(root) {
+function decorateRoot(root, scene) {
   if (!(root instanceof Element)) return;
   root.querySelectorAll(".dialogue, .ai-dialogue-line").forEach((element) => {
-    decorateDialogueElement(element);
+    decorateDialogueElement(element, scene);
   });
 }
 
 export function initDialogueAvatars() {
+  let currentScene = null;
   const roots = [
     document.querySelector("#story-text"),
     document.querySelector("#ai-dialogue")
   ].filter(Boolean);
 
   roots.forEach((root) => {
-    decorateRoot(root);
-    const observer = new MutationObserver(() => decorateRoot(root));
+    decorateRoot(root, currentScene);
+    const observer = new MutationObserver(() => decorateRoot(root, currentScene));
     observer.observe(root, { childList: true, subtree: true });
+  });
+
+  // render() dispatches this event synchronously after replacing story text.
+  // Set context before MutationObserver callbacks decorate any new dialogue.
+  // Re-decorate retained AI lines too, including when loading an earlier save.
+  window.addEventListener("hua:game-rendered", (event) => {
+    currentScene = event.detail?.scene || null;
+    roots.forEach((root) => decorateRoot(root, currentScene));
   });
 }

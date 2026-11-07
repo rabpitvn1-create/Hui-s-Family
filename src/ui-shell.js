@@ -1,5 +1,6 @@
 import { SCENE_BACKGROUNDS, resolveSceneBackground } from "./scene-backgrounds.js";
 import { CHARACTER_OVERLAYS, companionDisplayName, resolveCompanionId } from "./character-overlays.js";
+import { resolveCharacterOverlay } from "./character-appearance.js";
 import { ENTITY_OVERLAYS, ENTITY_DISPLAY_NAMES, resolveEntityId, resolveEntitySrc } from "./entity-overlays.js";
 
 const STAGES = Object.freeze([
@@ -235,7 +236,7 @@ export function initMissionInterface() {
     // thì NPC lùi sang vị trí thứ hai (.stage-companion-shifted) nhưng giữ
     // nguyên kích cỡ. Encounter active thì ẩn — cùng luật với Tiểu Lan.
     const companionId = active ? null : resolveCompanionId(snapshot?.scene);
-    const companionSrc = companionId ? CHARACTER_OVERLAYS[companionId] : "";
+    const companionSrc = companionId ? resolveCharacterOverlay(companionId, snapshot?.scene) : "";
     if (stageCompanion) {
       if (companionSrc && stageCompanion.getAttribute("src") !== companionSrc) {
         stageCompanion.setAttribute("src", companionSrc);
