@@ -273,7 +273,7 @@
     background: radial-gradient(ellipse at 30% 0, #4e271d55, transparent 70%), var(--mobile-paper);
     box-shadow: 0 0 8px #8bd0bc99, 0 0 22px #4ba99c44, 0 10px 24px #0009;
   }
-  .start-card::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("assets/ui/mobile-frame.svg") center / 100% 100% no-repeat; pointer-events: none; }
+  .start-card::before { content: ""; position: absolute; pointer-events: none; }
   .start-card::after { content: ""; position: absolute; inset: 44px 0 40px; z-index: -1; width: 95px; margin: auto; opacity: .045; background: url("assets/ui/mobile-seal.svg") center / contain no-repeat; pointer-events: none; }
   .start-kicker { margin: 0 0 8px; color: #b99a69; font-size: 11px; letter-spacing: .13em; font-weight: 600; }
   .start-card h1 { margin: 0; color: #fff0c9; font-size: clamp(34px, 9vw, 54px); font-weight: 600; line-height: 1.2; letter-spacing: -.025em; }
@@ -534,7 +534,8 @@
 @media (max-width: 760px) {
   #snapshot-stage.snapshot-stage { overflow: visible; }
   #snapshot-stage .stage-bg { inset: 0; }
-  #snapshot-stage::after {
+  #snapshot-stage::after,
+  .start-card::before {
     inset: -8px;
     border: 2px solid #b59663;
     border-image: none;
@@ -542,7 +543,8 @@
     background: none;
     box-shadow: 0 0 0 1px #6b593d;
   }
-  #snapshot-stage::before {
+  #snapshot-stage::before,
+  .start-card::before {
     content: "";
     position: absolute;
     inset: -8px;
@@ -561,6 +563,8 @@
       left calc(8px - 100vw * 5 / 1143) bottom calc(8px - 100vw * 4 / 1143),
       right calc(8px - 100vw * 8 / 1143) bottom calc(8px - 100vw * 4 / 1143);
   }
+  /* Opening card shares the new frame but stays behind its live content. */
+  .start-card::before { z-index: -1; }
 }
 
 /* Part 5: header geometry is inherited from ui-layout.css/ui-responsive.css.
