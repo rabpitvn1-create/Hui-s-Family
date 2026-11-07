@@ -25,7 +25,15 @@ export const CHARACTER_OVERLAYS = Object.freeze({
   "bay_luoc": "assets/overlay/bay-luoc.webp",
   "ly_kha": "assets/overlay/ly-kha.webp",
   "tran_thi_men": "assets/overlay/tran-thi-men.webp",
-  "ba_chin_lai": "assets/overlay/ba-chin-lai.webp"
+  "ba_chin_lai": "assets/overlay/ba-chin-lai.webp",
+  // Gói OPTIONAL Kỳ I (2026-11-07): năm overlay còn lại của Kỳ I. Cả năm
+  // đều đăng ký ở đây; chỉ ba người có khóa speaker (xem SPEAKER_OVERLAYS),
+  // Nguyễn Văn Nhân và Bốn Mọc đăng ký chờ, chưa map.
+  "ba_suong": "assets/overlay/ba-suong.webp",
+  "ky_luong": "assets/overlay/ky-luong.webp",
+  "chau_van_loi": "assets/overlay/chau-van-loi.webp",
+  "nguyen_van_nhan": "assets/overlay/nguyen-van-nhan.webp",
+  "bon_moc": "assets/overlay/bon-moc.webp"
 });
 
 // Tên người nói (đã bỏ dấu, viết thường) → id overlay, chỉ cho nhân vật có tên.
@@ -51,14 +59,23 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "nguoi phu": "npc_porter",
   "anh thoi": "npc_porter",
   // Kỳ I (hệ 9 agent, 2026-11-07): năm nhân vật có tên có overlay riêng.
-  // Bốn Mọc / Nguyễn Văn Nhân / Ký Lương / Châu Văn Lợi / bà Sương CHƯA map:
-  // Bốn Mọc map sớm sẽ hất Bảy Lược khỏi ô sân khấu ở chính cảnh ra mắt
-  // I02 (hòa 2–2 dòng, Bốn Mọc nói trước nên thắng tie-break).
   "cai lam": "cai_lam",
   "bay luoc": "bay_luoc",
   "ly kha": "ly_kha",
   "tran thi men": "tran_thi_men",
-  "ba chin lai": "ba_chin_lai"
+  "ba chin lai": "ba_chin_lai",
+  // Gói OPTIONAL Kỳ I (2026-11-07): Bà Sương / Ký Lương / Châu Văn Lợi
+  // ĐÃ map (mô phỏng sân khấu xác nhận không phá cảnh nào đã phát hành:
+  // Bà Sương chiếm ô I01 đúng thiết kế; I03 vẫn thuộc Lý Kha; I05 vẫn
+  // thuộc Bà Chín Lãi). Nguyễn Văn Nhân và Bốn Mọc vẫn CHƯA map:
+  // Nhân map vào I04 sẽ chiếm ô toàn cảnh (4 dòng > mốc 1 của Bà Năm
+  // Liên) và xóa nhịp kết của bà — chỉ map ở cụm ông từ Kỳ III hoặc khi
+  // chủ nhân ra lệnh riêng; Bốn Mọc map sớm sẽ hất Bảy Lược khỏi ô sân
+  // khấu ở chính cảnh ra mắt I02 (hòa 2–2 dòng, Bốn Mọc nói trước nên
+  // thắng tie-break) — chỉ map ở cụm IV09 hoặc cảnh khai tường minh.
+  "ba suong": "ba_suong",
+  "ky luong": "ky_luong",
+  "chau van loi": "chau_van_loi"
 });
 
 const COMBINING_MARKS = new RegExp("[\\u0300-\\u036f]", "g");
@@ -121,7 +138,12 @@ const CHARACTER_DISPLAY_NAMES = Object.freeze({
   "bay_luoc": "Bảy Lược",
   "ly_kha": "Lý Kha",
   "tran_thi_men": "Trần Thị Mến",
-  "ba_chin_lai": "Bà Chín Lãi"
+  "ba_chin_lai": "Bà Chín Lãi",
+  "ba_suong": "Bà Sương",
+  "ky_luong": "Ký Lương",
+  "chau_van_loi": "Châu Văn Lợi",
+  "nguyen_van_nhan": "Nguyễn Văn Nhân",
+  "bon_moc": "Bốn Mọc"
 });
 
 // Tên trên bảng tên có thể khác theo cảnh khi danh tính chưa được lộ trong
