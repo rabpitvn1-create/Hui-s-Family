@@ -109,7 +109,88 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "observe_gate",
         "text": "Không hỏi gì thêm, lặng lẽ quan sát cả sân một lượt.",
-        "next": "lh_saloon"
+        "next": "lh_gate_silent",
+        "flags": {
+          "gateSilentWatch": true
+        }
+      }
+    ]
+  },
+  "lh_gate_silent": {
+    "id": "lh_gate_silent",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Ba mươi bước trong sân",
+    "backgroundId": "long-hai-exterior",
+    "location": "Sân biệt thự Hứa Gia, Long Hải",
+    "companions": [
+      "npc_porter"
+    ],
+    "narration": [
+      "Cao Minh không hỏi thêm một câu nào. Hắn đứng yên giữa sân, hai tay chắp sau lưng, để người phu đi trước ba bước rồi dừng lại ở bậc thềm mà chờ. Người phu không quay đầu, nhưng gáy ông ta cứng lại như người đang nghe một tiếng động sau lưng mà không dám xác nhận nó là gì. Ba mươi bước từ cổng tới thềm, Cao Minh đã đi hết một nửa. Nửa còn lại, hắn để dành cho đôi mắt. Một vị khách vừa vào nhà người ta đã hỏi ngay về người bệnh trong phòng trong cùng thì cũng giống như một kẻ vừa bước vào vườn đã hỏi ngay cây nào có quả chín. Hỏi thì nhanh, nhưng cả khu vườn sẽ biết hắn tới đây vì quả.",
+      "Hắn nhìn sân như nhìn một bàn cờ chưa xếp xong. Gạch lát sân sạch đến mức không còn một chiếc lá, nhưng sạch theo một cách rất lạ: những viên gạch ở giữa lối đi mòn hơn những viên ở hai bên, mòn đều như có một bàn chân vô hình đã đi đi lại lại đúng một đường trong nhiều năm. Hoa giấy hai bên lối đi leo đúng hàng, nở đúng hướng, nhưng rễ của chúng lại bò lệch về phía dãy nhà trong, như thể cả luống hoa cũng đang nghe lén. Cao Minh khẽ gật đầu một mình. Một khu vườn biết nghe lén thì không phải là vườn. Nó là một cái tai.",
+      "Đèn lồng trong sân vẫn cháy đứng thẳng, không né gió, không né hơi thở của hắn. Hắn đếm thử trong đầu, không phải vì rảnh rỗi mà vì một thói quen cũ: khi tới một nơi lạ, bổn tọa luôn đếm những thứ không ai đếm. Hai mươi ba ngọn đèn từ cổng tới thềm. Ngọn nào cũng sáng như ngọn nào, tim đèn nào cũng đứng ở giữa như bị một bàn tay vô hình đặt vào đúng chỗ. Ở quê nhà của hắn, đèn là thứ bừa bộn nhất trong các vật bừa bộn, lúc nào cũng cháy lệch, cháy khói, cháy tắt giữa chừng. Còn ở đây, đèn cháy như đang đứng nghiêm chờ điểm danh, và kẻ điểm danh chúng không có mặt trong sân.",
+      "Mùi thuốc bắc từ dãy nhà trong thoảng ra theo từng đợt, đều đặn như hơi thở. Cao Minh nhắm mắt lại một nhịp, không phải để ngửi cho rõ mà để nghe cho rõ. Tiếng sóng ở rất xa, tiếng đèn dầu cháy thành tiếng đều, tiếng bước chân của gia nhân trong hành lang đi qua đi lại mà không hề vấp. Tất cả những âm thanh ấy đều đi theo một nhịp. Hắn đã từng nghe những nhịp như thế này ở những nơi khác, trong những trận pháp lớn mà người bày trận muốn mọi thứ trong trận đều thở cùng một hơi. Chỉ khác là ở đây, trận pháp không nằm dưới đất. Nó nằm trong từng người.",
+      "Hắn dừng lại ở một viên gạch giữa lối đi, viên gạch sẫm màu hơn những viên còn lại, như thể đã có rất nhiều người dừng lại đúng chỗ ấy, đúng một nhịp, trước khi bước tiếp vào nhà. Hắn muốn biết cảm giác đứng ở chỗ mà bao nhiêu người khác đã dừng lại là như thế nào. Từ chỗ ấy nhìn lên, bậc thềm nhà chính hiện ra trọn vẹn, cửa chính khép hờ, ánh đèn trong phòng khách hắt ra thành một vệt vàng mỏng trên nền gạch. Từ chỗ ấy nhìn sang hai bên, hắn thấy những ô cửa sổ của dãy nhà trong đều đóng kín, rèm buông xuống, không một khe hở. Một căn nhà mà mọi cửa sổ đều đóng kín vào buổi tối thì không phải là nhà đang ngủ. Nó là nhà đang nín thở.",
+      "Trong đầu hắn, một ý nghĩ lướt qua rất nhanh, nhanh như một lưỡi kiếm vừa rút khỏi vỏ đã tra lại: hắn có thể để lại ở đây một sợi thần niệm mỏng như tơ, mỏng đến mức không ai trong nhà này đủ tinh để nhận ra, để từ đêm mai hắn sẽ biết thứ gì ra vào sân này, thứ gì đi qua cổng này, và nhịp bước của gia nhân đổi khác ra sao khi không có khách. Ý nghĩ ấy hấp dẫn, vì nó rẻ và tiện. Nhưng ở đây, hắn dừng lại. Một sợi tơ, dù mỏng đến đâu, vẫn là một thứ hắn đặt vào nhà người ta. Và một căn nhà mà đến ngọn lửa cũng phải đứng nghiêm thì sẽ không bỏ qua một sợi tơ lạ.",
+      "Hắn bật cười rất khẽ, chỉ đủ cho chính mình nghe. Bổn tọa tới đây để gỡ từng sợi chỉ đang quấn lấy một cô gái mười tám tuổi, vậy mà vừa vào cổng đã suýt tự tay đặt thêm một sợi chỉ nữa vào nhà này. Đúng là thói quen cũ khó bỏ: thấy một cái mạng là muốn chạm vào, thấy một nhịp lạ là muốn đánh dấu. Hắn chưa chạm vào sợi tơ ấy. Hắn nhìn sân một lần nữa, lần này không phải bằng thần niệm mà bằng đôi mắt của một người khách vừa đi đường xa tới, mệt, và chỉ muốn biết nhà này có bao nhiêu cửa ra vào trước khi trời tối hẳn.",
+      "Sân chỉ có một cổng chính, một lối đi ra bậc thềm, và một lối nhỏ men theo hông nhà về phía bếp, nơi người phu gánh nước vẫn thường đi. Lối nhỏ ấy không có đèn, hoặc có mà đã tắt, và cỏ ở hai bên lối mọc cao hơn cỏ ở những chỗ khác, như thể đã lâu không có ai dọn. Một căn nhà gọn gàng đến mức không còn một chiếc lá rụng mà lại để một lối đi mọc cỏ thì cũng giống như một người mặc áo gấm mà quên chải đầu: chỗ quên ấy mới là chỗ thật. Cao Minh ghi nhớ lối nhỏ ấy trong đầu. Trí nhớ của hắn cũng là một loại kho báu.",
+      "Gió biển thổi qua sân một đợt nữa, mạnh hơn lúc nãy. Lần này, một ngọn đèn lồng treo thấp gần bậc thềm khẽ nghiêng đi, ngọn lửa bên trong chao một cái rất nhẹ, rồi lại đứng thẳng như chưa từng nghiêng. Cao Minh nhìn ngọn đèn ấy rất lâu. Chỉ một ngọn đèn biết nghiêng, còn hai mươi hai ngọn còn lại vẫn đứng yên. Hắn không biết vì sao nó nghiêng. Hắn chỉ biết một điều: trong một căn nhà mà mọi thứ đều đúng nhịp, một nhịp sai là thứ đáng giá nhất.",
+      "Người phu Thới cuối cùng cũng quay đầu lại, không phải vì hắn gọi, mà vì sự im lặng kéo dài quá lâu đã trở thành một thứ bất lịch sự. Ông ta nhìn Cao Minh, rồi nhìn sân, rồi lại nhìn Cao Minh, như thể đang cố đoán xem vị khách lạ này đang xem cái gì mà xem lâu đến thế. Cao Minh không giải thích. Hắn chỉ bước nốt những bước còn lại tới bậc thềm, bước chân không nhanh không chậm, đúng nhịp với tiếng sóng ở rất xa. Tới nơi, hắn dừng lại, để người phu dẫn đường đi trước, như một vị khách biết phép tắc. Trong nhà, tiếng đồng hồ quả lắc gõ một nhịp rất khẽ, và Cao Minh nhận ra nhịp ấy khớp với nhịp bước chân của chính mình."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Người phu",
+        "text": "Dạ… thưa ông, ông đứng đây lâu quá, trong nhà… trong nhà sẽ biết đó ạ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Biết thì biết. Bổn tọa chỉ xem sân. Sân nhà các ngươi, xem một lượt cũng phải xin phép sao?"
+      },
+      {
+        "speaker": "Người phu",
+        "text": "Dạ không dám ạ. Chỉ là… ở nhà này, đứng lâu một chỗ cũng là một việc lạ. Con sợ… con sợ người ta để ý ông."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Người ta để ý thì cứ để ý. Ngươi lui đi, dẫn đường."
+      },
+      {
+        "speaker": "Người phu",
+        "text": "Dạ, mời ông vào trong ạ."
+      }
+    ],
+    "choices": [
+      {
+        "id": "mark_gate_pattern",
+        "text": "Để lại một dấu thần niệm rất mỏng ở nhịp đèn, để đêm nay đối chiếu xem nhịp sân đổi khác ra sao.",
+        "next": "lh_saloon",
+        "effects": {
+          "cluesHuaGiaDelta": 2,
+          "lanMaterInfluenceDelta": 2
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "gatePatternMarked": true
+        }
+      },
+      {
+        "id": "remember_gate_quietly",
+        "text": "Không chạm vào nhịp nào của sân, chỉ ghi nhớ trong đầu rồi đi tiếp.",
+        "next": "lh_saloon",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "gatePatternRemembered": true
+        }
       }
     ]
   },

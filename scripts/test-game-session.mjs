@@ -491,4 +491,42 @@ const TAIL_DEFAULT = ["lh_retelling","lh_kitchen_fire","lh_hearth_anchor","lh_st
   assert.ok(cart.bridge.getSnapshot().scene.narration.join(" ").includes("hết an toàn"),
     "nhánh đường bộ phải có đoạn chuyển tuyến xe cỏ");
 }
+// Điểm rẽ mẫu tại cổng (pilot 2026-11-07): observe_gate không còn về thẳng
+// lh_saloon. Nhánh hỏi (ask_lan) giữ nguyên mạch chính; nhánh quan sát đi qua
+// lh_gate_silent rồi hội tụ ở lh_saloon. Hai lựa chọn trong cảnh mới là đánh
+// đổi thật: đánh dấu được +2 đầu mối nhưng +2 ảnh hưởng Mẫu, chỉ ghi nhớ được
+// +1 đầu mối và không tăng ảnh hưởng Mẫu.
+{
+  const ask = launch(new Map());
+  assert.equal(ask.bridge.getSnapshot().scene.id, "lh_prologue");
+  assert.equal(ask.bridge.applyScriptChoice(0), true);
+  assert.equal(ask.bridge.getSnapshot().scene.id, "lh_gate");
+  assert.equal(ask.bridge.applyScriptChoice(0), true);
+  assert.equal(ask.bridge.getSnapshot().scene.id, "lh_saloon");
+  assert.equal(ask.bridge.getSnapshot().campaignStats.cluesHuaGia, 1);
+  assert.equal(ask.bridge.getSnapshot().campaignStats.lanMaterInfluence, 25);
+  assert.equal(ask.bridge.getSnapshot().flags.gateSilentWatch, undefined);
+
+  const mark = launch(new Map());
+  assert.equal(mark.bridge.applyScriptChoice(0), true);
+  assert.equal(mark.bridge.getSnapshot().scene.id, "lh_gate");
+  assert.equal(mark.bridge.applyScriptChoice(1), true);
+  assert.equal(mark.bridge.getSnapshot().scene.id, "lh_gate_silent");
+  assert.equal(mark.bridge.getSnapshot().flags.gateSilentWatch, true);
+  assert.equal(mark.bridge.applyScriptChoice(0), true);
+  assert.equal(mark.bridge.getSnapshot().scene.id, "lh_saloon");
+  assert.equal(mark.bridge.getSnapshot().campaignStats.cluesHuaGia, 2);
+  assert.equal(mark.bridge.getSnapshot().campaignStats.lanMaterInfluence, 27);
+  assert.equal(mark.bridge.getSnapshot().flags.gatePatternMarked, true);
+
+  const remember = launch(new Map());
+  assert.equal(remember.bridge.applyScriptChoice(0), true);
+  assert.equal(remember.bridge.applyScriptChoice(1), true);
+  assert.equal(remember.bridge.getSnapshot().scene.id, "lh_gate_silent");
+  assert.equal(remember.bridge.applyScriptChoice(1), true);
+  assert.equal(remember.bridge.getSnapshot().scene.id, "lh_saloon");
+  assert.equal(remember.bridge.getSnapshot().campaignStats.cluesHuaGia, 1);
+  assert.equal(remember.bridge.getSnapshot().campaignStats.lanMaterInfluence, 25);
+  assert.equal(remember.bridge.getSnapshot().flags.gatePatternRemembered, true);
+}
 console.log("VN scene contract and session passed: deterministic scenes, five Long Hai objectives, dead-end rollback, versioned save, AI disabled.");
