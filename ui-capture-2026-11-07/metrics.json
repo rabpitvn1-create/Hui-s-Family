@@ -23,15 +23,15 @@
     },
     "dialogue": {
       "x": 17,
-      "y": -51.15625,
+      "y": -115.15625,
       "width": 430,
-      "height": 108.5
+      "height": 136
     },
     "dialogueAvatar": {
-      "x": 32,
-      "y": -41.15625,
-      "width": 52,
-      "height": 52
+      "x": 35,
+      "y": -104.15625,
+      "width": 60,
+      "height": 60
     },
     "choice": {
       "x": 17,
