@@ -57,6 +57,31 @@ jobs:
           await page.locator("#intel-toggle").click();
           await page.waitForTimeout(300);
           await page.screenshot({path:"ui-capture-2026-11-07/game-drawer.png"});
+          // JPEG previews are compact text-safe transport through the connector.
+          // B64 files are strictly isolated to this temporary QA branch, never main.
+          const views = ["game-start","game-main","game-dialogue","game-decisions","game-drawer"];
+          for (const view of views) {
+            const filename = "ui-capture-2026-11-07/" + view + ".jpeg";
+            if (view === "game-drawer") await page.screenshot({path:filename,type:"jpeg",quality:58,animations:"disabled"});
+            else if (view === "game-decisions") {
+              await page.locator("#intel-close").click();
+              if (await page.locator("#choices .choice").count()) await page.locator("#choices .choice").first().scrollIntoViewIfNeeded();
+              await page.screenshot({path:filename,type:"jpeg",quality:58,animations:"disabled"});
+            }
+            else if (view === "game-dialogue") {
+              if (await page.locator("#story-text .dialogue.has-avatar").count()) await page.locator("#story-text .dialogue.has-avatar").first().scrollIntoViewIfNeeded();
+              await page.screenshot({path:filename,type:"jpeg",quality:58,animations:"disabled"});
+            }
+            else if (view === "game-main") {
+              await page.locator("#story-panel").evaluate(el=>el.scrollTop=0);
+              await page.screenshot({path:filename,type:"jpeg",quality:58,animations:"disabled"});
+            }
+            else {
+              await page.screenshot({path:filename,type:"jpeg",quality:58,animations:"disabled"});
+            }
+            const bytes = (await import("node:fs")).readFileSync(filename);
+            writeFileSync(filename+".b64",bytes.toString("base64"));
+          }
           const geometry=await page.evaluate(()=>{
             const rect=(selector)=>{const node=document.querySelector(selector);if(!node)return null;const r=node.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}};
             return {
