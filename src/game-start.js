@@ -1,3 +1,38 @@
+// Fullscreen must be requested inside the player's click gesture.
+// On Android APK, the native WebView host owns the system bars.
+export function requestGameFullscreen() {
+  const native = window.HuaAndroid;
+  if (native && typeof native.enterFullscreen === "function") {
+    try {
+      native.enterFullscreen();
+      return Promise.resolve();
+    } catch {
+      // An older/broken native bridge should not block the browser fallback.
+    }
+  }
+
+  if (document.fullscreenElement || document.webkitFullscreenElement) {
+    return Promise.resolve();
+  }
+
+  const root = document.documentElement;
+  try {
+    if (typeof root.requestFullscreen === "function") {
+      return Promise.resolve(root.requestFullscreen({ navigationUI: "hide" }))
+        .catch(() => {
+          // Embedded browsers may disallow fullscreen. Keep the game playable.
+        });
+    }
+    if (typeof root.webkitRequestFullscreen === "function") {
+      return Promise.resolve(root.webkitRequestFullscreen())
+        .catch(() => {});
+    }
+  } catch {
+    // Fullscreen may be unavailable; continue to the game in that case.
+  }
+  return Promise.resolve();
+}
+
 export function initGameStart(startGame) {
   const screen = document.querySelector("#start-screen");
   const button = document.querySelector("#start-game-button");
@@ -20,19 +55,9 @@ export function initGameStart(startGame) {
     started = true;
     button.disabled = true;
 
-    // Request directly inside the button gesture, before any asynchronous work.
-    const root = document.documentElement;
-    if (!window.HuaAndroid && !document.fullscreenElement && !document.webkitFullscreenElement) {
-      try {
-        if (typeof root.requestFullscreen === "function") {
-          await root.requestFullscreen({ navigationUI: "hide" });
-        } else if (typeof root.webkitRequestFullscreen === "function") {
-          await root.webkitRequestFullscreen();
-        }
-      } catch {
-        // Browsers may deny fullscreen. The player can still start normally.
-      }
-    }
+    // Do not put another await/timeout before this call: web browsers
+    // require transient user activation for the Fullscreen API.
+    await requestGameFullscreen();
 
     screen.hidden = true;
     shell.hidden = false;
