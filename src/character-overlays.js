@@ -114,7 +114,19 @@ const SCENE_DISPLAY_NAME_OVERRIDES = Object.freeze({
   // phu bến/gia nhân nam làm giữ chỗ, bảng tên theo đúng nhân vật của cảnh.
   vt_coffin_wharf: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
   vt_coal_store: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
-  vt_restitution: Object.freeze({ npc_servant_male: "Tạ Văn Độ" })
+  vt_restitution: Object.freeze({ npc_servant_male: "Tạ Văn Độ" }),
+  // Kỳ II (hệ 5 agent, 2026-11-07): cùng quy ước giữ chỗ như trên cho các
+  // cảnh Phúc Thọ mở rộng — Bá Hòe là npc_porter, Văn Độ là npc_servant_male.
+  vt_two_paper_deaths: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  vt_river_mouth_turn: Object.freeze({ npc_servant_male: "Tạ Văn Độ" }),
+  vt_wharf_shelter: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  vt_lid_sign_again: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  vt_port_inspection: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  vt_rescue_debt_second: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  vt_hidden_man_route: Object.freeze({ npc_porter: "Trương Bá Hòe", npc_servant_male: "Tạ Văn Độ" }),
+  vt_names_returned: Object.freeze({ npc_servant_male: "Tạ Văn Độ" }),
+  vt_wharf_contained: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  vt_rice_seed_yard: Object.freeze({ npc_porter: "Trương Bá Hòe" })
 });
 
 export function companionDisplayName(id, scene) {

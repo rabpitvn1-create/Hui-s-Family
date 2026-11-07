@@ -4,6 +4,10 @@ export const SCENE_BACKGROUNDS = Object.freeze({
   "vung-tau-roadstead": "assets/snapshots/long-hai-coast.webp",
   "coffin-wharf": "assets/snapshots/long-hai-exterior.webp",
   "coal-store": "assets/snapshots/medicine-store.webp",
+  // Kỳ II (hệ 5 agent, 2026-11-07): ảnh riêng chưa sản xuất — giữ chỗ bằng
+  // ảnh hiện có gần nhất, thay khi có ảnh tàu quan tài / sân Phúc Thọ.
+  "river-coffin-ship": "assets/snapshots/long-hai-coast.webp",
+  "phuc-tho-tang-quan-yard": "assets/snapshots/long-hai-exterior.webp",
   "long-hai-exterior": "assets/snapshots/long-hai-exterior.webp",
   "long-hai-corridor": "assets/snapshots/long-hai-corridor.webp",
   "tieu-lan-room": "assets/snapshots/tieu-lan-room.webp",

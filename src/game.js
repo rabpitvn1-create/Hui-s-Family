@@ -264,7 +264,12 @@ export function initGame() {
         .map((item) => typeof item === "string" ? item : item.text),
       dialogue: (card.dialogue || []).filter((line) => condVisible(line))
         .map((line) => ({ speaker: line.speaker, text: line.text })),
-      companions: [...(card.companions || [])],
+      // Thu Nguyệt chỉ đứng sân khấu khi cô đi theo đoàn: ở nhánh ở lại
+      // (thuNguyetStays) cô không hiện overlay ở bất kỳ cảnh nào sau lựa
+      // chọn — trước điểm lựa chọn cờ chưa đặt nên các cảnh đầu không đổi.
+      companions: (card.companions || []).filter(
+        (id) => !(id === "le_thu_nguyet" && state.flags?.thuNguyetStays === true)
+      ),
       entity: card.entity || false,
       choices: (card.choices || []).map((item) => item.text)
     };

@@ -167,6 +167,25 @@ for (const expected of ["vt_coffin_wharf", "vt_coal_store", "vt_ledger", "vt_fir
 // vt_first_jamming): 84 − 5 = 79. Mắt xích Nợ nhận diện tại vt_restitution.
 assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
 assert.equal(game.bridge.getSnapshot().flags.vnLinks.no, "identified");
+// Kỳ II — Phúc Thọ mở rộng (hệ 5 agent, 2026-11-07): vt_hook không còn là
+// điểm kết; hai lựa chọn hội tụ vào vt_children_pursuit và mạch 18 cảnh
+// chạy liền tới cầu Kỳ III (ky3_01_stub, sliceEnd giữ chỗ).
+assert.equal(game.bridge.getSnapshot().scene.choices.length, 2);
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "vt_children_pursuit");
+assert.equal(game.bridge.getSnapshot().flags.vtFollowShip, true);
+for (const expected of ["vt_river_chase", "vt_coffin_ship", "vt_be_sau_knocking", "vt_living_under_hull", "vt_two_paper_deaths", "vt_river_mouth_turn", "vt_wharf_shelter", "vt_rescue_debt_first", "vt_lid_sign_again", "vt_port_inspection", "vt_signs_be_sau_hears", "vt_rescue_debt_second", "vt_hidden_man_route", "vt_port_two_masters", "vt_names_returned", "vt_wharf_contained", "vt_rice_seed_yard", "ky3_01_stub"]) {
+  game.bridge.applyScriptChoice(0);
+  assert.equal(game.bridge.getSnapshot().scene.id, expected);
+}
+// Suốt Kỳ II ký ức KHÔNG đổi (79 — khoản −11 khóa ở neo ba Kỳ V), mắt xích
+// Nợ giữ identified, tàu trẻ em bị chặn nhưng mạng còn nguyên, hạt linh mễ
+// đã gieo ở sân Phúc Thọ; mạch dừng ở stub Kỳ III.
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.no, "identified");
+assert.equal(game.bridge.getSnapshot().flags.vtShipHalted, true);
+assert.equal(game.bridge.getSnapshot().flags.vtNetworkIntact, true);
+assert.equal(game.bridge.getSnapshot().flags.vtRiceSeedPlanted, true);
 assert.equal(game.bridge.getSnapshot().scene.choices.length, 0);
 assert.equal(game.bridge.applyScriptChoice(0), false);
 // Khôi phục khi khởi động chọn bản MỚI NHẤT theo savedAt (phản biện ChatGPT
