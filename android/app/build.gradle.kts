@@ -68,6 +68,7 @@ val syncWebAssets by tasks.registering(Sync::class) {
         include("ui-layout.css")
         include("ui-components.css")
         include("ui-responsive.css")
+        include("mobile-skin.css")
         include("assets/**")
         include("src/**")
         include("apk-ai/**")

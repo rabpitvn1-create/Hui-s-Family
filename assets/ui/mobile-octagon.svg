@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+  <defs><radialGradient id="dark"><stop stop-color="#30251E"/><stop offset="1" stop-color="#121717"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="2"/></filter></defs>
+  <path d="M25 3H95L117 25V95L95 117H25L3 95V25Z" fill="url(#dark)" stroke="#BCA16C" stroke-width="3"/>
+  <path d="M29 11H91L109 29V91L91 109H29L11 91V29Z" stroke="#71BCB3" stroke-width="4" opacity=".55" filter="url(#glow)"/>
+  <path d="M29 11H91L109 29V91L91 109H29L11 91V29Z" stroke="#8DC5B9" stroke-width="1.5"/>
+</svg>

@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
 
 const html = readFileSync("index.html", "utf8");
 const gradle = readFileSync("android/app/build.gradle.kts", "utf8");
@@ -33,6 +34,19 @@ const stylesheetPaths = [...html.matchAll(/<link[^>]+rel="stylesheet"[^>]+href="
 const missingStyles = stylesheetPaths.filter((path) => !existsSync(path));
 if (missingStyles.length) {
   throw new Error(`Không tìm thấy stylesheet: ${missingStyles.join(", ")}`);
+}
+
+// Decorative frames and bundled fonts must also work in the offline APK.
+// Checking just the <img> tags misses every CSS background introduced by a skin.
+const stylesheetAssets = stylesheetPaths.flatMap((sheet) =>
+  [...readFileSync(sheet, "utf8").matchAll(/url\(([^)]+)\)/g)]
+    .map((match) => match[1].trim().replace(/^["']|["']$/g, ""))
+    .filter((path) => !/^(?:data:|https?:|#)/i.test(path))
+    .map((path) => join(dirname(sheet), path.split(/[?#]/, 1)[0]))
+);
+const missingStylesheetAssets = stylesheetAssets.filter((path) => !existsSync(path));
+if (missingStylesheetAssets.length) {
+  throw new Error(`Không tìm thấy asset CSS: ${[...new Set(missingStylesheetAssets)].join(", ")}`);
 }
 
 const scriptPaths = [...html.matchAll(/<script[^>]+src="([^"]+)"/g)]

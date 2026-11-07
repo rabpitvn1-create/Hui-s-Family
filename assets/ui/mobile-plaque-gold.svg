@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="136" preserveAspectRatio="none" viewBox="0 0 800 136" fill="none">
+  <defs><linearGradient id="gold"><stop stop-color="#B69658"/><stop offset=".45" stop-color="#E8D49B"/><stop offset="1" stop-color="#AA8648"/></linearGradient></defs>
+  <path d="M18 4H782Q785 18 796 20V116Q784 118 782 132H18Q15 118 4 116V20Q16 18 18 4Z" fill="url(#gold)" stroke="#D8BE85" stroke-width="5"/>
+  <path d="M26 13H774Q778 25 786 28V108Q777 111 774 123H26Q23 111 14 108V28Q23 25 26 13Z" stroke="#C3D8B4" stroke-width="3"/>
+</svg>
