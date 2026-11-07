@@ -41,6 +41,15 @@ class NativeGeminiBridge(
             .toString()
     }
 
+    // Request immersive display from the game-start click; WebView bridges
+    // run on a background thread, so apply window changes on the UI thread.
+    @JavascriptInterface
+    fun enterFullscreen() {
+        activity.runOnUiThread {
+            (activity as? MainActivity)?.enterGameFullscreen()
+        }
+    }
+
     @JavascriptInterface
     fun openApiKeySettings() {
         if (ApiProviderConfig.hasBundledProviders()) return
