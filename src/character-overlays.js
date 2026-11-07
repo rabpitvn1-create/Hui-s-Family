@@ -18,7 +18,14 @@ export const CHARACTER_OVERLAYS = Object.freeze({
   "npc_fisherman": "assets/overlay/npc-fisherman.webp",
   "npc_doctor": "assets/overlay/npc-doctor.webp",
   "npc_official": "assets/overlay/npc-official.webp",
-  "steward": "assets/overlay/steward.webp"
+  "steward": "assets/overlay/steward.webp",
+  // Kỳ I (hệ 9 agent, 2026-11-07): overlay riêng cho năm nhân vật có tên
+  // của tuyến Bách Trảo/chợ Long Hải, gieo ở Kỳ I, dùng tiếp Kỳ III–IV.
+  "cai_lam": "assets/overlay/cai-lam.webp",
+  "bay_luoc": "assets/overlay/bay-luoc.webp",
+  "ly_kha": "assets/overlay/ly-kha.webp",
+  "tran_thi_men": "assets/overlay/tran-thi-men.webp",
+  "ba_chin_lai": "assets/overlay/ba-chin-lai.webp"
 });
 
 // Tên người nói (đã bỏ dấu, viết thường) → id overlay, chỉ cho nhân vật có tên.
@@ -42,7 +49,16 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "ong ba luoi": "npc_fisherman",
   "nguoi gac": "npc_servant_male",
   "nguoi phu": "npc_porter",
-  "anh thoi": "npc_porter"
+  "anh thoi": "npc_porter",
+  // Kỳ I (hệ 9 agent, 2026-11-07): năm nhân vật có tên có overlay riêng.
+  // Bốn Mọc / Nguyễn Văn Nhân / Ký Lương / Châu Văn Lợi / bà Sương CHƯA map:
+  // Bốn Mọc map sớm sẽ hất Bảy Lược khỏi ô sân khấu ở chính cảnh ra mắt
+  // I02 (hòa 2–2 dòng, Bốn Mọc nói trước nên thắng tie-break).
+  "cai lam": "cai_lam",
+  "bay luoc": "bay_luoc",
+  "ly kha": "ly_kha",
+  "tran thi men": "tran_thi_men",
+  "ba chin lai": "ba_chin_lai"
 });
 
 const COMBINING_MARKS = new RegExp("[\\u0300-\\u036f]", "g");
@@ -100,7 +116,12 @@ const CHARACTER_DISPLAY_NAMES = Object.freeze({
   "npc_fisherman": "Ngư dân",
   "npc_doctor": "Thầy thuốc",
   "npc_official": "Người của Giới Phòng",
-  "steward": "Quản gia"
+  "steward": "Quản gia",
+  "cai_lam": "Cai Lẫm",
+  "bay_luoc": "Bảy Lược",
+  "ly_kha": "Lý Kha",
+  "tran_thi_men": "Trần Thị Mến",
+  "ba_chin_lai": "Bà Chín Lãi"
 });
 
 // Tên trên bảng tên có thể khác theo cảnh khi danh tính chưa được lộ trong

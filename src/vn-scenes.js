@@ -653,7 +653,7 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "linger_sea",
         "text": "Đi cùng nàng thêm một vòng dọc bờ tường hướng ra biển, bất chấp tiếng chuông báo giờ của nhà chính.",
-        "next": "lh_night_bell",
+        "next": "lh_i04_gate_silence",
         "effects": {
           "lanTrustDelta": 3
         }
@@ -661,9 +661,117 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "escort_back",
         "text": "Đưa nàng về phòng trước khi căn nhà kịp ghi nhận nàng đã vắng mặt quá lâu.",
-        "next": "lh_night_bell",
+        "next": "lh_i04_gate_silence",
         "effects": {
           "cluesHuaGiaDelta": 1
+        }
+      }
+    ]
+  },
+  "lh_i04_gate_silence": {
+    "id": "lh_i04_gate_silence",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Những người không dám qua cổng",
+    "backgroundId": "long-hai-exterior",
+    "location": "Cổng biệt thự Hứa Gia, Long Hải — cuối chiều",
+    "companions": [
+      "ba_nam_lien",
+      "npc_porter"
+    ],
+    "narration": [
+      "Tiếng chuông báo giờ của nhà chính vừa dứt, ánh chiều đã ngả xuống con đường đất trước cổng biệt thự Hứa Gia. Cổng không khóa. Then cổng nằm yên trong vòng sắt, và từ vạch cổng trở ra là đường làng ai đi cũng được. Vậy mà một nhóm người đã đứng chụm lại ở đó từ lâu, cách vạch cổng một quãng vừa đủ để không ai trong nhà có thể nói họ đã bước vào. Đi đầu là ông từ đình làng Nguyễn Văn Nhân, áo dài cũ đã sờn cổ, hai tay ôm trước ngực một bọc giấy gói vải, ôm chặt như ôm một thứ có thể mất. Đi cùng ông là một người phu khuân vác vô danh, gánh đã hạ xuống đất, đứng lùi nửa bước sau lưng ông từ, mắt nhìn xuống.",
+      "Họ có việc muốn vào. Nhưng chân ông dừng lại ở đúng chỗ mà người dân vùng này đều dừng lại từ bao nhiêu năm nay: trước vạch cổng của nhà họ Hứa. Không ai chặn họ bằng vũ lực. Chỉ có một cái cổng mở hé, một khoảng sân yên tĩnh phía trong, và một thói quen sợ hãi đã cũ đến mức không ai còn nhớ nó bắt đầu từ năm nào.",
+      "Một gia nhân trong nhà đi ngang qua sân, liếc ra cổng, rồi nói với người bên cạnh bằng giọng quen miệng, không ác ý rõ rệt: lại là đám tới xin xỏ, đứng hoài làm bẩn cổng. Câu nói ấy bay qua khoảng sân vắng, lọt ra ngoài cổng, và cũng lọt vào phía trong hành lang, nơi Tiểu Lan đang đứng bên cửa sổ nhìn ra.",
+      "Phía trong, Tiểu Lan không bước ra. Nàng ở yên sau khung cửa sổ của hành lang, nơi bóng râm che nửa người nàng, và nhìn ra qua khoảng sân. Căn nhà người đời sợ đến không dám bước qua cổng, là căn nhà đang giữ chính nàng ở phía trong này.",
+      "Ông từ muốn xin lại giấy tờ liên quan tới một gia đình trong làng đã mất tích — người mất đã lâu, mà giấy tờ của họ còn kẹt trong hồ sơ của nhà này, và làng cần giấy ấy để biết một gia đình còn hay đã mất hẳn. Ông từ nói một câu mà người phu nghe xong chỉ biết cúi đầu sâu hơn: già hết người thân rồi, có mất thêm cũng không ai khóc, nên già đi là phải.",
+      "Tên gác cổng đứng gần đó đã hết kiên nhẫn từ lâu. Với hắn, một buổi chiều yên tĩnh là một buổi chiều không có người lạ đứng trước cổng, và đám người kia đứng càng lâu, hắn càng sợ bị trong nhà quở. Hắn bước lên, rút cây roi vẫn dắt bên hông, giơ lên định quất xuống đất cho tiếng roi nổ một tiếng mà đuổi đám người đi cho xong việc. Người phu giật mình lùi lại.",
+      "Cây roi không quất xuống được. Nó dừng lại giữa không trung, ngay trên đỉnh đầu tên gác cổng, đứng yên như bị một bàn tay vô hình nắm lấy giữa khoảng không. Tên gác cổng kéo, roi không nhúc nhích; hắn buông tay ra, roi vẫn treo nguyên ở đó một lúc lâu rồi mới từ từ rơi xuống, nằm im trên mặt đất trước cổng. Cao Minh đứng ở phía sân trong, gần cổng, thong thả như người vừa chặn một con ruồi bay qua mặt.",
+      "Nhưng điều làm cả khoảng sân im đi không phải cây roi bị giữ lại. Ông từ, sau khi cám ơn rối rít về phía trong, lại lùi thêm nửa bước. Người phu thì đứng chết chân ở chỗ cũ, như thể vạch cổng có một sợi dây vô hình khác: sợi dây của nhiều năm nghe dặn rằng chớ bước qua cổng nhà ấy khi chưa được gọi tên. Cao Minh nhìn cảnh ấy một lúc. Hắn vừa làm một việc mà sức mạnh nào cũng làm được; và hắn thấy rõ nó không thay đổi được gì hết.",
+      "Chính lúc ấy, từ phía trong hành lang, Tiểu Lan cất tiếng gọi Bà Năm Liên lại gần. Nàng nói chậm, rõ, bằng giọng của người ra một quyết định trong nhà mình: hôm nay, nhà này nghe ông từ nói. Bà Năm Liên sẽ ra cổng, nhận lời nhắn và bọc giấy của ông từ đưa vào cho nàng xem tận tay. Còn người phu đi cùng ông — nàng dặn riêng một câu — không ai được hỏi tên anh ta, không ai ghi tên anh ta vào bất cứ sổ nào.",
+      "Bà Năm Liên bước ra cổng. Cả nhóm người nín thở khi cánh cổng mở rộng thêm và một người trong nhà đi thẳng về phía họ — không roi, không tiếng quát, chỉ có một câu nói được truyền lại nguyên vẹn từ cô chủ phía trong. Ông từ run tay trao bọc giấy, nói lời nhắn của làng bằng cái giọng của người không dám tin mình đang được nghe. Người phu đứng sau lưng ông, nghe thấy câu không ai hỏi tên mình, thì ngẩng lên một thoáng — lần đầu tiên trong buổi chiều ấy, vai anh ta hạ xuống được một chút.",
+      "Chiều xuống hẳn. Trong nhà, đèn hành lang bắt đầu được hạ nhỏ theo đúng lệ, và tiếng chân gia nhân từ các gian lần lượt dồn về những vị trí cố định của buổi tối. Bọc giấy của ông từ đã nằm ở phía trong cổng — không phải như một món đồ xin xỏ bị vứt vào, mà như một lời nhắn đã tới được tay người trong nhà. Ngoài cổng, cây roi của tên gác cổng vẫn nằm trên mặt đất, chưa ai buồn nhặt lên."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Việc này, già phải trình vào trong mới xong. Giấy của một nhà trong làng còn kẹt ở nhà này, làng cử già đi hỏi. Mà chân già đứng tới đây thì nó không chịu bước nữa."
+      },
+      {
+        "speaker": "Phu khuân vác",
+        "text": "Dạ, ông vào thì ông vào, tui đứng ngoài này thôi, tui còn vợ con ở nhà. Tui sợ nhất là lỡ tui mở miệng, trong nhà ghi tên tui vào sổ. Tên vào sổ nhà này rồi, gỡ ra không dễ đâu."
+      },
+      {
+        "speaker": "Gia nhân Hứa Gia — người quét sân",
+        "text": "Lại đám tới xin xỏ. Đứng hoài từ nãy tới giờ làm bẩn cả cổng. Nhà lớn chứ có phải đình làng đâu mà ai muốn tới đứng cũng được."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, họ đứng ngoài ấy đã bao lâu rồi? Và người trong nhà, từ xưa tới giờ, vẫn gọi họ như thế sao — gọi bằng hai tiếng xin xỏ ấy?"
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Gia đình ấy mất tích, giấy tờ còn kẹt ở nhà này. Làng cử già đi, vì già hết người thân, có mất thêm cũng không ai khóc. Chú phu đi theo gánh bọc giấy cho già thôi, chú đừng nói gì hết."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Roi của ngươi vướng mắt bổn tọa. Buổi chiều đang yên, cầm roi đứng trước cổng, ngươi không thấy mình trông buồn cười lắm sao?"
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Dạ, đội ơn ông, đội ơn ông nhiều lắm. Roi bỏ xuống rồi, dạ… mà chân già… chân già nó quen đứng ở ngoài này rồi, thưa ông. Già không dám, thiệt tình già không dám."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, bà ra cổng nói với ông từ thế này: hôm nay, nhà này nghe ông nói. Bà nhận lời nhắn và bọc giấy của ông, đưa vào tận tay tôi. Người đi cùng ông, không ai hỏi tên, không ai ghi tên."
+      },
+      {
+        "speaker": "Bà Năm Liên",
+        "text": "Dạ, để bà ra, thưa cô. Mà cô ơi… nhà mình từ xưa tới giờ chưa từng làm vậy. Người ta tới cổng, hoặc được gọi vào, hoặc bị đuổi đi. Chưa từng có ai được nghe như thế này đâu."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Dạ, già xin đội ơn cô trong nhà. Nhà này mà cũng có người nghe dân nói… Già về nói lại với làng, chắc không ai tin già đâu."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Roi rơi, cổng mở — người vẫn đứng ngoài. Hay thật. Bổn tọa đỡ tốn công."
+      }
+    ],
+    "choices": [
+      {
+        "id": "hear_them_through",
+        "text": "Để lời của ông từ được đưa vào tận tay nàng — nhà này hôm nay nghe dân nói một lần.",
+        "next": "lh_night_bell",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "gateFearWitnessed": true
+        }
+      },
+      {
+        "id": "whip_left_hanging",
+        "text": "Để roi của tên gác cổng nằm yên dưới đất trước cổng thêm một lúc — cho cả làng thấy roi cũng có lúc không ai nhặt.",
+        "next": "lh_night_bell",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "gateFearWitnessed": true
+        }
+      },
+      {
+        "id": "ask_gate_names",
+        "text": "Hỏi Bà Năm Liên tên từng người gác cổng và lệ đuổi người có từ năm nào — ghi nhớ lệ nhà thay vì người.",
+        "next": "lh_night_bell",
+        "flags": {
+          "gateFearWitnessed": true
         }
       }
     ]
@@ -1029,7 +1137,7 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "memorize_page",
         "text": "Ghi nhớ từng chi tiết của trang gia phả và hàng dấu đỏ Giới Phòng.",
-        "next": "lh_kitchen",
+        "next": "lh_i03_names_for_sale",
         "effects": {
           "cluesHuaGiaDelta": 1
         }
@@ -1037,10 +1145,120 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "press_clerk",
         "text": "Hỏi lão thư ký về phong thư niêm kín từ Chợ Lớn năm ấy.",
-        "next": "lh_kitchen",
+        "next": "lh_i03_names_for_sale",
         "effects": {
           "cluesHuaGiaDelta": 2,
           "lanMaterInfluenceDelta": 1
+        }
+      }
+    ]
+  },
+  "lh_i03_names_for_sale": {
+    "id": "lh_i03_names_for_sale",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Một cái tên đáng giá ba quan",
+    "backgroundId": "register-room",
+    "location": "Gian lưu trữ gia phả, biệt thự Hứa Gia",
+    "companions": [
+      "npc_servant_elder_male"
+    ],
+    "narration": [
+      "Buổi khám gian gia phả vừa xong, ở vòng hồ sơ của biệt thự có người tới bàn giao giấy tờ. Lý Kha bước vào, tập giấy ôm ngang ngực, dáng điệu kính cẩn của một người làm việc giấy tờ lâu năm cho nhà họ Hứa, đặt tập giấy xuống bàn bằng hai tay. Chỉ có một điều làm Cao Minh để ý: khi lật giấy trình bày, tay Lý Kha lướt qua vài trang nhanh hơn hẳn những trang khác, như người không muốn ai kịp nhìn lâu vào những dòng có dấu đánh dấu.",
+      "Tập giấy ấy, nhìn qua thì không có gì lạ: một bản sao của sổ hộ dân thường của làng, chép tay ngay ngắn, nhà nào có tên có tuổi. Nhưng dọc theo lề giấy là những dấu đánh dấu nhỏ bằng mực khác màu: nhà này có trẻ nhỏ, nhà kia đang mắc nợ, nhà nọ đã dời đi nơi khác từ mấy tháng trước. Một cuốn sổ dân, mà được đánh dấu như một cuốn sổ nợ. Cao Minh đứng dựa vào kệ tủ, nhìn những dấu mực ấy, và hỏi một câu thản nhiên như hỏi về thời tiết.",
+      "Ký Lương là người môi giới giấy tờ, mặt mũi nhanh nhẹn, miệng nói nhanh hơn tay lật giấy. Hắn không chào hỏi dài dòng. Hắn ngồi xuống, kéo tập giấy về phía mình, và bắt đầu mặc cả với Lý Kha ngay trước mặt mọi người trong phòng — mặc cả từng dòng một, như mặc cả cá ở chợ. Còn dòng nhà đã dời đi rồi — hắn gõ ngón tay lên dấu mực — thì trừ bớt, trừ mạnh, vì tên không còn ở làng thì chỉ là chữ chết.",
+      "Mặc cả giá từng dòng xong, Ký Lương mặc cả tiếp một thứ còn lạ tai hơn: hạn dùng của dữ liệu. Hắn hỏi Lý Kha, tập giấy này dùng được bao lâu. Một mùa? Hai mùa? Các gia đình trong sổ còn ở yên bao lâu nữa trước khi có nhà dời đi, có nhà trả hết nợ — vì mỗi thay đổi như thế là một dòng trong sổ hóa thành giấy lộn, và hắn không trả tiền cho giấy lộn.",
+      "Cao Minh đứng ngay đó, cách tập giấy không đầy một sải tay. Hắn chỉ cần phất tay một cái: tập giấy có thể cháy, buổi mua bán có thể chết ngay tại chỗ và bộ mặt thật của Lý Kha có thể lộ ra trước mọi người trong vòng hồ sơ này. Hắn không làm. Không phải vì không kịp, cũng không phải vì điều gì làm hắn chần chừ — hắn thấy chưa đáng, chỉ đơn giản có vậy, và hắn muốn xem tờ giấy này sẽ chảy đi đâu. Việc này không phải việc hắn tự quyết một mình.",
+      "Hắn rời vòng hồ sơ, đi thẳng qua hành lang tới phòng của nàng — cùng một tòa nhà, không qua người đưa tin nào, không qua lời kể lại của ai. Hắn kể vắn tắt, đúng những gì mắt hắn thấy: một bản sao sổ hộ dân, những dấu đánh dấu bên lề, một người mua đang mặc cả từng dòng và cả hạn dùng của giấy, và một Lý Kha bán giấy của làng ngay trong vòng hồ sơ này. Nàng ngồi yên một lúc lâu, nhìn xuống đôi tay mình, rồi mới nói — nói như người hiểu hệ giấy của chính nhà mình từ trong ra ngoài.",
+      "Nếu chặn buổi bán hôm nay, đoàn chỉ giữ được một xấp giấy chết và thêm một Lý Kha bịt miệng vì sợ; đường dây phía sau hắn sẽ rút vào tối, không bao giờ lộ thêm. Còn nếu để buổi bán diễn ra trọn vẹn — tiền trao, giấy trao tay đàng hoàng — thì người mua sẽ cầm giấy ấy mà đi tới đầu dây của hắn, và đường dây sẽ tự lộ thêm một nấc. Nàng quyết: để họ bán. Không thu giữ giấy. Không chặn người. Nàng nói rõ cả cái giá của quyết định ấy: từ hôm nay, tên của những nhà trong sổ sẽ đi thêm một bước mà đoàn không níu lại — cái đó là do nàng chọn, và nàng nhớ.",
+      "Trở lại vòng hồ sơ, Cao Minh bước vào thản nhiên như chưa từng rời đi đâu cả. Hắn ngồi xuống, hỏi Ký Lương một câu tùy tiện về chuyện giấy bán xong thì mang đi đâu xa không — hỏi như một vị khách rảnh rỗi hỏi chuyện đường sá. Ký Lương, đang hứng chí vì chốt được giá, buột miệng nói hé ra điểm đến ở cấp tiếp theo của tập giấy: một đầu mối phía trên mà hắn chỉ nói tới đó rồi khựng lại. Đầu dây trên nữa là ai, và Giới Phòng cần những cái tên này để làm gì, không một lời nào trong căn phòng này hé ra.",
+      "Tiền trao, giấy trao tay, ngay trước mắt đoàn. Ký Lương ôm tập giấy ra về theo lối vòng hồ sơ, bước chân nhẹ như người vừa mua được một món hời. Không ai trong phòng nói toạc điều gì. Không ai xử Lý Kha, không ai gọi hắn là kẻ hai đầu — nhưng từ buổi hôm nay, đoàn đã biết: người giữ giấy cho nhà này cũng là người bán giấy của nhà này, đều đặn như một lệ.",
+      "Ký Lương đi khuất, mùi khói bếp từ nhà bếp phía sân sau theo gió đưa tới vòng hồ sơ — căn bếp tách khỏi nhà chính, khói bếp quanh năm không dứt của biệt thự này. Cao Minh ghé lại phòng Tiểu Lan, nói một câu ngắn: giấy đã đi rồi. Nàng đáp cũng ngắn, mà nặng: nàng để họ bán, việc ấy nàng nhớ thay cho cả đoàn."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Lý Kha",
+        "text": "Dạ, sổ hộ dân của làng đã chép xong, tôi mang trình lên nhà xem. Chép đúng theo sổ gốc, nhà nào nhà nấy đủ tên đủ tuổi. Mấy dấu bên lề là dấu của người chép để dễ tra cứu thôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Sổ dân mà đánh dấu như sổ nợ. Nhà có trẻ nhỏ một dấu, nhà mắc nợ một dấu, nhà dời đi một dấu. Dân trong sổ của ngươi được chăm sóc kỹ hơn cả gia phả nhà này."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Nghe tôi tính cho rõ nè. Một cái tên còn ở làng, nhà có trẻ nhỏ, đáng ba quan. Nhà mắc nợ, hai quan rưỡi. Còn tên đã dời đi rồi — một quan tôi cũng thấy đắt. Chữ chết trên giấy, ai mua?"
+      },
+      {
+        "speaker": "Lý Kha",
+        "text": "Anh Lương nói vậy là ép người quen. Giấy này chép từ sổ gốc, tươi hơn mọi bản ngoài kia. Giá này là giá cho người quen đó, ra ngoài chợ giấy, không có giá này đâu."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Còn hạn dùng nữa, phải tính luôn một thể. Sổ này dùng được mấy mùa? Qua một mùa, nhà dời đi mấy nhà, nợ trả xong mấy nhà, thì giấy của anh chỉ còn là giấy lộn."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa chém được sổ. Không đọc được sổ. Việc giấy, phải hỏi người biết giấy — người mà căn nhà này là nhà của họ, sổ này là sổ của làng họ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi xin nói một lời. Chặn hôm nay, đoàn chỉ giữ được một xấp giấy, và mất cả đường dây phía sau. Để họ bán xong, giấy đi tới đâu, đường dây lộ tới đó. Tôi quyết: để họ bán."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng chắc chứ? Tên bán đi rồi, không níu lại được đâu."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi chắc, thưa ngài. Tôi biết rõ cái giá của lời này. Tên của những nhà ấy đi thêm một bước mà tôi không níu lại. Việc đó, tôi nhớ thay cho cả đoàn."
+      },
+      {
+        "speaker": "Lý Kha",
+        "text": "Dạ, ông khách coi, việc giấy tờ trong làng, nhà lớn nắm hết cả. Ông khách cứ yên tâm, chuyện sổ sách đã có chúng tôi lo liệu chu toàn."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa có lo đâu. Ngươi lo liệu chu toàn tới mức nào, bổn tọa hôm nay coi cũng đủ rồi."
+      }
+    ],
+    "choices": [
+      {
+        "id": "let_it_flow",
+        "text": "Để vụ bán chạy trọn — nghe theo quyết của nàng: giấy đi tới đâu, đường dây lộ tới đó.",
+        "next": "lh_kitchen",
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "lyKhaListCopySold": true
+        }
+      },
+      {
+        "id": "mark_the_broker",
+        "text": "Nhớ kỹ mặt và giọng Ký Lương cùng hạn dùng hắn vừa mặc cả — ghi người, không ghi giấy.",
+        "next": "lh_kitchen",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "lyKhaListCopySold": true
+        }
+      },
+      {
+        "id": "say_nothing_leave",
+        "text": "Không nói thêm một lời nào với Lý Kha — để hắn tưởng buổi bán hôm nay không ai để ý.",
+        "next": "lh_kitchen",
+        "flags": {
+          "lyKhaListCopySold": true
         }
       }
     ]
@@ -1539,7 +1757,7 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "ask_last_year",
         "text": "Hỏi kỹ ông Ba về năm cuối làm trong biệt thự và những chuyến đò của Lâm Ngọc Chi.",
-        "next": "lh_letter",
+        "next": "lh_i05_three_deeds",
         "effects": {
           "cluesHuaGiaDelta": 2
         }
@@ -1547,13 +1765,224 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "buy_catch",
         "text": "Mua hết mẻ cá sớm của ông Ba gửi vào bếp biệt thự, không mặc cả.",
-        "next": "lh_letter",
+        "next": "lh_i05_three_deeds",
         "effects": {
           "suppliesDelta": -1,
           "cluesHuaGiaDelta": 1
         },
         "flags": {
           "fishermanKindness": true
+        }
+      }
+    ]
+  },
+  "lh_i05_three_deeds": {
+    "id": "lh_i05_three_deeds",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Mảnh ruộng bán ba lần",
+    "backgroundId": "long-hai-market",
+    "location": "Rìa chợ Long Hải, Nam Kỳ",
+    "narration": [
+      "Sáng hôm ấy, trước giờ ra cổng, Cao Minh ghé qua phòng Tiểu Lan. Việc chạy chợ của nhà là việc diễn ra công khai mỗi buổi sáng — sân trước đã có tiếng quản gia giao việc, tiếng giỏ mây đặt xuống — và nàng nghe thấy hết mà biết hôm nay nhà có chuyến chợ. Nàng nói về giấy tờ của dân: hễ ngoài chợ hắn gặp giấy tờ của người dân bị oan hay bị ép, thì giấy phải ở lại với người dân, không được mang về căn nhà này, và càng không được để căn nhà này xử thay. Chứng cứ còn sống là chứng cứ còn nằm trong tay người kêu.",
+      "Hắn nhận lời dặn ấy thản nhiên như nhận một lệ lạ của xứ lạ, rồi ra cổng theo việc của nhà. Tới cuối buổi, ở rìa chợ, một đám đông đang xúm lại quanh một vụ cãi nhau mỗi lúc một lớn tiếng. Châu Văn Lợi — người nông dân có thửa ruộng đang bị đem ra bán — đứng giữa vòng người, mặt đỏ gay, tay chỉ về phía Bà Chín Lãi.",
+      "Việc cãi nhau, nghe một lúc thì rõ: cùng một thửa ruộng của Châu Văn Lợi, mà trên bàn của Bà Chín Lãi có tới ba tờ khế bán cho ba người khác nhau. Ba tờ khế, ba cái tên người mua, ba dấu triện — và chỉ một thửa ruộng nằm ngoài đồng, không lớn thêm được một tấc nào. Bà Chín Lãi đáp chậm và cứng, bằng cái giọng của người cầm giấy: giấy trắng mực đen, ai cầm giấy người đó có lý.",
+      "Đúng lúc đám đông bắt đầu chia phe cãi nhau thay cho hai người, Trần Thị Mến bước ra. Mến là người đàn bà biết chữ ở chợ này — ai cần đọc giấy, viết đơn, đều tìm tới bà — và bà bước ra không phải để bênh ai, mà để đọc giấy thành tiếng cho người không biết chữ nghe. Bà cầm từng tờ khế lên, đọc rõ từng chữ: ngày tháng, số nợ, tên người bán, tên người mua.",
+      "Mến đọc tới đâu, chỉ ra tới đó, ngón tay di theo từng dòng cho cả vòng người cùng thấy. Ba tờ khế không phải ba món nợ khác nhau. Đó là một món nợ duy nhất, được chuyển qua tay người này người kia, mỗi lần chuyển lại phình thêm một ít, đi một vòng rồi quay về đúng tay chủ nợ cũ đang ngồi trước mặt mọi người.",
+      "Cao Minh đã đứng ở rìa đám đông từ lúc nào. Hắn cầm lấy, lật qua lật lại, nhìn triện, nhìn dấu — hắn không đọc được hệ sổ này, và cũng không giả vờ là mình đọc được. Rồi hắn hỏi một câu, tùy tiện như người hỏi giá cá ngoài chợ: một mảnh đất nằm ngoài đồng, nắng mưa bao nhiêu năm không mọc thêm được một gang, vậy mà bán được tới ba lần — giấy này đẻ ra đất, hay đất đẻ ra giấy? Cả đám đông im phăng phắc. Vì trả lời thẳng câu ấy là nói ra cái cơ chế nợ và đất mà mọi người ở chợ này đều đang sống trong đó.",
+      "Sự im lặng kéo dài vừa đủ lâu thì một lối thoát quen thuộc tự hiện ra: có người trong đám đông lên tiếng đề nghị đưa cả ba tờ khế về phủ Hứa Gia phân xử. Nhà lớn có sổ, có triện, có người biết chữ — nhờ nhà lớn coi cho một lần là xong. Bà Chín Lãi gật đầu thuận ngay, nhanh hơn mọi người tưởng: hệ giấy là sân nhà của chủ nợ, giấy vào cổng ấy thì phần thắng đã nằm sẵn trong tay người quen với sổ sách.",
+      "Cao Minh giơ một tay lên, nhẹ nhàng như người gạt một làn khói. Hắn nói bằng đúng lời dặn hắn đã nhận sáng hôm ấy, nói như nhắc lại một lệ mình vừa học được: việc giấy, hắn đã được dặn rồi — giấy của ai, người đó giữ. Và ở đây, hôm nay, cũng không ai xử vụ ruộng này hết. Mến bước lên, làm việc của người biết chữ ngay tại chỗ: bà mượn giấy bút, chép lại một bản sao của tờ khế cốt yếu ngay trước mặt cả đám đông, rồi tự tay giữ lấy. Bà nói rõ tư cách của nó: bà giữ tờ này không phải để thắng kiện hôm nay — kiện hôm nay chưa xử được — mà để sau này, hễ có ai hỏi tới vụ ruộng này, chợ này còn một người nhớ.",
+      "Đám đông tản dần theo cái cách đám đông ở chợ vẫn tản: không có phán quyết, không ai được xử thắng, cũng không ai bị phạt. Bà Chín Lãi thu xấp giấy của mình về, gấp lại cẩn thận, vị thế chủ nợ nguyên vẹn — vụ ruộng chưa được xử, món nợ chưa được xóa. Bà Chín Lãi, trước khi đứng dậy, còn nói vọng một câu về phía Mến, nhẹ mà có sức nặng của một lời hẹn.",
+      "Cao Minh quay lại phía trong chợ. Buổi chợ chưa kết thúc, và ở phía các sạp giữa chợ, một thứ ồn ào khác đang bắt đầu nổi lên — tiếng của những người đàn ông nói chuyện bằng giọng thấp và những chiếc khăn đen thấp thoáng giữa các mái lều. Việc ở giữa chợ thì mới bắt đầu."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, sáng nay nhà có việc chạy chợ, tôi xin dặn ngài một lời về giấy tờ. Ngoài chợ, nếu ngài gặp giấy tờ của dân bị oan hay bị ép, thì giấy phải ở lại với người dân. Ngài chỉ xem thôi, đừng mang về nhà này, và đừng để nhà này xử thay, thưa ngài."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Được. Giấy của ai, người đó giữ. Việc giấy, nghe nàng — bổn tọa nhớ được một lệ này."
+      },
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Bà Chín coi lại mà coi! Ruộng của tui, tui bán có một lần, giấy một tờ. Giờ bà lôi ra ba tờ khế, ba người mua — ruộng tui ngoài đồng kia, nó có đẻ thêm được miếng nào đâu?"
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Giấy trắng mực đen, anh Lợi. Ai cầm giấy, người đó có lý. Anh cãi bằng miệng ở chợ này thì gió thổi qua là hết. Giấy của tui ở đây, anh cứ coi cho kỹ rồi hẵng nói."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Để tui đọc cho cả chợ nghe. Ba tờ này không phải ba món nợ. Là một món nợ đi một vòng: qua tay người này, sang tay người kia, mỗi vòng phình thêm một ít, rồi quay về đúng tay cũ. Ngày tháng nối nhau không hở một ngày, triện đóng chồng lên nhau — coi đây."
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Chữ nghĩa của chị Mến đọc sao thì đọc. Giấy của tui là giấy thật, triện thật, tên thật. Chị đọc khéo miệng hơn người, chớ giấy không vì vậy mà thành giả được đâu."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Một mảnh đất, nắng mưa bao nhiêu năm, không tự mọc thêm được một gang. Giấy thì đẻ được ba lần bán. Bổn tọa hỏi một câu thôi: giấy nhà ai đẻ khỏe vậy?"
+      },
+      {
+        "speaker": "Người ở chợ",
+        "text": "Vậy thì… đưa hết ba tờ khế về phủ Hứa Gia nhờ nhà lớn phân xử đi! Nhà lớn có sổ, có triện, có người biết chữ. Ở chợ này cãi tới tối cũng không ra được lý."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Không. Việc giấy, bổn tọa đã được dặn từ sáng: giấy của ai, người đó giữ. Khế ở lại với dân ở chợ này. Không ai mang về phủ, và hôm nay ở đây, không ai xử vụ ruộng này hết."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Để tui chép lại một bản ngay tại đây, trước mặt cả chợ. Tui giữ tờ này không phải để thắng kiện hôm nay. Tui giữ để sau này ai hỏi tới, chợ này còn một người nhớ."
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Chợ này còn họp dài, chị Mến. Giấy còn, nợ còn. Hôm nay không xử, thì còn nhiều hôm khác."
+      }
+    ],
+    "choices": [
+      {
+        "id": "copy_stays_with_people",
+        "text": "Để bản sao ở lại tay Mến — chứng cứ của dân thì dân giữ, đúng luật nàng đã đặt.",
+        "next": "lh_i02_black_scarves",
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "thriceSoldPlotKnown": true
+        }
+      },
+      {
+        "id": "ask_the_silence",
+        "text": "Đứng lại giữa cái im lặng của chợ thêm một lúc — để câu hỏi về mảnh đất tự đi vào tai người ta.",
+        "next": "lh_i02_black_scarves",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "thriceSoldPlotKnown": true
+        }
+      },
+      {
+        "id": "no_verdict_here",
+        "text": "Nói rõ một câu rồi đi: hôm nay không ai xử vụ ruộng này ở chợ — đừng ai mơ có quan tòa mới.",
+        "next": "lh_i02_black_scarves",
+        "flags": {
+          "thriceSoldPlotKnown": true
+        }
+      }
+    ]
+  },
+  "lh_i02_black_scarves": {
+    "id": "lh_i02_black_scarves",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Khăn đen ở chợ",
+    "backgroundId": "long-hai-market",
+    "location": "Chợ Long Hải, Nam Kỳ — cuối buổi chợ",
+    "narration": [
+      "Vụ ruộng ở rìa chợ vừa lắng xuống thì ở giữa chợ, một thứ ồn ào khác đã nổi lên, thấp và đều. Bốn Mọc — người của bang Đoản Đao — dẫn theo hai người nữa, đi thẳng tới một sạp hàng ở khu giữa chợ, khu đất làm ăn vốn là phần coi sóc của Hắc Khăn. Hắn tới thu tiền bảo kê, thu chồng lên phần đất của bang khác, cố ý bước qua một ranh giới mà cả chợ đều biết.",
+      "Người bán hàng không cãi, không năn nỉ, cũng không kêu cứu. Anh ta mở hộc tiền, đếm ra đúng số, đặt lên mặt sạp bằng hai tay — nộp như lệ thường ngày ở chợ này, dù phần đất dưới chân sạp vốn là phần của Hắc Khăn. Anh ta nộp xong, cúi đầu, và chỉ mong buổi chợ trôi qua như mọi buổi chợ khác.",
+      "Bảy Lược xuất hiện không ồn ào, đi ra từ phía các sạp trong, khăn đen trên vai, bước chân chậm, và đám đông tự dạt ra nhường lối. Hắn tới không phải để đánh nhau giữa chợ đông người — chợ còn phải làm ăn ngày mai, và đất này là đất của khăn đen. Hắn đứng lại ở khoảng cách vừa đủ để cả khu chợ nghe được, hỏi Bốn Mọc bằng giọng điềm tĩnh của người giữ thể diện cho cả hai phía: nhắc ranh giới trước đám đông, để đối phương tự rút trong thể diện.",
+      "Bốn Mọc đáp lễ cũng bằng đúng thứ lễ ấy. Hắn không chịu nhục, cũng không gây thêm sự: hắn nói mình qua là qua chơi, còn tiền chợ, ranh giới chợ, thì để bữa khác hai bên ngồi lại tính. Rồi Bốn Mọc quay đi, dẫn người của mình rút về phía đầu chợ, mang theo số tiền vừa thu — không ai bắt hắn nhả ra một đồng. Trật tự cũ của chợ còn nguyên, đến một cái khăn cũng không xô lệch.",
+      "Chỉ tới lúc ấy, Bảy Lược mới quay sang phía vị khách đang đứng xem ở rìa vòng người. Hắn nhìn hai thanh kiếm lơ lửng sau vai Cao Minh, nhìn lâu hơn một cái liếc, và nhận ra người này là ai: chuyện về vị khách song kiếm của Hứa Gia đã tới tai giang hồ chợ này. Đây không phải người có thể thử bằng dao — không phải lúc này, không phải ở giữa chợ này. Hai bên chỉ nhận diện và đánh giá lẫn nhau: một cái gật đầu rất khẽ dành cho kẻ mạnh hơn mình, và một cái nhướng mày đáp lại.",
+      "Và Cao Minh chọn không can thiệp theo cách mà cả chợ đang chờ. Hắn không đánh ai, không đuổi ai, không tuyên bố chợ này từ nay phải thế này hay thế kia. Trong nghề tiền bảo kê đê tiện ấy, tên thủ lĩnh khăn đen giữ được chút khí phách: giữ ranh mà không đổ máu, giữ mặt cho đối thủ mà không mất mặt mình.",
+      "Sáng hôm ấy, trước giờ ra cổng — cùng một buổi dặn sáng trong phòng Tiểu Lan, sau lời dặn về giấy tờ — nàng dặn thêm một lời nữa, về người. Nàng nghe tiếng sân trước mà biết hắn sẽ ra chợ, và dạy hắn một lệ nữa của nhà này: người của nhà này ra chợ thì đi một mình mà về cũng một mình. Vì ai đi bên cạnh khách của nhà này, cả chợ sẽ nhớ người ấy là người của nhà — mà căn nhà này là nhà người vùng này sợ.",
+      "Trở lại cuối buổi chợ. Người bán hàng vừa nộp tiền chồng đang đứng ở sạp của mình, nhìn theo cả hai phía giang hồ, và hiểu rõ rằng sạp của mình đã thành cái cớ để hai bang tính sổ với nhau. Ánh mắt anh ta dừng lại ở vị khách song kiếm — người duy nhất ở chợ này mà không bang nào dám đụng vào. Anh ta đánh liều bước tới, cúi đầu thật thấp, và xin một điều duy nhất: không xin xử, không xin bênh, chỉ xin đi theo sau vị khách ra khỏi chợ, mượn cái bóng của khách nhà họ Hứa cho qua buổi chợ hôm nay.",
+      "Phản xạ đầu tiên của Cao Minh là nhún vai. Một người đi theo sau lưng ra khỏi chợ — với hắn, chuyện ấy nhẹ như thêm một cái bóng. Hắn đã gần như gật đầu. Rồi lời dặn sáng hôm ấy trở lại, nguyên vẹn từng chữ: đi một mình mà về một mình. Hắn dừng lại. Hắn nhìn người bán hàng, và từ chối — không giận, không thương hại, không hứa hẹn điều gì cho ngày mai — chỉ nói rõ cái lý phàm mà nàng đã dạy hắn: đi bên cạnh hắn, cả chợ sẽ nhớ mặt anh ta là người của nhà kia. Chỗ của anh ta hôm nay là ở lại sạp của mình.",
+      "Người bán hàng sững lại một lúc lâu, rồi như hiểu ra theo cách của dân chợ. Anh ta cúi đầu, lùi dần về phía sạp, khuất vào giữa các sạp bên cạnh, trở lại thành một người bán hàng vô danh giữa chợ của mình. Cao Minh không ra lệnh gì cho hai bang, không dọa ai, không hứa bảo kê cho anh ta ngày mai: tiền đã nộp vẫn là đã nộp.",
+      "Cao Minh quay lưng, bước ra khỏi chợ một mình. Không người chợ nào đi cùng, không ai đi trong bóng hắn. Phía sau lưng hắn, buổi chợ trở lại nhịp của nó: người bán hàng ở bên sạp của mình như một người vô danh; tiền bảo kê không đổi một ly. Bước chân cuối cùng của hắn rời khỏi đất chợ, và buổi chợ khép lại sau lưng."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Bốn Mọc",
+        "text": "Đất nào cũng là đất chợ, anh chủ sạp. Tiền thì nộp cho người đang đứng trước mặt mình. Đoản Đao qua đây thu một vòng, anh cứ theo lệ mà làm, khỏi phải nhìn quanh."
+      },
+      {
+        "speaker": "Người bán hàng",
+        "text": "Dạ… dạ, con nộp. Hai bên đều là các ông lớn, con chỉ là người bán hàng ở chợ này thôi. Tiền đây, thưa ông, con xin nộp đủ."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Anh Bốn. Đất này khăn đen coi đã lâu năm. Anh qua thu tiền ở đây, là anh coi thường khăn, hay coi thường chợ này? Nói một câu cho rõ, để cả chợ nghe."
+      },
+      {
+        "speaker": "Bốn Mọc",
+        "text": "Anh Bảy nói vậy là nặng lời. Tui qua là qua chơi thôi. Tiền chợ, ranh chợ — để bữa khác hai bên ngồi lại tính cho rõ. Hôm nay, tui nể mặt anh, tui đi."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Ông khách là khách của nhà lớn. Chợ này nhỏ, người nhỏ, không dám làm phiền ông. Việc của chợ, để chợ tự liệu với nhau."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cứ làm việc của ngươi. Bổn tọa xem chợ, không xem ai thu tiền ai. Lệ của chợ này coi bộ cũng có thứ đáng xem."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi xin dặn thêm một lời về người. Ngài ra chợ, xin ngài đi một mình mà về cũng một mình. Ở chợ, dầu có ai xin đi theo ngài ra khỏi chợ, ngài đừng nhận. Ai đi bên cạnh khách của nhà này, người ngoài nhớ người ấy là người của nhà — mà nhà này, thưa ngài, là nhà người vùng này sợ. Đi bên cạnh ngài không phải được che — là bị trông thấy rõ nhất."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Được. Đi một mình, về một mình. Việc người, nghe nàng."
+      },
+      {
+        "speaker": "Người bán hàng",
+        "text": "Thưa ông… ông đi đâu, cho con đi theo ra khỏi chợ thôi. Con không dám xin ông xử việc gì hết. Con chỉ xin cái bóng của ông, cho con qua buổi chợ hôm nay."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Không được. Bổn tọa đi một mình mà về một mình — đã được dặn vậy từ sáng. Ngươi đi cạnh bổn tọa, cả chợ nhớ ngươi là người của nhà kia. Ở lại sạp của ngươi đi."
+      },
+      {
+        "speaker": "Người bán hàng",
+        "text": "Dạ… dạ, con hiểu rồi, thưa ông. Con ở lại. Con là người bán hàng ở chợ này thôi, từ trước tới giờ vẫn vậy."
+      }
+    ],
+    "choices": [
+      {
+        "id": "leave_alone_as_told",
+        "text": "Rời chợ một mình đúng như nàng đã dặn — người bán hàng ở lại với sạp và chợ của mình, không ai đi trong bóng mình ra khỏi chợ.",
+        "next": "lh_letter",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "marketProtectionFeeSeen": true
+        }
+      },
+      {
+        "id": "watch_the_line_held",
+        "text": "Đứng xem cho hết màn giữ ranh giữa hai bang — nhớ kỹ lệ giang hồ của chợ này để sau này khỏi lầm.",
+        "next": "lh_letter",
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "marketProtectionFeeSeen": true
+        }
+      },
+      {
+        "id": "leave_the_market_be",
+        "text": "Quay lưng rời chợ một mình như chưa từng thấy gì — chợ của ai, người đó tự giữ; mình không mang theo người nào của chợ.",
+        "next": "lh_letter",
+        "flags": {
+          "marketProtectionFeeSeen": true
         }
       }
     ]
@@ -4463,7 +4892,7 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "open_shore",
         "text": "Đi thẳng đường mé biển trống trải — nhanh, nhưng phơi mình dưới mắt kẻ đuổi theo.",
-        "next": "lh_road_choice",
+        "next": "lh_i06_roadside_writ",
         "effects": {
           "lanHealthDelta": -2
         }
@@ -4471,11 +4900,126 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "casuarina_grove",
         "text": "Lánh vào rặng phi lao — chậm hơn, nhưng sương và bóng cây che đi sợi chỉ truy đuổi.",
-        "next": "lh_road_choice",
+        "next": "lh_i06_roadside_writ",
         "effects": {}
       }
     ],
     "objective": "escape_long_hai"
+  },
+  "lh_i06_roadside_writ": {
+    "id": "lh_i06_roadside_writ",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Chén rượu bên đường cái",
+    "backgroundId": "long-hai-coastal-road",
+    "location": "Đường ven biển Long Hải — rạng sáng, trước ngã rẽ",
+    "companions": [
+      "npc_porter",
+      "le_thu_nguyet"
+    ],
+    "narration": [
+      "Đường ven biển rạng sáng còn đẫm sương, và đoàn người vẫn đang đi, không ai có ý định dừng lại lâu ở bất cứ đâu. Phía trước, con đường bắt đầu cong về phía mỏm đá phủ phi lao, nơi ngã rẽ đang chờ. Nhưng ngay ở khúc đường hẹp trước ngã rẽ, hai nhóm người đã đứng sẵn từ lúc nào, chặn giữa lối đi mà giằng co với nhau — và đoàn buộc phải chậm bước. Giữa hai nhóm người ấy là một người phu khuân vác vô danh, đòn gánh còn trên vai, gánh hàng chưa đặt xuống, đứng im như một món đồ đang bị hai bên cùng nắm mà kéo.",
+      "Một bên là người của Giới Phòng, tay cầm một tờ trát có triện đỏ, giọng công vụ vang lên giữa đường vắng. Bên kia là mấy người nhận lệnh từ đầu mối của Hứa Gia, tay cũng có giấy, cũng có lời lẽ của nhà lớn. Hai thứ giấy giơ lên cùng một lúc, tranh nhau chính một con người: bên này nói người phu phải đi theo trát để kiểm tra, bên kia nói người này nhà đã giữ trước, giấy của nhà chưa hủy thì không ai được dắt đi. Người phu ở giữa không dám nghiêng về bên nào; anh ta chỉ ôm chặt đòn gánh, như ôm lấy thứ duy nhất trên đời còn thuộc về mình.",
+      {
+        "text": "Thu Nguyệt đi sát phía sau, thấy hai tờ giấy giơ lên giữa đường thì níu chặt lấy tay áo, mặt tái đi. Cô lớn lên trong căn nhà mà một tờ giấy có thể đổi đời một con người, nên trước mọi thứ giấy tờ, phản xạ đầu tiên của cô vẫn là sợ nó gọi tới tên mình. Cô hỏi nhỏ, giọng run, mắt không rời triện đỏ trên tờ trát.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "text": "Hai tờ giấy giơ lên giữa đường, triện đỏ chọi với triện của nhà lớn, không bên nào chịu hạ tay xuống trước. Đoàn người không ai lạ gì thứ giấy này: cả một tòa biệt thự vừa bỏ lại sau lưng cũng vận hành bằng giấy, bằng sổ, bằng những tờ lệnh truyền qua nhiều tay. Có điều sáng nay, giấy được mang ra giữa đường cái mà tranh nhau một con người đang đứng sờ sờ ở đó.",
+        "unless": "thuNguyetFollows"
+      },
+      "Cao Minh vẫn bước thong thả như đi dạo, chén rượu trong tay còn lưng chừng — thứ rượu hắn mang theo từ đầu hành trình, uống mãi chưa cạn, như thể buổi sáng trốn chạy này cũng chỉ là một buổi đi chơi hơi sớm. Không ai thấy hắn làm gì. Chỉ biết trong một khoảnh khắc, toàn bộ đao và súng của cả hai nhóm người bỗng rời khỏi tay chủ của chúng, nhấc lên giữa không trung, treo yên ở độ cao quá đầu người, lấp loáng trong nắng sớm.",
+      "Hai nhóm người bỗng chốc tay không. Người cầm trát vẫn cố giữ giọng công vụ, mà mắt cứ ngước lên nhìn thanh đao của chính mình đang treo trên đầu. Không có phát súng nào nổ, không ai bị thương, không trận đánh nào mở ra — buổi sáng này không có thì giờ cho những thứ ấy, và vị khách song kiếm cũng không có hứng. Hai bên chỉ còn giằng co bằng lời: giấy chọi giấy, triện chọi triện, trong khi sắt thép của cả hai bên treo im lặng trên đầu như một đám mây không chịu tan.",
+      "Tiểu Lan bước lên một bước, nhận lấy tờ trát từ tay người cầm nó — hắn buông ra gần như theo phản xạ, vì tay hắn còn đang bận ngước nhìn vũ khí của mình. Nàng đọc tờ trát bằng mắt của người sinh ra trong một căn nhà sống bằng giấy tờ: đọc nhanh, đọc đúng chỗ cốt yếu. Nhưng ở cuối tờ, còn một dòng nữa, viết về chính đoàn người vừa ra khỏi biệt thự đêm qua — một dòng ngắn ngủi mà nàng đọc đi đọc lại hai lần trước khi ngẩng lên.",
+      "Nàng không đôi co với hai nhóm người. Nàng cũng không hỏi ý vị khách song kiếm. Nàng quay sang người phu khuân vác — con người mà hai thứ giấy vừa tranh nhau suốt một lúc lâu mà không một ai buồn hỏi anh ta một tiếng. Nàng hỏi anh ta, đúng phép của người có học nói với người đang ở phận dưới, rõ ràng và chậm rãi: hai bên đều nói thay anh, vậy anh muốn đi đâu. Người phu sững người.",
+      "Người phu đáp lí nhí mà dứt khoát, nói về xóm dưới ở cuối con đường này, nơi vợ anh ta đang chờ, nơi mấy đứa nhỏ chắc giờ này đang ngồi ở cửa ngóng. Không phải về với Giới Phòng, không phải về với nhà lớn — về nhà mình. Câu trả lời ấy rơi xuống giữa đường vắng, nhẹ mà nặng: hai thứ giấy tranh nhau một con người suốt buổi, và con người ấy, khi được hỏi, chỉ nói một điều không nằm trong tờ giấy nào cả. Tiểu Lan gật đầu một cái, trả tờ trát lại cho người cầm nó, rồi quay bước, đi tiếp về phía ngã rẽ như thể việc vừa rồi đã xong.",
+      "Cao Minh uống nốt ngụm rượu trong chén, rồi phất tay một cái thản nhiên như phủi bụi. Toàn bộ đao súng treo trên không trung rơi xuống cùng một lúc, cắm và nằm lả tả trong bụi cỏ ven đường, không món nào rơi trúng người. Người phu không chờ ai tuyên bố thêm điều gì: anh ta siết lại đòn gánh, cúi đầu chào một cái thật thấp về phía nàng, rồi rảo bước về hướng xóm dưới, đi nhanh dần, rồi gần như chạy. Tờ trát vẫn là tờ trát, hồ sơ trong sổ Giới Phòng vẫn chưa đóng — nhưng buổi sáng này, nó không dắt được một ai đi cả.",
+      "Đoàn tiếp tục đi. Phía trước, con đường bắt đầu rẽ sau mỏm đá phủ phi lao, và trong bóng tối cuối cùng của rạng sáng, những thứ đã được chuẩn bị sẵn bởi những con người chọn đứng về phía nàng đang chờ. Cao Minh cất chén rượu, bước theo nhịp đi của đoàn, thong thả như người vừa xem xong một trò tranh giấy giữa đường và thấy nó cũng đáng một chén rượu buổi sớm."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Người cầm trát",
+        "text": "Trát của Giới Phòng đây. Người phu này có tên trong sổ kiểm tra, phải theo về trình diện. Ai cản giữa đường là cản phép quan, các ông các bà liệu mà tránh ra."
+      },
+      {
+        "speaker": "Người của Hứa Gia",
+        "text": "Người này phủ này đã giữ trước, giấy của phủ chưa hủy, Giới Phòng cũng không dắt đi ngang xương như vậy được. Ở đất Long Hải này, việc gì cũng phải có trước có sau."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa ông… giấy của họ giơ cao vậy… trong đó có tên em không? Em sợ giấy lắm. Giấy nhà mình gọi tên ai, người đó phải đi, từ xưa tới giờ vẫn vậy.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Giấy của ai, người ấy cứ giữ lấy mà cãi. Còn sắt thép, để bổn tọa giữ một lúc. Treo trên đó cho nhẹ tay, cãi nhau cũng đỡ nặng."
+      },
+      {
+        "speaker": "Người cầm trát",
+        "text": "Ông… ông làm vậy là… đao súng của chúng tôi… Ông khách, việc này là việc của quan, ông đừng xen vào mà mang họa vào thân!"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Là giữ. Khỏi cảm ơn. Cãi tiếp đi, bổn tọa đang nghe vui tai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi đọc rồi. Tờ này gọi người phu đi kiểm tra. Còn dòng cuối tờ viết về đoàn này: hồ sơ chưa đóng. Sổ của Giới Phòng chưa đóng hồ sơ của tôi, thưa ngài."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh phu, tôi hỏi anh một câu. Hai bên đều nói thay anh từ nãy tới giờ. Anh muốn đi đâu? Cứ nói đúng ý anh, không phải sợ bên nào hết."
+      },
+      {
+        "speaker": "Phu khuân vác",
+        "text": "Dạ… dạ, cô hỏi thì tui xin nói thiệt. Tui muốn về nhà. Nhà tui ở xóm dưới, vợ tui đang chờ, mấy đứa nhỏ chắc đang ngóng ở cửa. Tui chỉ muốn về nhà thôi, thưa cô."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nghe rõ cả rồi. Giấy chưa đóng thì cứ để nó chưa đóng. Đi thôi, rượu nguội mất."
+      },
+      {
+        "speaker": "Người cầm trát",
+        "text": "Các người cứ đi đi! Hồ sơ này chưa đóng đâu! Sổ của Giới Phòng còn đó, việc này chưa xong đâu!"
+      }
+    ],
+    "choices": [
+      {
+        "id": "let_him_go_home",
+        "text": "Để người phu đi về phía xóm dưới — sáng nay, người này tự quyết bằng miệng của mình.",
+        "next": "lh_road_choice",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "roadsideSummonsSeen": true
+        }
+      },
+      {
+        "id": "leave_the_writ_lying",
+        "text": "Để tờ trát nằm lại với người cầm nó — hồ sơ chưa đóng thì cứ để nó chưa đóng, đoàn không đứng lại vì một tờ giấy.",
+        "next": "lh_road_choice",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "roadsideSummonsSeen": true
+        }
+      },
+      {
+        "id": "finish_the_wine",
+        "text": "Uống cạn chén rượu rồi mới đứng dậy đi tiếp — thong thả như không có tờ giấy nào trên đời đuổi kịp mình.",
+        "next": "lh_road_choice",
+        "flags": {
+          "roadsideSummonsSeen": true
+        }
+      }
+    ]
   },
   "lh_road_choice": {
     "id": "lh_road_choice",
@@ -4861,12 +5405,133 @@ export const VN_SCENES = Object.freeze({
       {
         "id": "by_her_full_name",
         "text": "Từ nay chỉ gọi nàng bằng đầy đủ họ tên — Hứa Tiểu Lan — như một người ngang hàng.",
-        "next": "lh_slice_end",
+        "next": "lh_i01_false_weights",
         "effects": {
           "lanTrustDelta": 2
         },
         "flags": {
           "lanNameRestored": true
+        }
+      }
+    ]
+  },
+  "lh_i01_false_weights": {
+    "id": "lh_i01_false_weights",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Hai quả cân nhà Cai Lẫm",
+    "backgroundId": "long-hai-fish-wharf",
+    "location": "Trên thuyền, trước bến cá nhỏ — buổi sớm",
+    "companions": [
+      "npc_fisherman",
+      "le_thu_nguyet"
+    ],
+    "narration": [
+      "Mặt trời đã lên trọn vẹn, chiếc thuyền gỗ của lão ngư ông trôi chậm về phía bến cá nhỏ khuất sau lạch nước. Bờ biệt thự đã xa ngoài tầm của mọi điểm neo, mọi sợi chỉ, mọi tờ giấy; phía trước là bến cá bắt đầu nhộn nhịp: tiếng quang gánh kẽo kẹt, tiếng mặc cả cá tôm chen nhau. Cao Minh ngồi dựa mạn thuyền, hai thanh kiếm lơ lửng yên sau vai, mắt lim dim như người qua một đêm dài chỉ để đổi lấy một buổi sáng ồn ào tầm thường.",
+      "Rồi một tiếng cãi nhau nổi lên trên mọi thứ tiếng khác, vọng từ đầu bến xuống mặt nước, mỗi lúc một gắt. Cao Minh nhíu mày. Suốt một đêm phá cổng, qua bao nhiêu thứ không phải việc phàm, hắn không hề nhíu mày lấy một lần; vậy mà tiếng người cãi nhau vì mấy đồng tiền cá buổi sớm lại làm hắn khó chịu ra mặt.",
+      {
+        "text": "Ở khoang sau, Thu Nguyệt ngồi ôm gói đồ, nhìn bến cá đầu đời ngoài cổng Hứa Gia mà mắt mở to không chớp. Bốn người trên thuyền cùng nghe tiếng cãi mỗi lúc một gần: lão ngư ông chèo chậm lại, Tiểu Lan ngồi thẳng người ở mũi thuyền, còn con bé gia nhân lần đầu biết ngoài kia người đời cãi nhau vì cá tôm cũng vui đến thế. Đó là buổi sáng đầu tiên của nó ở ngoài cổng ấy — ồn ào, và tự do.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "text": "Khoang sau của thuyền trống và yên, chỉ có tiếng nước vỗ vào mạn gỗ theo nhịp chèo đều của lão ngư ông. Ba người trên thuyền cùng nghe tiếng cãi ở đầu bến mỗi lúc một gần: Tiểu Lan ngồi thẳng ở mũi thuyền, quay mặt về phía trạm cân như người nhận ra một thứ lệ cũ. Buổi sớm trên mặt nước trong trẻo đến mức tiếng ồn nào cũng nghe rõ gấp đôi.",
+        "unless": "thuNguyetFollows"
+      },
+      "Từ mũi thuyền nhìn lên, trạm cân hiện ra rõ: bàn gỗ cũ kê cao, chiếc cân đòn và mấy quả cân sắt đen bóng vì tay người cầm nắm nhiều năm. Đứng sau bàn là Cai Lẫm, người coi trạm thu phí của bến này, đang tự tay lật từng quả cân mà kiểm, nét mặt của một người có chức phận quen ra lệnh ở chốn này. Hắn đã nghe chuyện vị khách mang hai thanh kiếm vừa ra khỏi biệt thự trong đêm; mắt hắn cứ liếc ra mặt nước về phía thuyền, mà tay vẫn giữ nhịp kiểm cân, không cho phép mình run.",
+      "Đối diện Cai Lẫm là bà Sương, người đàn bà bán cá lâu năm ở bến này, đang cãi bằng cái giọng khàn đặc của người thức dậy từ canh ba — cãi không phải vì một lần này, mà vì mọi lần trước cộng lại.",
+      "Cao Minh nhìn hai quả cân nằm cạnh nhau trên bàn. Cùng một ký hiệu đúc nổi, cùng một dòng chữ của trạm, vậy mà một quả trông đẫy hơn quả kia thấy rõ — thứ chênh lệch mắt thường cũng nhận ra, huống hồ mắt hắn. Hắn chỉ thấy phiền, và hắn không có thói quen để một thứ làm mình phiền tồn tại lâu trước mặt.",
+      "Không ai thấy hắn ra tay thế nào. Chỉ biết hai quả cân sắt bỗng rời khỏi mặt bàn, nhấc lên giữa không trung, treo lơ lửng cạnh nhau ngay trên đầu trạm cân, cao vừa đủ để cả bến trông thấy: cùng một ký hiệu, cùng một dòng chữ — và một quả lớn hơn quả kia thấy rõ. Cai Lẫm ngẩng phắt lên, mặt cắt không còn giọt máu, nhưng miệng hắn vẫn cố vớt lấy một câu chối cho cả bến nghe.",
+      "Hai quả cân treo thêm một lúc cho người cuối cùng ở bến cũng kịp nhìn, rồi từ từ hạ xuống, nằm lại trên bàn ngay ngắn như chưa từng rời khỏi chỗ. Người của trạm lặng lẽ cầm quả cân nhẹ hơn cất xuống gầm bàn, thay một quả khác lên, không giải thích một lời.",
+      "Cai Lẫm hắng giọng, rút từ hòm gỗ dưới bàn ra một xấp giấy và một cuốn sổ bìa sờn, đặt lên bàn như đặt một tấm khiên. Lệ phí của trạm có triện, có sổ, có chữ ký của những người ở trên hắn — những cái tên dân bến chỉ nghe đồn, chưa từng thấy mặt. Quan không có mặt ở bến này, làng cũng không có quyền vào việc của trạm; đám đông có mắt thấy cân gian, mà không có cửa nào để mang cái thấy ấy vào mà kêu.",
+      "Khi tiếng ồn đã lắng xuống thành tiếng mặc cả thường ngày, Tiểu Lan mới cất tiếng từ mũi thuyền. Nàng không hỏi về hai quả cân — chuyện ấy cả bến đã thấy. Nàng hỏi bà Sương một việc khác hẳn, bằng giọng điềm tĩnh của người hiểu lệ thu: bà nộp phí ở trạm này đã bao nhiêu lần rồi, và mỗi lần nộp, trạm có đưa bà một tờ biên lai nào không.",
+      "Bà Sương đáp rõ ràng từng ý, nói to vừa đủ để mấy người đứng gần đều nghe. Phí thì nộp theo chuyến cá, nhiều năm rồi, đếm không hết — lưng bà còng xuống bao nhiêu thì tiền nộp vào trạm này nhiều bấy nhiêu. Còn biên lai, bà cười khan: ở bến này, tiền nộp vào như nước đổ ra biển, không ai đưa giấy cho ai bao giờ. Nhưng từ hôm nay, có một người đã nói ra con số của đời mình trước mặt cả bến, và có người đã nghe.",
+      "Thuyền từ từ ghé sát vào bến nhỏ. Lão ngư ông chống sào, chuẩn bị lên bờ lấy thêm nước ngọt cho chặng đường sắp tới. Hai quả cân đã nằm yên trên bàn cân của trạm, lệ phí vẫn chạy đều như chưa từng có chuyện gì xảy ra, và Cai Lẫm vẫn đứng sau bàn cân của hắn, chức phận nguyên vẹn. Buổi sáng này không ai bị xử, không lệ nào bị xóa. Chỉ có thêm một bến người đã trông thấy hai quả cân không bằng nhau treo giữa trời, và một người đàn bà bán cá đã nói ra thành tiếng con số của chính mình."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Ngư ông",
+        "text": "Ông khách nghe cho biết: bến này có trạm cân của nhà Cai Lẫm. Cá qua bến là qua cân, qua cân là mất một đầu tiền. Dân bến biết hết, mà biết cũng như không."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ồn. Mới sáng sớm, cá chưa bán được con nào, tiếng người đã bán trước. Bổn tọa qua một đêm dài, không phải để nghe cãi nhau vì mấy quả cân."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ… ngoài này ồn vậy mà… vui quá, thưa ông.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Bà Sương",
+        "text": "Ông Cai coi lại mà coi! Cân nhà tui đủ mười phần, qua cân trạm còn tám phần hơn. Hụt một lần tui nhịn, hụt hoài, hụt đều như lệ vậy — cá tui teo lại, hay cân ông lớn ra?"
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Bà nói vậy là vu cho trạm. Cân của trạm là cân quan định, triện còn trên quai cân kia. Ông khách của nhà lớn đi qua bến — trạm xin giữ lệ cho yên bến."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hai quả cân, một cái tên đóng trên cả hai. Treo lên đây. Ai mắt tốt thì tự coi, bổn tọa khỏi phải nghe cãi thêm một câu nào nữa."
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Ông khách… đó là quả cân để dành của trạm, chưa qua kiểm lại, người làm để lẫn vào thôi! Việc trong trạm, xin để trạm tự liệu, đừng làm náo cả bến."
+      },
+      {
+        "speaker": "Bà Sương",
+        "text": "Thấy thì thấy vậy thôi. Chiều nay cá của tui vẫn phải qua cái cân này, mai cũng vậy. Ở bến này, thấy là một chuyện, sống là một chuyện khác."
+      },
+      {
+        "speaker": "Ngư ông",
+        "text": "Già sống ở bến này mấy chục năm, nói ông khách nghe một câu thiệt: ở đây, mắt thấy chưa bao giờ được làm quan. Giấy trong tay ai, người đó có lý."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, tôi hỏi một việc. Bà nộp phí ở trạm này đã bao nhiêu lần rồi? Mỗi lần nộp, trạm có đưa bà một tờ biên lai nào không?"
+      },
+      {
+        "speaker": "Bà Sương",
+        "text": "Cô hỏi lạ, mà hỏi đúng chỗ đau của tui. Nộp thì nộp theo chuyến cá, nhiều năm rồi, đếm làm sao hết. Còn biên lai — tiền nộp vào như nước đổ ra biển, ai đưa giấy cho ai bao giờ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nàng hỏi một câu, hơn bổn tọa treo hai quả cân. Cân treo lên, người xem rồi quên. Còn con số của bà ấy, từ nay có người nhớ thay."
+      }
+    ],
+    "choices": [
+      {
+        "id": "remember_her_numbers",
+        "text": "Nhớ kỹ con số của bà Sương và chuyện không biên lai — từ nay vụ cân này có một nhân chứng và một con số.",
+        "next": "lh_slice_end",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "marketScaleExposed": true
+        }
+      },
+      {
+        "id": "let_the_fee_stand",
+        "text": "Để lệ phí của trạm chạy tiếp như cũ sáng nay — thấy, nhớ, và không xử thay một buổi chợ.",
+        "next": "lh_slice_end",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "marketScaleExposed": true
+        }
+      },
+      {
+        "id": "watch_the_wharf_wake",
+        "text": "Đứng ở mũi thuyền nhìn bến cá thức dậy trọn vẹn một lần — buổi sáng đầu tiên ngoài tầm căn nhà ấy.",
+        "next": "lh_slice_end",
+        "flags": {
+          "marketScaleExposed": true
         }
       }
     ]

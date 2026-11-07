@@ -8,6 +8,10 @@ export const SCENE_BACKGROUNDS = Object.freeze({
   // ảnh hiện có gần nhất, thay khi có ảnh tàu quan tài / sân Phúc Thọ.
   "river-coffin-ship": "assets/snapshots/long-hai-coast.webp",
   "phuc-tho-tang-quan-yard": "assets/snapshots/long-hai-exterior.webp",
+  // Kỳ I (hệ 9 agent, 2026-11-07): ảnh riêng cho hai cảnh gieo mầm —
+  // trạm cân bến cá nhỏ (I01) và đường đất ven biển lúc rạng sáng (I06).
+  "long-hai-fish-wharf": "assets/snapshots/long-hai-fish-wharf.webp",
+  "long-hai-coastal-road": "assets/snapshots/long-hai-coastal-road.webp",
   "long-hai-exterior": "assets/snapshots/long-hai-exterior.webp",
   "long-hai-corridor": "assets/snapshots/long-hai-corridor.webp",
   "tieu-lan-room": "assets/snapshots/tieu-lan-room.webp",

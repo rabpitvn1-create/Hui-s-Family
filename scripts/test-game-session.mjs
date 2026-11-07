@@ -99,7 +99,7 @@ assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.include
 // Mạch chính 80 cảnh (mọi lựa chọn đều lấy nhánh đầu tiên) đi liền một
 // mạch tới lh_escape_begins, thử dead end đồng thuận, rồi ra cổng tới
 // lh_slice_end.
-for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_medicine_store", "lh_servants", "lh_register_room", "lh_kitchen", "lh_lan_knots", "lh_old_servant", "lh_well_anchor", "lh_lan_sleepwalk", "lh_altar", "lh_thu_nguyet_errand", "lh_market", "lh_letter", "lh_council", "lh_lan_question", "lh_anchor_bell", "lh_scout_coast", "lh_inspector_notice", "lh_eve_inspection", "lh_accident_beam", "lh_poison_tea", "lh_corridor_fight", "lh_aftermath", "lh_lan_pushback_big", "lh_retelling", "lh_kitchen_fire", "lh_hearth_anchor", "lh_storm", "lh_night_attack", "lh_blade_wound", "lh_ba_confession", "lh_lan_plan", "lh_inspector_early", "lh_ambush_well", "lh_hide_lan", "lh_first_sweep", "lh_audit_table", "lh_nghiem", "lh_certification", "lh_lan_faces", "lh_move_tonight", "lh_so_retrieval", "lh_ngoc_chi_keepsake", "lh_nghiem_offer", "lh_refusal", "lh_lockdown", "lh_servants_choose", "lh_anchor_map", "lh_lan_farewell", "lh_ba_stays", "lh_thu_nguyet_choice", "lh_escape_eve", "lh_escape_begins"]) {
+for (const expected of ["lh_lan_room", "lh_lan_talk", "lh_morning_tea", "lh_garden", "lh_i04_gate_silence", "lh_night_bell", "lh_night_corridor", "lh_doctor_visit", "lh_medicine_store", "lh_servants", "lh_register_room", "lh_i03_names_for_sale", "lh_kitchen", "lh_lan_knots", "lh_old_servant", "lh_well_anchor", "lh_lan_sleepwalk", "lh_altar", "lh_thu_nguyet_errand", "lh_market", "lh_i05_three_deeds", "lh_i02_black_scarves", "lh_letter", "lh_council", "lh_lan_question", "lh_anchor_bell", "lh_scout_coast", "lh_inspector_notice", "lh_eve_inspection", "lh_accident_beam", "lh_poison_tea", "lh_corridor_fight", "lh_aftermath", "lh_lan_pushback_big", "lh_retelling", "lh_kitchen_fire", "lh_hearth_anchor", "lh_storm", "lh_night_attack", "lh_blade_wound", "lh_ba_confession", "lh_lan_plan", "lh_inspector_early", "lh_ambush_well", "lh_hide_lan", "lh_first_sweep", "lh_audit_table", "lh_nghiem", "lh_certification", "lh_lan_faces", "lh_move_tonight", "lh_so_retrieval", "lh_ngoc_chi_keepsake", "lh_nghiem_offer", "lh_refusal", "lh_lockdown", "lh_servants_choose", "lh_anchor_map", "lh_lan_farewell", "lh_ba_stays", "lh_thu_nguyet_choice", "lh_escape_eve", "lh_escape_begins"]) {
   game.bridge.applyScriptChoice(0);
   assert.equal(game.bridge.getSnapshot().scene.id, expected);
 }
@@ -127,7 +127,7 @@ assert.equal(game.bridge.getSnapshot().scene.id, "lh_gate_hold");
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes("break_long_hai_ritual"), true);
 game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "lh_coast_road");
-for (const expected of ["lh_road_choice", "lh_last_pushback", "lh_names_price", "lh_open_road", "lh_dawn_after", "lh_names_restored", "lh_slice_end"]) {
+for (const expected of ["lh_i06_roadside_writ", "lh_road_choice", "lh_last_pushback", "lh_names_price", "lh_open_road", "lh_dawn_after", "lh_names_restored", "lh_i01_false_weights", "lh_slice_end"]) {
   game.bridge.applyScriptChoice(0);
   assert.equal(game.bridge.getSnapshot().scene.id, expected);
 }
@@ -314,7 +314,7 @@ assert.equal(resolveCompanionId(VN_SCENES.lh_certification), "pham_dinh_nghiem")
 assert.equal(resolveCompanionId({ companions: [], dialogue: [{ speaker: "Người gác", text: "x" }] }), "npc_servant_male");
 assert.equal(resolveCompanionId({ companions: [], dialogue: [{ speaker: "Quản gia", text: "x" }] }), "steward");
 // Đi bộ các nhánh: dùng lại mạch chính, ghi đè lựa chọn tại điểm rẽ.
-const MAIN_CHAIN = ["lh_gate","lh_saloon","lh_rules","lh_hall","lh_lan_room","lh_lan_talk","lh_morning_tea","lh_garden","lh_night_bell","lh_night_corridor","lh_doctor_visit","lh_medicine_store","lh_servants","lh_register_room","lh_kitchen","lh_lan_knots","lh_old_servant","lh_well_anchor","lh_lan_sleepwalk","lh_altar","lh_thu_nguyet_errand","lh_market","lh_letter","lh_council","lh_lan_question","lh_anchor_bell","lh_scout_coast","lh_inspector_notice","lh_eve_inspection","lh_accident_beam","lh_poison_tea","lh_corridor_fight","lh_aftermath","lh_lan_pushback_big"];
+const MAIN_CHAIN = ["lh_gate","lh_saloon","lh_rules","lh_hall","lh_lan_room","lh_lan_talk","lh_morning_tea","lh_garden","lh_i04_gate_silence","lh_night_bell","lh_night_corridor","lh_doctor_visit","lh_medicine_store","lh_servants","lh_register_room","lh_i03_names_for_sale","lh_kitchen","lh_lan_knots","lh_old_servant","lh_well_anchor","lh_lan_sleepwalk","lh_altar","lh_thu_nguyet_errand","lh_market","lh_i05_three_deeds","lh_i02_black_scarves","lh_letter","lh_council","lh_lan_question","lh_anchor_bell","lh_scout_coast","lh_inspector_notice","lh_eve_inspection","lh_accident_beam","lh_poison_tea","lh_corridor_fight","lh_aftermath","lh_lan_pushback_big"];
 function walk(overrides, tail) {
   const g = launch(new Map());
   assert.equal(g.bridge.getSnapshot().scene.id, "lh_prologue");
@@ -337,13 +337,13 @@ function walk(overrides, tail) {
 }
 // Nhánh Thu Nguyệt ở lại: thuyền ba người. Nhánh đi theo: bốn người.
 // Nhánh đường bộ: đoạn xe cỏ xuất hiện ở lh_last_pushback.
-const TAIL_DEFAULT = ["lh_retelling","lh_kitchen_fire","lh_hearth_anchor","lh_storm","lh_night_attack","lh_blade_wound","lh_ba_confession","lh_lan_plan","lh_inspector_early","lh_ambush_well","lh_hide_lan","lh_first_sweep","lh_audit_table","lh_nghiem","lh_certification","lh_lan_faces","lh_move_tonight","lh_so_retrieval","lh_ngoc_chi_keepsake","lh_nghiem_offer","lh_refusal","lh_lockdown","lh_servants_choose","lh_anchor_map","lh_lan_farewell","lh_ba_stays","lh_thu_nguyet_choice","lh_escape_eve","lh_escape_begins","lh_gate_fight","lh_gate_hold","lh_coast_road","lh_road_choice","lh_last_pushback","lh_names_price","lh_open_road","lh_dawn_after","lh_names_restored","lh_slice_end"];
+const TAIL_DEFAULT = ["lh_retelling","lh_kitchen_fire","lh_hearth_anchor","lh_storm","lh_night_attack","lh_blade_wound","lh_ba_confession","lh_lan_plan","lh_inspector_early","lh_ambush_well","lh_hide_lan","lh_first_sweep","lh_audit_table","lh_nghiem","lh_certification","lh_lan_faces","lh_move_tonight","lh_so_retrieval","lh_ngoc_chi_keepsake","lh_nghiem_offer","lh_refusal","lh_lockdown","lh_servants_choose","lh_anchor_map","lh_lan_farewell","lh_ba_stays","lh_thu_nguyet_choice","lh_escape_eve","lh_escape_begins","lh_gate_fight","lh_gate_hold","lh_coast_road","lh_i06_roadside_writ","lh_road_choice","lh_last_pushback","lh_names_price","lh_open_road","lh_dawn_after","lh_names_restored","lh_i01_false_weights","lh_slice_end"];
 {
   // Đi bộ tới lh_names_restored với lựa chọn Thu Nguyệt ghi đè tại điểm rẽ.
   function walkToRestored(thuNguyetChoice) {
     const g = launch(new Map());
     assert.equal(g.bridge.getSnapshot().scene.id, "lh_prologue");
-    const chain = [...MAIN_CHAIN, ...TAIL_DEFAULT.slice(0, -1)];
+    const chain = [...MAIN_CHAIN, ...TAIL_DEFAULT.slice(0, TAIL_DEFAULT.indexOf("lh_names_restored") + 1)];
     for (const expected of chain) {
       const current = g.bridge.getSnapshot().scene.id;
       g.bridge.applyScriptChoice((current === "lh_thu_nguyet_choice") ? thuNguyetChoice : 0);
