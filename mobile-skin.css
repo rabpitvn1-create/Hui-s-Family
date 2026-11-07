@@ -92,6 +92,8 @@
   #snapshot-stage .stage-character-wrap {
     height: 100%; width: 52%; max-width: 56%;
     right: 5%; bottom: 2%;
+    /* Lệnh chủ nhân 2026-11-07: dịch Cao Minh xích phải 10px trong Snapshot. */
+    transform: translateX(10px);
   }
   #snapshot-stage #stage-character { height: 100%; width: 100%; max-height: 100%; object-fit: contain; }
   #snapshot-stage .stage-figure { bottom: 2%; }

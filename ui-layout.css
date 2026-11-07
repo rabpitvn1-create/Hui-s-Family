@@ -635,6 +635,8 @@ body.intel-open .intel-scrim {
   position: absolute;
   right: 0;
   bottom: 0;
+  /* Lệnh chủ nhân 2026-11-07: dịch Cao Minh xích phải 10px trong Snapshot. */
+  transform: translateX(10px);
   z-index: 3;
   height: 100%;
   aspect-ratio: 1086 / 1448;
