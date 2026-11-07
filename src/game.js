@@ -1,7 +1,7 @@
 import { INITIAL_STATE, WORLD_CANON } from "./world-canon.js";
 import { VN_SCENES, VN_START_SCENE } from "./vn-scenes.js";
 import { validateVnScenes, VN_LINK_PHASES } from "./vn-schema.js";
-import { INCOMPATIBLE_SAVE_KEYS, isCurrentCanonSave, sanitizeLegacyCanonState } from "./canon-migration.js";
+import { INCOMPATIBLE_SAVE_KEYS, coerceCanonSave, sanitizeLegacyCanonState } from "./canon-migration.js";
 import {
   applyProgressionUpdate,
   getBackroomsFloor,
@@ -256,7 +256,9 @@ export function initGame() {
     state.scene = {
       id: card.id,
       backgroundId: card.backgroundId || "long-hai-exterior",
-      kicker: { long_hai: "HỒI 1 // LONG HẢI // 1899", vung_tau: "HỒI 2 // VŨNG TÀU // 1899" }[card.stageId] || "HỒI 1 // LONG HẢI // 1899",
+      // Arc I hợp nhất (HA_O_MON_ARC_V1): cả ba địa bàn long_hai / vung_tau /
+      // can_gio hiển thị một HỒI I; stageId nội bộ giữ nguyên.
+      kicker: { long_hai: "HỒI I // HẠ Ô KHAI TÔNG // 1899", vung_tau: "HỒI I // HẠ Ô KHAI TÔNG // 1899", can_gio: "HỒI I // HẠ Ô KHAI TÔNG // 1899" }[card.stageId] || "HỒI I // HẠ Ô KHAI TÔNG // 1899",
       title: card.title,
       narration: (card.narration || []).filter((item) => typeof item === "string" || condVisible(item))
         .map((item) => typeof item === "string" ? item : item.text),
@@ -367,8 +369,8 @@ export function initGame() {
       try {
         const raw = storage.getItem(key);
         if (!raw) continue;
-        const decoded = JSON.parse(raw);
-        if (isCurrentCanonSave(decoded) && VN_SCENES[decoded.scene?.id]) {
+        const decoded = coerceCanonSave(JSON.parse(raw));
+        if (decoded && VN_SCENES[decoded.scene?.id]) {
           candidates.push({ decoded, savedAt: Number(decoded.savedAt) || 0 });
         }
       } catch {
@@ -918,8 +920,8 @@ export function initGame() {
     try {
       const raw = storage.getItem(key);
       if (!raw) return null;
-      const decoded = JSON.parse(raw);
-      if (!isCurrentCanonSave(decoded) || !VN_SCENES[decoded.scene?.id]) return null;
+      const decoded = coerceCanonSave(JSON.parse(raw));
+      if (!decoded || !VN_SCENES[decoded.scene?.id]) return null;
       return decoded;
     } catch {
       return null;
@@ -1016,9 +1018,10 @@ export function initGame() {
     let written = 0;
     const writeIfValid = (key, candidate) => {
       if (!candidate || typeof candidate !== "object") return;
-      if (!isCurrentCanonSave(candidate) || !VN_SCENES[candidate.scene?.id]) return;
+      const coerced = coerceCanonSave(candidate);
+      if (!coerced || !VN_SCENES[coerced.scene?.id]) return;
       try {
-        storage.setItem(key, JSON.stringify(candidate));
+        storage.setItem(key, JSON.stringify(coerced));
         written += 1;
       } catch (error) {
         console.error(error);
@@ -1087,8 +1090,8 @@ export function initGame() {
       return;
     }
     try {
-      const decoded = JSON.parse(raw);
-      if (!isCurrentCanonSave(decoded)
+      const decoded = coerceCanonSave(JSON.parse(raw));
+      if (!decoded
         || !VN_SCENES[decoded.scene?.id]) {
         state.log.unshift("Bản lưu thuộc canon cũ, không tương thích với VN hiện hành.");
         state.log = state.log.slice(0, 14);

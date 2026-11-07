@@ -158,7 +158,7 @@ assert.equal(game.bridge.getSnapshot().scene.id,"lh_slice_end");
 // từ lh_slice_end qua 7 cảnh vt_*, khép phần ở vt_hook.
 game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "vt_arrival");
-assert.equal(game.bridge.getSnapshot().scene.kicker, "HỒI 2 // VŨNG TÀU // 1899");
+assert.equal(game.bridge.getSnapshot().scene.kicker, "HỒI I // HẠ Ô KHAI TÔNG // 1899");
 for (const expected of ["vt_coffin_wharf", "vt_coal_store", "vt_ledger", "vt_first_jamming", "vt_restitution", "vt_hook"]) {
   game.bridge.applyScriptChoice(0);
   assert.equal(game.bridge.getSnapshot().scene.id, expected);

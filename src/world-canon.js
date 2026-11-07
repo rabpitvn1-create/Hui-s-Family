@@ -104,13 +104,13 @@ export const WORLD_CANON = Object.freeze({
 });
 
 export const INITIAL_STATE = Object.freeze({
-  version: "campaign-v4",
+  version: "campaign-v5",
   campaignId: "libera-1899",
   turn: 0,
   scene: {
     id: "lh_prologue",
     backgroundId: "long-hai-exterior",
-    kicker: "HỒI 1 // LONG HẢI // 1899",
+    kicker: "HỒI I // HẠ Ô KHAI TÔNG // 1899",
     title: "Biệt thự dưỡng bệnh",
     narration: ["Long Hải, năm 1899. Một vầng sáng đưa Cao Minh tới biệt thự Hứa Gia."],
     dialogue: [],

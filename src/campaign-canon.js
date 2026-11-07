@@ -12,6 +12,30 @@ export const CAMPAIGN_STAGE_IDS = freeze([
   "cho_lon_final"
 ]);
 
+// Arc I hợp nhất (HA_O_MON_ARC_V1, khóa chủ nhân 2026-11-07): ba stageId
+// long_hai / vung_tau / can_gio là MỘT arc duy nhất, hiển thị một HỒI I.
+// arcId tách khỏi stageId; 5 kỳ là nhịp nội bộ của arc, không phải stage.
+export const HA_O_MON_ARC = freeze({
+  id: "ha_o_mon_1899",
+  title: "Hạ Ô Khai Tông: Tam Giang Tranh Bá",
+  displayKicker: "HỒI I // HẠ Ô KHAI TÔNG // 1899",
+  stageIds: freeze(["long_hai", "vung_tau", "can_gio"]),
+  phases: freeze([
+    freeze({ id: "ky1_villa_seed", label: "Kỳ I — Biệt thự Hứa Gia, gieo mầm Hạ Ô Môn", sceneBudget: 80 }),
+    freeze({ id: "ky2_phuc_tho_route", label: "Kỳ II — Phúc Thọ, tuyến quan tài", sceneBudget: 25 }),
+    freeze({ id: "ky3_founding", label: "Kỳ III — Khai tông, Vạn Phàm Thụ Pháp", sceneBudget: 45 }),
+    freeze({ id: "ky4_five_power_struggle", label: "Kỳ IV — Ngũ phương tranh lợi", sceneBudget: 44 }),
+    freeze({ id: "ky5_can_gio_finale", label: "Kỳ V — Cần Giờ, Tam Giang Huyết Chiến", sceneBudget: 49 })
+  ]),
+  // Sổ ký ức của Tiểu Lan trong Arc I: khóa cứng, không mốc nào khác.
+  memoryLedger: freeze([100, 92, 84, 79, 68]),
+  // Vòng Không Gian tại neo thứ ba Cần Giờ: chỉ hai người sang Prenn.
+  prennTransfer: freeze({
+    travellers: freeze(["Cao Minh", "Hứa Tiểu Lan"]),
+    othersRemainIn1899: true
+  })
+});
+
 const BACKROOMS_FLOORS = freeze([
   {
     floor: 0,
@@ -181,7 +205,7 @@ const canGioObjectives = objectives([
  ["destroy_anchor_two","Vô hiệu điểm neo thứ hai."],
  ["destroy_anchor_three","Vô hiệu điểm neo thứ ba; bảo toàn dấu vết mảnh Sổ."],
  ["resist_collective_command","Tiểu Lan dùng phản thanh để trì hoãn lệnh tập thể."],
- ["survive_reality_breach","Sống sót khi điểm neo sống trượt về Prenn hai thế kỷ trước."]
+ ["survive_reality_breach","Vòng Không Gian đưa Cao Minh và Tiểu Lan về Prenn hai thế kỷ trước; những người còn lại ở lại năm 1899."]
 ]);
 const prennObjectives = objectives([
  ["establish_survival","Tìm quy luật sinh tồn và tránh phá lịch sử bất biến."],
@@ -216,7 +240,7 @@ const finalObjectives = objectives([
 export const CAMPAIGN_ROUTE = freeze([
  {id:"long_hai",label:"Long Hải",act:"Chặng 1",allowedLocations:["Biệt thự Hứa Gia","Long Hải"],premise:"Giải cứu Tiểu Lan, nhận diện liên kết Danh.",objectives:longHaiObjectives,next:"vung_tau"},
  {id:"vung_tau",label:"Vũng Tàu",act:"Chặng 2",allowedLocations:["Vũng Tàu","cửa biển","tuyến quan tài"],premise:"Điều tra tuyến vận chuyển và mảnh Sổ số hai.",objectives:vungTauObjectives,next:"can_gio"},
- {id:"can_gio",label:"Cần Giờ",act:"Chặng 3",allowedLocations:["Cần Giờ","rừng ngập mặn","ba điểm neo"],premise:"Phá ba điểm neo; phản thanh đưa cả đội tới Prenn.",objectives:canGioObjectives,next:"prenn"},
+ {id:"can_gio",label:"Cần Giờ",act:"Chặng 3",allowedLocations:["Cần Giờ","rừng ngập mặn","ba điểm neo"],premise:"Phá ba điểm neo; Vòng Không Gian đưa Cao Minh và Tiểu Lan tới Prenn, mọi người còn lại ở lại năm 1899.",objectives:canGioObjectives,next:"prenn"},
  {id:"prenn",label:"Prenn 200 năm trước",act:"Chặng 4",allowedLocations:["Đèo Prenn","mạng ký ức Bạch Y"],premise:"Quá khứ bất biến, ba dị bản Bạch Y Vô Danh.",objectives:prennObjectives,next:"backrooms"},
  {id:"backrooms",label:"Backrooms Chợ Lớn",act:"Chặng 5",allowedLocations:BACKROOMS_FLOORS.map(f=>`Tầng ${f.floor}: ${f.name}`),premise:"16 tầng độc lập; mỗi tầng có luật và điều kiện mở lối riêng.",objectives:[],next:"cho_lon_return"},
  {id:"cho_lon_return",label:"Trở về Chợ Lớn",act:"Chặng 6",allowedLocations:["Chợ Lớn","nhà Hứa Gia","kho hồ sơ"],premise:"Truy xét sáu mảnh Sổ, phục dựng tên Tiểu Lan.",objectives:returnObjectives,next:"dong_thap"},

@@ -1,6 +1,10 @@
-// Fixed-script VN stores only campaign-v4 snapshots. Previous stage graphs
-// cannot be safely replayed as the new nine-stage campaign.
-const ACTIVE_CANON_VERSION = "campaign-v4";
+// Fixed-script VN stores only campaign-v5 snapshots. Bản lưu campaign-v4
+// được nâng cấp tại chỗ khi nạp (xem migrateCanonSave); các đời cũ hơn
+// không thể replay an toàn vào tuyến VN hiện hành nên vẫn bị loại.
+// Khóa localStorage giữ nguyên "hua-family-campaign-v4-*" như ô lưu trữ
+// ổn định — chỉ version trong payload di trú, không đổi khóa.
+const ACTIVE_CANON_VERSION = "campaign-v5";
+const PREVIOUS_CANON_VERSION = "campaign-v4";
 export const INCOMPATIBLE_SAVE_KEYS = Object.freeze([
   "hua-family-campaign-v3-manual",
   "hua-family-campaign-v3-auto"
@@ -9,6 +13,19 @@ export function isCurrentCanonSave(raw) {
   return Boolean(raw && typeof raw === "object"
     && raw.version === ACTIVE_CANON_VERSION
     && typeof raw.scene?.id === "string");
+}
+// Nâng cấp v4 → v5 (HA_O_MON_ARC_V1): giữ nguyên MỌI trường của bản lưu —
+// lựa chọn, campaignStats (gồm memoryIntegrity), flags (gồm vnSceneEffects),
+// savedAt, scene — chỉ chuỗi version thay đổi.
+export function migrateCanonSave(raw) {
+  if (!raw || typeof raw !== "object"
+    || raw.version !== PREVIOUS_CANON_VERSION
+    || typeof raw.scene?.id !== "string") return null;
+  return { ...raw, version: ACTIVE_CANON_VERSION };
+}
+// Cổng nạp bản lưu: chấp nhận bản v5 hiện hành, nâng cấp bản v4, loại còn lại.
+export function coerceCanonSave(raw) {
+  return isCurrentCanonSave(raw) ? raw : migrateCanonSave(raw);
 }
 const LEGACY_FLAG_KEYS = Object.freeze(new Set([
   "phantomRingAvailable",

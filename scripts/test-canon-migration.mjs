@@ -4,7 +4,10 @@ import {
 } from "../src/active-character-codex.js";
 import { INITIAL_STATE, WORLD_CANON } from "../src/world-canon.js";
 import {
+  coerceCanonSave,
   containsLegacyCanonText,
+  isCurrentCanonSave,
+  migrateCanonSave,
   sanitizeLegacyCanonState,
   stripLegacyFlags
 } from "../src/canon-migration.js";
@@ -153,6 +156,32 @@ assert(containsLegacyCanonText(GONE_NAME_B), "Guard phải nhận diện nhân v
 assert(containsLegacyCanonText(GONE_ORG), "Guard phải nhận diện tổ chức legacy (lệnh owner 2026-11-06).");
 assert(containsLegacyCanonText("GodKiller"), "Guard phải nhận diện vũ khí legacy của cụm đã gỡ.");
 assert(!containsLegacyCanonText("Song Sát Kiếm Quyết"), "Guard không được loại thần thông hiện hành của Cao Minh.");
+
+// Di trú canon V4→V5 (HA_O_MON_ARC_V1): bản v4 nâng lên v5 giữ nguyên mọi
+// trường — lựa chọn, memoryIntegrity, flags.vnSceneEffects, savedAt, scene;
+// bản v3 trở xuống vẫn bị loại.
+const v4Save = {
+  version: "campaign-v4",
+  scene: { id: "vt_first_jamming" },
+  campaignStats: { memoryIntegrity: 79 },
+  flags: { vnSceneEffects: { vt_first_jamming: true }, thuNguyetFollows: true },
+  savedAt: 1730000000000,
+  vnChoiceTrail: ["lh_slice_end:0", "vt_arrival:0"]
+};
+const coercedV5 = coerceCanonSave(v4Save);
+assert(coercedV5 && coercedV5.version === "campaign-v5", "Di trú phải nâng version của bản v4 lên campaign-v5.");
+assert(coercedV5.campaignStats.memoryIntegrity === 79, "Di trú phải giữ nguyên memoryIntegrity.");
+assert(coercedV5.flags.vnSceneEffects.vt_first_jamming === true, "Di trú phải giữ nguyên flags.vnSceneEffects.");
+assert(coercedV5.flags.thuNguyetFollows === true, "Di trú phải giữ nguyên các flag khác.");
+assert(coercedV5.savedAt === 1730000000000, "Di trú phải giữ nguyên savedAt.");
+assert(coercedV5.scene.id === "vt_first_jamming", "Di trú phải giữ nguyên scene.");
+assert(coercedV5.vnChoiceTrail.length === 2, "Di trú phải giữ nguyên dấu vết lựa chọn.");
+assert(v4Save.version === "campaign-v4", "Di trú không được sửa bản gốc.");
+assert(isCurrentCanonSave(coercedV5), "Bản sau di trú phải là bản lưu canon hiện hành.");
+assert(!isCurrentCanonSave(v4Save), "Bản v4 chưa di trú không còn là bản lưu hiện hành.");
+assert(migrateCanonSave(coercedV5) === null, "Di trú chỉ áp dụng cho bản v4.");
+assert(coerceCanonSave({ version: "campaign-v3", scene: { id: "lh_prologue" } }) === null, "Bản v3 phải bị loại.");
+assert(coerceCanonSave(null) === null, "Dữ liệu rỗng phải bị loại.");
 
 const promptSource = readFileSync("apk-ai/gemini-prompts.js", "utf8");
 assert(!promptSource.includes("LEGACY_CHARACTER_RULE_PREFIXES"), "Prompt không được cần blacklist legacy sau migration.");
