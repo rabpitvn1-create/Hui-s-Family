@@ -89,11 +89,16 @@ for (const id of Object.keys(names)) {
   assert.equal(src(id, "ky4_03_next"), later);
 }
 
-// Do not register Đức as a selectable companion as a side effect of appearances.
-assert.equal(Object.hasOwn(CHARACTER_OVERLAYS, "vo_van_duc"), false);
+// Kỳ IV bước 9 (đơn thuốc step9-image-spec §3.1 + bảng sân khấu §4.1,
+// lệnh điều phối trực tiếp): Đức ĐƯỢC đăng ký là nhân vật chọn được —
+// IV13/IV36 bắt buộc lật khung về vo_van_duc qua khóa speaker của anh
+// ta, nên CHARACTER_OVERLAYS phải có mặt anh ta. Đăng ký trỏ thẳng về
+// file đồng phục (bản chuẩn của anh ta là đồng phục; cơ chế biến thể
+// qua STANDARD_OVERLAY_OVERRIDES cho cùng một kết quả hiển thị).
+assert.equal(CHARACTER_OVERLAYS.vo_van_duc, "assets/overlay/vo-van-duc-uniform.webp");
 assert.equal(resolveCompanionId({ companions: ["steward"], dialogue: [
   { speaker: "Võ Văn Đức" }, { speaker: "Võ Văn Đức" }
-] }), "steward");
+] }), "vo_van_duc");
 assert.equal(resolveCompanionId(VN_SCENES.lh_i05_three_deeds), "ba_chin_lai");
 assert.equal(resolveDialogueAvatar("Trần Thị Mến", VN_SCENES.lh_i05_three_deeds).src, CHARACTER_OVERLAYS.tran_thi_men);
 assert.equal(resolveCompanionId(VN_SCENES.vt_be_sau_knocking), "be_sau");

@@ -211,8 +211,63 @@ for (const objective of ["inspect_coffin_route", "identify_living_hosts", "trace
 }
 assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes("recover_ledger_two"), false);
 assert.equal(game.bridge.getSnapshot().progression.stageId, "vung_tau");
+// Kỳ IV — Năm thế tranh hùng (hệ 9 agent, 2026-11-07): ky4_01_stub đã
+// là cảnh IV01 chính thức (giữ id, thay nội dung), mạch 44 cảnh chạy
+// liền tới cầu Kỳ V (ky5_01_stub, sliceEnd). Đi nhánh đầu tiên mọi
+// cảnh; riêng IV35 bắt bản lưu tự động ngay khi tới nơi để kiểm riêng
+// lựa chọn thứ hai trong khối tách biệt phía dưới.
+assert.equal(game.bridge.getSnapshot().scene.choices.length, 2);
+for (const expected of ["ky4_02_that_dao_van_mon", "ky4_03_khan_den_thao_le", "ky4_04_ba_to_thue", "ky4_05_duong_dat_cua_ba_chin", "ky4_06_hai_an_ly_kha", "ky4_07_mot_to_trat_hai_nha", "ky4_08_doan_dao_ra_gia", "ky4_09_muon_danh_ho_phap", "ky4_10_no_mang_ten_ruong", "ky4_11_pha_can_long_hai", "ky4_12_cuu_ghe_doat_me", "ky4_13_duc_giu_lan_ghe", "ky4_14_ba_nguoi_mot_cai_dau", "ky4_15_giay_bao_ho_cuop_song", "ky4_16_dan_gia_giet_nguoi", "ky4_17_no_tren_xac_chet", "ky4_18_ha_huu_tan_doi_nhan", "ky4_19_ba_hoe_cuu_ghe", "ky4_20_ban_lai_loi_song", "ky4_21_dam_tang_khong_phep_mau", "ky4_22_tien_den_truoc_ghe", "ky4_23_mot_chu_dich_thanh_toi", "ky4_24_niem_phong_tai_phong", "ky4_25_dao_mon_trai_phep", "ky4_26_ba_chin_lai_bi_bat", "ky4_27_ly_kha_mang_hai_so", "ky4_28_cho_long_hai_boc_lua", "ky4_29_cai_lam_tra_gia", "ky4_30_tro_tan_va_ten_nguoi", "ky4_31_mot_cai_hat_xi", "ky4_32_dem_dot_trat", "ky4_33_roi_gay_trong_lua", "ky4_34_ba_hoe_giu_so"]) {
+  game.bridge.applyScriptChoice(0);
+  assert.equal(game.bridge.getSnapshot().scene.id, expected);
+}
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "ky4_35_ben_khong_nguoi_chet");
+const saveAtKy4IV35 = saves.get(AUTO_SAVE_KEY);
+assert.ok(saveAtKy4IV35, "phải có bản lưu tự động tại IV35");
+game.bridge.applyScriptChoice(0);
+assert.equal(game.bridge.getSnapshot().scene.id, "ky4_36_ghe_vao_tam_giang");
+// Vừa qua IV35 (nhánh đầu tiên): mắt xích Nợ đã CAN THIỆP (không bao
+// giờ severed ở Kỳ IV) và chặng lật sang Cần Giờ ngay từ IV36. Việc
+// lật chặng CHỈ xảy ra khi cả 5 objective Vũng Tàu đã đủ
+// (applyProgressionUpdate: allDone mới advance + reset
+// completedObjectiveIds về [] của chặng mới) — bốn objective đầu đã
+// khẳng định ở cuối Kỳ III trong chính walk này, nên lật chặng tại
+// đây là bằng chứng objective thứ năm (recover_ledger_two, gắn trên
+// cả hai lựa chọn IV35) đã nghiệm thu: progression Vũng Tàu 5/5.
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.no, "intervened");
+assert.equal(game.bridge.getSnapshot().progression.stageId, "can_gio");
+for (const expected of ["ky4_37_ky_luong_bien_mat", "ky4_38_phien_cho_chan_rung", "ky4_39_ban_hoa_uoc_phuc_tho", "ky4_40_phe_tong_nguyen_phuc", "ky4_41_khong_ban_vao_ma_to", "ky4_42_hai_so_mot_ben_song", "ky4_43_dai_kiem_ho_ngay_63", "ky4_44_dem_gac_tam_giang", "ky5_01_stub"]) {
+  game.bridge.applyScriptChoice(0);
+  assert.equal(game.bridge.getSnapshot().scene.id, expected);
+  // Chặng lật sang Cần Giờ ngay sau IV35 và giữ nguyên tới cầu Kỳ V.
+  assert.equal(game.bridge.getSnapshot().progression.stageId, "can_gio");
+}
+// Suốt Kỳ IV ký ức VẪN 79 (toàn kỳ 0 memoryIntegrityDelta — khoản −11
+// khóa ở neo ba Kỳ V), Danh giữ intervened, đủ 44 cờ bằng chứng ky4*
+// trên walk nhánh đầu tiên; mạch dừng ở cầu Kỳ V.
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "intervened");
+for (const flag of ["ky4CensusRefusedAtGate", "ky4BayLuocEnteredSect", "ky4BlackScarfDuesDropped", "ky4TripleTaxExposed", "ky4ChinLaiRouteBypassed", "ky4LyKhaTwoListsSeen", "ky4TwoMastersOneWrit", "ky4DoanDaoPricedProtection", "ky4FalseHoPhapExposed", "ky4FieldDebtNamed", "ky4MarketScaleLawBroken", "ky4NineBoatsHeldCourse", "ky4DucKeptLaneForPeople", "ky4TuongSoldOneHeadThrice", "ky4RiverProtectionPapersSeen", "ky4FalsePillDeathWitnessed", "ky4CoffinDebtConfronted", "ky4LabelsSwappedAtSource", "ky4BaHoeRefusedTheBoats", "ky4RefugeeRouteSold", "ky4FuneralWithoutMiracle", "ky4TollsBeforeTheBoats", "ky4OneWordMadeACrime", "ky4TaiPhongSealedLedgers", "ky4SectDeclaredUnlicensed", "ky4ChinLaiArrested", "ky4LyKhaBroughtTwoLedgers", "ky4MarketBurnedByHiredHand", "ky4CaiLamExecuted", "ky4AshesNamesCounted", "ky4SneezeWitnessed", "ky4NightOfBurningWrits", "ky4QuanHauKilledByUprising", "ky4BaHoeKeptTheLedger", "ky4LedgerTwoVerified", "ky4BranchAtTamGiangRaised", "ky4KyLuongVanished", "ky4ForestMarketOpened", "ky4PhucThoAllianceFormed", "ky4TongFactionDeclared", "ky4NoShotsAtTheMaTo", "ky4TwoLedgersOneWharf", "ky4DaySixtyThreeDeclared", "ky4NightWatchAtTamGiang"]) {
+  assert.equal(game.bridge.getSnapshot().flags[flag], true, "thiếu cờ Kỳ IV: " + flag);
+}
 assert.equal(game.bridge.getSnapshot().scene.choices.length, 0);
 assert.equal(game.bridge.applyScriptChoice(0), false);
+// IV35, lựa chọn thứ hai: nạp lại bản lưu tự động bắt tại IV35 trong
+// một môi trường tách biệt (không đụng các ô lưu của mạch chính) —
+// kết quả phải y hệt nhánh đầu tiên: Nợ intervened, recover_ledger_two
+// nghiệm thu, chặng đã lật Cần Giờ, ký ức vẫn 79.
+{
+  const alt = launch(new Map([[AUTO_SAVE_KEY, saveAtKy4IV35]]));
+  assert.equal(alt.bridge.getSnapshot().scene.id, "ky4_35_ben_khong_nguoi_chet");
+  assert.equal(alt.bridge.applyScriptChoice(1), true);
+  assert.equal(alt.bridge.getSnapshot().scene.id, "ky4_36_ghe_vao_tam_giang");
+  assert.equal(alt.bridge.getSnapshot().flags.vnLinks.no, "intervened");
+  // Lật chặng ở nhánh này cũng là bằng chứng recover_ledger_two đã
+  // nghiệm thu trên lựa chọn thứ hai (xem ghi chú ở walk chính).
+  assert.equal(alt.bridge.getSnapshot().progression.stageId, "can_gio");
+  assert.equal(alt.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+}
 // Khôi phục khi khởi động chọn bản MỚI NHẤT theo savedAt (phản biện ChatGPT
 // vòng 1): bản thủ công cũ (lh_gate, t=1000) thua bản tự động mới (lh_saloon, t=2000).
 const olderManual = JSON.parse(saved);

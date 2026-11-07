@@ -2,8 +2,19 @@ export const SCENE_BACKGROUNDS = Object.freeze({
   // Chặng 2 (Vũng Tàu): ảnh riêng chưa sản xuất — tạm dùng ảnh nền hiện có
   // gần nhất làm giữ chỗ, thay khi có ảnh của tuyến Phúc Thọ.
   "vung-tau-roadstead": "assets/snapshots/long-hai-coast.webp",
-  "coffin-wharf": "assets/snapshots/long-hai-exterior.webp",
+  // Kỳ IV (hệ 9 agent, 2026-11-07): bến quan tài có art chuyên dụng —
+  // đổi ánh xạ khỏi bản giữ chỗ long-hai-exterior (không đổi
+  // backgroundId trong bất kỳ cảnh nào).
+  "coffin-wharf": "assets/snapshots/coffin-wharf.webp",
   "coal-store": "assets/snapshots/medicine-store.webp",
+  // Kỳ IV (hệ 9 agent, 2026-11-07): bốn nền mới — sân phân đàn Tam
+  // Giang (IV37–IV44 + cầu Kỳ V), cửa sông Cần Giờ (IV36/39/41), chợ
+  // Long Hải sau cháy (IV28/29), khúc sông phục kích (IV12/13/15/20 —
+  // trước đây id này CHƯA có trong bảng, cảnh sẽ trống nền).
+  "tam-giang-branch-yard": "assets/snapshots/tam-giang-branch-yard.webp",
+  "can-gio-estuary": "assets/snapshots/can-gio-estuary.webp",
+  "long-hai-burned-market": "assets/snapshots/long-hai-burned-market.webp",
+  "river-ambush-bend": "assets/snapshots/river-ambush-bend.webp",
   // Kỳ II (hệ 5 agent, 2026-11-07): ảnh riêng sản xuất ở Kỳ III (hệ 9
   // agent, bước 8) — tàu quan tài / sân Phúc Thọ đã có art thật.
   "river-coffin-ship": "assets/snapshots/river-coffin-ship.webp",

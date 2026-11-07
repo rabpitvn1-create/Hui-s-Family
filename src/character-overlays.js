@@ -47,7 +47,22 @@ export const CHARACTER_OVERLAYS = Object.freeze({
   "be_sau": "assets/overlay/be-sau.webp",
   "tu_nep": "assets/overlay/tu-nep.webp",
   "bui_tan_le": "assets/overlay/bui-tan-le.webp",
-  "hua_te_nguyen": "assets/overlay/hua-te-nguyen.webp"
+  "hua_te_nguyen": "assets/overlay/hua-te-nguyen.webp",
+  // Kỳ IV (hệ 9 agent, 2026-11-07): bảy overlay NEED của bước 7 + một
+  // OPTIONAL đã duyệt (Lê Thị Nhiên). Trương Bá Hòe có overlay riêng —
+  // khóa speaker của ông ĐỔI ĐÍCH từ npc_porter sang đây (xem
+  // SPEAKER_OVERLAYS). Võ Văn Đực: bản chuẩn của anh ta CHÍNH LÀ bản
+  // đồng phục Hạ Ô Môn (anh gia nhập trước khi lên khung) — trỏ thẳng
+  // về file đồng phục; character-appearance.js cũng có override tương
+  // ứng nên hiển thị nhất quán ở cả khung chính lẫn avatar thoại.
+  "phan_tuong": "assets/overlay/phan-tuong.webp",
+  "vo_muoi_ro": "assets/overlay/vo-muoi-ro.webp",
+  "huong_quan_hau": "assets/overlay/huong-quan-hau.webp",
+  "cai_bien": "assets/overlay/cai-bien.webp",
+  "vo_van_duc": "assets/overlay/vo-van-duc-uniform.webp",
+  "lucien_vauclerc": "assets/overlay/lucien-vauclerc.webp",
+  "truong_ba_hoe": "assets/overlay/truong-ba-hoe.webp",
+  "le_thi_nhien": "assets/overlay/le-thi-nhien.webp"
 });
 
 // Tên người nói (đã bỏ dấu, viết thường) → id overlay, chỉ cho nhân vật có tên.
@@ -57,7 +72,7 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "le thu nguyet": "le_thu_nguyet",
   "thu nguyet": "le_thu_nguyet",
   "pham dinh nghiem": "pham_dinh_nghiem",
-  "truong ba hoe": "npc_porter",
+  "truong ba hoe": "truong_ba_hoe",
   "ta van do": "npc_servant_male",
   "thay thuoc": "npc_doctor",
   "ngu ong": "npc_fisherman",
@@ -104,7 +119,20 @@ const SPEAKER_OVERLAYS = Object.freeze({
   "be sau": "be_sau",
   "tu nep": "tu_nep",
   "bui tan le": "bui_tan_le",
-  "hua te nguyen": "hua_te_nguyen"
+  "hua te nguyen": "hua_te_nguyen",
+  // Kỳ IV (hệ 9 agent, 2026-11-07): sáu khóa MỚI + khóa OPTIONAL đã
+  // duyệt của Lê Thị Nhiên (mô phỏng bước 7: 0 lật ngoài ý đồ). Khóa
+  // "truong ba hoe" ở trên đã ĐỔI ĐÍCH npc_porter → truong_ba_hoe:
+  // 11 cảnh đã phát hành lật sang overlay riêng của Bá Hòe, đúng ý đồ.
+  // CẤM thêm khóa cho "chin bac" (sẽ cướp khung IV29 của Cai Lẫm) và
+  // "armand delmas" (sẽ phá III36 đã phát hành) — giữ luật bước 7.
+  "phan tuong": "phan_tuong",
+  "vo muoi ro": "vo_muoi_ro",
+  "huong quan hau": "huong_quan_hau",
+  "cai bien": "cai_bien",
+  "vo van duc": "vo_van_duc",
+  "lucien vauclerc": "lucien_vauclerc",
+  "le thi nhien": "le_thi_nhien"
 });
 
 const COMBINING_MARKS = new RegExp("[\\u0300-\\u036f]", "g");
@@ -130,12 +158,35 @@ export function resolveCompanionId(scene) {
   // companions xếp họ trước. Khai báo vẫn thắng khi bằng điểm hoặc hơn.
   const counts = new Map();
   const speakerOrder = [];
+  const addCount = (id) => {
+    if (!counts.has(id)) { counts.set(id, 0); speakerOrder.push(id); }
+    counts.set(id, counts.get(id) + 1);
+  };
+  // Vá Kỳ IV bước 9 — DẠNG THU HẸP (đặc tả step9-image-spec §5, đã mô
+  // phỏng ở bước 7): companion ĐÃ KHAI BÁO nhưng không có khóa speaker
+  // (trường hợp bon_moc ở IV08/IV09) vốn bị tính 0 dòng nên thua mọi
+  // speaker đã map, trái ý đồ "khai báo thắng khi bằng điểm hoặc hơn".
+  // Cách vá: dòng KHÔNG được khóa speaker nào nhận thì đối chiếu nhãn
+  // speaker đã chuẩn hóa với TÊN HIỂN THỊ của các companion đã khai báo
+  // và cộng cho companion khớp tên. Thu hẹp ở hai điểm: (1) chỉ áp cho
+  // companion nằm trong scene.companions — KHÔNG tạo khóa speaker toàn
+  // cục cho Bốn Mọc (khóa "bon moc" sẽ phá hòa 2–2 ở lh_i02); (2) chỉ
+  // áp cho id KHÔNG thuộc mẫu npc_* — khớp tên cho npc_porter sẽ lật
+  // nhánh follows của lh_i06_roadside_writ (phu vô danh trùng tên hiển
+  // thị "Phu khuân vác" với mẫu). Dòng đã có khóa speaker giữ nguyên
+  // chủ — không đếm trùng.
+  const declaredNameCredit = new Map();
+  for (const id of declared) {
+    if (id.startsWith("npc_")) continue;
+    const display = CHARACTER_DISPLAY_NAMES[id];
+    if (display) declaredNameCredit.set(normalizeSpeaker(display), id);
+  }
   for (const line of dialogue) {
-    const id = SPEAKER_OVERLAYS[normalizeSpeaker(line?.speaker)];
-    if (id && Object.hasOwn(CHARACTER_OVERLAYS, id)) {
-      if (!counts.has(id)) { counts.set(id, 0); speakerOrder.push(id); }
-      counts.set(id, counts.get(id) + 1);
-    }
+    const key = normalizeSpeaker(line?.speaker);
+    const id = SPEAKER_OVERLAYS[key];
+    if (id && Object.hasOwn(CHARACTER_OVERLAYS, id)) { addCount(id); continue; }
+    const credited = declaredNameCredit.get(key);
+    if (credited) addCount(credited);
   }
   let dominant = null;
   let dominantCount = 0;
@@ -182,7 +233,15 @@ const CHARACTER_DISPLAY_NAMES = Object.freeze({
   "be_sau": "Bé Sáu",
   "tu_nep": "Tư Nếp",
   "bui_tan_le": "Bùi Tấn Lễ",
-  "hua_te_nguyen": "Hứa Tế Nguyên"
+  "hua_te_nguyen": "Hứa Tế Nguyên",
+  "phan_tuong": "Phan Tường",
+  "vo_muoi_ro": "Võ Mười Rọ",
+  "huong_quan_hau": "Hương quản Hậu",
+  "cai_bien": "Cai Biện",
+  "vo_van_duc": "Võ Văn Đực",
+  "lucien_vauclerc": "Lucien Vauclerc",
+  "truong_ba_hoe": "Trương Bá Hòe",
+  "le_thi_nhien": "Lê Thị Nhiên"
 });
 
 // Tên trên bảng tên có thể khác theo cảnh khi danh tính chưa được lộ trong
@@ -213,7 +272,17 @@ const SCENE_DISPLAY_NAME_OVERRIDES = Object.freeze({
   // Bá Hòe vẫn là npc_porter ở phân đàn Phúc Thọ, Văn Độ là
   // npc_servant_male khi mang tin Cần Giờ về.
   ky3_18_phuc_tho_ba_dien: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
-  ky3_42_tin_tu_tam_giang: Object.freeze({ npc_servant_male: "Tạ Văn Độ" })
+  ky3_42_tin_tu_tam_giang: Object.freeze({ npc_servant_male: "Tạ Văn Độ" }),
+  // Kỳ IV (hệ 9 agent, 2026-11-07): sau khi Bá Hòe có overlay riêng và
+  // Cai Biện có khóa speaker, bốn override này chỉ còn vai trò DỰ PHÒNG
+  // thuần túy (khung đích IV19/IV34 = truong_ba_hoe, IV22 = phan_tuong,
+  // IV35 = cai_bien — mẫu npc không còn lên khung ở các cảnh đó). Vẫn
+  // thêm đủ theo đơn thuốc integration-notes §6: vô hại, và là bảo hiểm
+  // nếu đăng ký/asset bị gỡ trong tương lai. Mọi override cũ GIỮ NGUYÊN.
+  ky4_19_ba_hoe_cuu_ghe: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  ky4_22_tien_den_truoc_ghe: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  ky4_34_ba_hoe_giu_so: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  ky4_35_ben_khong_nguoi_chet: Object.freeze({ npc_servant_male: "Tạ Văn Độ" })
 });
 
 export function companionDisplayName(id, scene) {
