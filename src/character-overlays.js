@@ -33,7 +33,21 @@ export const CHARACTER_OVERLAYS = Object.freeze({
   "ky_luong": "assets/overlay/ky-luong.webp",
   "chau_van_loi": "assets/overlay/chau-van-loi.webp",
   "nguyen_van_nhan": "assets/overlay/nguyen-van-nhan.webp",
-  "bon_moc": "assets/overlay/bon-moc.webp"
+  "bon_moc": "assets/overlay/bon-moc.webp",
+  // Kỳ III (hệ 9 agent, 2026-11-07): mười overlay mới — bảy lõi của Q5
+  // (năm trưởng đường + Tống Nguyên Phúc + Bé Sáu) và ba OPTIONAL cao đã
+  // duyệt (Tư Nếp, Bùi Tấn Lễ, Hứa Tế Nguyên). Cả mười đều có khóa
+  // speaker (xem SPEAKER_OVERLAYS) theo đặc tả tích hợp ảnh bước 9.
+  "tong_nguyen_phuc": "assets/overlay/tong-nguyen-phuc.webp",
+  "nguyen_van_thao": "assets/overlay/nguyen-van-thao.webp",
+  "dao_nhat_but": "assets/overlay/dao-nhat-but.webp",
+  "phan_bay_nen": "assets/overlay/phan-bay-nen.webp",
+  "duong_that_nuong": "assets/overlay/duong-that-nuong.webp",
+  "do_thi_hanh": "assets/overlay/do-thi-hanh.webp",
+  "be_sau": "assets/overlay/be-sau.webp",
+  "tu_nep": "assets/overlay/tu-nep.webp",
+  "bui_tan_le": "assets/overlay/bui-tan-le.webp",
+  "hua_te_nguyen": "assets/overlay/hua-te-nguyen.webp"
 });
 
 // Tên người nói (đã bỏ dấu, viết thường) → id overlay, chỉ cho nhân vật có tên.
@@ -75,7 +89,22 @@ const SPEAKER_OVERLAYS = Object.freeze({
   // thắng tie-break) — chỉ map ở cụm IV09 hoặc cảnh khai tường minh.
   "ba suong": "ba_suong",
   "ky luong": "ky_luong",
-  "chau van loi": "chau_van_loi"
+  "chau van loi": "chau_van_loi",
+  // Kỳ III (hệ 9 agent, 2026-11-07): bảy khóa lõi + ba OPTIONAL cao đã
+  // duyệt. Hệ quả sân khấu đã mô phỏng trước (đặc tả bước 9): III13 về
+  // tu_nep đúng cảnh của ông; III04 giữ tong_nguyen_phuc (13 > 11 dòng
+  // của Bùi Tấn Lễ); III29 giữ ba_chin_lai (5 > 4 dòng của Hứa Tế
+  // Nguyên); hai cảnh Kỳ II mang tên Bé Sáu lật sang be_sau đúng ý.
+  "tong nguyen phuc": "tong_nguyen_phuc",
+  "nguyen van thao": "nguyen_van_thao",
+  "dao nhat but": "dao_nhat_but",
+  "phan bay nen": "phan_bay_nen",
+  "duong that nuong": "duong_that_nuong",
+  "do thi hanh": "do_thi_hanh",
+  "be sau": "be_sau",
+  "tu nep": "tu_nep",
+  "bui tan le": "bui_tan_le",
+  "hua te nguyen": "hua_te_nguyen"
 });
 
 const COMBINING_MARKS = new RegExp("[\\u0300-\\u036f]", "g");
@@ -143,7 +172,17 @@ const CHARACTER_DISPLAY_NAMES = Object.freeze({
   "ky_luong": "Ký Lương",
   "chau_van_loi": "Châu Văn Lợi",
   "nguyen_van_nhan": "Nguyễn Văn Nhân",
-  "bon_moc": "Bốn Mọc"
+  "bon_moc": "Bốn Mọc",
+  "tong_nguyen_phuc": "Tống Nguyên Phúc",
+  "nguyen_van_thao": "Nguyễn Văn Thạo",
+  "dao_nhat_but": "Đào Nhất Bút",
+  "phan_bay_nen": "Phan Bảy Nện",
+  "duong_that_nuong": "Dương Thất Nương",
+  "do_thi_hanh": "Đỗ Thị Hạnh",
+  "be_sau": "Bé Sáu",
+  "tu_nep": "Tư Nếp",
+  "bui_tan_le": "Bùi Tấn Lễ",
+  "hua_te_nguyen": "Hứa Tế Nguyên"
 });
 
 // Tên trên bảng tên có thể khác theo cảnh khi danh tính chưa được lộ trong
@@ -169,7 +208,12 @@ const SCENE_DISPLAY_NAME_OVERRIDES = Object.freeze({
   vt_hidden_man_route: Object.freeze({ npc_porter: "Trương Bá Hòe", npc_servant_male: "Tạ Văn Độ" }),
   vt_names_returned: Object.freeze({ npc_servant_male: "Tạ Văn Độ" }),
   vt_wharf_contained: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
-  vt_rice_seed_yard: Object.freeze({ npc_porter: "Trương Bá Hòe" })
+  vt_rice_seed_yard: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  // Kỳ III (hệ 9 agent, 2026-11-07): cùng quy ước giữ chỗ như Kỳ II —
+  // Bá Hòe vẫn là npc_porter ở phân đàn Phúc Thọ, Văn Độ là
+  // npc_servant_male khi mang tin Cần Giờ về.
+  ky3_18_phuc_tho_ba_dien: Object.freeze({ npc_porter: "Trương Bá Hòe" }),
+  ky3_42_tin_tu_tam_giang: Object.freeze({ npc_servant_male: "Tạ Văn Độ" })
 });
 
 export function companionDisplayName(id, scene) {

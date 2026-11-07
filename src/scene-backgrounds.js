@@ -4,10 +4,15 @@ export const SCENE_BACKGROUNDS = Object.freeze({
   "vung-tau-roadstead": "assets/snapshots/long-hai-coast.webp",
   "coffin-wharf": "assets/snapshots/long-hai-exterior.webp",
   "coal-store": "assets/snapshots/medicine-store.webp",
-  // Kỳ II (hệ 5 agent, 2026-11-07): ảnh riêng chưa sản xuất — giữ chỗ bằng
-  // ảnh hiện có gần nhất, thay khi có ảnh tàu quan tài / sân Phúc Thọ.
-  "river-coffin-ship": "assets/snapshots/long-hai-coast.webp",
-  "phuc-tho-tang-quan-yard": "assets/snapshots/long-hai-exterior.webp",
+  // Kỳ II (hệ 5 agent, 2026-11-07): ảnh riêng sản xuất ở Kỳ III (hệ 9
+  // agent, bước 8) — tàu quan tài / sân Phúc Thọ đã có art thật.
+  "river-coffin-ship": "assets/snapshots/river-coffin-ship.webp",
+  "phuc-tho-tang-quan-yard": "assets/snapshots/phuc-tho-tang-quan-yard.webp",
+  // Kỳ III (hệ 9 agent, 2026-11-07): bốn nền đạo quán Hạ Ô Môn, art thật.
+  "ha-o-assembly-yard": "assets/snapshots/ha-o-assembly-yard.webp",
+  "ha-o-scripture-hall": "assets/snapshots/ha-o-scripture-hall.webp",
+  "ha-o-spirit-field": "assets/snapshots/ha-o-spirit-field.webp",
+  "ha-o-spirit-spring": "assets/snapshots/ha-o-spirit-spring.webp",
   // Kỳ I (hệ 9 agent, 2026-11-07): ảnh riêng cho hai cảnh gieo mầm —
   // trạm cân bến cá nhỏ (I01) và đường đất ven biển lúc rạng sáng (I06).
   "long-hai-fish-wharf": "assets/snapshots/long-hai-fish-wharf.webp",

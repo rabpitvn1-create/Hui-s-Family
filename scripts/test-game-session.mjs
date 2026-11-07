@@ -169,7 +169,7 @@ assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
 assert.equal(game.bridge.getSnapshot().flags.vnLinks.no, "identified");
 // Kỳ II — Phúc Thọ mở rộng (hệ 5 agent, 2026-11-07): vt_hook không còn là
 // điểm kết; hai lựa chọn hội tụ vào vt_children_pursuit và mạch 18 cảnh
-// chạy liền tới cầu Kỳ III (ky3_01_stub, sliceEnd giữ chỗ).
+// chạy liền tới Kỳ III (ky3_01_stub).
 assert.equal(game.bridge.getSnapshot().scene.choices.length, 2);
 game.bridge.applyScriptChoice(0);
 assert.equal(game.bridge.getSnapshot().scene.id, "vt_children_pursuit");
@@ -180,12 +180,37 @@ for (const expected of ["vt_river_chase", "vt_coffin_ship", "vt_be_sau_knocking"
 }
 // Suốt Kỳ II ký ức KHÔNG đổi (79 — khoản −11 khóa ở neo ba Kỳ V), mắt xích
 // Nợ giữ identified, tàu trẻ em bị chặn nhưng mạng còn nguyên, hạt linh mễ
-// đã gieo ở sân Phúc Thọ; mạch dừng ở stub Kỳ III.
+// đã gieo ở sân Phúc Thọ; mạch tới stub Kỳ III.
 assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
 assert.equal(game.bridge.getSnapshot().flags.vnLinks.no, "identified");
 assert.equal(game.bridge.getSnapshot().flags.vtShipHalted, true);
 assert.equal(game.bridge.getSnapshot().flags.vtNetworkIntact, true);
 assert.equal(game.bridge.getSnapshot().flags.vtRiceSeedPlanted, true);
+// Kỳ III — Khai Tông (hệ 9 agent, 2026-11-07): ky3_01_stub đã là cảnh
+// III01 chính thức (giữ id, thay nội dung), mạch 45 cảnh chạy liền tới
+// cầu Kỳ IV (ky4_01_stub, sliceEnd giữ chỗ). Đi nhánh đầu tiên mọi cảnh.
+assert.equal(game.bridge.getSnapshot().scene.choices.length, 2);
+for (const expected of ["ky3_02_dai_tran_ha_o", "ky3_03_van_pham_thu_phap", "ky3_04_quyen_giu_khai_mach_an", "ky3_05_tam_the_thua", "ky3_06_tai_va_dao", "ky3_07_thao_chai_dinh_phong", "ky3_08_kinh_lau_khi_xuong", "ky3_09_gieo_vo_chu_tien_me", "ky3_10_dan_va_tuyen", "ky3_11_nhan_danh_duong", "ky3_12_luc_duong_luan_su", "ky3_13_noi_com_tu_nep", "ky3_14_be_sau_hoc_chu", "ky3_15_su_tri_nhuan", "ky3_16_chiec_bat_thu_hai", "ky3_17_dinh_chua_nha_tho", "ky3_18_phuc_tho_ba_dien", "ky3_19_chua_khong_thu_le", "ky3_20_luu_ba_loc", "ky3_21_thay_lang_mat_khach", "ky3_22_net_tran_cua_bong", "ky3_23_mot_nha_hai_duong", "ky3_24_viec_pham_nho", "ky3_25_phien_cho_linh_khi", "ky3_26_vu_gat_bac", "ky3_27_tinh_hon_thai_cho_lon", "ky3_28_luu_ngon_lam_chung", "ky3_29_chieu_cot_khe_no", "ky3_30_den_ve_luoi_trieu", "ky3_31_vo_tu_thien_binh", "ky3_32_tram_tuyen_mot_to_giay", "ky3_33_ngay_khong_thu_to_cu", "ky3_34_doc_quyen_tinh_hon_thai", "ky3_35_han_kiem_ho", "ky3_36_de_nghi_dai_ly", "ky3_37_mach_tuyen_ba_muoi_sau", "ky3_38_phi_dang_ky", "ky3_39_chap_chieu_phong", "ky3_40_gia_an_ma_to", "ky3_41_bay_luoc_hoi_luat", "ky3_42_tin_tu_tam_giang", "ky3_43_dai_su_ty_khong_luyen_khi", "ky3_44_quyen_khan_cap", "ky3_45_chen_ruou_truoc_bao", "ky4_01_stub"]) {
+  game.bridge.applyScriptChoice(0);
+  assert.equal(game.bridge.getSnapshot().scene.id, expected);
+}
+// Suốt Kỳ III ký ức VẪN 79 (toàn kỳ 0 memoryIntegrityDelta), Danh giữ
+// intervened, Nợ giữ identified (toàn kỳ 0 trường link), đủ 45 cờ bằng
+// chứng ky3* trên walk nhánh đầu tiên.
+assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.danh, "intervened");
+assert.equal(game.bridge.getSnapshot().flags.vnLinks.no, "identified");
+for (const flag of ["ky3NamesOnCleanPaper", "ky3GrandFormationUnveiled", "ky3MarksScattered", "ky3MarkCustodyContested", "ky3LibraryTiersCreated", "ky3AptitudeNotWorth", "ky3ThaoPeakShown", "ky3TwoHallsFounded", "ky3SpiritRicePlantedLH", "ky3FirstPublicSpring", "ky3NhanDanhFounded", "ky3CouncilFirstSession", "ky3KitchenCharmsGiven", "ky3BeSauSpokeFreely", "ky3AbbotVisited", "ky3LanSawHerStructure", "ky3ThreeFaithsTruce", "ky3PhucThoBranchOpened", "ky3RefusalHonored", "ky3ThirdRuleEnforced", "ky3HerbalistRecruited", "ky3ChildArrayImproved", "ky3FamilySplitNamed", "ky3LanTaughtNames", "ky3SpiritMarketOpened", "ky3FirstSpiritHarvest", "ky3ChoLonRouteNoted", "ky3SpeechBeadWitnessed", "ky3DeedErasureExposed", "ky3LampsAndTideNet", "ky3TrueScaleShown", "ky3SpringsSelfTended", "ky3OldTaxFailed", "ky3VetoFirstUsed", "ky3RosterRefused", "ky3DelmasAgencyBid", "ky3Spring36SharedRule", "ky3FalseFeeExposed", "ky3PermitOfficeRaised", "ky3FalseSealExposed", "ky3BayLuocAskedLaw", "ky3TamGiangSiteChosen", "ky3LanRefusedTitle", "ky3EmergencyPowersDenied", "ky3LanDeclaredHerPart"]) {
+  assert.equal(game.bridge.getSnapshot().flags[flag], true, "thiếu cờ Kỳ III: " + flag);
+}
+// Bốn objective Vũng Tàu nghiệm thu bằng chứng cứ ngay trong Kỳ III
+// (gắn trên choice rời III01/III11/III28/III42); recover_ledger_two vẫn
+// treo tới IV35 nên chặng chưa lật — stageId vẫn vung_tau.
+for (const objective of ["inspect_coffin_route", "identify_living_hosts", "trace_finance", "secure_sea_exit"]) {
+  assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes(objective), true, "thiếu objective: " + objective);
+}
+assert.equal(game.bridge.getSnapshot().progression.completedObjectiveIds.includes("recover_ledger_two"), false);
+assert.equal(game.bridge.getSnapshot().progression.stageId, "vung_tau");
 assert.equal(game.bridge.getSnapshot().scene.choices.length, 0);
 assert.equal(game.bridge.applyScriptChoice(0), false);
 // Khôi phục khi khởi động chọn bản MỚI NHẤT theo savedAt (phản biện ChatGPT

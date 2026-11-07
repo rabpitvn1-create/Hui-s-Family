@@ -7879,50 +7879,6941 @@ export const VN_SCENES = Object.freeze({
     ]
   },
   "ky3_01_stub": {
-    "id": "ky3_01_stub",
-    "contentStatus": "placeholder",
-    "stageId": "long_hai",
-    "title": "Người tụ về Long Hải",
     "backgroundId": "long-hai-coast",
-    "location": "Bến Long Hải — buổi sáng đoàn trở về",
-    "companions": [],
-    "narration": [
-      "Ghe vào bến Long Hải lúc nắng mới lên khỏi mặt nước. Đoàn đi vắng chưa đầy ba ngày mà bến đã khác: thường giờ này bến chỉ có người gánh cá và mấy phu khuân vác chờ việc; sáng nay người đứng kín cả lối xuống nước — dân chài ôm nón đứng chen với đàn bà gánh thúng không, người bán hàng rong bỏ cả sạp mà nhón lên phía trước, và ở rìa ngoài, mấy đứa trẻ trèo lên đống lưới phơi để nhìn cho rõ một đoàn người vừa cứu sống những kẻ đã bị ghi trên giấy là chết.",
-      "Không ai reo hò. Tiếng đồn đi trước ghe của đoàn mấy chặng sông không mang hình thù gì rõ ràng — người thì nói vị thầy pháp ở biệt thự Hứa Gia sắp mở một chỗ chữa bệnh ở phía làng, người thì nói đoàn mang theo thứ gạo ăn vào thì người liệt cũng ngồi dậy được, kẻ lại thề rằng họ hàng của họ tận mắt thấy một con tàu chở quan tài bị chặn giữa sông và những đứa trẻ trong quan tài được bế lên bờ, còn thở, còn khóc. Đồn càng đi xa càng phình to, nhưng mọi phiên bản đều giữ chung một hạt nhân không đổi: ở Phúc Thọ, những người đã chết trên giấy được gọi lại bằng tên thật của họ, và được đối xử như người sống.",
-      "Đám đông tự dạt ra thành một lối đi khi đoàn bước lên bờ, lặng như nước rút. Người ta nhìn Cao Minh trước — nhìn hai thanh kiếm lơ lửng sau lưng hắn, nhìn vạt áo không dính một hạt bụi đường sông — rồi nhìn sang Tiểu Lan được dìu ở giữa, và cái nhìn ấy đổi khác: mềm hơn, và cũng dò xét hơn. Có người thì thầm hai chữ cô chủ như gọi một người trong nhà; có người chỉ cúi đầu. Ở hàng cuối, một người đàn ông mặc áo lính lệ đứng lẫn trong đám phu, tay không cầm sổ mà mắt thì ghi rất kỹ — hắn đứng thêm một lúc sau khi đoàn đi qua, rồi lặng lẽ rẽ khỏi bến theo hướng ngược lại, về phía đường cái.",
-      "Người bệnh được khiêng tới thật. Ba chiếc võng, hai tấm chiếu trải vội ở rìa sân, một bà cụ được con cháu cõng trên lưng — họ nằm đó từ trước khi ghe cập bến, như thể chỉ cần nằm đúng chỗ đoàn sẽ đi qua là đã nắm được một phần cơ hội. Không ai trong số họ kêu khóc hay van xin thành tiếng; người đất này quen chịu đựng lặng lẽ, và cái lặng lẽ ấy, sáng nay, nặng hơn mọi tiếng gào. Tiểu Lan đi chậm lại khi qua chỗ họ nằm. Nàng không hứa gì — nàng chỉ nhìn từng người một, và gật đầu với người nhà đang quỳ bên cạnh, như ghi nhận rằng họ có mặt, rằng họ là người, rằng chuyến khiêng vất vả này không vô hình.",
+    "choices": [
       {
-        "if": "thuNguyetFollows",
-        "text": "Thu Nguyệt đi ở phía sau đoàn, gói đồ vẫn buộc trên lưng như hôm rời cổng. Cô nhận ra trong đám đông hai người quen cũ từ hồi còn chạy việc ở bến Chợ Lớn — họ cũng nhận ra cô, và cái nhận ra ấy làm cô khựng lại: tin về đoàn đã chạy nhanh đến mức người của những bến xa hơn cũng đã biết mặt người trong đoàn. Cô cúi đầu chào họ từ xa, không dám bắt chuyện; phận sự của cô sáng nay là đi sát cô chủ, và cô biết rõ một lời nói hớ của mình có thể thành một con đường cho kẻ khác lần tới."
+        "effects": {
+          "civiliansSavedDelta": 2,
+          "suppliesDelta": -1
+        },
+        "flags": {
+          "ky3NamesOnCleanPaper": true
+        },
+        "id": "ky3_shelter_first",
+        "next": "ky3_02_dai_tran_ha_o",
+        "objective": "inspect_coffin_route",
+        "route": {
+          "delta": 1,
+          "id": "bao_ho"
+        },
+        "text": "Dựng chỗ nghỉ và nước uống cho người bệnh cùng các gia đình được cứu ngay trên bãi đất trống ven bến, trước mọi việc khác."
       },
       {
-        "text": "Trong đoàn trở về sáng nay không có Thu Nguyệt. Cô ở lại phía sau cánh cổng biệt thự, bên cạnh bà Năm Liên, giữ phần việc thầm lặng mà chính cô đã chọn — và sáng nay, khi đám đông hỏi han nhau về từng người trong đoàn, không một ai ở bến này nhắc tới tên cô. Đường tin của cô, nếu còn chạy được, sẽ tới sau, bằng cách của nó.",
-        "unless": "thuNguyetFollows"
-      },
-      "Bé Sáu ngồi trên đống lưới cùng mấy đứa trẻ trong làng, bọc sỏi của em đặt gọn trong lòng. Trẻ con trong làng xúm lại hỏi em đi đâu về; em chỉ lắc đầu, rồi — sau một lúc rất lâu — em nói một câu ngắn về một con tàu tối và tiếng gõ. Không đứa trẻ nào cười. Một đứa lớn nhất trong bọn lặng lẽ chia cho em nửa củ khoai nướng, và em nhận lấy bằng hai tay. Ở rìa sân, những gia đình được cứu ở Phúc Thọ đang được người của đường tin dìu về chỗ nghỉ tạm; có người vừa đặt chân lên đất Long Hải đã quỳ xuống, không phải lạy ai, chỉ là chân không còn đứng vững sau những ngày nằm trong bóng tối của khoang tàu.",
-      "Giữa lúc ấy, Cao Minh phẩy tay một cái, nhẹ như phủi bụi áo. Gió biển đang quất cát vào mặt đám đông bỗng lặng hẳn trong khoảnh sân trước mặt đoàn, nắng vẫn nắng, người vẫn người, chỉ có tiếng ồn của mấy trăm con người hạ xuống thành một lớp thì thầm đều đều — và ở rìa sân, mấy người bệnh đang thoi thóp thở bỗng thở đều lại được, như có ai vừa nhấc một tấm chăn ướt khỏi ngực họ. Không có sấm, không có sáng chói, không ai bị thương. Mấy người đứng gần nhất vô thức lùi nửa bước. Họ vừa được nhắc, rất nhẹ nhàng, rằng người đàn ông đứng trước mặt họ không phải một thầy lang — và rằng khoảng cách giữa hắn với họ không đo bằng thứ gì họ có.",
-      "Đám đông ở lại tới gần trưa mới tan dần. Họ để lại nhiều thứ hơn họ mang tới: tên của những người bệnh nhờ cậy, những lời nhắn gửi cho người thân còn kẹt ở đâu đó trên tuyến sông, mấy giỏ cá và thúng khoai đặt lặng lẽ ở rìa sân mà không ai dám nói là của ai. Cao Minh không nhận cũng không từ chối thành lời; hắn để mặc chúng ở đó, như để mặc mọi thứ tự tìm lấy chỗ của nó. Tiểu Lan cho ghi lại những cái tên được gửi gắm lên một tờ giấy sạch — không phải sổ nợ, không phải danh sách của ai; chỉ là tên người, viết ngay ngắn, để không ai trong số họ bị biến mất một lần nữa mà không ai hay."
+        "effects": {
+          "cluesHuaGiaDelta": 1,
+          "lanTrustDelta": 2
+        },
+        "flags": {
+          "ky3NamesOnCleanPaper": true
+        },
+        "id": "ky3_names_completed_first",
+        "next": "ky3_02_dai_tran_ha_o",
+        "objective": "inspect_coffin_route",
+        "route": {
+          "delta": 1,
+          "id": "tu_quyet"
+        },
+        "text": "Hoàn tất tờ giấy sạch ngay trong ngày: ghi đủ tên người tụ về và người còn mất tích trên tuyến, để không một cái tên nào bị bỏ sót."
+      }
     ],
+    "companions": [],
+    "contentStatus": "approved",
     "dialogue": [
       {
         "speaker": "Ông từ làng",
-        "text": "Thưa ông thầy, chúng tôi không dám làm phiền lâu. Chỉ là trong làng có mấy người bệnh nằm liệt đã lâu, nghe tin ở bến Phúc Thọ có người được cứu sống, nên nhà họ khiêng tới tận đây. Ông thầy có xem cho họ được không?"
-      },
-      {
-        "speaker": "Cao Minh",
-        "text": "Bổn tọa mới bước lên bờ, chân còn chưa ráo nước. Đám người này, tin đồn mới chạy được ba ngày mà đã khiêng cả người bệnh theo. Đúng là biết nắm lấy bất cứ thứ gì trôi qua trước mặt."
+        "text": "Thưa ông thầy, chúng tôi không dám làm phiền lâu. Trong làng có mấy người bệnh nằm liệt đã lâu, nghe tin ở Phúc Thọ có người được cứu sống, nên nhà họ khiêng tới tận đây."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Thưa bác, thuốc thang của ngài ấy không phải thứ tôi dám hứa thay cho ai. Nhưng người bệnh đã được khiêng tới đây thì xin đừng khiêng về vội. Cho họ nằm chỗ mát, cho họ uống nước. Việc gì tới, rồi sẽ tới — tôi chỉ dám nói chắc một điều: ở đây, không ai bị ghi là đã chết khi họ còn đang thở."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Thưa ngài, họ kéo tới không hẳn vì tin ngài là thần tiên. Họ tới vì nghe nói ở Phúc Thọ, người ta được gọi bằng tên thật của mình. Ở đất này, một người nghèo được gọi đúng tên, được nhìn như một con người — đã là thứ ơn mà nhiều người cả đời chưa từng nhận."
+        "text": "Thưa bác, thuốc thang của ngài ấy không phải thứ tôi dám hứa thay cho ai. Nhưng người bệnh đã khiêng tới thì xin đừng khiêng về vội: cho họ nằm chỗ mát, uống nước. Ở đây, không ai bị ghi là đã chết khi còn đang thở."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Hay. Bổn tọa còn chưa buồn làm gì ở đất này, mà kiến đã tự kéo nhau tới xây tổ quanh chỗ bổn tọa đứng. Cứ để chúng tới. Người càng đông, ván cờ càng vui — và bổn tọa cũng đang muốn xem, khi có một chỗ để kéo tới, đám người này sẽ kéo theo những thứ gì khác sau lưng."
+        "text": "Ghe của bổn tọa còn chưa kịp buộc dây, tin đồn đã chạy trước mấy chặng sông mà về tới đây nằm chờ sẵn. Người ở đất này đi bộ, còn tin đồn của họ thì biết bơi. Thú vị."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, họ tới không hẳn vì tin ngài là thần tiên. Họ tới vì nghe nói ở Phúc Thọ, người ta được gọi bằng tên thật của mình. Một người nghèo được gọi đúng tên — đã là thứ nhiều người cả đời chưa từng nhận."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ghi tên thì cứ ghi. Bổn tọa không đọc nổi thứ chữ cong queo của các ngươi, nhưng nhớ mặt người thì bổn tọa nhớ rất dai. Kẻ nào có tên trong giấy ấy mà biến mất, bổn tọa sẽ hỏi tới nơi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa ngài. Tờ giấy này không phải sổ nợ, cũng không phải danh sách của nhà nào. Tôi ghi tên người ta tự xưng, ghi lời họ gửi gắm tìm thân nhân — để không ai biến mất lần nữa mà không ai hay."
+      },
+      {
+        "speaker": "Ông từ làng",
+        "text": "Thưa cô, trong làng còn mấy nhà có người đi phu, đi ghe từ năm ngoái tới giờ không tin tức. Tên của họ, cô cho ghi cả vào giấy này được không?"
+      },
+      {
+        "if": "thuNguyetFollows",
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ, thưa cô, chỗ nghỉ tạm em đã xếp xong. Các gia đình được cứu nằm ở dãy lều phía trong, người bệnh nằm gần thùng nước."
+      },
+      {
+        "if": "thuNguyetFollows",
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Em đối chiếu danh sách em mang theo với giấy của cô rồi. Mấy nhà đi cùng ghe đã đủ người. Còn hai nhà thiếu một tên."
+      },
+      {
+        "if": "thuNguyetFollows",
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ, việc của em là giữ cho danh sách này khớp với người thật. Nhà nào còn thiếu người, em để trống chỗ ấy, chờ tin về rồi mới điền."
+      },
+      {
+        "if": "thuNguyetFollows",
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Em làm vậy là phải. Một cái tên ghi sai là một người thật bị mất dấu ngoài đời. Cứ chậm mà chắc."
+      },
+      {
+        "speaker": "Ông từ làng",
+        "text": "Thưa cô, làng có hai người biết chữ tử tế. Cô cho phép, tôi gọi họ tới ngồi ghi cùng — giấy dài thế này, một tay ghi không xuể, mà để sót một tên thì tội người ta.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Ông từ làng",
+        "text": "Chỗ nghỉ tạm, dân làng tự dựng xong từ hôm kia rồi, thưa cô. Lều bạt chưa đẹp đẽ gì, nhưng người bệnh có chỗ nằm, trẻ con có chỗ chơi, không ai phải nằm ngoài sương.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, vậy tôi trông cậy vào bác và hai vị ấy. Ghi tên người ta tự xưng, ghi cả lời gửi gắm tìm thân nhân. Một cái tên ghi sai là một người thật bị mất dấu.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đất này cũng được. Có biển, có gió, có mấy trăm con người tự kéo nhau tới quanh chỗ bổn tọa đứng. Bổn tọa sẽ mở một chỗ ở đây — một đạo quán, dạy người ta đứng thẳng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đừng nhìn bổn tọa bằng con mắt ấy. Bổn tọa mở chỗ này vì buồn chán, không phải vì thương hại ai. Nhưng ván cờ càng đông người càng vui — và bổn tọa muốn xem đất này sẽ kéo theo những thứ gì khác."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa ngài, chỗ mở lúc nào là việc của ngài. Việc trước mắt của tôi là mấy người bệnh ở rìa sân: họ đã được khiêng tới thì nằm chỗ mát, uống nước đàng hoàng. Không ai bị ghi là đã chết khi còn đang thở."
+      }
+    ],
+    "id": "ky3_01_stub",
+    "location": "Bến Long Hải — ngày 7, buổi sáng dân tụ về",
+    "narration": [
+      "Ghe vào bến Long Hải lúc nắng mới lên khỏi mặt nước. Đoàn đi vắng chưa đầy ba ngày mà bến đã khác hẳn: thường giờ này bến chỉ có người gánh cá và mấy phu khuân vác chờ việc; sáng nay người đứng kín cả lối xuống nước — dân chài ôm nón chen với đàn bà gánh thúng không, trẻ con trèo lên đống lưới phơi để nhìn cho rõ một đoàn người vừa cứu sống những kẻ đã bị ghi trên giấy là chết.",
+      "Không ai reo hò. Tiếng đồn đi trước ghe của đoàn mấy chặng sông, không mang hình thù gì rõ ràng: người thì nói vị thầy pháp ở biệt thự họ Hứa sắp mở một chỗ chữa bệnh ở phía làng, kẻ lại thề rằng họ hàng của họ tận mắt thấy một con tàu chở quan tài bị chặn giữa sông, những đứa trẻ được bế lên bờ, còn thở, còn khóc. Mọi phiên bản đều giữ chung một hạt nhân: ở Phúc Thọ, những người đã chết trên giấy được gọi lại bằng tên thật, và được đối xử như người sống.",
+      "Đám đông tự dạt ra thành một lối đi khi đoàn bước lên bờ. Người bệnh được khiêng tới thật: ba chiếc võng, hai tấm chiếu trải vội ở rìa sân, một bà cụ được con cháu cõng trên lưng — họ nằm đó từ trước khi ghe cập bến. Không ai kêu khóc hay van xin thành tiếng. Tiểu Lan đi chậm lại khi qua chỗ họ nằm; nàng không hứa gì, chỉ nhìn từng người một và gật đầu với người nhà đang quỳ bên cạnh, như ghi nhận rằng họ có mặt.",
+      "Những ngày sau buổi ghe về, đoàn không mở việc gì lớn. Trước hết là an trí các gia đình được cứu đi cùng ghe: người có họ hàng ở Long Hải thì được đưa về tận nhà, người chưa biết đi đâu thì ở lại chỗ nghỉ tạm dựng ven bến, có chiếu nằm, có nước uống. Người bệnh tìm tới thêm lẻ tẻ. Tin Phúc Thọ vẫn lan thêm ra các làng quanh. Cho tới sáng ngày 7, bãi đất ven bến đã có lều bạt, có bếp nấu nước — và người tụ về đông hơn cả buổi sáng ghe cập bến.",
+      "Ngay trong buổi ghe về, Tiểu Lan đã cho ghi tên. Không phải ghi vào sổ nợ, không phải danh sách của bất kỳ nhà nào: một tờ giấy sạch — tên từng người tụ về, tên từng người bệnh, tên những người thân còn kẹt trên tuyến sông mà người nhà gửi gắm nhờ tìm. Đối chiếu với bộ giấy đoàn mang về từ Phúc Thọ, một đường dây hiện ra: có người đang sống mà giấy tờ ghi đã chết, có lịch trình tàu chở quan tài chạy đều qua cửa sông, có những cái tên biến mất khỏi làng này và xuất hiện trong sổ chết của một bến khác. Tờ giấy sạch vì thế giữ cả chứng cứ của tuyến quan tài.",
+      {
+        "if": "thuNguyetFollows",
+        "text": "Thu Nguyệt về cùng đoàn và nhận ngay phần việc của người giữ sổ. Nàng xếp chỗ nghỉ tạm cho các gia đình được cứu: lều nào cho người bệnh nằm, góc nào có bóng mát buổi trưa, thùng nước uống đặt ở đâu để trẻ con cũng với tới được. Xong việc, nàng ngồi xuống bên tờ giấy sạch của cô chủ, đối chiếu từng nhà một với danh sách nàng mang theo: nhà nào đã đủ người, nhà nào còn thiếu một cái tên. Nàng làm việc lặng lẽ, luôn lùi đúng nửa bước sau cô chủ."
+      },
+      {
+        "text": "Sáng nay trong đoàn không có Thu Nguyệt; nàng ở lại phía sau, không ai ở bến nhắc tên cô. Việc ghi tên vì thế do người làng tự chia nhau làm: ông từ làng cùng hai người biết chữ ngồi bên tờ giấy sạch, ghi theo lời đọc của Tiểu Lan, nét chữ chậm mà chắc. Việc xếp chỗ nghỉ cũng do người làng tự lo — chậm hơn một nhịp, nhưng không thiếu một ai.",
+        "unless": "thuNguyetFollows"
+      },
+      "Sáng ngày 7, giữa đám đông tụ lớn ở sân ven bến, có một người đứng ở hàng cuối mà mắt ghi rất kỹ: người của Giới Phòng, áo lính lệ chỉnh tề, tay không cầm sổ. Hắn đứng xem từ xa, không hỏi, không ghi. Đứng một lúc lâu, hắn lặng lẽ rẽ đi theo hướng đường cái. Cũng lúc ấy, Cao Minh phẩy tay một cái, nhẹ như phủi bụi áo: gió biển đang quất cát bỗng lặng hẳn trong khoảnh sân, và ở rìa sân, mấy người bệnh đang thoi thóp thở bỗng thở đều lại được, như có ai vừa nhấc một tấm chăn ướt khỏi ngực họ. Không sấm, không sáng chói, không ai bị thương.",
+      "Đám đông nín lặng trong vài nhịp thở. Họ vừa được nhắc, rất nhẹ nhàng, rằng người đàn ông trước mặt họ không phải một thầy lang. Tiểu Lan không để khoảnh khắc ấy trôi thành một buổi lễ: nàng quay lại với những chiếc võng ở rìa sân, với tờ giấy sạch còn đang ghi dở. Còn Cao Minh, đứng giữa khoảng sân vừa lặng gió, nhìn mấy trăm con người tụ về bãi đất ven biển, và nói điều hắn định làm ở đất này — như người vừa tìm được một thú tiêu khiển mới."
+    ],
+    "stageId": "long_hai",
+    "title": "Người tụ về Long Hải"
+  },
+  "ky3_02_dai_tran_ha_o": {
+    "backgroundId": "ha-o-assembly-yard",
+    "choices": [
+      {
+        "effects": {
+          "civiliansSavedDelta": 2,
+          "suppliesDelta": -1
+        },
+        "flags": {
+          "ky3GrandFormationUnveiled": true
+        },
+        "id": "ky3_formation_serves_first",
+        "next": "ky3_03_van_pham_thu_phap",
+        "route": {
+          "delta": 1,
+          "id": "bao_ho"
+        },
+        "text": "Mở ngay lối dùng nước và chỗ nghỉ quanh trận cho dân, trước cả giờ lễ thụ pháp buổi chiều."
+      },
+      {
+        "effects": {
+          "civiliansSavedDelta": 1,
+          "lanTrustDelta": 2
+        },
+        "flags": {
+          "ky3GrandFormationUnveiled": true
+        },
+        "id": "ky3_formation_stands_free",
+        "next": "ky3_03_van_pham_thu_phap",
+        "route": {
+          "delta": 1,
+          "id": "tu_quyet"
+        },
+        "text": "Tuyên bố trận không thuộc cơ quan nào: dân tự cử người trông coi phần việc chung, không ai đứng tên quản lý thay."
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "dialogue": [
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa ông thầy, thưa cô, để tui chia dân theo xóm cho khỏi chen nhau. Xóm bến phía đông, xóm chợ phía tây, người bệnh và người già ngồi ở hàng chiếu gần thùng nước. Ai cũng có chỗ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Làm nhanh lên. Bổn tọa dựng một đạo quán, không dựng chợ phiên. Cột kèo cứ để đó — chúng tự biết chỗ đứng của mình. Các ngươi chỉ cần đừng đứng dưới lúc chúng tự đứng dậy là được."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Chín điểm trận, mở. Đất này từ nay có một cái lõi để tụ linh khí về. Ai muốn quỳ xuống cảm ơn thì đứng dậy — bổn tọa không nhận lễ của người đang quỳ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Thấy chưa. Nước giếng trong lại, người bệnh trong vòng trận dễ thở hơn. Một buổi sáng dựng xong một chỗ sống được cho mấy nghìn người — bổn tọa còn chưa thấy nóng tay."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Trời đất ơi… nước giếng tui vừa múc đây, trong veo, không còn mùi bùn như mọi bữa. Mấy bà ở lều nghỉ nói người bệnh thở nhẹ hẳn. Cái trận này giữ cho cả xóm sống được phải không, thưa cô?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, trận này giữ cho chỗ này sống được: nước trong, khí lành, chỗ nằm yên ổn. Nó không phải thứ để ai quỳ xuống, cũng không phải thứ để ai mang ra hù dọa ai. Dân dùng nó như dùng một cái giếng chung vậy thôi."
+      },
+      {
+        "speaker": "Người của Giới Phòng",
+        "text": "Thưa ông, thưa cô, ty chúng tôi tới xem với thiện ý. Chỉ là một công trình lớn thế này, theo phép, cần có cơ quan đứng tên quản lý: đăng ký vào sổ, cử người trông coi chính thức, thu lệ phí cho phải phép."
+      },
+      {
+        "speaker": "Người của Giới Phòng",
+        "text": "Thưa ông, chúng tôi không có ý ngăn trở việc tốt. Nhưng đất có chủ, việc có người chịu trách nhiệm — đó là lệ của chính quyền. Một tờ đăng ký thôi, không làm khó gì ai."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hay. Trận của bổn tọa chưa nóng đất, đã có người tới xin đứng tên lên đầu nó. Về nói với cơ quan của ngươi: trận này là của chỗ đất này và người dùng nó. Việc phàm của các ngươi, các ngươi cứ quản. Còn đầu của bổn tọa, không ai đứng lên được."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa ông thầy, lời đề nghị khi nãy, tui ghi lại nguyên văn vào giấy rồi. Ngày nào, ai tới, nói những gì — có chữ của tui làm chứng. Sau này ai hỏi tới việc quản lý sân này, cứ lấy tờ giấy ấy ra đối chiếu."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, tôi xin nói rõ từ đầu: nước và chỗ nghỉ quanh trận, ai cũng được dùng. Không ghi nợ, không bắt thề, không phân biệt người đã ghi danh hay chưa ghi danh. Ai khát thì uống, ai mệt thì nằm."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Người bệnh ở lều nghỉ được dùng trước, vì họ cần trước. Trẻ con và người già lấy nước ở thùng gần sân. Mấy việc ấy không cần ai cho phép — tôi nói ra chỉ để từ nay không ai dám thu một đồng nào ở giếng này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Còn phần trông coi việc chung, tôi nhờ bà Mến chia theo xóm, luân phiên nhau. Ai trông coi cũng là người của làng cả — không có ai là chủ của giếng nước này hết."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Dạ, thưa cô, tui chia xong rồi. Mỗi xóm một phiên, ghi rõ trên giấy, dán ở cột lều cho ai cũng đọc được. Nhà nào bận mùa ghe thì đổi phiên với nhà khác, nói một tiếng là xong."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa cô, dân họ hỏi tui hoài: chỗ này rồi gọi là gì. Tui nói tên là của người ta tự gọi với nhau. Mà từ trưa tới giờ, tui nghe mấy người gọi là sân Hạ Ô rồi đó, thưa cô."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Trận đã chạy, từ nay nó tự vận hành, không cần bổn tọa canh từng nhịp. Buổi chiều cùng ngày, ngay tại sân này, bổn tọa mở lễ thụ pháp. Ai muốn học cách đứng thẳng thì tới. Ai không muốn, cứ ở nhà."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa ngài. Buổi chiều cùng ngày thì gấp, nhưng dân đang tụ sẵn ở đây, nước uống và chỗ nghỉ cũng đã có. Tôi sẽ nhờ bà Mến báo theo xóm: ai muốn tới thì tới trước khi nắng tắt."
+      }
+    ],
+    "id": "ky3_02_dai_tran_ha_o",
+    "location": "Sân dựng đạo quán, Long Hải — ngày 8, buổi sáng dựng trận",
+    "narration": [
+      "Sáng ngày 8, bãi đất trống ven bến đã thành một công trường. Hàng nghìn người tụ về từ lúc trời còn mờ: dân bến, dân chợ, người từ các làng quanh đi bộ từ nửa đêm, người bệnh được khiêng trên võng đặt ở rìa sân. Không ai phát lệnh tập hợp; người ta tự tới, vì một trận pháp sắp mở là chuyện cả đời chưa chắc thấy lần thứ hai, và vì chỗ này, chỉ trong mấy ngày, đã thành nơi người ta gửi gắm tên tuổi và người thân của mình.",
+      "Cao Minh làm việc theo kiểu của hắn: không hô hào, không đốc thúc, không một giọt mồ hôi. Hắn đi một vòng quanh bãi đất như người bày lại một ván cờ — và hạ tầng dựng lên với tốc độ không thuộc về sức người. Cột kèo tự đứng vào đúng vị trí, móng lều đào xong trong chớp mắt, kho chứa, bếp nấu nước, dãy chỗ nằm thành hình trước khi nắng lên cao. Dân chỉ kịp chạy việc phàm: khiêng nước, giữ trẻ nhỏ, nhường lối. Trần Thị Mến, người đàn bà biết chữ ở chợ, đứng ra chia dân theo xóm để đám đông không chen lấn thành hỗn loạn.",
+      "Rồi chín điểm trận lần lượt sáng lên quanh khu đất. Không sấm, không chớp — chỉ là chín cột sáng mảnh đứng yên quanh sân, và linh khí trong vùng đổi chiều: gió biển thổi vào sân mang theo hơi mát sạch, nước giếng vừa múc lên trong veo khác hẳn mọi ngày. Ở dãy lều nghỉ, mấy người bệnh nằm thoi thóp mấy ngày nay thở nhẹ trông thấy; có bà cụ tự ngồi dậy được, vịn tay con cháu mà nhìn ra sân. Hàng nghìn người nín lặng: họ đang đứng trong một hạ tầng sống được — có nước trong, có khí lành, có chỗ nằm yên ổn — dựng lên trong một buổi sáng.",
+      "Buổi trưa, người của Giới Phòng tới. Không phải toán lính áp giải, chỉ là mấy người mặc áo lính lệ chỉnh tề, lời lẽ lịch sự theo kiểu thuộc địa: một công trình lớn thế này, theo phép, cần có cơ quan đứng tên quản lý — đăng ký, cử người trông coi, thu lệ phí cho phải phép. Đám đông quanh sân lặng hẳn đi; người dân đất này nghe tới hai chữ lệ phí là nghe thấy cả một đời nộp tiền vào những cái trạm không bao giờ đưa lại một tờ giấy. Cao Minh nghe hết, không cắt lời ai, rồi đáp ngay tại chỗ, trước mặt cả sân.",
+      "Khi người của Giới Phòng đã lui ra, việc còn lại là phần phàm của trận — và phần ấy do Tiểu Lan định. Nàng nói chậm rãi, để hàng cuối sân cũng nghe được: ai được dùng nước và chỗ nghỉ quanh trận, và điều gì tuyệt đối không được phép xảy ra ở chỗ này. Trần Thị Mến ghi lại từng lời, rồi chia các xóm luân phiên trông coi việc chung, ghi trên giấy dán ở cột lều. Đám đông gật đầu theo từng điều; họ hiểu thứ ngôn ngữ này: ngôn ngữ của việc chung, của người yếu được đứng tên trong một tờ giấy không phải giấy nợ.",
+      "Chiều xuống, chín điểm trận vẫn sáng đều, tự vận hành ổn định, không cần ai canh giữ, không cần hắn bổ sung thêm một nhịp nào. Người dân bắt đầu gọi bãi đất trống bằng một cái tên của chính họ. Bếp nấu nước vẫn đỏ lửa, người bệnh vẫn nằm yên ở lều nghỉ, và ở giữa sân, chỗ đất phẳng nhất đã được quét dọn sạch sẽ cho một việc nữa sẽ diễn ra ngay buổi chiều cùng ngày: lễ thụ pháp đầu tiên của Hạ Ô Môn."
+    ],
+    "stageId": "long_hai",
+    "title": "Chín trận khai sơn"
+  },
+  "ky3_03_van_pham_thu_phap": {
+    "backgroundId": "ha-o-assembly-yard",
+    "choices": [
+      {
+        "effects": {
+          "civiliansSavedDelta": 2,
+          "lanTrustDelta": 1
+        },
+        "flags": {
+          "ky3MarksScattered": true
+        },
+        "id": "ky3_marks_for_latecomers",
+        "next": "ky3_04_quyen_giu_khai_mach_an",
+        "route": {
+          "delta": 1,
+          "id": "bao_ho"
+        },
+        "text": "Để ngỏ việc phát ấn tiếp cho người ở làng xa chưa tới kịp và người bệnh nằm nhà, giao Mến giữ danh sách các làng chưa nhận."
+      },
+      {
+        "effects": {
+          "civiliansSavedDelta": 1,
+          "lanTrustDelta": 2
+        },
+        "flags": {
+          "ky3MarksScattered": true
+        },
+        "id": "ky3_no_register_to_receive",
+        "next": "ky3_04_quyen_giu_khai_mach_an",
+        "route": {
+          "delta": 1,
+          "id": "tu_quyet"
+        },
+        "text": "Tuyên bố lại trước sân trước khi tan lễ: nhận ấn không cần ghi danh, ai đã về cứ về, ấn là của người nhận."
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, trước khi lễ bắt đầu, tôi xin nói rõ để không ai hiểu lầm. Thứ nhất: người được truyền pháp — nhận ấn, học Phàm Tức Quy Nguyên Kinh, không bắt buộc nhập môn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thứ hai: đệ tử chính thức — người tự nguyện ghi danh, nhận sinh hoạt và trách nhiệm trong một của sáu đường. Thứ ba: người hưởng dụng không nhập môn — dùng linh tuyền công cộng, chữa bệnh, khiếu nại, không cần tu."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Dạ, thưa cô, tui ghi đủ ba điều ấy vào giấy, chữ lớn, dán ở cột giữa sân. Ai không biết chữ thì tui đọc cho nghe. Nhận ấn không phải bán mình — câu ấy tui nói đến khản cả giọng rồi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngồi xuống cả đi. Xếp hàng ngay ngắn thế này cho một thứ bổn tọa ném ra như rải thóc, các ngươi không thấy mệt sao? Ai có mặt thì có phần — người già, trẻ con, người nằm ở lều nghỉ cũng vậy."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "24.000 ấn. Bổn tọa không đếm, các ngươi cũng đừng đếm. Cứ để chúng rơi như mưa đầu mùa — mưa thì không hỏi ruộng nào xứng đáng mới chịu ướt."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Trời đất ơi… ấn rơi như mưa thiệt, thưa cô! Đốm sáng nào cũng tự tìm người, không sót một ai. Bà cụ nằm võng ở lều nghỉ cũng có một đốm đậu ngay trên ngực, ấm lên trông thấy!"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, tôi nhắc lại cho rõ: nhận ấn xong, ai muốn về thì cứ về. Ghi danh là việc khác hẳn, tự nguyện hoàn toàn. Không ai được giữ người ta lại để ép ghi tên vào sổ đệ tử."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ai ở hàng ghi danh mà thấy mình bị giục, bị ép, cứ bước ra khỏi hàng và tới nói với tôi. Nhận pháp là quyền của người ta; không ai biến quyền ấy thành một cái cửa để thu người được."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Bà Mến, phiền bà dời bàn ghi danh ra góc sân phía đông, kê riêng một chỗ. Bàn ở giữa chỉ là bàn nhận ấn và nghe đọc kinh. Hai việc, hai chỗ — từ nay cứ thế mà làm."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Dạ, thưa cô, tui dời ngay. Tui cũng nói to cho cả sân nghe: ai không ghi danh vẫn ra về đàng hoàng, ấn trong người là của mình, không ai thu lại được. Tui lấy chữ của tui ra bảo chứng."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa cô, người không biết chữ thì tui đọc kinh thành tiếng, từng đoạn ngắn, đọc đi đọc lại. Họ nghe, họ nhắc lại, họ vận hơi thở theo."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa ông thầy, thưa cô — có người lĩnh ấn đầu tiên vận được hơi thở đầu tiên rồi! Tay chân ấm lên, mặt có sắc lại. Mới là mầm Luyện Khí thôi, nhưng là hơi thở của chính họ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa ngài, người ta học nhanh chậm khác nhau là lẽ thường. Tôi chỉ xin một điều: đừng để ai lấy chuyện nhanh chậm ấy ra mà chia người ta thành hạng này hạng khác."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nhanh chậm là chuyện căn cốt từng người, đường dài mới biết. Cứ để họ học, bổn tọa ngồi xem là đủ vui."
+      },
+      {
+        "speaker": "Người dân",
+        "text": "Thưa cô, tôi… tôi vận được rồi. Hơi thở nó tự đi một vòng, ấm từ bụng ấm lên. Tôi là dân chài, không có một chữ… vậy mà học được thiệt. Tôi không ghi danh đâu — mà vẫn được học thiệt."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, lễ tới đây là tan. Người ở làng xa chưa tới kịp, xin cứ nhắn lại: việc phát ấn cho người tới muộn vẫn để ngỏ, không ai bị bỏ sót vì nhà xa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngồi một buổi, uống hết một vò rượu, xem mấy vạn người tự học cách thở cho ra hồn — buổi chiều như vậy, bổn tọa không chê. Ai giữ việc phát ấn cho người tới muộn, các ngươi tự mà bàn. Bổn tọa ném ấn thì nhanh, chứ ngồi chia việc thì buồn ngủ lắm."
+      }
+    ],
+    "id": "ky3_03_van_pham_thu_phap",
+    "location": "Sân đạo quán Hạ Ô Môn, Long Hải — ngày 8, buổi chiều đại lễ",
+    "narration": [
+      "Buổi chiều ngày 8, sân đạo quán kín người. Hàng nghìn người tụ về từ buổi sáng dựng trận còn chưa tan, người từ các làng xa vẫn đang tới thêm, và ở dãy lều nghỉ, người bệnh nằm trên võng cũng được quay đầu võng ra phía sân để nhìn buổi lễ. Trước khi bất kỳ ấn nào được rải xuống, Tiểu Lan cho công bố rõ ràng bằng lời phàm, nói chậm rãi để hàng cuối sân cũng nghe đủ: ở chỗ này có ba diện người, diện nào cũng có tên gọi và quyền riêng. Nói thành tiếng trước, để không ai hiểu lầm rằng nhận ấn là bán mình.",
+      "Ở thềm sân, trên chiếc ghế đá đặt sẵn từ buổi sáng, Cao Minh ngồi nguyên một chỗ. Hắn mở vò rượu, rót ra chén, uống thong thả — và ngồi như thế suốt buổi lễ, không đứng dậy, không diễn văn, không điểm danh. Đám đông ban đầu còn ngơ ngác nhìn vị Đạo Tổ ngồi uống rượu giữa đại lễ của chính mình; dần dà họ hiểu ra: buổi lễ này không cần hắn làm gì thêm. Thứ hắn cho đi, hắn cho như rải thóc — ném ra là xong.",
+      "Rồi hắn phất tay, lơ đãng như phủi một hạt bụi. 24.000 Hạ Ô Khai Mạch Ấn tỏa xuống sân như một trận mưa sáng: từng đốm lửa nhỏ tự tìm tới từng người có mặt — người già ở hàng chiếu, trẻ con chen giữa người lớn, người bệnh nằm ở lều nghỉ, người ở hàng cuối vừa tới kịp. Không thi tuyển, không hạn ngạch, không xét xuất thân. Ấn chạm vào người nào thì ấm lên trong người ấy, ở lại như một hạt mầm vừa gieo. Cao Minh vẫn ngồi trên ghế đá, rót thêm một chén rượu, nhìn trận mưa sáng rơi xuống như nhìn một cảnh trời đẹp.",
+      "Giữa lúc sân còn xôn xao vì mưa ấn, một việc phàm suýt làm hỏng buổi lễ: mấy người phụ việc bắt đầu giục những ai vừa nhận ấn xong bước thẳng sang hàng ghi danh — ghi tên vào sổ đệ tử rồi mới được ra về. Có người lúng túng không biết từ chối thế nào, có bà mẹ ôm con đứng giữa hai hàng mà ngơ ngác. Tiểu Lan trông thấy, và nàng chặn ngay tại chỗ, tách hẳn hai việc ra trước mặt cả sân. Trần Thị Mến kê riêng bàn ghi danh tự nguyện ra một góc sân; bàn ở giữa chỉ còn là bàn nhận ấn và nghe đọc kinh.",
+      "Phần còn lại của buổi chiều dành cho việc truyền kinh. Phàm Tức Quy Nguyên Kinh được đọc thành tiếng nhiều lượt, từng đoạn ngắn, cho người không biết chữ nghe và nhắc lại; người biết chữ ngồi lẫn vào, chỉ nhau cách vận hơi thở đầu tiên. Người lĩnh ấn đầu tiên vận được hơi thở đầu tiên ngay tại sân — một vòng khí ấm qua bụng, tay chân nhẹ đi — mới ở mức mầm Luyện Khí. Cao Minh vẫn ngồi ghế đá uống rượu; cả buổi, hắn chỉ bình thêm một câu ngắn vào chuyện nhanh chậm, rồi lại rót rượu, xem tiếp.",
+      "Chiều tối, 24.000 ấn đã rải hết. Dòng người ghi danh tự nguyện vẫn còn đang dài trước bàn ở góc sân — người ta ghi tên vì muốn, không phải vì bị giục. Người không ghi danh ra về với ấn trong người, và lời hẹn dùng linh tuyền công cộng khi cần. Ở cuối sân, mấy người vừa tới từ những làng xa nhất bắt đầu hỏi nhau: người chưa tới kịp hôm nay thì nhận ấn ở đâu, ai giữ việc phát ấn cho người tới muộn? Thứ sắp bị tranh nhau không phải bản thân ấn — ấn hắn ném ra vô số; thứ bị tranh là quyền phát ấn, quyền quản việc ấy."
+    ],
+    "stageId": "long_hai",
+    "title": "Vạn Phàm Thụ Pháp"
+  },
+  "ky3_04_quyen_giu_khai_mach_an": {
+    "id": "ky3_04_quyen_giu_khai_mach_an",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Ai giữ Khai Mạch Ấn?",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân lễ Hạ Ô Môn, Long Hải — ngày 9",
+    "companions": [],
+    "narration": [
+      "Sáng ngày 9, sân lễ còn dấu vết đại lễ hôm qua: tro hương chưa quét, mặt đất in dày dấu chân. Việc phát ấn chưa xong — người ở làng xa đi từ canh tư mới tới, có người hôm qua đứng tới rìa sân mà chưa dám lại gần. Trong sân, hai bàn phát ấn đã tự hình thành: bàn của Tống Nguyên Phúc có sổ, có người ghi, hàng ngay ngắn; bàn của Bùi Tấn Lễ chỉ có một rổ ấn và đôi tay phát không nghỉ, hàng xô nhau mà chạy nhanh hơn hẳn.",
+      "Một người đàn bà gánh thúng không đứng giữa hai hàng lâu nhất: bà bước sang hàng có sổ, một lúc lại sang hàng không sổ, rồi quay về chỗ cũ, không biết mình thuộc hàng nào. Cuối cùng bà hỏi thành tiếng, cả sân khựng lại. Cao Minh ngồi trên ghế đá ở thềm từ sớm, vò rượu mở sẵn, xem hai cái bàn chạy việc như xem một ván cờ bày ra cho hắn coi chơi.",
+      "Giữa buổi, một kẻ lanh lợi nhận ấn ở bàn Bùi rồi vòng ra sau xếp lại vào hàng có sổ, định nhận thêm chiếc nữa — hắn nói tỉnh bơ là gom về cho cả họ, sẵn giữ giùm mấy người chưa tới. Cả hai chấp sự đều chặn hắn, nhưng theo hai cách khác hẳn: một bên dựa vào cuốn sổ, một bên dựa vào con mắt nhớ mặt người. Ấn thừa bị lấy lại. Người trong sân nhận ra điều chưa ai nói thành tiếng: qua hai cái bàn, ấn ban không điều kiện đã thành thứ phải qua tay người giữ.",
+      "Tống bưng cuốn sổ bước lên thềm, cúi đầu thỉnh ý. Bùi cũng ngừng tay, nhìn lên ghế đá. Cả sân nín lại chờ một câu phán: từ nay ai giữ ấn chính thức của nhà này. Cao Minh đặt chén xuống, đi xuống giữa sân, phất tay một cái thong thả như phủi bụi áo.",
+      "Ấn mới rơi xuống không tiếng động lớn: phủ kín mặt bàn có sổ, tràn qua rổ bàn không sổ, lấp lánh trên nền đất giữa hai hàng người — nhiều tới mức không ai còn nghĩ tới chuyện đếm. Người đứng gần nhất nhặt một chiếc lên xem, rồi cười ngơ ngác. Thứ hai chấp sự tranh nhau từ sáng hóa ra không nằm ở số ấn trong rổ.",
+      "Hàng người tự tan rồi tự xếp lại thành một hàng chung. Hai chấp sự tự thỏa thuận luật tạm ngay tại sân, nói thành tiếng cho dân nghe. Chiều xuống, người tới muộn nhất là một bà lão chống gậy từ làng trên: bà nhận ấn từ tay Bùi ngay tại bậc thềm, không qua một cửa nào. Tống nhìn cuốn sổ của mình — mới ghi vài trang mà sân đã phát xong không cần nó. Hắn không xé; hắn gấp lại cẩn thận, kẹp vào tay áo. Phía trong, tàng kinh vừa mở cửa ngày đầu, và bóng Tống đã đi trước một bước về phía ấy."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Ấn của tông môn trao ra, phải biết trao vào tay ai. Bàn này ghi tên từng người — sau này tra lại, không ai chối được phần của mình."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Ai đã nhận, xin đứng sang phía có bóng mát chờ gọi tên. Ấn không thiếu phần ai, chỉ sợ trao lầm tay."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Bên này không cần tên tuổi. Tới phiên thì đưa tay ra, ấn vào tay rồi về lo cơm nước. Đứng nắng lâu, người già chịu không nổi."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Ấn còn đầy rổ. Người ta đi từ canh tư tới đây, bắt chờ một cuốn sổ mở trang thì tội. Phát trước, tính sau."
+      },
+      {
+        "speaker": "Người dân",
+        "text": "Vậy rốt cuộc con phải xin ai?"
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Không phải xin — là ghi cho có đầu mối. Ấn lọt ra ngoài, người ta cầm bán lại ngoài chợ, ai đứng ra nhận lỗi?"
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Nhà nhỏ phát sao cũng được. Nhà đã lớn, việc phải có người giữ, có sổ mà tra. Không thứ tự, ấn đi về đâu không ai biết — đó mới là loạn."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tên ghi vào sổ không phải để làm khó ai. Là để khi có kẻ gian trà trộn, người ngay còn có chỗ kêu oan cho mình."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Ấn là của Đạo Tổ ban không điều kiện. Qua hai cái bàn mà thành thứ phải xin, là tụi này tự dựng cái cửa Đạo Tổ không hề dựng."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Anh sợ ấn lọt ra ngoài. Tui sợ người đứng nắng xỉu trước bàn mà ấn còn trong rổ. Việc trước mắt lo trước."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Tui không biết chữ bằng anh, được cái nhớ mặt người. Ai nhận rồi, ai chưa, mặt nào gian — tui nhìn một lượt là nhớ. Sổ của tui ở đây này."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Anh kia, tên anh đã ghi ở bàn này một lần. Gom ấn cho cả họ, giữ giùm người vắng — lòng tốt ấy ghi vào sổ riêng của bàn này trước đã."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Giữ giùm là một thứ quyền. Nay giữ một chiếc, mai mười chiếc, mốt thành người phát ấn của cả xóm. Việc ấy phải có tên trong sổ mà tra."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Thôi, đưa chiếc thừa đây. Người chưa tới, phần của họ còn nguyên trong rổ, không tới lượt anh giữ giùm. Đừng chắn lối người đang chờ thật."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Ở bàn tui, ai gian là tui nhớ mặt luôn, khỏi cần sổ. Mai anh ta tới nữa, tui nhìn là biết."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Gom ấn cho cả họ. Khá. Hai ngươi chặn hắn giỏi lắm — một người bằng sổ, một người bằng mắt. Để coi cuối buổi, cách nào mệt hơn."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa Đạo Tổ, phát ấn không thể mãi mạnh ai nấy làm. Xin ngài định một người giữ ấn chính thức, cho việc của nhà có một đầu mối."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Định một người giữ? Các ngươi tranh nhau cái tay cầm rổ. Rổ thì bổn tọa còn nhiều. Cầm lấy mà phát — hết rổ này, bổn tọa ném rổ khác."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ấn của bổn tọa cho không hết, giấy của ngươi ghi không hết. Hai thứ ấy cãi nhau từ sáng, bổn tọa ngồi coi, thấy cũng vui mắt."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Muốn giữ thì giữ cách phát cho đàng hoàng. Còn ấn — đừng ai dại mà đếm của bổn tọa."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Dạ… ấn nhiều thế này, càng phải xếp lại cho ngay ngắn. Kẻ dưới xin dọn sân trước, việc đầu mối để sau cũng chưa muộn."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Ha! Vậy phát tiếp thôi. Bà con khỏi xếp hàng nữa — cúi xuống lượm, lượm xong bước qua cho tui coi mặt một cái là được."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Luật tạm của buổi nay, tôi nói cho rõ: phát trước, ghi sau. Sổ chỉ ghi ấn đã đi về hướng nào để biết đường tìm, không xét cho hay không cho ai."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Phần dành cho người tới muộn giao anh Lễ giữ — anh nhớ mặt người giỏi hơn tôi nhớ chữ. Nhưng tôi nói trước: đây chỉ là luật tạm của một buổi."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Nhà đã có sáu đường, việc giữ ấn là việc chung, không thể để hai cái bàn tự liệu mãi. Khi Hội Đồng đủ ghế, việc này phải định thành lệ."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Luật tạm thì theo luật tạm. Bàn tui dẹp rổ vào góc này, phát chung một hàng với bàn anh. Ai tới sau cùng cũng còn phần — tui giữ mặt người cho."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Cuốn sổ ghi chưa hết một buổi mà sân đã xong việc. Tôi vẫn giữ nó. Giấy tờ trông vô dụng lúc yên bình — tới lúc tranh chấp, người ta mới biết nó đáng giá."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Anh giữ sổ của anh, tui giữ mặt người của tui. Mai ai tới muộn, cứ chỉ vào mặt tui mà hỏi phần. Miễn người ta khỏi phải xin ai là tui chịu hết."
+      },
+      {
+        "speaker": "Bùi Tấn Lễ",
+        "text": "Bà cụ về thong thả, ấn cầm chắc tay, đi phía có cỏ mà đi. Phần của người tới muộn nhất sân nay, khỏi ai ghi nợ bà một chữ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Sổ cũng giữ, mặt người cũng giữ. Nhà này chưa có lệ, đã có hai thứ để cãi nhau về lệ. Bổn tọa đi xem tàng kinh mở cửa ra sao."
+      }
+    ],
+    "choices": [
+      {
+        "id": "marks_without_a_gate",
+        "text": "Để luật tạm thời chạy đúng như nó vừa thành: phát ấn không qua cửa của ai — ai tới thì nhận, sổ chỉ ghi sau để biết ấn đã đi đâu.",
+        "next": "ky3_05_tam_the_thua",
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3MarkCustodyContested": true
+        }
+      },
+      {
+        "id": "ledger_after_receiving",
+        "text": "Giữ phần ấn dự trữ cho người tới muộn như Bùi đề xuất, và để Tống ghi sổ sau khi phát — trật tự đi sau người nhận, không đi trước.",
+        "next": "ky3_05_tam_the_thua",
+        "effects": {
+          "suppliesDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3MarkCustodyContested": true
+        }
+      }
+    ]
+  },
+  "ky3_05_tam_the_thua": {
+    "id": "ky3_05_tam_the_thua",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Tấm thẻ không cần thiết",
+    "backgroundId": "ha-o-scripture-hall",
+    "location": "Tàng kinh Hạ Ô Môn, Long Hải — ngày 9",
+    "companions": [],
+    "narration": [
+      "Tàng kinh mở cửa ngày đầu: kệ dài chạy suốt gian nhà, ngọc giản và sách xếp theo môn loại, không ai gác cửa thu tiền, không ai ghi tên người vào. Vậy mà ngay buổi sáng đầu tiên, trên đầu mỗi dãy kệ đã có một hàng thẻ gỗ treo ngay ngắn, chữ viết tay nắn nót: thẻ cho người mới nhận ấn xem trước, thẻ cho đệ tử chính thức, thẻ ghi hai chữ chờ xét — chỉ được chạm vào khi đủ tư cách. Người nghĩ ra hàng thẻ trong đêm và tự tay treo lên từ lúc trời chưa sáng là Tống Nguyên Phúc. Hắn đi dọc các dãy kệ kiểm lại từng tấm, thỉnh thoảng sửa một thẻ lệch nửa phân, như người cha kiểm nhà cửa trước khi con cái thức dậy.",
+      "Người tới xem kinh bắt đầu đọc thẻ trước khi đọc sách. Người được truyền pháp chỉ dám đứng ở dãy ngoài; đệ tử mới ghi danh đi sâu hơn một dãy, tới thẻ chờ xét cũng dừng lại. Cuối hàng, ngay ngưỡng cửa, là một người nông dân không biết chữ: ông đứng yên với hai tay trống, nhìn những tấm thẻ mình không đọc được, không dám bước vào một nơi không ai cấm ông. Tiểu Lan tới lúc ấy — nàng tới xem cách nhà mới này đối xử với người không biết chữ. Nàng nhìn thấy người nông dân trước, hàng thẻ sau.",
+      "Cao Minh vào tàng kinh như người xem một sạp hàng lạ. Hắn đi một vòng dọc các dãy kệ, ngón tay lướt hờ qua gáy mấy cuốn sách, không dừng ở tấm thẻ nào. Tới giữa gian nhà, hắn dừng lại, nhìn tổng số ngọc giản và sách một lượt, buông hai chữ ngắn ngủn — rồi phất tay, thong thả như phủi một lớp bụi vô hình.",
+      "Dãy kệ kéo dài ra trong im lặng. Ngọc giản mới hiện thêm chừng ấy nữa, tàng kinh rộng gấp đôi trong một cái phất tay, không tiếng động lớn, không ai kịp đếm. Người trực ngẩn mặt nhìn dãy kệ mới chạy tuốt về phía tường sau. Tống thì nhìn phần sách vừa thêm bằng mắt của người vừa được giao thêm một nhà kho phải sắp xếp lại từ đầu.",
+      "Không ai kịp bàn xem hàng thẻ có cần hay không — Tống đã bắt tay vào việc: phần ngọc giản vừa thêm phải có thẻ riêng, và thẻ riêng thì phải tinh hơn thẻ cũ. Người trực chạy theo hắn, tay ôm chồng thẻ gỗ trắng chưa viết chữ. Cao Minh nhìn cảnh ấy, bật cười, tự rót chén rượu thứ hai, ngồi xuống ghế đá trong tàng kinh xem tiếp như xem một trò tự nó hay.",
+      "Tiểu Lan đi dọc hàng người đang chờ theo thẻ, tới chỗ người nông dân vẫn đứng nguyên ở cửa từ đầu buổi. Nàng hỏi Tống thành tiếng, trước mặt cả hàng người, giọng điềm tĩnh của một tiểu thư nhà có học — không lên gân, chỉ hỏi đúng một việc cần hỏi. Tống đáp bằng lý lẽ thứ tự: một lý lẽ không sai, mà không trả lời trúng câu hỏi. Tiểu Lan không tranh thêm: nàng mời người nông dân bước vào, tự tay dẫn ông tới dãy kệ ngoài cùng, nhờ người trực đọc lớn tên các môn kinh cho ông nghe chọn. Ông không biết chữ — nhưng ông được nghe chọn, như mọi người.",
+      "Cuối buổi, hàng thẻ vẫn treo nguyên trên các dãy kệ. Không ai gỡ, Cao Minh cũng không ra lệnh gỡ. Nhưng người trong tàng kinh đã đi lại không nhìn thẻ nữa: có người lách qua dãy chờ xét lấy sách cho người đứng ngoài, có người đọc lớn cho người bên cạnh nghe. Tống ở lại sau cùng, một mình giữa hai dãy kệ, viết thêm một dòng chú thích dưới tấm thẻ cấp cao nhất. Ngoài cửa, người ta đã nhắc tới sáng mai: sân tập đầu tiên của người mới nhận kinh — câu hỏi của tàng kinh sẽ thành câu hỏi của sân tập: nhanh hay chậm, có thành cấp bậc hay không."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thẻ này tôi treo từ sớm: dãy ngoài cho người mới nhận ấn, dãy giữa cho đệ tử chính thức, dãy trong chờ đủ tư cách."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Nhà kho không chia ngăn, tìm một món mất cả buổi. Thẻ không cấm ai — chỉ nói người ta nên bắt đầu từ đâu."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Từ nay tàng kinh có thứ bậc đàng hoàng. Ai vào cũng thấy đường của mình treo trên đầu."
+      },
+      {
+        "speaker": "Đệ tử trực tàng kinh",
+        "text": "Thưa chấp sự… người chưa có thẻ nào hết, như người không biết chữ mới tới lần đầu, thì họ đứng ở đâu ạ?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa chấp sự, tôi hỏi một việc nhỏ: người đứng ở cửa từ đầu buổi — ông ấy không vào, vì sách không cho, hay vì không biết mình được vào?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, ông cứ đứng ngó cũng không sao. Muốn nghe có những môn kinh gì, tôi nhờ người đọc lớn cho ông nghe chọn."
+      },
+      {
+        "speaker": "Người nông dân",
+        "text": "Thưa cô, tui không biết chữ. Đứng đây ngó có sao không? Tui không có thẻ nào, sợ bước vô làm sai lệ."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa cô, thẻ để khỏi chen nhau. Không thẻ, người mạnh chen người yếu — kẻ thiệt vẫn là người đứng cuối."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Sách càng quý càng phải có cấp mà giữ. Dãy trong cùng ai cũng sờ vào, một tháng là nát hết."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ít thật."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Để vậy coi thiếu sách. Thêm chừng ấy nữa — treo thẻ hay không là việc của các ngươi."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa Đạo Tổ, thêm chừng này ngọc giản… thẻ phải làm lại từ đầu. Phần mới không treo chung thẻ với phần cũ được."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Ba cấp mới: cấp một — người đã qua một lượt kinh cơ bản. Cấp hai — trưởng nhóm học, xem thêm phần chú giải."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Cấp ba: giữ trong — kinh hiếm, chỉ người được giao thẻ mới chạm vào. Sách càng nhiều, thẻ càng phải tinh."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Người giữ thẻ cấp cao được vào trước giờ mở cửa chung một khắc. Đó là lo xa, không phải đặc quyền."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thẻ khắc chữ sâu, treo được lâu. Người đổi cấp thì thu thẻ cũ về, làm tấm mới."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hay. Sách cho thêm gấp đôi, ngươi cho thêm ba cấp thẻ trong một buổi. Rót thêm rượu — trò này bổn tọa coi được."
+      },
+      {
+        "speaker": "Đệ tử trực tàng kinh",
+        "text": "Thưa chấp sự, thẻ mới nhiều quá, viết không kịp… Hay viết cấp thứ nhất trước, mai viết tiếp hai cấp kia cũng được ạ?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa chấp sự, tôi hỏi trước mặt cả hàng người đang chờ: người đứng cuối hàng này — không biết chữ, không có thẻ nào, không quen một ai trong nhà —"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "— ông ấy có cần một tấm thẻ không, mới được xem những cuốn sách Đạo Tổ vừa chê là ít và đã cho thêm gấp đôi?"
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa cô, ai cũng sẽ tới lượt. Thẻ chỉ để khỏi chen nhau. Ông cụ đứng cuối, hết lượt này là tới lượt ông cụ."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Bỏ thẻ đi, mai người ta chen nhau ở cửa, người đứng cuối vẫn là người đứng cuối. Có thẻ, thứ tự của ông cụ được ghi nhận."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa ông, ông đi với tôi. Dãy ngoài cùng này không có thẻ nào cấm ông hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Trong dãy này có môn dạy giữ nước cho ruộng. Để người trực đọc lớn cho ông nghe — chậm rãi, không ai giục."
+      },
+      {
+        "speaker": "Người nông dân",
+        "text": "Thưa cô, có môn nào dạy chuyện ruộng rẫy không? Tui không đọc được, mà nghe thì nghe kỹ lắm."
+      },
+      {
+        "speaker": "Người nông dân",
+        "text": "Vậy tui chọn môn giữ nước cho ruộng. Nghe một lượt rồi, về kể lại cho cả xóm nghe cùng."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Cấp giữ trong này tôi ghi thêm một dòng chú: người giữ thẻ coi lại dãy kệ mỗi buổi chiều."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Thẻ đẹp, chữ cũng đẹp. Cứ treo — bổn tọa đi coi sân tập của các ngươi."
+      }
+    ],
+    "choices": [
+      {
+        "id": "no_card_for_the_last",
+        "text": "Nói rõ một câu trước lúc rời tàng kinh, theo đúng việc nàng vừa làm: người đứng cuối hàng không cần thẻ — ai hỏi thì cứ chỉ vào buổi chiều nay.",
+        "next": "ky3_06_tai_va_dao",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LibraryTiersCreated": true
+        }
+      },
+      {
+        "id": "tiers_stay_books_open",
+        "text": "Để nguyên thẻ của Tống treo đó — kệ sách vẫn mở, ngọc giản không thiếu, thẻ không khóa được cuốn nào; thứ bậc trên giấy mặc nó tự sống.",
+        "next": "ky3_06_tai_va_dao",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LibraryTiersCreated": true
+        }
+      }
+    ]
+  },
+  "ky3_06_tai_va_dao": {
+    "id": "ky3_06_tai_va_dao",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Tư chất và lòng người",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân tập Hạ Ô Môn, Long Hải — ngày 10",
+    "companions": [],
+    "narration": [
+      "Sáng ngày 10, buổi tập đầu tiên của lớp người mới. Tiểu Lan đứng ở bàn phát kinh cùng người trực sân: từng người nhận đúng một bản Phàm Tức Quy Nguyên Kinh như nhau. Không bản rút gọn cho người chậm, không bản thêm cho người nhanh — lệ ấy nàng nói thành tiếng từ đầu buổi. Nguyễn Hữu Cẩn và Hoàng Hợi nhận hai bản kề nhau, ngồi xuống hai chỗ kề nhau ở hàng đầu.",
+      "Chưa hết buổi sáng, tốc độ đã tách người ta ra trước mắt cả sân. Cẩn chạy trọn vòng hơi thở đầu tiên, khí vào đều, mặt sáng lên; người ngồi gần bắt đầu liếc sang hắn bằng con mắt khác. Hợi tới vòng thứ ba là nghẽn, làm lại từ đầu, mồ hôi ướt lưng áo. Đáng sợ không phải sự chênh lệch — mà là cả sân bắt đầu tự nhìn mình bằng con mắt ấy.",
+      "Giữa buổi, việc sân tự chia người mà không cần ai ra lệnh: nhóm tiến nhanh được gọi lên hàng đầu xem vòng vận khí tiếp theo; nhóm chậm ở lại hàng sau tự tập. Sự phân hàng xảy ra tự nhiên theo tốc độ — bóng của những tấm thẻ trong tàng kinh hôm qua quay lại sân tập bằng hình thức khác. Một đệ tử nhanh đề nghị Hợi nhường chỗ tốt cho người tập được — nói không ác, mà lạnh. Hợi không cãi: hắn quay sang người mới ngồi cạnh, còn chậm hơn mình, và đếm nhịp đều đều cho người ấy thở theo. Cả hàng sau, vì tiếng đếm ấy, mà không tan.",
+      "Tiểu Lan gọi cả sân dừng lại. Nàng đứng giữa hai hàng người, tuyên bố luật của sân tập từng câu điềm tĩnh — có học mà người ít chữ nghe cũng hiểu. Nói xong, nàng bắt cặp ngay tại chỗ: Cẩn và Hợi thành một cặp luyện chung từ hôm nay. Cẩn nhận cặp với vẻ mặt phức tạp. Hợi chỉ gật đầu.",
+      "Cao Minh đi ngang sân tập, nghe trọn luật của nàng mà không sửa một chữ. Hắn hất tay một cái lơ đãng xuống khoảng đất trống giữa sân: ngọc giản công pháp thêm rơi xuống thành một đống — không đếm, không phân cho ai; môn giữ hơi cho dân chài, môn vững tay cho thợ, môn tỉnh táo cho người giữ chợ. Trong đống ấy có một mảnh trận đồ không giống môn nào: Hợp Khí Lục Nhân Trận.",
+      "Sáu đệ tử đầu tiên bước vào thử trận ngay trong buổi, có cả cặp Cẩn – Hợi. Lần đầu, năm người chạy theo tốc độ của Cẩn: vòng khí dựng lên sáng rực rồi vỡ ở nhịp thứ ba. Lần thứ hai, Cẩn tự chậm lại, thở theo nhịp đếm đều đều của Hợi. Vòng khí đứng vững, lặng giữa sân: có những việc người nhanh nhất cũng không làm được một mình.",
+      "Buổi tập tàn khi nắng đứng bóng. Theo lệ cặp, Cẩn đứng lại ở cổng chờ Hợi xếp xong bản kinh mới cùng đi ăn — việc nhỏ hắn làm vụng về thấy rõ: gõ nhịp chân, nhìn trời, tay không biết để đâu. Ngoài sân, phía bến, người ta đã nhắc tới buổi trình diễn buổi sau của Hộ Pháp ở bờ biển. Tiểu Lan nhìn hai cái bóng đi kề nhau ra khỏi sân, rồi nói câu khép với người trực sân."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa quý vị, lệ phát kinh hôm nay: mỗi người một bản như nhau. Không bản rút gọn cho người chậm, không bản thêm cho người nhanh."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Thưa cô, vòng thứ hai, khí qua đan điền rồi dẫn lên bằng ý hay bằng hơi? Tôi thử: ý đi trước thì hơi theo kịp."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Giữ khí ở vòng thứ hai lâu hơn một nhịp, mạch hai bên sườn có căng không? Cách giữ lâu, tôi thấy vòng chạy êm hơn."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Thưa cô, tui hỏi chậm một chút: hơi đầu tiên vào, tới đâu thì biết là đủ mà giữ? Tui hít hoài mà khí không xuống được tới bụng."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Giữ hơi thì bao lâu? Người ta đếm tới ba là thở ra, tui đếm tới hai đã tức ngực."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Trọn một vòng rồi! Khí vào đều, không nghẽn chỗ nào. Vòng thứ hai tôi cũng qua luôn."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Không khoe đâu, mà nó tự tới. Ngồi xuống, thở theo kinh, khí đi như nước chảy xuống chỗ trũng."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Hợi, anh kẹt ở vòng thứ ba phải không? Đừng cố đẩy — đẩy là tắc thêm."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Ừ, tui kẹt ở vòng ba, làm lại ba lần rồi. Lần nào tới đó cũng nghẽn như sợi dây thắt nút."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Thưa cô, cho tui hỏi lại đúng chỗ nghẽn ấy thôi. Qua được một lần cho biết cách, rồi tui tự tập tiếp."
+      },
+      {
+        "speaker": "Đệ tử trong sân",
+        "text": "Kiểu này vài bữa nữa là biết ai—"
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Anh ngồi cạnh, đừng lo. Thở theo tiếng đếm của tui: vào — hai — ba, giữ — hai, ra — hai — ba — bốn."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Hàng sau chậm thì tập kiểu chậm. Đỡ nhau mà đi, không ai bỏ ai ở lại."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Chỗ tốt chỗ xấu gì, sân này đất bằng như nhau. Ai chưa tập được thì tập lâu hơn — có ai đuổi mình đâu mà nhường."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Từ sáng tới giờ tôi chỉ nhìn vòng khí của mình. Anh Hợi đếm nhịp cho cả hàng sau không tan — việc ấy tôi làm không được."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Tôi nghe rõ câu anh nói với người ngồi cạnh. Không một chữ than."
+      },
+      {
+        "speaker": "Đệ tử trong sân",
+        "text": "Anh Hợi, hay nhường chỗ gần cột cờ cho người tập được ngồi? Chỗ này gió mát, để họ ngồi thì đỡ phí…"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa quý vị, cả sân dừng lại một lát. Tôi đặt luật của sân này hôm nay, trước mặt tất cả."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ở sân này, tư chất quyết định tốc độ — nhanh hay chậm là chuyện của hơi thở. Nhưng một người đáng thế nào không nằm ở vòng thở thứ mấy."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Người chậm không bị rút kinh, không bị rút phần, không bị đẩy xuống hàng sau làm lệ. Ai lấy tốc độ chia người thành hai thứ là làm lại tấm thẻ của tàng kinh."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Từ hôm nay, hai anh là một cặp luyện chung: người nhanh giữ người đi cùng không bị bỏ lại, người chậm giữ nhịp cho cả cặp."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Dạ, thưa cô, tôi nhận cặp. Chỉ là… tôi thở nhanh hơn anh Hợi nhiều. Đi chung, tôi theo nhịp nào?"
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Tui nhận. Tui chậm mà không bỏ buổi nào. Nhịp của cặp để tui giữ — anh đừng chạy tuốt lên trước một mình."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Luật hay. Bổn tọa không sửa một chữ. Đây, công pháp thêm — để dành làm gì, nó có mốc đâu. Ai nhặt được môn nào hợp nghề thì học."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Môn cho dân chài, môn cho thợ, môn cho người giữ chợ. Đừng hỏi môn nào dành cho người xứng — xứng là chữ của mấy tấm thẻ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Còn mảnh trận đồ sáu người kia — coi cho vui. Chạy theo đứa nhanh nhất thì vỡ, xưa nay vẫn vậy."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Vỡ rồi… Năm người chạy theo nhịp của tôi, vòng sáng lên rồi vỡ ngay nhịp thứ ba. Tôi chạy đúng, chạy nhanh — mà trận thì vỡ."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Được rồi, lần này theo nhịp của anh Hợi. Đếm đi, Hợi — đếm to lên, cả năm người này thở theo anh hết."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Vào — hai — ba… giữ — hai… ra — hai — ba — bốn. Đều vậy thôi. Vòng nó đứng rồi đó."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Tui đếm nhịp cả đời quen rồi: đếm nhịp chèo, đếm nhịp kéo lưới. Nay mới biết tài đếm chậm cũng có chỗ dùng."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Xong buổi rồi đó, xếp kinh nhanh lên, tôi chờ ở cổng này. Tôi chờ người khác dở lắm, đừng thử sức chờ của tôi."
+      },
+      {
+        "speaker": "Hoàng Hợi",
+        "text": "Rồi rồi, xong ngay đây. Anh chờ được hết buổi tập mà không bỏ đi trước là giỏi hơn sáng nay rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh trực sân nghe tôi dặn: luật hôm nay phải giữ cả những buổi tôi không đứng ở sân này. Cặp nào tách ra vì chê nhau chậm, cho tôi biết ngay."
+      }
+    ],
+    "choices": [
+      {
+        "id": "slow_keeps_the_book",
+        "text": "Giữ nguyên quyết của nàng như nó vừa được tuyên bố: Hợi giữ trọn bản kinh, cặp luyện chung không tách — sân này không có bản rút gọn cho người chậm.",
+        "next": "ky3_07_thao_chai_dinh_phong",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3AptitudeNotWorth": true
+        }
+      },
+      {
+        "id": "pair_by_breath",
+        "text": "Xếp thêm các cặp luyện theo hơi thở như trận sáu người vừa thử — người nhanh học chờ, người chậm học giữ nhịp, theo đúng luật vừa đặt.",
+        "next": "ky3_07_thao_chai_dinh_phong",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3AptitudeNotWorth": true
+        }
+      }
+    ]
+  },
+  "ky3_07_thao_chai_dinh_phong": {
+    "backgroundId": "long-hai-coast",
+    "choices": [
+      {
+        "effects": {
+          "civiliansSavedDelta": 2,
+          "partyHealthDelta": 1
+        },
+        "flags": {
+          "ky3ThaoPeakShown": true
+        },
+        "id": "ky3_thao_guards_wharf",
+        "next": "ky3_08_kinh_lau_khi_xuong",
+        "route": {
+          "delta": 1,
+          "id": "bao_ho"
+        },
+        "text": "Thạo nhận việc trông bến và ghe đêm bằng sức đỉnh phong của mình, để bạn chài yên tâm ra khơi sớm."
+      },
+      {
+        "effects": {
+          "civiliansSavedDelta": 1,
+          "suppliesDelta": 1
+        },
+        "flags": {
+          "ky3ThaoPeakShown": true
+        },
+        "id": "ky3_thao_stays_fisherman",
+        "next": "ky3_08_kinh_lau_khi_xuong",
+        "route": {
+          "delta": 1,
+          "id": "tu_quyet"
+        },
+        "text": "Thạo từ chối đứng trên bạn chài: vẫn vá lưới, ăn chia như mọi người, chỉ ra tay khi nước dữ thật sự tới."
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "dialogue": [
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Ba ơi, ghe về rồi. Mẻ này cá nhiều, nước đang đổi dòng, kéo lên phải lẹ tay. Con đứng đầu dây, mấy anh em giữ phần sau như mọi bữa."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Hơi thở con bây giờ dài lắm, Ba. Vận kinh tới chặng chót, tay chân nhẹ, mắt đọc nước nhanh hơn trước một bậc. Nhưng con vẫn là thằng Thạo chài của bến này thôi."
+      },
+      {
+        "speaker": "Ông Ba Lưới",
+        "text": "Ừ, tao coi mày từ hồi còn để chỏm. Mày mạnh lên thiệt — kéo lưới nhẹ như kéo chiếu. Mà mạnh tới đâu, ra biển vẫn phải coi trời coi nước như người ta."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa ra bến xem ghe về cho vui, lại gặp đúng buổi có người chạm trần của mình. Cứ kéo đi — để bổn tọa xem một người chài đi tới chót thì được tới đâu."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Mẻ lưới mắc dòng xiết rồi! Sáu người kéo cũng chưa chắc giữ được. Để con làm một mình — mấy anh em né ra, giữ phần lưới trên bãi thôi!"
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Được rồi… đầu lưới gỡ ra rồi. Con bước trên mặt nước cạn được mấy bước để gỡ chỗ mắc — sâu nữa con cũng phải quay vào như mọi người. Kéo tiếp đi!"
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Xong. Một mình con kéo trọn mẻ này, nhưng vai cũng rêm, hơi thở cũng hụt một nhịp đó, Ba. Đỉnh phong nghe lớn, chớ sức người vẫn là sức người thôi."
+      },
+      {
+        "speaker": "Ông Ba Lưới",
+        "text": "Cả bến coi thấy hết rồi. Một mình nó kéo mẻ lưới sáu người, còn dẫm trên mặt nước mấy bước. Thằng này chạm trần thiệt rồi — trần của người chài, không phải trần của ông trời."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Mấy anh em đừng nói con thành tiên thành thánh gì hết. Con vẫn ăn cơm cá kho, vẫn vá lưới rách, vẫn sợ bão như mọi người. Hơn bạn chài được một mẻ lưới, đâu có hơn ai một kiếp người."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Ai muốn học thì cứ lên sân mà học, như con đã học. Hơi thở này không phải của riêng con. Mà lên tới chỗ con đứng, cũng vẫn là một người chài trên bãi cát thôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nói được câu ấy thì cái trần này chạm cũng đáng. Nhiều kẻ mới mạnh hơn người ta một mẻ lưới đã tưởng mình hết là người. Ngươi còn nhớ mình là ai — bổn tọa coi tiếp cũng không phí buổi sớm."
+      },
+      {
+        "speaker": "Bạn chài",
+        "text": "Thạo ơi, hay là mày làm thầy dạy lại cho cả bến đi! Ai cũng kéo lưới một mình được như mày, ghe nào còn sợ đói nữa. Tao nói thiệt đó!"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngồi yên. Sóng ngoài cửa bến đang dựng lên đó. Thằng nhỏ kia giữ một góc bãi là hết sức của nó rồi. Phần còn lại — để bổn tọa đặt chén rượu xuống đã."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Xong rồi. Một ngón tay thôi. Sóng lớn mấy cũng là nước, mà nước biết nghe lời hơn người. Các ngươi kéo ghe vào cho chắc — bổn tọa còn phải rót lại chén rượu vừa bỏ dở."
+      },
+      {
+        "speaker": "Ông Ba Lưới",
+        "text": "Trời đất ơi… sóng tách làm hai quanh cả bến, mặt nước lặng như gương. Ghe thúng yên nguyên, bãi phơi không ướt một góc. Ông thầy ổng còn không thèm đứng dậy!"
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Con dồn hết sức cũng chỉ giữ được một góc bãi. Còn ngài… một ngón tay giữ cả bến, mắt còn không nhìn ra biển. Trần của con, với ngài, chưa phải chỗ bắt đầu ngẩng đầu lên."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hiểu vậy là đủ, đừng có quỳ. Bổn tọa về uống rượu chỗ khác đây. Mai bổn tọa mở việc kinh lâu — ai muốn xem chữ nghĩa thì tới. Ngươi, lưới rách thì cứ vá lưới đi."
+      }
+    ],
+    "id": "ky3_07_thao_chai_dinh_phong",
+    "location": "Bến cá Long Hải — ngày 10, buổi sớm lúc ghe về",
+    "narration": [
+      "Buổi sớm ngày 10, bến cá Long Hải làm việc như mọi ngày: ghe về lúc trời còn mờ, cá kéo lên bãi từng mẻ. Giữa đám bạn chài, Nguyễn Văn Thạo làm việc như một người chài bình thường — áo ướt tới khuỷu tay, chân trần trên cát. Chỉ người tinh mắt mới nhận ra: hơi thở của chàng dài và đều, tay chân nhẹ, mắt đọc mặt nước nhanh hơn người thường một bậc rõ rệt. Phàm Tức Quy Nguyên Kinh trong người chàng đã vận tới chặng cuối của Luyện Khí — chặng chưa một đệ tử nào khác đi tới được. Cao Minh có mặt ở bến từ sớm, ngồi xem ghe về cho vui.",
+      "Mẻ lưới cuối của ghe lớn mắc chuyện ngay lúc triều đổi dòng. Một mẻ lưới đầy cá bị dòng xiết giữ lại, đầu lưới quấn vào rạn ngầm — việc thường cần sáu người kéo hợp sức, và vẫn có thể mất trắng cả mẻ. Bạn chài vừa xúm lại chia nhau nắm dây thì Thạo bước lên, bảo mọi người né ra. Chàng dồn chân khí đỉnh phong vào tay và thế đứng, một mình kéo trọn mẻ lưới lên bãi: cát dưới chân lún thành hai rãnh sâu, vai và lưng căng lên thấy rõ qua lớp áo ướt. Giữa chừng, chàng bước ra mặt nước cạn vài bước, chân dẫm trên mặt nước mà không chìm quá mắt cá, gỡ đầu lưới mắc vào rạn — rồi quay vào bờ, vì nước sâu hơn chàng cũng không đi được.",
+      "Cả bến nín lặng một lúc, rồi xúm lại quanh bãi lưới. Cá đầy mẻ, lưới không rách, và người kéo nó lên một mình đang đứng thở dốc nhẹ, cười với bạn chài. Có người trầm trồ gọi chàng là tiên sống, có người đùa chuyện bái sư ngay trên bãi cát. Thạo nói rõ phần mình, bằng giọng của một người chài nói với bạn chài, rồi cúi xuống gỡ cá tiếp. Cao Minh ngồi gần đó, châm chọc nhẹ một câu, không giảng giải — hắn xem cảnh này như xem một người thợ làm xong một việc khó bằng sức của mình.",
+      "Ngay lúc ấy, ngoài cửa bến, sóng đầu mùa bất ngờ dựng lên. Một con sóng lớn đang cuộn thẳng về phía bến — đủ sức cuốn phăng bãi phơi cá, mấy chiếc thúng đang neo và dãy ghe nhỏ đậu sát bờ. Thạo phản ứng trước tất cả: chàng lao ra, dồn toàn bộ chân khí đỉnh phong vào thế đứng và hai tay, giữ chặt phần bãi gần mình nhất, kéo hai chiếc thúng vào sâu, miệng hét bạn chài tránh khỏi mép nước. Đó là tất cả những gì sức mạnh lớn nhất của hàng đệ tử làm được: giữ một góc bãi, bằng toàn bộ sức lực của một con người. Phần bến còn lại nằm ngoài tầm tay chàng.",
+      "Cao Minh không đứng dậy. Hắn ngồi trên tảng đá ở đầu bãi, đặt chén rượu xuống, và chỉ gõ nhẹ một ngón tay lên mặt đá. Con sóng lớn tách làm hai ngay trước cửa bến, trườn qua hai phía như bị một lưỡi cày vô hình rẽ ra; mặt nước trong khoảnh bến phẳng lặng như gương trong vài nhịp thở, ghe thúng yên nguyên, bãi phơi không ướt một góc. Xong, hắn rót lại chén rượu, uống tiếp, như chưa hề có chuyện gì xảy ra. Một động tác duy nhất, không một lời giảng: khoảng cách giữa đệ tử mạnh nhất và Đạo Tổ nằm ở sự chênh giữa một người dồn toàn lực giữ một góc bãi, và một người giữ cả bến bằng một ngón tay mà không buồn nhìn ra biển.",
+      "Khi nước đã yên, bến cá trở lại làm việc như mọi ngày. Thạo đứng lặng một lúc, nhìn góc bãi mình vừa giữ được, rồi nhìn mặt nước phẳng lặng quanh bến. Chàng hiểu trần của mình, và hiểu khoảng cách vừa được bày ra trước mắt cả bến — và việc chàng chọn làm tiếp theo là một việc rất phàm: quay lại ngồi vá tấm lưới rách cùng bạn chài, tay kim tay chỉ như mọi buổi sớm khác. Chàng cũng nhận thêm phần việc trông ghe và bãi phơi khi nước dữ. Không ai tôn chàng thành biểu tượng, không có lễ bái sư nào. Buổi sớm ngày 10 ở bến cá kết thúc bằng công việc, như nó đã bắt đầu."
+    ],
+    "stageId": "long_hai",
+    "title": "Thạo Chài chạm đỉnh"
+  },
+  "ky3_08_kinh_lau_khi_xuong": {
+    "id": "ky3_08_kinh_lau_khi_xuong",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Kinh lâu và lò rèn",
+    "backgroundId": "ha-o-scripture-hall",
+    "location": "Tàng kinh và xưởng khí trận Hạ Ô Môn, Long Hải — ngày 11",
+    "companions": [],
+    "narration": [
+      "Ngày 11. Tàng kinh sau hai ngày mở cửa mang dấu vết của cả hai bàn tay: hàng thẻ của Tống còn treo ngay ngắn, các kệ thì xô lệch vì tay người qua lại. Sáng nay kinh lâu có người coi chính thức: Đào Nhất Bút — thầy đồ cũ của vùng — đi một vòng chậm rãi dọc các dãy kệ, không khen hàng thẻ, cũng không chê một lời. Việc đầu tiên của hắn với tư cách trưởng Truyền Pháp Đường là đặt lại cách dạy.",
+      "Phía hông kinh lâu, xưởng của Khí Trận Đường nhóm lò lần đầu. Phan Bảy Nện — thợ rèn tiếng tăm của bến — nhận đường bằng cách rất thợ: không nói một lời nhận chức nào, hắn đặt lệ xưởng ngay trên mặt đe trước đám học việc. Trong đám ấy có người chỉ biết chữ mà chưa từng cầm búa, và người cầm búa cả đời mà không biết một chữ.",
+      "Hai đường vừa lập đã có nguy cơ thành hai nhà riêng: kinh lâu muốn giữ học trò buổi chiều dạy tiếp; xưởng muốn kéo người qua phụ lò đúng giờ lửa tốt nhất. Tiểu Lan khớp hai lịch ấy lại: nàng gọi cả hai trưởng đường tới giữa sân và quyết thành tiếng, nói rõ lý do bằng một câu rất nhẹ, mắt liếc về phía dãy thẻ còn treo trong kinh lâu.",
+      "Bảy Nện dẫn mọi người tới mắt trận đặt giữa hai tòa nhà. Tụ Linh Đại Trận đang vận hành thường trực — linh khí đặc lại thành những dấu hiệu rất phàm: hơi nước đọng trên mặt đá mãi không tan, lửa lò cháy đều không cần quạt, chữ trên ngọc giản sáng hơn một nấc. Đào Nhất Bút mở cuốn sổ đầu tiên của Truyền Pháp Đường, ghi câu về trận vào trang đầu như một sự thật nền.",
+      "Buổi dạy đầu tiên theo lịch bắt đầu ngay sáng ấy: Đào dạy chữ bằng một trang kinh, học trò đọc theo — có người già mắt kém, trẻ con, một phu bến vừa tan ca ghé vào đứng nghe cuối lớp. Cao Minh ngồi ở góc kinh lâu xem đúng một đoạn — một trang chữ, không hơn. Giữa trang, một học trò bạo gan đứng lên hỏi thẳng Đạo Tổ câu cả lớp đều muốn hỏi. Cao Minh không đáp: hắn chỉ tay sang Đào Nhất Bút, rồi đứng dậy bỏ đi uống rượu. Đào đáp thay hắn, bằng chuyên môn của mình. Lớp học không hề khựng lại.",
+      "Chiều xuống, kinh lâu lên đèn cho lớp buổi tối tự đọc; phía xưởng, lửa còn đỏ cho mẻ rèn cuối — hai ngọn sáng khác nhau của cùng một nhà, không ngọn nào cần hắn châm. Tiểu Lan đi một vòng cuối, xác nhận lịch ngày mai đã treo ở cửa cả hai đường. Ngoài đồng, Trần Thị Mến đã chờ từ sớm với nắm hạt mang về từ Phúc Thọ — việc của đất bắt đầu cùng ngày hôm nay."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Từ hôm nay, Truyền Pháp Đường dạy thế này: ai cần học việc gì hôm nay thì học việc ấy. Chưa biết chữ, học chữ ngay tại dãy ngoài."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Chữ đi trước, kinh đi sau — hai thứ học trong cùng một lớp, cùng một buổi. Chia theo việc cần học, không chia theo thẻ."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Tôi dạy cả đời, có một lệ không đổi: người học chậm không phải lỗi của người học — là lỗi của cách dạy chưa tới."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Trang đầu hôm nay dạy hơi thở đầu tiên. Chữ nào khó, tôi đọc lớn ba lượt. Nghe quen tai rồi mắt sẽ quen mặt chữ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa thầy Đào, tôi hỏi một việc phàm: người già mắt kém, nhìn chữ không rõ, thì họ học bằng cách gì?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, bằng tai và bằng người đọc lớn — như buổi ở tàng kinh hôm trước. Vậy thì tôi yên tâm."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Dạy chữ trong nhà của bổn tọa. Được. Ma môn mở lớp dạy chữ — tiếng xấu của bổn tọa phen này hết cứu. Cứ dạy đi."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Tui nhận xưởng này, không nói lời hoa hòe. Lệ xưởng đặt trên đe đây: đồ làm ra, người dùng thử qua tay trước, ưng mới đóng dấu."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Đồ dân dụng trong vùng hỏng, mang tới sửa, không lấy công. Trận văn khắc sai một nét là đập làm lại."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Học việc ở xưởng này, biết chữ hay không như nhau. Tay chưa quen búa thì tập tay. Cái đe này không biết nể ai."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Lò nhóm giờ nào do lửa quyết. Lịch đã khớp, tui dời giờ nhóm lò chính sang cuối buổi chiều."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Lệ xưởng của anh nghe thô mà chặt. Sách cũng vậy — đọc qua được người thường mới gọi là sách dạy người."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa hai vị trưởng đường, lịch tôi quyết hôm nay: sáng dạy chữ và dạy pháp ở kinh lâu, chiều qua xưởng. Hai buổi là một ngày học."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Người học đi lại giữa hai đường theo lịch, không phải xin phép lại ở cửa nào hết. Nhà này vừa học xong bài học của một tấm thẻ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ai bận việc nhà buổi sáng thì tới buổi chiều, lỡ buổi chiều thì sáng mai bù. Lịch đã có, người ta biết đường tới."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thầy Đào nhượng nửa buổi bằng lịch viết tay, anh Bảy Nện nhượng bằng giờ nhóm lò — tôi ghi nhận cả hai cái nhượng ấy."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Lịch đã quyết, tôi viết tay treo lên cửa kinh lâu: giờ dạy chữ, giờ dạy pháp, giờ qua xưởng. Chữ viết to."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Buổi chiều người qua xưởng, kinh lâu vẫn mở cho lớp tự đọc và người già học bằng tai. Tôi cử hai đệ tử ở lại đọc lớn."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Lịch thì tui theo. Xưởng dời giờ nhóm lò chính xuống cuối chiều — học trò qua lúc nào lò cũng có việc."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Cô Lan nói không xin phép lại — xưởng tui càng khoái. Cửa xưởng này không có người gác. Ai coi chơi, đứng xa cái đe ra."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Tới coi mắt trận đây. Nó chạy thường trực: hơi nước đọng trên đá không tan, lửa lò không cần quạt mà cháy đều."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Tui nói rõ: trận này không cần Đạo Tổ bổ sung, không tắt khi ngài đi vắng. Nó là nền nhà, không phải bữa ăn xin từng bữa."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Trận có nét nào yếu đi, xưởng này coi, xưởng này sửa. Giữ trận là việc của người, không phải việc phải thỉnh ý mỗi lần."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Câu ấy tôi ghi vào đầu sổ Truyền Pháp Đường: trận vận hành thường trực, không cần bổ sung."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Nghe anh nói về nền nhà, tôi thấy nghề chữ cũng vậy: chữ dạy xuống rồi là của người học."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh Bảy Nện, tôi hỏi thay người ở ngoài: người ngoài vòng sân có được hưởng gì từ trận này không?"
+      },
+      {
+        "speaker": "Học trò buổi đầu",
+        "text": "Thưa Đạo Tổ, con hỏi một câu cả lớp đều muốn hỏi: hơi thở đầu tiên, giữ ở ngực hay ở bụng mới đúng?"
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Câu ấy để tôi đáp — đó là việc dạy của đường này. Không giữ ở ngực, cũng không ấn xuống bụng. Thở đều, chậm, vai thả xuống."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Ngực tức là vì cố giữ; bụng trôi là vì cố ấn. Bỏ cả hai cái cố ấy, đọc lại trang này với tôi, chậm thôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hỏi hay lắm. Mà hỏi bổn tọa là lầm người rồi. Việc dạy là của trưởng đường kia. Bổn tọa coi một đoạn, đủ rồi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Rượu. Mang vò của bổn tọa ra thềm ngoài. Trong này chữ nghĩa đông quá, ngột."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, ngài cứ tự nhiên. Lịch ngày mai tôi đã ghi vào sổ xong. Lớp này để thầy Đào lo."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Ngày mai, lớp buổi tối tự đọc bắt đầu từ trang hôm nay. Ai chưa qua được hơi thở đầu tiên cứ tới sớm, tôi dạy lại."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Mẻ rèn cuối hôm nay là mấy cái cuốc cho Linh Điền Đường. Xưởng này làm việc đầu tiên là làm cho người trồng ruộng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, hai đường sáng đèn một lượt như vầy, tôi coi như lịch đã đứng được ngày đầu."
+      }
+    ],
+    "choices": [
+      {
+        "id": "halls_run_themselves",
+        "text": "Để hai đường tự chạy theo lịch nàng vừa khớp: học trò qua lại không xin phép lại, trưởng đường tự quyết việc đường mình — Đạo Tổ đã đi uống rượu, nhà vẫn sáng đèn.",
+        "next": "ky3_09_gieo_vo_chu_tien_me",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3TwoHallsFounded": true
+        }
+      },
+      {
+        "id": "hall_schedule_posted_for_all",
+        "text": "Treo lịch chung lên cửa kinh lâu cho cả làng xem: giờ dạy chữ, giờ dạy pháp, giờ xưởng mở — ai tới cũng biết đường mà vào.",
+        "next": "ky3_09_gieo_vo_chu_tien_me",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3TwoHallsFounded": true
+        }
+      }
+    ]
+  },
+  "ky3_09_gieo_vo_chu_tien_me": {
+    "id": "ky3_09_gieo_vo_chu_tien_me",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Hạt lúa không có chủ",
+    "backgroundId": "ha-o-spirit-field",
+    "location": "Linh điền Hạ Ô Môn, Long Hải — ngày 11",
+    "companions": [],
+    "narration": [
+      "Chiều ngày 11, cánh đồng phía sau đạo quán nằm phẳng dưới nắng xiên. Nắm hạt đầu tiên sắp xuống đất Long Hải hôm nay không phải giống mới nào từ trời rơi xuống — gốc của nó phải nói thẳng trước mặt người trồng: đây là giống Vô Chủ Tiên Mễ mang về từ Phúc Thọ, chính phần hạt Cao Minh để lại giữa sân tang quán hôm đoàn rời bến, không ghi nợ cho ai. Người bến giữ giống lại, chia theo cách Bá Hòe đã sắp; một phần theo đoàn về tới Long Hải, nằm trong tay Trần Thị Mến từ buổi ghe cập bến.",
+      "Ngay tại đầu ruộng, Mến tuyên bố lập Linh Điền Đường bằng việc làm trước, lời nói sau: nàng chia khoảnh ruộng thửa đầu tiên thành từng phần theo hộ trồng, tự tay cắm mốc ghi tên từng hộ, trước mặt người trồng. Đám nông dân nghe lệ của đường với vẻ chưa tin hẳn — lệ cũ của nhà họ Hứa mà họ biết cả đời là: sổ nào rồi cũng về tay chủ nợ.",
+      "Một lão nông chống cuốc đứng lên hỏi câu cả đám ruộng đang chờ người hỏi thay: giống gieo xuống rồi, tới vụ gặt ai thu — và giống đời sau, nhà ông còn được gieo tiếp không, hay lại phải vay lại chính giống của mình như lệ vay giống của Hứa bao năm. Tiểu Lan đáp thay mặt nhà mới và quyết nguyên tắc thành tiếng, trước mặt Mến và cả đám ruộng. Rồi nàng hỏi Mến: người trồng giữ quyền gieo và quyền thu bằng cách cụ thể nào. Mến đáp bằng cơ chế.",
+      "Buổi gieo bắt đầu: từng hộ xuống thửa của mình, hạt đi theo hàng, mốc tên cắm dọc bờ. Cao Minh xuất hiện ở đầu ruộng lúc nào không ai để ý; hắn thò tay vào bao hạt của mấy thửa cuối hàng mà phần chia đã vơi, rải thêm một lớp nữa, không đếm. Một nông dân bạo gan hỏi đùa nửa thật: ngài làm cho nó mọc ngay đêm nay được không. Hắn từ chối bằng một câu tùy tiện, rồi đi dọc bờ ruộng xem người ta gieo, chậm rãi như xem một trò chậm mà vui.",
+      "Nghỉ tay giữa buổi, đám nông dân tự tính lại lệ cũ thành tiếng cho nhau nghe: bao năm đầu vụ vay giống của Hứa, cuối vụ trả gấp rưỡi bằng thóc; năm mất mùa trả không đủ thì ghi nợ sang năm sau; nợ chồng lên thửa ruộng — ruộng còn mang tên mình mà lúa làm ra không còn là của mình từ lúc chưa gieo. Hôm nay là buổi gieo đầu tiên trong đời nhiều người ở đây mà không ai phải ký, phải điểm chỉ, phải nợ ai một hạt nào.",
+      "Chiều xuống, thửa ruộng mới gieo nằm phẳng lặng, dọc bờ là dãy mốc ghi tên từng hộ. Nhìn từ đầu ruộng, cánh đồng giống một cuốn sổ mở mà người cầm sổ là chính người trồng. Ngày mai, ở phía giếng đầu của tổng đàn, Đan Đường sẽ mở cửa — và mẻ đan đầu tiên của nhà này sẽ gặp việc của nó ngay giữa chợ."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa bà con, trước khi gieo, tui nói rõ gốc của nắm hạt này: giống Vô Chủ Tiên Mễ từ Phúc Thọ mang về — phần hạt Đạo Tổ để lại giữa sân tang quán, không ghi nợ cho ai."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Người bến giữ giống lại, chia theo cách anh Bá Hòe đã sắp: phần gieo thử ở đất tang quán, phần theo người được cứu về quê họ, phần này theo đoàn về đây."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui xem nắm hạt ấy như một món nợ cũ được trả bằng cách không ai ngờ: không ai trả cho ai — nó được gieo xuống, vậy thôi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi xác nhận lời bà Mến là đúng. Tôi có mặt ở sân tang quán buổi sáng ấy: hạt để lại không kèm một điều kiện nào."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Vậy hôm nay, ngay đầu ruộng này, tui lập Linh Điền Đường. Thửa đầu tiên chia theo hộ trồng, mốc cắm tên từng hộ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Lệ của đường: giống chia tại ruộng, trước mặt người trồng. Không chia trong kho, không chia qua tay người khác."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Sổ ruộng ghi tên người trồng, vì giống là của họ. Và bản sổ ấy để ở đình làng, không mang về kho của đường."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui biết bà con chưa tin: lệ cũ là sổ nào cũng về tay chủ nợ. Cho nên lệ này tui đặt bằng việc làm."
+      },
+      {
+        "speaker": "Người nông dân",
+        "text": "Thưa cô Mến, sổ để ở đình làng thiệt sao? Sổ ghi tên ruộng của tụi tui xưa nay toàn nằm trong rương nhà người ta."
+      },
+      {
+        "speaker": "Người nông dân",
+        "text": "Vậy giống chia tại ruộng là chia đứt luôn phải không cô? Có ai ghi tên tụi tui vào sổ nợ ở đâu không?"
+      },
+      {
+        "speaker": "Lão nông",
+        "text": "Thưa cô, tui hỏi thay cả đám ruộng: giống gieo xuống rồi, tới vụ gặt ai thu? Người trồng thu hết, hay đường thu lại một phần?"
+      },
+      {
+        "speaker": "Lão nông",
+        "text": "Rồi giống đời sau — nhà tui còn được gieo tiếp không? Hay lại phải vay lại chính giống của mình, cuối vụ trả gấp rưỡi?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bác, tôi đáp thay mặt nhà này và đặt lệ này thành tiếng ngay hôm nay: hạt gieo xuống đất nhà nào, lúa và giống đời sau là của nhà đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tông môn cho giống một lần: không ghi nợ, không thu hồi, không đứng tên trên thửa ruộng của ai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Nhưng tôi hỏi thêm bà Mến cho ra nhẽ: người trồng giữ quyền gieo và quyền thu bằng cách cụ thể nào? Phải có cách cầm được trong tay."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa cô, cách là vầy: mỗi hộ giữ ngay từ vụ đầu một phần giống riêng tại nhà mình. Giống trong bồ mình thì quyền gieo trong tay mình."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Phần giống chung của làng, dân tự cử người giữ — thay được khi thấy lạm quyền. Đường chỉ ghi tên hộ trồng, không ghi một chữ nợ nào bên cạnh."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui lập đường này để người trồng hết phải vay giống — không phải để thành một chủ nợ mới nói giọng nhẹ hơn."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Mấy thửa cuối hàng phần chia vơi rồi kia. Đây, rải thêm một lớp nữa. Đừng đếm."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Mọc ngay đêm nay à? Mọc thay trời thì dễ. Mà lúa người ta phải tự trồng mới là lúa của người ta. Bổn tọa không ăn cắp vụ mùa của ai."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Phần hạt Đạo Tổ vừa rải thêm, tui ghi vào sổ ruộng là phần thêm, không chủ. Ai gieo trúng thửa nào, lúa thửa ấy là của hộ ấy."
+      },
+      {
+        "speaker": "Người nông dân",
+        "text": "Tui kể lệ cũ nè: đầu vụ vay giống của Hứa một giạ, cuối vụ trả một giạ rưỡi. Năm mất mùa trả không đủ, phần thiếu ghi nợ sang ruộng."
+      },
+      {
+        "speaker": "Người nông dân",
+        "text": "Ba mươi năm tui gieo ruộng này, buổi gieo nào cũng bắt đầu bằng một điểm chỉ. Nay cầm hạt mà không phải ký gì hết — tay nó run, chưa quen được cho không."
+      },
+      {
+        "speaker": "Người nông dân",
+        "text": "Giống này không có chủ — nên lần đầu tiên trong đời tui, người gieo cũng không có chủ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Bà con nghe một câu giữa buổi: phần giống riêng của mỗi hộ, chiều nay chia xong mang về nhà ngay, đừng để qua đêm ở sân này."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Người giữ giống chung do làng cử, tên ghi vào sổ ở đình. Ai giữ mà lạm quyền, làng họp thay người khác."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi nghe cách giữ ấy thì yên tâm: giống để trong nhà, sổ để ở đình — hai thứ đều nằm ngoài kho của đường."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Việc còn lại của đường tui, nói ra nghe buồn cười: chờ. Chờ mưa, chờ mạ lên, chờ vụ gặt đầu."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Mốc tên cắm dọc bờ đây, tui để nguyên suốt vụ. Ai qua đồng cũng đọc được ruộng này của ai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, cánh đồng chiều nay giống một cuốn sổ mở — mà người cầm sổ là chính người trồng. Tôi mong cuốn sổ này cứ mở như vậy."
+      }
+    ],
+    "choices": [
+      {
+        "id": "seed_stays_with_growers",
+        "text": "Chốt lệ của buổi gieo đúng như nàng vừa quyết: giống đời sau ở lại nhà người trồng — đường chỉ ghi tên hộ trồng, không ghi nợ cho bất kỳ ai.",
+        "next": "ky3_10_dan_va_tuyen",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3SpiritRicePlantedLH": true
+        }
+      },
+      {
+        "id": "names_on_field_markers",
+        "text": "Để dãy mốc tên hộ trồng đứng nguyên dọc bờ ruộng và bản sổ ruộng ở lại đình làng — ai qua đồng cũng đọc được ruộng này là của ai.",
+        "next": "ky3_10_dan_va_tuyen",
+        "effects": {
+          "suppliesDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3SpiritRicePlantedLH": true
+        }
+      }
+    ]
+  },
+  "ky3_10_dan_va_tuyen": {
+    "id": "ky3_10_dan_va_tuyen",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Viên đan và giếng đầu",
+    "backgroundId": "ha-o-spirit-spring",
+    "location": "Linh tuyền đầu tiên của tổng đàn, Long Hải — ngày 12",
+    "companions": [],
+    "narration": [
+      "Sáng ngày 12, Dương Thất Nương mở Đan Đường không ở sân trong, mà ngay tại khoảng đất đầu làng nơi có cái giếng chung đã cạn từ mùa nắng. Bàn đan kê ngoài trời, một lò nhỏ cháy đều, trên khay là mẻ Cửu Tức Hộ Mệnh Đan đầu tiên vừa ra lò, ít tới mức đếm được từng viên bằng mắt. Lệ của đường nàng nói thành tiếng ngay khi mở cửa, cho cả khoảng đất nghe.",
+      "Tiếng ồn nổi lên từ phía đường chợ: mấy phu bến khiêng một người đồng bạn trên tấm ván chạy vào — anh ta bị kiện hàng đè ở bến lúc bốc dỡ, ngực dập, hơi thở đứt quãng từng chặp, mặt đã xám đi. Đám đông chợ dạt ra thành một vòng rộng. Người nhà nghề đứng quanh lắc đầu theo kinh nghiệm của bến: kiểu thở này, thầy lang tới kịp cũng chỉ kịp vuốt mắt. Thất Nương quỳ xuống bên tấm ván, bắt mạch tại chỗ, không cho khiêng vào trong.",
+      "Khay đan đầu tiên được mang ra giữa vòng người. Ai cũng thấy nó ít tới mức nào — chưa đầy một lò, là mẻ trưng đầu tiên của một đường mới lập, thứ người ta thường giữ dành cho người của nhà mình. Một đệ tử trực nói nhỏ đúng điều nhiều người đang tính. Thất Nương không tính: nàng lấy viên đầu tiên của mẻ đầu tiên, đỡ đầu người phu dậy cho anh ta ngậm. Chín hơi thở được níu lại thành một: ngực anh ta phập phồng trở lại trước mặt dân chợ, màu mặt trở về từng chút, bàn tay đang buông thõng từ từ nắm lại được vào mép ván. Tiểu Lan quỳ xuống phía đầu ván; khi người phu vừa tỉnh, nàng hỏi tên anh ta thành tiếng. Anh ta chưa đáp thành lời được — môi chỉ mấp máy; người đồng bạn đứng cạnh đọc được ý ấy mà nói hộ. Nàng tự tay ghi cái tên lên một mảnh giấy.",
+      "Nước rửa vết thương và nước cho người bệnh phải gánh từ xa về; đám đông bắt đầu chen nhau chạy đi lấy nước. Cao Minh đứng ở vòng ngoài từ lúc nào, tay cầm chén rượu, nhìn cái giếng cạn trơ đáy. Hắn buông một câu tùy tiện, rồi phất tay một cái — thong thả như mở một cái vòi phiền phức. Nền đất bên giếng nứt ra một đường: nước phun lên ngay giữa khoảng đất đầu làng, trong, mát, hơi linh khí bốc nhẹ trên mặt nước. Linh tuyền công cộng đầu tiên của tổng đàn mở như thế — không khánh thành, không cắt băng. Hắn đã quay đi rót rượu.",
+      "Nước mới mở là lập tức có hàng, và lập tức có tranh: một đệ tử cho rằng người của tông môn phải được lấy trước — nước của nhà mình. Thất Nương và Tiểu Lan cùng đặt thứ tự đầu tiên của giếng, nói thành tiếng cho cả khoảng đất nghe. Người đệ tử kia lặng lẽ xếp vào cuối hàng: không bị phạt, không bị mắng, chỉ bị xếp lại — đám đông nhớ chi tiết ấy còn hơn cả phép mở tuyền.",
+      "Cuối buổi, người phu được đồng bạn khiêng về nhà trên chính tấm ván hồi sáng — lần này anh ta nằm tỉnh, một tay đặt lên ngực tự giữ hơi thở của mình. Tiểu Lan cầm mảnh giấy ghi tên người được cứu, gấp lại cẩn thận và giữ lấy: ngày mai, ở sân lễ, cái tên này sẽ là việc đầu tiên của một đường mới sắp lập. Sau lưng họ, linh tuyền vẫn chảy, hàng người còn dài tới tận đường chợ."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đan Đường mở cửa hôm nay, lệ tôi nói trước: đan cứu người phát trước, sổ ghi sau. Người bệnh tới trước thì chữa trước."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Mẻ đầu tiên là Cửu Tức Hộ Mệnh Đan — giữ hơi thở cho người dập ngực, sắp tắt hơi. Ít thôi, chưa đầy một lò."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Người được truyền pháp, đệ tử chính thức, hay người hưởng dụng không nhập môn — đau thì tới, tới thì chữa."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Bàn đan kê ngoài trời là có ý: ai cũng thấy đan phát cho ai. Thuốc phát trong buồng kín thì lòng người sinh nghi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, tôi hỏi thay mấy người đang đứng xem: người không nhập môn tới xin đan, đường có chữa không, hay phải ghi danh trước?"
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đặt ván xuống đây, đừng khiêng đi đâu nữa. Giữ đầu anh ta cao lên, nới dây áo ra. Mọi người lùi lại."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Mạch còn — yếu mà còn. Ngực dập, hơi đứt từng chặp. Thầy lang tới cũng chỉ kịp vuốt mắt, vì không giữ được chín hơi thở lại thành một."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Còn một hơi là còn cứu được. Đừng ai nói chữ vuốt mắt trước mặt tôi. Mang khay đan ra đây."
+      },
+      {
+        "speaker": "Người chợ",
+        "text": "Trời ơi, mặt anh phu xám hết rồi… Bị kiện đè mà thở kiểu đó, khiêng về nhà lo hậu sự là nhiều. Không biết còn kịp gì không…"
+      },
+      {
+        "speaker": "Đệ tử trực",
+        "text": "Thưa bà, mẻ đầu tiên… hay để dành cho người của nhà mình trước? Lỡ chiều nay người nhà mình cần thì sao ạ?"
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Nghe cho rõ: viên đầu của mẻ đầu dùng cho người đang hấp hối trước mặt tôi. Không phải để dành cho cái khay trưng của đường này."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đỡ đầu anh ta lên, cho ngậm viên đan, giữ yên. Đếm hơi với tôi, thành tiếng cho cả vòng này nghe: một… hai…"
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đó — ngực lên xuống đều rồi, tay nắm lại được rồi. Anh ta qua được rồi. Đêm nay người nhà canh hơi thở, mai mang tới coi lại."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh nghe tôi hỏi nhé — tôi hỏi chậm thôi. Anh tên gì, quê ở đâu? Anh gật đầu cũng được, không cần gắng nói."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "tôi ghi rồi — tên anh trên mảnh giấy này. Người này có tên: mai này hồ sơ của anh phải đi theo đúng cái tên ấy."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, bà cứu người trước, tôi xin giữ phần tên người sau. Người được cứu mà không ai biết tên, mai này giấy tờ muốn ghi sao cũng được."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nhà của bổn tọa mở tới mấy đường rồi, mà nước cho người bệnh phải gánh từ xóm dưới lên. Cái giếng cạn này là đồ trang trí à?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đây. Nước. Uống, rửa, gánh — tùy. Đừng ai xếp hàng xin phép bổn tọa. Mở cái vòi này xong là xong."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ba diện người gì của các ngươi, uống chung một nước này hết. Đệ tử giành thùng riêng, bổn tọa lấp giếng lại cho gánh xa tiếp."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Nước lên rồi — lấy nước này rửa vết thương cho anh phu trước. Nước tuyền sạch hơn nước gánh, ghi vào lệ đường."
+      },
+      {
+        "speaker": "Người chợ",
+        "text": "Nước! Nước phun lên thiệt rồi bà con ơi! Cái giếng cạn bao năm, bữa nay có nước ngay đầu làng mình!"
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Thứ tự ở giếng này tôi đặt hôm nay: người bệnh và người già lấy trước; sau đó ai tới trước lấy trước."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Giếng do người dùng thay nhau trông. Ai trông mà lạm quyền, dân tự thay người khác — không phải lên xin tôi."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Anh đệ tử kia, xếp xuống cuối hàng. Không phạt, không mắng. Áo của nhà mình không mua được chỗ đứng trước người già cầm vò trống."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi nói thêm cho cả khoảng đất nghe: thứ tự này là lệ đứng của giếng đầu. Mai này giếng vắng người, lệ vẫn vậy."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ai giữ phiên trông giếng, ghi tên mình lên tấm bảng ở miệng giếng. Việc gì của nhà này cũng phải biết tìm ai mà hỏi."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Người nhà nghe câu dặn cuối: đêm nay canh hơi thở anh ta. Thở đứt lại thì khiêng tới ngay, bất kể giờ nào."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, mảnh giấy này tôi giữ. Ngày mai ở sân lễ, cái tên trên giấy này sẽ là việc đầu tiên tôi mang ra."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hàng lấy nước dài hơn hàng rượu của bổn tọa. Thôi, bổn tọa đi chỗ khác uống — ở đây xếp hàng nghiêm trang quá, mất vui."
+      }
+    ],
+    "choices": [
+      {
+        "id": "spring_for_everyone",
+        "text": "Để giếng đầu chạy đúng như nó vừa mở: nước của mọi người — cả ba diện người cùng lấy, đệ tử xếp hàng như dân, không thùng riêng cho nhà mình.",
+        "next": "ky3_11_nhan_danh_duong",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FirstPublicSpring": true
+        }
+      },
+      {
+        "id": "sick_first_at_the_spring",
+        "text": "Giữ thứ tự Thất Nương vừa đặt làm lệ đứng của giếng: người bệnh và người già trước — hàng nước đầu tiên của tổng đàn là hàng của người yếu.",
+        "next": "ky3_11_nhan_danh_duong",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FirstPublicSpring": true
+        }
+      }
+    ]
+  },
+  "ky3_11_nhan_danh_duong": {
+    "id": "ky3_11_nhan_danh_duong",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Không nhập môn vẫn có tên",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân lễ Hạ Ô Môn, Long Hải — ngày 12",
+    "companions": [],
+    "narration": [
+      "Buổi chiều ngày 12, sân lễ. Người phu được cứu ở giếng đầu buổi sáng được đồng bạn đỡ tới — chưa đi vững, một tay còn đặt lên ngực giữ hơi thở, nhưng khi Đỗ Thị Hạnh hỏi, anh ta tự nói được tên mình, rõ từng tiếng. Hạnh là người đầu tiên của nhà này hỏi anh ta theo đúng thứ tự của nàng: tên, quê, người nhà — trước mọi câu hỏi về cứu chữa. Tiểu Lan đứng cạnh, cầm mảnh giấy ghi tên anh ta từ buổi sáng, đối chiếu từng chữ: tên trên giấy và tên anh ta tự nói khớp nhau.",
+      "Hạnh tuyên bố lập Nhân Danh Đường ngay tại sân, trước mặt dân đang có mặt vì buổi mở tuyền. Tu vi của nàng là Luyện Khí tầng một — thấp nhất trong sáu trưởng đường — và nàng nói điều đó không giấu.",
+      "Tiểu Lan bước lên, trên tay là cuốn giấy sạch từ ngày 7 — buổi sáng đoàn về tới bến Long Hải, dân tụ về kín lối xuống nước, nàng đã ghi những cái tên đầu tiên lên giấy sạch: sạch vì nó không phải sổ nợ của Hứa Gia, không phải danh sách của Giới Phòng, chỉ là tên người ta tự xưng, ghi để nhớ họ là người sống. Nàng bàn giao cuốn ấy cho Hạnh bằng hai tay, trước mặt cả sân. Hạnh nhận sổ, mở trang đầu tiên ra xem ngay tại chỗ, rồi gật đầu — nhận cả món đồ lẫn cái lệ đi kèm.",
+      "Rồi Hạnh đứng giữa sân, tuyên bố thành tiếng điều lệ lớn nhất của đường mới — cho dân nghe, cho các đường khác nghe, chậm và rõ từng câu. Cả sân lặng đi; mọi con mắt quay về phía Cao Minh, chờ xem Đạo Tổ có sửa, có gạt hay không. Hắn không làm gì trong một nhịp dài. Rồi hắn nói một câu tùy tiện — coi như đóng dấu bằng sự thờ ơ của kẻ mạnh nhất nhà. Từ giây ấy, quyền phản đối là lệ đã tuyên bố của Nhân Danh Đường. Chưa một vụ việc nào được dựng lên hôm nay để dùng thử nó.",
+      "Việc đầu tiên của đường mới làm ngay trong buổi lập: Hạnh mở hồ sơ những người được cứu từ tuyến Phúc Thọ mang về cùng đoàn — những cái tên từng bị giấy tờ ghi là đã chết. Nàng đối chiếu từng người theo cách của đường: tên tự xưng, chứng cứ người còn sống, và xác nhận từng hồ sơ vật chủ còn tỉnh — còn tự nói được, tự quyết được việc của mình — ghi riêng thành một mục rõ ràng. Người phu ngồi ngay đó là một trường hợp sống trước mặt cả sân. Tiểu Lan hỗ trợ bằng những gì chính nàng chứng kiến ở Phúc Thọ.",
+      "Cuối buổi, cuốn giấy sạch của ngày 7 được đặt vào vị trí trang trọng nhất của đường mới: không khóa trong rương, mà để mở trên bàn của Nhân Danh Đường, trang đầu tiên hướng ra ngoài cho ai tới cũng thấy. Hạnh ghi dòng mới đầu tiên của nàng tiếp nối những dòng chữ của Lan. Ngay chiều nay, Hội Đồng Lục Đường họp lần đầu đủ sáu ghế ở sân này — và Hạnh sẽ mang chính cuốn sổ ấy vào buổi họp, ngồi vào chiếc ghế thứ sáu vừa mới có từ sáng nay."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Anh ngồi xuống đây đã. Tôi hỏi ba việc theo thứ tự của tôi: tên gì, quê ở đâu, người nhà giờ ở đâu?"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Anh tự nói tên mình, tôi ghi theo đúng lời anh nói. Không ghi theo giấy nào hết."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tốt. Tên anh vào sổ của đường tôi từ hôm nay — sổ của người sống. Tên trong sổ không phải là nợ."
+      },
+      {
+        "speaker": "Người được cứu",
+        "text": "Thưa cô… tôi nói được rồi. Tên tôi, quê tôi, tôi tự nói hết. Sáng nay ở giếng, tôi tưởng không còn nói được nữa."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa chị Hạnh, mảnh giấy này là tên anh ấy — tôi ghi ở giếng buổi sáng, lúc anh ấy vừa tỉnh. Chị đối chiếu đi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Một cái tên ghi vội bên tấm ván cứu người phải được mang tới tận nơi giữ tên. Giờ tôi trao cho chị."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thưa bà con, hôm nay tôi lập Nhân Danh Đường. Việc của đường này là: ghi tên, giữ tên — cho cả người không nhập môn."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Ai từng được nhà này cứu, được chữa, được cho nước, cho giống — đều có tên trong sổ của đường tôi."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Lệ nền của đường: tên ghi phải là tên thật người đó tự xưng; ghi sai thì sửa ngay."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tu vi của tôi là Luyện Khí tầng một, thấp nhất trong sáu trưởng đường — tôi nói ra không giấu."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nhà của bổn tọa giờ có cả một đường chuyên lo giấy. Sổ sách đã nhiều hơn kiếm. Cứ ghi — bổn tọa coi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa chị Hạnh, cuốn này tôi mang tới hôm nay. Ngày 7, ở bến Long Hải, tôi đã ghi những cái tên đầu tiên lên nó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Giấy sạch — vì nó không phải sổ nợ của Hứa Gia, cũng không phải danh sách của Giới Phòng. Từ hôm nay, nó là sổ đầu tiên của đường này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Và lệ tôi đặt kèm theo: không ai được dùng những cái tên trong này thay cho người mang tên."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thưa cô, tôi nhận cuốn sổ, và nhận cả cái lệ đi kèm. Đường tôi giữ đúng tinh thần của trang đầu tiên ấy."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Sổ này để mở trên bàn, không khóa trong rương. Sổ giữ tên mà phải giấu đi là đã giống sổ của chủ nợ rồi."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi ghi vào lệ đường: tên trong sổ này không dùng thay người mang tên — việc của ai hỏi người ấy."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Giờ tôi tuyên bố điều lệ lớn nhất của Nhân Danh Đường: đường này giữ quyền phản đối mọi quyết định làm hại tới dân thường."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Phản đối phải được nghe, phải được trả lời trước mặt Hội Đồng. Người phản đối không bị ghi tội vì đã phản đối."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi nói hôm nay, giữa sân này, để từ nay không ai nói là chưa từng nghe. Quyền này là lệ của đường."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cứ thế. Ai thấy chướng thì tới tìm bổn tọa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Một đường tu vi tầng một mà dám giữ quyền cãi lại cả nhà. Hay. Ghi lệ của ngươi đi, trưởng đường."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa chị, lời tuyên bố đã thành lệ. Từ hôm nay, tên của người thường ở nhà này có một nơi để kêu."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Việc đầu tiên của đường, làm ngay buổi nay: hồ sơ những người được cứu từ tuyến Phúc Thọ."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Mục này tôi ghi riêng: vật chủ còn tỉnh — còn tự nói được, tự quyết được. Giấy cũ ghi họ là người chết; sổ tôi ghi họ là người sống."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Từng hồ sơ tôi đọc thành tiếng. Ai thấy sai một chữ, nói ngay, sửa ngay."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Đối chiếu xong, tôi kết mục này lại: người nào đã xác nhận còn sống, còn tỉnh, tôi đánh dấu rõ bên cạnh tên."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, phần Phúc Thọ, tôi làm chứng nhân cho chị. Những người này tôi tận mắt thấy: họ tự xưng tên, tự quyết việc đi hay ở."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Có người chọn ở lại, có người theo đoàn về đây — cả hai cách chọn đều là của chính họ. Người còn tỉnh là người còn quyền chọn."
+      },
+      {
+        "speaker": "Người được cứu",
+        "text": "Thưa cô Hạnh, thưa cô Lan… tôi nghe hết rồi. Tên tôi nằm trong sổ người sống. Tôi còn tỉnh — tôi tự nói được câu ấy."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Trang đầu tiên của đường tôi để mở trên bàn, ai tới cũng thấy. Chiều nay tôi mang cuốn sổ này vào Hội Đồng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, chị mang nó vào là đúng nhất. Cuốn sổ bắt đầu ở một cái bến, chiều nay vào tới vòng ghế của cả nhà."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Họp hành, sổ sách, ghế thứ sáu. Năm ngày trước nhà này còn là bãi đất trống. Thôi — bổn tọa mang rượu theo ngồi coi."
+      }
+    ],
+    "choices": [
+      {
+        "id": "names_before_membership",
+        "text": "Đi theo lệ vừa lập: tên đi trước tư cách — người phu và những vật chủ còn tỉnh được ghi như người sống có tên, nhập môn hay không là việc của riêng họ sau này.",
+        "next": "ky3_12_luc_duong_luan_su",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3NhanDanhFounded": true
+        },
+        "objective": "identify_living_hosts"
+      },
+      {
+        "id": "book_open_to_the_named",
+        "text": "Để cuốn sổ đầu tiên của đường mở công khai như nó vừa được đặt: ai có tên trong ấy đều được tới xem dòng của chính mình — bảo vệ một cái tên bắt đầu bằng việc không giấu nó.",
+        "next": "ky3_12_luc_duong_luan_su",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3NhanDanhFounded": true
+        },
+        "objective": "identify_living_hosts"
+      }
+    ]
+  },
+  "ky3_12_luc_duong_luan_su": {
+    "id": "ky3_12_luc_duong_luan_su",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Sáu ghế và lời cảnh báo",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân lễ Hạ Ô Môn, Long Hải — ngày 12, buổi chiều",
+    "companions": [],
+    "narration": [
+      "Chiều ngày 12, sân lễ. Sáu chiếc ghế kê thành vòng lần đầu tiên, và buổi chiều này phải gọi đủ tên: Đào Nhất Bút của Truyền Pháp Đường; Trần Thị Mến của Linh Điền Đường; Dương Thất Nương của Đan Đường; Phan Bảy Nện của Khí Trận Đường; Nguyễn Văn Thạo của Hộ Pháp Đường; và Đỗ Thị Hạnh của Nhân Danh Đường — chiếc ghế thứ sáu mới có từ sáng nay — cuốn sổ giấy sạch của ngày 7 đặt trên đùi. Tống Nguyên Phúc đứng ở đầu vòng với tập giấy của mình: hắn triệu tập buổi họp này với tư cách tổng chấp sự, không ngồi trong sáu ghế. Cao Minh ngồi ngoài vòng, ghế đá, vò rượu bên cạnh.",
+      "Vòng báo việc đầu tiên chạy quanh sáu ghế: mỗi trưởng đường một dòng đúng chuyên môn — người đang học chữ, trận đang chạy, ruộng đã gieo xong, mẻ đan đầu đã dùng hết vào người thật, việc canh giữ các điểm nước, cuốn sổ tên đầu tiên và hồ sơ vật chủ còn tỉnh vừa đối chiếu xong. Suốt vòng báo việc, ngòi bút của Tống chạy không ngừng: mọi việc của sáu đường đang chảy về một cuốn sổ. Cả vòng đều thấy chi tiết ấy, không ai nói ra.",
+      "Tới phần việc chung, Tống trình đề xuất của mình — mạch lạc, từng ý có đầu có đuôi. Điều làm cả vòng im lặng không phải vì nó vô lý, mà vì nó rất hợp lý trên bề mặt. Không một ai phản đối vì khan hiếm: sân này không thiếu thứ gì, Đạo Tổ cho thêm lúc nào cũng được. Thứ mọi người nghe thấy trong đề xuất là một cái cửa chung dựng lên trước mọi đường. Mến đáp đầu tiên, bằng việc ruộng của chính nàng; Thất Nương tiếp lời bằng lệ của Đan Đường.",
+      "Vòng ý kiến đi hết sáu ghế: Đào nói về kinh sách và bài học của tấm thẻ chưa ráo mực; Hạnh nói về tên và danh sách, phát biểu như một trưởng đường trong Hội Đồng; Thạo nói câu làm Tống khó đáp nhất. Kết quả chốt thành tiếng để thành tiền lệ: đề xuất tập quyền phân phối của Tống bị Hội Đồng hoãn vô hạn — thực chất là bác lần đầu. Mỗi đường giữ quyền phân phối của đường mình. Tống nhận kết quả không cãi to: hắn gấp tập giấy lại rất ngay ngắn.",
+      "Trước khi tan họp, Tiểu Lan xin nói một việc. Nàng không có ghế trong vòng — nàng nói đúng tư cách người vừa bàn giao cuốn sổ tên đầu tiên sáng nay, đề nghị Hội Đồng nhận lệ tên làm lệ chung của cả sáu đường. Sáu trưởng đường nhận lệ ấy, không ai phản đối; nó đi vào biên bản buổi họp đầu tiên. Có người quay sang phía ghế đá, chờ Cao Minh định đoạt luôn thể cả buổi họp. Hắn từ chối — một câu tùy tiện đẩy mọi quyết định về lại sáu cái ghế.",
+      "Họp sắp tan thì một người chạy việc mang tới một tờ giấy của Giới Phòng: không phải trát bắt, không phải lệnh đòi người — chỉ là một ghi chú hành chính lạnh lùng về việc đối chiếu nhân khẩu phục vụ đợt Đại Kiểm Hộ, hạn chót ghi rõ là ngày 63. Không ai trong sân tuyên bố gì về ngày thi hành. Trần Thị Mến cầm tờ giấy lên, đọc thành tiếng cho cả vòng nghe — và câu khép của buổi họp đầu tiên là của nàng. Tống nhìn tờ giấy lâu hơn mọi người một nhịp."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa quý vị trưởng đường, tôi triệu tập buổi họp này vì một lẽ: việc chung không thể quyết ở hành lang nữa."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi đứng ngoài sáu ghế, lo việc chung và ghi biên bản. Tôi ghi đủ từng ý kiến."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Trước hết, xin sáu đường báo việc, mỗi đường một lượt ngắn."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Thưa, sân đang họp, Hộ Pháp đã cho người giữ hai đầu lối vào. Không ồn, không cản ai."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Truyền Pháp báo: lớp học chữ chạy hai buổi theo lịch, người già học bằng tai đã qua trang đầu tiên."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Khí Trận báo: trận chạy thường trực. Mẻ rèn đầu là cuốc cho Linh Điền, đã giao đủ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Linh Điền báo: ruộng thửa đầu đã gieo xong, mốc tên cắm đủ theo hộ, sổ ruộng để ở đình làng."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đan Đường báo: mẻ đan đầu đã dùng hết — vào người thật, giữa chợ, cả làng đều thấy."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Hộ Pháp báo: các điểm nước và ruộng mới mở đã có người canh giữ theo phiên."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Nhân Danh báo: sổ tên đầu tiên đã mở — chính là cuốn giấy sạch của ngày 7."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Sáu đường báo việc xong, tôi ghi đủ cả. Giờ tôi trình phần việc chung."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Đề xuất là vầy: mọi thứ các đường phát ra nên qua một sổ phân phối chung do tôi giữ."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Cái lợi của nó: nhà càng lớn, việc phát càng dễ loạn. Một người giữ sổ chung thì tra được mọi thứ."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Xin Hội Đồng cho ý kiến từng ghế. Được thuận, tôi chịu trách nhiệm về cuốn sổ ấy."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa anh Tống, giống của Linh Điền đã chia tại ruộng, vào tay người trồng. Bắt nó quay về qua một sổ chung là bắt người trồng xin lại phần đã là của họ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Ruộng không chờ sổ được: mưa xuống là xuống giống. Một cuốn sổ chung mở ra không kịp một cơn mưa."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Sổ ruộng của tui để ở đình làng, ai coi cũng được. Sổ để ghi nhớ khác với sổ để xin phép."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đan Đường đáp: đan cứu người phát trước, sổ ghi sau. Người hấp hối không chờ được một cuốn sổ chung."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Việc phân phối của đường tôi là phát theo hơi thở người bệnh, không theo thứ tự của sổ."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Truyền Pháp nói về kinh sách: tàng kinh vừa học được bài học của một tấm thẻ. Không nên dựng thêm thẻ chung."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Sách phát ra, học rồi là của người ta. Một sổ chung sẽ thành danh sách ai học trước, ai chờ."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Nhân Danh nói về tên: một sổ phân phối chung là một danh sách chung về người."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Ai giữ một danh sách chung là người ấy biết hết: nhà nào nhận gì, người nào yếu thế nhất."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Hộ Pháp nói một câu ngắn: giữ của chung không cần giữ quyền cho của chung."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Trước khi chốt, tôi nêu lại đề xuất một lần chót: một sổ phân phối chung, một người chịu trách nhiệm."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Ý kiến sáu ghế đã đủ, tôi ghi kết quả: đề xuất sổ phân phối chung — hoãn, chưa hẹn ngày."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi nhận kết quả này. Một đề xuất bị bác ở buổi họp đầu tiên chứng tỏ vòng ghế này quyết thật."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa quý vị trưởng đường, tôi không có ghế trong vòng này. Tôi xin nói một việc về cuốn sổ tên."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi đề nghị lệ tên thành lệ chung của cả sáu đường: danh sách nào về người, người có tên được đọc dòng của mình."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Một cái tên ghi sai mà người mang tên không được đọc, không được sửa, thì nó là của người cầm sổ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa cô, Linh Điền nhận lệ tên ngay tại buổi này. Danh sách giống của tui để ở đình làng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đừng nhìn bổn tọa. Nhà của các ngươi, ghế của các ngươi. Bổn tọa chỉ cho đồ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Họp tiếp đi. Sáu cái ghế cãi nhau một buổi mà không cần bổn tọa phán — nhà này đứng được."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa quý vị, giấy của Giới Phòng vừa tới, tui đọc thành tiếng: họ yêu cầu đạo quán chuẩn bị đối chiếu nhân khẩu, phục vụ đợt Đại Kiểm Hộ. Hạn chót là ngày 63."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui đọc cho rõ: họ chưa đòi người — họ mới đòi danh sách nhà này."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Mà nhà này vừa học được một điều: danh sách là thứ phải giữ kỹ nhất."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tờ giấy ấy, xin Hội Đồng cho tôi giữ một bản sao trong hồ sơ việc chung."
+      }
+    ],
+    "choices": [
+      {
+        "id": "no_single_gate",
+        "text": "Để kết quả buổi họp đứng nguyên như sáu ghế vừa quyết: không một cửa chung nào cho việc phân phối — mỗi đường giữ phần của mình, việc chồng lấn mang ra Hội Đồng.",
+        "next": "ky3_13_noi_com_tu_nep",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3CouncilFirstSession": true
+        }
+      },
+      {
+        "id": "council_keeps_the_paper",
+        "text": "Giữ tờ giấy của Giới Phòng trong hồ sơ của Hội Đồng và ghi biên bản buổi họp đầu cho đủ: hạn ngày 63 là việc của giấy tờ — và giấy tờ của nhà này từ nay có người giữ chung.",
+        "next": "ky3_13_noi_com_tu_nep",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3CouncilFirstSession": true
+        }
+      }
+    ]
+  },
+  "ky3_13_noi_com_tu_nep": {
+    "id": "ky3_13_noi_com_tu_nep",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Nồi cơm của Tư Nếp",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân tụ họp và bếp chung Hạ Ô Môn, Long Hải — ngày 13",
+    "companions": [],
+    "narration": [
+      "Sáng ngày mười ba, bếp chung của đạo quán vào nếp như một cái chợ nhỏ có giờ giấc. Ba nồi lớn bắc trên ba bếp đất, gạo là gạo của Linh Điền mới gặt thử. Người ăn đã đông hơn bếp cũ của một nhà khá giả nhiều lần: đệ tử các đường, người học chữ, người tới chữa bệnh ở lại qua bữa, cả mấy đứa trẻ làng chạy sang phụ việc. Giữa cái đông ấy, một người đứng như cái cọc: Tư Nếp, người làm bếp được giao bếp này, khăn rằn vắt vai, tay cầm vá lớn, mắt quét một vòng là biết nồi nào sắp sôi, ai vừa lẻn thêm một chén.",
+      "Lệ bếp được ông lập từ việc nhỏ nhất. Ai trực bếp thì ăn trước một chén. Phần cơm tính theo đầu người có mặt, không tính theo cấp bậc áo quần. Người rửa chén không rửa một mình hai bữa liền. Nồi canh đặt giữa mâm, ai múc cũng phải chừa cho người ngồi cuối. Ông nói lệ một lần, rõ ràng, rồi quay lại với lửa của mình.",
+      "Bữa đầu dọn ra, đời thường hiện nguyên vẹn như ở bất cứ bếp đông người nào. Hai đệ tử mới tranh nhau miếng cá kho ở đáy nồi, đũa chạm nhau leng keng. Một người nhanh tay gắp phần hơn cho bạn mình rồi giả vờ nhìn đi chỗ khác. Một bà phụ bếp lén để dành phần ngon cho đứa cháu mới nhập môn, giấu dưới lớp cơm trắng. Tiểu Lan ngồi ở bàn chung, phần cơm như mọi người, và nàng quyết không can thiệp vào chuyện tranh phần ấy: đời thường không cần được sửa từng miếng ăn.",
+      "Giữa bữa, Đào Nhất Bút, trưởng đường Truyền Pháp, ghé bếp với một đề nghị nghe rất có lý: dời giờ cơm trưa muộn nửa khắc cho khớp giờ đọc kinh, và để riêng một nồi nhỏ cho lớp học chữ. Tư Nếp nghe xong, đặt cái vá xuống, mắng thẳng giữa bếp. Cả bếp im một nhịp. Rồi trưởng đường Truyền Pháp, người hôm qua còn phân xử việc lớn của môn, đứng nghe mắng mà không lấy quyền ra đè, chỉ gật đầu nhận phần cử người xuống phụ bếp.",
+      "Cao Minh đi ngang bếp đúng lúc khói từ ba bếp đất gặp củi ướt, cay xè cả một góc sân, người trực bếp vừa quạt vừa chảy nước mắt. Hắn dừng lại, thò tay vào tay áo như người ta thò tay vào túi lấy mấy đồng lẻ. Một loạt pháp khí tự nhiệt rơi xuống mặt chõng tre trước mặt Tư Nếp, lăn lóc như đồ thừa dưới đáy rương: vòng giữ nhiệt cho nồi, phiến ấm cho thớt, miếng giữ nóng giữ được cơm tới bữa sau. Không tuyên bố, không đặt tên. Hắn quẳng xong thì quay đi như vừa vứt mấy viên đá vướng đường.",
+      "Tư Nếp không quỳ, không rối rít cảm ơn. Ông săm soi từng món như săm soi một cái nồi mới mua ở chợ: gõ thử nghe tiếng, hơ tay trên phiến ấm rồi rụt lại. Đoạn ông đặt lệ cho bếp có lửa mới: lửa tiên không đổi lệ người. Phần vẫn chia theo người có mặt, trưởng đường xuống ăn cũng xếp hàng như đệ tử mới. Tiểu Lan đứng dậy, nói đỡ cho lệ ấy thành tiếng trước mặt đệ tử, để lệ của bếp thành lệ của cả nhà này.",
+      "Chiều xuống, bếp hết khói cay, cơm chín đều, canh không khét đáy nồi nào. Miếng ngon cuối cùng trong nồi vẫn bị hai đệ tử tranh nhau bằng đũa, cả bàn cười ồ. Pháp khí đổi được lửa, không đổi được người, và có lẽ cũng không cần đổi. Tiểu Lan ăn xong, tự mang chén ra máng nước rửa như mọi người, úp lên rổ tre, rồi đi về phía kinh lâu."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Tư Nếp",
+        "text": "Nghe cho rõ, lệ bếp nói một lần thôi. Ai trực bếp ăn trước một chén. Phần chia theo đầu người có mặt, không theo áo quần, không theo đường nào hết."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Nồi canh đặt giữa mâm. Múc thì chừa người ngồi cuối. Ai múc cạn nồi canh trước khi bàn ăn xong, mai người đó nấu canh."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Rửa chén thì luân phiên. Không ai rửa một mình hai bữa liền, trừ tôi. Tôi rửa hồi nào là việc của tôi."
+      },
+      {
+        "speaker": "Người phụ bếp",
+        "text": "Dạ, thưa ông Nếp. Vậy bữa đầu dọn đúng giờ ngọ, hay đợi lớp học chữ tan rồi mới dọn?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Phần của tôi thế này là đủ rồi. Cơm bếp chung mà ăn ngon hơn tôi tưởng, chắc tại đông người."
+      },
+      {
+        "speaker": "Đệ tử phụ bếp",
+        "text": "Miếng cá đó tôi chấm trước! Đũa tôi xuống nồi trước, ai cũng thấy mà!"
+      },
+      {
+        "speaker": "Đệ tử phụ bếp",
+        "text": "Chấm trước mà chưa gắp được thì cũng như không. Ở bếp này, gắp lên chén mới tính là của mình, ông thầy bếp nói vậy đó."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Hai đứa bây tranh miếng cá như tranh ruộng. Tranh thì tranh, đừng làm đổ nồi canh của người ta."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Phần hơn kia, cứ để người ta tự xấu hổ với nhau thì hơn là tôi lên tiếng. Bếp này, để bếp tự dạy người ta."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Thưa ông, lớp đọc kinh tan muộn nửa khắc. Truyền Pháp Đường xin bếp dời bữa trưa theo giờ kinh, cho học trò khỏi lỡ bữa học."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Và xin bếp để riêng một nồi nhỏ cho lớp học chữ. Các em còn nhỏ, chen với người lớn e không kịp giờ lên lớp."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Không. Bếp này nấu theo lửa và theo bụng người, không nấu theo lịch của đường nào hết. Giờ kinh là việc của đường ông, giờ cơm là việc của tôi."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Muốn nồi riêng thì đường ông cử người xuống đây mà nấu. Tay tôi có hai cái, một cái khuấy nồi chung này là hết. Ai ăn ở đây cũng là người, không ai là nồi riêng hết."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Ông là trưởng đường, tôi vẫn nói vậy. Xuống bếp này, ông cũng là một cái bụng như người ta. Đói thì đợi tới lượt."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đồ thừa dưới đáy rương của bổn tọa, để bếp dùng. Khói cay mắt bổn tọa, nhìn người ta nấu cơm mà khóc thì chán lắm."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cứ dùng như nồi niêu thường. Hỏng thì vứt, bổn tọa còn nhiều. Đừng có làm to chuyện, lại bày lễ lạy thì bổn tọa lấy về."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa đi ngang thấy bếp vui mắt thì cho. Không có ý gì sâu xa đâu, đừng đoán."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Để ở bếp chung mà dùng. Đứa nào đem về nhà riêng, bổn tọa lấy lại. Đồ của bổn tọa mà thành của riêng thì nó hết vui."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Đồ của ông cho, tôi nhận. Nhưng tôi hỏi một câu cho chắc: lửa này giữ hoài vậy, có làm khét đáy nồi của tôi không?"
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Khét đáy là khét cả nồi cơm của mấy trăm người. Ông nói không khét, tôi dùng thử một bữa. Khét, tôi trả."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ông Nếp, lệ bếp ông vừa đặt, tôi xin cho thành lệ chung của nhà này. Ai ăn ở sân này đều theo lệ ấy, kể cả tôi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Từ nay ai thắc mắc chuyện phần cơm, cứ chỉ về bếp mà hỏi. Bếp giữ phần ăn, như Nhân Danh Đường giữ tên người ta, ai cũng có phần việc của mình."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi ăn ở đây cũng xếp hàng như mọi người. Phần của tôi thiếu đủ gì, bếp tính như tính cho một người thường."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Cô nói vậy thì tôi nói lại hai lệ chính cho nhớ. Một: chia theo người có mặt. Hai: người nấu ăn trước một chén. Ngoài ra ai muốn gì thêm, tự xuống bếp mà làm."
+      },
+      {
+        "speaker": "Tư Nếp",
+        "text": "Lửa mới lửa cũ gì cũng vậy. Bếp này còn tôi đứng, lệ này còn nguyên."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa lập môn tính tới nay, chỗ nghiêm nhất hóa ra lại là cái bếp. Hay. Bổn tọa đi uống rượu đây, cơm chín thì cứ ăn, đừng đợi bổn tọa."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, ngài cứ đi. Ở đây người ta tranh nhau miếng ngon được là còn khỏe. Bếp còn ồn là nhà còn yên."
+      }
+    ],
+    "choices": [
+      {
+        "id": "stoves_for_the_common_pot",
+        "text": "Để pháp khí ở lại bếp chung và ghi lệ bếp vào việc nhà: bếp của mọi người, không bếp riêng cho đường nào.",
+        "next": "ky3_14_be_sau_hoc_chu",
+        "effects": {
+          "suppliesDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3KitchenCharmsGiven": true
+        }
+      },
+      {
+        "id": "cook_keeps_his_own_rules",
+        "text": "Để Tư Nếp toàn quyền giữ lệ bếp của ông, đạo quán không chép lệ ấy thành quy định giấy tờ.",
+        "next": "ky3_14_be_sau_hoc_chu",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3KitchenCharmsGiven": true
+        }
+      }
+    ]
+  },
+  "ky3_14_be_sau_hoc_chu": {
+    "id": "ky3_14_be_sau_hoc_chu",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Bé Sáu học chữ",
+    "backgroundId": "ha-o-scripture-hall",
+    "location": "Kinh lâu Hạ Ô Môn, Long Hải — ngày 14",
+    "companions": [],
+    "narration": [
+      "Sáng ngày mười bốn, kinh lâu mở lớp học chữ của Truyền Pháp Đường cho trẻ quanh vùng và những đứa trẻ được cứu từ tuyến quan tài. Bảng gỗ treo thấp ngang tầm mắt trẻ con, than viết đựng trong ống tre, ghế thấp kê thành hai dãy. Mùi giấy mới và mùi gỗ ẩm trộn nhau trong gian phòng còn mát hơi sương. Đào Nhất Bút dạy chữ bằng cách của người dạy học thật: đọc trước một tiếng, cả lớp đọc theo, em nào sai thì ông sửa nhẹ, không quát, không gõ thước lên bàn dọa ai.",
+      "Bé Sáu ngồi trong lớp như một học trò, không có chỗ riêng, không có đối đãi riêng. Em ngồi giữa hai đứa trẻ làng, ống than của em cũng là ống than chung của lớp, trang giấy của em cũng xấp giấy chung. Buổi học hôm nay có một việc nghe nhỏ mà với nhiều em là việc lớn đầu tiên của đời đi học: viết được tên của chính mình. Mấy đứa trẻ làng viết tên cha mẹ đặt cho nghe quen tay hơn; có em viết xong quay sang khoe bạn, chữ nghiêng như hàng cau sau gió.",
+      "Tới lượt Bé Sáu, Tiểu Lan ngồi xuống ngang tầm em, như nàng đã ngồi xuống sàn khoang tàu hôm mở nắp quan tài. Em cầm than, viết từng nét của tên mình, chậm và chắc theo cách của riêng em. Một nét xiên đi quá tay, em tự dừng lại, tự xóa, viết lại từ đầu nét ấy. Tiểu Lan chờ theo nhịp của em: nàng chỉ lên tiếng khi em hỏi, không cầm tay em, không viết mẫu đè lên trang của em, không nói câu nào thúc giục. Tên của em phải ra từ tay em, dù nó run.",
+      "Giữa buổi, một chấp sự của đạo quán mang tới một đề xuất nghe rất hợp lý. Ông ta nói nhỏ với vẻ lo xa: trong đám trẻ được cứu có những em dường như nghe được những điều người thường không nghe, chi bằng lập một cuốn sổ riêng, ghi tên các em có cảm ứng lạ, để môn còn biết đường bảo vệ và theo dõi. Cao Minh ghé qua kinh lâu đúng lúc ấy, nghe hết câu nói dở, và quyết ngay tại chỗ, không cần ra phòng nào bàn bạc. Đề xuất chết trước khi thành giấy, ngay trong buổi học đầu tiên của những đứa trẻ ấy.",
+      "Lớp học trở lại yên như chưa từng có cuốn sổ nào được nhắc tới. Rồi, giữa một nét chữ đang viết dở, Bé Sáu khựng lại. Đầu em nghiêng sang một bên, như nghe một tiếng gọi rất xa gọi từ một bến sông nào khác. Một dấu hiệu lệnh của mạng lướt qua rất xa, yếu và mơ hồ, như tiếng gõ trên ống đồng vọng lại qua mấy chặng nước. Cả lớp không ai hay biết; tiếng đọc chữ vẫn đều đều quanh em. Chỉ Tiểu Lan nhận ra sự khựng lại ấy. Nàng đặt cây viết của mình xuống, không hỏi ngay, và chờ, như nàng vẫn chờ đứa trẻ này từ ngày đầu tiên.",
+      "Khoảng chờ kéo dài đúng nhịp của em, không dài hơn, không ngắn hơn. Trước khi em quyết, Tiểu Lan nhắc lại lời hứa cũ của nàng bằng giọng thường ngày nhất: nói hay không là của em, không nói cũng không sao, không ai ghi, không ai hỏi câu thứ hai. Rồi Bé Sáu tự mở miệng. Em chỉ nói một mẩu nhỏ, ngắt quãng: dấu hiệu ở xa, đi về hướng không phải hướng này, rồi thôi. Nói xong, em tự ngừng, cúi xuống trang chữ của mình như đặt một món đồ xuống rồi quay lại việc đang làm. Mẩu ấy không vào sổ nào, không thành tin tức của ai.",
+      "Cuối buổi, trang của Bé Sáu có tên em viết trọn. Nét còn run, mực than còn chỗ đậm chỗ nhạt, nhưng là tay em từ nét đầu tới nét cuối. Em tự quyết giữ trang ấy mang về chỗ ngủ của mình, gấp tư, cẩn thận như người ta giữ một tờ giấy quan trọng của đời mình. Lớp tan như mọi lớp học: trẻ ồn ào chạy ra sân, bảng được lau sạch, ghế thấp được xếp lại. Ngoài sân, tiếng bếp chung bắt đầu nổi lên cho bữa chiều. Dấu hiệu xa không quay lại lần nào nữa trong ngày hôm ấy."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Hôm nay lớp mình học một việc thôi: viết tên của chính mình. Ai viết được tên mình, người đó không ai ghi lộn được nữa."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Cầm than cho chắc mà đừng gồng tay. Tay gồng thì nét run. Thả lỏng ra, chữ nó tự đứng thẳng."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Đọc theo thầy: một nét ngang là đất, một nét sổ là người đứng trên đất. Chữ là vậy, không có gì ghê gớm."
+      },
+      {
+        "speaker": "Học trò nhỏ",
+        "text": "Thầy ơi, con viết chữ này giống con cua bò ngang quá. Cả lớp cười con hoài."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Em cứ viết. Sai thì viết lại. Chữ này là tên em, không ai vội thay em được, mà cũng không ai được vội."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Cô ơi… nét này… cong vầy đúng chưa? Con viết hai lần, nó cong hai kiểu khác nhau."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Đúng rồi. Cong vậy là được. Em viết tiếp đi, tôi ngồi đây, em không phải ngó chừng tôi đâu."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Con muốn tự viết. Cô đừng cầm tay con. Cầm tay là chữ của cô, không phải của con."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ừ, tôi không cầm. Tay em, chữ em. Tôi chỉ ngồi đây tới khi em viết xong, bao lâu cũng được."
+      },
+      {
+        "speaker": "Chấp sự",
+        "text": "Thưa, mấy em được cứu có em nghe được điều lạ. Hay là môn lập một sổ riêng ghi các em có tai nghe lạ, để tiện bảo vệ và theo dõi các em về sau."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Không. Lớp này là lớp học chữ. Trẻ vào đây là học trò của bổn tọa, không phải tai mắt của môn nào hết."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa không nuôi sổ theo dõi trẻ con. Đứa nào muốn nghe cái mạng kia thì tự chui đầu vào mà nghe, đừng mượn tai của trẻ nhà người ta."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Sổ xé ý định ấy đi ngay trước mặt bổn tọa. Học trò của bổn tọa, đứa nào cũng chỉ có một việc trong phòng này: học chữ của nó."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Xa… xa lắm. Như tiếng gõ ở bến khác… vọng qua nước. Không phải… gọi ở đây đâu."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Nó đi qua rồi. Về hướng khác. Không phải hướng này. Con nói vậy thôi… con không nghe nữa đâu."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Con viết tiếp chữ của con. Nét này… con viết lại lần nữa cho thẳng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Trước khi em nói gì, tôi nhắc lại lời tôi hứa: nói hay không là của em. Không nói cũng không sao. Không ai ghi, không ai hỏi câu thứ hai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ừ. Vậy là đủ rồi. Em nói tới đâu, tôi nghe tới đó. Phần còn lại, để nó ở ngoài kia với bến sông của nó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Học tiếp đi. Nét em đang viết dở, em còn nhớ nó cong về phía nào không?"
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Con nhớ. Cong về phía này nè. Cô coi, con viết được rồi. Tên con đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tên em, em viết xong rồi. Giữ cho khéo. Giấy này là của em, ai muốn xem phải hỏi em trước."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Con gấp lại, để dưới gối của con. Mai con học tiếp. Mai con viết tên con nhanh hơn bữa nay."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Lớp tan. Mai học tiếp, ai chưa viết xong tên mình cũng đừng lo. Chữ đợi người, chữ không bỏ ai hết."
+      }
+    ],
+    "choices": [
+      {
+        "id": "close_the_class_quietly",
+        "text": "Khép buổi học bình thường: không ghi sổ, không bàn lại mẩu dấu hiệu em đã tự chọn nói — việc của lớp là chữ, không phải tin.",
+        "next": "ky3_15_su_tri_nhuan",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3BeSauSpokeFreely": true
+        }
+      },
+      {
+        "id": "her_name_page_is_hers",
+        "text": "Để Bé Sáu tự giữ trang tên của mình và tự quyết mai có học tiếp hay không — trang chữ thuộc về em trọn vẹn.",
+        "next": "ky3_15_su_tri_nhuan",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3BeSauSpokeFreely": true
+        }
+      }
+    ]
+  },
+  "ky3_15_su_tri_nhuan": {
+    "id": "ky3_15_su_tri_nhuan",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Nhà sư tới thăm ma môn",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân tụ họp Hạ Ô Môn, Long Hải — ngày 15",
+    "companions": [],
+    "narration": [
+      "Ngày mười lăm, một nhà sư áo nâu, dép cỏ, tay cầm tràng hạt cũ, tới sân đạo quán một mình. Đó là sư Trí Nhuận, trụ trì chùa làng, người dân quanh vùng gặp mỗi rằm, mỗi đám tang. Ông không mang theo đệ tử hộ tống, không kèn trống, không thư giới thiệu. Dân quanh sân xì xào hai chữ ma môn, nửa sợ nửa tò mò. Nhà sư nghe thấy hết mà không phản ứng, chỉ chắp tay xin gặp chủ nhà như một người khách thăm nhà.",
+      "Đệ tử gác sân lúng túng thấy rõ, vì trong môn quy không có lệ nào dạy cách tiếp một nhà sư. Cao Minh tiếp khách ngay ở thềm sân, trên ghế đá của hắn, vò rượu vẫn để bên cạnh như mọi ngày. Hắn không giấu nếp sống của mình trước khách tu hành, nhà sư cũng không lấy vò rượu ấy làm cớ. Cuộc nói chuyện bắt đầu bằng những điều sâu nhất, nói bằng giọng bình thường nhất.",
+      "Phía nhà sư, lời nói chậm mà có sức nặng của một đời ngồi yên nhìn người ta khổ: người đời khổ vì muốn giữ những thứ không giữ được — giữ người, giữ của, giữ một ngày vui đừng qua. Phía Cao Minh, hắn giữ được gần như mọi thứ hắn muốn giữ, và cái chán của kẻ giữ được hết là một thứ khổ khác, thứ khổ mà trong kinh của chùa chưa chắc đã có bài viết sẵn. Không bên nào thắng. Cả hai đều nói đúng phần của mình.",
+      "Tiểu Lan xin phép chen vào cuộc đấu lý của hai người đàn ông bằng những câu hỏi rất phàm. Nàng hỏi về đời sống tín ngưỡng của dân làng như hỏi về một vùng đất nàng đang học lại từ đầu: ngày rằm người ta đi chùa đông không, nhà nghèo cúng bằng gì, nhà có tang thì chùa giúp được phần nào, trẻ con ngày trước học chữ ở đâu. Nhà sư trả lời từng điều bằng việc thật của một ngôi chùa nghèo.",
+      "Rồi nhà sư hỏi thẳng điều cả vùng đang đồn: đạo quán này chữa người, dạy người, cho nước, mà không thu gì cả — cho mà không giữ người lại bằng ơn, ấy là gần với buông. Cao Minh đáp bằng đúng động cơ của hắn, không tô vẽ: hắn làm vì chán và vì thấy vui, giữ người bằng ơn thì mệt, hắn lười. Hai cách nói khác nhau xa nhau mà chỉ về cùng một hành vi. Nhà sư cười, tràng hạt trong tay lăn qua một hạt.",
+      "Có đệ tử nhân buổi thăm đề nghị đạo quán cúng dường lớn cho chùa để lấy tiếng tốt với làng. Trí Nhuận từ chối nhẹ nhàng: chùa của ông chỉ xin ăn cùng bếp đạo quán một bữa cơm chay hôm nay, như khách, vậy là đủ. Tiếng tốt không mua được bằng gạo. Cao Minh nghe việc từ chối ấy thì thấy hợp khẩu vị: hắn để nhà sư tự quyết phần nhận của mình, không ép thêm một món nào.",
+      "Nhà sư ra về bằng cổng chính, giữa ban ngày, trước mắt dân làng. Buổi thăm công khai tự nó là một thông điệp mà không văn thư nào viết được: chùa và đạo quán nói chuyện được với nhau. Chiều ấy, Tiểu Lan ghi vào sổ việc của mình lịch lễ của chùa làng: ngày rằm, ngày vía, lệ tang ma. Nàng ghi cẩn thận như ghi một phần của đời sống vùng này mà đạo quán, từ nay, phải biết tránh đường."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Bần tăng là Trí Nhuận, ở chùa làng bên kia xóm. Hôm nay bần tăng tới thăm, không tới tranh với ai."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Phiền cậu báo giúp một tiếng. Khách tới cửa, đứng đợi là phải lẽ. Bần tăng đợi được."
+      },
+      {
+        "speaker": "Đệ tử gác sân",
+        "text": "Dạ… dạ thưa sư, sư đợi con một chút. Trong môn con… chưa có lệ tiếp sư, con vào bẩm lại ngay."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Sư hỏi bổn tọa về khổ. Bổn tọa muốn gì được nấy đã lâu lắm rồi. Sư nói thử xem, chán có phải là một thứ khổ không?"
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Giữ được hết mà vẫn thấy thiếu, thì cái thiếu ấy không nằm ở đồ vật."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Người đời khổ vì nắm chặt một thứ đang tuột. Còn ngài, nếu quả thật không còn gì để nắm, mà vẫn chưa yên — bần tăng không dám nói bần tăng có bài cho nỗi ấy."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hay. Ít ra sư không bán cho bổn tọa một bài có sẵn. Bổn tọa ghét nhất người chưa nghe hết chuyện đã có thuốc sẵn trong tay áo."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngồi đi. Rượu của bổn tọa thì sư không uống, trà của bếp bổn tọa thì có. Đừng khách sáo, khách sáo là mệt nhau."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Trà thì bần tăng xin. Ngồi thềm đá nói chuyện phàm, vậy là đủ lễ rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa sư, tôi xin hỏi việc phàm của làng. Ngày rằm, người ta đi chùa có đông không? Người nghèo không có lễ vật thì họ cúng bằng gì?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, còn nhà có tang thì chùa giúp được phần nào? Và trẻ con làng này, trước khi có lớp học chữ ở đây, các em học chữ ở đâu, thưa sư?"
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Rằm thì sân chùa đầy người, giàu nghèo ngồi lẫn nhau. Người nghèo cúng bằng một nén nhang và hai bàn tay không — chùa này nhận cả hai thứ ấy như nhau."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Nhà có tang, chùa giúp được tiếng chuông, một chỗ ngồi, và người ngồi nghe người ta khóc cho hết cơn. Trẻ con ngày trước học chữ ở sân chùa, đứa nào nhà xa thì thôi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi ghi nhớ. Nhà này mở việc gì lớn cũng phải biết ngày nào sân chùa đang có việc của làng, để khỏi chen nhau làm khó dân."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Bần tăng thấy người được nhà này cứu đều đi về tự do, không ai bị giữ lại bằng ơn. Cho mà không giữ, ấy là gần với buông lắm."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Chùa của bần tăng làm không được nhiều đến thế. Nhưng chùa cũng không giữ ai. Ở điểm ấy, hai nhà giống nhau, dù đường đi khác nhau xa."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Bần tăng chỉ nói việc bần tăng đã thấy. Còn nhà này là chính hay tà, bần tăng không kết luận trước mặt dân. Việc thiện giả, nhìn lâu nó tự lộ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa giữ người làm gì cho chật sân. Ai tới thì tới, ai đi cứ đi. Giữ người bằng ơn thì phải nhớ ơn của từng người, bổn tọa lười lắm."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa làm vì chán, thấy vui thì làm tiếp. Sư đừng gắn cho bổn tọa cái tâm nào cao xa, gắn sai thì bổn tọa phải sống theo, mệt."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa sư, người ở đây ra về, không ai bị ghi một món nợ nào. Đó là lệ của nhà này từ ngày đầu, không phải việc mới bày ra hôm nay."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Tấm lòng của nhà này bần tăng đã nhận. Nhưng chùa chỉ xin ăn cùng bếp ở đây một bữa cơm chay hôm nay, như khách. Gạo vải nhiều hơn thế, bần tăng không nhận."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Tiếng tốt không mua được bằng gạo. Dân làng nhìn một bữa cơm khách ăn với chủ, họ hiểu hơn một sân lễ vật."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Sư tự quyết phần của sư. Bổn tọa không ép khách nhận thứ khách không muốn nhận. Ép nhau nhận quà, ấy là một cách giữ người khác đấy."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi cho người dặn bếp phần chay riêng cho sư, nấu theo lệ bếp: người nấu ăn trước một chén, khách ăn như người nhà."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa sư, tôi xin ghi lịch lễ của chùa vào sổ việc của nhà này: rằm, ngày vía, lệ tang. Việc của môn từ nay sẽ tránh những ngày ấy, để dân khỏi phải chọn một trong hai nơi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, sư đi thong thả. Đường về xóm, buổi chiều có bóng tre, sư đi mát."
+      },
+      {
+        "speaker": "Trí Nhuận",
+        "text": "Bần tăng về. Chúc nhà này yên với làng, và làng yên với nhà này. Có duyên, rằm tới cô qua sân chùa ngồi chơi, không cần mang theo gì hết."
+      }
+    ],
+    "choices": [
+      {
+        "id": "note_the_temple_calendar",
+        "text": "Ghi lịch lễ của chùa vào sổ việc của đạo quán ngay hôm nay — việc của môn từ nay tránh trùng ngày lễ của làng.",
+        "next": "ky3_16_chiec_bat_thu_hai",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3AbbotVisited": true
+        }
+      },
+      {
+        "id": "let_the_visit_stand_alone",
+        "text": "Để buổi thăm đứng yên như một cuộc thăm: không ghi thành lệ, không tuyên bố gì với làng — ai thấy sao hiểu vậy.",
+        "next": "ky3_16_chiec_bat_thu_hai",
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3AbbotVisited": true
+        }
+      }
+    ]
+  },
+  "ky3_16_chiec_bat_thu_hai": {
+    "id": "ky3_16_chiec_bat_thu_hai",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Chiếc bát thứ hai",
+    "backgroundId": "ha-o-spirit-spring",
+    "location": "Linh tuyền công cộng, đạo quán Hạ Ô Môn, Long Hải — ngày thứ 16",
+    "companions": [],
+    "narration": [
+      "Ngày thứ mười sáu, linh tuyền công cộng đông người từ sớm. Nước tuyền bốc hơi mỏng trên mặt đá, người bệnh ngồi chờ theo hàng dọc bờ. Bùi Thị Lành tới một mình, tay ôm chiếc khăn gói nhỏ, đi thẳng tới trước mặt Dương Thất Nương, không nhìn quanh tìm ai đỡ lời.",
+      "Lành là người được cứu khỏi tuyến Phúc Thọ, đang sống trong diện được Nhân Danh Đường ghi tên. Nàng nói chậm, như người đã nghĩ việc này nhiều đêm. Từ ngày về Long Hải, có những việc thân thể nàng làm xong rồi nàng mới biết: tay tự đưa lên khi nghe tiếng gõ lạ, chân tự đứng dậy giữa đêm không rõ đi đâu. Nàng muốn nhìn cho rõ phần nào trong người mình còn chạy theo nhịp cũ ấy. Tiểu Lan đứng bên tuyền, nghe từ đầu, không chen một lời.",
+      "Dương Thất Nương không nhận lời ngay. Bà đặt viên đan xuống khay gỗ, nói hết bằng lời phàm, nói mặt giới hạn trước mặt công dụng. Cao Minh ngồi cách đó mấy bước, chén rượu trên tay, nghe như nghe chuyện của người khác — việc này là việc của hai người đàn bà với nhau, hắn không chen vào.",
+      "Lành uống viên đan với nửa chén nước tuyền ấm. Không có ánh sáng lạ, không có tiếng động nào. Nàng ngồi yên một lúc lâu, hai tay đặt trên gối, mắt nhìn xuống mặt nước mà như nhìn vào trong thân thể mình. Rồi nàng nói, giọng nhỏ đi: những việc nàng vẫn tưởng là ý mình — giật mình đứng dậy, đưa tay, quay đầu theo tiếng gọi — hóa ra chạy theo một nhịp có sẵn từ trước, như đường kim đã khâu sẵn trong áo, người mặc chỉ việc cử động theo đường khâu. Phần còn tự quyết được nhỏ hơn nàng tưởng nhiều, và nằm ở những chỗ không ai ngờ: quyền chậm lại một nhịp, quyền lắc đầu với một việc rất nhỏ, quyền giữ tay mình yên thêm một lúc.",
+      "Nàng sợ, tay đặt trên gối hơi run. Nhưng nàng nói rõ nàng không hối hận: biết rõ là một việc, được chữa là việc khác hẳn, hôm nay nàng mới làm xong việc thứ nhất. Tiểu Lan nghe, và qua lời của người đàn bà trước mặt, nàng nhìn thấy trường hợp của chính mình — phần điều phối sự sống của nàng cũng đã bị một thứ ngoài thân thay thế từ nhỏ. Không ai nói thay nàng điều ấy lúc này.",
+      {
+        "text": "Câu chuyện chạm vào một việc phàm nhỏ: phần cháo để riêng cho người bệnh tới sau giờ Ngọ ở lều nghỉ bên tuyền. Tiểu Lan khựng lại. Việc ấy là nàng đã dặn bếp từ mấy hôm trước — người chung quanh đều nhớ, sổ của đoàn cũng có ghi. Chỉ mình nàng là không nhớ đã dặn. Nàng không đoán, không vin vào lời ai. Nàng chọn cách đối chiếu. Thu Nguyệt mở cuốn ghi chép của đoàn, tìm đúng trang, đọc lại đúng từng chữ lời dặn hôm ấy, không thêm một chữ, không bớt một chữ — như nàng vẫn làm từ đêm ở bến Phúc Thọ.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "text": "Câu chuyện chạm vào một việc phàm nhỏ: phần cháo để riêng cho người bệnh tới sau giờ Ngọ ở lều nghỉ bên tuyền. Tiểu Lan khựng lại. Việc ấy là nàng đã dặn bếp từ mấy hôm trước — người chung quanh đều nhớ, hồ sơ cũng có ghi. Chỉ mình nàng là không nhớ đã dặn. Nàng không đoán, không vin vào lời ai. Nàng tự mở cuộn chỉ đếm ngày trong tay áo và cuốn ghi chép nàng tự giữ, lần theo từng nút chỉ tới đúng ngày ấy. Đỗ Thị Hạnh ngồi bên, giữ hồ sơ ngay ngắn, đối chiếu ngày tháng theo lời nàng đọc.",
+        "unless": "thuNguyetFollows"
+      },
+      "Nghỉ bên tuyền. Bếp đưa tới một bát cháo nấu bằng linh mễ, hơi bốc lên thơm mùi gạo mới. Tiểu Lan ăn chậm, từng muỗng một, giữa tiếng nước chảy quanh sân. Cháo linh mễ làm thân thể nàng khỏe hơn thật: hơi thở đều lại, tay bớt lạnh. Nhưng nàng nhận rõ cái khỏe ấy nằm trong giới hạn thường của một bát cháo — nó nuôi phần thân thể còn là của nàng, không chạm được tới phần đã mất.",
+      "Nàng ăn hết bát cháo, không để thừa một muỗng. Rồi nàng ngẩng lên, nói một điều rất phàm, giọng bình thản như nói chuyện bữa ăn: thèm cá kho.",
+      "Lành nghe hết, ngồi yên một lúc, rồi tự quyết việc của mình: nàng ở lại diện ghi tên của Nhân Danh Đường, học cách sống cùng phần phụ thuộc mình vừa nhìn thấy, không chờ ai hứa sẽ có ngày khỏi hẳn. Nàng tự tay gấp lại chiếc khăn gói, gật đầu với Dương Thất Nương, và ra ngồi vào hàng người chờ bên tuyền như một người bệnh thường. Mặt nước lặng lại. Bát cháo trên bàn đã hết sạch."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Bùi Thị Lành",
+        "text": "Thưa bà, tôi tự tới. Không ai biểu tôi tới hết. Tôi muốn xem cho rõ: trong người tôi, phần nào còn là của tôi, phần nào còn nghe lệnh cũ."
+      },
+      {
+        "speaker": "Bùi Thị Lành",
+        "text": "Tôi sống được tới hôm nay rồi. Mà có đêm tôi đứng dậy giữa sân, đứng một lúc mới biết mình đang đứng. Tôi sợ cái không biết đó hơn sợ đau."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Cô tới xin xem, thì tôi hỏi trước một câu: cô đã hiểu viên đan này là thứ gì chưa, hay chỉ nghe người ta nói nó hay?"
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Nghe cho hết nè. Phân Mạch Minh Tâm Đan chỉ cho cô thấy trong người mình: sợi nào còn buộc, phần nào đã bị thay. Nó không chữa, không cắt, không nối, không trả lại được gì hết."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Biết vậy rồi, cô còn muốn xem không? Và nhớ một điều: đang xem mà muốn dừng, cô cứ nói dừng. Dừng là dừng, không ai hỏi thêm, không ai giận."
+      },
+      {
+        "speaker": "Bùi Thị Lành",
+        "text": "Dạ, tôi nghe rõ hết rồi. Không chữa được, tôi cũng muốn xem. Người ta sống trong nhà của mình mà không biết nhà có mấy cửa, sao yên được. Tôi đồng ý."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Xem thì cứ xem. Bổn tọa ngồi đây uống rượu, việc này không qua tay bổn tọa."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà Lành, bà thấy phần còn tự quyết được nằm ở đâu? Bà nói chậm thôi, tôi nghe cho kỹ."
+      },
+      {
+        "speaker": "Bùi Thị Lành",
+        "text": "Nó nhỏ lắm, cô à. Nhỏ mà là của tôi thiệt: chậm lại một nhịp, lắc đầu một cái, giữ tay mình yên. Thấy được vậy, tôi sợ — mà tôi mừng là mình đã xem."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa cô, ghi chép của đoàn ghi đúng lời cô dặn hôm ấy: phần cháo để riêng trong nồi đất cho người bệnh tới sau giờ Ngọ, không ghi tên ai hết.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Em đọc nguyên văn, không thêm không bớt, thưa cô. Cô muốn em đọc lại lần nữa, em đọc lại y như vậy.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi nghe rõ rồi. Giấy cho tôi biết việc ấy là của tôi. Mà biết, thưa bà Lành, không phải là nhớ. Trong đầu tôi, chỗ ấy vẫn trống.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thưa cô, hồ sơ Nhân Danh Đường khớp ngày này: phần cháo để riêng trong nồi đất cho người bệnh tới sau giờ Ngọ, không ghi tên ai hết.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi chỉ giữ giấy cho ngay ngắn và đối chiếu ngày tháng theo lời cô đọc, thưa cô. Phần khớp lại là cô tự khớp, tôi không nói thay được.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi đọc trong giấy của chính mình rồi. Giấy cho tôi biết việc ấy là của tôi. Mà biết, thưa bà Lành, không phải là nhớ. Trong đầu tôi, chỗ ấy vẫn trống.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Cháo này làm người tôi khỏe hơn, tôi biết ơn người nấu. Mà khỏe trong giới hạn của một bát cháo thôi — như mọi bát cháo trên đời."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, ngài có cho tôi thêm một nghìn bát nữa, ăn hết một nghìn bát, cũng không bát nào là phần điều phối đã mất của tôi. Phần ấy không nằm trong bát nào hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi ăn hết, vì đổ đi thì phí của. Ăn xong rồi… thưa, tôi lại thèm cá kho. Có cá kho không, cho tôi xin một khúc."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Người ta ngồi nói chuyện mất mát mà kết bằng cá kho. Được, cái kết này bổn tọa chịu."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ai đó nghe đây: làm cá kho mang ra. Kho khô một chút, nàng ăn hết cháo rồi, còn bụng cho việc phàm."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Rượu vơi nửa chén rồi. Ngồi nghe chuyện mất mát, cuối cùng chỉ phải gọi thêm một khúc cá kho. Được."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, cá kho mà kho với nước dừa thì càng tốt, thưa ngài. Việc phàm, xin cho đúng kiểu phàm."
+      }
+    ],
+    "choices": [
+      {
+        "id": "write_what_was_seen",
+        "text": "Ghi lại điều Lành vừa thấy vào hồ sơ của chính nàng — tri thức là của người đã nhìn, giữ đúng tên nàng.",
+        "next": "ky3_17_dinh_chua_nha_tho",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LanSawHerStructure": true
+        }
+      },
+      {
+        "id": "rest_by_the_spring",
+        "text": "Để Lành nghỉ bên linh tuyền, chưa ghi chép gì vội — việc thấy rõ hôm nay đã đủ nặng cho một người.",
+        "next": "ky3_17_dinh_chua_nha_tho",
+        "effects": {
+          "lanHealthDelta": 2
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LanSawHerStructure": true
+        }
+      }
+    ]
+  },
+  "ky3_17_dinh_chua_nha_tho": {
+    "id": "ky3_17_dinh_chua_nha_tho",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Đình, chùa và nhà thờ",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân tụ họp Hạ Ô Môn, Long Hải — ngày 17",
+    "companions": [
+      "nguyen_van_nhan"
+    ],
+    "narration": [
+      "Ngày mười bảy, sân đạo quán tiếp hai vị khách mà không ai ngờ có ngày ngồi chung một chiếu: ông từ Nguyễn Văn Nhân, người giữ đình làng mấy chục năm, ôm theo cuốn lịch việc đình đã sờn gáy; và Cha Phêrô An của nhà thờ xóm đạo, tới bằng lối cổng chính như mọi người khách. Cớ của buổi gặp rất cụ thể: một buổi phát kinh của đạo quán trùng giờ tế đình, trống sân môn át mất một đám tang của giáo dân ở xóm bên. Sinh hoạt cũ của làng đang bị cái mới chen vào, dù không ai cố ý.",
+      "Buổi gặp này do Tiểu Lan mời và sắp đặt, từ cuốn sổ ghi lịch lễ chùa làng mà nàng đã ghi sau buổi thăm của sư Trí Nhuận. Hai vị khách quyết tới vì nể việc dân, không phải vì sợ đạo quán. Bàn nước đặt ở thềm sân, không bày mâm cao cỗ đầy; đây là buổi nói chuyện của những người giữ việc làng, không phải tiệc.",
+      "Ông từ nói nỗi lo của đình làng bằng giọng của người giữ một chỗ tụ họp mấy chục năm. Đình không sợ đạo quán mạnh. Đình sợ trẻ làng quên đường tới sân đình. Lễ làng là chỗ người ta còn gặp nhau ngoài chợ và ngoài nợ nần. Nếu mọi việc lớn nhỏ đều dồn cả về sân đạo quán, làng còn lại cái tên mà mất chỗ ngồi lại với nhau.",
+      "Cha Phêrô An nói phần của người xóm đạo, ít lời mà thẳng. Giáo dân là thiểu số, quen sống kín. Từ ngày đạo quán mở, có người trong xóm đạo tới sân này chữa bệnh, về nhà rồi lại sợ mắc tội với đạo của mình. Cha tới để hỏi thẳng một điều duy nhất, thay cho những người không dám tới hỏi.",
+      "Câu hỏi ấy làm cả thềm sân lặng đi một nhịp, và Cao Minh, người từ đầu buổi chỉ ngồi nghe, lúc này mới lên tiếng nhận phần trả lời thuộc về chủ nhà. Lời của hắn ngắn và dứt khoát: phần thờ cúng, hắn không tranh với ai. Nỗi lo bị nuốt về tín ngưỡng, thứ hai vị khách mang tới như một gánh nặng, được gỡ xuống ngay tại thềm sân này.",
+      "Sau phần khó nhất, buổi gặp chuyển sang việc cụ thể nhất: lịch. Tiểu Lan trải ra tấm bảng lịch chung nàng đã soạn sẵn: ngày tế đình, ngày rằm và lệ chùa lấy từ sổ ghi chép của nàng, giờ lễ của nhà thờ, và những buổi lớn của đạo quán. Tất cả sắp xếp để không đè lên nhau. Ba bên tự giữ lễ của mình; tấm bảng chỉ để khỏi dẫm lên nhau.",
+      "Buổi gặp khép bằng một thỏa thuận thử một tháng, không văn tự trang trọng — chỉ là lời của ba bên nói trước mặt nhau. Ông từ ra về còn dặn một câu rất làng về ngày rằm tế đình sắp tới. Bốn nếp sinh hoạt — đình, chùa, nhà thờ và sân môn — vẫn chung một làng, và từ hôm nay, chúng có một tấm lịch chung."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Già tới hôm nay không phải để kiện cáo ai. Đình có lịch của đình, già mang theo đây. Nói ra một lần để hai bên biết nhau, khỏi dẫm lên nhau."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Tuần rồi buổi phát kinh bên này trùng giờ tế đình. Trống hai bên đánh một lượt, người làng đứng giữa sân không biết ngả về phía nào. Già thấy vậy không yên."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Già mang cuốn lịch việc đình theo đây, ngày nào việc nấy ghi đủ. Bên này coi qua một lượt thì biết làng này một năm bận những ngày nào."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Già giữ đình là giữ một chỗ cho làng ngồi lại với nhau. Mất chỗ ấy, làng tản ra, mạnh ai nấy sống."
+      },
+      {
+        "speaker": "Cha Phêrô An",
+        "text": "Tôi tới chào nhà này, và cũng mang theo giờ lễ của nhà thờ. Xóm đạo ít người, giờ lễ lại cố định, đổi không được. Tôi nói trước để khỏi phiền nhau về sau."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Đình không sợ bên này mạnh. Già sợ trẻ làng quên đường tới sân đình. Việc lớn việc nhỏ dồn cả về một sân, sân đình cỏ mọc, ấy mới là cái mất của làng."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Già không đòi cúng, không đòi quyền. Già chỉ đòi làng còn một chỗ tụ họp không phải để xin ai việc gì. Chỗ ấy là sân đình."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa ông từ, tôi hiểu ý ông. Bên này mở sân để dạy người ta thở và cho người ta nước, không hề muốn thay sân đình của làng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, việc trùng giờ tuần rồi là lỗi sắp xếp của chúng tôi. Tôi ghi nhận ở đây, để không lặp lại lần nữa."
+      },
+      {
+        "speaker": "Cha Phêrô An",
+        "text": "Tôi hỏi thẳng một điều, hỏi thay cho giáo dân của tôi. Người của nhà thờ tới đây chữa bệnh, học chữ — họ có phải bỏ điều gì, thề điều gì không?"
+      },
+      {
+        "speaker": "Cha Phêrô An",
+        "text": "Có người chữa khỏi rồi mà về nhà không ngủ được, vì sợ mắc tội với đạo của mình. Tôi cần một câu trả lời rõ để nói lại với họ."
+      },
+      {
+        "speaker": "Cha Phêrô An",
+        "text": "Nếu câu trả lời là không, xóm đạo yên tâm được một nửa. Nửa còn lại, để tháng ngày trả lời."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa cha, ở đây không ai phải thề điều gì để được chữa. Học chữ không ghi nợ, dùng nước không ghi nợ. Đó là lệ của nhà này từ ngày đầu."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cha hỏi thờ ai, thì bổn tọa trả lời thay cả sân này cho gọn: bổn tọa không cần ai thờ bổn tọa hết."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Thờ cúng phiền lắm. Nhang khói ám áo, lễ lạt tốn giờ uống rượu của bổn tọa. Ai thờ đình cứ thờ đình, ai đi chùa cứ đi chùa, ai giữ đạo cứ giữ đạo."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Sân này dạy thở, cho nước, chữa đau. Lòng tin của ai, bổn tọa không thu làm học phí."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa lập chỗ này vì chán, không phải để làm thần của ai. Thần của làng này có đủ cả rồi, chen vào làm gì cho chật."
+      },
+      {
+        "speaker": "Cha Phêrô An",
+        "text": "Vậy thì tôi mang câu ấy về nói với xóm đạo. Người bệnh của tôi từ nay tới chữa, lòng họ nhẹ được một nửa gánh. Cảm ơn ông chủ đã nói thẳng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi xin trình tấm lịch chung tôi đã soạn. Ngày tế đình, ngày rằm và lệ chùa theo sổ của chùa làng, giờ lễ nhà thờ theo lời cha, buổi lớn của đạo quán riêng một cột."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa hai vị, lịch này chỉ để tránh nhau, không phải để ai trị ai. Việc lớn của môn sẽ tránh giờ lễ của ba nơi. Ngược lại, làng báo trước ngày hội đình, môn nhường sân."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, bảng lịch tôi xin treo ở sân cho cả làng cùng xem. Ai cũng xem được thì không ai phải đoán ý ai nữa."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Ngày tế đình lớn nhất là rằm tháng này và lệ cuối năm. Già góp hai ngày ấy vào bảng."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Thử một tháng vậy đi. Được thì giữ, không được thì ngồi lại nói nữa. Người làng với nhau, nói được là còn làng."
+      },
+      {
+        "speaker": "Cha Phêrô An",
+        "text": "Nhà thờ góp giờ lễ sáng chủ nhật và hai ngày lễ lớn sắp tới. Ngày lễ lớn, nhà thờ báo trước một tuần, như bên đình vậy."
+      },
+      {
+        "speaker": "Cha Phêrô An",
+        "text": "Tôi nhận phần nhà thờ trong bảng lịch này. Ba nơi giữ lễ của mình, không ai quản ai — câu ấy tôi nói lại được với xóm đạo mà không sợ sai lời."
+      },
+      {
+        "speaker": "Nguyễn Văn Nhân",
+        "text": "Rằm này đình tế, già mời bên đạo quán tới xem như khách làng. Đứng xem hội, ăn miếng bánh của làng, vậy là quý nhau rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi ghi ngày tế đình vào bảng lịch ngay đây. Rằm này việc của môn dời sang buổi khác, sân nhường cho làng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đi xem hội làng thì bổn tọa đi. Có trống, có bánh, có người chen nhau — ấy là thứ vui bổn tọa chịu được. Còn lễ của ai, người ấy giữ, bổn tọa không chen."
+      }
+    ],
+    "choices": [
+      {
+        "id": "hang_the_shared_calendar",
+        "text": "Treo bảng lịch chung ở sân ngay hôm nay cho cả làng cùng xem — lịch của ai, người ấy giữ; bảng chỉ để tránh dẫm lên nhau.",
+        "next": "ky3_18_phuc_tho_ba_dien",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3ThreeFaithsTruce": true
+        }
+      },
+      {
+        "id": "keep_the_truce_in_words",
+        "text": "Giữ thỏa thuận ở mức lời nói giữa ba bên, chưa treo bảng — để làng tự quen dần với việc ba nơi ngồi lại được với nhau.",
+        "next": "ky3_18_phuc_tho_ba_dien",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3ThreeFaithsTruce": true
+        }
+      }
+    ]
+  },
+  "ky3_18_phuc_tho_ba_dien": {
+    "id": "ky3_18_phuc_tho_ba_dien",
+    "contentStatus": "approved",
+    "stageId": "vung_tau",
+    "title": "Ba diện người ở Phúc Thọ",
+    "backgroundId": "phuc-tho-tang-quan-yard",
+    "location": "Sân Phúc Thọ Tang Quán, Vũng Tàu — ngày 17",
+    "companions": [
+      "npc_porter"
+    ],
+    "narration": [
+      "Đoàn rời Long Hải ngay sau buổi thương lượng ở sân đạo quán, xuống ghe nhanh theo tuyến sông quen mà Bá Hòe vẫn chạy, nước xuôi và người chèo thay phiên không nghỉ tay. Ghe cập bến Phúc Thọ trong cùng ngày mười bảy, nắng chiều còn chưa tắt trên mái tang quán. Sân vẫn là sân lo việc chết: quan tài xếp dãy dọc tường, mùi gỗ mới và nhang cũ còn trong gió. Nhưng gian sau và góc sân đã khác hẳn từ chuyến trước: góc hạt gieo thử đã lên mầm xanh non, chỗ trú cho người được cứu đã thành nếp, có chiếu, có nồi nước nóng.",
+      "Cao Minh làm phần việc của hắn ngay khi bước vào sân, tiện tay như người ta đặt một món đồ xuống bàn. Hắn phất tay một cái, Tụ Linh Trận của phân đàn bật lên quanh sân tang quán: hơi ấm linh khí lan nhẹ qua gian sau, người ốm đang nằm thở đều lại. Từ nay sân này có linh khí giữ người ốm, giữ hạt, giữ yên tĩnh. Xong việc, hắn lùi ra, để sân lại cho người vận hành nó hằng ngày.",
+      "Hai người ấy là Trương Bá Hòe và Tạ Văn Độ, vẫn sống khỏe, vẫn giữ cái bến này bằng đúng cách cũ của họ. Bá Hòe giữ sổ, giữ sân, giữ phần chia việc. Văn Độ giữ đường ghe, đường tin và ca gác. Người được cứu ở gian sau đã coi hai người là người của sân này: có việc họ hỏi Bá Hòe, cần đi đâu họ hỏi Văn Độ.",
+      "Buổi chiều, Tiểu Lan đi cùng một nhóm người mới được cứu qua từng khu của sân, và nàng đọc tên cả ba diện người một cách tường minh, khu nào ra khu ấy. Khu thứ nhất dành cho người được truyền pháp: nhận ấn, học kinh, không bắt buộc nhập môn. Khu thứ hai dành cho đệ tử chính thức: tự nguyện ghi danh, có sinh hoạt và trách nhiệm trong một của sáu đường. Khu thứ ba dành cho người hưởng dụng không nhập môn: dùng linh tuyền, chữa bệnh, khiếu nại, trú lại — không cần tu.",
+      "Phần chọn diễn ra từng người một, không hô hào. Một người chọn khu truyền pháp. Một người ghi danh đệ tử chính thức, tự nói lý do của mình. Một người chọn hưởng dụng: trú và chữa cho khỏe rồi tính tiếp. Và một người chọn ra về hẳn — không ấn, không ghi danh — chỉ xin đi nhờ chuyến ghe gần nhất của Văn Độ về quê. Phần ra về ấy được xử đàng hoàng như mọi lựa chọn khác.",
+      "Bá Hòe ghi vào sổ của sân đúng một dòng cho người ra về: tự về, hai chữ, không thêm một lời nào. Văn Độ xếp cho anh ta chỗ trên chuyến ghe sáng mai, phần ăn đường được gói sẵn: cơm nắm, muối vừng, một chai nước. Không ai níu, không ai ghi nợ, không ai nhìn theo bằng mắt thương hại. Người ấy cảm ơn rồi quay vào gian sau nằm nghỉ chờ ghe.",
+      "Cuối ngày, phân đàn Phúc Thọ chính thức mở cửa theo cách của một cái bến: không lễ, không cắt băng. Bá Hòe treo tấm bảng gỗ ghi ba khu ở cổng sân. Ghe của Văn Độ rời bến chở người chọn về, gian sau lên đèn cho người chọn ở lại. Đoàn quay về Long Hải ngay tối ấy."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Trận đặt rồi. Sân này từ nay người sống nằm cũng yên như người chết nằm. Bổn tọa chỉ thêm cho nó một lớp yên nữa thôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa xong phần của bổn tọa. Còn lại là việc của người bến. Sân này ai giữ nấy biết, đừng ai chờ bổn tọa ở lại coi sân."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Việc thì tôi nhận, ghi vào sổ đàng hoàng. Ơn thì tôi không nhận — ở bến này, việc ra việc, ơn ra ơn."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Sân chia ba khu, tôi ghi rõ trong sổ: khu nào việc ấy, ca nào người ấy. Ai tới, cứ theo sổ mà làm."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Gian sau phần tôi giữ. Bếp và chiếu nằm, tôi chia ca theo người khỏe. Người mới khỏi thì trực nhẹ, người còn yếu thì nằm, không ai phải gượng."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Đường ghe và ca gác, tôi giao cho Văn Độ. Nó biết nước, biết giờ, biết người nào đưa tin được. Việc của ai, người ấy chịu phần ấy trước mặt tôi."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Sổ của sân này từ nay thêm một phần: sổ việc. Ai trú, ai chữa, ai học, ghi vào đó. Nợ nần không ghi trong sổ này."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Ghe về quê có chuyến sáng mai và chuyến chiều mốt. Ai muốn về thì nói trước một buổi để tôi giữ chỗ."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Đường tin đi theo ghe. Nhà ai cần gửi lời, cứ đưa tôi, tôi đi ngang đâu tôi ghé đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi xin đưa bà con qua từng khu cho rõ. Khu thứ nhất là khu của người được truyền pháp: nhận ấn, học kinh, không bắt buộc nhập môn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Khu thứ hai là của đệ tử chính thức: ai tự nguyện ghi danh thì có sinh hoạt, có trách nhiệm trong một của sáu đường. Không ai ghi thay cho ai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Khu thứ ba là khu của người hưởng dụng không nhập môn: dùng linh tuyền, chữa bệnh, có điều gì không phải thì khiếu nại, trú lại bao lâu cũng được — không cần tu, không cần thề."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Và tôi nói rõ phần này sau cùng: ai không chọn khu nào hết cũng không sao. Muốn về quê thì về. Sân này không giữ người, sân này chỉ mở cửa."
+      },
+      {
+        "speaker": "Người được cứu",
+        "text": "Cô cho tôi hỏi cho chắc: nhận ấn rồi, có bị gọi đi làm việc cho môn không? Ruộng nhà tôi còn chưa ai cày, tôi lo chuyện đó nhất."
+      },
+      {
+        "speaker": "Người được cứu",
+        "text": "Còn như không nhập môn, mai mốt đau lại, tôi tới chữa tiếp có được không? Hay phải ghi danh rồi mới được chữa?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, nhận ấn không phải nhận việc. Ấn là của anh, việc của môn là của người ghi danh. Còn chữa bệnh thì ai đau cũng được chữa, ghi danh hay không, ở đây không ai hỏi câu đó trước khi đưa thuốc."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi hỏi từng người một câu thôi: anh chị muốn ở khu nào — hay muốn về? Trả lời theo ý mình, không theo ý người ngồi cạnh."
+      },
+      {
+        "speaker": "Người chọn ra về",
+        "text": "Tôi về. Nhà tôi còn mẹ già với sào ruộng chưa ai cày. Người ta cứu tôi, tôi mang ơn, nhưng chỗ của tôi là ở nhà tôi."
+      },
+      {
+        "speaker": "Người chọn ra về",
+        "text": "Cho tôi đi nhờ chuyến ghe gần nhất. Tôi không nhận ấn, không ghi danh gì hết. Tôi về làm người của nhà tôi, vậy là đủ với tôi rồi."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Được. Sổ ghi một dòng: tự về. Không nợ nần gì ở sân này hết. Mai ghe đi, anh có mặt ở bến trước khi trời sáng hẳn là được."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Chỗ trên ghe sáng mai, tôi giữ cho anh ở khoang trước, gần chỗ để đồ ăn. Đi đường sông một ngày, anh mang theo phần cơm nắm này, đừng nhịn đói."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ba khu hay ba chục khu cũng vậy. Lệ của bổn tọa ở sân này có một dòng: không khu nào thu tiền, thu thề, thu người. Ai đọc không hiểu thì đọc lại."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Vào ra tự do. Người ta tới vì cần, đi vì xong. Sân nào giữ người làm bẫy, sân ấy bổn tọa đóng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, sổ của phân đàn tôi xin nói rõ: sổ này chỉ ghi việc — ai trú, ai chữa, ai học — để còn chăm nhau. Sổ không ghi nợ của ai. Bà con đừng sợ cuốn sổ này."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
+        "text": "Ngày đầu mở cửa, sổ ghi đủ: ba khu có người cả, một người tự về có ghe đưa. Sân này mở như bến mở. Xong một ngày."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, anh Hòe giữ lệ sổ việc cho khéo. Có gì khó, anh gửi tin theo đường của anh Độ về Long Hải."
+      }
+    ],
+    "choices": [
+      {
+        "id": "three_yards_one_rule",
+        "text": "Để ba khu vận hành theo đúng lệ đã nói hôm nay: chọn hay không chọn đều là người của sân này khi cần giúp.",
+        "next": "ky3_19_chua_khong_thu_le",
+        "effects": {
+          "civiliansSavedDelta": 2
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3PhucThoBranchOpened": true
+        }
+      },
+      {
+        "id": "let_the_ledger_stay_local",
+        "text": "Để sổ việc của phân đàn ở lại tay Bá Hòe, không sao về Long Hải — sân của bến thì bến giữ giấy.",
+        "next": "ky3_19_chua_khong_thu_le",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3PhucThoBranchOpened": true
+        }
+      }
+    ]
+  },
+  "ky3_19_chua_khong_thu_le": {
+    "id": "ky3_19_chua_khong_thu_le",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Cứu người không thu lời thề",
+    "backgroundId": "ha-o-spirit-spring",
+    "location": "Linh tuyền công cộng và Đan Đường, Long Hải — ngày 18",
+    "companions": [],
+    "narration": [
+      "Ngày mười tám, một gia nhân từng bị điều khiển được người nhà đưa tới linh tuyền. Cơn đau cũ còn ở lại trong thân anh ta như dư chứng của những ngày bị mạng mượn thân: tay run theo một nhịp lạ từng đợt, đêm ngủ không yên, giật mình giữa giấc. Dương Thất Nương khám trước mặt mọi người bằng cách của người làm nghề chữa lâu năm: hỏi đau ở đâu, đau theo nhịp nào, từ bao giờ.",
+      "Anh ta trả lời ngắt quãng, người nhà đứng bên thỉnh thoảng đỡ lời. Điều cả vùng đang lăn tăn, anh ta hỏi ra thành tiếng ngay trước khi việc chữa bắt đầu: chữa ở đây rồi, có phải thề nhập môn không, có bị ghi nợ vào sổ nào không. Đó là câu hỏi của một người đã bị người ta cầm lấy đời mình một lần, và không muốn ký thác đời mình thêm lần nữa khi chưa nghe rõ điều kiện.",
+      "Tiểu Lan trả lời thay cho cả đạo quán, và nàng nói trước khi bất kỳ viên đan nào được lấy ra khỏi hộp. Thứ tự ấy là quyết định của nàng: điều kiện-không-có phải được nói trước việc chữa, không phải chữa xong rồi mới trấn an. Dương Thất Nương ngồi bên, xác nhận bằng lệ của Đan Đường: trong toa của bà không có dòng nào tên là trung thành.",
+      "Việc chữa diễn ra ở linh tuyền: đan của Đan Đường, nước tuyền ấm, và thời gian. Cơn đau theo nhịp lạ rút dần từng đợt, bàn tay run của người bệnh lâu dần chỉ còn run khẽ ở đầu ngón. Việc chữa hôm nay chỉ gỡ đau và bồi bổ, đúng phần việc của nó. Giữa buổi, một đệ tử theo thói quen mới của môn cầm sổ tới, định ghi tên người bệnh vào danh sách chờ ghi danh. Cao Minh, ngồi xem từ đầu chưa nói một lời, xử việc ấy bằng đúng một câu.",
+      "Người bệnh ngủ được một giấc ngắn ngay tại chỗ — giấc ngủ đầu tiên không giật mình theo nhịp lạ. Tỉnh dậy, mắt anh ta trong hơn hẳn buổi sáng. Phía Đan Đường chỉ đưa ra đúng một lời mời thường: nếu muốn, anh có thể ở lại học nghề phụ việc; không muốn thì về. Lời mời được nói một lần, không ai nhắc lại lần hai, không ai đặt hạn trả lời. Khoảng nghĩ ấy được tôn trọng nguyên vẹn.",
+      "Rồi anh ta nói lời từ chối, rành mạch, không xin lỗi quá mức: anh đã bị người ta điều khiển đủ lâu rồi. Giờ khỏe lại, anh chỉ muốn về làm người thường của nhà mình, không muốn thuộc về thêm một nhà nào nữa, dù nhà ấy tốt. Một đệ tử buột miệng tiếc thay cho anh. Tiểu Lan bênh quyền từ chối ấy ngay tại chỗ, bằng giọng của người hiểu câu chuyện này từ bên trong. Không ai trong sân gọi tên sự giống nhau giữa câu chuyện của anh và của nàng; nàng cũng không tự ví mình.",
+      "Người bệnh ra về bằng cửa chính, giữa ban ngày, tay cầm một gói thuốc dặn dò thêm mấy ngày. Gói thuốc ghi cách dùng, không ghi điều kiện nào. Không ai ghi tên anh vào sổ nào ngoài sổ bệnh của Đan Đường. Tiểu Lan đứng nhìn theo một lúc, rồi quay lại với việc của buổi chiều: Đan Đường dọn dẹp, ca bệnh kế tiếp đã chờ ở hiên."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đau ở đâu, anh chỉ tay vào cho tôi. Đau theo nhịp nhanh hay chậm, từ bao giờ — nói đúng phần anh nhớ thôi."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Tay run từng đợt, đêm giật mình — tôi nghe rồi. Bệnh này chữa được phần đau. Mình chữa từng đợt một, không vội."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Người nhà đỡ anh ngồi dựa vào đây. Uống chén nước ấm trước, rồi tôi coi lại mạch một lần nữa."
+      },
+      {
+        "speaker": "Người bệnh",
+        "text": "Tay tôi… cứ tới cơn là nó run theo nhịp. Không phải tôi muốn run. Đêm ngủ, tôi giật mình hoài, như có ai gọi từ xa lắm."
+      },
+      {
+        "speaker": "Người bệnh",
+        "text": "Nó bắt đầu từ hồi tôi còn ở bên kia, bị người ta sai đi làm việc mà đầu tôi không biết. Thoát ra rồi, thân tôi còn nhớ nhịp cũ."
+      },
+      {
+        "speaker": "Người bệnh",
+        "text": "Tôi hỏi một câu trước, cô đừng giận: chữa ở đây rồi… tôi có phải thề nhập môn không? Có bị ghi nợ vào sổ nào của nhà này không?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa anh, tôi nói rõ trước khi chữa: ở đây không thu lời thề, không ghi nợ. Anh cứ chữa cho khỏe. Chuyện ở hay đi, khỏe rồi anh tự nói."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, lời này tôi nói thay cả nhà này, nói trước mặt mọi người ở sân này. Chữa xong, anh muốn về nhà mình thì về. Không một ai ở đây được giữ anh lại bằng ơn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh yên tâm nằm xuống chữa bệnh. Việc khỏe lại là việc của anh và của thầy thuốc. Việc thuộc về nhà nào, ở đây không ai tính vào toa thuốc hết."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Lệ Đan Đường của tôi có một dòng: toa thuốc không có dòng nào tên là trung thành. Anh uống thuốc của tôi, anh chỉ nợ tôi một tiếng đau nhiều hay ít, để tôi đổi toa."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Cô chủ nói trước vậy là phải lệ. Chữa người ta mà điều kiện nói sau, ấy là bẫy, không phải chữa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cất sổ đi. Người ta đang đau, không phải đang nộp đơn. Bổn tọa chữa người thì chữa, đừng biến giường bệnh thành bàn ghi danh trước mặt bổn tọa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ai bày ra cái thói cầm sổ đứng cạnh giường bệnh, lần sau đừng đứng ở sân này nữa. Bổn tọa nói một lần thôi."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Cơn đau rút một đợt rồi. Anh thở chậm lại, theo nhịp của mình. Đừng cố giữ hơi, cứ để nó tự về."
+      },
+      {
+        "speaker": "Người bệnh",
+        "text": "Tay tôi… bớt run rồi. Hồi nãy nó run cả bàn tay. Giờ… giờ còn ở đầu ngón thôi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, anh ngủ được một giấc là tốt. Tôi nói một lời mời, nói một lần thôi: nếu anh muốn, anh có thể ở lại học nghề phụ việc ở Đan Đường. Không muốn thì thôi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Không cần trả lời ngay. Anh về nhà nằm một đêm, nghĩ cho chín, rồi muốn sao cũng được. Ở đây không ai nhắc lại lời mời này lần thứ hai đâu."
+      },
+      {
+        "speaker": "Người bệnh",
+        "text": "Cảm ơn cô. Tôi muốn về nhà tôi nằm một đêm đã. Đầu tôi giờ mới yên, tôi cần biết tôi muốn gì khi không còn đau nữa, rồi tôi mới trả lời ai được."
+      },
+      {
+        "speaker": "Người bệnh",
+        "text": "Tôi nói thẳng, cô và bà thầy đừng buồn: tôi không nhập môn. Tôi bị người ta điều khiển đủ lâu rồi. Khỏe lại, tôi chỉ muốn làm người thường của nhà tôi thôi."
+      },
+      {
+        "speaker": "Người bệnh",
+        "text": "Nhà này tốt với tôi, tôi biết. Nhưng thuộc về một nhà nào nữa, dù tốt, tôi cũng sợ. Tôi về."
+      },
+      {
+        "speaker": "Đệ tử Đan Đường",
+        "text": "Chữa cho khỏe vậy mà không ở lại… uổng quá. Ở lại học nghề, sau này còn giúp được người khác nữa chứ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Không uổng. Khỏe rồi mà vẫn được nói không — ấy mới là phần của anh ấy. Ở đây, từ chối không phải là tội."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa bà, tôi nói câu này cho cả sân nghe: ai chữa ở đây xong cũng được ra về như anh ấy. Không ai phải xấu hổ vì mình chọn về nhà mình."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Việc của chúng ta là chữa cho người ta khỏe. Khỏe rồi, đời của người ta là của người ta."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Khỏi bệnh là xong việc của tôi. Ở hay đi không phải việc của tôi. Anh về, uống thuốc sau cơm, hết đau thì thôi, đừng quay lại cảm ơn làm gì cho mệt."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, anh cầm gói thuốc này. Uống sau cơm, ngày hai lần. Hết thì thôi, không cần quay lại. Có đau lại thì cứ tới cửa chính mà vào, như hôm nay."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Ca kế tiếp đâu, đưa vào đi. Nước tuyền còn ấm, đừng để người ta đợi lâu ở hiên."
+      }
+    ],
+    "choices": [
+      {
+        "id": "no_name_in_the_ledger",
+        "text": "Không ghi tên người bệnh vào bất kỳ sổ nào ngoài sổ bệnh của Đan Đường — anh ra về như một người thường, không phải một trường hợp.",
+        "next": "ky3_20_luu_ba_loc",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3RefusalHonored": true
+        }
+      },
+      {
+        "id": "her_word_stands_for_the_gate",
+        "text": "Để lời của Tiểu Lan hôm nay thành lệ nói tại cổng Đan Đường: chữa trước, thề thốt không bao giờ là điều kiện.",
+        "next": "ky3_20_luu_ba_loc",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3RefusalHonored": true
+        }
+      }
+    ]
+  },
+  "ky3_20_luu_ba_loc": {
+    "id": "ky3_20_luu_ba_loc",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Người đầu tiên phạm môn quy",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân tập Hạ Ô Môn, Long Hải — ngày thứ 18",
+    "companions": [],
+    "narration": [
+      "Ngày thứ mười tám, sân tập Hạ Ô Môn vừa tan buổi sớm thì việc xảy ra ngay ở mé sân, chỗ mấy gánh hàng của tiểu thương ghé bán cho đệ tử. Lưu Bá Lộc — đệ tử mới có chân khí chưa bao lâu — đứng chắn trước một gánh rau và khô cá, bàn tay đặt lên đầu đòn gánh. Hắn không lớn tiếng. Hắn chỉ vận một làn chân khí mỏng ép xuống, đủ cho đầu gánh trĩu hẳn sang một bên, đủ cho người bán hiểu rằng cái tay đang đè kia không phải tay người thường, và đủ cho mấy người đứng gần lặng lẽ né mắt đi nơi khác. Giá hắn đưa ra thấp hơn giá đã nói lúc sáng một nửa. Hắn nói một lần. Người bán chần chừ. Hắn nhắc lại lần hai, chậm hơn, và tay đè thêm một chút — gánh hàng kêu lên một tiếng gỗ khô. Việc cố ý đọc được rõ ràng ở lần nhắc thứ hai ấy: hắn biết mình đang làm gì, và hắn chọn làm tiếp.",
+      "Tiểu Lan tới nơi khi gánh hàng còn đang nghiêng. Nàng không đứng ra xử — xử không phải phần của nàng. Nàng ngồi xuống chiếc ghế thấp bên mé sân, mở cuốn sổ của Nhân Danh Đường, và xin người bán nói lại từ đầu cho nàng chép: hàng gì, bao nhiêu, giá đã nói là bao nhiêu, bị ép đổi ra sao. Nàng nói chậm lại đi, nàng chép kịp. Cái sân đang là chuyện mạnh yếu bỗng thành một việc có nhân chứng và có giấy. Lộc đứng bên, mặt khó chịu trông thấy — bị ghi lại là thứ hắn không tính trước, và sự khó chịu ấy cho thấy hắn hiểu rõ việc mình làm không đứng được trước mặt giấy.",
+      "Cao Minh tới sau cùng, đi ngang như người dạo qua sân, chén rượu còn trên tay. Không ai thỉnh hắn tới xử án. Hắn dừng lại vì gánh hàng nghiêng chắn lối đi của hắn, chỉ vậy thôi. Hắn hỏi ngắn và khô, từng câu một, nghe Lộc đáp, rồi nhắc lại đúng một câu của môn quy thứ ba — nhắc như nhắc một lệ cả sân đã nghe từ ngày khai tông, không cao giọng, không giảng thêm nửa chữ. Tống Nguyên Phúc đứng trong đám người xem từ đầu tới giờ, không nói gì, mắt không rời cuốn sổ trên tay Tiểu Lan.",
+      "Việc thi hành ngắn tới mức đám đông chưa kịp hiểu. Cao Minh đưa tay ra, gõ nhẹ một cái lên vai Lưu Bá Lộc — một cử chỉ nhỏ như phủi bụi áo cho người ta. Chân khí trong người Lộc tắt như ngọn đèn dầu bị thổi phụt. Không tiếng nổ, không nứt đất, không ai bị hất văng. Lộc khụy xuống nửa bước rồi đứng lại được, hai tay run lên trông thấy, mặt trắng ra: lần đầu tiên trong buổi sáng ấy, hắn sợ như một người phàm đứng giữa sân tập của những người còn chân khí. Cao Minh đã quay đi trước khi tiếng xì xào đầu tiên nổi lên. Hắn không ở lại nhận cảm ơn, cũng không ở lại nghe van xin.",
+      "Việc phàm còn lại chạy sau đó, lặng lẽ và đàng hoàng. Gánh hàng được dựng lại ngay ngắn. Phần tiền thiếu được bù từ túi của chính Lộc — xâu tiền của hắn được tháo ra đếm ngay tại chỗ, hàng trả đủ về gánh, tiền trả đúng giá đã nói lúc sáng. Đó là việc phàm đi kèm, không ai gọi nó là hình phạt thay cho việc vừa rồi. Tiểu Lan đọc lại nguyên văn lời khai nàng vừa chép cho người bán nghe, hỏi còn thiếu chữ nào không. Người bán nghe hết, gật đầu, tự mình xác nhận từng khoản, còn tự tay lật lại mấy bó rau bị đè giập lúc sáng mà xếp lại cho ngay ngắn. Rồi anh ta gánh hàng lên vai, đi ra khỏi sân bằng cửa chính, không quỳ, không lạy ai. Lộc ngồi lại trên chiếc ghế thấp ở mé sân, hai tay đặt trên gối, giữa tiếng đệ tử tập buổi trưa bắt đầu vọng lại — một người thường ngồi giữa sân của người có chân khí.",
+      "Đám đông tản hết. Tống Nguyên Phúc mới lên tiếng, nói với Tiểu Lan bằng giọng của người làm giấy tờ vừa tìm thấy một lỗ hổng trong sổ sách. Theo hắn, buổi sáng nay cho thấy một điều rất rõ về quản lý. Tiểu Lan nghe, không tranh luận một câu. Nàng lật sang trang mới của cuốn sổ, chép lại cả lời của Tống, nguyên văn, như chép mọi lời khai khác trong ngày."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Lưu Bá Lộc",
+        "text": "Giá này. Gánh rau với mớ khô cá, để lại đây. Anh bán cho ai cũng vậy, bán cho người của môn thì tính giá này cho biết điều."
+      },
+      {
+        "speaker": "Lưu Bá Lộc",
+        "text": "Tôi nói lần nữa cho rõ: để hàng xuống. Tay tôi đè chừng nào, gánh của anh còn nghiêng chừng đó. Anh chần chừ là tự làm khó mình."
+      },
+      {
+        "speaker": "Người bán hàng",
+        "text": "Thưa cậu, giá này là giá tôi nói hồi sáng, cả chợ đều nghe. Cậu trả một nửa, tôi gánh về là lỗ cả vốn. Xin cậu nghĩ lại cho."
+      },
+      {
+        "speaker": "Người bán hàng",
+        "text": "Tôi bán buôn nhỏ, lời lãi tính từng đồng. Cậu đè gánh như vậy, tôi không dám bỏ xuống, mà bỏ xuống thì nhà tôi mất bữa chợ này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa anh, anh nói chậm lại cho tôi chép kịp. Hàng gì, mấy cân, giá đã nói bao nhiêu — anh nói từ đầu, tôi ghi đúng lời anh."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh cứ nói phần của anh. Giấy này ghi lời người bị ép, không ghi lời ai khác chen vào. Nói xong tôi đọc lại cho anh nghe."
+      },
+      {
+        "speaker": "Người bán hàng",
+        "text": "Cô ghi cho tôi: rau hai bó, khô cá một mớ, giá nói từ sáng là giá chợ. Cậu đây đè tay lên gánh, biểu tôi giao theo nửa giá."
+      },
+      {
+        "speaker": "Lưu Bá Lộc",
+        "text": "Ghi gì mà ghi. Pháp tôi học được là của tôi. Người của môn lấy chút hàng của anh mà cũng thành việc phải chép sổ sao?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hàng của ai? Tiền đâu? Tay ngươi vừa làm gì trên cái gánh đó? Ba câu, đáp ngắn."
+      },
+      {
+        "speaker": "Lưu Bá Lộc",
+        "text": "Thưa Đạo Tổ, hàng của anh ta, mà anh ta lì, người khác ở sân này cũng vẫn lấy vậy thôi. Công pháp tôi đã học, dùng một chút thì có sao."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa ngài, lời khai đã ghi khớp việc tôi vừa nghe tận tai: đè gánh hai lần, nhắc giá hai lần. Giấy ở đây, không thiếu chữ nào."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Môn quy thứ ba, ngươi nghe từ ngày vào môn: học được là của ngươi, đạp kẻ yếu thì bổn tọa tự tay phế. Ngươi tự chọn phần sau."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Xong. Từ nay ngươi là người thường. Muốn sống thì đi làm như người thường. Việc của ngươi với bổn tọa, tới đây hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa anh, tôi đọc lại lời khai cho anh nghe đây. Anh nghe cho kỹ, chỗ nào không đúng lời anh, anh nói ngay, tôi sửa trước mặt anh."
+      },
+      {
+        "speaker": "Người bán hàng",
+        "text": "Đúng hết, thưa cô. Hàng tôi nhận lại đủ, tiền đúng giá sáng. Lời tôi nói nằm trong sổ của cô, vậy là tôi yên bụng gánh về rồi."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa cô, tôi nói một điều quản lý: lỗi sáng nay không nằm ở tay cậu Lộc. Lỗi nằm ở chỗ ai cũng được học, ai học xong cũng được dùng tùy ý."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Việc này muốn hết, phải có giấy phép. Xét trước ai được nhận pháp, ai được dùng sức mạnh, có giấy mới hợp lệ. Không giấy, không được dùng."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi ghi ý này vào phần việc của tôi. Sân đông người, không có phép tắc giấy tờ đi trước, chuyện như sáng nay sẽ còn xảy ra nữa."
+      }
+    ],
+    "choices": [
+      {
+        "id": "keep_the_testimony",
+        "text": "Giữ lời khai của tiểu thương làm hồ sơ đầu tiên của loại việc này — giấy ở lại với người bị hại một bản, môn một bản.",
+        "next": "ky3_21_thay_lang_mat_khach",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3ThirdRuleEnforced": true
+        }
+      },
+      {
+        "id": "see_the_merchant_home",
+        "text": "Tiễn tiểu thương ra khỏi sân, hàng trả đủ tận tay rồi mới quay lại — việc của người yếu xong trước việc của môn.",
+        "next": "ky3_21_thay_lang_mat_khach",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3ThirdRuleEnforced": true
+        }
+      }
+    ]
+  },
+  "ky3_21_thay_lang_mat_khach": {
+    "id": "ky3_21_thay_lang_mat_khach",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Thầy lang mất khách",
+    "backgroundId": "ha-o-spirit-spring",
+    "location": "Đan Đường bên linh tuyền, Long Hải — ngày 19",
+    "companions": [],
+    "narration": [
+      "Ngày mười chín, thầy lang Tạ Hữu Lộc tới Đan Đường. Ông là người chữa bệnh bằng thuốc nam cho cả vùng này từ trước khi có đạo quán: hòm thuốc gỗ, cân tiểu ly, mấy chục năm biết mặt từng nhà. Ông tới ngẩng đầu, nói thẳng việc của mình bằng giọng người thợ già giữ thể diện. Khách của ông đã chuyển sang Đan Đường gần hết. Ông tới để nhìn tận mắt thứ đang lấy mất nghề của mình, trước khi về đóng cửa tiệm thuốc.",
+      "Tiểu Lan tiếp ông như tiếp một người làm nghề tiền bối, không như một ca khiếu nại. Ông được mời vào trong, xem Đan Đường làm việc như người trong nghề xem nhau: kệ thuốc, bếp sắc, sổ bệnh, hàng đan người ta mang tới nhờ bán ké để ở góc ngoài. Ông đi chậm, tay chắp sau lưng, mắt của một người bốc thuốc mấy chục năm quét qua từng thứ, không vội khen chê điều gì.",
+      "Rồi con mắt ấy dừng lại. Trong một mẻ hàng đan người ta mang tới nhờ bán ké, ông cúi xuống, cầm một viên lên ngửi, bẻ đôi một viên khác xem ruột, và chỉ ra từng dấu hiệu không phải hàng thật: mùi thơm gắt, vỏ sậm đều như nhuộm, ruột xốp không kết. Ông nói như dạy học trò, từng dấu một, không cao giọng. Dương Thất Nương tự tay kiểm lại trước mặt mọi người — và nhận ông nói đúng. Phẩm giá của người thợ cũ, buổi sáng hôm ấy, được khóa bằng chính tay nghề của ông.",
+      "Cuộc nói chuyện sau đó là cuộc đối diện của hai phía nghề chữa. Đan Đường có đan thật, nước tuyền và tốc độ — những thứ một tiệm thuốc nam không đua nổi. Nhưng Đan Đường không có mấy chục năm biết mặt từng nhà trong vùng. Tiểu Lan nghe cả hai phía, và nàng là người nhìn ra phần việc còn đang trống: hàng giả đã bắt đầu len vào vùng này, mà chưa có ai chuyên lo việc nhận diện nó cho dân.",
+      "Lời đề nghị, khi tới, là do Tiểu Lan nói ra. Nàng mời Tạ Hữu Lộc học cách nhận diện đan thật giả của Đan Đường — học thứ ông chưa biết — để làm người kiểm thuốc độc lập cho cả vùng. Hàng qua tay ông thì dân tin, kể cả hàng của chính Đan Đường. Điều kiện nàng nói rõ theo lệ đã thành của nhà này: không cần nhập môn, không thề; ông giữ tiệm của ông, giữ tên của ông. Đây là một nghề mới đặt lên trên nghề cũ của ông, không phải sự thu nạp một người thợ hết thời.",
+      "Ông chưa đáp ngay. Ông hỏi lại đúng một điều, một câu sắc như lưỡi dao cạo thuốc: nếu một ngày ông nói hàng của Đan Đường là giả, thì ai nghe ông. Cao Minh ghé Đan Đường đúng lúc ấy, nghe hết câu hỏi, và đáp thay cho cả môn bằng một câu tùy tiện mà là quyết định. Nghe xong câu ấy, Tạ Hữu Lộc nhận lời thử một tháng. Hòm thuốc cũ của ông vẫn để nguyên bên cạnh, không ai bắt nghề cũ phải chết để nghề mới được sống.",
+      "Chiều ấy, tiệm thuốc của Tạ Hữu Lộc không đóng cửa như ông đã định buổi sáng. Bảng hiệu cũ vẫn treo, một người khách cũ ghé ngang được ông dặn: thuốc lạ thì mang qua ông xem trước khi uống. Từ tuần sau, những buổi học nhận diện đan bắt đầu ở Đan Đường. Một ông thầy lang già, một hòm thuốc cũ, một con mắt còn tinh."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Tôi là Tạ Hữu Lộc, bốc thuốc ở đầu chợ mấy chục năm nay. Khách của tôi dạo này qua bên này gần hết, tôi tới nhìn tận mắt thứ đang lấy mất nghề của tôi."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Nhìn xong, tôi về đóng cửa tiệm cũng đàng hoàng. Người làm nghề, thua nghề khác thì nhận, nhưng phải biết mình thua ở cái gì."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Cô đừng tiếp tôi như khách tới khiếu nại. Tôi là người cùng nghề tới xem nghề. Cho tôi đi một vòng, coi kệ thuốc của bên này làm ăn ra sao."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa ông, ông cứ vào xem như người trong nghề. Đan Đường của chúng tôi còn trẻ, ông xem có chỗ nào chưa phải, ông cứ nói thẳng, chúng tôi ghi nhận."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Khoan. Mấy viên này, để tôi coi lại. Mùi thơm này gắt quá — thuốc phơi đúng nắng thơm dịu, thơm gắt vầy là thơm dội lên sau."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Vỏ sậm đều một màu như nhuộm, ruột bẻ ra xốp không kết. Hàng thiệt, vỏ có chỗ đậm chỗ nhạt như da người. Mẻ này không phải hàng thiệt."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Tôi bốc thuốc mấy chục năm, tay tôi sờ vỏ thuốc như sờ mặt người quen. Giả thiệt qua tay tôi, nó không giấu được lâu."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Để tôi kiểm lại… Ông nói đúng. Vỏ nhuộm, ruột xốp. Mẻ này Đan Đường không bán, trả về tận tay người gửi, và ghi lại mặt hàng này vào sổ hàng lạ."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Con mắt của ông, bên này không có người thứ hai. Tôi nhận điều đó trước mặt ông, không cần vòng vo."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đan Đường mạnh về đan và nước tuyền, nhưng hàng giả lẫn vào chợ thuốc thì bên này thiếu người coi. Hàng qua nhiều tay quá, mắt người của Đan Đường đuổi không kịp."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Còn biết mặt từng nhà, biết ai giấu bệnh, biết trẻ nào sợ đắng — phần ấy bên này thua ông mấy chục năm. Đan mạnh cách mấy cũng không mua được cái đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa ông, tôi hỏi một câu: một người nhận ra thuốc giả bằng mắt như ông, cả vùng này còn ai làm được nữa không?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, hàng giả đã len vào chợ thuốc vùng này rồi. Dân không biết coi, mua về uống vào mới hay. Việc nhận diện ấy, Đan Đường đang trống người."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi nói cho trọn: tôi mời ông học cách nhận diện đan thật giả của Đan Đường. Đan tiên khác thuốc nam ở đâu, dấu giả nằm ở đâu, bên này dạy ông đủ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa ông, học xong, ông làm người kiểm thuốc độc lập cho cả vùng. Hàng qua tay ông thì dân tin — kể cả hàng của chính Đan Đường này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Điều kiện tôi nói rõ: ông không cần nhập môn, không cần thề. Ông giữ tiệm của ông, giữ tên của ông. Việc kiểm thuốc là việc thêm vào nghề của ông, không phải việc thu tiệm của ông vào nhà này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, ông cứ nghĩ. Lời mời này không có hạn. Ông về suy nghĩ bao lâu cũng được, nghĩ xong qua nói một tiếng là đủ."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Cô nói nghe êm tai lắm. Nhưng tôi hỏi thẳng một câu: một ngày kia tôi nói hàng của Đan Đường này là giả — thì ai nghe tôi?"
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Người kiểm mà không được nói ngược nhà mình kiểm, ấy là kiểm giả. Tôi già rồi, tôi không làm nghề giả nữa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ai nói đúng thì nghe. Hàng của bổn tọa mà giả, ông cứ nói là giả, nói trước mặt bổn tọa càng vui."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa quyết vậy. Ông kiểm cho cả vùng này, kiểm luôn nhà này. Đứa nào trong môn này dám bịt miệng ông, nó tự tới gặp bổn tọa mà giải thích."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Có câu đó, tôi nhận. Thử một tháng. Học được thì tôi làm, không hợp thì tôi về tiệm của tôi."
+      },
+      {
+        "speaker": "Thầy thuốc",
+        "text": "Anh kia, thuốc lạ thì đừng uống vội. Mang qua tiệm tôi xem trước một lượt, rồi uống."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi ghi việc mới này vào sổ việc của Đan Đường: ông Tạ Hữu Lộc, người kiểm thuốc độc lập của vùng, bắt đầu học từ tuần sau, không nhập môn, không thề."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Buổi đầu, tôi hẹn ông sáng thứ hai, ở bếp sắc. Tôi dạy ông coi ruột đan, ông dạy lại tôi coi vỏ thuốc nam. Hai nghề học nhau, vậy mới công bằng."
+      }
+    ],
+    "choices": [
+      {
+        "id": "an_independent_checker",
+        "text": "Ghi việc của Tạ Hữu Lộc vào sổ Đan Đường với đúng tư cách độc lập: ông kiểm cả hàng của môn, lời của ông không qua ai duyệt.",
+        "next": "ky3_22_net_tran_cua_bong",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3HerbalistRecruited": true
+        }
+      },
+      {
+        "id": "his_shop_keeps_its_sign",
+        "text": "Để tiệm thuốc cũ của ông giữ nguyên bảng hiệu và khách cũ — việc kiểm thuốc là việc thêm vào, không phải sáp nhập.",
+        "next": "ky3_22_net_tran_cua_bong",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3HerbalistRecruited": true
+        }
+      }
+    ]
+  },
+  "ky3_22_net_tran_cua_bong": {
+    "id": "ky3_22_net_tran_cua_bong",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Trận văn trên nền đất",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân tụ họp Hạ Ô Môn, Long Hải — ngày 19",
+    "companions": [],
+    "narration": [
+      "Góc sân đạo quán, giờ chơi của trẻ con. Nguyễn Bông, mười một tuổi, trẻ làng tới học chữ ở kinh lâu, ngồi xổm trên nền đất với một que củi cháy dở làm bút. Em vẽ những vòng tròn và những nét nối giống trận văn em thấy người lớn vẽ, mà theo lối của một trò chơi: vừa vẽ vừa tự đặt luật chơi. Bé Sáu ngồi cạnh, giữ phần việc của mình trong trò chơi ấy — đếm nhịp cho bạn vẽ, đưa que khi que của bạn mòn, và giữ một nắm sỏi tròn làm chốt trận. Tình bạn của hai em hiện ra bằng việc làm chung, không cần ai giới thiệu.",
+      "Một người lớn của đạo quán đi ngang, thấy hai em nghịch đất ngay góc sân, buột miệng định gọi các em vào làm việc vặt và dẹp trò chơi đi cho sân được nghiêm. Tiểu Lan đi tới đúng lúc và chặn lại. Giờ này là giờ chơi của trẻ; sân này có giờ học, giờ làm, và giờ chơi cũng là một giờ có lệ. Nàng ngồi lại xem hai em vẽ như một khán giả đàng hoàng, ở mép ngoài của hình vẽ. Sự có mặt của nàng ở đó là để trò chơi được yên.",
+      "Phan Bảy Nện, trưởng đường Khí Trận, đi ngang góc sân, liếc qua hình vẽ đất — rồi dừng lại thật. Trong cách Bông nối hai vòng trận có một nét nối chéo không đúng lối người lớn vẫn dạy. Mà nhìn kỹ, nét ấy làm dòng khí của một trận nhỏ đỡ rối ở đúng chỗ vẫn hay rối nhất: chỗ hai vòng giao nhau, nơi khí của vòng này vẫn va vào khí của vòng kia. Bảy Nện ngồi xổm xuống nền đất, ngang tầm hai đứa trẻ — người lớn đầu tiên trong buổi chiều ấy ngồi xuống đất — và hỏi Bông vì sao em nối như thế.",
+      "Bông trả lời bằng lý lẽ của trò chơi và của mương nước sau nhà em: nối thẳng thì nước bị kẹt ở góc, nối chéo thì nước lách qua được. Bảy Nện không cười. Ông thử ngay nét nối ấy lên một trận nhỏ thật ở mép sân — trận giữ ấm và đuổi muỗi cho góc lớp học, một việc vặt đúng tầm của sân này. Nét của Bông dùng được: trận chạy êm hơn một bậc, tiếng rít khẽ ở chỗ giao vòng biến mất. Khí Trận Đường nhận cải tiến ấy đàng hoàng mà nhỏ nhẹ: tên của Bông được ghi vào bảng việc của đường như người góp mẹo. Không lễ, không thưởng lớn, không ai gọi em là thần đồng.",
+      "Cao Minh đi ngang góc sân lúc chiều đã ngả, liếc hình vẽ đất của hai em một cái. Hắn làm một việc tùy tiện đúng tầm buổi chiều ấy: đầu ngón tay chạm nhẹ xuống mép hình vẽ, và hình vẽ đất thành một pháp khí nhỏ — một trận đồ chơi giữ được hình qua mưa nhỏ, chạy được trò nước không kẹt của Bông cho hai em chơi tiếp ngày mai. Hắn không nâng nó thành trận lớn, không giảng vì sao nét nối ấy hay. Hắn chỉ để trò chơi ấy bền hơn một chút, rồi đi tiếp.",
+      "Chiều xuống, hai em hẹn nhau mai vẽ tiếp. Bông còn một ý nối khác chưa thử. Bé Sáu nhận phần đếm và giữ sỏi cho ngày mai, nói rõ ràng hơn những ngày đầu em tới vùng đất này. Người lớn đi qua góc sân giờ đã quen với việc ở đó có một hình vẽ đất không ai được quét đi bừa. Một tình bạn mới, một mẹo trận nhỏ có tên người góp, một món đồ chơi bền hơn mưa — sức mạnh của hắn đã lan ra đời thường thêm một nấc, và nấc ấy là sân chơi của hai đứa trẻ."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Nguyễn Bông",
+        "text": "Nghe luật nè: vòng lớn là sân nhà, vòng nhỏ là cái giếng. Nét nối là đường nước. Nước kẹt vòng nào, vòng đó thua."
+      },
+      {
+        "speaker": "Nguyễn Bông",
+        "text": "Sáu đếm nhịp cho tui. Tui vẽ tới đâu, Sáu đếm tới đó. Đếm trật là tui biết tay tui đi nhanh hơn đầu tui rồi."
+      },
+      {
+        "speaker": "Nguyễn Bông",
+        "text": "Đó, vòng thứ ba xong rồi. Mai tui vẽ thêm cái vòng ngoài nữa, cho nước nó đi xa hơn. Vẽ đất vậy mà vui hơn học chữ, mà đừng nói thầy nghe."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Một… hai… ba… Bông vẽ chậm lại chút. Tay Bông nhanh hơn đếm của con rồi đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Chào hai em. Tôi đi ngang thôi, hai em cứ chơi phần của mình. Đất này hôm nay là của hai em, không ai giành đâu."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Để các em chơi. Giờ này là giờ chơi của trẻ, sân này có lệ của nó: giờ học ra giờ học, giờ chơi ra giờ chơi. Việc vặt, để người lớn tự chia nhau."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Em vẽ đường nước nối hai vòng này cho tôi xem với. Tôi ngồi ngoài này coi như khán giả, không chen vào luật của hai em đâu."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi nói rõ luôn: mẹo này ghi vào bảng việc của đường, ghi tên em Bông góp mẹo — vậy thôi. Không lễ, không thưởng lớn, không ai gọi em là thần đồng trước mặt dân."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, phần ghi công tới đó là vừa. Em Bông vẫn là đứa trẻ tới đây học chữ và chơi đất, buổi chiều của em không vì một mẹo hay mà thành việc của người lớn."
+      },
+      {
+        "speaker": "Nguyễn Bông",
+        "text": "Cô coi nè: nét này nối xéo qua. Nối thẳng thì nó kẹt ở góc này, tui thử ba lần rồi, lần nào cũng kẹt."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ừ, tôi thấy rồi. Em được biết mẹo của mình có ích cho người lớn — vậy là đủ vui cho một buổi chiều. Giờ em quay lại chơi tiếp đi, phần ghi chép để người lớn lo."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Khoan, để tui coi lại nét này. Cháu nối chéo qua chỗ giao vòng — người lớn không ai dạy nối vậy. Cháu nói tui nghe, sao cháu nối vậy?"
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Chỗ giao vòng là chỗ trận nhỏ của tui vẫn rít khẽ, chữa hoài không hết, tui cứ tưởng tại đất sân này ẩm. Hóa ra tại nét nối của tui đi thẳng quá."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Để tui thử lên trận giữ ấm ở mép sân kia. Nếu chạy êm, Khí Trận Đường ghi công cho cháu đàng hoàng, như ghi công một người thợ góp mẹo."
+      },
+      {
+        "speaker": "Nguyễn Bông",
+        "text": "Tại tui thấy nó như mương nước sau nhà tui. Nước đi thẳng vô góc là nó kẹt, nó tràn. Cho nó đi xéo, nó lách qua được. Trận này cũng vậy thôi, nó kẹt là nó rít."
+      },
+      {
+        "speaker": "Nguyễn Bông",
+        "text": "Chú thử đi. Hư thì tui vẽ lại kiểu khác. Đất này vẽ hư xóa dễ lắm, lấy chân chà một cái là xong."
+      },
+      {
+        "speaker": "Nguyễn Bông",
+        "text": "Nó hết rít rồi kìa! Mẹo của tui chạy được thiệt! Chú ghi tên tui vô bảng thiệt hả chú? Ghi nhỏ nhỏ thôi, đừng ghi lớn, người ta cười tui."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Vẽ trên đất mà đòi bền thì bổn tọa cho nó bền một mùa mưa. Đồ chơi của hai đứa, bổn tọa giữ hình cho, đừng làm to chuyện."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Chơi tiếp đi. Bổn tọa đi ngang thấy trò hay thì để nó lại. Mai mưa nhỏ mà hình còn, ấy là phần của bổn tọa. Phần vẽ hay là của hai đứa."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Bông, hình nó không trôi nữa đâu. Mai mình vẽ tiếp chỗ này, khỏi vẽ lại từ đầu. Hay quá."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Mai Bông tới sớm nha. Con giữ sỏi cho Bông, con đếm không trật nữa đâu. Con tập đếm ở nhà rồi."
+      },
+      {
+        "speaker": "Bé Sáu",
+        "text": "Hình còn tới mai thiệt nè. Mưa nhỏ không trôi được nó nữa. Mai mình vẽ vòng ngoài, Bông hứa rồi đó."
+      },
+      {
+        "speaker": "Nguyễn Bông",
+        "text": "Ừ, mai tui tới sớm. Tui nghĩ ra đường nối mới rồi, để trong đầu nè. Mai tui vẽ, Sáu đếm. Đừng quên mang sỏi của Sáu theo."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Hai em về ăn cơm đi. Hình vẽ này để yên ở góc sân, tôi dặn người quét sân tránh chỗ này ra. Mai hai em lại có đất sạch mà vẽ tiếp."
+      }
+    ],
+    "choices": [
+      {
+        "id": "keep_the_drawing_in_the_yard",
+        "text": "Để hình vẽ đất ở lại góc sân, có biển nhỏ của Khí Trận Đường ghi tên người góp mẹo — trẻ con đi ngang được xem và vẽ theo.",
+        "next": "ky3_23_mot_nha_hai_duong",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3ChildArrayImproved": true
+        }
+      },
+      {
+        "id": "the_game_stays_a_game",
+        "text": "Chỉ ghi mẹo vào sổ việc của Khí Trận Đường, còn hình vẽ để hai em tự giữ như một trò chơi — mai chúng muốn xóa vẽ lại cũng được.",
+        "next": "ky3_23_mot_nha_hai_duong",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3ChildArrayImproved": true
+        }
+      }
+    ]
+  },
+  "ky3_23_mot_nha_hai_duong": {
+    "id": "ky3_23_mot_nha_hai_duong",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Một nhà, hai con đường",
+    "backgroundId": "long-hai-exterior",
+    "location": "Hiên/sân một mái nhà trong làng thuộc Long Hải — ngày 19",
+    "companions": [],
+    "narration": [
+      "Chiều ngày mười chín, Tiểu Lan tới một mái nhà trong làng thuộc Long Hải theo việc của Nhân Danh Đường: nhà này có người ghi danh mà hồ sơ còn vướng một khoản của nhà họ Hứa. Mâm cơm đã dọn ra hiên nhà mà không ai ăn. Người mẹ ngồi đầu mâm, đôi đũa chưa gắp lần nào. Hai người con ngồi hai phía của mâm như hai bờ của một con rạch, khoảng giữa là nồi cơm còn bốc khói và một khoảng im lặng kéo dài từ trước khi khách tới.",
+      "Nàng được mời vào với tư cách khách ghi việc của đạo quán. Không ai trong nhà này biết nàng là ai ngoài cái vai ấy. Tiểu Lan quyết ngồi xuống ở lại nghe, thay vì ghi việc xong rồi đi ngay: việc giấy chờ được, mâm cơm này thì không.",
+      "Nguyên nhân chia nhà được phơi ra bằng đời thường. Người anh đã nhập môn Hạ Ô, không còn nhận việc của nhà họ Hứa. Người em còn làm cho nhà họ Hứa — đồng lương ấy đang nuôi căn nhà này. Phía người anh: làm cho Hứa là làm cho cái nhà đã đè làng này bao nhiêu năm. Phía người em: nhà này hôm nay phải có gạo, và gạo không ăn được bằng lập trường. Cả hai phía đều có phần đúng của mình. Người mẹ ở giữa, gắp thức ăn bỏ vào chén cả hai đứa.",
+      {
+        "text": "Trước khi vào lại mâm cơm, Tiểu Lan ghé ra đầu hiên nghe phần thông tin nền nàng cần. Thu Nguyệt đi cùng nàng chuyến này, và phần nàng mang tới là phần chứng kiến của chính nàng: mâu thuẫn của nhà này đã nổ ra ở cổng sân hôm trước. Nàng thuật lại thấy gì nói nấy, không đứng về phe nào.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "text": "Trước khi vào lại mâm cơm, Tiểu Lan ghé ra đầu hiên nghe phần thông tin nền nàng cần. Phần thông tin ấy, hôm nay, do Đỗ Thị Hạnh của Nhân Danh Đường mang tới: hồ sơ ghi danh và phần việc nàng đã xác minh ở làng, khoản nào ra khoản ấy. Tiểu Lan nghe hết, hỏi lại một dữ kiện cho chắc, rồi quay vào hiên.",
+        "unless": "thuNguyetFollows"
+      },
+      "Giữa lúc cãi cọ, câu chuyện trong nhà quay sang một cái tên: cô Tiểu Lan bên đạo quán — người cả nhà này chỉ biết qua tin đồn. Ba phiên bản của cùng một cái tên, không phiên bản nào là người đang ngồi ngay trong hiên nhà này.",
+      "Tiểu Lan nghe hết, không đính chính một chữ, không lộ thân phận. Chỉ một câu của nàng — tôi đây — là đủ thắng cuộc cãi trong nhà này. Nàng không nói câu ấy. Cái tên của nàng đã thành tài sản của thiên hạ, mỗi người giữ một bản, và bản nào cũng thiếu mất người thật.",
+      "Khi nàng lên tiếng, nàng vẫn nói trong vai người của Nhân Danh Đường — không phép, không quyền uy nào ngoài sự rõ ràng. Nàng đặt lại từng người vào đúng quyền của họ, và gỡ cái khung ép chọn đang đè cả nhà.",
+      "Quyết định cuối thuộc về gia đình, không thuộc về nàng. Mâm cơm vẫn dọn chung một mâm ở hiên nhà. Việc ai nấy giữ; phần gánh trong nhà chia lại bằng lời của người mẹ. Không ai đổi đường trong buổi chiều này, và đó chính là kết quả. Tiểu Lan ghi việc xong, cáo từ như một người khách bình thường, để nguyên ba phiên bản tin đồn về cái tên của nàng khi bước ra khỏi sân."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Người mẹ",
+        "text": "Cô ngồi xuống hiên này ăn với nhà tôi một chén đã. Việc giấy ghi sau cũng được, cơm nguội thì không ai ăn nổi. Nhà tôi bữa nay hơi nhiều chuyện, cô đừng chấp."
+      },
+      {
+        "speaker": "Người mẹ",
+        "text": "Hai đứa nó cãi nhau từ trưa tới giờ, cô à. Mâm cơm dọn ra mà không đứa nào chịu gắp trước. Tôi ngồi giữa, mệt mà không biết bênh ai."
+      },
+      {
+        "speaker": "Người anh",
+        "text": "Việc nhà này, nói ra thì dài. Tôi chỉ nói một nửa thôi: tôi không còn làm cho nhà họ Hứa nữa…"
+      },
+      {
+        "speaker": "Người anh",
+        "text": "Tôi ở bên đạo quán, ăn học bên ấy, không nhận một đồng nào của Hứa nữa. Việc Hứa làm với làng này, tôi thấy hết rồi, tôi không cúi đầu làm tiếp được."
+      },
+      {
+        "speaker": "Người anh",
+        "text": "Nhưng phần gánh trong nhà này, tôi chưa bỏ bữa nào. Tôi bỏ Hứa, tôi không bỏ nhà này."
+      },
+      {
+        "speaker": "Người anh",
+        "text": "Còn em tôi, nó nói tôi bỏ gánh cho nó. Câu đó tôi nghe đau, vì nửa phần nó đúng. Đồng lương của nó nuôi nhà này thiệt. Tôi không cãi phần đó."
+      },
+      {
+        "speaker": "Người anh",
+        "text": "Mẹ bệnh bữa trước, người chạy đi mời thầy là tôi. Tôi chỉ không còn cúi đầu trước nhà họ Hứa nữa thôi."
+      },
+      {
+        "speaker": "Người em",
+        "text": "Anh nói nghe hay lắm. Nhưng nồi cơm chiều nay là gạo từ đồng lương của tôi. Lập trường của anh, nấu lên ăn được không?"
+      },
+      {
+        "speaker": "Người em",
+        "text": "Tôi làm cho Hứa, tôi biết nhà ấy là nhà nào. Nhưng tôi chưa đè ai trong làng này hết. Tôi giữ kho, tay tôi sạch."
+      },
+      {
+        "speaker": "Người em",
+        "text": "Anh bỏ sang bên kia, người ta khen anh có chí khí. Còn tôi ở lại nuôi nhà, người ta nói tôi bám Hứa. Sao hai cái tiếng nó khác nhau dữ vậy?"
+      },
+      {
+        "speaker": "Người em",
+        "text": "Tôi mà bỏ việc mai này, nhà này tháng sau ăn bằng gì? Ai trả lời được câu đó, tôi bỏ liền bữa nay."
+      },
+      {
+        "speaker": "Người mẹ",
+        "text": "Ăn đi rồi cãi. Cơm nguội hết rồi hai đứa. Cãi bằng cái bụng đói, nó sinh gắt gỏng."
+      },
+      {
+        "speaker": "Người mẹ",
+        "text": "Nhà này nghèo, tao biết. Nhưng nghèo mà còn ngồi chung một mâm thì chưa phải là hết."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Thưa cô, phần này em chứng kiến ở cổng sân hôm trước. Hai anh em nhà này cãi nhau trước mặt người làng. Em thấy tới đó, em nói tới đó.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Em coi sổ ghi danh thì thấy: khoản nhà này nhận từ Hứa là lương làm kho thật, không phải nợ khống. Người anh tự tới ghi danh, không ai ép anh tiếng nào.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Còn một điều: hai anh em hục hặc nhau từ trước ngày đạo quán mở cửa. Bên này mở ra, họ mới nói ra được thôi, thưa cô. Em không đứng về phe nào hết.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Em nói rõ vậy là đủ. Ba điều ấy tôi nghe kỹ. Mình vào lại hiên thôi.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thưa cô, hồ sơ ghi danh ghi rõ phần nhà này: khoản họ nhận từ nhà họ Hứa là lương làm kho, không phải nợ khống. Tôi đã đối chiếu ở làng rồi.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Người anh ghi danh tự nguyện, hồ sơ có chữ ký của chính anh. Không ai ép, không ai dụ. Phần này tôi chịu trách nhiệm về sổ sách.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Còn mâu thuẫn trong nhà, hai anh em đã hục hặc từ trước ngày đạo quán mở. Tôi trình đủ ba việc ấy, thưa cô, không thêm lời khuyên nào.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, chị trình rõ vậy là đủ. Ba điều ấy tôi nghe kỹ. Mình vào lại hiên thôi.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Người em",
+        "text": "Như cô Tiểu Lan bên đạo quán đó. Con gái nhà họ Hứa, bỏ nhà theo ma môn, giờ bên ấy trọng vọng lắm. Người như vậy đâu cần biết nhà mình thiếu gạo là thiếu làm sao."
+      },
+      {
+        "speaker": "Người mẹ",
+        "text": "Mày nói vậy không phải hết đâu. Tao nghe nói cô ấy là người bắt đạo quán chữa bệnh không thu lời thề, không ghi nợ ai. Người như vậy, tao thấy không phải người ác."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi là khách lạ, xin hỏi một câu: theo nhà mình, cô Tiểu Lan ấy là người thế nào mới phải?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi xin nói phần việc của Nhân Danh Đường. Anh cả có quyền ở lại môn của anh. Quyền ấy không làm anh thành người bỏ nhà — nếu anh còn gánh phần của anh trong nhà này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Còn em, em có quyền ở lại việc của em để nuôi nhà. Quyền ấy không làm em thành người phản lại làng, chừng nào việc em làm không đè lên ai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa bác, bác không phải chọn một đứa con nào hết. Mâm cơm này là của bác. Bác dọn chung thì nó chung."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Và tôi nói thẳng để nhà mình khỏi trông chờ lầm: đạo quán không lo thay được ngay phần lương của em. Tôi chỉ gỡ cái ép phải đứng về một bên ra thôi."
+      },
+      {
+        "speaker": "Người anh",
+        "text": "Vậy phần gánh của tôi trong nhà này, tôi nói lại cho rõ: tôi còn gánh. Tiền không có thì sức có. Việc nặng trong nhà này còn tên tôi trong đó."
+      },
+      {
+        "speaker": "Người em",
+        "text": "Vậy tôi hỏi cô một câu: tôi ở lại bên kia làm việc, nhà này còn là nhà của tôi không?"
+      },
+      {
+        "speaker": "Người mẹ",
+        "text": "Mâm này còn dọn chung ngày nào, nhà này còn là nhà ngày ấy. Việc của ai nấy làm, cơm thì về đây ăn chung."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, việc của Nhân Danh Đường ở nhà này, tôi ghi xong rồi: khoản lương ấy là lương thật, không phải nợ. Việc nhà của bác, tôi không ghi một chữ nào vào sổ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi xin phép ra về. Chuyện trong nhà này, ra khỏi cổng, tôi là người ngoài — tôi giữ đúng phần của người ngoài."
+      }
+    ],
+    "choices": [
+      {
+        "id": "leave_the_family_its_table",
+        "text": "Ra về và để mâm cơm lại cho gia đình tự giữ: hồ sơ chỉ ghi phần việc, không ghi một chữ nào về cuộc cãi trong nhà ấy.",
+        "next": "ky3_24_viec_pham_nho",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FamilySplitNamed": true
+        }
+      },
+      {
+        "id": "note_only_the_choice",
+        "text": "Ghi vào sổ Nhân Danh Đường đúng một dòng: nhà này mỗi người giữ một đường, và đó là quyền của họ — làm mẫu cho những nhà sau.",
+        "next": "ky3_24_viec_pham_nho",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FamilySplitNamed": true
+        }
+      }
+    ]
+  },
+  "ky3_24_viec_pham_nho": {
+    "id": "ky3_24_viec_pham_nho",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Một việc rất phàm",
+    "backgroundId": "long-hai-saloon",
+    "location": "Quán rượu, Long Hải — ngày thứ 19",
+    "companions": [],
+    "narration": [
+      "Ngày thứ mười chín, buổi chiều, quán rượu ở Long Hải còn thưa khách, mùi rượu đế và cá khô nướng phảng phất từ bếp sau. Trên bàn gỗ dài có tờ giấy ghi việc của quán để cạnh cuốn sổ Nhân Danh Đường Đỗ Thị Hạnh vừa mang tới giao cho Tiểu Lan. Cao Minh ngồi uống rượu như mọi buổi chiều hắn ghé quán. Một người phu khuân ở bến đang cần người của Nhân Danh Đường đứng tên bảo chứng để lãnh phần gạo cứu tế cho xóm trọ — việc nhỏ, gấp, và người phu sắp phải quay xuống bến. Cao Minh nhìn tờ giấy, thấy tên Hạnh ghi sẵn ở cuối sổ, và xử việc theo cách nhanh nhất của hắn: hắn gọi thẳng tên nàng vào việc ấy, hứa thay nàng phần bảo chứng, bảo người phu cứ đi, có việc gì thì tìm Đỗ Thị Hạnh của Nhân Danh Đường. Việc xong ngay tại chỗ. Người phu cảm ơn rối rít rồi đi. Chỉ có một điều không ổn: lúc hắn dùng cái tên ấy, Hạnh chưa hề biết có việc này trên đời.",
+      "Hạnh tới nơi ngay sau đó, nghe chủ quán kể lại đầu đuôi, đứng khựng lại giữa quán một lúc mới ngồi xuống. Nàng nói phần của người bị dùng tên bằng giọng của người giữ sổ: rành mạch, cụ thể, không kêu ca. Chủ quán rót thêm chén rượu, góp một câu lệ chợ rất phàm nghe xong ai cũng gật.",
+      "Tiểu Lan nghe hết, để yên một lúc cho lời của Hạnh nằm yên trên bàn như một món đồ vừa đặt xuống, rồi mới dạy hắn một việc rất phàm. Nàng nói điềm tĩnh, dạ thưa đúng mực, như dạy một lệ làng cho người mới tới xứ này. Nàng chỉ lấy đúng sự cố vừa rồi trong quán làm ví dụ — không lấy chuyện của chính mình, không nói thêm một lời nào về những cái tên từng bị ghi thành nợ mà không ai hỏi. Cao Minh nghe như nghe một lệ lạ của xứ lạ: hắn hỏi lại, từng câu thực dụng một, đầu hơi nghiêng, rõ ràng là đang thấy việc này có chỗ hay.",
+      "Hắn ngẫm thêm một lúc, xoay chén rượu trong tay. Cả đời hắn, tên của hắn là thứ người ta sợ tới mức không dám nhắc thành tiếng; triều đình, tông môn, kẻ thù — ai cũng muốn biết tên hắn để tránh, để sợ, để tính kế. Chưa từng có ai dạy hắn rằng muốn dùng tên một người phàm tay không tấc sắt cũng phải hỏi người ta trước một câu. Lệ này nhỏ tới mức hắn suýt bật cười — mà ngẫm lại thì nó lạ, và cái lạ ấy làm hắn vui như vừa thấy một nước đi mới trên bàn cờ mình tưởng đã thuộc hết. Hắn còn hỏi thêm nửa câu về trường hợp người ta đi vắng lâu ngày, nghe nàng đáp xong thì gật gù như người vừa thuộc một câu vè lạ miệng.",
+      "Chưa đầy một tuần trà sau, lệ mới học có chỗ dùng ngay trong quán. Một khách buôn ở bến cần mượn tờ giấy của chủ quán có ghi tên người vợ đã mất của ông ta làm người đứng chứng cũ — giấy phải được chủ quán cho phép dùng lại vào việc lãnh hàng. Cao Minh định đưa tay cầm tờ giấy như thói quen, rồi dừng lại giữa chừng. Hắn quay sang chủ quán, hỏi trước một câu, vụng về thấy rõ — hỏi như người mới học một câu chào — rằng giấy này mang tên người nhà của ông, hắn có được dùng vào việc này không, và nếu ông không bằng lòng thì thôi. Chủ quán ngơ ngác mất một lúc: người như hắn mà đi hỏi ý một chủ quán rượu. Rồi ông gật đầu, tự tay đưa giấy. Việc sau đó xong nhanh như mọi việc qua tay hắn, chỉ khác thứ tự: hỏi trước, dùng sau. Hạnh ngồi bên, lặng lẽ ghi vào sổ của Nhân Danh Đường một dòng — lệ này, từ hôm nay, đã có người đứng đầu chịu làm theo một lần.",
+      "Chiều xuống hẳn trong quán. Tiểu Lan nhắc việc ngày mai bằng giọng việc nhà: mai là phiên chợ linh khí đầu tiên, người sẽ đông, giấy và tên sẽ bay khắp chợ — từ giấy ghi hàng, giấy bảo chứng, tới những cái tên bị người ta gọi thay, hứa thay. Lệ hôm nay giữ được tới đâu, mai ra chợ sẽ biết tới đó. Nàng gấp cuốn sổ lại, trả phần giấy của quán về tay chủ quán, dặn chủ quán mai có ai hỏi việc bảo chứng thì cứ cho người ta gặp thẳng Hạnh mà hỏi, và đứng dậy cáo từ như mọi buổi chiều."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Việc bảo chứng này, Đỗ Thị Hạnh của Nhân Danh Đường đứng tên. Người phu cứ xuống bến, có gì thì tìm nàng. Bổn tọa nói thay ở đây."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Giấy tờ của các người lòng vòng thật. Tên có sẵn trên sổ, người thì chưa tới — bổn tọa mượn trước một câu, việc xong là xong."
+      },
+      {
+        "speaker": "Chủ quán",
+        "text": "Dạ, thưa ông, tôi ghi lời ông vào giấy của quán đây. Mà cô Hạnh chưa tới… lát cô ấy tới, tôi biết ăn nói làm sao với cô ấy, thưa ông?"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thưa, tôi vừa nghe chủ quán kể hết. Giấy mang tên tôi, thì mai này việc có trục trặc, người ta tới tìm tôi mà hỏi. Việc tôi chưa từng nghe, tôi trả lời thay làm sao được."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Ở Nhân Danh Đường, tên là thứ duy nhất nhiều người còn giữ được. Tên của họ từng bị ghi nợ, bị xóa, bị bán — tới lượt tôi, tôi không muốn tên mình bị dùng mà mình không hay."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi không tới để trách ai, thưa cô. Tôi chỉ xin một điều: từ nay, việc gì mang tên tôi, cho tôi biết trước một tiếng. Vậy thôi."
+      },
+      {
+        "speaker": "Chủ quán",
+        "text": "Ở quán tôi xưa nay vẫn vậy, thưa ông: gọi tên ai trả tiền thay ai cũng phải hỏi trước. Lệ chợ nó thế, không ai giận ai bao giờ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa ngài, ở thế giới này, tên và giấy là của người ta. Ngài muốn dùng tên ai, cầm giấy của ai, thì hỏi người ấy trước một câu."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Hỏi không làm việc chậm đi bao nhiêu, thưa ngài. Người được hỏi còn là người — không phải cái tên nằm sẵn trên sổ, chờ ai muốn dùng thì dùng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Như việc vừa rồi trong quán này: tên của Hạnh đã đi làm một việc mà Hạnh không hay. Lần sau, thưa ngài, ngài hỏi nàng trước. Nàng gật hay lắc, ấy là quyền của nàng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hỏi ai? Hỏi lúc nào? Người ta đang ở xa, việc thì gấp — cũng phải chờ hỏi cho bằng được sao?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Rồi người được hỏi nói không thì sao? Việc bỏ dở giữa chừng, hay bổn tọa tự làm lấy phần của mình, không đụng tới tên người ta nữa?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Được. Lệ này lạ mà có lý của nó. Từ nay bổn tọa hỏi trước một câu. Coi như bàn cờ này thêm một nước đi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa ngài, vậy là đủ cho một buổi chiều rồi. Một lệ phàm, học một lần, dùng được cả đời người phàm."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ngài làm đúng lệ rồi, thưa ngài. Hỏi trước, dùng sau. Có vụng một chút cũng không sao — người được hỏi thấy hết cái vụng ấy, và họ quý nó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Mai ra chợ, thưa ngài, giấy và tên sẽ nhiều như cá ngoài bến. Ngài giữ lệ hôm nay được tới đâu, tôi coi tới đó. Dạ, về thôi."
+      }
+    ],
+    "choices": [
+      {
+        "id": "write_the_rule_down",
+        "text": "Để Hạnh ghi lệ “hỏi trước khi dùng tên/giấy” vào sổ của Nhân Danh Đường — lệ của môn, không chỉ lệ riêng của hai người.",
+        "next": "ky3_25_phien_cho_linh_khi",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LanTaughtNames": true
+        }
+      },
+      {
+        "id": "keep_it_between_them",
+        "text": "Giữ lệ này như việc riêng nàng dạy hắn, chưa ghi vào sổ nào — mai ra chợ xem hắn giữ được tới đâu đã.",
+        "next": "ky3_25_phien_cho_linh_khi",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LanTaughtNames": true
+        }
+      }
+    ]
+  },
+  "ky3_25_phien_cho_linh_khi": {
+    "id": "ky3_25_phien_cho_linh_khi",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Phiên chợ linh khí",
+    "backgroundId": "long-hai-market",
+    "location": "Chợ Long Hải, Nam Kỳ — ngày 20, phiên chợ đầu bày hàng của Hạ Ô Môn",
+    "companions": [],
+    "narration": [
+      "Ngày hai mươi, chợ Long Hải thức dậy sớm hơn thường lệ. Giữa khu chợ quen, một dãy sạp mới dựng lên trong đêm, treo tấm biển gỗ khắc hai chữ Hạ Ô. Lần đầu hàng của tông môn bày bán công khai giữa chợ: một khu Tiên Mễ, một khu Tĩnh Hồn Thái còn ướt sương, một sạp đan của Đan Đường và một góc trưng Hồi Gia Đăng cho đội ghe coi tận tay.",
+      "Trần Thị Mến đi dọc dãy sạp từ canh tư, chia người giữ từng khu, phần bán phần phát đều ghi lên tấm bảng gỗ dựng đầu sạp. Dân chợ kéo tới mỗi lúc một đông, coi một phiên chợ mà người bán đọc lệ thành tiếng trước khi bán, thay vì để khách đoán giá trong bụng.",
+      "Cách mấy bước, sạp cũ của vòng nhà Hứa vẫn giữ bảng giá độc quyền treo nhiều năm. Bà Chín Lãi ngồi sau sạp, mắt không rời dãy sạp mới. Nửa buổi đầu, vài người quen còn ghé sạp cũ vì thói quen; rồi sạp tông môn công bố giá bán và phần phát miễn phí cho người bệnh, người nghèo, và khách bắt đầu dời chân.",
+      "Người dời đi không ồn ào. Họ lặng lẽ xếp hàng sang phía sạp mới, nơi giá ghi rõ trên bảng và phần phát không đòi điều kiện nào. Tới giữa buổi, trước sạp cũ chỉ còn vài người đứng coi. Giá độc quyền không sụp vì ai cấm, mà sụp ngay giữa phiên đầu, trước mặt người giữ giá, vì không còn ai chịu mua theo nữa.",
+      "Giữa lúc chợ đông nhất, Cao Minh đi ra từ sau dãy sạp, tay áo còn vướng bụi kho. Hắn cho khiêng thêm một lượt hàng bày thẳng giữa lối đi: thêm Tiên Mễ, thêm đan, thêm mấy chiếc đèn, chồng lên như đồ thừa đem ra cho đỡ chật. Không ai đếm, không ai ghi sổ. Hắn đứng nhìn một lúc, vẻ mặt người vừa dọn kho xong.",
+      "Tiểu Lan không đứng ở sạp. Nàng đi hết một vòng chợ, coi cả hai phía của buổi sáng. Phía sạp mới, người nghèo ôm phần gạo phát mà cười nói rôm rả. Phía chợ cũ, hai tiểu thương gạo và thuốc phàm ngồi thẫn thờ trước sạp ế: hàng của họ không dở, chỉ là từ nay không ai cần mua với giá cũ nữa. Nàng dừng trước hai sạp ấy lâu hơn mọi sạp khác.",
+      "Ở ngả đường vào điểm phát miễn phí cuối chợ, Cai Lẫm cho dựng một cái bàn thấp ngay giữa lối đi độc đạo, trên bàn đặt sẵn cuốn sổ và ống tiền. Ai đi qua lấy phần hàng miễn phí đều được mời nộp ít tiền đường, tiền chỗ, theo lệ cũ của trạm. Bên cạnh bàn, một người bán hàng lẳng lặng mở sổ riêng, ghi tên từng người nhận hàng đi qua.",
+      "Tiền không thu trên món hàng — hàng vẫn miễn phí, không ai động được vào chữ ấy. Thứ mọc lên giữa buổi chợ là tiền thu trên con đường đi tới món hàng, và một cuốn sổ ghi tên người nhận: hai thứ biến một phần gạo phát không điều kiện thành một cái cửa có người gác, có lệ, có danh sách. Tiểu Lan đứng đầu ngả đường, nhìn cái bàn một lúc rồi mới lên tiếng.",
+      "Lệ phát được đặt ngay tại chợ, trước mặt người bán lẫn người mua. Hàng phát cho người bệnh và người nghèo thì phát thẳng tay: không ghi tên, không ghi nợ, không lập danh sách. Cuốn sổ ghi tên bị trả lại tận tay người ghi, không một lời nặng. Cùng lúc, theo một câu nói của Cao Minh, đệ tử bưng hàng chia ra ba ngả đường khác nhau của chợ mà phát.",
+      "Cái bàn của Cai Lẫm còn đứng đó, nhưng ngả đường trước mặt nó không còn là ngả duy nhất nữa. Người đi lấy hàng thong thả qua hai ngả kia. Tới khi chợ tan, bàn chỉ thu được ít tiền lẻ của người đi qua trước lúc điểm phát dời đi. Hàng tông môn hết phiên vẫn còn đầy sạp — phiên sau lại bày, không ai phải tranh phần cuối cùng.",
+      "Bà Chín Lãi ngồi lại sau cùng, nhìn sạp cũ rồi nhìn dãy sạp mới, tính lại đường sống của người giữ giá cũ trong cái chợ đã đổi lệ. Ngoài đồng Linh Điền, lúa Tiên Mễ gieo từ ngày dựng điền đã chín trắng bạc đầu ruộng. Mai là vụ gặt đầu tiên."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa bà con, sạp Hạ Ô Môn bữa nay bày bốn thứ: Tiên Mễ, Tĩnh Hồn Thái, đan và đèn cho đội ghe. Phần bán ghi giá trên bảng, phần phát để riêng, ai cũng coi được."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Người giữ sạp nghe rõ: bán phần nào đọc giá phần nấy, phát phần nào nói trước là phát. Không để khách về nhà mới hay mình vừa mang một món nợ."
+      },
+      {
+        "speaker": "Người bán hàng ở chợ",
+        "text": "Tui bán ở chợ này bao nhiêu năm, chưa thấy ai bày hàng kiểu này. Giá treo lên bảng cho cả chợ coi, khác nào tự trói tay mình."
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Giá nhà Hứa giữ bao nhiêu năm, có lệ của nó. Rau này qua mấy tay mới tới được Long Hải. Không phải ai muốn hạ là hạ ngay một buổi đâu."
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Khách quen của tui còn đó. Người ta ăn rau nhà này quen rồi, đâu phải thấy rẻ một bữa là bỏ hết trong một buổi sáng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, tôi chỉ hỏi một việc. Lệ giá cũ trước nay áp cho ai: cho người bán, hay cả người bệnh không mua nổi cũng phải theo?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hàng đặt giữa chợ thì giá do chân người mua quyết: họ ở lại là giá còn, họ đi là giá hết. Bổn tọa khỏi cãi thay cho mấy chồng rau."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Hàng thêm bày hai chồng vào khu Tiên Mễ, đan để sạp Đan Đường, đèn qua góc đội ghe. Phần phát dồn về cuối chợ, thêm người giữ cho khỏi chen nhau."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Phần phát bữa nay không để ai chen nhau: người bệnh và người già lên trước, người khỏe đứng sau một bước. Lệ đọc rõ rồi, cứ vậy mà làm, khỏi ai phải năn nỉ ai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh, sáng nay sạp anh bán được những gì rồi? Tôi hỏi thật — chợ đổi lệ một buổi, người như anh chịu trước nhất."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Kho của bổn tọa còn nhiều. Bày hết ra cho đỡ chật: ai cần thì lấy, ai mua thì mua. Để lâu trong kho, bổn tọa nhìn cũng chán."
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Đường này trạm coi lâu nay. Hàng của ai bày thì bày, người đi qua đất trạm thì nộp theo lệ cũ. Xưa nay vẫn vậy, không ai kêu ca."
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Tiền đường, tiền chỗ, mỗi người một ít, góp lại mới có người dọn chợ, giữ lối. Tông môn phát hàng lớn, càng phải giữ lệ cho chợ khỏi loạn."
+      },
+      {
+        "speaker": "Người bán hàng ở chợ",
+        "text": "Hay thiệt. Hàng thì miễn phí, mà đi tới chỗ lấy hàng lại phải qua một cái bàn thu tiền. Miễn phí kiểu này cũng có cửa của nó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, tôi nhìn rõ rồi. Người ta không thu trên món hàng. Người ta thu tiền trên con đường đi tới món hàng, và ghi tên người nhận vào một cuốn sổ riêng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ thưa, lệ của tông môn từ nay nói rõ giữa chợ: nhận hàng phát, không ai phải để lại tên, cũng không mang một món nợ nào về nhà."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Nghe đây: chia đoàn bưng hàng ra ba ngả đường, ngả nào cũng phát như nhau, đọc lệ phát ở từng ngả. Sổ ghi tên trả lại cho người ghi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Chợ này có mấy ngả đường, bổn tọa thích phát ở ngả nào thì phát. Một cái bàn giữa một ngả, chưa đủ làm bổn tọa đi vòng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bàn còn đó, đường hết người. Cai Lẫm giữ cái bàn cho kỹ — biết đâu mai mốt bổn tọa lại bày hàng đúng ngả ấy, lúc đó tính tiếp."
+      }
+    ],
+    "choices": [
+      {
+        "id": "free_goods_no_names",
+        "text": "Chốt lệ phát không ghi tên, không ghi nợ thành lệ thường của chợ — ai nhận hàng cũng là người mua hàng, không là con nợ.",
+        "next": "ky3_26_vu_gat_bac",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3SpiritMarketOpened": true
+        }
+      },
+      {
+        "id": "keep_a_medicine_reserve",
+        "text": "Giữ riêng một phần đan và đèn ở điểm phát của tông môn cho người bệnh và đội ghe đêm tới sau phiên chợ.",
+        "next": "ky3_26_vu_gat_bac",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3SpiritMarketOpened": true
+        }
+      }
+    ]
+  },
+  "ky3_26_vu_gat_bac": {
+    "id": "ky3_26_vu_gat_bac",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Vụ gặt bạc",
+    "backgroundId": "ha-o-spirit-field",
+    "location": "Linh Điền của Hạ Ô Môn, Long Hải — ngày 21, vụ gặt Vô Chủ Tiên Mễ đầu tiên",
+    "companions": [],
+    "narration": [
+      "Ngày hai mươi mốt, Linh Điền sáng lên một màu trắng bạc. Lúa Vô Chủ Tiên Mễ gieo từ ngày dựng điền đã chín cùng một lượt, bông nào cũng trĩu xuống. Dân làng vào ruộng theo đúng phần đất mình đã trồng, liềm mang theo, quang gánh để dọc bờ — người gặt bước xuống ruộng của chính mình, không phải ruộng của chủ nào.",
+      "Thóc gặt lên tay nặng khác hẳn thóc thường. Người ôm bó lúa đầu tiên phải ghì thêm một nhịp mới nhấc nổi lên vai. Từng bó xếp dọc bờ ruộng theo phần từng nhà, chờ quạt sạch rồi mới chia: thóc ăn một bên, thóc giống tính riêng trước. Mùi rơm mới quyện mùi nắng sớm trên cả cánh đồng.",
+      "Châu Văn Lợi dẫn mấy người trong làng đi dọc rãnh nước đầu ruộng. Ở đó, một vệt xanh non đã mọc lên từ bao giờ: những bông Tiên Mễ rụng sớm trong đợt trổ đầu đã tự nảy mầm trên đất ướt, mạ non cao hơn gang tay. Không ai gieo vệt mạ ấy. Nó là bằng chứng nằm sẵn giữa ruộng, ai qua cũng cúi xuống nhìn được.",
+      "Theo lời Tiểu Lan dặn, việc chứng minh không dừng ở lời nói. Một phần thóc giống tốt nhất được chọn ngay trong buổi sáng, gieo thử xuống luống ươm đầu ruộng trước mặt cả làng. Ngày gặt được ghi làm ngày gieo thử. Nếu giống này sống lại được, mầm xanh của luống ươm sẽ trả lời thay mọi người.",
+      "Buổi gặt đang vào nhịp thì người cho vay giống của vòng nhà Hứa tới bờ ruộng, tay ôm cuốn sổ vay cũ bìa đã sờn. Hắn không mang theo người, không lớn tiếng. Hắn chỉ mở sổ giữa sân gặt và nhắc lệ cũ: nhà nào từng vay giống, nợ gạo của kho, thì thóc giống vụ này phải trừ vào nợ trước khi chia; giống vụ sau vẫn ghi qua kho của hắn rồi mới về tay người trồng.",
+      "Cuốn sổ mở ra làm sân gặt lặng đi một nhịp. Thứ hắn mang tới không phải thóc, cũng không phải người — đó là giấy và lệ, thứ đã giữ vòng vay giống chạy bao nhiêu năm ở làng này: vay một vụ, nợ một vụ, giống không bao giờ ở lại hẳn trong bồ người trồng. Mến bước ra, đặt cuốn sổ chia của buổi gặt xuống bên cạnh cuốn sổ vay cũ.",
+      "Việc chia thóc giống diễn ra công khai giữa sân gặt. Mến đọc to tên từng nhà, số phần giống nhà ấy giữ cho vụ sau, rồi mới đọc phần thóc ăn. Đọc tới nhà nào, người nhà ấy bước ra nhận, cả sân nghe thấy. Không một phần giống nào qua tay kho vay, không một cái tên nào bị ghi vào sổ nợ mới.",
+      "Người giữ sổ vay đứng nghe từ đầu tới cuối. Hắn mấy lần lật sổ như muốn chen một dòng vào, nhưng buổi chia này không có chỗ cho dòng ấy: giống chia theo nhà trồng, đọc thành tiếng, người nhận đứng ngay trước mặt. Khi phần giống cuối cùng về tay chủ nó, nắng đã lên cao.",
+      "Thóc của từng nhà còn phải quạt sạch trước khi gánh về. Cao Minh đi dọc sân, tiện tay phẩy một cái. Một hơi gió đi qua, trấu bay lên rồi rơi xuống phía cuối gió; hạt thóc từng nhà nằm gọn lại trong nia của nhà ấy, không lẫn một hạt sang phần bên cạnh. Hắn phủi tay như vừa làm một việc nhà, rồi cho cắm lại mốc ruộng theo ranh người trồng đang đứng.",
+      "Chiều xuống, người giữ sổ vay cuốn sổ ra về một mình, tay không. Từ vụ sau, làng này gieo bằng giống giữ trong bồ nhà mình — vòng vay giống và nợ gạo của nhà Hứa gãy ở cấp làng ngay ngày gặt đầu tiên, gãy giữa sân, trước mặt mọi người. Ở chợ, Tĩnh Hồn Thái của vụ này đã đóng thùng xong. Mai, đoàn hàng đầu tiên lên đường đi Chợ Lớn."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Nói cho rõ từ đầu buổi nghen: ruộng này dân làng tui trồng. Thóc gặt bữa nay là của người trồng, không phải của chủ nào hết."
+      },
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Hồi trước tui đứng ở chợ cãi chuyện khế, chuyện cân. Nay tui có ruộng mà gặt, có thóc mà ôm. Nghe kỳ, mà thiệt."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Lệ gặt nói trước: ai trồng phần nào, gặt phần nấy. Thóc giống tính riêng trước khi chia thóc ăn, không gộp làm một."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Lúa chín thì gặt. Đứng ngắm mãi, nó cũng không tự bò vào bồ đâu. Làm cho xong đi, bổn tọa coi đủ chán rồi."
+      },
+      {
+        "speaker": "Nông dân",
+        "text": "Hạt gì nặng tay dữ vậy nè. Gặt thóc mấy chục năm, ôm bó lúa tưởng ôm bó đá ướt. Ăn một bữa chắc no tới chiều."
+      },
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Bà con coi cho kỹ. Mấy bông rụng sớm hồi trổ đầu tự mọc lại xanh dọc rãnh nước đây. Không ai gieo, không ai chăm — nó sống bằng đất của mình."
+      },
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Giống qua tay kho nhà Hứa gieo một vụ rồi chết, vụ sau phải tới kho vay tiếp. Giống này tự mọc lại trên đất người trồng. Ai giữ giống cho ai, coi là rõ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, lời nói về giống phải có mầm xanh làm chứng. Nay gieo thử một phần giống tốt nhất xuống luống ươm, trước mặt mọi người. Ít bữa nữa, luống ấy trả lời thay tôi."
+      },
+      {
+        "speaker": "Người cho vay giống",
+        "text": "Sổ kho còn đây, ghi rõ từng dòng nhà nào vay giống, nợ gạo bao nhiêu. Lệ cũ thì thóc giống vụ này phải trừ vào nợ trước, rồi mới tính chia."
+      },
+      {
+        "speaker": "Người cho vay giống",
+        "text": "Tôi chỉ làm theo lệ kho. Giống vụ sau cũng vậy: ghi qua kho, kho chịu phần thất bát. Bao năm làng này vẫn làm vậy."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Anh nghe cho rõ: sổ của anh là sổ vay của kho anh. Sân này bữa nay chia thóc của người trồng. Hai việc để riêng, đừng trộn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh, tôi chỉ hỏi một câu. Trong sổ ấy, có dòng nào ghi giống đang gặt bữa nay là giống của kho anh không? Có thì đọc lên cho cả sân nghe."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Bây giờ chia thóc giống. Tui đọc tên nhà nào, nhà ấy bước ra nghe số phần. Giống đọc trước, thóc ăn đọc sau. Ai thắc mắc thì hỏi ngay."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Đọc tới đâu, ghi tới đó, sổ chia để mở giữa sân, ai coi cũng được. Buổi chia này không phần nào qua tay kho nào hết."
+      },
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Phần giống của nhà tui, từ bữa nay nằm trong bồ nhà tui. Chữ vay giống, đời tui học một lần đủ rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, tôi nói lại cho rõ: giống đã chia là của từng nhà, không phải tông môn cho vay. Ai gieo xuống đất mình, không nợ ai vì hạt ấy."
+      },
+      {
+        "speaker": "Nông dân",
+        "text": "Tui chia thóc từ hồi còn nhỏ, lần đầu thấy chia mà không có ai cầm sổ đứng giữa đòi ghi nợ. Thóc về bồ, nhẹ cả người."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Gió quạt sân này một buổi. Trấu ai nấy bay, hạt ai nấy ở lại trong nia mình. Bổn tọa ghét đồ lẫn phần."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ruộng ai trồng, thóc của người ấy. Mốc cắm lại theo chân người trồng. Phần thâu của tông môn trên ruộng này: không có."
+      },
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Cái mốc cắm theo chân người trồng đang đứng… Tui thấy bao nhiêu mốc cắm theo giấy người khác rồi. Mốc kiểu này lần đầu thấy — thấy là tin liền."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh, sổ anh ghi nợ cũ của anh, phần ấy tôi không bàn hôm nay. Nhưng buổi gặt này không sinh thêm dòng nào trong sổ ấy nữa."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, việc hôm nay khép ở hai điều: luống gieo thử đã ghi ngày, và danh sách chia giống là danh sách chia, không phải danh sách nợ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cuốn sổ ôm tới sân gặt không ghi được chữ nào, coi như gánh thêm buổi sáng. Về đi, khỏi mang theo cho nặng."
+      }
+    ],
+    "choices": [
+      {
+        "id": "seed_stays_with_farmers",
+        "text": "Để từng nhà tự giữ phần thóc giống của mình ngay tại sân gặt — giống ở lại với người trồng, không qua một kho trung gian nào.",
+        "next": "ky3_27_tinh_hon_thai_cho_lon",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FirstSpiritHarvest": true
+        }
+      },
+      {
+        "id": "village_seed_reserve",
+        "text": "Lập một phần giống chung của làng để ở Linh Điền, Mến giữ sổ công khai — phòng nhà nào mất mùa trắng tay còn có giống mà gieo lại.",
+        "next": "ky3_27_tinh_hon_thai_cho_lon",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FirstSpiritHarvest": true
+        }
+      }
+    ]
+  },
+  "ky3_27_tinh_hon_thai_cho_lon": {
+    "id": "ky3_27_tinh_hon_thai_cho_lon",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Tĩnh Hồn Thái đi Chợ Lớn",
+    "backgroundId": "long-hai-market",
+    "location": "Chợ và bến hàng Long Hải, Nam Kỳ — ngày 21, đoàn hàng Tĩnh Hồn Thái đầu tiên lên đường đi Chợ Lớn",
+    "companions": [],
+    "narration": [
+      "Chiều ngày hai mươi mốt, ở bến hàng của chợ Long Hải, Tĩnh Hồn Thái của vụ mới được đóng vào thùng gỗ, lót lá, niêm miệng thùng. Đây là đoàn hàng đầu tiên của Hạ Ô Môn rời Long Hải đi Chợ Lớn. Tiếng cân, tiếng đếm thùng và tiếng ghe cập bến trộn vào nhau thành một buổi chiều bận rộn có trật tự.",
+      "Mến đứng bên chồng thùng, kiểm từng số: bao nhiêu thùng đi xa, bao nhiêu thùng giữ lại chợ nhà, đọc to cho người gánh nghe. Bên cạnh, Ký Lương ôm cuốn sổ của đoàn hàng, bút cầm sẵn — hắn được gọi tới với việc ghi chép của chuyến đi: đếm thùng, ghi giờ, ghi tên ghe.",
+      "Đoàn hàng chưa kịp xuống ghe thì Từ Bách Xuyên tới bến. Hắn là thương gia từ Chợ Lớn xuống, áo quần chỉnh tề, cách xem hàng là cách của người coi cả một thị trường trong một chồng thùng. Hắn đi một vòng quanh lô rau, mở một thùng coi lá, rồi ra giá ngay tại bến: mua trọn cả lô, tiền trao ngay, giá cao hơn giá chợ từng thùng.",
+      "Lời mua trọn lô làm mấy người gánh hàng dừng tay. Hàng chưa ra khỏi bến đã có người chịu mua đứt giá cao — cách làm ăn quen của tay buôn lớn: gom hàng từ đầu nguồn, rồi giá ở đầu kia do một mình họ định. Tiểu Lan đứng bên chồng thùng, nghe hết mà không vội đáp. Nàng hỏi vào đúng cơ chế của thương vụ, như người muốn nghe hắn tự nói ra phần sau của nó.",
+      "Ghe chở hàng đã áp sát bến. Trong lúc thùng chuyển xuống, Ký Lương ngồi đầu cầu ván ghi tuyến đường thành văn bản: giờ khởi hành, tên ghe, từng chặng dừng, điểm sang hàng, tên người nhận ở Chợ Lớn, đường quay về. Hắn ghi nhanh, không cần ai nhắc, như người đã thuộc tuyến này bằng chân của nhiều người khác cộng lại.",
+      "Bản ghi của Ký Lương đọc lên nghe như một con đường có thật nằm trên giấy. Ai cầm tờ giấy ấy, người đó cầm cả tuyến: ghe đi giờ nào, dừng ở đâu, hàng tới tay ai. Tiểu Lan nghe hắn đọc lại từng chặng mà không ngắt lời. Thứ quý nhất chuyến này không nằm trong thùng rau, mà nằm trong tay người ghi chép.",
+      "Thùng xuống ghe được một nửa thì Cao Minh cho dừng lại. Trước mặt Từ Bách Xuyên, hắn cho dỡ một phần thùng quay ngược lên bờ, đưa về sạp chợ nhà. Lô đi Chợ Lớn chỉ đi một phần; phần còn lại bán ở Long Hải theo giá chợ thường. Lời mua trọn lô chết ngay tại bến — không phải vì thiếu hàng, mà vì hắn không để một tay gom hết đường đi của nó.",
+      "Từ Bách Xuyên nuốt cục tức ấy rất nghề. Hắn không cãi, chỉ nhìn theo những thùng hàng chia làm hai ngả, ghi nhớ cách làm này của tông môn, rồi lùi lại nhường cầu ván cho người gánh. Hắn hiểu ngay: chuyến đầu đã vậy, muốn ăn được tuyến hàng này phải tìm cách khác.",
+      "Trước khi ghe rời bến, Tiểu Lan cho thi hành việc cuối cùng: bản ghi tuyến được đọc to trước đoàn hàng và người chợ đứng gần, và một bản sao chép lại để ở lại chợ với Mến. Tuyến đường từ nay là việc công khai, ai hỏi cũng coi được. Ký Lương thoáng khựng lại — tuyến không còn là vốn riêng trong đầu hắn nữa. Nhưng bản chính vẫn theo đoàn, và người giữ bản chính vẫn là hắn.",
+      "Ghe rời bến trong ban ngày, trước mặt cả chợ, không giấu một thùng nào. Từ Bách Xuyên đứng lại trên bờ, chào đoàn hàng rất lễ phép rồi quay đi tính chuyện chuyến khác. Tuyến Chợ Lớn từ hôm nay có tên, có giấy, có người ghi. Và ở Long Hải, một vụ tranh chấp chợ đang chờ được phân xử bằng thứ mới hơn giấy: lời nói được ghi lại."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thùng đi Chợ Lớn đếm một lượt, thùng giữ lại chợ nhà đếm một lượt. Tui đọc to: phần nào xuống ghe, phần nào ở lại sạp."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Niêm miệng thùng xong thì ghi số lên nắp. Hàng đi xa, số đi theo hàng. Tới nơi, người nhận cứ số trên nắp đối chiếu sổ đoàn."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Để tôi ghi cho rành: giờ đóng thùng, bao nhiêu thùng, ghe nào chở, chủ ghe là ai. Nghề của tôi là nhớ đường, ghi đường."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh Ký Lương, trong sổ ấy anh ghi những gì? Đoàn hàng này có con đường rõ ràng, hay chỉ đi theo trí nhớ của một người?"
+      },
+      {
+        "speaker": "Từ Bách Xuyên",
+        "text": "Tôi nói thẳng: lô rau này tôi mua trọn, ngay tại bến, tiền trao đủ. Giá cao hơn giá chợ từng thùng — tông môn khỏi mất công đi xa."
+      },
+      {
+        "speaker": "Từ Bách Xuyên",
+        "text": "Lên tới Chợ Lớn, hàng này đáng giá gấp mấy lần. Tôi mua đứt từ đầu nguồn, chịu phần đường xa, phần ế ẩm. Đó là làm ăn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ông, tôi hỏi một việc: ông mua trọn lô này rồi bán lại cho ai, theo giá nào? Người ăn rau ở Chợ Lớn còn qua mấy tay?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Mua hết một chuyến hàng thì dễ. Mà bổn tọa chưa thấy ai mua hết được một mùa rau. Rau còn mọc ngoài ruộng — mua cả ruộng cho gọn?"
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Tôi đọc lại tuyến cho đoàn nghe: ghe đi giờ này, dừng lấy nước chặng đầu, tránh nước ngược chặng giữa, sang hàng ở bến hẹn, người nhận có tên đây."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Đường đi của hàng, ghi rõ thì hàng không lạc. Tôi đi nghề này bao năm, chuyến nào có giấy chuyến nấy yên. Đoàn cứ theo sổ tôi mà đi."
+      },
+      {
+        "speaker": "Chủ ghe",
+        "text": "Sổ ghi sao, tui chèo vậy. Chặng nào nước ngược, chặng nào cạn, tui biết hết. Có giấy đọc lại giữa đoàn là chắc ăn nhất."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh, tôi nghe rõ rồi. Bản ghi này chính là con đường của đoàn hàng. Ai cầm nó, người đó cầm cả tuyến — nên nó không thể là của riêng một người."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Dỡ xuống. Một phần thùng quay lại sạp chợ nhà cho bổn tọa. Hàng đi mấy đường là việc bổn tọa thấy vui thì làm — chuyến đầu này không ai gom được."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ông buôn muốn mua rau thì mai ra chợ mua như mọi người, giá ghi trên bảng. Bổn tọa bán rau, không bán đường đi của rau."
+      },
+      {
+        "speaker": "Từ Bách Xuyên",
+        "text": "Được. Chuyến này tôi đứng ngoài. Cách làm của tông môn, tôi nhớ kỹ rồi. Hàng còn nhiều chuyến. Chào cô chủ, tôi xin phép."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà Mến, bà ghi lại con số hai phần: đi Chợ Lớn mấy thùng, ở lại chợ nhà mấy thùng. Từ nay thành lệ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con và đoàn hàng, đường đi của hàng nhà này ghi cho cả chợ biết. Giấu đường là cách của người định bán đường. Bản chính theo đoàn, bản sao ở lại với bà Mến."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Tôi đọc lại bản ghi tuyến từ đầu, chậm rãi, cho cả đoàn cùng nghe. Ghe nào, giờ nào, chặng nào, ai nhận — không sót một mục."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Bản sao ở đâu cũng được, tôi không ý kiến. Giấy ai chép cũng ra giấy. Còn người đi đường, thuộc từng khúc sông, khúc chợ — vẫn là tôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Giấy ghi đường thì cứ ghi. Bổn tọa chỉ cần biết ghe nào chở theo vò rượu của bổn tọa, để tới nơi còn biết đường mà đòi."
+      },
+      {
+        "speaker": "Từ Bách Xuyên",
+        "text": "Chuyến này không được thì còn chuyến khác. Đường buôn đâu phải đi một lần là hết."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đi ban ngày, trước mặt cả chợ, vậy mới vui. Hàng của bổn tọa mà lén lút như hàng lậu thì còn gì là hàng của bổn tọa."
+      },
+      {
+        "speaker": "Chủ ghe",
+        "text": "Nghe hô đây: nước đang thuận, ghe rời bến giờ này là đẹp nhất. Đoàn ngồi yên, hàng đã chằng chắc — đi thôi!"
+      }
+    ],
+    "choices": [
+      {
+        "id": "route_record_open",
+        "text": "Cho đoàn hàng đi công khai ban ngày, bản ghi tuyến đọc to và để lại một bản ở chợ — đường đi không là bí mật của một người.",
+        "next": "ky3_28_luu_ngon_lam_chung",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3ChoLonRouteNoted": true
+        }
+      },
+      {
+        "id": "split_the_first_shipment",
+        "text": "Chốt cách chẻ lô làm lệ cho các chuyến sau: một phần đi xa, một phần giữ chợ nhà — không chuyến nào bị mua gom trọn.",
+        "next": "ky3_28_luu_ngon_lam_chung",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3ChoLonRouteNoted": true
+        }
+      }
+    ]
+  },
+  "ky3_28_luu_ngon_lam_chung": {
+    "id": "ky3_28_luu_ngon_lam_chung",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Lời nói được ghi lại",
+    "backgroundId": "ha-o-scripture-hall",
+    "location": "Tàng Kinh Đường của Hạ Ô Môn, Long Hải — ngày 22, buổi phân xử tranh chấp chợ bằng Lưu Ngôn Châu",
+    "companions": [],
+    "narration": [
+      "Ngày hai mươi hai, một vụ tranh chấp của chợ Long Hải được đưa vào Tàng Kinh Đường phân xử theo lệ mới. Chủ sạp gạo và chủ sạp vải cãi nhau về một lời hứa miệng — giá và ngày giao của một lô hàng, không giấy, không chứng chắc chắn. Mỗi người nhớ một kiểu, ai cũng chắc như đinh đóng cột.",
+      "Đỗ Thị Hạnh, trưởng Nhân Danh Đường, tiếp vụ việc. Nàng không cho cãi tiếp theo lối cũ. Lệ buổi phân xử đặt ra trước: hai bên nói lại từ đầu, chậm rãi, và từ câu đầu tiên, lời của hai bên có một chỗ ở. Trên bàn, giữa sổ Nhân Danh Đường và chồng hồ sơ mang về từ Phúc Thọ, có một vật nhỏ nằm yên trong hộp gỗ.",
+      "Cao Minh mở hộp, đặt Lưu Ngôn Châu lên bàn. Hạt châu ấy giữ lời nói vào nó và phát lại nguyên văn, không thêm, không bớt. Lần lượt, chủ sạp gạo rồi chủ sạp vải nói lại lời hứa vào châu. Hạnh cho phát lại ngay: hai phiên bản vang lên lệch nhau rõ từng chữ — giá khác, ngày giao khác. Cả đường im lặng.",
+      "Hạnh nói rõ giới hạn của hạt châu để không ai trông đợi quá phần của nó. Châu chỉ giữ lời vừa nói vào nó hôm nay. Lời đã quên, châu không trả lại được; ký ức cũ, châu không gọi về được.",
+      "Buổi phân xử mời thêm một người làm chứng: người bán hàng đứng gần hai sạp hôm hẹn giá, nghe được câu chuyện hôm ấy. Lúc đầu, lời anh ta khớp với một bên, khá rành. Nhưng khi Hạnh hỏi tới khoản tiền đặt cọc, anh ta bắt đầu nói vòng, câu sau sửa câu trước, rồi lặng lẽ nghiêng hẳn sang phía ngược lại — đổi lời ngay giữa buổi, trước mặt hạt châu đang ghi.",
+      "Việc đổi lời không qua khỏi mắt người trong đường. Trước buổi phân xử không lâu, một người môi giới vẫn lảng vảng quanh các vụ việc của chợ đã gặp riêng nhân chứng. Thứ nhân chứng nhận không phải tiền mặt khó truy: đó là giấy chi của vòng Phúc Thọ và Tài Phòng, mang dấu hiệu tài chính đoàn đã từng thấy. Lời dặn đi kèm rất khéo: chỉ nhờ anh ta nhớ lại cho đúng thôi.",
+      "Trên bàn phân xử, chồng hồ sơ mang về từ Phúc Thọ được mở ra: lệnh chi mang chữ ký Trần Khắc Tín, những biên nhận hoàn trả vẫn chạy đều cho chủ đã chết, giấy nợ và giấy chết của tuyến quan tài — toàn bộ là chứng cứ đoàn đã có từ trước. Tiểu Lan và Đỗ Thị Hạnh đối chiếu ngay trước mặt hai bên.",
+      "Từng mục được đọc lên, đặt cạnh nhau: tên người ký trên giấy chi mua lời nói, ngày tháng, số tiền. Đặt cạnh lệnh chi cũ và biên nhận hoàn trả, chúng khớp ở đúng chỗ không thể là tình cờ — cùng hệ dấu, cùng cách ghi, cùng đường tiền. Đường tiền mua một lời nói ở chợ Long Hải chạy cùng hệ giấy với đường tiền nuôi người chết ở Phúc Thọ.",
+      "Phán quyết chỉ rộng bằng chứng cứ của nó. Vụ gạo và vải xử theo lời đã ghi đầu tiên của hai bên: khoản nào châu ghi rõ thì theo châu. Vụ mua nhân chứng không xử phạt ai tại chỗ. Toàn bộ — lời chứng hai lần, tờ giấy chi, kết quả đối chiếu — được ghi vào sổ Nhân Danh Đường, và tờ giấy chi bị giữ lại làm chứng cứ. Từ hôm nay, ở chợ này, lời nói có chỗ ở, và lời nói bị mua cũng có chỗ ở."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Chủ sạp gạo",
+        "text": "Tui nói lại cho rõ: giá hẹn là giá tui vừa nói, ngày giao là ngày tui vừa nói. Hẹn miệng bao nhiêu năm vẫn êm, bữa nay bên kia lật hết."
+      },
+      {
+        "speaker": "Chủ sạp gạo",
+        "text": "Gạo tui chở tới đúng ngày hẹn. Người nhận không ra, hàng nằm một đêm ngoài bến, ẩm hết một lớp. Phần hư đó ai chịu?"
+      },
+      {
+        "speaker": "Chủ sạp vải",
+        "text": "Ông nói vậy là dựng chuyện. Giá hẹn cao hơn số ông vừa kể, ngày giao cũng trễ hơn. Ông chối ngày là tui ôm hết phần vải đã may."
+      },
+      {
+        "speaker": "Chủ sạp vải",
+        "text": "Chợ này ai cũng biết tui giữ chữ. Ông nhớ một kiểu, tui nhớ một kiểu — bữa nay phải có thứ phân cho ra lẽ."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Hai bên nghe lệ buổi này. Từ giờ, nói lại từ đầu, chậm rãi. Lời nói ra từ câu đầu tiên đã có chỗ ở. Cãi theo trí nhớ, đường này không xử."
+      },
+      {
+        "speaker": "Chủ sạp gạo",
+        "text": "Tui nói vào đây nguyên lời đã hứa bữa đó: giá này, ngày này, giao tại bến này."
+      },
+      {
+        "speaker": "Chủ sạp vải",
+        "text": "Tui cũng nói vào đây nguyên lời của tui: giá khác, ngày khác. Coi lời ai đứng vững."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Nghe cho rõ giới hạn của hạt châu. Nó chỉ giữ lời vừa nói vào nó hôm nay. Lời đã quên từ trước, nó không trả lại được. Ký ức cũ, nó không gọi về được."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Bây giờ phát lại. Hai bên nghe nguyên văn lời của chính mình trước, rồi mới cãi tiếp."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hai cái miệng, hai câu chuyện. Để hạt châu nhớ thay. Trí nhớ ở chợ này cũng có giá — bổn tọa nghe giá lên xuống đây."
+      },
+      {
+        "speaker": "Nhân chứng",
+        "text": "Hôm đó tui đứng gần thiệt. Giá hẹn là giá bên sạp gạo nói, ngày giao cũng khớp. Tiền đặt cọc thì… hình như trao sau, nhớ chưa chắc."
+      },
+      {
+        "speaker": "Nhân chứng",
+        "text": "À mà khoan. Nghĩ lại thì… ngày giao chắc là ngày bên sạp vải nói mới đúng. Giá thì có khi tui nghe lầm."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi không kết tội anh. Tôi ghi lời anh nói hai lần thành hai đoạn riêng. Sổ giữ cả hai, không xóa đoạn nào."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh, tôi nghe anh đổi lời rồi. Người quên thì mơ hồ từ đầu. Anh rành rọt rồi mới vòng — đó là lời vừa được ai mua xong."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Phát lại đoạn anh ta vừa nói vòng. Nguyên văn. Coi một câu nói cong đi được tới đâu."
+      },
+      {
+        "speaker": "Người môi giới",
+        "text": "Cô Hạnh nói vậy oan cho tôi. Tôi chỉ nhờ anh ta nhớ lại cho đúng sự thật. Nhân chứng nhớ sai, hại cả hai bên."
+      },
+      {
+        "speaker": "Người môi giới",
+        "text": "Còn tờ giấy chi đó là tiền biếu qua lại làm ăn, chợ này ai chẳng biếu nhau. Giấy có dấu thì đã sao?"
+      },
+      {
+        "speaker": "Nhân chứng",
+        "text": "Thôi, tui nói thiệt. Có người đưa tui tờ giấy đó, dặn nhớ lại cho đúng ý bên kia. Tui cầm rồi, sợ đủ thứ. Nay nói hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh, tôi hỏi hai câu. Giấy chi ấy do ai ký? Khoản chi ấy ghi vào sổ nào của bên đưa giấy?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi hỏi lại cho cả đường nghe: tiền mua một lời nói ở chợ này đi bằng giấy của vòng nào, qua tay ai, dấu có phải dấu đã thấy ở Phúc Thọ?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi đối chiếu từng mục: tên người ký, khớp. Ngày tháng, khớp cách ghi. Số tiền, cùng một hệ chi. Lời nói ở chợ này được mua bằng cùng thứ giấy đã nuôi người chết ở bến kia."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Kết luận nằm ở đây: không có chứng cứ nào từ trời rơi xuống. Toàn là giấy đoàn giữ từ trước, nay đặt cạnh nhau."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, tôi đọc cho rõ: biên nhận tên đã xóa, giấy nợ này, giấy chết này — đoàn giữ đủ từ trước. Giấy chi mua nhân chứng nằm cùng một chồng với chúng."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi ghi kết quả vào sổ Nhân Danh Đường, đọc lại thành tiếng: giấy chi mua nhân chứng cùng hệ dấu, cùng cách ghi với lệnh chi và biên nhận hoàn trả của Phúc Thọ."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Sổ ghi xong sẽ giữ ở đường. Ai cần đối chiếu lại, tới đường mà coi. Chứng cứ vào sổ này không đi lạc thêm tay nào nữa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cô Hạnh, sổ ấy giữ cho ai coi? Để phân xử cho dân chợ, hay khóa lại cho yên chuyện?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hạt châu này ở với người biết giữ sổ thì hơn ở với bổn tọa. Bổn tọa giữ kiếm là đủ. Sổ và châu về bàn cô Hạnh."
+      }
+    ],
+    "choices": [
+      {
+        "id": "witness_record_kept",
+        "text": "Ghi phán quyết và vụ mua nhân chứng vào sổ Nhân Danh Đường — lời đã nói từ nay có chỗ ở, lời bị mua cũng vậy.",
+        "next": "ky3_29_chieu_cot_khe_no",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3SpeechBeadWitnessed": true
+        },
+        "objective": "trace_finance"
+      },
+      {
+        "id": "finance_dossier_sealed",
+        "text": "Giữ bản đối chiếu tài chính Phúc Thọ khóa riêng trong hồ sơ của Hạnh — chứng cứ đã khớp một lần, không để nó đi lạc thêm một tay nào nữa.",
+        "next": "ky3_29_chieu_cot_khe_no",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3SpeechBeadWitnessed": true
+        },
+        "objective": "trace_finance"
+      }
+    ]
+  },
+  "ky3_29_chieu_cot_khe_no": {
+    "id": "ky3_29_chieu_cot_khe_no",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Vết tẩy trên khế nợ",
+    "backgroundId": "long-hai-market",
+    "location": "Chợ Long Hải, Nam Kỳ — ngày 22, một tờ khế nợ bị đưa ra giữa chợ",
+    "companions": [],
+    "narration": [
+      "Cũng ngày hai mươi hai, giữa chợ Long Hải, một người dân mang tờ khế nợ nhà mình ra khiếu. Số tiền ghi trong khế hôm nay khác số tiền anh ta nhớ đã vay — khác tới mức phần đời còn lại của anh ta nằm ở con số nào trong hai con số ấy. Theo lệ chợ này từ buổi đọc ba tờ khế năm xưa, Mến nhận khế, đọc thành tiếng cho vòng người nghe.",
+      "Bà Chín Lãi có mặt từ đầu buổi. Tờ khế này từng qua tay vòng của bà: bà mua lại nó trong xấp giấy của Tài Phòng, như bà vẫn làm bao năm. Buổi khiếu này không chỉ là chuyện của người vay và nhà Hứa — nó là chuyện của mọi tờ giấy trong rương bà.",
+      "Mến đọc xong lượt đầu, Tiểu Lan xin cầm khế coi lại. Nàng coi chậm, ngón tay dừng ở dòng số tiền gốc. Mặt giấy ở dòng ấy mỏng hơn mọi dòng khác, sáng lên một màu khác thường — dấu vết của chỗ đã bị cạo, bị tẩy, rồi viết đè lên. Đó là con mắt của người lớn lên trong hệ giấy.",
+      "Cao Minh cầm tờ khế, tiện tay rắc lên dòng số tiền một lớp phấn mỏng — Chiếu Cốt Phấn — nhẹ như rắc gia vị vào buổi chợ. Dưới lớp phấn, chữ cũ hiện lên: số tiền gốc nhỏ hơn hẳn số đang ghi, và một ngày tháng cũ nằm dưới ngày tháng mới. Cả chợ im lặng — thứ im lặng của người vừa thấy cơ chế đè lên đời mình có hình thù.",
+      "Người cầm khế đứng lặng nhìn hai lớp chữ. Buổi chợ chưa kịp vỡ thành tiếng cãi thì một người khách bước vào vòng: Hứa Tế Nguyên, đại diện Tài Phòng, tới một mình với một cặp giấy, không kèn không trống. Hắn chào đúng lễ, tự giới thiệu đúng danh phận, rồi xin nói về tờ khế bằng ngôn ngữ giấy tờ.",
+      "Lập luận của Tế Nguyên điềm tĩnh. Triện là triện thật. Chuỗi chuyển tay không đứt một mắt. Còn vết tẩy — nếu quả có — theo hắn là sửa lỗi chép của thư lại: chép sai thì sửa, gốc nợ không vì một vết sửa mà mất. Hắn không đe dọa ai.",
+      "Bên cạnh vòng người, Lý Kha ghi biên bản buổi chợ. Hắn ghi đúng, ghi đủ, bút đi đều, không nói thêm nửa chữ ngoài phần việc. Ai nhìn vào cũng chỉ thấy một thư lại làm đúng nghề — chỉ có điều, biên bản của hắn hôm nay đầy đủ nhất chợ này, vì hắn ghi cả những phần không ai dặn ghi.",
+      "Bà Chín Lãi bước ra tiếp theo, và bà không bênh người vay. Bà tính đường của chính mình, nói thành tiếng cho cả chợ nghe: nếu khế của Tài Phòng bị kết là tẩy sửa, toàn bộ xấp khế bà mua lại từ Tài Phòng đều thành giấy rủi ro. Chủ nợ nhỏ quay sang đòi chủ nợ lớn chịu trách nhiệm cho giấy mình bán ra.",
+      "Quyết định về tờ khế được tuyên giữa chợ. Hôm nay không ai xử: nợ chưa xóa, khế chưa hủy, chỉ có vết tẩy là không giấu lại được. Bản chính niêm phong theo hồ sơ Nhân Danh Đường, chờ ngày đối chiếu sổ gốc Tài Phòng. Một bản sao có Mến và chính Bà Chín Lãi cùng ký chứng ở lại chợ — nâng một nấc so với bản sao một người giữ năm xưa. Trong đám đông có tiếng xúi đốt khế cho xong.",
+      "Cao Minh đặt tờ khế xuống nguyên vẹn, lớp phấn còn trên mặt giấy. Tế Nguyên cáo lui đúng lễ, mang theo một bản biên bản. Hắn thua một buổi chợ, nhưng mang về một tin quan trọng: tông môn này đánh bằng chứng cứ, không đánh bằng đốt giấy. Lý Kha thu bút sau cùng, liếc tờ khế niêm phong một cái rất ngắn. Đêm nay, đội ghe Long Hải ra khơi trong mưa."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui đọc khế thành tiếng theo lệ chợ: tiền gốc đây, lãi đây, ngày vay đây, triện đóng góc này. Bà con nghe cho rõ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Đọc lại lần nữa cho người không biết chữ nghe trọn: tiền gốc là con số này, ngày trả là ngày này. Ai cầm khế cũng phải nghe đúng số đang đè lên nhà mình."
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Giấy của vòng này xưa nay ra chợ không ai dám nghi. Nay mang ra giữa chợ coi như giấy giả, khác nào nghi cả chợ này bao năm."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, tôi xin coi kỹ một chỗ. Mặt giấy ở dòng số tiền mỏng hơn mọi dòng khác, sáng khác thường. Giấy bị cạo rồi viết đè lên mới để lại chỗ vậy."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Phấn này bổn tọa vẫn dùng coi xương giấy chơi. Rắc lên một lớp, coi giấy có mấy lớp chữ. Giấy sạch thì phấn trôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cả chợ coi cho kỹ, rồi cho bổn tọa hỏi: giấy tẩy một lần gọi là sửa. Tẩy quen tay tới thành nghề, gọi là gì?"
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Khoan. Hiện chữ cũ lên không có nghĩa khế này là giả. Tui mua lại nó bằng tiền thiệt — nếu nó có chuyện, tui phải được hỏi cho rõ trước nhất."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con không biết chữ, tôi đọc to hai con số: số cũ dưới lớp tẩy chừng này, số đang ghi trên mặt khế chừng kia. Chênh bao nhiêu, bà con tự tính."
+      },
+      {
+        "speaker": "Hứa Tế Nguyên",
+        "text": "Thưa cô chủ, thưa bà con, tôi là người của Tài Phòng, xin nói bằng giấy tờ. Triện là triện thật, chuỗi chuyển tay không đứt một mắt — chợ này không ai cãi được."
+      },
+      {
+        "speaker": "Hứa Tế Nguyên",
+        "text": "Còn vết tẩy, nếu quả có, là sửa lỗi chép của thư lại — chép sai thì sửa, lệ nhà nào cũng vậy. Gốc nợ không vì một vết sửa mà mất."
+      },
+      {
+        "speaker": "Lý Kha",
+        "text": "Tôi ghi biên bản, xác nhận một việc thuần thủ tục: lần chuyển tay gần nhất ghi ngày tháng này, người chuyển có trong biên bản. Ngoài phần ấy, tôi không có lời nào."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ông Tế Nguyên, tôi hỏi đúng vào lập luận của ông: nếu sửa lỗi chép, sao không đóng triện sửa bên cạnh, như lệ của nhà mình?"
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Tui nói rõ giữa chợ: tui không bênh người vay, tui bênh xấp giấy của tui. Khế mua lại từ Tài Phòng mà thành giấy chết, phần thiệt đó ai đền?"
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Tài Phòng bán giấy ra thì phải chịu cho giấy của mình. Tui cầm cả xấp như tờ này trong rương. Nay kết tờ này là giấy tẩy, mai cả rương tui thành giấy lộn sao?"
+      },
+      {
+        "speaker": "Bà Chín Lãi",
+        "text": "Ông Tế Nguyên, tui đòi một câu trả lời bằng giấy: Tài Phòng bảo đảm cho khế mình bán ra tới đâu, ghi ra cho tui coi."
+      },
+      {
+        "speaker": "Lý Kha",
+        "text": "Tôi đọc lại câu đòi của bà Chín để ghi biên bản, không thiếu một chữ: Tài Phòng phải trả lời bằng giấy về phần bảo đảm cho khế đã bán."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, hôm nay nghe cho kỹ: người của vòng nợ đang cãi nhau bằng giấy của nhau. Thứ cãi nhau ấy chưa từng xảy ra ở chợ này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, khế này hôm nay không ai xử. Nó ở lại làm chứng cho một vết tẩy. Người vay chưa hết nợ chỉ vì vết tẩy lộ ra đâu."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đốt giấy thì dễ, bổn tọa đốt quen rồi. Nhưng tờ này giữ lại — bổn tọa muốn coi cuốn sổ đằng sau nó dày tới đâu."
+      },
+      {
+        "speaker": "Hứa Tế Nguyên",
+        "text": "Quyết định ấy đúng lệ, Tài Phòng chờ ngày đối chiếu sổ. Tôi xin cáo lui. Chỉ một câu: cô chủ vẫn còn nhớ lệ giấy của nhà mình."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đi thong thả. Lần sau tới chợ, mang theo cuốn sổ cho bổn tọa coi ké. Giấy càng dày, buổi chợ của bổn tọa càng vui."
+      },
+      {
+        "speaker": "Hứa Tế Nguyên",
+        "text": "Buổi đối chiếu sẽ có, thưa ông — bằng giấy, trước mặt người của chợ này. Tài Phòng không trốn buổi đối chiếu nào."
+      },
+      {
+        "speaker": "Lý Kha",
+        "text": "Biên bản buổi chợ ghi tới đây là hết. Ai cần coi lại, biên bản đủ từng lời đã nói. Tôi thu bút."
+      }
+    ],
+    "choices": [
+      {
+        "id": "deed_copy_two_keepers",
+        "text": "Để bản sao khế bị tẩy ở lại chợ với hai người cùng giữ — Mến và chính Bà Chín Lãi — giấy của dân, dân và chủ nợ cùng làm chứng.",
+        "next": "ky3_30_den_ve_luoi_trieu",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3DeedErasureExposed": true
+        }
+      },
+      {
+        "id": "deed_sealed_for_audit",
+        "text": "Niêm phong bản chính vào hồ sơ Nhân Danh Đường, chờ ngày đối chiếu với sổ gốc của Tài Phòng — xử giấy bằng giấy, không xử bằng lửa.",
+        "next": "ky3_30_den_ve_luoi_trieu",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3DeedErasureExposed": true
+        }
+      }
+    ]
+  },
+  "ky3_30_den_ve_luoi_trieu": {
+    "id": "ky3_30_den_ve_luoi_trieu",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Đèn dẫn về, lưới chặn triều",
+    "backgroundId": "long-hai-coast",
+    "location": "Bến ghe Long Hải, Nam Kỳ — ngày 23, đêm mưa, đội ghe ra khơi",
+    "companions": [],
+    "narration": [
+      "Chiều muộn ngày hai mươi ba, mưa đổ xuống bến Long Hải sớm và nặng hạt. Đội ghe đêm vẫn phải ra khơi: luồng cá không chờ thời tiết, một đêm nằm bờ là cả nhà ghe mất phần ăn. Ngư ông đứng đầu cầu bến, nhìn cửa lạch một lúc lâu. Triều đang rút gắt; lạch quen tới đâu, gặp nước rút kiểu này cũng thành lạch lạ với người về khuya.",
+      "Võ Văn Đực, người lo tuyến sông của vùng, trình bày phần việc của hắn tại bến. Ghe nào về không nổi đường biển thì rút theo sông: hắn đã dọn bến sông trong làm đường về phụ, cắm mốc, để người chờ sẵn. Hai đường về nối thành một vòng kín trước khi ghe đầu tiên rời bến.",
+      "Cao Minh cho mang Hồi Gia Đăng ra bến. Từng đội ghe được trao tận tay một chiếc: thứ đèn không tắt trong mưa gió, ánh sáng chỉ về hướng bến nhà. Phan Bảy Nện, trưởng Khí Trận Đường, nhận phần kỹ thuật — cách treo, cách giữ, cách đổi khi đèn hỏng — nói rành rọt như thợ dặn thợ. Đèn trao không kèm điều kiện nào: không tiền, không thề, không ghi nợ.",
+      "Sau phần đèn là phần lưới. Trấn Triều Võng được đội Khí Trận và dân ghe cùng tay giăng xuống cửa lạch: tấm lưới không bắt con cá nào, nó giữ tuyến nước yên cho ghe về và cản vật trôi đập vào mạn ghe. Võ Văn Đực cắm cọc mốc phía sông ăn khớp với đầu lưới phía biển.",
+      "Trước khi ghe ra, danh sách được đọc lên ở bến. Từng ghe được gọi tên chủ ghe và số người trên ghe, ghi vào tờ danh sách để lại ở bờ. Không ghe nào ra khơi mà bến không biết tên. Chiếc đầu tiên rời bến trong mưa, đèn đầu mũi cháy yên giữa màn nước. Rồi chiếc thứ hai, thứ ba — đội ghe tan dần vào bóng tối ngoài cửa lạch, mỗi chiếc một đốm sáng nhỏ.",
+      "Khuya, ghe về lần lượt theo ánh đèn. Từng chiếc vào lạch được gọi tên, đối chiếu danh sách ở bến. Tới lượt đếm cuối, danh sách còn thiếu đúng một cái tên: một ghe nhỏ chưa về. Ngoài xa, qua màn mưa, đèn của nó nhấp nháy không định hướng — thấy được mà không vào được lạch.",
+      "Tiểu Lan cho thi hành ngay lệ nàng đặt từ đầu buổi. Hồi Gia Đăng chính ở đầu cầu bến nhấp ba lần — tín hiệu trả lời của bờ — rồi tên ghe lạc được đọc to trong mưa để đội giữ lưới biết phải giữ nguyên lối nước nào. Cả bến hướng ra đốm sáng chao đảo ấy. Không ai la hét; người sông nước làm việc bằng giọng vừa đủ nghe.",
+      "Cao Minh đứng dậy ở đầu bến. Hắn phất tay một cái, nhẹ như gạt một tấm màn sang bên. Triều đang rút gắt tách ra một vệt nước lặng, từ cửa lưới chạy thẳng ra hướng ghe lạc, và ánh đèn trên bến thành một đường sáng liền mạch với đốm đèn trên mũi ghe kia. Ghe lạc bám vệt nước lặng ấy mà về, qua cửa lưới an toàn. Cả bến chỉ nghe tiếng mưa và tiếng gọi tên ghe.",
+      "Ghe lạc cập bến, người ướt sũng, mệt, nhưng không ai bị thương. Đèn của đội nào, đội ấy giữ luôn từ đêm nay — bến không thu lại, không cho thuê lại. Danh sách ghe được giữ ở bến làm lệ: từ nay ghe ra khơi đều có tên ở lại bờ. Sáng mai, chuyện ghe về trong mưa chưa kịp nguội thì ở chợ, một chiếc cân lạ đã được khiêng ra đặt giữa sân."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Ngư ông",
+        "text": "Biển đêm nay không hiền đâu. Cái đáng ngại là triều rút gắt. Lạch quen mấy chục năm, gặp nước rút kiểu này cũng hóa lạch lạ với người về khuya."
+      },
+      {
+        "speaker": "Ngư ông",
+        "text": "Già đi biển từ hồi còn để chỏm, nói một câu cho đoàn nghe: ghe lạc không phải vì biển dữ, mà vì mất dấu nhà. Đêm nay lo nhất là lúc về."
+      },
+      {
+        "speaker": "Võ Văn Đực",
+        "text": "Phần sông trong để tui lo. Ghe nào về không nổi đường biển thì rút theo sông: bến trong dọn sẵn, cọc mốc cắm đủ, có người chờ. Đường sông thông rồi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con chủ ghe, trước khi ra tôi xin một việc: từng ghe cho tôi tên chủ ghe và số người trên ghe, ghi vào danh sách để ở bến."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Đèn treo đầu mũi ghe, cao khỏi tầm sóng tạt, dây chằng hai mối như tui làm đây. Qua vùng nước lạ thì che bớt ánh sáng. Đèn hỏng, về bến đổi, không phải mua."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Đèn này không tắt vì mưa gió, đừng lo phần ấy. Phần của bà con là treo cho chắc, giữ nó hướng về bến nhà mình. Treo sai một gang, đường về lệch một khúc sông."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đèn thì cứ cầm lấy mà đi. Bổn tọa cho đèn, chứ không cho nợ. Đừng cảm ơn dài dòng — mưa ướt hết cả bến rồi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Mưa giỏi thì tắt thử đèn của bổn tọa coi. Tắt được, bổn tọa cho cả bến cười một trận. Không tắt được thì lo chèo đi — cá không chờ ai đâu."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Giăng lưới nghe lệnh tui: cọc đầu giữ nguyên, neo giữa thả thêm một sải, đầu trong đưa đội bờ giữ. Lưới giữ nước yên cho ghe về, không bắt cá. Ai thả lệch, giăng lại."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Đầu lưới phía biển ăn với cọc mốc phía sông, hai đầu gặp nhau là tuyến nước yên thông một vòng. Ghe về đường nào cũng có nước lặng mà vào."
+      },
+      {
+        "speaker": "Võ Văn Đực",
+        "text": "Đầu sông tui cắm mốc xong, mốc ăn khớp với đầu lưới phía biển. Ghe lạc vào được đường sông thì theo mốc tui mà về, bến trong có người đón."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Người của bổn tọa làm coi được đấy. Lưới giăng đâu ra đó, đèn treo đâu yên đó. Bổn tọa khỏi động tay."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, tôi đọc lại danh sách ghe lần cuối: tên chủ ghe, số người, đọc thành tiếng cho cả bến nghe. Thiếu tên nào, nói ngay."
+      },
+      {
+        "speaker": "Người cầm lái",
+        "text": "Tui từ ghe vừa về, nói lên bờ nghe: ngoài xa có ánh đèn lạ, chao qua chao lại hoài, không vào lạch. Không phải đèn của ghe đã về — còn một chiếc lạc ngoài đó."
+      },
+      {
+        "speaker": "Người cầm lái",
+        "text": "Ghe tui về ngang tầm ấy, thấy đốm sáng cứ đứng một chỗ mà xoay. Nước rút kiểu này, không có đường sáng dẫn thì nó không dám vào — chờ tới sáng thì nguy."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Đội lưới nghe đây: giữ nguyên đầu lưới cửa lạch, không thu, không xê dịch một gang. Tuyến nước yên ở yên đó cho ghe lạc bám vào."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, danh sách còn thiếu đúng một cái tên. Tôi gọi to tên ghe ấy bây giờ. Đèn chính ở đầu cầu nhấp ba lần theo lệ của bến."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ghe ngoài kia nghe cho rõ: bến thấy đèn của anh rồi. Cứ hướng đốm sáng lớn nhất mà vào, đội lưới giữ lối nước cho anh."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nước tránh ra một chút thì có sao. Về đi — đường sáng tới mũi ghe rồi đó, còn chờ bổn tọa bế vào nữa sao?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Về tới thì về cho lẹ. Bổn tọa đứng mưa nãy giờ, ướt hết áo rồi. Cứu người xưa nay toàn tốn áo đẹp của bổn tọa."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Ghe lạc vào tuyến rồi! Đội lưới thu đầu dây từ từ, hô cho ghe qua cửa. Qua rồi — giữ thêm một nhịp cho chắc. Xong!"
+      },
+      {
+        "speaker": "Võ Văn Đực",
+        "text": "Tuyến sông đêm nay không phải dùng tới, mà có sẵn thì người ta mới dám ra biển. Đường về phụ nằm đó không thừa đâu."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, lệ từ đêm nay nói rõ giữa bến: đèn theo ghe, tên ở bờ. Người đi đêm từ nay có người đếm, có người chờ, có đèn mà về."
+      }
+    ],
+    "choices": [
+      {
+        "id": "lamps_stay_with_boats",
+        "text": "Để Hồi Gia Đăng ở lại hẳn với từng đội ghe — đèn thuộc về người đi đêm, không thuê lại, không nộp lại, không ghi nợ.",
+        "next": "ky3_31_vo_tu_thien_binh",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LampsAndTideNet": true
+        }
+      },
+      {
+        "id": "boat_crews_keep_the_watch",
+        "text": "Cho đội ghe tự cử người giữ lưới và đèn theo phiên, thay được khi làm mất — lệ cứu hộ do chính người sông nước giữ lấy.",
+        "next": "ky3_31_vo_tu_thien_binh",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LampsAndTideNet": true
+        }
+      }
+    ]
+  },
+  "ky3_31_vo_tu_thien_binh": {
+    "id": "ky3_31_vo_tu_thien_binh",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Chiếc cân không biết nói dối",
+    "backgroundId": "long-hai-market",
+    "location": "Chợ Long Hải, Nam Kỳ — ngày 23, giữa sân chợ",
+    "companions": [],
+    "narration": [
+      "Trưa ngày hai mươi ba, chợ Long Hải đông hơn mọi phiên thường. Cá từ bến đưa lên còn ướt, rau gánh vào còn dính đất ruộng. Ở góc chợ gần trạm cân, Bà Sương bày thúng cá mà mắt cứ ngó về bàn cân của trạm, nơi Cai Lẫm đang coi người của hắn thu phí từng chuyến hàng như lệ bao năm.",
+      "Tiểu Lan tới chợ cùng Trần Thị Mến. Mến ôm cuốn sổ chợ và một xấp giấy trắng, thứ nay đã thành quen ở chợ này: giấy gì đặt lên bàn cũng được đọc to, việc gì dính tới tên người cũng được ghi lại. Tiểu Lan dừng trước thúng cá của Bà Sương, chào bà như người quen cũ từ buổi sớm trên thuyền ở bến cá, rồi hỏi lại đúng việc nàng từng hỏi buổi sáng ấy.",
+      "Giữa sân chợ, người của tông môn khiêng ra một chiếc cân lớn đặt lên nền đất nện. Đó là Vô Tư Thiên Bình của Hạ Ô Môn: cán cân thẳng, đĩa cân rộng, quả chuẩn đặt riêng trong hộp gỗ mở nắp. Nó không thuộc trạm nào, không mang triện của ai. Từ lúc nó được đặt xuống, đám đông tự dạt thành một vòng tròn rộng quanh khoảng sân trống ở giữa.",
+      "Cao Minh bước ra sau cùng, tay cầm chén rượu còn lưng, hai thanh kiếm lơ lửng yên sau vai. Hắn không ngồi vào bàn nào, không đứng vào chỗ quan tòa. Hắn chỉ nhìn chiếc cân một lúc, rồi nhìn sang bàn cân của trạm, nơi quả cân chuẩn của Cai Lẫm nằm đen bóng vì tay người cầm nắm nhiều năm, cùng ký hiệu, cùng dòng chữ của trạm, như hai quả cân từng treo lên ở bến cá buổi sớm Kỳ I.",
+      "Quả cân chuẩn của trạm được bưng ra bằng hai tay, đặt lên đĩa Thiên Bình trước mặt cả chợ. Kim cân chao một nhịp rồi đứng lại ở một chỗ không ai cãi được: quả cân ấy nhẹ hơn cân chuẩn một phần rõ rệt, đúng phần chênh từng thấy giữa hai quả cân treo trên bến cá, nay thành con số đọc được thành tiếng. Tiếng xì xào chạy hết vòng người này sang vòng người khác, mà không ai cần la lên.",
+      "Sau nhịp cân trạm, buổi chợ đổi hẳn tính chất. Theo lời Tiểu Lan đặt ra, từng nhà tự mang cân nhà của mình tới: cân đòn của sạp khô, cân nhỏ của hàng rau, cân cũ của nhà bán mắm. Từng chiếc được cân lại cùng một vật chuẩn ngay tại sân, kết quả đọc to từng nhà, Mến ghi lại thành một danh sách đối chiếu dài dần theo buổi trưa. Người ta không còn đứng coi một màn phơi bày nữa; người ta tự tay kiểm chứng việc của nhà mình.",
+      "Buổi đối chiếu xong, đám đông không tan ngay. Nhiều người còn đứng lại nhìn Cai Lẫm, như chờ một phán quyết rơi xuống. Trạm cân vẫn đứng nguyên ở góc chợ, bàn gỗ cũ kê cao, cuốn sổ bìa sờn vẫn trên bàn. Cai Lẫm cũng vẫn đứng sau bàn của hắn, chức phận chưa mất một tấc, chỉ có khoảng sân trước mặt hắn là không còn ai chịu đứng im như trước nữa.",
+      "Chiều xuống, Vô Tư Thiên Bình ở lại giữa sân chợ, không giao cho trạm giữ, không giao cho một nhà nào giữ riêng. Ai qua chợ cũng trông thấy nó, như một cái lệ mới không cần ai đọc. Cai Lẫm quay về sau bàn cân của mình, đứng đúng chỗ hắn vẫn đứng từ buổi sớm ở bến cá. Tin buổi cân lại chưa kịp đi hết chợ thì ở phía linh tuyền, người ta đã cãi nhau về một thứ khác: nước thì đang thừa, mà vẫn có người tranh nhau một tờ giấy."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Trưa nay cân của tông môn đặt giữa sân chợ. Nhà nào muốn cân lại cân nhà, cân lại hàng của mình thì mang tới. Đọc to, ghi rõ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Việc này chợ làm, tông môn chỉ cho mượn chiếc cân. Ghi tới đâu, bản ghi ở lại với chợ tới đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, tôi hỏi lại một việc cũ. Từ buổi sáng ở bến cá tới hôm nay, bà đã nộp phí bao nhiêu lần nữa, và có lần nào trạm đưa bà biên lai chưa?"
+      },
+      {
+        "speaker": "Bà Sương",
+        "text": "Cô hỏi, tui đáp y như bữa trước. Nộp thì nộp theo chuyến cá, đếm không hết. Giấy thì không ai đưa bao giờ. Tiền nộp vào như nước đổ ra biển."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cân của bổn tọa có một cái tật dở. Nó không biết nói dối, cũng không biết nể ai. Đặt thứ gì lên, nó chỉ nói thứ ấy nặng nhẹ bao nhiêu."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Trạm của ngươi, quả cân của ngươi. Ngươi tự đặt lên đi. Bổn tọa không cầm hộ, kẻo ngươi lại nói tay bổn tọa nặng hơn tay ngươi."
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Trạm xin nghe lời ông khách. Nhưng cân của trạm là cân quan định, triện còn trên quai cân kia. Thứ đã có triện, không phải để chợ đem ra đùa giữa trưa."
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Quả này là quả để dành của trạm, chưa qua kiểm lại, người làm để lẫn vào dãy cân thường thôi. Một quả để dành, không làm nên lệ của cả trạm."
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Lệ trạm có triện, có sổ, có chữ ký của những người ở trên tôi. Một buổi chợ coi rồi về, đổi được triện nào, sổ nào?"
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Trạm thu theo lệ của trên, tôi chỉ là người coi trạm. Muốn kêu chuyện lệ, phải kêu lên chỗ đặt ra lệ, chớ kêu một người giữ bàn."
+      },
+      {
+        "speaker": "Bà Sương",
+        "text": "Ông Cai nói quả để dành, tui nghe vậy. Mà cá của tui bao năm cân bằng dãy cân này, nhẹ một phần. Phần ấy nhân lên bao nhiêu chuyến cá của cả bến, ông tính thử."
+      },
+      {
+        "speaker": "Chủ sạp khô",
+        "text": "Cân nhà tui cân lại, đúng chuẩn, không lệch một ly. Vậy bao năm nay hàng của tui qua trạm bị hụt là hụt thiệt, chớ không phải tui tính già hóa non."
+      },
+      {
+        "speaker": "Bà Sương",
+        "text": "Cá của tui, cân lại ngay tại chỗ này đi. Tui bán cá cả đời, bữa nay mới được nghe con số thiệt của thúng cá nhà mình đọc to giữa chợ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Cứ đọc to, cứ ghi lại. Từ nay ai nộp phí cũng được cân lại hàng trước, ngay tại sân này, trước mặt người chợ. Đó là lệ của buổi hôm nay."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Việc này là việc của chợ, thưa bà con. Tông môn chỉ cho mượn một chiếc cân. Cân nhà của ai, người ấy tự mang ra; con số của nhà nào, nhà ấy tự nghe."
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Tôi coi danh sách đối chiếu ấy dài dần từ trưa tới giờ. Các người cứ ghi cho kỹ. Ghi xong, ngày mai trạm vẫn mở, lệ vẫn chạy như cũ thôi."
+      },
+      {
+        "speaker": "Cai Lẫm",
+        "text": "Nói rõ để cả chợ nghe: lệ vẫn chạy, trạm vẫn mở, phí ngày mai vẫn thu. Ai không phục, mang giấy lên trên mà kêu. Ở trên là ai, các người biết rồi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hôm nay bổn tọa đặt cái cân ra coi chơi. Xử người là việc của người có lệ. Bổn tọa không có cái lệ đó, cũng không giành việc của ai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Danh sách đối chiếu hôm nay, chợ giữ một bản, Nhân Danh Đường giữ một bản. Mai này ai hỏi con số của buổi này, mở hai bản ấy ra là rõ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Từ nay cân của trạm có bạn rồi. Hai chiếc cân ở chung một chợ, coi nhau mà sống. Bổn tọa thấy vậy là vui cho cả hai bên."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, con số của bà bữa ở bến cá chỉ có mấy người nghe. Con số hôm nay, cả chợ cùng nhớ. Bà không phải nhớ một mình nữa."
+      }
+    ],
+    "choices": [
+      {
+        "id": "household_scales_stay",
+        "text": "Để cân nhà của dân luân phiên ở lại chợ làm đối chứng thường trực — từ nay ai cũng được cân lại trước khi nộp phí.",
+        "next": "ky3_32_tram_tuyen_mot_to_giay",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3TrueScaleShown": true
+        }
+      },
+      {
+        "id": "true_scale_in_the_open",
+        "text": "Giữ Vô Tư Thiên Bình ở giữa sân chợ dưới mắt cả chợ — không giao cho trạm, không giao cho một nhà nào giữ riêng.",
+        "next": "ky3_32_tram_tuyen_mot_to_giay",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3TrueScaleShown": true
+        }
+      }
+    ]
+  },
+  "ky3_32_tram_tuyen_mot_to_giay": {
+    "id": "ky3_32_tram_tuyen_mot_to_giay",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Một trăm linh tuyền, một tờ giấy",
+    "backgroundId": "ha-o-spirit-spring",
+    "location": "Hệ linh tuyền quanh Long Hải, Nam Kỳ — ngày 23, ngày mở thêm một trăm linh tuyền",
+    "companions": [],
+    "narration": [
+      "Sáng ngày hai mươi ba, quanh linh tuyền công cộng đầu tiên của Hạ Ô Môn đã đông nghẹt từ canh tư. Hai xóm giành lượt gánh, thùng tre và gáo dừa va nhau lách cách. Một người giữ giếng cũ trong vòng quen biết của nhà họ Hứa đứng bên miệng tuyền nhắc lệ nước và phí gánh như lệ bao năm, mà hàng người càng lúc càng dài, vì cả vùng quanh Long Hải nay đều tìm về một dòng nước này.",
+      "Tiểu Lan tới nơi cùng Đỗ Thị Hạnh. Hạnh ôm sổ của Nhân Danh Đường, ghi lại xóm nào đã về đây gánh nước, xóm nào còn phải đi xa hơn. Tiểu Lan không chen vào giữa hai xóm đang cãi; nàng đứng ở đầu hàng, hỏi người đàn bà đã gánh nước từ canh tư về cái lệ mà bà cho là công bằng.",
+      "Cao Minh đi một vòng ngắn quanh vùng trong buổi sáng ấy. Hắn không đọc tên xóm nào, không hỏi đất này của ai. Nơi nào người ta đang xếp hàng chờ nước, nơi ấy mặt đất rịn ướt rồi một dòng nước vọt lên: dọc bờ ruộng, ở đầu đường làng, cạnh sân đình, sau lưng chợ. Một trăm linh tuyền mở ra trong một buổi sáng. Hàng người dài ở tuyền cũ tan ra thành trăm hàng ngắn, tiếng cãi nhau lụi dần theo tiếng nước mới.",
+      "Đỗ Thị Hạnh chạy theo đoàn mà ghi vị trí từng tuyền mới vào sổ: tuyền ở bờ ruộng nào, đầu đường nào, cạnh xóm nào. Sổ của tông môn ghi chỗ của nước, không ghi tên chủ của nước. Giữa lúc nàng đang ghi, một người đàn ông áo dài ngay ngắn bước theo đoàn, đếm số tuyền thành tiếng như thư lại đếm một thứ tài sản vừa sinh ra. Đó là Huỳnh Văn Khiêm, thư lại của Lý Kha, người làm việc giấy tờ lâu năm cho phía làng và nhà họ Hứa.",
+      "Khiêm không tranh nước, cũng không chen hàng. Hắn chờ đoàn dừng ở tuyền lớn nhất rồi trình ra một tờ giấy đã soạn sẵn, triện thư lại đóng ngay ngắn: giấy xin đăng ký quyền quản lý toàn bộ linh tuyền mới mở. Lý lẽ ghi rất hợp lệ: tuyền không người quản sẽ hư, sẽ sinh tranh; cần một đầu mối chịu trách nhiệm trước quan, giữ tuyền, thu phí giữ tuyền không đáng là bao. Tờ giấy ấy là thứ duy nhất trong buổi sáng này không thừa.",
+      "Buổi cử người trông coi diễn ra ngay tại tuyền lớn nhất, không chờ giấy tờ của ai. Từng xóm đứng ra đọc to tên người mình cử, người ấy bước lên nhận việc trước mặt xóm: trông coi không phải làm chủ, ngoài lệ công khai đã đọc thì không được thu của ai một đồng, làm bậy thì xóm cử lại người khác cũng công khai như buổi cử.",
+      "Cuối ngày, các buổi cử trông coi lan ra từng xóm theo đúng cách của việc phàm: chậm, ồn, có xóm cãi một lúc mới cử được người, có xóm cử xong lại đổi ý cử lại. Tờ giấy của Khiêm theo hắn ra về, còn nguyên triện, còn nguyên chữ, chỉ thiếu chữ ký. Mai là ngày thu tô cũ đầu tiên trên đất đã vào vòng bảo vệ của tông môn, và đoàn thu của nhà họ Hứa sẽ tới ruộng như lệ bao năm."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Người đàn bà gánh nước",
+        "text": "Tui gánh nước từ canh tư, xóm trên xóm dưới chen nhau tới sáng. Tui chỉ cần một cái lệ công bằng: ai tới trước gánh trước, vậy thôi."
+      },
+      {
+        "speaker": "Người đàn bà gánh nước",
+        "text": "Một cái tuyền mà cả vùng giành nhau, giành riết rồi sinh oán. Nước lành cách mấy, chia không đều cũng thành nước cãi nhau, thưa cô."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, lệ công bằng theo bà là lệ thế nào? Bà gánh nước mỗi ngày, tôi hỏi bà trước, rồi mới tính tới người khác."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Một cái giếng mà cả vùng giành nhau. Coi bộ giếng ít, chớ người không nhiều tới mức phải giành một gáo nước mà cãi nhau như vậy."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Mở một cái thì giành nhau. Mở trăm cái, coi còn ai giành nữa không. Nước, bổn tọa có thừa; giành nhau mới là thứ thiếu hoài."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đừng để bổn tọa phải mở tới ngàn cái mới chịu yên. Tới lúc đó đất này đi đâu cũng ướt chân, người phàm lại cãi nhau vì khô ráo."
+      },
+      {
+        "speaker": "Huỳnh Văn Khiêm",
+        "text": "Đếm từ bờ ruộng về tới đây, tuyền mới mở nhiều không kể xiết. Thưa, những tuyền này ai đứng tên quản lý? Nước có chủ quản, việc mới có đầu mối."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi đang ghi chỗ của chúng, thưa ông: tuyền nào ở bờ ruộng nào, đầu đường nào, tôi ghi đủ cả. Còn tên chủ của nước, trong sổ tôi chưa thấy ai ghi."
+      },
+      {
+        "speaker": "Huỳnh Văn Khiêm",
+        "text": "Thưa cô, tuyền không người quản sẽ hư, sẽ sinh tranh. Cần một đầu mối giữ tuyền, thu phí giữ tuyền, chịu trách nhiệm trước quan."
+      },
+      {
+        "speaker": "Huỳnh Văn Khiêm",
+        "text": "Phí giữ tuyền không đáng là bao: một ít trả công người coi, sửa bờ, giữ rãnh. Không có khoản ấy, mai này tuyền hư, ai đứng ra sửa?"
+      },
+      {
+        "speaker": "Huỳnh Văn Khiêm",
+        "text": "Nước của trời thì của trời, tôi không dám nói khác. Mà giấy quản lý phải có người đứng tên. Không người đứng tên, có tranh chấp, quan hỏi tới, ai đáp?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ông, tôi đọc tờ giấy của ông từ đầu tới cuối rồi. Tôi hỏi một chữ thôi: chữ nào ghi người gánh nước được thay người quản lý khi người ấy làm bậy?"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi đọc lại trước mặt mọi người: trong giấy này không có chữ đó. Giấy chỉ ghi người quản lý thu phí, chịu trách nhiệm, không ghi ai thay được ông ta."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Vậy lệ trông coi đặt ngay tại đây. Xóm nào dùng tuyền, xóm ấy cử người trông coi. Tên đọc to tại miệng tuyền, ghi công khai, ai cũng nghe được."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi hỏi anh một câu, anh đáp trước mặt xóm: anh giữ tuyền cho xóm, hay giữ xóm cho tuyền? Trông coi một dòng nước với làm chủ nó khác nhau."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Cử được thì thay được, đó mới là lệ. Người trông coi thu một đồng ngoài lệ đã đọc, xóm cử lại người khác ngay tại miệng tuyền."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi đọc lệ trông coi thành tiếng cho người không biết chữ nghe: trông coi không phải làm chủ, ngoài lệ công khai không thu một đồng, làm bậy thì xóm thay người."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tên người trông coi đầu tiên, tôi ghi vào sổ Nhân Danh Đường ngay tại đây: xóm nào, tuyền nào, người nào, ghi rõ. Ai bị thay oan, còn có chỗ mà kêu."
+      },
+      {
+        "speaker": "Người trai làng",
+        "text": "Xóm cử tui, tui nhận, mà tui nói thẳng: tui làm bậy, xóm thay tui, tui chịu. Bà con nghe cho rõ, mai này đừng nói tui giữ tuyền này là của tui."
+      },
+      {
+        "speaker": "Người trai làng",
+        "text": "Tui giữ rãnh, giữ bờ, giữ lệ đã đọc bữa nay. Ngoài lệ đó, ai đưa tui một đồng tui cũng không lấy. Lấy là mất việc, xóm nói rõ rồi."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Danh sách trông coi các tuyền quanh chợ tôi ghi xong rồi. Tôi đọc tổng số tên cho cả đám nghe: xóm nào cũng có người của mình đứng tên trông coi."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Bản này Nhân Danh Đường giữ một bản. Ai bị ép nộp phí nước ngoài lệ, ai bị thay oan, mang tên mình tới đường mà kêu, sổ này đối chiếu được."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Giấy của ngươi thiếu một thứ: thiếu người chịu ký. Bổn tọa mở nước, chớ không mở quyền. Tên của bổn tọa cũng không đứng trên mấy dòng nước này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ông Khiêm, ông ở lại coi buổi cử ở tuyền tiếp theo đi. Ông là người của lệ giấy, nên thấy một thứ lệ không cần giấy của ông vẫn chạy được."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Trăm cái tuyền mở một buổi còn dễ hơn coi người ta giành một cái. Người phàm coi bộ thích giành thứ có giấy hơn thứ có nước."
+      }
+    ],
+    "choices": [
+      {
+        "id": "caretakers_chosen_by_users",
+        "text": "Chốt lệ trông coi do dân cử và dân thay — danh sách người trông coi dán ngay tại miệng tuyền lớn nhất, ai cũng đọc được.",
+        "next": "ky3_33_ngay_khong_thu_to_cu",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3SpringsSelfTended": true
+        }
+      },
+      {
+        "id": "caretaker_roll_kept_by_nhan_danh",
+        "text": "Giữ một bản danh sách trông coi ở Nhân Danh Đường — ai bị thay oan, ai bị ép nộp phí nước, còn có một chỗ mà kêu.",
+        "next": "ky3_33_ngay_khong_thu_to_cu",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3SpringsSelfTended": true
+        }
+      }
+    ]
+  },
+  "ky3_33_ngay_khong_thu_to_cu": {
+    "id": "ky3_33_ngay_khong_thu_to_cu",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Ngày không còn thu tô cũ",
+    "backgroundId": "ha-o-spirit-field",
+    "location": "Ranh Linh Điền và đất dân trong vòng bảo vệ, Long Hải — ngày 24, ngày thu tô cũ đầu tiên",
+    "companions": [],
+    "narration": [
+      "Sáng ngày hai mươi bốn là ngày thu tô cũ đầu tiên kể từ khi Hạ Ô Môn lập vòng bảo vệ quanh đất dân ở Long Hải. Đoàn thu của nhà họ Hứa tới ranh Linh Điền như lệ bao năm: một chiếc bàn gỗ, mấy cuốn sổ, người gánh thúng đựng tiền và thóc đi sau. Dẫn đầu đoàn là Hương quản Hậu, người của Bách Trảo quản một vùng thu đã lâu. Hắn tới không phải để đánh nhau; hắn tới để thu như mọi năm, đúng ngày, đúng ranh, đúng sổ của hắn.",
+      "Trần Thị Mến ra tận ranh ruộng đón đoàn thu, tay ôm sổ đất của Linh Điền Đường. Sổ ấy ghi từng thửa, từng nhà đã vào vòng bảo vệ, công bố từ trước cho cả vùng biết, không phải danh sách bịa ra trong buổi sáng này. Đoàn thu dựng bàn ngay ngoài ranh và mở sổ gọi tên như lệ cũ vẫn gọi. Nhưng lần này, thay vì từng người nơm nớp bước lên một mình, dân trong vòng bảo vệ đứng thành hàng trên đất của mình, sau đường ranh, mỗi nhà đứng trên thửa ruộng của nhà mình mà nghe gọi tên.",
+      "Nhà đầu tiên được gọi tên bước lên nửa bước, vẫn đứng trong đất của mình, và tự nói câu không nộp của mình, nói bằng tên mình, trước mặt hàng xóm. Hương quản Hậu nghe xong không nổi giận, không lớn tiếng. Hắn mở một cuốn sổ riêng bìa sẫm, cuốn sổ không phải sổ thu, chậm rãi ghi tên nhà ấy vào, nét chữ đều và rõ. Rồi hắn đọc lại cái tên vừa ghi cho cả hàng người cùng nghe, như đọc một biên lai ngược: hôm nay không thu được gì, nhưng tên thì đã ghi rồi.",
+      "Đoàn thu định dời chiếc bàn vào trong ranh đất, cho rằng thu thì phải thu cho đúng đất, đứng ngoài ranh là thu hụt. Đó là bước duy nhất trong buổi sáng cần bị chặn bằng hành động. Cao Minh vốn ngồi gần đó coi hai bên đọc sổ cho nhau nghe như coi một trò lạ của xứ này, lúc ấy mới đứng dậy. Hắn một tay nhấc cả chiếc bàn thu, nguyên sổ, nguyên thúng đựng trên bàn, đặt trở ra ngoài ranh, nhẹ như dời một cái ghế vướng lối đi. Một cuốn sổ bị gió lật tung, hắn còn đưa tay giữ lại trang đang mở cho khỏi bay mất.",
+      "Sau khi bàn thu đã trở ra ngoài ranh, đoàn thu đi dọc đường ranh mà gọi hết danh sách của mình. Từng nhà trong vòng bảo vệ tự đứng ra nói câu của mình: không nộp tô cũ trên đất này nữa. Không ai trốn vào nhà, không ai nhờ người khác nói thay, không ai nộp thay cho nhà bên cạnh để mua yên thân một buổi. Trần Thị Mến ghi lại buổi thu này vào sổ Linh Điền: ngày nào, đoàn nào tới, đi dọc những thửa nào, và thu được bao nhiêu. Con số cuối buổi được bà đọc to cho cả hai phía cùng nghe.",
+      "Gần trưa, đoàn thu cuốn bàn, gánh những chiếc thúng trống ra về giữa ban ngày, trước mắt cả làng. Hương quản Hậu đi sau cùng, cuốn sổ riêng của hắn đã thêm một danh sách dài những cái tên không nộp. Hắn không nói thêm lời nào, chỉ dừng lại nhìn đường ranh đất một lần, lâu hơn mọi cái nhìn trong buổi sáng, rồi quay đi. Ngoài vòng bảo vệ, lệ cũ vẫn chạy như cũ; buổi thu hỏng này chỉ hỏng trên đất dân đã vào vòng, không hơn, không kém, và sổ của Mến ghi đúng phạm vi ấy."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui đọc ranh đất được bảo vệ thành tiếng, từng thửa, từng nhà, cho đoàn nghe rõ: đất từ ranh này trở vào, hôm nay không nằm trong lệ thu cũ nữa."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Sổ đất này công bố từ trước, dán ở sân đạo quán, nhà nào vào vòng nhà ấy biết. Không phải sáng nay tui mới lôi ra một cuốn sổ lạ để đón đoàn đâu, thưa quản."
+      },
+      {
+        "speaker": "Hương quản Hậu",
+        "text": "Bà đọc ranh của bà, tôi nghe. Tô là tô của đất này bao đời nay. Tông môn mới tới mấy hôm, mà đòi đổi lệ của đất, lệ ấy ai cho phép đổi?"
+      },
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Ruộng này năm nay nhà tui trồng Tiên Mễ của nhà tui, giống nhà tui giữ, công nhà tui làm. Tô cũ tính trên ruộng của ai, quản tính cho rõ rồi hãy gọi tên."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui đọc danh sách nhà trong vòng bảo vệ, chậm và rõ, để đoàn thu, dân làng, và bất cứ ai đứng gần đều nghe cùng một danh sách, không ai nghe thiếu một tên nào."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Đọc hết rồi. Nhà nào có tên trong danh sách này là nhà đã vào vòng bảo vệ của Hạ Ô Môn, công bố đàng hoàng. Đoàn cứ theo sổ của đoàn mà gọi, bên này theo sổ này mà đáp."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, lệ của buổi hôm nay tôi nói một lần: việc của từng nhà, từng nhà tự nói. Tôi không nói thay ai, tông môn không nói thay ai hết."
+      },
+      {
+        "speaker": "Tay thu tô",
+        "text": "Theo sổ, gọi nhà đầu tiên. Tên có trong sổ thu, tới bàn mà trình như lệ mọi năm. Ai được gọi thì bước lên, đừng để đoàn phải gọi tới lần thứ hai."
+      },
+      {
+        "speaker": "Hương quản Hậu",
+        "text": "Nhà này không nộp, tôi ghi vào đây. Ghi rõ tên, rõ thửa, rõ ngày. Sổ của tôi ghi chậm mà chắc, một tên cũng không sót, một nhà cũng không lầm."
+      },
+      {
+        "speaker": "Hương quản Hậu",
+        "text": "Tôi đọc lại cho cả hàng cùng nghe: tên nhà vừa ghi, là nhà không nộp tô hôm nay. Tô không mất đâu. Nó chỉ chờ. Sổ này còn, ngày khác còn, việc tính còn dài."
+      },
+      {
+        "speaker": "Hương quản Hậu",
+        "text": "Bà Mến, sổ của bà đọc hôm nay, bà cứ giữ cho kỹ. Sổ của tôi, tôi đọc ngày khác. Hai cuốn sổ đều nhớ dai như nhau, chỉ khác ngày mở ra thôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hai bên đều đọc sổ. Xứ này coi bộ thắng nhau bằng sổ là chính, khỏe cho bổn tọa. Bổn tọa ngồi coi từ sáng, chưa phải động tới kiếm lần nào."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bàn của ngươi đặt lộn chỗ. Đất trong này hôm nay không có buổi thu nào hết. Đặt bàn ở đâu thì thu ở đó, ngươi đem bàn ra ngoài ranh mà làm việc của ngươi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Sổ của ngươi, bổn tọa không thèm. Cầm về cho chủ ngươi coi. Trong đó hôm nay không có gì để coi đâu, mà cứ cầm về cho đủ lệ của ngươi."
+      },
+      {
+        "speaker": "Tay thu tô",
+        "text": "Thưa quản, bàn đã ra ngoài ranh rồi. Tôi ôm sổ đứng đây, gọi tên tiếp hay thôi? Gọi nữa, bên trong họ cũng đáp y như nhà đầu tiên thôi, thưa quản."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi nói rõ cho cả hai phía cùng nghe: hôm nay không ai đuổi đánh đoàn thu. Họ chỉ không thu được trên đất này, và họ được đi về nguyên vẹn như lúc tới."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui đọc con số cuối buổi thành tiếng cho cả hai phía: hôm nay, trên đất trong vòng bảo vệ, đoàn thu được — không có gì. Không một đồng, không một đấu thóc."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà con, lời hôm nay là lời của từng người, nói bằng tên mình. Mai này ai hỏi lại, cứ nói đúng như đã nói bữa nay, không thêm, không bớt."
+      },
+      {
+        "speaker": "Châu Văn Lợi",
+        "text": "Tui nói câu của nhà tui, ngắn thôi: ruộng tui, thóc tui, tô cũ tui không nộp nữa. Nói trước mặt quản, trước mặt làng, tui không nói sau lưng ai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Bà Mến, ghi cả cuốn sổ của hắn vào việc hôm nay đi. Bên này biết hắn ghi gì, hắn cũng biết bên này ghi gì. Hai bên đều có sổ, vậy mới gọi là rõ ràng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đi thu mà về tay không, coi như đi dạo một vòng ruộng cho khỏe chân. Thúng trống khiêng nhẹ, đoàn của ngươi bữa nay về sớm, bổn tọa thấy cũng là phước."
+      }
+    ],
+    "choices": [
+      {
+        "id": "each_household_speaks",
+        "text": "Để từng nhà tự nói lời không nộp của mình trước đoàn thu thành lệ của vòng bảo vệ — không ai nói thay ai, không ai trốn sau ai.",
+        "next": "ky3_34_doc_quyen_tinh_hon_thai",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3OldTaxFailed": true
+        }
+      },
+      {
+        "id": "record_the_hate_ledger",
+        "text": "Ghi tên đoàn thu, lời đe dọa và cuốn sổ hận của Hậu vào sổ của Mến — sổ hận của hắn từ nay có một cuốn sổ đối chiếu.",
+        "next": "ky3_34_doc_quyen_tinh_hon_thai",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3OldTaxFailed": true
+        }
+      }
+    ]
+  },
+  "ky3_34_doc_quyen_tinh_hon_thai": {
+    "id": "ky3_34_doc_quyen_tinh_hon_thai",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Rau tiên và giá độc quyền",
+    "backgroundId": "long-hai-market",
+    "location": "Chợ Long Hải, Nam Kỳ — ngày 24, bàn thương lượng về Tĩnh Hồn Thái đặt giữa chợ",
+    "companions": [],
+    "narration": [
+      "Cũng trong ngày hai mươi bốn, giữa chợ Long Hải, một chiếc bàn thương lượng được đặt công khai theo lệ mới của chợ này: giấy gì đặt lên bàn cũng phải được đọc to. Từ Bách Xuyên, nhà buôn từng tranh mua đoàn hàng đi Chợ Lớn ở phiên trước, trở lại với một bản hợp đồng soạn sẵn trong bìa cứng. Lần này hắn không giành mua từng gánh hàng nữa; hắn đã học được rằng ở chợ này không ai mua gom trọn lô được, nên thứ hắn mang tới để mua lớn hơn rau nhiều.",
+      "Hợp đồng của Từ Bách Xuyên xin độc quyền phân phối Tĩnh Hồn Thái cho thị trường Chợ Lớn và Sài Gòn: giá bao tiêu cao, tiền đặt trước hậu, đổi lại toàn bộ hàng đi xa chỉ qua một cửa của hắn. Trần Thị Mến cầm hợp đồng đọc từng điều khoản chính thành tiếng cho người chợ cùng nghe. Tiểu Lan ngồi bên bàn, nghe tới đâu ghi nhớ tới đó, và khi Mến đọc lướt qua phần giữa của bản giấy, nàng giữ bà lại ở đúng phần quan trọng nhất.",
+      "Điều khoản ở giữa bản hợp đồng mới là ruột của nó. Nhận độc quyền thì tiểu thương không được bán lẻ Tĩnh Hồn Thái ngoài hệ của đại lý, người mua số nhiều phải ghi tên vào sổ của đại lý, giá bán lại do một mình đại lý định. Rau vẫn mọc đầy ruộng, hàng vẫn đầy sạp. Thứ bản giấy này mua không phải rau; nó mua cái cửa mà mọi người phải đi qua mới chạm được vào rau, và cuốn sổ ghi tên những người đi qua cửa ấy.",
+      "Buổi thương lượng chưa ngã ngũ thì một người môi giới lạ mặt đặt lên bàn một lời ra giá thứ hai, cao hơn của Từ Bách Xuyên, cũng xin quyền phân phối, điều khoản gần như chép lại từng chữ. Giấy tờ của hắn đi qua hai lớp trung gian, không mang dấu hiệu gì của nhà họ Hứa. Nhưng Hạnh và Tiểu Lan lần theo mép giấy đặt cọc: dấu hiệu tài chính ở đó cùng một hệ dấu đã đối chiếu được ở phiên phân xử lời chứng trước đây, chỉ về vòng Tài Phòng của Hứa Tế Nguyên. Hắn đang mua quyền phân phối bằng tay người khác, để Tài Phòng cầm quyền mà không mang tên Hứa.",
+      "Giữa lúc hai lời ra giá còn nằm trên bàn, người của tông môn bày thêm một đợt Tĩnh Hồn Thái tươi ra sạp chợ ngay bên cạnh, bán theo giá thường cho dân thường đang đứng coi. Lá rau còn ướt, người mua trả tiền lẻ, cân đong như mọi phiên. Buổi mặc cả về độc quyền diễn ra ngay trước mặt một cái chợ đang chạy bình thường mà không cần tới nó. Cao Minh coi sạp rau một lúc, rồi quay lại bàn thương lượng nói phần của người chủ hàng, ngắn và rõ.",
+      "Phần còn lại của buổi chợ thuộc về Nhân Danh Đường. Khi lập đường, quyền phản đối quyết định hại dân đã được tuyên bố thành tiếng trước cả sân, nhưng từ hôm ấy nó mới chỉ nằm ở lời tuyên bố. Hôm nay, theo đúng thủ tục ấy, Đỗ Thị Hạnh đứng ra dùng quyền lần đầu tiên. Biên bản phản đối được lập ngay tại chợ, đọc thành tiếng, ký chứng trước mặt hai phía ra giá. Hai thương vụ cùng đứng lại, không phải vì một thanh kiếm cấm, mà vì một quyền đã nói ra công khai từ trước và nay được dùng đúng lệ.",
+      "Từ Bách Xuyên thu hợp đồng về, gấp lại ngay ngắn. Hắn thua một cái quyền, mà tiền còn nguyên, mạng lưới ở Chợ Lớn còn nguyên. Người môi giới rút êm, không để lại tên thật. Ở rìa chợ, tin buổi này được người của Tài Phòng mang đi rất nhanh: tông môn ấy vừa chặn một thương vụ không bằng kiếm, mà bằng một tờ biên bản. Buổi chiều cùng ngày, hai người khách lạ mặc âu phục đứng coi chợ rất lâu."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Từ Bách Xuyên",
+        "text": "Tôi ra giá bao tiêu, đọc to không giấu: giá cao hơn giá chợ, tiền đặt trước đủ đầy. Tôi mua sự chắc chắn, chớ không mua rau lẻ."
+      },
+      {
+        "speaker": "Từ Bách Xuyên",
+        "text": "Hàng tốt mà bán lẻ tẻ thì phí của trời cho. Có một đầu mối, hàng đi xa mới thành việc làm ăn đàng hoàng."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui đọc các điều khoản chính thành tiếng, theo lệ chợ này: giấy đặt lên bàn thì phải được nghe hết."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Điều đầu ghi: Tĩnh Hồn Thái đi xa chỉ qua một cửa của bên nhận độc quyền. Điều kế ghi tiền đặt trước, giá bao tiêu."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, xin đọc tới điều khoản về người mua lẻ. Đừng đọc lướt phần quan trọng nhất của bản giấy này."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Điều này ghi: tiểu thương không được bán lẻ ngoài hệ đại lý. Ai bán ngoài hệ ấy là trái hợp đồng."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Điều nữa ghi: người mua số nhiều phải ghi tên vào sổ đại lý, giá bán lại do đại lý định."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi gọi tên từng việc: rau mọc đầy ruộng, mà người ăn rau phải qua một cái cửa có người thu. Cửa ấy mọc từ tờ giấy này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Còn tên người mua vào sổ đại lý. Phiên đầu, chợ này đã dập một cuốn sổ ghi tên người nhận hàng không công rồi."
+      },
+      {
+        "speaker": "Từ Bách Xuyên",
+        "text": "Cô Lan nói vậy là một phía. Có đầu mối thì có trách nhiệm, ghi tên là để giao hàng tận nơi."
+      },
+      {
+        "speaker": "Người môi giới",
+        "text": "Bên tôi ra giá cao hơn, tiền đặt cọc sẵn đây. Cũng xin quyền phân phối đường xa, điều khoản như lệ vẫn làm."
+      },
+      {
+        "speaker": "Người môi giới",
+        "text": "Chủ tiền là ai, tôi không được phép nói. Tôi chỉ là người được ủy thác mang giá tới bàn này."
+      },
+      {
+        "speaker": "Người môi giới",
+        "text": "Hỏi nữa tôi cũng đáp chừng ấy. Người ủy thác dặn: giá công khai, tên thì không. Bên tôi mua quyền, chớ không mua tò mò."
+      },
+      {
+        "speaker": "Từ Bách Xuyên",
+        "text": "Tôi nghe giá này, ngửi thấy mùi quen lắm. Điều khoản chép lại từng chữ của tôi, mà người ra giá giấu mặt."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hai người tranh nhau mua một cái cửa. Còn rau đang bán ở sạp bên kia kìa, không ai hỏi mua rau nữa hết."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hàng của bổn tọa, bổn tọa bán cho ai cũng được. Còn cái quyền chỉ mình ngươi được bán, bổn tọa không có để bán."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hai ngươi tranh cái cửa, bổn tọa thích chợ không cửa. Có cửa thì có người giữ cửa, có người giữ cửa thì sinh lệ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui ghi vào biên bản chợ câu của chủ hàng, nguyên văn: không trao độc quyền cho ai hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Chủ hàng đã nói phần của mình. Phần còn lại là việc của Nhân Danh Đường, vì điều khoản này động tới người mua thường."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi là Đỗ Thị Hạnh, trưởng Nhân Danh Đường. Hôm nay đường này dùng quyền phản đối đã tuyên bố khi lập đường, lần đầu tiên."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Căn cứ tôi đọc thành văn bản: điều khoản cửa độc quyền, và điều khoản ghi tên người mua vào sổ đại lý. Hai điều ấy hại người hưởng dụng không nhập môn."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Người hưởng dụng không nhập môn chỉ tới mua rau, dùng nước, coi bệnh. Tên của họ không phải tiền đặt cọc cho thương vụ nào."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Biên bản phản đối lập tại chợ, đọc thành tiếng, ký chứng đàng hoàng. Ai không phục, cứ mang biên bản đi kêu nơi khác."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi xác nhận thủ tục: phản đối ghi biên bản, công bố tại chợ, hai bên đều được nghe, được giữ một bản."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui ký chứng biên bản này với tư cách người của chợ. Giấy đọc ở chợ, chặn ở chợ, chợ giữ một bản."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hôm nay chợ này chặn người ta bằng một tờ biên bản. Tiến bộ hơn bổn tọa, xưa nay toàn chặn bằng kiếm."
+      }
+    ],
+    "choices": [
+      {
+        "id": "veto_read_aloud",
+        "text": "Công bố biên bản phản đối ngay tại chợ — để tiểu thương và người mua thường biết thương vụ độc quyền đã bị chặn, và bị chặn vì điều khoản nào.",
+        "next": "ky3_35_han_kiem_ho",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3VetoFirstUsed": true
+        }
+      },
+      {
+        "id": "both_bids_filed",
+        "text": "Giữ hồ sơ cả hai lời ra giá độc quyền trong Nhân Danh Đường — lần sau ai trở lại xin quyền này, giấy cũ và biên bản cũ còn đó.",
+        "next": "ky3_35_han_kiem_ho",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3VetoFirstUsed": true
+        }
+      }
+    ]
+  },
+  "ky3_35_han_kiem_ho": {
+    "id": "ky3_35_han_kiem_ho",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Giấy kiểm hộ mang hạn ngày 63",
+    "backgroundId": "long-hai-market",
+    "location": "Chợ Long Hải, Nam Kỳ — ngày 24, phái viên thuộc địa tới xem chợ",
+    "companions": [],
+    "narration": [
+      "Buổi chiều ngày hai mươi bốn, chợ Long Hải có hai người khách lạ. Một người mặc âu phục sẫm, đi chậm qua từng sạp, coi giá ghi trên sạp, coi phần hàng phát không công ở đầu chợ, coi chiếc cân đối chứng giữa sân. Người đi cùng là một thông ngôn người Việt, tay cầm sổ nhỏ ghi chép không ngừng. Người mặc âu phục là Armand Delmas, làm việc thương mại cho phía thuộc địa; người ghi chép là Phan Tường, thông ngôn của hắn. Họ coi kỹ những thứ người mua hàng thường không coi: một cái chợ chạy trơn tru mà không thấy sổ của quan ở đâu cả.",
+      "Ở quầy giấy bên chợ, Delmas đọc cho Phan Tường ghi một bản ghi nhớ gửi về trên. Tường cần đối chiếu mấy thuật ngữ cho đúng chữ, nên đọc lại bản dịch ra tiếng Việt cho Mến nghe nhờ kiểm: chữ tông môn viết thế nào, chữ đại kiểm hộ dùng chữ nào. Trong bản nháp dịch có một đoạn đánh giá về Hạ Ô Môn mà Tiểu Lan, đứng gần quầy giấy, nghe được trọn từng chữ: phía thuộc địa cho rằng tông môn này đang phá thế của nhà họ Hứa, nên cứ để yên cho nó phá; việc thu hồi tông môn tính sau, khi họ Hứa đã yếu hẳn.",
+      "Nghe xong đoạn dịch, Tiểu Lan không đổi sắc mặt, cũng không chen vào việc của quầy giấy. Nàng chỉ quay sang Mến, dặn bà nhớ đúng câu chữ vừa nghe, từng chữ một, không nhớ ý mà nhớ lời. Việc của nàng từ lâu vẫn vậy: lời nghe được giữa chợ chỉ thành việc khi nó được ghi lại thành chứng cứ. Mến gật đầu, và đoạn câu chữ ấy được ghi xuống sổ chợ ngay trong buổi chiều, kẹp giữa hai trang ghi giá hàng.",
+      "Đoạn ghi nhớ viết xong, phái viên chuyển sang việc chính thức. Phan Tường đặt lên bàn chợ một tờ công văn: nhân danh đợt Đại Kiểm Hộ sắp tới, phía thuộc địa yêu cầu Hạ Ô Môn nộp danh sách đệ tử, ghi đủ tên, tuổi, quê quán, để đối chiếu nhân khẩu. Hạn chót trong công văn gắn với ngày sáu mươi ba, một mốc ghi trên giấy để đếm ngược bằng giấy tờ, và chỉ có vậy. Mến cầm công văn đọc thành tiếng theo lệ chợ, đọc chậm từng mục đòi, để người bán hàng quanh bàn đều nghe rõ.",
+      "Việc nộp hay không nộp danh sách không do một người quyết tại bàn chợ. Mến thay mặt phía chợ và Linh Điền, Hạnh thay mặt Nhân Danh Đường — nơi giữ hồ sơ người được cứu và sổ tên người — cùng Tiểu Lan hội ý ngắn ngay tại chỗ, theo đúng thẩm quyền của Hội Đồng Lục Đường. Cao Minh có mặt mà không chen một lời. Kết quả được tuyên bố ngay tại bàn và ghi thành biên bản hai phía: Hội Đồng từ chối nộp danh sách tên người. Tên người không phải hàng tồn kho, người được cứu và đệ tử không phải vật để đối chiếu.",
+      "Biên bản làm xong hai bản, phía thuộc địa giữ một bản, để lời từ chối là lời đã nói trước mặt nhau, không ai kể lại khác đi được. Rồi Cao Minh cầm bản công văn gốc, đi thẳng tới trước mặt Delmas và trả lại tận tay hắn. Hắn không ký nhận, không giữ bản sao theo lệ của phía bên kia, cũng không nhận giấy để về xem xét sau. Delmas nhận lại tờ giấy rất điềm tĩnh; hắn chỉ mở sổ ghi nhớ của mình, ghi thêm một dòng, rồi gấp sổ lại.",
+      "Phái viên rời chợ trong lễ phép hoàn toàn, chào Mến và người bán hàng ở sạp đầu chợ như khách đi coi chợ xong thì về. Phía tông môn giữ lại ba thứ: một bản biên bản từ chối do Mến giữ cho chợ, một bản sao công văn đòi danh sách đưa vào hồ sơ Nhân Danh Đường — hạn ngày sáu mươi ba từ nay nằm trên giấy của cả hai phía — và đoạn câu chữ của bản nháp dịch đã ghi lại. Delmas chưa đi khỏi Long Hải. Ngay buổi sau, hắn quay lại, không mang công văn, mà mang một đề nghị làm ăn."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Phan Tường",
+        "text": "Thưa ông, người bán hàng nói giá ghi trên sạp là giá thiệt, phần phát ở đầu chợ không lấy tiền. Tôi dịch đúng lời bà ấy."
+      },
+      {
+        "speaker": "Phan Tường",
+        "text": "Ông hỏi lại cho chắc: chợ này bán rẻ thiệt, hay cho không thiệt? Tôi chuyển lời của ông nguyên văn như vậy."
+      },
+      {
+        "speaker": "Armand Delmas",
+        "text": "Một cái chợ bán rẻ như cho, mà không thấy sổ sách của quan ở đâu. Tôi coi nhiều chợ rồi. Chợ chạy không sổ, tôi chưa quen mắt."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa ông khách, giá ghi trên sạp, ông cứ coi tận mắt. Phần phát ghi trên bảng ở đầu chợ, ai nhận cũng thấy."
+      },
+      {
+        "speaker": "Phan Tường",
+        "text": "Tôi đọc lại đoạn dịch để kiểm chữ, thưa bà: phía trên đánh giá Hạ Ô Môn đang phá thế họ Hứa, nên để yên cho nó phá tiếp. Thu hồi tính sau."
+      },
+      {
+        "speaker": "Phan Tường",
+        "text": "Chữ tông môn tôi dịch vậy đúng chưa, thưa bà? Còn chữ đại kiểm hộ, giấy trên dùng chữ này, tôi giữ nguyên."
+      },
+      {
+        "speaker": "Armand Delmas",
+        "text": "Sửa một chữ cho tôi: chỗ để yên, ghi rõ là để yên có thời hạn. Thu hồi là việc đã định, chỉ chưa tới lúc."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà Mến, bà nhớ đúng câu chữ vừa nghe cho tôi, từng chữ một. Lời nghe giữa chợ, ghi lại được mới thành việc."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui đọc công văn theo lệ chợ: mục đầu đòi danh sách đệ tử, ghi đủ tên, tuổi, quê quán, để đối chiếu nhân khẩu."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Mục kế ghi hạn nộp gắn với ngày sáu mươi ba, rõ trên giấy này. Giấy đòi gì, tui đọc nấy, không thêm ý ai."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thứ giấy này đòi không phải hàng, không phải tiền. Nó đòi tên người. Tên người không phải hàng tồn kho, thưa ông."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ông, tôi hỏi một câu thủ tục: danh sách này nộp cho ai giữ, người có tên trong đó có được biết không?"
+      },
+      {
+        "speaker": "Armand Delmas",
+        "text": "Đối chiếu nhân khẩu là lệ của nhà nước, tổ chức nào cũng phải theo. Danh sách nộp lên, trên giữ, trên đối chiếu."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui tuyên bố kết quả hội ý thay mặt phía chợ: Hội Đồng đã bàn ngay tại đây, theo đúng thẩm quyền của Hội Đồng."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi đọc điều khoản từ chối vào biên bản: hồ sơ người được cứu khóa lại từ hôm nay, không qua cửa nào khác."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi nói rõ ranh giới: hàng hóa, giá cả, cân đong của chợ này, ông coi bao nhiêu cũng được. Tên người thì không."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Biên bản làm hai bản, phía ông giữ một bản. Lời từ chối nói trước mặt nhau, ghi trên giấy cả hai phía."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Hội Đồng của bổn tọa đã quyết rồi, bổn tọa nghe theo. Việc này không phải một người gật là xong."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Giấy đòi người, bổn tọa trả lại tận tay ông. Bổn tọa không ký nhận, không giữ để xem sau. Muốn coi chợ thì coi cả ngày."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Chợ của bổn tọa mở tới tối, ông khách coi cho đã. Coi người bán hàng thôi. Người mua thì đừng đếm ở chợ này."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui khép sổ chợ hôm nay ở đây: chợ này từ chối bán một thứ không bày trên sạp nào hết. Thứ ấy là tên người."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Chị Hạnh, giữ tờ công văn ấy cạnh hồ sơ người được cứu. Để sau này thấy hai thứ giấy từng đối diện nhau một buổi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Người ta đòi một danh sách, bổn tọa trả lại một tờ giấy. Giấy đi đường giấy, người ở lại đường người. Vậy là gọn."
+      }
+    ],
+    "choices": [
+      {
+        "id": "refusal_in_the_open",
+        "text": "Tuyên bố lời từ chối ngay tại chợ, trước mặt người bán hàng — việc không nộp danh sách nói thành tiếng, không nói sau lưng ai.",
+        "next": "ky3_36_de_nghi_dai_ly",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3RosterRefused": true
+        }
+      },
+      {
+        "id": "demand_filed_away",
+        "text": "Giữ bản sao công văn đòi danh sách vào hồ sơ Nhân Danh Đường, kẹp cạnh hồ sơ người được cứu — hạn ngày 63 từ nay nằm trên giấy của mình.",
+        "next": "ky3_36_de_nghi_dai_ly",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3RosterRefused": true
+        }
+      }
+    ]
+  },
+  "ky3_36_de_nghi_dai_ly": {
+    "id": "ky3_36_de_nghi_dai_ly",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Một dấu độc quyền",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân hội của Hạ Ô Môn, Long Hải — ngày 24, buổi tiếp đề nghị đại lý của phái viên thuộc địa",
+    "companions": [],
+    "narration": [
+      "Chiều ngày hai mươi bốn, buổi sau cùng ngày với buổi ở chợ, Armand Delmas trở lại. Lần này hắn tới sân hội của Hạ Ô Môn theo đúng phép xin tiếp kiến, đi cùng thông ngôn Phan Tường, tay ôm một tập dự thảo bìa cứng thay vì công văn. Buổi trước, hắn bị từ chối một tờ danh sách tên người; buổi này, hắn mang tới một món lợi. Hắn chào sân như nhà buôn chào nhà buôn: không nhắc buổi trước như một thất bại, chỉ mở lời bằng thị trường và những đường hàng dài qua các cảng.",
+      "Tập dự thảo được đặt lên bàn đá giữa sân, phần dịch được Phan Tường đọc thành tiếng, chậm rãi, cho cả sân nghe. Theo dự thảo, Delmas xin làm đại lý độc quyền toàn bộ sản phẩm của Hạ Ô Môn ở ngoài Long Hải. Đổi lại, hắn hứa giá bao tiêu ổn định, tàu và kho của hãng, và bảo hộ pháp lý trước mọi đợt kiểm soát về sau. Các điều khoản kèm theo nghe rất hợp lệ: sổ phân phối do đại lý giữ, giá bán lại do đại lý công bố, người mua số lớn đăng ký qua đại lý mới được giao hàng.",
+      "Tiểu Lan nghe bản dịch từ đầu tới cuối mà không cắt lời lần nào. Nàng nghe như người đang ghi nhớ từng chữ để lát nữa dùng lại nguyên văn. Chỉ hai lần nàng lên tiếng, cả hai lần đều hỏi vào chữ trong dự thảo. Trần Thị Mến có mặt ở sân với tư cách người của chợ, mang theo sổ chợ và biên bản chợ của cùng một ngày.",
+      "Trong sân hôm ấy còn có Tống Nguyên Phúc, chấp sự lo việc giấy tờ của tông môn. Hắn nghe dự thảo bằng tai của người làm quản trị đã nhiều ngày nghĩ dở một việc: ở môn này, mọi thứ chảy tản mạn quá, đầu mối chưa có một đầu mối nào cầm hết. Trong cơ chế đại lý, hắn trông thấy một thứ quen thuộc: mọi thứ chảy qua một cửa có cấp phép thì quản được, kiểm được, không còn cảnh người trong môn tự phát sinh lệ.",
+      "Delmas chờ một cái gật đầu. Ở mọi nơi hắn từng làm ăn, người đứng đầu gật đầu là việc xong, hội đồng chỉ là chữ ghi thêm cho đẹp giấy. Cao Minh nhìn tập dự thảo, nhìn Delmas mặc âu phục đứng giữa sân hội, và bật cười thật sự, cười như người vừa thấy một con thiêu thân mặc âu phục bay thẳng vào đèn mà còn giữ lễ phép. Rồi hắn làm một việc Delmas không tính trước: hắn không ban, cũng không từ chối thay ai. Hắn cho mang thêm ghế ra sân, gọi đại diện các đường tới, đặt tập dự thảo chưa ký lên bàn giữa sân cho Hội Đồng xét.",
+      "Trước khi sân tản, Tiểu Lan nói phần kết luận của mình, nói chậm để Mến ghi thành biên bản miệng ngay tại sân. Nàng nối ba lượt việc trong cùng một ngày thành một mạch: buổi trước ở chợ, Nhân Danh Đường chặn cửa độc quyền bằng biên bản phản đối; buổi này ở chợ, Hội Đồng từ chối nộp danh sách tên người; buổi tiếp kiến này là lần thứ ba, cùng một thứ quay lại, xin chữ ký của chính tông môn để thành hợp pháp. Sân tản mà không ai ký tắt một chữ nào.",
+      "Delmas cáo lui, để lại một bản dự thảo cho Hội Đồng xem, đúng lễ như lúc hắn tới. Hắn ra về không thua hẳn: hắn đã đo được tông môn này quyết việc bằng một hội đồng, và trong hội đồng ấy có những hướng nghĩ mà một người làm ăn kiên nhẫn dùng được về sau. Trên bàn đá giữa sân còn lại một tập giấy bìa cứng cạnh chén rượu của Cao Minh: quyền phân phối của cả một vùng, cho tới buổi chiều ấy, chưa thuộc về ai. Ngoài ranh hai làng, một mạch tuyền mới sắp mở trên đất đang tranh chấp, và việc của nó đã chờ sẵn ở buổi sau."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Armand Delmas",
+        "text": "Buổi trước tôi bị từ chối một tờ danh sách, tôi không nhắc như điều phiền lòng. Buổi này tôi mang tới một món lợi cho tông môn."
+      },
+      {
+        "speaker": "Armand Delmas",
+        "text": "Qua các cảng, có tàu, có kho, có bảo chứng thuộc địa, hàng của Hạ Ô Môn đi xa mà vẫn giữ được giá."
+      },
+      {
+        "speaker": "Phan Tường",
+        "text": "Tôi dịch trọn câu mở đầu của ông Delmas, đúng từng chữ, kể cả chữ bảo chứng thuộc địa trong câu ấy."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa ông khách, tui là người của chợ, tui hỏi thẳng: đúng tầm là tầm của ai? Của người bán rau, hay của người giữ sổ ở cảng?"
+      },
+      {
+        "speaker": "Phan Tường",
+        "text": "Tôi đọc các điều khoản chính: đại lý giữ độc quyền ngoài Long Hải, sổ phân phối do đại lý giữ, giá bán lại do đại lý công bố."
+      },
+      {
+        "speaker": "Phan Tường",
+        "text": "Điều khoản kế ghi: người mua số lớn phải đăng ký qua đại lý mới được giao hàng. Tôi đọc nguyên văn bản dịch."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ông Tường, tôi hỏi vào chữ: độc quyền trong bản gốc là chỉ một nhà được làm, ngoài nhà ấy không ai khác, phải không?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Còn sổ phân phối do đại lý giữ: trong sổ ấy có ghi tên người mua không? Xin đáp đúng chữ trong dự thảo."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa Đạo Tổ, tôi góp một ý: nếu Hội Đồng tính nhận, việc xét đại lý nên qua một đầu mối giấy tờ của tông môn."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Việc lớn của môn chảy qua nhiều tay quá. Có một cửa có cấp phép, người ra vào việc lớn mới kiểm được."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi nói vì việc quản trị: cấp phép thì mới kiểm được. Giấy tờ không đầu mối, đầu mối tự mọc ở chỗ không ai ngờ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Khách của bổn tọa hôm nay coi bộ đông hơn một người. Một người mang dự thảo, một người đã thấy sẵn trong đó một cái cửa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa ban kiếm, ban đan, ban trăm cái giếng một buổi, mà cái này bổn tọa không ban một mình. Gật một cái không phải lệ buổi này."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cho mang ghế ra. Gọi đại diện các đường tới sân. Việc dính tới người mua thường, để những người giữ người bàn."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ông khách quen ký với vua chúa, ở đây phải chờ một hội đồng. Chờ thì chậm, bổn tọa nói trước để ông khách liệu đường."
+      },
+      {
+        "speaker": "Armand Delmas",
+        "text": "Chờ một hội đồng cũng là một cách làm ăn, thưa Đạo Tổ. Tôi chờ được. Chữ ký của nhiều người một khi có thì nặng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi nối ba lượt việc trong cùng một ngày: buổi trước, Nhân Danh Đường chặn cửa độc quyền ở chợ; buổi giữa, Hội Đồng từ chối nộp danh sách; buổi này là lần thứ ba."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi đọc lại điều khoản ghi tên người mua: người mua số lớn đăng ký qua đại lý. Đó là ghi tên vào sổ đại lý, vừa bị chặn buổi trước."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi yêu cầu ghi biên bản: dự thảo không ký tắt hôm nay, mọi bàn bạc ghi biên bản, kèm điều khoản quyền của người mua thường."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui xác nhận: biên bản chợ buổi Tĩnh Hồn Thái còn đây, điều khoản bị chặn ghi rõ trong đó. Đối chiếu với dự thảo được ngay."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Sổ chợ và biên bản cùng một ngày, tui mang cả tới sân này. Giấy của chợ nằm đây cho Hội Đồng coi khi cần."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi hỏi một câu thủ tục: biên bản buổi này ai giữ, việc xét đại lý giao đầu mối nào giữ hồ sơ, để sau này truy không lầm?"
+      },
+      {
+        "speaker": "Armand Delmas",
+        "text": "Tôi để lại một bản dự thảo cho Hội Đồng xem và cáo lui đúng phép. Làm ăn với hội đồng thì chậm mà chắc."
+      },
+      {
+        "speaker": "Armand Delmas",
+        "text": "Tôi sẽ còn quay lại khi Hội Đồng bàn xong. Một đề nghị làm ăn không chết vì phải chờ một buổi bàn, thưa các vị."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa mở trăm giếng một buổi không mệt bằng coi một buổi xin quyền bán nước giếng. Giấy nằm đó, Hội Đồng coi đi."
+      }
+    ],
+    "choices": [
+      {
+        "id": "agency_goes_to_council",
+        "text": "Ghi biên bản: việc đại lý phải qua Hội Đồng và phải kèm điều khoản quyền của người mua thường — không ký tắt, không ai gật thay.",
+        "next": "ky3_37_mach_tuyen_ba_muoi_sau",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3DelmasAgencyBid": true
+        }
+      },
+      {
+        "id": "let_him_watch_the_council",
+        "text": "Mời Delmas ở lại xem cách Hội Đồng của tông môn bàn một việc dính tới dân thường — cho hắn thấy quyết định ở đây không nằm trong túi một người.",
+        "next": "ky3_37_mach_tuyen_ba_muoi_sau",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3DelmasAgencyBid": true
+        }
+      }
+    ]
+  },
+  "ky3_37_mach_tuyen_ba_muoi_sau": {
+    "id": "ky3_37_mach_tuyen_ba_muoi_sau",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Mạch tuyền số ba mươi sáu",
+    "backgroundId": "ha-o-spirit-spring",
+    "location": "Mạch linh tuyền thứ ba mươi sáu, ranh đất hai làng, Long Hải — ngày 25",
+    "companions": [],
+    "narration": [
+      "Mạch linh tuyền thứ ba mươi sáu mở đúng trên đường ranh đang tranh chấp của hai làng. Ranh cũ chỉ còn hàng cọc tre xiêu vẹo và một tấm bia đá lệch, chữ trên bia mòn tới mức mỗi làng đọc một khác. Nước mới chảy hai ngày, trong và lạnh. Sáng nay hai làng kéo người tới đứng kín hai bờ, gánh thùng đặt xuống mà chưa ai dám múc gánh đầu tiên, vì bên kia đang nhìn. Tiểu Lan cho đoàn dừng ngoài vòng người: việc ranh đất là việc của hai làng, đoàn không vào đứng giữa như quan tòa. Trần Thị Mến đi cùng, ôm cuốn sổ mạch của Linh Điền Đường.",
+      "Mến chỉ cho nàng một thứ dựng ở bờ mạch từ lúc nào: chòi tre mái lá mới, tấm bảng gỗ ghi lệ phí gánh nước, một cái bàn thấp và một người ngồi giữ, tự xưng là người của đạo quán cử xuống trông mạch. Không ai trong môn cử hắn cả. Nước ở mạch này thừa cho hai làng gánh cả ngày, nhưng hễ có một cái trạm đứng ở bờ thì ai giữ trạm, làng đó coi như giữ mạch. Thứ hai làng giành nhau từ sáng không phải gánh nước. Là cái chòi tre ấy.",
+      "Cao Minh xem tấm bảng lệ phí một lúc như xem món đồ lạ ở chợ. Rồi hắn phất tay áo một cái, nhẹ như phủi bụi. Dòng nước đang chảy thẳng tách làm hai nhánh cân nhau, một nhánh về phía đất làng đông, một nhánh về phía đất làng tây; bờ mỗi nhánh tự liền thành lối gánh riêng, cỏ rạp xuống như đã có người đi trăm năm. Nước trong, đều, không bên nào hơn bên nào một giọt. Phần thiên nhiên của cuộc tranh chấp chấm dứt trong một nhịp. Hắn làm xong, quay lại nhìn cái chòi tre như vừa nhớ ra ở đó còn một việc nhỏ.",
+      "Có nước cân nhau rồi mà vòng người vẫn không tan. Bên đông đòi giữ trạm vì đất gốc là của làng mình. Bên tây đòi phá trạm vì mạch đã là mạch chung. Kẻ giữ trạm lùi nửa bước mà không chạy: hắn biết hai làng còn cần một người đứng đó để đổ lỗi. Vai người hai bên chạm nhau ở bờ mạch, tiếng nói cao dần, mấy chiếc gánh bị xô nghiêng. Hộ Pháp không có mặt ở đây, và Cao Minh cũng không dẹp thay ai. Tiểu Lan bước vào giữa vòng người, chỉ nhân danh cuốn sổ mạch và lệ nước của vùng này.",
+      "Nàng nói lệ thành từng điều, chậm và rõ. Hai trưởng làng nghe hết, nhìn nhau một lúc lâu rồi cùng gật đầu. Tấm bảng lệ phí được chính tay người của hai làng tháo xuống, để nằm úp mặt bên bờ nước. Kẻ giữ trạm đứng nhìn cái chòi trống của mình, rồi lặng lẽ xách bàn thấp đi về phía làng; không ai giữ hắn lại, cũng không ai gọi hắn lại.",
+      "Hai hàng người gánh nước đầu tiên đi xuống hai nhánh mạch, tránh nhau ở chỗ rẽ mà không còn một tiếng cãi. Mến ở lại bên bờ, ghi vào sổ mạch tên hai người trông phiên đầu tiên, một người của mỗi làng, nét chữ ngay ngắn như mọi trang sổ của nàng. Đường về sân lễ còn dài, và tin nàng sắp nghe ở cuối con đường ấy còn lạ hơn chuyện cái trạm này."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trưởng làng bên đông",
+        "text": "Thưa cô, mạch này cha ông bên tôi vẫn gánh nước ở đây từ trước tấm bia. Đất có thể cãi, bước chân người gánh nước thì không cãi được."
+      },
+      {
+        "speaker": "Trưởng làng bên tây",
+        "text": "Bia đá nằm hẳn về phía đất bên này, thưa cô. Nước chảy về phía nào, đất theo phía đó — lệ xưa nay vẫn tính vậy."
+      },
+      {
+        "speaker": "Kẻ giữ trạm thu phí",
+        "text": "Có người trông mạch thì phải có lệ, các bác à. Gánh lớn một phần, gánh nhỏ bớt một phần — bên trên vẫn thu thế cả."
+      },
+      {
+        "speaker": "Kẻ giữ trạm thu phí",
+        "text": "Tôi là người đạo quán cử xuống. Không ai trông, hai làng giành nhau vỡ đầu ở bờ này thì ai chịu? Lệ này là lệ giữ yên."
+      },
+      {
+        "speaker": "Trưởng làng bên đông",
+        "text": "Anh nói đạo quán cử. Vậy ai cử anh, cử hôm nào, giấy cử đâu? Đưa ra đây cho hai làng cùng xem."
+      },
+      {
+        "speaker": "Người dân làng",
+        "text": "Gánh một gánh cũng phải nộp; không nộp thì bị ghi tên vào cuốn sổ nhỏ của ảnh. Tụi tôi sợ cái tên bị ghi hơn sợ tốn tiền."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nước thì chia xong rồi. Còn cái chòi này — nó uống nước hay uống tiền, mà bờ nào cũng đòi phần?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa cho không thứ lớn hơn nhiều. Mấy người tranh một cái chòi tre, coi bộ còn vui hơn tranh nước. Cứ tranh, bổn tọa xem."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, nước chia được bằng một phất tay. Người giữ trạm thì không chia bằng tay áo được — việc ấy phải để hai làng tự đặt lệ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui ghi vào sổ mạch trước mặt hai làng: mạch ba mươi sáu, hai nhánh, không lệ phí nào của mạch này được Linh Điền Đường công nhận."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Sổ mạch chưa giao mạch này cho làng nào giữ riêng. Trạm này không có trong sổ. Ai không tin, tui đọc lại từ trang đầu."
+      },
+      {
+        "speaker": "Trưởng làng bên tây",
+        "text": "Đất gốc gì nữa! Mạch đã chia hai nhánh. Trạm còn đứng đây ngày nào, làng bên còn nói làng tôi chịu lệ của họ ngày đó."
+      },
+      {
+        "speaker": "Trưởng làng bên tây",
+        "text": "Người của tôi đứng tránh ra. Đánh nhau ở bờ nước thì nước đục, hai làng cùng uống nước đục — khôn ngoan gì cái khôn đó."
+      },
+      {
+        "speaker": "Kẻ giữ trạm thu phí",
+        "text": "Các bác phá trạm thì dễ. Mai mốt lại giành nhau ở bờ này, đừng gọi tôi ra đứng giữa. Tôi đứng đây là chịu đòn thay cho yên ổn đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa hai bác, nước của trời thì không ai giữ riêng được. Nhưng lệ giữ nước thì người đặt ra được, và lệ hôm nay phải là lệ cả hai làng cùng giữ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi xin hai bác đình việc tranh một buổi. Nghe tôi nói hết một lệ, rồi hai làng tự quyết. Tôi không quyết thay phần đất của ai."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Điều thứ nhất: trông mạch theo phiên, mỗi phiên một làng, đổi phiên trước bia đá. Điều thứ hai: người trông phiên không được thu bất cứ khoản nào."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Điều thứ ba: làng nào để người trông phiên của mình thu tiền, làng kia được truất người ấy ngay tại chỗ, phiên sau thuộc về làng bị hại."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tên người trông từng phiên ghi vào sổ mạch của bà Mến. Có sổ làm chứng, sau này cãi bằng sổ — không cãi bằng nắm tay ở bờ nước."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui đọc lại lệ thành chữ trong sổ: phiên đầu làng đông, phiên sau làng tây, xen nhau mà đi, không làng nào giữ hai phiên liền."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Người trông phiên đầu của làng đông là anh Hai Thận, của làng tây là anh Tư Cọp. Tui ghi tên cả hai, hai bác ký làm chứng cho nhau."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Ai thu một đồng ở bờ mạch này, tên người đó vào sổ của tui trước, rồi mới tới chuyện truất. Sổ này không bênh làng nào hết."
+      },
+      {
+        "speaker": "Trưởng làng bên đông",
+        "text": "Làng tôi trông phiên đầu, phiên sau làng bên trông; có sổ làm chứng, có lệ truất rõ ràng. Vậy tôi nhận lệ này, giữ thể diện cho cả hai bên."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Một mạch nước, bổn tọa chia trong một phất tay. Một cái trạm, họ phải đặt ba điều lệ mới dẹp xong. Người ở đất này tranh quyền bền hơn tranh nước."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Sổ mạch xong rồi, thưa cô. Mà tui phải thưa một chuyện: ở sân lễ đang có người thu tiền còn lạ hơn trạm này — thu tiền của người xin học."
+      }
+    ],
+    "choices": [
+      {
+        "id": "first_keeper_turn_witnessed",
+        "text": "Ở lại xem hai làng trao phiên trông coi đầu tiên trước bia đá — để lệ luân phiên của nàng chạy trọn một vòng có mặt đoàn làm chứng.",
+        "next": "ky3_38_phi_dang_ky",
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3Spring36SharedRule": true
+        }
+      },
+      {
+        "id": "leave_the_rule_to_villages",
+        "text": "Rút đoàn ngay khi lệ vừa đặt xong — lệ của hai làng thì để hai làng tự giữ, đoàn không ở lại làm bia đỡ cho nó.",
+        "next": "ky3_38_phi_dang_ky",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3Spring36SharedRule": true
+        }
+      }
+    ]
+  },
+  "ky3_38_phi_dang_ky": {
+    "id": "ky3_38_phi_dang_ky",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Phí đứng tên",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân lễ Hạ Ô Môn, Long Hải — ngày 26",
+    "companions": [],
+    "narration": [
+      "Ở góc sân lễ, một bàn gỗ kê vội từ lúc nào: cuốn sổ thu tiền viết tay, hộp gỗ đựng tiền lẻ, và một chấp sự trong vòng tông môn ngồi sau bàn. Dân tới xin học xếp hàng: nộp tiền thì tên được đứng trong danh sách đợt này, không nộp thì chờ đợt sau. Có người đếm đi đếm lại mấy đồng lẻ trong tay; có người hỏi vay người đứng sau, hứa trả bằng thóc. Học ở môn này vốn không có lệ phí, nhưng hàng người vẫn dài — một cuốn sổ và một cái bàn cũng đủ làm người ta sợ bị bỏ lại.",
+      "Cao Minh và Tiểu Lan đi ngang góc sân. Hắn dừng ngay từ câu đầu của người chấp sự: hắn chưa từng đặt một lệ phí nào. Nhưng hắn không phất tay dẹp cái bàn như dẹp trạm tre ngoài bờ mạch. Đây là người của môn, thu tiền nhân danh môn. Tiểu Lan bước tới gần người đứng đầu hàng, còn hắn đứng yên, nhìn người chấp sự như nhìn một con cá lạ tự bơi lên cạn.",
+      "Nguyễn Văn Thạo tới rất nhanh cùng mấy đệ tử Hộ Pháp. Hắn không rút vũ khí, không ra một đòn. Hắn đứng vào giữa bàn và hàng người, ra lệnh thu hộp tiền và cuốn sổ, cho hai đệ tử giữ hai đầu bàn; người chấp sự bị một câu của hắn giữ đứng yên tại chỗ. Cả góc sân im lặng mà không một giọt máu. Uy của Hộ Pháp Đường là uy kỷ luật: người ta sợ bị gạch tên khỏi hàng ngũ hơn sợ đòn. Cuốn sổ thu tiền được niêm lại ngay tại chỗ, làm chứng cho việc sẽ tới.",
+      "Tiểu Lan quyết cách trả tiền ngay trong buổi sáng. Nàng không trả theo cuốn sổ của người thu tiền: sổ ấy chỉ ghi người đã nộp, còn người không có tiền, bỏ hàng đi từ sớm, thì không có tên trong đó — mà chính họ mới bị cái bàn này làm hại nhiều nhất. Nàng kê một bàn khác của Nhân Danh Đường, ghi tên từng người bị thu: tên thật, số tiền, ai thu. Người đã bỏ đi ghi riêng một trang để tìm trả sau. Thạo tự tay bưng hộp tiền đặt trước bàn của nàng.",
+      "Tống Nguyên Phúc bước ra từ phía tàng kinh đúng lúc việc hoàn tiền đang chạy. Hắn không bênh người chấp sự về khoản tiền — hắn khôn hơn thế. Hắn bênh cái lý ở sau cái bàn, nói trước mặt dân và đệ tử, không qua một tờ trình nào. Tiểu Lan nghe hết rồi mới đáp. Đây là lần đầu tiên đường lối của Tống và đường lối của môn va nhau công khai, không ai dàn hòa được.",
+      "Việc ở góc sân xong, hàng người tan vào sân lễ như chưa từng có lệ phí ở đó. Tống không bỏ đi như người thua cuộc: hắn xin trình Hội Đồng một đề xuất chính thức, đi bằng đường hợp lệ, trước mặt mọi người. Cao Minh cho hắn trình. Tiểu Lan nhìn theo bóng Tống về phía tàng kinh, nói khẽ một câu chỉ đủ cho người đứng cạnh nghe."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Người dân tới ghi danh",
+        "text": "Dạ, con nộp bấy nhiêu đây… nộp vậy là tên con được đứng trong danh sách học đợt này chưa, thưa thầy?"
+      },
+      {
+        "speaker": "Người dân tới ghi danh",
+        "text": "Người ta nói đợt này sắp đủ người. Con vay đỡ anh đứng sau hai chục, vụ tới con trả bằng thóc, anh làm chứng cho con."
+      },
+      {
+        "speaker": "Chấp sự thu phí",
+        "text": "Đứng tên thì phải có phí đứng tên, lệ ở đâu cũng vậy. Nộp xong tôi ghi tên vào sổ; không nộp, tôi không dám ghi."
+      },
+      {
+        "speaker": "Chấp sự thu phí",
+        "text": "Xếp hàng ngay ngắn, đừng chen. Tiền này là tiền giữ trật tự cho cả đợt học, không phải tiền tôi bỏ túi — bà con đừng nói bậy."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Lệ hay đấy. Bổn tọa ban pháp cho không cả vùng, mà không nhớ có kèm lệ nộp tiền mới được đứng tên. Đặt hôm nào vậy?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đừng vội dẹp bàn. Bổn tọa muốn xem người của môn tự dẹp người của môn trước mặt dân. Gọi Hộ Pháp tới."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa bác, bác nộp bao nhiêu, cho việc gì, và người ta nói với bác thế nào?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bác, bác cứ đứng yên đây. Tiền của bác sáng nay chưa đi xa — nó còn nằm trong cái hộp trên bàn kia."
+      },
+      {
+        "speaker": "Chấp sự thu phí",
+        "text": "Dạ… đây là lệ giữ trật tự hàng người thôi. Người tới đông, không có lệ thì ai cũng chen…"
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Hộ Pháp tới không phải để đánh người của mình. Bàn này dẹp. Hộp tiền, cuốn sổ giữ nguyên. Anh đứng yên đó."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Hai anh giữ hai đầu bàn. Ai đụng vào hộp tiền từ giờ này, tôi hỏi người đó trước. Phạt hay không là việc của Hội Đồng."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Lệ nào, ai đặt — để dành thưa với Hội Đồng. Ở sân này, anh chỉ cần đứng yên, nhìn người ta trả tiền lại."
+      },
+      {
+        "speaker": "Đệ tử Hộ Pháp",
+        "text": "Dạ, thưa trưởng đường, sổ đã niêm, hộp tiền đã giữ. Hàng người con cho lùi ra ba bước, không ai chen vào được nữa."
+      },
+      {
+        "speaker": "Chấp sự thu phí",
+        "text": "Tôi thu theo lệ nơi khác vẫn làm… Ở đâu có danh sách là ở đó có phí. Tôi đâu dám ăn tiền của ai…"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bác, bác cho tôi xin tên. Tên bác ghi vào sổ này là để trả lại tiền cho bác — không phải để bác nợ ai điều gì."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ai đã bỏ hàng vì không có tiền nộp, bà con nhớ mặt ai thì chỉ cho tôi. Tên của họ cũng được ghi, để tìm tới nhà mà trả."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Sổ của người thu tiền không làm chuẩn trả lại được. Nó chỉ ghi người đã nộp — người bị đuổi đi từ đầu hàng, nó không ghi."
+      },
+      {
+        "speaker": "Người dân tới ghi danh",
+        "text": "Dạ, tên con là Sáu Đen, xóm chài dưới, nộp ba chục. Chị Ba xóm trên không có tiền, bỏ về từ sớm — cô ghi tên chỉ giùm con."
+      },
+      {
+        "speaker": "Người dân tới ghi danh",
+        "text": "Tiền con đếm lại đủ ba chục. Ở sân này, tên người ta được ghi để được trả lại — con chưa thấy ở đâu như vậy."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Hộp tiền này Hộ Pháp giao sang Nhân Danh Đường giữ. Ghi tên, hoàn trả là việc của đường cô. Hộ Pháp chỉ giữ người và giữ sân."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Người chấp sự sai ở khoản tiền — không ai cãi được. Nhưng xin đừng vì khoản tiền mà bỏ qua cái lý ở sau nó."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Hàng nghìn người tới môn mỗi ngày. Không đăng ký, không cấp phép, không ai biết ai đã tới — trật tự như vậy giữ bằng gì, thưa cô?"
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Bàn này tự sinh ra vì môn bỏ trống việc cấp phép. Chỗ trống còn ngày nào, còn người tự lấp nó theo cách của mình ngày đó."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi không bênh một đồng nào trong hộp kia. Môn đông người mà không có phép ghi nhận người, phép sẽ tự mọc — mọc xấu như sáng nay."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh Tống, ghi tên để trả lại tiền, khác với ghi tên để người ta phải xin mới được học. Hai cuốn sổ đó không giống nhau."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ở môn này, từ ngày đầu, không ai phải xin phép để được có tên. Sổ của tôi ghi tên để bảo vệ người — không phải để cho phép người."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa phát pháp mà không xin phép ai. Vậy trong môn này, ai là người đầu tiên phải xin phép — người học, hay người giữ sổ?"
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Vậy tôi xin trình Hội Đồng một đề xuất chính thức: lập một cơ quan cấp phép của môn, có dấu, có sổ, có người chịu trách nhiệm."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi trình công khai, ghi biên bản đàng hoàng; Hội Đồng bác thì tôi chịu. Tôi không làm việc này sau lưng ai."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Cứ trình. Bổn tọa cũng muốn xem một tờ giấy trị được đám người này tới đâu. Quyết định cuối là của Hội Đồng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi không sợ một cơ quan. Tôi sợ ngày tờ giấy của nó đứng trước con người — trình giấy trước, làm người sau."
+      }
+    ],
+    "choices": [
+      {
+        "id": "refund_by_true_names",
+        "text": "Hoàn tiền theo danh sách tên thật nàng vừa ghi — người đã bỏ hàng cũng được ghi tên để tìm trả sau, không ai mất phần vì cuốn sổ của kẻ thu tiền.",
+        "next": "ky3_39_chap_chieu_phong",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FalseFeeExposed": true
+        }
+      },
+      {
+        "id": "guard_the_box_till_council",
+        "text": "Để Hộ Pháp giữ nguyên hộp tiền và sổ thu niêm phong tới phiên Hội Đồng — chứng cứ của vụ thu giả không qua tay thêm một ai.",
+        "next": "ky3_39_chap_chieu_phong",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FalseFeeExposed": true
+        }
+      }
+    ]
+  },
+  "ky3_39_chap_chieu_phong": {
+    "id": "ky3_39_chap_chieu_phong",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Chấp Chiếu Phòng",
+    "backgroundId": "ha-o-scripture-hall",
+    "location": "Tàng kinh đường Hạ Ô Môn, Long Hải — ngày 26",
+    "companions": [],
+    "narration": [
+      "Ngay buổi chiều sau vụ phí đăng ký, Tống Nguyên Phúc cho dựng Chấp Chiếu Phòng trong một gian của tàng kinh đường: bàn dài giữa phòng, kệ hồ sơ chia ô theo từng đường, con dấu gỗ mới khắc còn thơm mùi gỗ, chồng giấy đệ tử in sẵn các mục tên, tuổi, quê quán, đường tu. Đề xuất hắn nói ở sân lễ buổi sáng, hắn đã chuẩn bị xong phần hình thức trước khi Hội Đồng kịp họp. Ngoài cửa, một đệ tử mới đứng chờ — người đầu tiên tới xin tờ giấy đệ tử. Cần nói cho rõ: phòng này không phải đường thứ bảy. Sáu đường vẫn là sáu đường, mỗi đường có trưởng đường và ghế ở Hội Đồng. Phòng của Tống không có ghế nào hết — nó chỉ là một bộ phận giấy tờ hắn tự lập, và cho tới giờ phút này, Hội Đồng chưa trao cho nó một quyền gì.",
+      "Tống diễn giải cơ chế bằng vật thật. Giấy đệ tử có số, đóng dấu của phòng; đường nào nhận người thì phòng ghi vào sổ gốc. Ai có giấy mới được lãnh ấn đợt sau, vào tàng kinh theo cấp, ghi danh đi phân đàn. Mặt tốt của nó là thật: hết cảnh chấp sự tự phát thu phí, vì từ nay chỉ một nơi có quyền đóng dấu. Nguyễn Hữu Cẩn đứng nghe, gật đầu theo từng điều. Hắn là đệ tử có tư chất, tiến rất nhanh, và chuyện người giỏi bị chìm trong đám đông không hồ sơ là chuyện hắn khó chịu từ lâu.",
+      "Cao Minh cầm tờ giấy đệ tử mẫu lên, lật qua lật lại như xem món đồ chơi mới. Hắn không ra lệnh bãi bỏ căn phòng này. Dẹp một cái trạm tre là việc của tay áo; xử một căn phòng có dấu, có sổ, có người tin theo, là việc của thể chế — hắn đẩy câu hỏi về phía Hội Đồng và phía Tiểu Lan, rồi ngồi xuống xem tiếp.",
+      "Tiểu Lan cầm một tờ giấy đệ tử, đọc hết các mục in sẵn, chậm như đọc một tờ gia phả. Nàng là người ghi sổ sạch từ ngày đầu của kỳ — không ai ở sân này hiểu giấy bằng nàng. Sự khó chịu của nàng có căn cứ rõ ràng, và nàng nói nó ra thành lời cho cả phòng cùng nghe.",
+      "Cẩn bênh phòng của Tống công khai: giữa một phòng có dấu và trăm kẻ tự phát đặt lệ, hắn chọn phòng. Tiểu Lan không tranh thắng thua với hắn. Nàng đặt điều kiện của Nhân Danh Đường lên bàn như một đường biên: dù Hội Đồng xử căn phòng này ra sao, sổ tên của Nhân Danh Đường ở ngoài phòng này — không sao chép sang, không chịu quyền thu hồi của phòng. Và giấy đệ tử, nếu có ngày tồn tại, không bao giờ được dùng để từ chối chữa bệnh, phát nước linh tuyền hay ghi tên người được cứu. Tống ghi điều kiện ấy vào tờ trình Hội Đồng. Hắn cần sự chuẩn thuận; hắn chưa tự cho mình quyền bác điều kiện của ai.",
+      "Ngoài cửa, người đệ tử mới chờ từ đầu buổi. Anh ta ra về không có tờ giấy nào trong tay, vì Hội Đồng chưa chuẩn thuận điều gì. Tối đó anh ta vẫn vào nghe giảng như mọi ngày, không ai ngăn, không ai hỏi giấy. Chi tiết nhỏ ấy là sự thật của cả cảnh: Chấp Chiếu Phòng lúc này mới là một căn phòng, một con dấu, một chồng giấy — chưa áp được điều kiện nào lên ai. Tống ở lại sắp hồ sơ vào kệ, như người tin rằng giấy tờ, sớm muộn, cũng thành luật."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa Đạo Tổ, thưa cô Lan, phòng này lo ba việc: cấp giấy đệ tử, giữ hồ sơ các đường, đối chiếu người ra vào tàng kinh."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Đây là con dấu của phòng, mới khắc sáng nay. Và giấy đệ tử in sẵn: tên, tuổi, quê quán, đường tu — thiếu một mục là giấy không thành."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi dựng phòng và giấy mẫu trước, rồi trình Hội Đồng chuẩn thuận sau. Trình bằng vật thật, Hội Đồng thấy được trật tự hơn nghe lý thuyết suông."
+      },
+      {
+        "speaker": "Đệ tử mới tới xin giấy",
+        "text": "Dạ… thưa thầy, không có giấy này, mai con còn được vào nghe giảng không? Người ta nói từ nay phải có giấy…"
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Giấy đệ tử có số, đóng dấu phòng này. Đường nào nhận người, phòng ghi vào sổ gốc. Từ nay chỉ một nơi có quyền đóng dấu."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Có giấy mới lãnh ấn đợt sau, vào tàng kinh theo cấp, ghi danh đi phân đàn. Việc như buổi sáng — chấp sự tự thu phí — hết đất mà sinh."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Ở sân lễ ai cũng như ai, người học nhanh phải chờ người học chậm. Có giấy phân cấp, môn mới biết ai nên giao việc gì."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Người có tư chất mà không hồ sơ thì cũng như không. Tôi đứng trong đám đông ba ngày, không ai biết tôi tiến tới đâu — lãng phí người."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Công pháp bổn tọa phát miễn phí. Sao lại cần người cấp phép mới được học? Giấy này cấp phép cho người học, hay cho người cấp?"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Dấu này đóng xuống nặng bao nhiêu? Đóng lên giấy, hay đóng lên người? Đóng thử một cái cho bổn tọa xem."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa không bãi bỏ phòng này ở đây. Một cái dấu gỗ mà bắt bổn tọa ra tay thì chán. Hội Đồng của môn để làm gì — cứ để họ xử."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa Đạo Tổ, phép của ngài là cho người. Giấy của phòng là cho việc. Không có giấy, việc lại rơi vào tay kẻ tự phát như buổi sáng."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Dấu đóng lên giấy, thưa ngài. Nhưng giấy đi theo người cả đời trong môn — chính vì nặng, nó phải nằm ở một nơi có người chịu trách nhiệm."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh Tống, tôi không nói phòng này sai. Tôi nói anh phải biết con dấu của anh nặng ở chỗ nào."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Ở nơi tôi lớn lên, giấy tờ quyết định một con người có tồn tại hay không. Tên tôi từng bị xóa khỏi gia phả — trên giấy, tôi là người đã chết, dù tôi vẫn sống."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Một phòng có quyền cấp giấy cho người ta được là đệ tử, thì ở đầu kia nó cũng cầm quyền làm một người không còn là gì cả — nếu giấy bị thu, bị mất, hay không được cấp."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dấu đóng lên giấy thì nhẹ. Đóng lên một đời người thì không nhẹ đâu, thưa anh. Xin anh nhớ điều đó trước mọi điều khác."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Cô Lan lo xa rồi. Giấy chỉ ghi lại việc có thật: ai là đệ tử, học tới đâu. Có gì mà thành quyền trên đời người?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi đặt một điều kiện của Nhân Danh Đường: sổ tên của đường tôi ở ngoài phòng này. Không sao chép sang, không chịu quyền thu hồi của phòng."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Và giấy đệ tử, nếu có ngày tồn tại, không bao giờ được dùng để từ chối chữa bệnh, phát nước linh tuyền, hay ghi tên người được cứu."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Giữa một phòng có dấu và trăm kẻ tự phát đặt lệ, tôi chọn phòng có dấu. Kẻ thu phí buổi sáng sinh ra vì môn không có phép."
+      },
+      {
+        "speaker": "Nguyễn Hữu Cẩn",
+        "text": "Tôi chỉ xin môn đừng để người giỏi phải đứng chung hàng với kẻ tới cho có mặt. Vậy thôi."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Điều kiện của cô Lan, tôi ghi vào tờ trình nguyên văn. Hội Đồng quyết — tôi không tự quyết, không tự bác."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Phòng này chờ chuẩn thuận của Hội Đồng. Chưa có chuẩn thuận, dấu này chưa đóng lên tờ giấy nào của ai hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Cậu đệ tử ngoài cửa chờ từ đầu buổi. Tối nay cậu ấy vẫn vào nghe giảng không cần giấy. Chừng nào điều đó còn đúng, phòng này chưa là một cái cửa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa gỡ cho họ một cái vòng, họ tự đẽo cái khác vừa cổ hơn. Cứ để họ đẽo."
+      }
+    ],
+    "choices": [
+      {
+        "id": "keep_nhan_danh_books_apart",
+        "text": "Giữ sổ Nhân Danh ở ngoài Chấp Chiếu Phòng theo đúng điều kiện nàng vừa đặt — hai hệ giấy nhìn nhau, không hệ nào nuốt hệ nào.",
+        "next": "ky3_40_gia_an_ma_to",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3PermitOfficeRaised": true
+        }
+      },
+      {
+        "id": "let_council_decide_the_seal",
+        "text": "Để nguyên con dấu và tờ trình cho Hội Đồng xử — không bênh, không bác tại chỗ; phòng này sống chết do luật của môn, không do một câu nói.",
+        "next": "ky3_40_gia_an_ma_to",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3PermitOfficeRaised": true
+        }
+      }
+    ]
+  },
+  "ky3_40_gia_an_ma_to": {
+    "id": "ky3_40_gia_an_ma_to",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Ấn của Ma Tổ",
+    "backgroundId": "long-hai-market",
+    "location": "Chợ Long Hải, Nam Kỳ — ngày 27",
+    "companions": [],
+    "narration": [
+      "Buổi chợ vừa mở, trưởng làng chài ở cửa phá phía nam dẫn mấy hộ dân tới gian hàng tông môn. Làng ông có bốn mươi ba hộ. Trong ba ngày, người của một thứ phòng cấp phép nào đó tới làng hai lượt, thu mỗi hộ hai quan phí giữ chỗ nhập môn — tổng cộng tám mươi sáu quan. Hôm nay là hẹn lượt thu thứ ba. Ông không mang tiền tới. Ông mang cuống biên lai và một tờ lệnh, tới hỏi tiền của làng mình đang ở tay ai. Tin đạo quán thu tiền làng chạy miệng khắp chợ.",
+      "Tiểu Lan cho mời đoàn người của làng vào bóng râm của gian hàng. Vụ này nghe công khai giữa chợ, không đưa về phòng kín: giấy giả sống bằng lời đồn thì phải chết ở chỗ đông người. Đỗ Thị Hạnh bày ba món chứng cứ. Thứ nhất: xấp cuống biên lai làng giữ — giấy dó mỏng, dấu đỏ vuông, một nét chữ chạy suốt bốn mươi ba hộ. Thứ hai: tờ lệnh mang danh Tổng Chấp Sự. Thứ ba: phần tiền lượt hẹn hôm nay còn nguyên trong tay trưởng làng. Hạnh đọc to tờ lệnh. Càng đọc, sự giả càng tự lộ.",
+      "Ký Lương đang quanh quẩn ở chợ như mọi ngày và bị gọi tới đối chất trước gian hàng. Hắn chối theo nghề môi giới: mỗi câu đúng một nửa, né phần chết người. Cao Minh nghe từ đầu tới giờ chưa nói một lời. Sự im lặng ấy đè lên vai người môi giới nặng hơn bất cứ câu hỏi nào.",
+      "Đào Nhất Bút mang ấn Khai Mạch thật và giấy mẫu thật ra chợ. Việc đối chiếu diễn ra công khai. Giấy thật không có mục thu phí ở đâu hết. Dấu thật khắc cân đối; dấu trên cuống biên lai lệch hẳn một nét. Đòn kết luận: tờ lệnh ký danh Tổng Chấp Sự — chức ấy không tồn tại trong Hạ Ô Môn. Ký Lương bắt đầu mất nhịp: lời hắn trượt từ không biết sang có người nhờ chuyển.",
+      "Cao Minh phán một câu ngắn, không cần phép thuật. Cả chợ nghe rõ: từ nay, giấy nào mang danh hắn mà đòi tiền đều là giấy giả. Tiểu Lan chốt phần việc của thể chế: Nhân Danh Đường ghi tên bốn mươi ba hộ là nạn nhân được bảo vệ, tiền hoàn theo danh sách tên, lời bác bỏ của môn được Hạnh ghi thành văn bản đọc lại giữa chợ để làng mang về. Tông môn tự bác bỏ giấy tờ mang tên mình, bằng giấy tờ thật của chính mình.",
+      "Phần tiền còn giữ được hoàn ngay tại chợ theo tên từng hộ. Phần đã chảy đi ghi vào hồ sơ để truy thu. Giữa lúc đám đông xúm quanh bàn hoàn tiền, Ký Lương lùi vào dòng người rồi đi mất. Không ai ra lệnh bắt hắn: Hộ Pháp không có mặt, Hạnh và Bút là người giấy tờ. Còn Cao Minh chủ ý không giữ hắn lại: bắt một người môi giới hôm nay, đầu dây in ấn và khắc dấu giả sẽ chôn hồ sơ và đổi tay ngay trong đêm; để hắn chạy, hắn sẽ chạy về phía hồ sơ của chính hắn.",
+      "Hạnh đóng tập hồ sơ của làng chài lại — tập đầu tiên của một loại hồ sơ mới: hồ sơ hàng giả. Hôm nay ấn giả, lệnh giả; mai đan giả, giấy đệ tử giả. Tuyến hàng giả, từ sáng nay, mở chính thức."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Trưởng làng",
+        "text": "Thưa cô, làng tôi bốn mươi ba hộ ở cửa phá phía nam. Người ta tới hai lượt, mỗi hộ hai quan — tám mươi sáu quan."
+      },
+      {
+        "speaker": "Trưởng làng",
+        "text": "Hôm nay hẹn lượt thứ ba. Tôi tới không phải để nộp — tôi tới hỏi tiền của làng tôi đang ở tay ai."
+      },
+      {
+        "speaker": "Trưởng làng",
+        "text": "Họ nói không nộp thì đợt sau không ai được đứng tên, ghe cá phải trình lệnh mới được vào chợ. Làng tôi sợ mất đường làm ăn."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa bác, bác cứ nói từ đầu, giữa chợ này. Giấy giả sống bằng lời đồn — hôm nay nó phải được nghe rõ ở chỗ đông người."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Ba món theo thứ tự: cuống biên lai bốn mươi ba hộ làng giữ, tờ lệnh mang danh Tổng Chấp Sự, phần tiền lượt ba còn nguyên trong tay bác trưởng làng."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi đọc to tờ lệnh: bắt làng nộp phí giữ chỗ nhập môn, không nộp thì cấm ghe vào chợ. Bà con nghe rồi tự đối chiếu với lễ phát ấn."
+      },
+      {
+        "speaker": "Trưởng làng",
+        "text": "Người thu tiền nói ghe làng tôi không có lệnh này thì đừng hòng qua trạm chợ. Cá ươn một buổi là mất một mùa, thưa cô."
+      },
+      {
+        "speaker": "Trưởng làng",
+        "text": "Cuống biên lai đây, bốn mươi ba cuống, một nét chữ chạy suốt. Làng tôi ít chữ, nhưng nét chữ giống nhau thì người chài cũng nhận ra."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Tôi là người đưa tin ở chợ này. Giấy ai in tôi không giữ, tiền qua tay ai tôi không đếm. Đừng hỏi tôi chuyện phòng nào."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Dấu đỏ thì chợ này thiếu gì người khắc. Tôi đi ngang làng đó đúng mấy ngày đó — đi ngang là nghề của tôi."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Nét chữ trên cuống? Người viết mướn viết cho trăm làng, nét nào cũng na ná. Cô Hạnh hỏi vậy là hỏi khó người làm ăn nhỏ."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Vậy tôi hỏi một câu thôi, anh Lương: một nét chữ chạy suốt bốn mươi ba cuống này — anh xem có quen không?"
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Đây là ấn thật, giấy thật của môn. Dấu thật khắc cân — dấu trên cuống kia lệch hẳn một nét."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Và tờ lệnh này ký danh Tổng Chấp Sự. Trong Hạ Ô Môn không có chức đó. Chưa từng có."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Thì… có người nhờ tôi chuyển lời xuống làng, nói là việc của phòng cấp phép. Tôi chuyển lời ăn công, giấy tờ đâu có rành…"
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Tôi mà biết giấy giả, dại gì đi ngang làng đó hai lượt cho người ta nhớ mặt? Người ta mượn mặt quen của tôi thôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Tổng Chấp Sự. Bổn tọa lập chức này hồi nào, sao bổn tọa không hay? Người nhờ ngươi chuyển lời phong chức cũng rộng tay lắm."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nghe cho rõ, cả chợ: giấy nào mang danh bổn tọa mà đòi tiền đều là giả. Ai cầm giấy như vậy, đưa người cầm tới đây."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Bổn tọa xem mặt người trước, xem dấu sau. Dấu giả dễ khắc — mặt người đứng sau con dấu mới là thứ bổn tọa muốn thấy."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bác, bốn mươi ba hộ làng bác được ghi vào sổ Nhân Danh là người bị hại, được môn bảo vệ. Không ai mất quyền gì vì giấy giả."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tiền hoàn theo tên từng hộ. Phần đã chảy đi ghi hồ sơ để truy — không hộ nào bị bỏ sót."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Lời bác bỏ của môn, chị Hạnh ghi thành văn bản đọc lại giữa chợ. Làng bác mang văn bản ấy về — giấy thật bác bỏ giấy giả."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Vậy… việc này để tôi về hỏi lại người nhờ tôi đã. Đứng đây nói nữa cũng không ra thêm gì đâu…"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh Thạo không có ở chợ, và tôi không cho ai đuổi theo anh Lương. Bắt một người môi giới hôm nay, đầu dây in giấy giả chôn hồ sơ ngay trong đêm."
+      },
+      {
+        "speaker": "Trưởng làng",
+        "text": "Tiền đếm lại đủ phần còn giữ. Văn bản này tôi mang về đọc giữa làng. Từ nay làng tôi biết đưa người cầm giấy đòi tiền tới đâu."
+      },
+      {
+        "speaker": "Ký Lương",
+        "text": "Chợ đông quá, đứng lâu ngợp thở. Tôi đi trước một bước, bà con ở lại nghe văn bản…"
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Người ta chỉ làm giả thứ có giá. Môn mới mở mấy ngày đã có người khắc dấu giả — coi như một lời khen."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Chị Hạnh, tập hồ sơ này đóng riêng một bìa. Từ hôm nay Nhân Danh Đường có thêm một loại sổ: sổ hàng giả."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Dạ: hôm nay ấn giả, lệnh giả. Mai tới đan giả, giấy đệ tử giả. Thứ gì của môn bán được niềm tin thì bị làm giả — hồ sơ mở từ hôm nay."
+      }
+    ],
+    "choices": [
+      {
+        "id": "void_papers_by_name_list",
+        "text": "Hoàn tiền cho 43 hộ theo danh sách tên của Nhân Danh và cho làng mang văn bản bác bỏ về đọc giữa làng — giết tờ lệnh giả bằng tên thật của từng người bị hại.",
+        "next": "ky3_41_bay_luoc_hoi_luat",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FalseSealExposed": true
+        }
+      },
+      {
+        "id": "escort_village_money_home",
+        "text": "Cho người của môn theo làng về tận cửa phá trao nốt phần tiền còn giữ và đứng chứng buổi đọc văn bản bác bỏ — không để làng mang tiền qua chợ một mình thêm lần nào nữa.",
+        "next": "ky3_41_bay_luoc_hoi_luat",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3FalseSealExposed": true
+        }
+      }
+    ]
+  },
+  "ky3_41_bay_luoc_hoi_luat": {
+    "id": "ky3_41_bay_luoc_hoi_luat",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Một câu hỏi của Hắc Khăn",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Cổng đạo quán Hạ Ô Môn, Long Hải — ngày 27",
+    "companions": [],
+    "narration": [
+      "Từ sau phiên chợ linh khí và vụ chiếc cân không biết nói dối, chợ Long Hải đổi lệ hẳn: sạp hàng mở sớm hơn, người bán tự đem cân nhà ra đối chiếu, ghe vào bến không còn lệ nào phải nộp. Hệ quả chạy tới tận cổng đạo quán: tiền bảo kê của Hắc Khăn dạo này thu không nổi. Không phải vì ai đánh Hắc Khăn — không một trận nào xảy ra. Chỉ là chợ hết sợ: người ta không còn tin nộp tiền thì yên hơn không nộp, và nghề sống bằng nỗi sợ thì chết khi nỗi sợ chết. Buổi chiều, một người bán hàng tới ghi danh nói chuyện ấy như nói chuyện thời tiết. Ngay sau, đệ tử trực cổng vào bẩm: có khách lạ xin gặp, đi một mình, đứng chờ ngoài cổng đúng phép.",
+      "Khách là Bảy Lược. Hắn tới một mình, khăn đen vắt trên vai như buổi chợ ngày trước, không dẫn theo ai, tay không mang gì để trình diễn. Cả sân lễ đều biết hắn: thủ lĩnh Hắc Khăn, người giữ ranh chợ bằng lễ giang hồ, không đổ máu, trong buổi chợ đoàn lần đầu trông thấy hắn. Chuyện hai thanh kiếm lơ lửng và người khách không bang nào dám đụng vào, cả vùng đã kể nhau nghe nhiều lần. Đứng trước cổng này, hắn biết rõ mình đang đứng trước người mạnh tới mức nào. Bảy Lược vẫn bước vào, chờ được gọi tên mới qua cổng, chào đúng lễ của một người khách tới hỏi việc. Tiểu Lan cho mời hắn vào như một người khách có câu hỏi — không tiếp như tù binh, cũng không tiếp như đệ tử.",
+      "Bảy Lược nói tình thế của Hắc Khăn bằng giọng của người đang tính sổ đời mình, không một lời than thở. Nghề bảo kê sống bằng sợ; chợ hết sợ thì nghề chết. Hắn không tới xin môn nuôi lại nghề cũ, cũng không tới gây sự. Hắn tới hỏi một câu mà, theo lời hắn, cả chợ không ai trả lời được cho hắn.",
+      "Cao Minh đáp phần về dao trước, luật sau, và đáp giữa sân, trước mặt đệ tử đang ra vào. Hắn nói thẳng, không vòng vo, không nể nang. Rồi hắn đẩy câu trả lời về đúng chỗ của nó: môn quy là việc của cả môn, và câu hỏi này sẽ được trả lời bằng luật — không phải bằng một cái gật đầu tiện tay của một người. Hắn không nhận Bảy Lược, cũng không đuổi Bảy Lược. Cánh cửa của câu hỏi ấy để ngỏ hoàn toàn.",
+      "Phần luật, ở mức nguyên tắc, là Tiểu Lan trả lời. Nàng nói rõ những gì môn quy hiện có nói được và chưa nói được, không hứa một chữ nào vượt quá luật. Rồi nàng ghi câu hỏi của Bảy Lược vào sổ của Nhân Danh Đường — ghi như một câu hỏi chờ luật, có tên người hỏi, có ngày hỏi đàng hoàng. Nói riêng với Cao Minh ở cuối buổi, nàng đọc ra điều nàng thấy ở người thủ lĩnh khăn đen: hắn có giới hạn của riêng hắn, giữ từ thời còn ở chợ. Hắn thu tiền mà không đụng người bán tới đường cùng, giữ mặt cho đối thủ, không đánh người yếu để lập uy. Chính giới hạn ấy là thứ còn chừa cho hắn một con đường tới cổng này mà hỏi — thay vì chỉ còn đường chạy.",
+      "Bảy Lược ra về một mình như lúc tới. Hắn đi qua sân lễ đông người, và điều lạ nhất là không ai tránh đường quá mức như từng tránh Hắc Khăn ngày trước: cả hắn lẫn cái sân này đều đã khác. Câu hỏi của hắn sẽ không nằm yên trong cuốn sổ — nó sẽ chạy về Hắc Khăn và các bang quanh vùng trước khi Hội Đồng kịp ngồi bàn. Giang hồ, từ chiều nay, bắt đầu tính lại chỗ đứng của mình quanh Hạ Ô Môn. Đó mới là nửa đầu của một nước cờ."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Người bán hàng ở chợ",
+        "text": "Dạ, thưa cô, dạo này khăn đen tới sạp, người ta còn mời nước. Sợ thì hết sợ rồi — mà tiền thì cũng hết thu rồi, thưa cô."
+      },
+      {
+        "speaker": "Đệ tử trực cổng",
+        "text": "Dạ, bẩm cô, ngoài cổng có khách xin gặp. Khách đi một mình, xưng là người của chợ, nói chỉ xin vào thưa một câu, không xin gì khác."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Tôi chào cô, chào ông. Tôi tới không phải xin xỏ, cũng không phải gây sự. Tôi tới hỏi một câu mà cả chợ không ai trả lời được cho tôi."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Buổi chợ ngày trước, tôi giữ ranh ở chợ, ông đứng xem ở rìa vòng người. Hôm nay tôi tới cổng này một mình — như vậy là tôi đã biết mình tới chỗ nào."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Tôi chờ được gọi tên mới qua cổng. Người tới hỏi luật thì đứng cho đúng phép của nhà người ta — chuyện đó giang hồ tụi tôi cũng hiểu."
+      },
+      {
+        "speaker": "Đệ tử trực cổng",
+        "text": "Dạ, khách không mang theo ai, cũng không mang thứ gì trong tay. Tôi đã xem kỹ từ ngoài cổng — chỉ có chiếc khăn đen vắt trên vai."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Nghề của tôi sống bằng sợ. Chợ hết sợ thì nghề chết — tôi không tới xin môn nuôi lại nghề cũ. Tôi tới hỏi môn quy dành cho người như tôi."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Một kẻ cả đời cầm dao thu tiền, tay không sạch, danh không đẹp: luật môn có câu nào viết cho hạng đó không? Nếu tôi bỏ khăn đen xuống, tôi đứng ở đâu trong sân này; không bỏ, luật xử tôi ở điều nào?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "thưa anh, tôi xin hỏi lại cho rõ: anh hỏi cho riêng anh, hay hỏi cho cả khăn đen của anh?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh cứ nói hết. Câu hỏi ghi vào sổ phải ghi cho đúng ý người hỏi — sai một chữ, sau này luật trả lời sẽ trả lời sai người."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Tôi hỏi cho tôi trước. Khăn đen nghe được gì từ câu trả lời, đó là phần của họ. Tôi không dám hỏi thay cho người chưa chắc muốn hỏi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Dao của ngươi, bổn tọa xem như xem đũa ăn cơm: nhiều, mà không đáng kể. Bổn tọa không nể dao của ai, cũng không cần dao của ai giữ chợ hộ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nhưng buổi chợ ngày trước, ngươi giữ ranh mà không đổ máu, giữ mặt cho đối thủ mà không mất mặt mình. Cái đó thì bổn tọa nhớ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Còn luật — môn quy là việc của cả môn. Câu hỏi của ngươi sẽ được trả lời bằng luật, không phải bằng một cái gật đầu tiện tay của bổn tọa."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Ông nhớ được buổi chợ đó, vậy là tôi hỏi đúng chỗ rồi. Tôi không xin cái gật đầu của ông. Tôi xin một câu trả lời có luật."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa anh, môn quy thứ nhất của môn này: nhận người không hỏi xuất thân. Nhưng cũng không ai được mang nghề cũ vào làm luật trong sân này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Câu hỏi của anh, tôi ghi vào sổ Nhân Danh như một câu hỏi chờ luật. Khi Hội Đồng có luật cho trường hợp này, anh sẽ nhận câu trả lời tận tay."
+      },
+      {
+        "speaker": "Bảy Lược",
+        "text": "Vậy tôi chờ luật. Chờ được — là vì chợ này bây giờ cũng đang chờ như tôi. Tôi cáo lui, cảm ơn cô đã ghi câu hỏi cho đàng hoàng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Biết lửa cháy mà vẫn bay tới, thì hoặc là ngu, hoặc đã tính xong đường cháy của mình. Ngươi thuộc hạng thứ hai, Lược à."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, người này có giới hạn của riêng anh ta: ở chợ, anh ta không đánh người yếu để lập uy. Giới hạn đó là thứ đưa anh ta tới cổng này — thay vì đưa anh ta vào đường chạy."
+      }
+    ],
+    "choices": [
+      {
+        "id": "record_question_await_law",
+        "text": "Ghi câu hỏi của Bảy Lược vào sổ Nhân Danh như một câu hỏi chờ luật — hắn ra về với một lời hẹn có giấy, không có hứa hẹn nào khác.",
+        "next": "ky3_42_tin_tu_tam_giang",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3BayLuocAskedLaw": true
+        }
+      },
+      {
+        "id": "walk_him_to_the_gate",
+        "text": "Tiễn hắn ra tận cổng trước mặt cả sân lễ — để đệ tử thấy một thủ lĩnh Hắc Khăn được đối xử như khách hỏi luật, không hơn không kém.",
+        "next": "ky3_42_tin_tu_tam_giang",
+        "effects": {
+          "cluesHuaGiaDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3BayLuocAskedLaw": true
+        }
+      }
+    ]
+  },
+  "ky3_42_tin_tu_tam_giang": {
+    "id": "ky3_42_tin_tu_tam_giang",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Tin từ Tam Giang",
+    "backgroundId": "long-hai-coast",
+    "location": "Bờ biển Long Hải, Nam Kỳ — ngày 27",
+    "companions": [],
+    "narration": [
+      "Buổi chiều, một chiếc ghe từ tuyến Phúc Thọ cập bờ biển Long Hải. Tạ Văn Độ lên bờ, tay ôm cuốn sổ tay bọc vải dầu — sổ của tuyến ghe: ngày giờ, trạm dừng, số quan tài qua tay từng chuyến. Trương Bá Hòe ở lại giữ phân đàn Phúc Thọ; Văn Độ mang theo lời nhắn miệng của anh ta, nguyên văn. Tin hắn mang về là tin người, đi bằng đường sông: ghe, trạm dừng, miệng người truyền miệng người — không có kênh nào khác. Cao Minh cho gọi Tiểu Lan ra bờ biển nghe cùng: tin này nghe bằng tai người thường, xử bằng chứng cứ của người thường.",
+      "Văn Độ trình bày tin theo sổ, và nói rõ ranh giới của chính mình: phần nào mắt hắn thấy, phần nào hắn suy ra. Các trạm trung chuyển trên tuyến quan tài đang dồn hướng: lượng quan tài và thứ hàng khai là người chết qua các trạm phía dưới tăng rõ rệt; hướng cuối của các ghe đêm, chuyến nào cũng chỉ về một phía — Cần Giờ. Hai trạm cũ phía Vũng Tàu vắng dần như bị rút ruột: ghe qua không dừng, người gác đã đổi. Mọi món đều kiểm chứng lại được bằng cách của người thường.",
+      "Tiểu Lan nghe toàn bộ buổi trình bày như một người thường nghe một lời thuật. Nàng không nghe thấy gì khác ngoài tiếng nói của Văn Độ và tiếng sóng sau lưng: không tiếng vọng nào trong đầu, không dấu hiệu nào chạy qua người, không phản ứng nào của thân thể gắn với bất cứ thứ gì ở xa. Việc của nàng thuần là việc của một người rành hồ sơ: đối chiếu lời Văn Độ với chứng cứ đoàn đang giữ — sổ tuyến, những tờ giấy chết đã đòi lại được, lệnh chi từ những ngày ở Vũng Tàu — và chỉ ra những điều phải xác minh hẳn hoi trước khi đoàn động tới hướng đó: tên các trạm đã rút người, danh sách ghe chạy đêm, người gác trạm nào còn nói được sự thật.",
+      "Từ tin của Văn Độ, việc thực tế đầu tiên là một điểm đứng chân ở vùng ba sông. Địa điểm phân đàn Tam Giang được chọn ngay buổi chiều ấy: một doi đất cao ở ngã ba sông, ghe của tuyến Phúc Thọ đi Cần Giờ đều qua mặt; đất không thuộc làng nào đang tranh chấp, đủ gần tuyến quan tài để nhìn, đủ xa các trạm để không đánh động ai. Cao Minh chọn điểm đất bằng con mắt địa thế của hắn — một cái nhìn dọc đường sông, một câu chốt. Nhưng hắn nói rõ: đây mới là chọn điểm. Dựng phân đàn, cử người, bố trí tuyến là việc của những ngày sau.",
+      "Tiểu Lan tự quyết phần việc của mình trong hướng Cần Giờ, không chờ ai giao. Trước khi bất kỳ ai đi về phía đó, nàng sẽ đối chiếu toàn bộ hồ sơ — tên người được cứu qua tuyến, danh sách trạm, sổ ghe của Văn Độ — thành một tập hồ sơ Tam Giang của Nhân Danh Đường. Người được cứu ở các trạm dưới phải có tên trong sổ của nàng trước, để tới lúc hỗn loạn không ai bị biến thành hàng thêm một lần nữa. Cao Minh chỉ gật đầu, nhận phần việc còn lại: giữ tuyến biển yên cho ghe của môn đi lại — đường thoát bằng biển cho người được cứu.",
+      "Văn Độ xuống ghe quay về Phúc Thọ ngay buổi chiều, mang theo lời nhắn ngược: Bá Hòe giữ phân đàn, tuyến cứu người chạy như cũ, không phá thêm mắt xích nào. Đoàn chỉ cứu người cụ thể trên tuyến; phần còn lại, phía dưới kia, vẫn nguyên vẹn như vốn thế. Tiểu Lan ôm tập sổ mới mở đi lên bờ. Trang đầu của nó chỉ có một dòng tiêu đề nàng vừa viết tay."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Dạ, thưa ông, thưa cô: chuyến này tôi không mang người về. Tôi mang tin — mà tin này nặng hơn người."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Anh Bá Hòe ở lại giữ phân đàn, nhắn miệng nguyên văn: phân đàn yên, người yên, sổ yên. Anh ấy chỉ lo một đường — đường dưới."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Đây là sổ tay tuyến ghe, tôi ghi từng chuyến: ngày giờ, trạm dừng, số quan tài qua tay. Tin bữa nay, món nào cũng có trang sổ đỡ cho nó."
+      },
+      {
+        "speaker": "Anh chèo ghe",
+        "text": "Dạ, ghe xin quay đầu ngay kẻo trễ con nước. Anh Độ lên bờ thưa chuyện, tụi em giữ ghe ở ngoài khơi cạn này."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Các trạm trung chuyển đang dồn hướng, thưa cô. Quan tài và hàng khai là người chết qua trạm dưới tăng rõ — ghe đêm chuyến nào cũng chỉ về một hướng."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Hướng đó là Cần Giờ. Còn hai trạm cũ phía Vũng Tàu thì vắng dần, ghe qua không dừng nữa, người gác cũng đã đổi — vắng như bị rút ruột, thưa cô."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Phần ghe đi hướng nào là mắt tôi thấy, sổ tôi ghi. Phần chúng dồn về Cần Giờ để làm gì — phần đó tôi đoán, nói rõ là đoán."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, tôi xin hỏi cho rõ một điều: anh nói dồn về Cần Giờ — là anh thấy ghe đi hướng đó, hay nghe người ở trạm nói lại?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi nghe anh bằng tai của tôi, đối chiếu bằng sổ của đoàn. Phần nào chưa có chứng cứ, ghi là chưa có — không thêm một chữ cho nặng hơn sự thật."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Việc cần làm trước: tên các trạm đã rút người, danh sách ghe chạy đêm, người gác trạm nào còn nói được. Ba thứ đó phải có bằng chứng hẳn hoi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh Độ giữ cuốn sổ này cẩn thận. Nó là chứng cứ của người thường, lấy bằng mắt người thường — có ngày nó nặng hơn nhiều thứ người ta tưởng."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Dạ, cô dạy phải. Người gác trạm thứ hai từ dưới lên là người quen cũ của tuyến — miệng kín, mà mắt thì còn sáng. Tôi hỏi được, thưa cô."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Đất thì bổn tọa chọn xong rồi: doi đất cao ở ngã ba sông, ghe nào qua mặt cũng thấy, không thuộc làng nào. Đứng ở đó là đúng chỗ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Nhưng nhớ cho rõ: hôm nay mới là chọn điểm. Dựng đàn, cử người là việc của những ngày sau. Đừng ai về đồn môn đã dựng xong cái gì."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Còn lại là việc của người biết đi ghe và biết giữ sổ. Bổn tọa không biết hai việc đó — và môn này may là có người biết."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Dạ, doi đất đó tôi biết. Con nước lớn ghe vào sát được, nước ròng thì bãi bùn giữ chân người lạ — đất đó giữ được, thưa ông."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Phần việc của tôi, tôi tự quyết ở đây: trước khi ai đi về hướng đó, tôi đối chiếu xong hồ sơ — tên người được cứu, danh sách trạm, sổ ghe anh Độ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Người được cứu ở các trạm dưới phải có tên trong sổ của tôi trước. Tới lúc hỗn loạn, không ai bị biến thành hàng nữa — điều đó tôi giữ."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Phần của nàng thì nàng làm. Phần của bổn tọa: giữ tuyến biển yên cho ghe của môn đi lại. Đường thoát bằng biển, bổn tọa giữ."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Dạ, tôi về ngay buổi chiều. Lời nhắn ngược tôi thuộc rồi: giữ phân đàn, chạy tuyến như cũ, không phá thêm mắt xích nào."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Biển hướng đó còn dài. Người ta dồn hàng về một chỗ thì vui cho kẻ đứng xem — dồn càng đông, coi càng rõ. Đi đi, Văn Độ, nước đang chờ."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Trang đầu tập hồ sơ này tôi viết một dòng thôi: Hồ sơ Tam Giang. Từ trang thứ hai, nó sẽ là tên người — từng người một, không thiếu ai."
+      }
+    ],
+    "choices": [
+      {
+        "id": "hold_sea_lane_open",
+        "text": "Giữ tuyến biển Long Hải – Phúc Thọ thông suốt và có người của môn chạy ghe thường trực — đường thoát bằng biển cho người được cứu không để đứt một ngày nào.",
+        "next": "ky3_43_dai_su_ty_khong_luyen_khi",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3TamGiangSiteChosen": true
+        },
+        "objective": "secure_sea_exit"
+      },
+      {
+        "id": "lan_files_first",
+        "text": "Để nàng lập xong tập hồ sơ Tam Giang của Nhân Danh trước khi đoàn động tới hướng Cần Giờ — đi sau giấy tờ của nàng, không đi trước nó.",
+        "next": "ky3_43_dai_su_ty_khong_luyen_khi",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3TamGiangSiteChosen": true
+        },
+        "objective": "secure_sea_exit"
+      }
+    ]
+  },
+  "ky3_43_dai_su_ty_khong_luyen_khi": {
+    "id": "ky3_43_dai_su_ty_khong_luyen_khi",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Đại sư tỷ không luyện khí",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Sân tập Hạ Ô Môn, Long Hải — ngày thứ 27",
+    "companions": [],
+    "narration": [
+      "Ngày thứ hai mươi bảy, sân tập Hạ Ô Môn vào buổi sớm. Cách gọi ấy đã lan ra trong đám đệ tử từ lúc nào không ai nhớ nổi nữa: đại sư tỷ. Một đệ tử mới vào môn được người cũ kéo tay áo, sửa cách chào ngay giữa sân — gặp nàng thì chào đại sư tỷ trước, cho phải phép. Câu chuyện đi kèm cũng đã thành bài thuộc lòng của sân: nàng là người ở bên Đạo Tổ từ những ngày đầu, người ghi tên cho kẻ được cứu, người mà Đạo Tổ nghe lời hơn bất cứ ai. Không câu nào trong bài ấy do nàng nói. Không câu nào nàng từng nhận. Tiểu Lan đi ngang sân, nghe cách gọi ấy dành cho chính mình lần nữa — và lần này, nàng dừng lại. Không giận, không vội. Nàng đứng yên giữa sân tập một lúc, như người vừa quyết xong một việc đã để lâu trong lòng. Mấy đệ tử đang tập gần đó cũng dừng tay theo, không ai bảo ai. Buổi sớm còn mát, nền đất sân còn hơi ẩm, và một cách gọi sai chỗ bỗng thành việc phải nói cho xong trước khi nắng lên.",
+      "Đỗ Thị Hạnh mang cuốn sổ điểm danh tới, và phần phàm của việc này nằm cả trong cuốn sổ ấy. Cách gọi đã bắt đầu lên giấy: trong sổ chép việc, đã có chỗ ghi hai chữ đại sư tỷ như một chức danh hẳn hoi, mực còn mới. Có đệ tử đã tới Nhân Danh Đường hỏi muốn xin ý kiến đại sư tỷ thì gửi giấy qua ai. Hạnh đặt cuốn sổ trước mặt Tiểu Lan, nói đúng việc của đường mình, trung tính: danh chưa ai phong, mà giấy đã chạy trước người rồi.",
+      "Rồi mọi ánh mắt trong sân dồn cả về một phía. Cao Minh đang ở đó, gần hơn mọi người tưởng — ngồi ở thềm đá mé sân, chén rượu trên tay, nghe hết từ đầu. Cả sân hiểu điều hắn cũng hiểu: việc này chỉ cần một chữ của Đạo Tổ là xong. Hắn gật một cái, danh ấy thành lệ của môn từ hôm nay. Hắn lắc một cái, đám đệ tử tản ngay, không ai dám gọi thế nữa. Mấy chục con người đứng yên chờ một cái gật đầu. Có đệ tử đã hơi cúi người, chuẩn bị nghe lệnh. Hạnh ôm cuốn sổ, đứng im. Chén rượu trong tay hắn đặt xuống thềm đá, nhẹ tới mức không thành tiếng. Hắn nhìn sang phía nàng — không phải để ra hiệu, chỉ là nhìn — rồi giữ nguyên tư thế ấy. Hắn không nói. Thời gian trong sân dài ra. Một đệ tử trẻ đưa mắt nhìn người bên cạnh, không dám thì thầm. Người lớn tuổi nhất trong đám khẽ hạ tay xuống, thôi không chờ lệnh nữa mà chuyển sang chờ nàng. Tiếng đệ tử tập ở sân bên vọng lại đều đều, còn sân này thì lặng, và cái lặng ấy mỗi lúc một nặng. Cái im lặng này không phải trống rỗng: nó có sức nặng của một quyền lực vừa tự tay từ chối dùng chính nó. Dần dần, như nước rút để lộ mặt đá, cả sân tự hiểu ra đáp án: việc này không phải việc của hắn. Tên là của nàng. Người quyết là nàng. Hắn đã chọn đứng ngoài quyết định ấy — và sự đứng ngoài của hắn, ở buổi sáng này, là thứ nặng nhất trong sân.",
+      "Khi nàng lên tiếng, giọng nàng điềm tĩnh, dạ thưa đúng mực với những người lớn tuổi đang đứng trong sân, mà nội dung thì không nhún nhường một phân. Nàng nói phần đầu của lời từ chối chậm rãi, để từng người nghe rõ: nàng là ai trong cái sân này, và nàng không là ai.",
+      "Nàng nói tiếp, tới cùng, không ai cắt ngang. Nàng nói về việc một cái danh, một khi đã dựng lên quanh tên một người, sẽ tự đi những đường mà người mang tên không kiểm được nữa. Rồi nàng nói điều nàng nhận cho chính mình — việc nàng làm mỗi ngày ở sân này — bằng giọng của người kể việc nhà. Đám đệ tử đứng nghe, không một tiếng xì xào. Một người trong bọn họ, người đã sửa cách chào cho đệ tử mới buổi sớm, cúi đầu xuống trước. Nàng nói xong, sân vẫn yên thêm một lúc, như để lời của nàng kịp nằm xuống đúng chỗ của nó — không ai vỗ tay, không ai tung hô, và sự yên ấy đúng là thứ nàng cần.",
+      "Việc phàm sau lời từ chối diễn ra ngay tại chỗ. Hạnh mở cuốn sổ, gạch bỏ chỗ ghi đại sư tỷ trước mặt mọi người — một nét gạch thẳng, rõ — và ghi lại ngay bên dưới, đúng tên nàng: Hứa Tiểu Lan. Giấy từng chạy trước người, nay giấy quay lại đi sau người. Đám đệ tử tản về sân tập; từ buổi ấy, cách chào trong sân đổi hẳn, người ta gọi nàng bằng đúng tên nàng, hơi ngượng một buổi rồi quen. Có người còn quen miệng suýt gọi theo lối cũ, tự khựng lại giữa câu rồi sửa ngay. Sân tập trở lại thường nhật: tiếng hô nhịp, tiếng chân trên nền đất, nắng lên cao dần trên thềm đá, và cuốn sổ đã sửa nằm yên trong tay Hạnh."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Đệ tử Hạ Ô Môn",
+        "text": "Mới vào thì nhớ cho kỹ: gặp cô ấy thì chào đại sư tỷ trước. Cô ấy ở bên Đạo Tổ từ buổi đầu, việc ghi tên người được cứu cũng qua tay cô ấy."
+      },
+      {
+        "speaker": "Đệ tử Hạ Ô Môn",
+        "text": "Nghe nói Đạo Tổ nghe lời đại sư tỷ hơn ai hết ở sân này. Muốn xin việc gì khó, qua được lời của đại sư tỷ là yên một nửa."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thưa cô, tôi mang sổ tới để cô tự xem: trong sổ chép việc đã có chỗ ghi đại sư tỷ như một chức danh. Mực mới ghi mấy hôm nay thôi."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Có đệ tử tới Nhân Danh Đường hỏi lệ xin ý kiến đại sư tỷ thì gửi giấy qua đâu. Tôi chưa đáp, thưa cô. Việc này tôi để cô biết trước."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa chị Hạnh, tôi hỏi một câu cho chắc: từ ngày cách gọi ấy có trong sân tới nay, có ai đã hỏi ý tôi một lần nào chưa?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa các vị, tôi nói rõ một điều: tôi không luyện khí. Tôi không nhận pháp như các vị, không đứng trong hàng đệ tử nào của môn này hết."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Gọi tôi là đại sư tỷ là đặt tôi vào một hàng không phải hàng của tôi. Và điều tôi phải nói rõ nhất: chưa ai hỏi tôi có muốn cái danh ấy hay không."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi biết các vị gọi vậy là vì lòng kính trọng thật, và tôi cảm ơn cái lòng ấy bằng một câu thành thật. Nhưng kính trọng không thay được câu hỏi chưa ai hỏi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Một cái danh dựng lên quanh tên tôi, rồi người ta sẽ mượn nó mà gọi nhau, mà xin, mà dọa nhau — những đường ấy tôi không kiểm được, mà tên mang theo thì là tên tôi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Việc của tôi ở đây là ghi tên, giữ giấy, nghe người ta nói cho hết. Việc ấy không cần danh. Ai cần tôi, xin gọi đúng tên tôi: Hứa Tiểu Lan, như gọi một người."
+      },
+      {
+        "speaker": "Đệ tử Hạ Ô Môn",
+        "text": "Dạ… chúng tôi hiểu rồi. Từ nay chúng tôi gọi đúng tên cô. Thưa cô Hứa Tiểu Lan, chúng tôi chào cô."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thưa cô, tôi gạch chỗ ghi ấy ngay tại đây, ghi lại đúng tên cô. Giấy từ nay đi sau lời của người mang tên."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ngồi chờ người ta nói chuyện của mình, rượu nguội hết nửa chén. Lần sau ai có việc thế này, nhớ nhắc bổn tọa rót chén khác nóng hơn."
+      }
+    ],
+    "choices": [
+      {
+        "id": "name_written_plain",
+        "text": "Để Hạnh ghi vào sổ của môn một dòng lệ: từ nay ai muốn đặt danh lên tên người khác, hỏi người ấy trước.",
+        "next": "ky3_44_quyen_khan_cap",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LanRefusedTitle": true
+        }
+      },
+      {
+        "id": "let_the_yard_learn",
+        "text": "Không ghi lệ nào cả — chỉ sửa cuốn sổ hôm nay; để sân tập tự nhớ cách gọi đúng tên nàng bằng miệng người.",
+        "next": "ky3_44_quyen_khan_cap",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LanRefusedTitle": true
+        }
+      }
+    ]
+  },
+  "ky3_44_quyen_khan_cap": {
+    "id": "ky3_44_quyen_khan_cap",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Quyền khẩn cấp",
+    "backgroundId": "ha-o-scripture-hall",
+    "location": "Phòng họp Hội Đồng Lục Đường, tàng kinh đường Hạ Ô Môn — ngày 28",
+    "companions": [],
+    "narration": [
+      "Phiên họp Hội Đồng Lục Đường mở đầu bằng báo cáo hồ sơ. Sáu trưởng đường có mặt đủ: Bút, Mến, Nương, Nện, Thạo, Hạnh. Tống dự họp với tư cách người trình đề xuất — không phải trưởng đường, không có ghế biểu quyết nào. Cao Minh ngồi đầu phòng, nghe như nghe một ván cờ người ta tự bày.",
+      "Báo cáo vừa xong, phòng họp rạn ra ở quyền phân phối người cho hướng Tam Giang. Đường nào cũng xin người, xin ghe, xin đan, xin sổ. Kho của môn chưa bao giờ là vấn đề — thứ thiếu là người, và quyền quyết ai đi trước.",
+      "Tống Nguyên Phúc đứng dậy trình đề xuất của Chấp Chiếu Phòng. Hắn xin Hội Đồng trao cho phòng của hắn quyền đặc biệt phòng chiến tranh — lập ngay từ bây giờ, trước khi có chiến tranh nào: một đầu mối ký duyệt mọi điều động cho Tam Giang, danh sách đệ tử toàn môn giữ ở một đầu mối duy nhất, các đường thi hành chiếu chỉ trước, khiếu nại sau. Hắn trình bày điềm tĩnh, từng điều một. Lần này thứ hắn xin không còn là con dấu. Là quyền trên người.",
+      "Tống trình tờ giấy kiểm hộ mới nhất để chống lưng: giấy ghi đợt đối chiếu nhân khẩu dự trù rơi vào khoảng ngày thứ sáu mươi ba. Cần nghe cho rõ: đó là khoảng ngày dự trù trên giấy hành chính — không ai tuyên bố đó là ngày thi hành đã chốt. Nhưng Tống đọc nó như một sức ép có thật.",
+      "Đỗ Thị Hạnh đứng lên dùng quyền phản đối lần thứ hai của Nhân Danh Đường. Lần đầu, đường của nàng đã chặn một thương vụ hại dân ở chợ; lần này, nàng chặn một điều khoản trong chính nhà mình. Tiểu Lan ủng hộ lời phản đối ấy bằng thẩm quyền của người từng bị một danh sách xóa mất khỏi đời mình.",
+      "Biểu quyết: không chấp thuận quyền đặc biệt phòng chiến tranh. Việc Tam Giang xử bằng lệ thường — mỗi đợt điều động do Hội Đồng họp quyết, danh sách đường nào ở tại đường đó. Công thức thay thế được nhận là công thức Tiểu Lan đặt lên bàn: quyết bằng phiên họp, không bằng chiếu chỉ ký trước.",
+      "Phòng họp tan. Tống ở lại một mình, tự tay ghi biên bản bác bỏ đề xuất của chính mình — ghi đủ, ghi đúng, không xé một tờ giấy, không bỏ đi, không gặp riêng ai. Phải ghi cho rõ về hắn ở cuối kỳ này: hắn chưa bán một đồng môn nào, chưa cấu kết với phía nào bên ngoài. Thứ nứt ra hôm nay chỉ là tư tưởng và tham vọng quyền lực — nhưng đã nứt công khai, trước mặt cả Hội Đồng. Ngoài phòng họp, sân lễ vẫn chạy việc như thường: người gác cổng đổi ca, bếp nổi lửa cho bữa tối, không ai ngoài kia hay biết trong căn phòng này vừa có một thứ quyền suýt được trao đi. Chính cái thường ngày ấy là thứ biên bản hôm nay giữ lại được."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Thưa Hội Đồng, sổ ghi danh chốt tới hôm nay: chín trăm sáu mươi đệ tử chính thức. Tôi đọc chậm để biên bản ghi cho đúng."
+      },
+      {
+        "speaker": "Đào Nhất Bút",
+        "text": "Xin ghi rõ: chín trăm sáu mươi là đệ tử chính thức. Người được truyền pháp và người hưởng dụng không nhập môn không nằm trong số này."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi xin biên bản ghi rõ: người hưởng dụng không nhập môn không phải quân số. Không ai được tính họ vào chín trăm sáu mươi."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Người của Linh Điền là nông phu có vụ. Điều họ đi hết thì sang năm ai gieo? Muốn lấy người của tui, phải nói rõ bao nhiêu, bao lâu."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Ruộng không chờ được như giấy tờ. Một vụ lỡ là cả làng ăn thóc giống — chuyện đó tui không ký qua bằng một cái gật đầu."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Tui giữ vụ gieo cho cả sân này ăn. Ai điều người của tui đi, người đó trả lời cho vụ gieo."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Ra biển mà mỗi đường giữ một mảnh quyền thì ghe chìm cả lũ. Lúc có việc, một người phải được gọi người của cả sáu đường."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Tôi nói lúc có việc: sóng, bão, người kẹt ở trạm dưới — lúc đó ngồi họp thì người chết trước biên bản."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa Hội Đồng, tôi xin lập phòng chiến tranh từ bây giờ: một đầu mối ký duyệt điều động và phân phối cho Tam Giang, sáu đường thi hành."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Danh sách đệ tử toàn môn phải giữ ở một đầu mối duy nhất. Tới ngày kiểm hộ điểm danh mà môn còn cãi ai giữ danh sách thì muộn rồi."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Chiếu chỉ điều động: các đường thi hành trước, khiếu nại sau. Việc xong, phòng giải tán, quyền trả lại Hội Đồng."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Tôi xin quyền này trước khi có chiến tranh — tới khi chiến tranh tới nơi, không còn thì giờ lập phòng nữa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Lập phòng cho một cuộc chiến chưa tới. Bổn tọa nghe quen — ai cũng thích chuẩn bị phần quyền trước."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Đây là giấy kiểm hộ mới nhất: đợt đối chiếu nhân khẩu toàn môn dự trù rơi vào khoảng ngày thứ sáu mươi ba kể từ đầu kỳ."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Sáu mươi ba ngày. Tới ngày đó, phía kiểm hộ sẽ hỏi môn giữ danh sách ở đâu. Tôi xin cho môn một câu trả lời có một đầu mối."
+      },
+      {
+        "speaker": "Dương Thất Nương",
+        "text": "Đan dược cho đoàn đi xa tính theo người bệnh, không theo lệnh điều động. Đường tôi giao đan theo sổ bệnh — phòng nào cũng không đổi được lệ đó."
+      },
+      {
+        "speaker": "Phan Bảy Nện",
+        "text": "Trận giữ bờ ký bằng tay người giữ trận, không ký bằng giấy phòng nào. Trận không chờ giấy."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Giấy ghi chữ dự trù. Ở chợ, chữ dự trù chưa bao giờ là chữ đã định, anh Tống."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Nhân Danh Đường phản đối. Ghi vào biên bản: phản đối điều khoản giữ danh sách toàn môn ở một đầu mối, và thi hành trước, khiếu nại sau."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Môn này đã từ chối nộp danh sách tên người cho Đại Kiểm Hộ. Không thể từ chối người ngoài, rồi trao nguyên cách giữ đó cho một phòng trong nhà."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Danh sách của đường tôi không vào đầu mối nào hết. Người của đường tôi không đi theo chiếu chỉ ký trước. Đây là lần phản đối thứ hai của Nhân Danh Đường."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa Hội Đồng, quyền khẩn cấp xin trước khi có khẩn cấp thì không còn là khẩn cấp. Nó là quyền thường trực mang tên khác."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi từng bị một danh sách xóa khỏi đời mình. Danh sách ở một đầu mối duy nhất, có quyền điều động người — tôi biết nó nặng ở đâu."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Việc Tam Giang xử bằng lệ thường: mỗi đợt điều động, Hội Đồng họp mà quyết. Danh sách đường nào ở tại đường đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Và sổ người được cứu của Nhân Danh giữ độc lập. Người được cứu không phải quân số — không ai điều động họ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Đợt người đầu tiên cho Tam Giang, tui đề: lấy theo phiên luân phiên giữa các đường. Lệ luân phiên giữ được bờ mạch, giữ được cả việc này."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Thưa Hội Đồng, tôi ghi biên bản: đề xuất không được chấp thuận, tôi nhận. Phòng của tôi chờ lệnh Hội Đồng như mọi đường."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Quyền xin lúc chưa cần, biên bản ghi là sớm. Tôi để vậy, chờ có việc sẽ tính."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Họ lập phòng để bảo vệ bổn tọa khỏi một cuộc chiến chưa tới. Bổn tọa còn chưa biết mình cần được bảo vệ."
+      }
+    ],
+    "choices": [
+      {
+        "id": "duty_turns_set_by_council",
+        "text": "Chốt lệ điều động luân phiên giữa các đường do Hội Đồng họp quyết từng đợt — công thức của nàng thành lệ của môn.",
+        "next": "ky3_45_chen_ruou_truoc_bao",
+        "effects": {
+          "civiliansSavedDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3EmergencyPowersDenied": true
+        }
+      },
+      {
+        "id": "her_veto_stands_in_minutes",
+        "text": "Để nguyên văn lời phản đối của Nhân Danh và câu nói của nàng trong biên bản phiên họp — ai đọc lại sau này cũng thấy quyền khẩn cấp đã bị chặn bằng lý do gì.",
+        "next": "ky3_45_chen_ruou_truoc_bao",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3EmergencyPowersDenied": true
+        }
+      }
+    ]
+  },
+  "ky3_45_chen_ruou_truoc_bao": {
+    "id": "ky3_45_chen_ruou_truoc_bao",
+    "contentStatus": "approved",
+    "stageId": "long_hai",
+    "title": "Chén rượu trước cơn bão",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Thềm đá sân lễ Hạ Ô Môn, Long Hải — ngày 28, chập tối",
+    "companions": [],
+    "narration": [
+      "Chập tối ngày 28, ngoài khơi, bão biển đang dựng: mây đen thành quầng thấp, ghe của môn được kéo lên bãi, dây neo chằng thêm sợi thứ hai, người ở bờ chạy việc phàm rần rật trước khi trời tối hẳn. Trong sân lễ, một cơn bão khác tới bằng những mảnh tin rời của một ngày dài: phiên họp buổi sáng vừa tan chưa lâu, tin Tam Giang chưa kịp nguội. Trên thềm đá của sân lễ, Cao Minh ngồi đúng chiếc ghế đá của ngày đại lễ phát ấn, mở vò rượu, rót chén đầu tiên. Thái độ của hắn là thái độ của người chờ xem một buổi diễn lớn — không phải của người chuẩn bị nghênh chiến. Hắn ra một lệnh phàm duy nhất cho buổi tối này, nói với Mến đang đứng chờ việc ở chân thềm, rồi không ra thêm lệnh nào nữa.",
+      "Mến là người mang các mảnh tin lên thềm đá — nàng giữ cả chợ lẫn sân, tin nào chạy qua hai nơi đó đều qua tay nàng trước. Ba mảnh tin của buổi chiều, nghe riêng thì nhỏ, nghe chung thì thành một hình thù. Tiểu Lan ngồi nghe hết, sắp từng mảnh theo thứ tự hồ sơ trong đầu, đối chiếu với những gì Nhân Danh Đường đang giữ: danh sách tên người, tập hồ sơ hàng giả, biên bản phiên họp buổi sáng. Rồi nàng nói kết luận của mình, chỉ một câu.",
+      "Tiểu Lan chủ động mở lời. Không ai hỏi nàng, không ai giao việc cho nàng. Nàng nói điều nàng sẽ tự làm khi chiến tranh tới — phần thứ nhất thuộc về con người nàng, nói chậm và rõ như mọi lần nàng đặt một điều gì lên bàn. Cao Minh nghe, rót thêm rượu, không chen một lời nào vào giữa. Sự im lặng của hắn ở đoạn này là có chủ ý: quyết định đang được nói ra không phải của hắn, và hắn không giành nó, dù chỉ bằng một câu chen vào.",
+      {
+        "text": "Thu Nguyệt giúp Tiểu Lan chuẩn bị giấy tờ cho khả năng chiến tranh, ngay trên thềm đá, trước khi gió lên. Hai người trải các tập hồ sơ ra thành hàng: sổ Nhân Danh ghi tên người được cứu và bốn mươi ba hộ của vụ chợ, tập hồ sơ Tam Giang, biên bản phiên họp buổi sáng. Việc chuẩn bị là việc sao giữ và phân tán: mỗi tập một bản ở một đường khác nhau, để một nơi có bị đốt, tên người vẫn còn ở nơi khác. Thu Nguyệt gói, buộc, ghi nhãn từng gói bằng nét chữ nhỏ và đều — thuần việc của buổi tối nay, không mở tập hồ sơ cũ nào ra đọc lại cho ai nghe.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "text": "Một lá thư từ mạng liên lạc Long Hải chuyển tới cổng trong gió lộng — đường thư của người thường trong vùng, đi bằng tay người đưa thư, không phải kênh nào khác. Người đưa thư trao thư rồi quay xuống bến trú bão. Lá thư do một người quen cũ ở đầu mối Long Hải viết, báo trước động tĩnh của các phía ở phía đó: những cuộc gặp đã kể ở trên không chỉ xảy ra quanh sân này, mà đã chạy dọc các đầu mối của cả vùng trong mấy ngày qua. Mến nhận thư ở cổng, mang lên thềm đá và đọc to. Tiểu Lan tự tay sắp hồ sơ một mình trong lúc nghe: sổ Nhân Danh, tập hồ sơ Tam Giang, biên bản phiên họp — mỗi tập một bản gửi ở một đường khác nhau, để tên người còn ở nhiều nơi. Thu Nguyệt không có mặt ở sân tối nay; nàng đang ở đầu mối Long Hải của tuyến liên lạc, và lá thư này là dấu vết duy nhất của nàng trong buổi tối.",
+        "unless": "thuNguyetFollows"
+      },
+      "Gió đầu cơn bão quét qua sân lễ: đèn lồng chao, tiếng ghe va nhau dưới bến, hạt mưa đầu tiên rơi xuống thềm đá giữa hai chén rượu. Sân lễ vẫn sáng đèn; đệ tử vẫn chạy việc phàm trú bão như người của một cái làng — tông môn này đã thành hình tới mức nó tự lo được một cơn bão biển. Cơn bão còn lại thì chưa ai lo được, và không ai trong khung hình này nói điều đó thành lời. Trên thềm đá còn hai chén rượu: một chén đã uống, một chén còn đầy."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Bão thì cứ bão. Rượu này ngâm từ ngày mở lễ — để qua cơn bão đầu tiên của môn uống mới đúng vị. Bổn tọa rót trước một chén."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ghe nào chưa vào bờ thì vào hết trước tối. Người của môn ai ở ngoài thì về trong sân. Còn lại — phần còn lại không phải việc ra lệnh. Mến, cứ vậy mà làm."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Dạ, thưa ông thầy, ghe vào bờ hết rồi, dây neo chằng hai sợi. Bếp và kho đã chốt cửa. Sân này lo xong phần bão biển của nó."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Mà tui còn mấy tin phải thưa, không phải tin bão. Tin người — nghe xong, ngài sẽ thấy cơn bão trong sân này không kém cơn bão ngoài khơi."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Một: thư của phía Tài Phòng đi về hướng Chợ Lớn trong ngày hôm nay. Hai: người của Giới Phòng ăn cơm cùng thông ngôn của phía thuộc địa ở quán ngoài chợ."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Ba: dưới bến, hai bang giang hồ vốn kình nhau có người ngồi chung một bàn rượu — lần đầu từ sau vụ chợ ngày trước. Chưa ai tuyên bố gì, thưa cô."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa bà, họ chưa mạnh lên. Họ chỉ ngừng đánh nhau thôi. Ba mảnh tin này để chung một chỗ, điểm chung duy nhất của chúng là cái sân này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ngài, tôi nói điều tôi sẽ tự làm khi chiến tranh tới. Tôi ở lại. Không rút vào trong, không để ai bảo vệ tôi bằng cách giấu tôi đi như một món đồ quý."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Chỗ của tôi là ở sân này, nơi người ta tới ghi tên. Ngày yên hay ngày loạn, người tới ghi tên phải thấy bàn của Nhân Danh Đường còn ngồi đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Tôi là người đã từng bị giấu đi trên giấy một lần rồi, thưa ngài. Giấu người đi, dù nhân danh bảo vệ, cũng là một cách xóa tên. Tôi không nhận cách đó nữa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ừ. Bổn tọa đang nghe."
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ, thưa cô, tập hồ sơ Tam Giang em gói riêng, ghi nhãn ngoài bìa. Bản này gửi Khí Trận Đường giữ — mỗi tập một nơi, như cô dặn.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Sổ bốn mươi ba hộ của vụ chợ, em buộc hai vòng dây. Giấy này là tên người ta — gói nó phải gói như gói đồ cho người sắp đi xa.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Cảm ơn em. Gói cho chắc, ghi nhãn cho rõ. Mai kia ai mở gói này ra cũng phải biết tên người trong đó là tên để giữ, không phải tên để dùng.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Biên bản phiên họp buổi sáng để một bản ở Nhân Danh, một bản ở Truyền Pháp. Hai nơi giữ hai bản — đốt một nơi, lời phản đối vẫn còn nguyên ở nơi kia.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Lê Thu Nguyệt",
+        "text": "Dạ, xong hết rồi, thưa cô. Em gói cẩn thận như gói đồ cho một chuyến đi — một chuyến đi mà em mong không ai trong sân này phải đi.",
+        "if": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa cô, thư từ đầu mối Long Hải: người quen cũ báo các phía ở phía đó cũng đang đi lại khác thường. Tui đọc nguyên văn cho cô nghe.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thư nói: hai nhà vốn không nhìn mặt nhau đã cho người gặp nhau hai lần trong ba ngày. Chỗ nào họ gặp nhau, chỗ đó người ta nhắc tới tên cái sân này.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Cảm ơn bà. Thư này kẹp vào tập hồ sơ Tam Giang. Còn sổ, tôi tự sắp: mỗi tập một bản ở một đường — tên người phải còn ở nhiều nơi.",
+        "unless": "thuNguyetFollows"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Phần thứ hai của tôi: khi chiến tranh tới, việc của tôi là giữ cho tên người không bị xóa. Tôi ngồi ở bàn Nhân Danh, ghi tên người tới, người mất, người bị bắt đi."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Và quyết định ở lại hay đi, tránh hay đối mặt, là của tôi nói ra bằng miệng tôi. Không ai nhân danh bảo vệ tôi mà quyết thay — kể cả ngài, thưa ngài."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Phần của nàng thì nàng quyết — bổn tọa không giành. Chén này bổn tọa rót để ở đây, phần của nàng. Còn phần trời sập, cứ để bổn tọa."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Môn này không ai phải xin phép bổn tọa để giữ phần việc của mình. Nàng giữ tên người. Việc đó, từ ngày đầu, vẫn là việc của nàng."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Rượu chưa cạn mà khách chưa mời đã sắp tới đông đủ. Môn này mở tiệc giỏi hơn bổn tọa tưởng — gió lên rồi, uống cho hết chén này đã."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ. Chén này tôi nhận. Mai gió yên hay không yên, bàn của Nhân Danh vẫn mở như thường — tôi nói vậy, và tôi làm vậy."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Dạ, đèn sân đã thắp hết, cửa kho đã chốt. Hai vị cứ ngồi — cơn bão đầu để sân này tự lo, tui ở dưới thềm canh việc cho."
+      }
+    ],
+    "choices": [
+      {
+        "id": "guard_the_names_first",
+        "text": "Ưu tiên giữ người và giữ tên trước cơn bão: hồ sơ Nhân Danh phân tán xong xuôi, ghe vào bờ hết, sân lễ chốt việc phàm rồi mới tính chuyện các phe.",
+        "next": "ky4_01_stub",
+        "effects": {
+          "lanTrustDelta": 1
+        },
+        "route": {
+          "id": "bao_ho",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LanDeclaredHerPart": true
+        }
+      },
+      {
+        "id": "her_words_stand",
+        "text": "Để nguyên quyết định của nàng như nàng đã nói — không thêm một lời hứa, không sửa một chữ; chén rượu thứ hai ở yên trên thềm đá làm chứng.",
+        "next": "ky4_01_stub",
+        "effects": {
+          "lanTrustDelta": 2
+        },
+        "route": {
+          "id": "tu_quyet",
+          "delta": 1
+        },
+        "flags": {
+          "ky3LanDeclaredHerPart": true
+        }
+      }
+    ]
+  },
+  "ky4_01_stub": {
+    "id": "ky4_01_stub",
+    "contentStatus": "placeholder",
+    "stageId": "long_hai",
+    "title": "Trước cổng đạo quán",
+    "backgroundId": "ha-o-assembly-yard",
+    "location": "Cổng đạo quán Hạ Ô Môn, Long Hải — bình minh ngày 29",
+    "companions": [],
+    "narration": [
+      "Mưa bão quật suốt một đêm trên mái ngói mới của đạo quán, vậy mà sáng ra, sân lễ khô ráo nhanh hơn bất cứ cái sân nào trong làng. Nước mưa theo mấy rãnh trận văn chạy vòng quanh sân rồi thoát ra con mương sau vườn. Đệ tử quét sân từ lúc trời còn tối, người của Linh Điền ra xem mấy luống mạ non bị gió dập, nhà bếp nhóm lại lửa nấu nồi cháo đầu ngày — tông môn vừa trải qua cơn bão biển đầu tiên trong đời nó, và nó xử lý nó như một cái làng: mỗi người một việc, không ai chờ lệnh.",
+      "Trên thềm đá, hai chén rượu của đêm qua vẫn còn nguyên chỗ cũ: một chén đã cạn, một chén còn đầy, nước mưa không lọt vào được giọt nào dù sân ướt đẫm.",
+      "Mặt trời vừa nhô khỏi mặt biển thì cổng đạo quán có khách. Không phải dân làng tới xin thuốc hay xin ghi tên như mọi sáng. Một đoàn người đi thành hàng ngay ngắn từ phía đường cái: đi đầu là hai người phu gánh hai hòm gỗ sơn son, giữa đoàn là một viên thư lại của phủ đường ôm cặp da đựng giấy tờ, theo sau là ba vị thân hào trong vùng áo dài khăn đóng chỉnh tề, và cuối đoàn là người của đội thu thuế bến cảng với cuốn sổ bìa cứng kẹp dưới nách. Đoàn người dừng lại trước cổng, không bước qua ngưỡng cửa — họ đứng chờ được mời vào.",
+      {
+        "if": "thuNguyetFollows",
+        "text": "Thu Nguyệt cũng vừa về tới cổng theo chuyến ghe sớm từ đầu mối Long Hải. Nàng nhìn đoàn người một lượt, rồi lặng lẽ vòng vào trong trước, tay ôm chặt bọc giấy tờ của tuyến liên lạc. Mấy ngày ở đầu mối đã dạy nàng một điều: người ta chỉ mang hòm sơn son và cặp da đi cùng nhau khi thứ sắp lấy ra khỏi cặp nặng hơn nhiều so với thứ đựng trong hòm. Nàng đi thẳng về phía thềm đá, bụng bảo dạ việc đầu tiên sáng nay là báo cho cô chủ biết mặt từng người trong đoàn."
+      },
+      {
+        "unless": "thuNguyetFollows",
+        "text": "Người đưa thư đêm qua đã quay lại theo chuyến ghe sớm, mang theo một mảnh giấy nhỏ từ đầu mối Long Hải: chỉ mấy dòng, báo rằng phía phủ đường đã hỏi tới đạo quán này trong một bữa tiệc của các thân hào, và người hỏi không phải kẻ tò mò cho vui. Mảnh giấy được trao tận tay Đỗ Thị Hạnh ở cổng. Nhân Danh Đường có thêm một buổi sáng bận rộn: tên của từng người sắp bước qua cổng này phải được ghi lại, dù họ tự xưng là ai."
+      },
+      "Tin đoàn khách tới cổng chạy vào sân nhanh hơn cả tiếng mõ điểm canh. Trần Thị Mến đang ở luống mạ cũng bỏ dở việc, lau tay vào vạt áo rồi đứng dậy. Tống Nguyên Phúc xuất hiện trên thềm nhà giấy với xấp hồ sơ quen thuộc kẹp dưới tay, chỉ đứng ở vị trí nhìn được cả cổng lẫn thềm đá — vị trí của người muốn nghe cả hai phía sẽ nói gì. Đỗ Thị Hạnh ôm cuốn sổ Nhân Danh đi ra, mở sổ, chấm bút. Sáng nay, ai nói gì ở cổng này cũng sẽ thành chữ.",
+      "Cao Minh bước ra khỏi nhà chính khi đoàn khách đã đứng chờ được một lúc. Hắn không vội — hắn chưa từng vội vì bất cứ đoàn người nào trong thiên hạ này. Tay cầm chén rượu đầy từ đêm qua, hắn đi thẳng tới ghế đá dưới gốc cây, ngồi xuống, nhấp một ngụm, rồi mới ngẩng lên nhìn đoàn người từ đầu tới cuối.",
+      "Viên thư lại là người mở miệng trước. Ông ta cúi chào đúng phép, mở cặp da, lấy ra một tờ giấy có triện đỏ, mở ra đọc: phủ đường nghe tiếng đạo quán Hạ Ô Môn mở cửa giúp dân, lòng rất mừng; có điều phàm việc tụ họp đông người, lập sổ, dựng nhà, mở chợ trong địa phận, xưa nay đều phải trình báo để quan trên liệu mà bảo hộ. Nay phủ đường cử đoàn tới, thứ nhất là thăm hỏi, thứ hai là xin đạo quán cho xem qua sổ sách ghi danh, để việc trình báo được chu toàn. Đọc xong, ông ta gấp giấy lại. Không một chữ nào trong tờ giấy ấy là lời đe dọa — và cũng không một chữ nào là lời thăm hỏi thật lòng.",
+      "Mấy vị thân hào nối lời ngay sau đó, lời nào lời nấy đều ngọt. Rằng vùng này từ ngày có đạo quán, dân tình yên ổn, lúa tốt, bệnh lui, các vị ngồi ở làng xã cũng được nhờ. Rằng chỉ mong đạo quán cứ thế mà làm, có điều lệ làng phép nước, việc gì cũng nên có giấy có tờ cho đàng hoàng, kẻo mai này có kẻ dèm pha thì các vị khó bề bênh vực. Người của đội thu thuế không nói gì. Hắn chỉ đứng mở cuốn sổ bìa cứng, lật tới một trang còn trống, cầm sẵn bút. Trang giấy trắng ấy nặng hơn mọi lời ngọt ngào.",
+      "Cao Minh nghe hết, không chen một tiếng. Nghe xong, hắn cúi xuống nhìn chén rượu trong tay, như thể trong chén có thứ gì đáng xem hơn cả đoàn người trước mặt. Rồi hắn ngẩng lên, và người ta thấy hắn đang cười."
+    ],
+    "dialogue": [
+      {
+        "speaker": "Cao Minh",
+        "text": "Hay. Bổn tọa ở cái đất này chưa đầy một tháng, mà giấy tờ của các ngươi đã tìm tới nhanh hơn cả tin đồn. Ngồi đi. Đứng mãi trước cổng nhà bổn tọa, người qua đường lại tưởng bổn tọa buôn bán gì mà khách khứa đông thế."
+      },
+      {
+        "speaker": "Viên thư lại",
+        "text": "Dạ bẩm, chúng tôi đâu dám làm phiền lâu. Chỉ xin quý quán cho mượn xem qua sổ ghi danh đệ tử và sổ thu chi của chợ phiên, chúng tôi chép lại một bản mang về trình phủ đường, xong là cáo lui ngay."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Sổ ghi danh? Ở đây ai tới học thì học, ai tới ăn thì ăn, ai tới xin ghi tên thì ghi. Bổn tọa phát ấn như phát kẹo cho trẻ con đầu làng, có đếm bao giờ đâu mà có sổ cho các ngươi chép. Còn chợ phiên — bổn tọa bán đâu mà thu chi."
+      },
+      {
+        "speaker": "Thân hào cả",
+        "text": "Thưa thầy, không có sổ, mai này phủ đường hỏi xuống, chúng tôi biết ăn nói làm sao. Hay là thầy cứ cho lập một quyển, ghi bao nhiêu người thì ghi, chúng tôi xin đứng tên bảo chứng cho quý quán."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa các vị, lời của các vị tôi xin ghi nhận từng chữ, và Nhân Danh Đường của chúng tôi cũng đang ghi thật. Nhưng có một điều tôi phải nói rõ ngay từ đầu: sổ của đạo quán này ghi tên người để người ta không bị mất tên, không phải để giao tên người ta cho bất cứ ai mang đi. Các vị muốn trình báo rằng ở đây có một đạo quán giúp dân — các vị cứ trình. Còn tên của từng người dân đã tới đây, không nằm trong thứ giấy tờ nào các vị được mang về."
+      },
+      {
+        "speaker": "Người thu thuế",
+        "text": "Cô nói vậy là chưa hiểu lệ. Đất có chủ, chợ có thuế, người tụ họp đông phải có người đứng tên chịu trách nhiệm. Sổ này không ghi, sổ khác cũng phải ghi. Tôi chỉ làm phận sự của tôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Phận sự. Tốt. Bổn tọa thích người biết phận sự của mình. Vậy ngươi cứ đứng đây mà ghi: sáng nay, tại cổng này, có một đoàn người mang triện đỏ tới xin xem sổ của một kẻ không có sổ. Ghi cho đúng vào, về trình rằng kẻ ấy còn mời các ngươi uống trà mà các ngươi không dám uống."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Thưa các vị, tôi là người giữ sổ Nhân Danh. Tên của đoàn các vị sáng nay — từng người một, ai đọc giấy, ai cầm sổ, ai đứng tên bảo chứng — tôi đã ghi đủ, có giờ, có ngày. Giấy của các vị mang tới, xin cho tôi chép lại một bản để lưu. Ở đạo quán này, giấy đi hai chiều."
+      },
+      {
+        "speaker": "Viên thư lại",
+        "text": "Cô… cô nói sao? Giấy của phủ đường mà cũng phải để chép lại sao?"
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Thưa ông, đạo quán này mở cửa cho mọi người, và sổ của chúng tôi cũng mở cho mọi người xem phần của chính họ. Các vị tới vì muốn mọi việc được rõ ràng — vậy thì rõ ràng cho cả hai phía. Còn việc các vị xin hôm nay, Hội Đồng của đạo quán sẽ họp và trả lời bằng giấy, đàng hoàng, có triện của quán. Xin các vị cứ về trước."
       }
     ],
     "choices": [],
