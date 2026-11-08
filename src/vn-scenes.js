@@ -13905,12 +13905,14 @@ export const VN_SCENES = Object.freeze({
     "location": "Tàng kinh đường Hạ Ô Môn, Long Hải — ngày 26",
     "companions": [],
     "narration": [
-      "Ngay buổi chiều sau vụ phí đăng ký, Tống Nguyên Phúc cho dựng Chấp Chiếu Phòng trong một gian của tàng kinh đường: bàn dài giữa phòng, kệ hồ sơ chia ô theo từng đường, con dấu gỗ mới khắc còn thơm mùi gỗ, chồng giấy đệ tử in sẵn các mục tên, tuổi, quê quán, đường tu. Đề xuất hắn nói ở sân lễ buổi sáng, hắn đã chuẩn bị xong phần hình thức trước khi Hội Đồng kịp họp. Ngoài cửa, một đệ tử mới đứng chờ — người đầu tiên tới xin tờ giấy đệ tử. Cần nói cho rõ: phòng này không phải đường thứ bảy. Sáu đường vẫn là sáu đường, mỗi đường có trưởng đường và ghế ở Hội Đồng. Phòng của Tống không có ghế nào hết — nó chỉ là một bộ phận giấy tờ hắn tự lập, và cho tới giờ phút này, Hội Đồng chưa trao cho nó một quyền gì.",
-      "Tống diễn giải cơ chế bằng vật thật. Giấy đệ tử có số, đóng dấu của phòng; đường nào nhận người thì phòng ghi vào sổ gốc. Ai có giấy mới được lãnh ấn đợt sau, vào tàng kinh theo cấp, ghi danh đi phân đàn. Mặt tốt của nó là thật: hết cảnh chấp sự tự phát thu phí, vì từ nay chỉ một nơi có quyền đóng dấu. Nguyễn Hữu Cẩn đứng nghe, gật đầu theo từng điều. Hắn là đệ tử có tư chất, tiến rất nhanh, và chuyện người giỏi bị chìm trong đám đông không hồ sơ là chuyện hắn khó chịu từ lâu.",
-      "Cao Minh cầm tờ giấy đệ tử mẫu lên, lật qua lật lại như xem món đồ chơi mới. Hắn không ra lệnh bãi bỏ căn phòng này. Dẹp một cái trạm tre là việc của tay áo; xử một căn phòng có dấu, có sổ, có người tin theo, là việc của thể chế — hắn đẩy câu hỏi về phía Hội Đồng và phía Tiểu Lan, rồi ngồi xuống xem tiếp.",
-      "Tiểu Lan cầm một tờ giấy đệ tử, đọc hết các mục in sẵn, chậm như đọc một tờ gia phả. Nàng là người ghi sổ sạch từ ngày đầu của kỳ — không ai ở sân này hiểu giấy bằng nàng. Sự khó chịu của nàng có căn cứ rõ ràng, và nàng nói nó ra thành lời cho cả phòng cùng nghe.",
-      "Cẩn bênh phòng của Tống công khai: giữa một phòng có dấu và trăm kẻ tự phát đặt lệ, hắn chọn phòng. Tiểu Lan không tranh thắng thua với hắn. Nàng đặt điều kiện của Nhân Danh Đường lên bàn như một đường biên: dù Hội Đồng xử căn phòng này ra sao, sổ tên của Nhân Danh Đường ở ngoài phòng này — không sao chép sang, không chịu quyền thu hồi của phòng. Và giấy đệ tử, nếu có ngày tồn tại, không bao giờ được dùng để từ chối chữa bệnh, phát nước linh tuyền hay ghi tên người được cứu. Tống ghi điều kiện ấy vào tờ trình Hội Đồng. Hắn cần sự chuẩn thuận; hắn chưa tự cho mình quyền bác điều kiện của ai.",
-      "Ngoài cửa, người đệ tử mới chờ từ đầu buổi. Anh ta ra về không có tờ giấy nào trong tay, vì Hội Đồng chưa chuẩn thuận điều gì. Tối đó anh ta vẫn vào nghe giảng như mọi ngày, không ai ngăn, không ai hỏi giấy. Chi tiết nhỏ ấy là sự thật của cả cảnh: Chấp Chiếu Phòng lúc này mới là một căn phòng, một con dấu, một chồng giấy — chưa áp được điều kiện nào lên ai. Tống ở lại sắp hồ sơ vào kệ, như người tin rằng giấy tờ, sớm muộn, cũng thành luật."
+      "Ngay buổi chiều sau vụ phí đăng ký, Tống Nguyên Phúc dựng Chấp Chiếu Phòng trong một gian của tàng kinh đường: bàn dài giữa phòng, kệ hồ sơ chia ô theo từng đường, con dấu gỗ mới khắc, chồng giấy đệ tử in sẵn. Đề xuất hắn nói ở sân lễ buổi sáng, hắn đã chuẩn bị xong phần hình thức trước khi Hội Đồng kịp họp. Ngoài cửa, một đệ tử mới đứng chờ — người đầu tiên tới xin tờ giấy đệ tử. Phòng này không phải đường thứ bảy: sáu đường vẫn là sáu đường, mỗi đường có ghế ở Hội Đồng. Phòng của Tống không có ghế nào — chỉ là một bộ phận giấy tờ hắn tự lập, và Hội Đồng chưa trao cho nó một quyền gì.",
+      "Người đệ tử mới là người đầu tiên dùng tới phòng này — không phải để xin giấy, mà mang tới hai tờ biên nhận phí: cùng một khoản, hai chấp sự tự phát thu hai số tiền khác nhau, một tờ ghi sai cả tên đường của anh ta. Tống đặt hai tờ cạnh nhau, lật sổ tiếp nhận buổi sáng, đối chiếu nét chữ và dấu thu, rồi chỉ ra từng chỗ: khoản nào thu trùng, ai thu, ai phải trả lời, phần nào phải trả lại. Ba câu — xong một vụ mà buổi sáng cả sân cãi nhau không xong.",
+      "Tống diễn giải cơ chế bằng vật thật: giấy có số, đóng dấu của phòng; đường nào nhận người thì phòng ghi vào sổ gốc; từ nay chỉ một nơi có quyền đóng dấu — hết cảnh chấp sự tự phát thu phí. Nguyễn Hữu Cẩn đứng nghe, gật đầu theo từng điều — đệ tử có tư chất, tiến rất nhanh, và khó chịu từ lâu chuyện người giỏi bị chìm trong đám đông không hồ sơ.",
+      "Cao Minh cầm tờ giấy đệ tử mẫu lên, lật qua lật lại như xem món đồ chơi mới. Hắn không ra lệnh bãi bỏ: xử một căn phòng có dấu, có sổ, có người tin theo là việc của thể chế. Hắn đẩy câu hỏi về Hội Đồng và Tiểu Lan, rồi ngồi xuống xem tiếp.",
+      "Tiểu Lan cầm một tờ giấy đệ tử, đọc hết các mục in sẵn, chậm như đọc một tờ gia phả. Nàng là người ghi sổ sạch từ ngày đầu của kỳ — không ai ở sân này hiểu giấy bằng nàng.",
+      "Tiểu Lan không tranh thắng thua với Cẩn. Nàng đặt điều kiện của Nhân Danh Đường lên bàn như một đường biên, và Tống ghi nó vào tờ trình Hội Đồng nguyên văn. Hắn cần sự chuẩn thuận; hắn chưa tự cho mình quyền bác điều kiện của ai.",
+      "Cũng trong buổi ấy, một hồ sơ khác tới bàn: của một đệ tử mới, thiếu đúng một mục — quê quán để trống, vì anh ta là trẻ mồ côi theo ghe, không biết quê mình ở đâu. Tống xem, lắc đầu theo đúng lệ hắn vừa trình: thiếu một mục là giấy không thành. Hắn đặt hồ sơ ấy sang chồng chờ bên phải bàn — ngay ngắn, đúng ô — trong lúc người đệ tử vẫn đứng ngay trước bàn, hai tay không. Con dấu của phòng nằm úp mặt bên cạnh chồng chờ ấy.",
+      "Người đệ tử mới ra về không có tờ giấy đệ tử nào trong tay, vì Hội Đồng chưa chuẩn thuận điều gì — tối đó anh ta vẫn vào nghe giảng như mọi ngày, không ai ngăn, không ai hỏi giấy. Chấp Chiếu Phòng lúc này mới là một căn phòng, một con dấu, một chồng giấy — chưa áp được điều kiện nào lên ai. Tống ở lại sắp hồ sơ vào kệ, như người tin rằng giấy tờ, sớm muộn, cũng thành luật. Cẩn ở lại sau buổi, giúp hắn sắp hồ sơ vào kệ — việc này có ích thật. Trước khi ra về, Tống nhìn một lần sang chồng hồ sơ chờ bên phải bàn, nơi tờ giấy thiếu một mục nằm trên cùng; người đệ tử đã đi rồi."
     ],
     "dialogue": [
       {
@@ -13923,15 +13925,11 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Tống Nguyên Phúc",
-        "text": "Tôi dựng phòng và giấy mẫu trước, rồi trình Hội Đồng chuẩn thuận sau. Trình bằng vật thật, Hội Đồng thấy được trật tự hơn nghe lý thuyết suông."
+        "text": "Tôi dựng phòng và giấy mẫu trước, trình Hội Đồng chuẩn thuận sau — trình bằng vật thật."
       },
       {
         "speaker": "Đệ tử mới tới xin giấy",
         "text": "Dạ… thưa thầy, không có giấy này, mai con còn được vào nghe giảng không? Người ta nói từ nay phải có giấy…"
-      },
-      {
-        "speaker": "Tống Nguyên Phúc",
-        "text": "Giấy đệ tử có số, đóng dấu phòng này. Đường nào nhận người, phòng ghi vào sổ gốc. Từ nay chỉ một nơi có quyền đóng dấu."
       },
       {
         "speaker": "Tống Nguyên Phúc",
@@ -13944,6 +13942,10 @@ export const VN_SCENES = Object.freeze({
       {
         "speaker": "Nguyễn Hữu Cẩn",
         "text": "Người có tư chất mà không hồ sơ thì cũng như không. Tôi đứng trong đám đông ba ngày, không ai biết tôi tiến tới đâu — lãng phí người."
+      },
+      {
+        "speaker": "Tống Nguyên Phúc",
+        "text": "Việc học của cậu chậm ở khâu nào, tôi ghi đúng khâu ấy. Hồ sơ tiến độ thuộc Truyền Pháp Đường — phòng này chuyển tới tay người phụ trách, có biên nhận. Cậu khỏi tự đi gõ từng cửa nữa."
       },
       {
         "speaker": "Cao Minh",
@@ -13992,10 +13994,6 @@ export const VN_SCENES = Object.freeze({
       {
         "speaker": "Hứa Tiểu Lan",
         "text": "Và giấy đệ tử, nếu có ngày tồn tại, không bao giờ được dùng để từ chối chữa bệnh, phát nước linh tuyền, hay ghi tên người được cứu."
-      },
-      {
-        "speaker": "Nguyễn Hữu Cẩn",
-        "text": "Giữa một phòng có dấu và trăm kẻ tự phát đặt lệ, tôi chọn phòng có dấu. Kẻ thu phí buổi sáng sinh ra vì môn không có phép."
       },
       {
         "speaker": "Nguyễn Hữu Cẩn",
