@@ -13152,7 +13152,8 @@ export const VN_SCENES = Object.freeze({
       "Buổi thương lượng chưa ngã ngũ thì một người môi giới lạ mặt đặt lên bàn một lời ra giá thứ hai, cao hơn của Từ Bách Xuyên, cũng xin quyền phân phối, điều khoản gần như chép lại từng chữ. Giấy tờ của hắn đi qua hai lớp trung gian, không mang dấu hiệu gì của nhà họ Hứa. Nhưng Hạnh và Tiểu Lan lần theo mép giấy đặt cọc: dấu hiệu tài chính ở đó cùng một hệ dấu đã đối chiếu được ở phiên phân xử lời chứng trước đây, chỉ về vòng Tài Phòng của Hứa Tế Nguyên. Hắn đang mua quyền phân phối bằng tay người khác, để Tài Phòng cầm quyền mà không mang tên Hứa.",
       "Giữa lúc hai lời ra giá còn nằm trên bàn, người của tông môn bày thêm một đợt Tĩnh Hồn Thái tươi ra sạp chợ ngay bên cạnh, bán theo giá thường cho dân thường đang đứng coi. Lá rau còn ướt, người mua trả tiền lẻ, cân đong như mọi phiên. Buổi mặc cả về độc quyền diễn ra ngay trước mặt một cái chợ đang chạy bình thường mà không cần tới nó. Cao Minh coi sạp rau một lúc, rồi quay lại bàn thương lượng nói phần của người chủ hàng, ngắn và rõ.",
       "Phần còn lại của buổi chợ thuộc về Nhân Danh Đường. Khi lập đường, quyền phản đối quyết định hại dân đã được tuyên bố thành tiếng trước cả sân, nhưng từ hôm ấy nó mới chỉ nằm ở lời tuyên bố. Hôm nay, theo đúng thủ tục ấy, Đỗ Thị Hạnh đứng ra dùng quyền lần đầu tiên. Biên bản phản đối được lập ngay tại chợ, đọc thành tiếng, ký chứng trước mặt hai phía ra giá. Hai thương vụ cùng đứng lại, không phải vì một thanh kiếm cấm, mà vì một quyền đã nói ra công khai từ trước và nay được dùng đúng lệ.",
-      "Từ Bách Xuyên thu hợp đồng về, gấp lại ngay ngắn. Hắn thua một cái quyền, mà tiền còn nguyên, mạng lưới ở Chợ Lớn còn nguyên. Người môi giới rút êm, không để lại tên thật. Ở rìa chợ, tin buổi này được người của Tài Phòng mang đi rất nhanh: tông môn ấy vừa chặn một thương vụ không bằng kiếm, mà bằng một tờ biên bản. Buổi chiều cùng ngày, hai người khách lạ mặc âu phục đứng coi chợ rất lâu."
+      "Từ Bách Xuyên thu hợp đồng về, gấp lại ngay ngắn. Hắn thua một cái quyền, mà tiền còn nguyên, mạng lưới ở Chợ Lớn còn nguyên. Người môi giới rút êm, không để lại tên thật. Ở rìa chợ, tin buổi này được người của Tài Phòng mang đi rất nhanh: tông môn ấy vừa chặn một thương vụ không bằng kiếm, mà bằng một tờ biên bản. Buổi chiều cùng ngày, hai người khách lạ mặc âu phục đứng coi chợ rất lâu.",
+      "Ở chợ xa cuối tuyến phân phối, Tĩnh Hồn Thái giả không những không biến mất — nó đã có một chủ duy nhất. Người giữ nguồn hàng giả ấy bán ra nhỏ giọt, giá gấp ba giá thật, và người bệnh không có lựa chọn thứ hai: nguồn thật của Hạ Ô Môn chưa có đại lý ở đó, còn bệnh thì không chờ được."
     ],
     "dialogue": [
       {
@@ -21006,7 +21007,8 @@ export const VN_SCENES = Object.freeze({
       "Đọc xong, mọi mắt đổ về phía Cao Minh. Hắn ngồi ở ghế đá đầu sân, xem cuộn đề xuất như xem một tờ thực đơn của quán lạ: không chuẩn y, không cấm, không ban dấu riêng của Đạo Tổ cho Chấp Chiếu Phòng. Khoảng trống hắn để lại không phải sơ hở — người vừa ngồi xem một buổi ký liên minh mà không buồn động tay, không có lý do gì bận tay vì một cuộn giấy của phòng mình. Nhưng Tống Nguyên Phúc hiểu giá trị của khoảng trống ấy hơn bất kỳ ai.",
       "Tới phần danh sách người, Tiểu Lan quyết tại chỗ. Nàng nói chậm từng điều, để Hạnh ghi kịp vào biên bản: Chấp Chiếu Phòng nhận bản sao có chứng nhận; bản gốc chỉ có một và ở lại Nhân Danh Đường. Lý do thuần là giấy tờ: bản gốc đi nhiều tay thì tên người thành hàng hóa. Tống Nguyên Phúc nhận ngay, không một giây mặc cả, còn khen lệ ấy chặt chẽ. Hắn không cần thắng nàng ở bàn này.",
       "Đêm ngày 48. Lịch điều động ghe đêm mới của phân đàn — lịch vừa đổi sau vụ Ký Lương, vừa được cho về một mối buổi sáng — được sao thêm một bản không nằm trong biên bản nào. Bản sao ấy đi hai chặng: từ tay người chép sổ của Chấp Chiếu Phòng sang người liên lạc của Phan Tường ở bến chợ, kèm một dòng ghi nơi cất hồ sơ gốc của Nhân Danh tại phân đàn. Thứ ấy Tống Nguyên Phúc biết vì hắn là tổng chấp sự, không phải vì Tiểu Lan sơ hở. Không người nào của tông môn thấy hai chặng ấy.",
-      "Cuối buổi, cuộn đề xuất được mang quanh sân cho người ủng hộ ký thêm: hai đệ tử trẻ, hai chủ ghe, một trưởng nhóm. Từ hôm nay, phe của Tống Nguyên Phúc là sự thật công khai, có danh sách hẳn hoi. Biên bản của Hạnh ghi đúng một dòng: Hội Đồng biết tông môn có một phe lo việc chung. Ngoài dòng ấy, biên bản không có chữ nào khác."
+      "Cuối buổi, cuộn đề xuất được mang quanh sân cho người ủng hộ ký thêm: hai đệ tử trẻ, hai chủ ghe, một trưởng nhóm. Từ hôm nay, phe của Tống Nguyên Phúc là sự thật công khai, có danh sách hẳn hoi. Biên bản của Hạnh ghi đúng một dòng: Hội Đồng biết tông môn có một phe lo việc chung. Ngoài dòng ấy, biên bản không có chữ nào khác.",
+      "Tuần trước, ở một trạm xa, viên thư lại vẫn dùng một bản sao của Chấp Chiếu Phòng giữ giấy giải chấp của nhà dân hai ngày, ghi lý do 'chờ đối chiếu'. Giấy được trả nguyên — nhưng hai ngày ấy là dư thói quen cũ: phòng ấy giữ cách làm của người lập ra nó lâu hơn giữ lệnh của người ấy."
     ],
     "stageId": "can_gio",
     "title": "Phe Tống Nguyên Phúc"
@@ -25420,6 +25422,14 @@ export const VN_SCENES = Object.freeze({
       {
         "speaker": "Cao Minh",
         "text": "Đường thứ hai — đường phản thanh. Ngươi phản thanh tại đàn này, một lần, ở quy mô neo gốc — như ngươi đã làm ở các điểm neo trước nhưng sâu hơn tất cả: đàn bị vô hiệu hóa, cơ chế Lệnh bị can thiệp tận gốc. Cái giá, bổn tọa nói đủ và nói trước, không giảm một phần: tổn thương thần kinh nặng, và một khoảng ký ức cá nhân có ý nghĩa của ngươi sẽ mất. Bổn tọa không chọn thay ngươi được phần ký ức nào sẽ mất — và không một thứ đan dược nào của bổn tọa trả lại được nó. Bổn tọa có tất cả mọi thứ trên đời. Trừ thứ đó."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Trước khi tôi hỏi tiếp, thưa ngài, tôi xin sửa một ý trong cách ngài trình bày. Ngài nói như thể hai đường này do ngài dọn sẵn cho tôi chọn. Không phải vậy. Hai đường này là hai việc đang có thật trước mặt tôi — một việc của cái mạng, một việc của cái đàn. Ngài là người trình bày chúng rõ hơn bất kỳ ai. Còn người quyết đi đường nào — là tôi."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "…Ngươi sửa đúng. Bổn tọa trình bày — ngươi quyết. Để bổn tọa nói lại cho đúng: hai đường đang có thật trước mặt ngươi, Lan nhi. Ngươi hỏi tiếp đi, rồi ngươi quyết."
       },
       {
         "speaker": "Hứa Tiểu Lan",
