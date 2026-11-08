@@ -19814,7 +19814,7 @@ export const VN_SCENES = Object.freeze({
           "delta": 1,
           "id": "bao_ho"
         },
-        "text": "Đưa nhân chứng vừa thoát vào danh sách chuyển đi dưới tên ghi mới của Nhân Danh và cho ghe liên lạc rời bến ngay trước tối — người được giữ trước, giấy tính sau."
+        "text": "Đưa nhân chứng vừa thoát vào tuyến chuyển đi dưới tên mã tuyến — tên thật của bà ở lại trong hồ sơ kín của Nhân Danh — và cho ghe liên lạc rời bến ngay trước tối: người được giữ trước, giấy tính sau."
       },
       {
         "effects": {
@@ -19841,19 +19841,19 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Trương Bá Hòe",
-        "text": "Từ ngày tôi không giao ghe, người của Cai Biện đã hai lần ghé kho này hỏi thăm."
+        "text": "Bà ấy chép tay bảng kê chuyến ghe chở mảnh sổ."
       },
       {
-        "speaker": "Trương Bá Hòe",
-        "text": "Người đàn bà giữ kho đang náu trong kho rương. Bà ấy chép tay bảng kê chuyến ghe chở mảnh sổ."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, thưa bác. Nhân chứng đi theo ghe liên lạc tối nay; tên bà ấy tôi ghi riêng, không vào sổ công khai."
+        "speaker": "Người đàn bà giữ kho",
+        "text": "Thưa cô, tờ lệnh bảo đọc đủ họ tên giữa bến. Bến này đang có tai lạ đứng nghe. Đọc tên người ta lên là giao danh sách cho Cai Biện không tốn một đồng. Tôi rút tờ tên xuống dưới rồi; cô trách thì tôi chịu."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Người được chuyển đi, tôi chốt theo danh sách này. Bến đổi chủ ra sao, danh sách ấy không đổi."
+        "text": "Dạ, bà làm đúng. Tên người ở lại trong hồ sơ kín; ở đây chỉ đọc số người và nhà nào còn người kẹt lại."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Dạ, thưa bác. Nhân chứng theo ghe liên lạc tối nay; tên bà ấy tôi ghi riêng, không vào sổ công khai."
       },
       {
         "speaker": "Người đàn bà giữ kho",
@@ -19869,6 +19869,10 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Trương Bá Hòe",
+        "text": "Đừng ghi vì tin tôi. Cô đếm lại từng nút bằng tay cô, đọc cho tôi nghe. Người đối chiếu sau này phải là người đã tự kiểm."
+      },
+      {
+        "speaker": "Trương Bá Hòe",
         "text": "Mở rương ra, nửa tờ cùi còn lại nằm cùng bản mảnh sổ. Hai nửa khớp vết rách, khớp nửa dấu."
       },
       {
@@ -19877,53 +19881,44 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, tôi hiểu. Nửa dấu trên tờ cùi khớp mẫu dấu tôi giữ. Tôi ghi số nút dây vào sổ của tôi ngay đây."
+        "text": "Dạ, tôi đếm đủ rồi, đọc lại không sai nữa. Nửa dấu trên tờ cùi khớp mẫu dấu tôi giữ."
       },
       {
         "speaker": "Hứa Tiểu Lan",
         "text": "Thưa bác, hai thứ này bác giấu cho trường hợp bác không còn đứng ở đây. Bác đã tính tới việc ấy rồi sao?"
       },
       {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi ghi đủ rồi. Từ giờ hai thứ này đi theo sổ Nhân Danh, để đối chiếu trước mặt người của bến."
-      },
-      {
         "speaker": "Người đàn bà giữ kho",
         "text": "Thưa cô, số rương trên dây nút khớp trí nhớ của tôi. Chuyến ấy tôi đếm rương hai lượt mới cho buộc dây."
       },
       {
-        "if": "thuNguyetFollows",
         "speaker": "Lê Thu Nguyệt",
-        "text": "Dạ, thưa cô, người đã xuống ghe đủ theo danh sách. Em kiểm bằng miệng từng nhà một."
+        "text": "Dạ, thưa cô, người xuống ghe đủ theo danh sách; em kiểm bằng miệng từng nhà.",
+        "if": "thuNguyetFollows"
       },
       {
-        "if": "thuNguyetFollows",
         "speaker": "Lê Thu Nguyệt",
-        "text": "Bà cụ xóm trong bước hụt ở cầu gỗ, em đỡ xuống tận lòng ghe rồi."
+        "text": "Bà cụ xóm trong bước hụt ở cầu gỗ, em đỡ xuống tận lòng ghe rồi.",
+        "if": "thuNguyetFollows"
       },
       {
-        "if": "thuNguyetFollows",
         "speaker": "Lê Thu Nguyệt",
-        "text": "Em dặn người chèo: đi mé trong, tránh mặt sông lớn, đưa người vào sân trong."
+        "text": "Cô cứ lo việc trong kho. Đầu ghe bên này để em giữ; người đủ rồi.",
+        "if": "thuNguyetFollows"
       },
       {
-        "if": "thuNguyetFollows",
-        "speaker": "Lê Thu Nguyệt",
-        "text": "Cô cứ lo việc trong kho. Đầu ghe bên này để em giữ; người đủ rồi."
-      },
-      {
-        "if": "thuNguyetFollows",
         "speaker": "Hứa Tiểu Lan",
-        "text": "Em làm vậy là phải. Nhờ em chuyển lời ra ghe: ghe kho đi sau, đừng chờ."
+        "text": "Nhờ em chuyển lời ra ghe: ghe kho đi sau, đừng chờ.",
+        "if": "thuNguyetFollows"
       },
       {
-        "if": "thuNguyetFollows",
         "speaker": "Người đàn bà giữ kho",
-        "text": "Thưa cô, nghe tiếng Thu Nguyệt ngoài sân là tôi yên tâm. Người nhà hai phu có cô ấy coi chừng."
+        "text": "Thưa cô, nghe tiếng Thu Nguyệt ngoài sân là tôi yên tâm. Người nhà hai phu có cô ấy coi chừng.",
+        "if": "thuNguyetFollows"
       },
       {
         "speaker": "Người liên lạc",
-        "text": "Thưa cô, tôi từ sân Phúc Thọ chèo sang. Người được cứu đã lên ghe từ trưa, đủ danh sách, ghe sang sông an toàn.",
+        "text": "Thưa cô, người được cứu lên ghe từ trưa, đủ danh sách, ghe sang sông an toàn.",
         "unless": "thuNguyetFollows"
       },
       {
@@ -19933,7 +19928,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, tôi nhận đủ. Thư này tôi kẹp vào sổ. Ghe liên lạc bên này vẫn chạy như hẹn tối nay.",
+        "text": "Dạ, tôi nhận đủ. Ghe liên lạc bên này vẫn chạy như hẹn tối nay.",
         "unless": "thuNguyetFollows"
       },
       {
@@ -19942,7 +19937,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Tên cầm đầu bến",
-        "text": "Tôi nói một món đổi chác cho rõ: giao người đàn bà giữ kho với tờ cùi trong quả cân ra. Bến yên, ông Bá Hòe yên."
+        "text": "Tôi nói món đổi chác cho rõ: giao người đàn bà giữ kho với tờ cùi trong quả cân ra. Bến yên, ông Bá Hòe yên."
       },
       {
         "speaker": "Tên cầm đầu bến",
@@ -19973,10 +19968,6 @@ export const VN_SCENES = Object.freeze({
         "text": "Phu bến ơi, ra sân kho hết đi! Người của Cai Biện đánh người ở cửa kho rồi!"
       },
       {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi ghi vào sổ Nhân Danh trước mặt cả bến: Trương Bá Hòe, chết ngày 45 vì giữ nhân chứng và chứng cứ. Người ra đòn là tên cầm đầu bến của Cai Biện."
-      },
-      {
         "speaker": "Phu bến trẻ",
         "text": "Thưa cô, phu bến bỏ cơm chiều, tụ ở sân kho đông lắm. Tối nay bến này không ngủ yên được đâu."
       }
@@ -19984,26 +19975,27 @@ export const VN_SCENES = Object.freeze({
     "id": "ky4_34_ba_hoe_giu_so",
     "location": "Bến quan tài, Phúc Thọ — chiều ngày 45",
     "narration": [
-      "Chiều ngày 45, bến quan tài Phúc Thọ đã hết giờ ghe chính. Ghe chở hòm rỗng nằm im dọc cầu gỗ. Tiểu Lan xuống bến với cuốn sổ Nhân Danh: hôm nay nàng chốt danh sách nhân chứng của tuyến quan tài được chuyển đi nơi khác. Trương Bá Hòe đón nàng ở cầu cân — phu bến lâu năm nhất ở đây, và từ ngày từ chối giao tên người cùng ghe cứu người cho phe mua chuộc, cả bến đều biết hắn giữ thứ gì.",
-      "Bá Hòe chỉ ba chiếc rương rỗng hắn cho dời ra chắn lối vào kho. Người của Cai Biện đã hai lần ghé kho này hỏi thăm: một lần mua dây ghe, một lần thuê người gác đêm, lần nào cũng nhìn vào trong kho lâu hơn nhìn mặt người bán. Trong kho rương, sau mấy lớp giấy dầu, một người đàn bà đang náu: người giữ kho của bến.",
-      "Bá Hòe dẫn nàng tới quả cân lớn ở cầu cân: quả cân chì đúc rỗng, nắp hàn kín, chỉ phu lâu năm mới biết cách mở. Hắn vặn nắp, lấy ra hai thứ gói trong giấy dầu: nửa tờ cùi biên nhận rách đúng giữa con dấu, còn rõ nửa dấu mộc Tài Phòng; và một sợi dây thừng thắt nút theo lệ bến, đọc theo thứ tự sẽ ra số rương, số ghe của chuyến ấy.",
-      "Hắn dặn cách đối chiếu như dặn việc nhà: mở rương của chuyến ấy ra, nửa tờ cùi còn lại nằm cùng bản mảnh sổ; hai nửa khớp vết rách, khớp nửa dấu mộc, dây nút chỉ đúng rương, đúng ghe. Lan so nửa dấu với mẫu dấu nàng mang theo, tự tay ghi số nút dây vào sổ Nhân Danh. Nàng hỏi hắn một câu thẳng, vì nàng hiểu hai thứ này được giấu cho trường hợp người giấu không còn đứng ở đây.",
+      "Chiều ngày 45, bến quan tài Phúc Thọ đã hết giờ ghe. Ghe chở hòm rỗng nằm im dọc cầu gỗ. Tiểu Lan xuống bến với cuốn sổ Nhân Danh: hôm nay nàng chốt danh sách nhân chứng tuyến quan tài được chuyển đi nơi khác. Trương Bá Hòe đón nàng ở cầu cân — phu bến lâu năm nhất ở đây; từ ngày từ chối giao tên người cho phe mua chuộc, cả bến đều biết hắn giữ thứ gì.",
+      "Ba chiếc rương rỗng Bá Hòe đã dời ra chắn lối vào kho. Người của Cai Biện đã hai lần ghé kho hỏi thăm — mua dây ghe, thuê gác đêm — lần nào cũng nhìn vào kho lâu hơn nhìn mặt người bán. Trong kho rương, sau mấy lớp giấy dầu, một người đàn bà đang náu: người giữ kho của bến.",
+      "Tờ lệnh chuyển người mang theo từ Long Hải ghi điều Cao Minh dặn: danh sách phải đọc đủ họ tên ngay tại bến, để không ai nói tông môn giấu những con người không có thật. Người giữ kho đã rút nguyên tờ ghi họ tên khỏi xấp giấy định đọc to, đặt xuống dưới xấp hồ sơ kín, trước khi Tiểu Lan kịp lên tiếng; tờ để hở chỉ còn số người từng nhà và nhà nào còn thân nhân kẹt lại. Tiểu Lan nhìn hai xấp giấy một lượt rồi gật đầu. Việc ấy không làm chuyến ghe chậm một khắc nào.",
+      "Bá Hòe dẫn nàng tới quả cân lớn: quả cân chì đúc rỗng, nắp hàn kín, chỉ phu lâu năm mới biết cách mở. Hắn vặn nắp, lấy ra hai thứ gói trong giấy dầu: nửa tờ cùi biên nhận rách đúng giữa con dấu, còn rõ nửa dấu mộc Tài Phòng; và một sợi dây nút theo lệ bến, đọc theo thứ tự sẽ ra số rương, số ghe.",
+      "Hắn không cho nàng ghi theo lời mình: hắn đặt sợi dây vào tay nàng — đếm từng nút, đọc thành tiếng cho hắn nghe, rồi tự so nửa dấu trên tờ cùi với mẫu dấu nàng mang theo. Tiểu Lan đếm chậm, đọc lại từng nút; tới nút cuối nàng đọc sai một số, hắn lắc đầu, nàng đếm lại từ đầu và đọc đúng. Nàng hiểu: hai thứ này được giấu cho trường hợp người giấu không còn đứng ở đây — người đối chiếu sau này phải là người đã tự tay kiểm, không phải ghi vì tin.",
       {
-        "if": "thuNguyetFollows",
-        "text": "Ở sân Phúc Thọ phía sau bến, việc chuyển người vẫn chạy bằng tay người thường. Nhóm người được cứu — vợ con của hai phu bến có tên trong danh sách — lần lượt xuống ghe liên lạc ở mé sông sau kho. Thu Nguyệt đi giữa sân và bến ghe, kiểm tên bằng miệng thay vì đọc sổ thành tiếng: tên người lúc này không nên vang lên giữa một cái bến đang có người lạ đứng nghe."
+        "text": "Phía sau bến, nhóm người được cứu — vợ con của hai phu bến có tên trong danh sách — lần lượt xuống ghe liên lạc ở mé sông sau kho. Thu Nguyệt đi giữa sân và bến ghe, kiểm tên bằng miệng thay vì đọc sổ thành tiếng: tên người không nên vang lên giữa một cái bến đang có người lạ đứng nghe.",
+        "if": "thuNguyetFollows"
       },
       {
-        "text": "Ở đầu sân Phúc Thọ, nhóm người được cứu đã lên ghe từ trưa. Việc ấy Lan không tận mắt thấy: một người liên lạc chèo ghe nhỏ sang, trao tận tay nàng phong thư tay của người giữ sân. Thư ghi ngắn: người đủ theo danh sách, ghe đã sang sông an toàn; cuối thư thêm một dòng: Thu Nguyệt vẫn ở lại Long Hải lo đầu mối bên ấy. Lan đọc thư hai lượt, gấp lại theo nếp cũ, kẹp vào sổ Nhân Danh.",
+        "text": "Ở đầu sân Phúc Thọ, nhóm người được cứu đã lên ghe từ trưa. Một người liên lạc chèo ghe nhỏ sang, trao tận tay nàng phong thư tay của người giữ sân. Thư ghi ngắn: người đủ theo danh sách, ghe đã sang sông an toàn; cuối thư thêm một dòng: Thu Nguyệt vẫn ở Long Hải lo đầu mối bên ấy. Lan đọc thư hai lượt, gấp lại, kẹp vào sổ Nhân Danh.",
         "unless": "thuNguyetFollows"
       },
-      "Người tới bến khi nắng đã xiên ngang mặt sông. Tên cầm đầu bến của Cai Biện dẫn bốn người vào sân kho, lý do là kiểm rương theo lệnh cai bến. Hắn không dọa dẫm: hắn đặt lên bàn cân một món đổi chác rõ ràng — giao người đàn bà giữ kho và tờ cùi trong quả cân ra, bến yên, Bá Hòe yên, tiền công ghi tên hắn tăng gấp đôi. Cả bến nghe thấy món đổi ấy. Bá Hòe bước lên đứng giữa cửa kho, ra hiệu tay về phía lối sau.",
-      "Lan đứng ở cầu cân, không lao vào giữa đám người ở cửa kho: nàng ra lệnh đóng cổng bến, giữ ghe liên lạc ở mé sông sau kho, nói rõ từng tiếng cho cả sân nghe. Người đàn bà giữ kho hiểu hiệu tay, luồn lối sau, chạy thẳng ra ghe. Ở cửa kho, Bá Hòe giữ chỗ đứng bằng đòn gánh và thân người. Tên cầm đầu chờ hai người của hắn giữ được hai tay Bá Hòe mới tự tay ra đòn: một móc sắt gánh rương, thẳng vào sườn.",
+      "Người tới bến khi nắng đã xiên ngang mặt sông. Tên cầm đầu của Cai Biện dẫn bốn người vào sân kho kiểm rương theo lệnh cai bến. Hắn đặt món đổi chác lên bàn cân, nói to cho cả bến nghe. Bá Hòe không đáp ngay. Hắn nhìn một vòng bến của mình — cầu cân, ba chiếc rương chắn cửa, hàng ghe nằm im: những thứ sáng mai vẫn còn đây, tay hắn không còn chạm tới nữa. Rồi hắn bước lên đứng giữa cửa kho, ra hiệu tay về phía lối sau.",
+      "Lan đứng ở cầu cân, không lao vào giữa đám người: nàng ra lệnh đóng cổng bến, giữ ghe liên lạc ở mé sông sau kho. Người đàn bà giữ kho hiểu hiệu tay, luồn lối sau, chạy thẳng ra ghe. Ở cửa kho, Bá Hòe giữ chỗ đứng bằng đòn gánh và thân người. Tên cầm đầu chờ hai người của hắn giữ được hai tay Bá Hòe mới tự tay ra đòn: một móc sắt gánh rương, thẳng vào sườn.",
       {
-        "if": "thuNguyetFollows",
-        "text": "Bến lặng xuống khi tiếng chèo khuất hẳn. Việc đầu tiên Lan làm là mở quả cân, lấy nửa tờ cùi và sợi dây nút gói vào khăn tay của mình; ghe liên lạc đã đi khuất, người đàn bà giữ kho đã thoát. Rồi nàng ngồi xuống bên Bá Hòe, mở sổ Nhân Danh trên đầu gối, tự tay ghi tên hắn: họ tên, bến, ngày 45, chết vì giữ nhân chứng và chứng cứ của chuyến ghe chở mảnh sổ thứ hai, và tên người ra đòn mà nàng tận mắt thấy."
+        "text": "Bến lặng xuống khi tiếng chèo khuất hẳn. Lan mở quả cân, lấy nửa tờ cùi và sợi dây nút gói vào khăn tay của mình; ghe liên lạc đã đi khuất, người đàn bà giữ kho đã thoát. Nàng ngồi xuống bên Bá Hòe, mở sổ Nhân Danh trên đầu gối, tự tay ghi tên hắn — họ tên, bến, ngày 45, chết vì giữ nhân chứng và chứng cứ, cùng tên người ra đòn nàng tận mắt thấy. Ngoài sân, một phu trẻ lật quả cân lớn định đặt lại lên cầu cân như Bá Hòe vẫn làm mỗi chiều; quả cân trượt tay — hắn phải đỡ bằng cả hai tay, đặt lại lần thứ hai mới yên.",
+        "if": "thuNguyetFollows"
       },
       {
-        "text": "Bến lặng xuống khi tiếng chèo khuất hẳn. Việc đầu tiên Lan làm là mở quả cân, lấy nửa tờ cùi và sợi dây nút gói vào khăn tay của mình; ghe liên lạc đã đi khuất, người đàn bà giữ kho đã thoát. Rồi nàng ngồi xuống bên Bá Hòe, mở sổ Nhân Danh trên đầu gối, tự tay ghi tên hắn: họ tên, bến, ngày 45, chết vì giữ nhân chứng và chứng cứ của chuyến ghe chở mảnh sổ thứ hai, và tên người ra đòn mà nàng tận mắt thấy. Trước khi khép sổ, nàng kẹp phong thư liên lạc vào cùng trang ấy: hai đầu tuyến cứu người gặp nhau trên một trang giấy. Ngoài sân kho, phu bến tụ lại thành vòng.",
+        "text": "Bến lặng xuống khi tiếng chèo khuất hẳn. Lan mở quả cân, lấy nửa tờ cùi và sợi dây nút gói vào khăn tay của mình; ghe liên lạc đã đi khuất, người đàn bà giữ kho đã thoát. Nàng ngồi xuống bên Bá Hòe, mở sổ Nhân Danh trên đầu gối, tự tay ghi tên hắn — họ tên, bến, ngày 45, chết vì giữ nhân chứng và chứng cứ, cùng tên người ra đòn nàng tận mắt thấy. Trước khi khép sổ, nàng kẹp phong thư vào cùng trang ấy: hai đầu tuyến cứu người gặp nhau trên một trang giấy. Ngoài sân, một phu trẻ lật quả cân lớn định đặt lại lên cầu cân như Bá Hòe vẫn làm mỗi chiều; quả cân trượt tay — hắn phải đỡ bằng cả hai tay, đặt lại lần thứ hai mới yên.",
         "unless": "thuNguyetFollows"
       }
     ],
