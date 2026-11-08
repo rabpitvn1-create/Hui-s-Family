@@ -24863,49 +24863,70 @@ export const VN_SCENES = Object.freeze({
     "contentStatus": "approved",
     "dialogue": [
       {
+        "speaker": "Cao Minh",
+        "text": "Thạo. Giữ Mến và những người có tên trong buổi đọc ở sau hàng Hộ Pháp. Hôm nay giấy nói; người ở chỗ an toàn."
+      },
+      {
+        "speaker": "Trần Thị Mến",
+        "text": "Thưa ngài, sổ này là chữ của tui. Người ta có thể nói tui đọc sai, đọc thêm — nếu tui đứng sau lưng người khác mà đọc. Phần của tui, tui đọc ở chỗ mọi người thấy mặt."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Lệnh vừa rồi — bỏ. Mở lối cho nàng. Đọc đi, Mến. Chỗ đứng của ngươi là ở cái bàn ấy."
+      },
+      {
         "speaker": "Trần Thị Mến",
         "text": "Tui xin đọc. Tui là Trần Thị Mến, giữ Linh Điền Đường của Hạ Ô Môn, trước làm việc ở kho Phúc Thọ. Cuốn sổ này là chữ của tui, số của tui, ngày tháng của tui. Khoản thứ nhất: ngày mười hai tháng trước, linh mễ từ ruộng Tài Phòng, ba trăm dạ, ghi giá xuất kho một lần, ghi giá nhập kho trung gian một lần khác cao hơn — phần chênh không về tay người trồng, không về tay người ăn. Nó về một tài khoản không có tên người, chỉ có một ký hiệu."
       },
       {
+        "speaker": "Hứa Tế Nguyên",
+        "text": "Cô Mến đọc không sai một số. Nhưng tôi nói rõ cho cả sân nghe: sổ kho chứng được dòng tiền đã đi — nó không phải giấy giải chấp. Ràng buộc của một hộ với chủ nợ chỉ hết khi chủ nợ đóng dấu xác nhận. Đọc sổ giữa chợ không tự nó xóa được một khoản nào."
+      },
+      {
         "speaker": "Trần Thị Mến",
-        "text": "Khoản thứ hai: các khoản ghi là 'phí vận chuyển người bệnh' — không có ghe nào chạy những chuyến ấy. Tính theo đầu người, theo ngày. Tui đọc tên từng khoản, và tui xin mọi người nghe kỹ: mỗi đầu người trong các khoản này là một người sống, có tên, có quê. Tôi đọc: khoản cho một người đàn ông ở tuyến Cần Giờ, tính tiền nuôi hai trăm mười ngày. Khoản cho một bà già ở tuyến trong, tính tiền nuôi một trăm tám mươi ngày. Người ta nuôi họ như nuôi một món hàng biết thở — và ghi họ vào sổ nợ như một tài sản bảo đảm cho các khoản vay của Hứa Gia."
+        "text": "Khoản thứ hai: các khoản ghi là 'phí vận chuyển người bệnh' — không có ghe nào chạy những chuyến ấy. Tính theo đầu người, theo ngày. Mỗi đầu người trong các khoản này là một người sống, có tên, có quê: một người đàn ông ở tuyến Cần Giờ, tính tiền nuôi hai trăm mười ngày; một bà già ở tuyến trong, tính tiền nuôi một trăm tám mươi ngày. Người ta ghi họ vào sổ nợ như một tài sản bảo đảm cho các khoản vay của Hứa Gia."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi đứng ra xác nhận phần người của cuốn sổ này. Người đàn ông trong khoản đầu tiên chị Mến vừa đọc đang đứng ngay tại cửa sông này, trong đoàn người được cứu — anh ấy còn sống, còn tỉnh, và anh ấy không phải một khoản nợ. Bà già trong khoản thứ hai đang ở điểm chăm sóc của phân đàn, sáng nay vừa tự ăn được một chén cháo. Những cái tên trong sổ nợ của Hứa Gia là người. Buổi công bố này chỉ đánh vào một thứ duy nhất: cái quyền biến người thành tài sản bảo đảm. Tiền nuôi người sống, phân đàn này không đụng vào — ai muốn cắt tiền thuốc của người bệnh, người ấy phải bước qua mặt tất cả những người đang đứng ở đây."
+        "text": "Người đàn ông trong khoản chị Mến vừa đọc đang đứng ngay tại cửa sông này — còn sống, còn tỉnh, và không phải một khoản nợ. Những cái tên trong sổ nợ của Hứa Gia là người."
+      },
+      {
+        "speaker": "Người đàn bà giữ kho",
+        "text": "Tôi là người giữ kho ở bến Phúc Thọ. Phần tôi biết chỉ là giao nhận: kiện nào qua tay tôi, ngày nào, ai ký nhận ở đầu bến — tôi chứng phần ấy. Phần tiền đi đâu, tôi không biết; tôi không nói thay ai."
+      },
+      {
+        "speaker": "Trần Văn Lực",
+        "text": "Tên tôi là Trần Văn Lực. Sổ của nhà họ Hứa ghi tôi chết ba năm nay. Tôi đứng đây. Phần tôi chứng là thân tôi và cái tên của tôi — ngoài ra tôi không biết gì hơn."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Biên bản đối chứng của Nhân Danh Đường, tôi giữ. Ai ký phần nào, tôi ghi đúng phần ấy — không ai ký thay phần của người khác ở cái bàn này."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Anh Tế Nguyên, chuyển lại cho cha tôi đúng lời này: điều kiện trong thư, tôi đọc đủ, tôi hiểu đủ. Cái giá ấy — ký nhận phần quá khứ theo lời của ông — tôi không trả. Chỗ ký thuận tôi để trống; thư này tôi trả lại nguyên vẹn. Còn tên tôi, tôi ký ở đây, vào biên bản đối chứng của Nhân Danh Đường, dưới phần tôi tự chứng."
       },
       {
         "speaker": "Hứa Tế Nguyên",
-        "text": "Cô Lan… cuốn sổ này, nét chữ này, cách ghi này — tôi nhận ra nó là sổ thật của kho. Tôi không cãi được một con số nào trong đó. Nhưng tôi hỏi cô một câu với tư cách người của nhà họ Hứa: cô công bố nó ở đây, trước dân ghe, trước cả người Pháp — cô có biết nó sẽ làm gì với nhà tôi không? Nó sẽ cắt nhà tôi ra khỏi mọi cuộc vay mượn ở vùng này trong nhiều năm."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi biết, anh Tế Nguyên. Và tôi nói rõ để anh khỏi phải đoán ý tôi: tôi không công bố nó để giết nhà họ Hứa. Tôi công bố nó vì trong đó có tên của những người còn sống đang bị ghi là tài sản. Ngày nào nhà anh còn dùng người làm vật bảo đảm, ngày ấy cuốn sổ này còn phải nằm ở ngoài nắng. Nhà anh muốn lấy lại thể diện, đường ngắn nhất không phải là bịt cuốn sổ này — là gạch bỏ thứ quyền ấy trong giấy tờ của chính nhà anh."
-      },
-      {
-        "speaker": "Lucien Vauclerc",
-        "text": "Tôi ghi chép buổi này với tư cách người quan sát, và tôi nói một câu không có trong báo cáo của tôi: tôi đã làm việc ở xứ này sáu năm, tôi tưởng mình đã thấy hết các loại giấy tờ. Hôm nay là lần đầu tôi thấy một cuốn sổ kho đọc lên giữa chợ mà cả một cửa sông im lặng. Phía tôi sẽ phải viết lại nhiều thứ sau buổi sáng nay. Nhà họ Hứa không còn kể được câu chuyện của vùng này một mình nữa."
+        "text": "Nghe phần của tôi. Chồng hồ sơ giải chấp này — chưa đóng dấu. Theo chỉ thị của Tài Phòng, từ hôm nay tôi giữ xác nhận giải chấp của các hộ trong danh sách chờ. Sổ của các người đã đọc xong. Giấy của tôi thì chưa."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Các ngươi thấy rồi đấy. Một người đàn bà giữ kho, một cuốn sổ mép quăn, đọc giữa cửa sông — và một dòng họ lớn mất quyền kể chuyện của chính mình. Bổn tọa đứng đây từ đầu buổi, không nói một câu nào chen vào, là có ý của bổn tọa: buổi này phải thuộc về người phàm và giấy của người phàm. Sức mạnh của bổn tọa ở đây chỉ làm một việc — bảo đảm không kẻ nào bịt miệng người đọc. Còn lại, sổ tự nó nói."
+        "text": "Các ngươi đã nghe cả hai phía của buổi sáng: sổ được đọc, và dấu không được đóng. Cả hai đều là sự thật của ngày hôm nay. Bổn tọa không sửa sự thật nào trong hai sự thật ấy."
       },
       {
         "speaker": "Trần Thị Mến",
-        "text": "Tui đọc xong phần chính rồi. Giờ tui làm một việc cuối của người giữ sổ: tui ký tên vào bản gốc của bản công bố này, trước mặt nhân chứng hai phía và dân ghe ở đây. Và trước khi tui ký, tui xin mời một người ký cùng tui — người mà cái tên của chính nàng từng bị xóa khỏi giấy của nhà họ Hứa."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi ký. Hứa Tiểu Lan — ba chữ này tôi viết đầy đủ, bằng tay tôi, trước mặt mọi người. Người từng bị gạch tên khỏi giấy nhà họ Hứa, hôm nay ký tên mình vào văn bản tố cáo cái quyền đã gạch tên người khác. Anh Tế Nguyên, anh nhìn cho kỹ nét chữ này. Nó không run. Mười mấy năm rồi, nó chưa từng run khi viết tên của chính nó."
+        "text": "Tui đọc xong. Sổ này từ nay ai muốn coi lại, cứ tới Linh Điền Đường mà coi — chữ của tui, tui chịu."
       }
     ],
     "id": "ky5_34_men_doc_so_cua_song",
     "location": "Cửa sông Cần Giờ — ngày 62",
     "narration": [
-      "Buổi công bố ở cửa sông không giống một phiên tòa. Nó giống một buổi chợ bị dừng lại giữa chừng: dân ghe đứng vòng ngoài, người của hai phía đứng vòng trong, và ở giữa, trên một cái bàn thấp kê ngay đầu bến, là một cuốn sổ kho mép quăn. Trần Thị Mến đọc. Nàng đọc bằng giọng của người giữ kho — đều, rõ, không kết tội bằng cảm xúc, không nâng giọng ở những chỗ đau nhất. Sức nặng của buổi sáng nằm ở con số và tên người, và Mến để cho chúng tự nặng.",
-      "Cao Minh đứng ở vị trí mọi người đều thấy. Sự hiện diện của hắn là một phần của buổi công bố mà không cần ai nói ra: không một kẻ nào trong đám đông — của Hứa Gia, của phía Pháp, của bất kỳ phe nào — dám nghĩ tới việc bịt miệng người đọc khi hắn đang đứng đó nghe. Hắn không nói một lời nào trong suốt phần đọc. Hắn để một người đàn bà bán cá cũ đọc sụp một phần đế chế tài chính của một dòng họ lớn bằng chính sổ sách của nó — và hắn thấy việc đó đáng đứng nghe hơn nhiều trận đánh nhau.",
-      "Cuối buổi, có một khoảnh khắc im lặng mà về sau người ở cửa sông còn kể lại: Tiểu Lan bước tới bàn, cầm bút, và ký tên mình — đầy đủ, rõ ràng, trước mặt Hứa Tế Nguyên và hàng trăm nhân chứng. Người con gái từng bị nhà họ Hứa xóa tên khỏi giấy nhà, ký tên vào văn bản tố cáo của chính nhà ấy, bằng nét chữ không run. Hứa Tế Nguyên nhìn nét ký ấy rất lâu. Hắn biết rõ hơn ai hết nét chữ ấy có nghĩa là gì trong gia phả của nhà mình.",
-      "Biên bản buổi công bố được Đỗ Thị Hạnh ghi ngay tại chỗ, ở vành ngoài của sân khấu cửa sông, nơi nàng giữ các bản sao của bản công bố: chứng cứ tài chính của Hứa Gia đã công khai tại cửa sông, có nhân chứng của hai phía, có dân ghe chứng kiến, bản gốc mang hai chữ ký. Từ giờ phút ấy, sự thật này không còn thuộc về một cuốn sổ nữa. Nó thuộc về cả vùng nước này."
+      "Trước khi tiếng đọc đầu tiên vang lên, trên bàn thấp kê ngay đầu bến đã có sẵn một thứ không thuộc về phân đàn: hộp dấu của Hứa Tế Nguyên và một chồng hồ sơ giải chấp đang chờ đóng dấu. Hắn mang chúng tới từ sáng sớm, đặt ngay tiền cảnh của buổi công bố — một lời nhắc rằng người sắp nghe sự thật hôm nay vẫn còn nguyên quyền thực thi của mình. Buổi công bố ở cửa sông không giống một phiên tòa; nó giống một buổi chợ bị dừng lại giữa chừng: dân ghe đứng vòng ngoài, người của hai phía đứng vòng trong, và ở giữa là cuốn sổ kho mép quăn của Trần Thị Mến.",
+      "Cao Minh mở đầu buổi bằng một lệnh bảo vệ: hắn bảo Thạo giữ Trần Thị Mến và những người có tên trong buổi đọc ở sau hàng Hộ Pháp, không cho ai trong số họ đứng ra mặt tiền. Thạo bước lên một bước — và lối lên bàn đọc bị hàng người của chính phân đàn chặn kín. Trần Thị Mến dừng lại ngay trước hàng chắn ấy. Nàng không lách qua, không cầu xin: nàng nói phần của mình phải do chính mình đọc, ở chỗ mọi người thấy mặt. Cả sân nghe thấy câu ấy. Cao Minh nhìn hàng chắn, nhìn người đàn bà giữ kho, rồi rút đúng cái lệnh mình vừa ra — trước mặt những người bị lệnh ấy tác động. Thạo lùi lại; hàng Hộ Pháp dạt ra hai bên. Không ai trong sân được nghe thêm một lời chữa nào cho việc ấy.",
+      "Mến đọc bằng giọng của người giữ kho: đều, rõ, đi từ khoản tới người nhận, không nâng giọng ở những chỗ đau nhất. Lời chứng sau đó truyền tay nhau: mỗi người chỉ chứng phần mình tận mắt biết, nói tới giới hạn của mình thì dừng. Một người nữa — người từng chở kiện hàng của tuyến ấy — được gọi tên; ông ta nhìn xuống mặt đất, rồi nhìn sang chồng hồ sơ của Tế Nguyên, và chọn đứng im. Không ai ép ông ta, và sự im lặng ấy cũng thành một phần của buổi sáng.",
+      "Giữa buổi, lá thư của Hứa Bổn Hoả được đưa ra trước mặt Tiểu Lan. Thư tới tay nàng từ hôm trước, điều kiện ghi rõ ràng như một bản giao kèo: nhà họ Hứa sẽ công khai nhận nàng là con gái chính danh của dòng họ, và Tài Phòng sẽ đóng dấu giải chấp cho những hộ đang kẹt giấy — nếu nàng ký vào chỗ ký thuận ở cuối thư, ký nhận phần quá khứ của nhà họ theo lời của cha nàng. Tiểu Lan cầm lá thư lâu hơn một nhịp so với mọi giấy tờ khác trong buổi sáng ấy; ngón tay nàng dừng lại một lúc ở đúng chỗ ký còn trống. Rồi nàng đặt lá thư xuống bàn, nguyên vẹn, trước mặt người có quyền nhận lại nó. Sau đó nàng cầm bút, ký đầy đủ họ tên mình — Hứa Tiểu Lan — vào biên bản đối chứng của Nhân Danh Đường do Đỗ Thị Hạnh giữ. Trên bàn thấp lúc ấy nằm ba thứ giấy khác nhau, không lẫn vào nhau: cuốn sổ kho nguồn của Mến, biên bản đối chứng của Nhân Danh, và lá thư của người cha với chỗ ký thuận còn trống.",
+      "Tế Nguyên thực hiện phần phản công của hắn ngay trong buổi, không chờ ai quay lưng đi. Hắn xếp riêng chồng hồ sơ giải chấp chưa đóng dấu sang một bên của hộp dấu và ra lệnh giữ xác nhận theo chỉ thị — những hộ trong chồng hồ sơ ấy, từ hôm nay, giấy của họ đứng yên. Quyền đọc sổ ở cửa sông không bị ai lấy lại; Mến đọc hết phần của mình tới khoản cuối cùng. Nhưng buổi công bố kết thúc với hai sự thật cùng đứng song song: sự thật đã thuộc về cả vùng nước này, và một chồng hồ sơ nằm im bên hộp dấu không mở. Không có ai tuyên bố rằng mọi hộ đã được cứu."
     ],
     "sceneEffects": {
       "cluesHuaGiaDelta": 1
