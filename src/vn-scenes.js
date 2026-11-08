@@ -8461,15 +8461,15 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Trần Thị Mến",
-        "text": "Trời đất ơi… ấn rơi như mưa thiệt, thưa cô! Đốm sáng nào cũng tự tìm người, không sót một ai. Bà cụ nằm võng ở lều nghỉ cũng có một đốm đậu ngay trên ngực, ấm lên trông thấy!"
+        "text": "Trời đất ơi… ấn rơi như mưa thiệt, thưa cô! Bà cụ nằm võng ở lều nghỉ cũng có một đốm đậu ngay trên ngực, ấm lên trông thấy!"
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Thưa bà con, tôi nhắc lại cho rõ: nhận ấn xong, ai muốn về thì cứ về. Ghi danh là việc khác hẳn, tự nguyện hoàn toàn. Không ai được giữ người ta lại để ép ghi tên vào sổ đệ tử."
+        "text": "Tôi nhắc lại cho rõ: nhận ấn xong, ai muốn về thì cứ về. Ghi danh là việc khác hẳn, tự nguyện hoàn toàn. Không ai được giữ người ta lại để ép ghi tên vào sổ đệ tử."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Ai ở hàng ghi danh mà thấy mình bị giục, bị ép, cứ bước ra khỏi hàng và tới nói với tôi. Nhận pháp là quyền của người ta; không ai biến quyền ấy thành một cái cửa để thu người được."
+        "text": "Ai ở hàng ghi danh mà thấy mình bị giục, bị ép, cứ bước ra khỏi hàng và tới nói với tôi."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -8497,7 +8497,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Người dân",
-        "text": "Thưa cô, tôi… tôi vận được rồi. Hơi thở nó tự đi một vòng, ấm từ bụng ấm lên. Tôi là dân chài, không có một chữ… vậy mà học được thiệt. Tôi không ghi danh đâu — mà vẫn được học thiệt."
+        "text": "Thưa cô, tôi… tôi vận được rồi. Hơi thở nó tự đi một vòng, ấm từ bụng ấm lên. Tôi là dân chài, không có một chữ… vậy mà học được. Tôi không ghi danh đâu — mà vẫn được học thiệt."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -8515,8 +8515,9 @@ export const VN_SCENES = Object.freeze({
       "Ở thềm sân, trên chiếc ghế đá đặt sẵn từ buổi sáng, Cao Minh ngồi nguyên một chỗ. Hắn mở vò rượu, rót ra chén, uống thong thả — và ngồi như thế suốt buổi lễ, không đứng dậy, không diễn văn, không điểm danh. Đám đông ban đầu còn ngơ ngác nhìn vị Đạo Tổ ngồi uống rượu giữa đại lễ của chính mình; dần dà họ hiểu ra: buổi lễ này không cần hắn làm gì thêm. Thứ hắn cho đi, hắn cho như rải thóc — ném ra là xong.",
       "Rồi hắn phất tay, lơ đãng như phủi một hạt bụi. 24.000 Hạ Ô Khai Mạch Ấn tỏa xuống sân như một trận mưa sáng: từng đốm lửa nhỏ tự tìm tới từng người có mặt — người già ở hàng chiếu, trẻ con chen giữa người lớn, người bệnh nằm ở lều nghỉ, người ở hàng cuối vừa tới kịp. Không thi tuyển, không hạn ngạch, không xét xuất thân. Ấn chạm vào người nào thì ấm lên trong người ấy, ở lại như một hạt mầm vừa gieo. Cao Minh vẫn ngồi trên ghế đá, rót thêm một chén rượu, nhìn trận mưa sáng rơi xuống như nhìn một cảnh trời đẹp.",
       "Giữa lúc sân còn xôn xao vì mưa ấn, một việc phàm suýt làm hỏng buổi lễ: mấy người phụ việc bắt đầu giục những ai vừa nhận ấn xong bước thẳng sang hàng ghi danh — ghi tên vào sổ đệ tử rồi mới được ra về. Có người lúng túng không biết từ chối thế nào, có bà mẹ ôm con đứng giữa hai hàng mà ngơ ngác. Tiểu Lan trông thấy, và nàng chặn ngay tại chỗ, tách hẳn hai việc ra trước mặt cả sân. Trần Thị Mến kê riêng bàn ghi danh tự nguyện ra một góc sân; bàn ở giữa chỉ còn là bàn nhận ấn và nghe đọc kinh.",
-      "Phần còn lại của buổi chiều dành cho việc truyền kinh. Phàm Tức Quy Nguyên Kinh được đọc thành tiếng nhiều lượt, từng đoạn ngắn, cho người không biết chữ nghe và nhắc lại; người biết chữ ngồi lẫn vào, chỉ nhau cách vận hơi thở đầu tiên. Người lĩnh ấn đầu tiên vận được hơi thở đầu tiên ngay tại sân — một vòng khí ấm qua bụng, tay chân nhẹ đi — mới ở mức mầm Luyện Khí. Cao Minh vẫn ngồi ghế đá uống rượu; cả buổi, hắn chỉ bình thêm một câu ngắn vào chuyện nhanh chậm, rồi lại rót rượu, xem tiếp.",
-      "Chiều tối, 24.000 ấn đã rải hết. Dòng người ghi danh tự nguyện vẫn còn đang dài trước bàn ở góc sân — người ta ghi tên vì muốn, không phải vì bị giục. Người không ghi danh ra về với ấn trong người, và lời hẹn dùng linh tuyền công cộng khi cần. Ở cuối sân, mấy người vừa tới từ những làng xa nhất bắt đầu hỏi nhau: người chưa tới kịp hôm nay thì nhận ấn ở đâu, ai giữ việc phát ấn cho người tới muộn? Thứ sắp bị tranh nhau không phải bản thân ấn — ấn hắn ném ra vô số; thứ bị tranh là quyền phát ấn, quyền quản việc ấy."
+      "Phần còn lại của buổi chiều dành cho việc truyền kinh. Phàm Tức Quy Nguyên Kinh được đọc thành tiếng nhiều lượt, từng đoạn ngắn, cho người không biết chữ nghe và nhắc lại; người biết chữ ngồi lẫn vào, chỉ nhau cách vận hơi thở đầu tiên. Người lĩnh ấn đầu tiên vận được hơi thở đầu tiên ngay tại sân — một vòng khí ấm qua bụng, tay chân nhẹ đi — mới ở mức mầm Luyện Khí. Cao Minh vẫn ngồi ghế đá uống rượu; cả buổi, hắn chỉ bình thêm một câu ngắn vào chuyện nhanh chậm, rồi lại rót rượu.",
+      "Chiều tối, 24.000 ấn đã rải hết. Dòng người ghi danh tự nguyện vẫn còn đang dài trước bàn ở góc sân — người ta ghi tên vì muốn, không phải vì bị giục. Người không ghi danh ra về với ấn trong người, và lời hẹn dùng linh tuyền công cộng khi cần. Ở cuối sân, mấy người vừa tới từ những làng xa nhất bắt đầu hỏi nhau: người chưa tới kịp hôm nay thì nhận ấn ở đâu, ai giữ việc phát ấn cho người tới muộn? Thứ sắp bị tranh nhau không phải bản thân ấn — ấn hắn ném ra vô số; thứ bị tranh là quyền phát ấn, quyền quản việc ấy.",
+      "Ở bàn ghi danh nơi góc sân, một người đàn ông tới lượt rồi lại bước ra khỏi hàng. Ông đã nhận ấn như mọi người; đến lúc đọc tên cho người ghi sổ, ông lắc đầu: tên ông nằm trong sổ của nhà này, người đang lùng ông đọc được là biết ông ở đâu. Ông xin về không ghi danh, không để lại chữ nào. Mến chưa kịp hứa gì, Tiểu Lan đã nói thay cả bàn: ghi danh là tự nguyện — nhà này nhớ người bằng mặt, không giữ người bằng sổ. Không chữ nào về ông được viết xuống."
     ],
     "stageId": "long_hai",
     "title": "Vạn Phàm Thụ Pháp"
@@ -10946,7 +10947,8 @@ export const VN_SCENES = Object.freeze({
       "Anh ta trả lời ngắt quãng, người nhà đứng bên thỉnh thoảng đỡ lời. Điều cả vùng đang lăn tăn, anh ta hỏi ra thành tiếng ngay trước khi việc chữa bắt đầu: chữa ở đây rồi, có phải thề nhập môn không, có bị ghi nợ vào sổ nào không. Đó là câu hỏi của một người đã bị người ta cầm lấy đời mình một lần, và không muốn ký thác đời mình thêm lần nữa khi chưa nghe rõ điều kiện.",
       "Tiểu Lan trả lời thay cho cả đạo quán, và nàng nói trước khi bất kỳ viên đan nào được lấy ra khỏi hộp. Thứ tự ấy là quyết định của nàng: điều kiện-không-có phải được nói trước việc chữa, không phải chữa xong rồi mới trấn an. Dương Thất Nương ngồi bên, xác nhận bằng lệ của Đan Đường: trong toa của bà không có dòng nào tên là trung thành.",
       "Việc chữa diễn ra ở linh tuyền: đan của Đan Đường, nước tuyền ấm, và thời gian. Cơn đau theo nhịp lạ rút dần từng đợt, bàn tay run của người bệnh lâu dần chỉ còn run khẽ ở đầu ngón. Việc chữa hôm nay chỉ gỡ đau và bồi bổ, đúng phần việc của nó. Giữa buổi, một đệ tử theo thói quen mới của môn cầm sổ tới, định ghi tên người bệnh vào danh sách chờ ghi danh. Cao Minh, ngồi xem từ đầu chưa nói một lời, xử việc ấy bằng đúng một câu.",
-      "Người bệnh ngủ được một giấc ngắn ngay tại chỗ — giấc ngủ đầu tiên không giật mình theo nhịp lạ. Tỉnh dậy, mắt anh ta trong hơn hẳn buổi sáng. Phía Đan Đường chỉ đưa ra đúng một lời mời thường: nếu muốn, anh có thể ở lại học nghề phụ việc; không muốn thì về. Lời mời được nói một lần, không ai nhắc lại lần hai, không ai đặt hạn trả lời. Khoảng nghĩ ấy được tôn trọng nguyên vẹn.",
+      "Ở đầu kia của sân tuyền, Bùi Thị Lành ngồi trong hàng người chờ tái khám, hai tay bận xếp lại một xấp khăn của Đan Đường. Giữa buổi, bàn tay trái của chị khẽ nhấc lên theo một nhịp không phải của chị. Chị không ghim nó xuống. Chị chỉ đếm thầm, chậm rãi, và để việc xếp khăn kéo dài thêm đúng ba nhịp nữa — khi bàn tay kia chịu buông xuống, việc nó muốn làm đã qua mất lúc. Chị nhìn xấp khăn ngay ngắn trong tay mình, và mỉm cười một mình, rất khẽ.",
+      "Người bệnh ngủ được một giấc ngắn ngay tại chỗ — giấc ngủ đầu tiên không giật mình theo nhịp lạ. Tỉnh dậy, mắt anh ta trong hơn hẳn buổi sáng. Phía Đan Đường chỉ đưa ra đúng một lời mời thường, nói một lần, không ai nhắc lại, không ai đặt hạn trả lời.",
       "Rồi anh ta nói lời từ chối, rành mạch, không xin lỗi quá mức: anh đã bị người ta điều khiển đủ lâu rồi. Giờ khỏe lại, anh chỉ muốn về làm người thường của nhà mình, không muốn thuộc về thêm một nhà nào nữa, dù nhà ấy tốt. Một đệ tử buột miệng tiếc thay cho anh. Tiểu Lan bênh quyền từ chối ấy ngay tại chỗ, bằng giọng của người hiểu câu chuyện này từ bên trong. Không ai trong sân gọi tên sự giống nhau giữa câu chuyện của anh và của nàng; nàng cũng không tự ví mình.",
       "Người bệnh ra về bằng cửa chính, giữa ban ngày, tay cầm một gói thuốc dặn dò thêm mấy ngày. Gói thuốc ghi cách dùng, không ghi điều kiện nào. Không ai ghi tên anh vào sổ nào ngoài sổ bệnh của Đan Đường. Tiểu Lan đứng nhìn theo một lúc, rồi quay lại với việc của buổi chiều: Đan Đường dọn dẹp, ca bệnh kế tiếp đã chờ ở hiên."
     ],
@@ -10982,10 +10984,6 @@ export const VN_SCENES = Object.freeze({
       {
         "speaker": "Hứa Tiểu Lan",
         "text": "Dạ, lời này tôi nói thay cả nhà này, nói trước mặt mọi người ở sân này. Chữa xong, anh muốn về nhà mình thì về. Không một ai ở đây được giữ anh lại bằng ơn."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Anh yên tâm nằm xuống chữa bệnh. Việc khỏe lại là việc của anh và của thầy thuốc. Việc thuộc về nhà nào, ở đây không ai tính vào toa thuốc hết."
       },
       {
         "speaker": "Dương Thất Nương",
@@ -11025,7 +11023,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Người bệnh",
-        "text": "Tôi nói thẳng, cô và bà thầy đừng buồn: tôi không nhập môn. Tôi bị người ta điều khiển đủ lâu rồi. Khỏe lại, tôi chỉ muốn làm người thường của nhà tôi thôi."
+        "text": "Tôi nói thẳng, cô và bà thầy đừng buồn: tôi không nhập môn. Tôi bị người ta điều khiển đủ lâu rồi."
       },
       {
         "speaker": "Người bệnh",
