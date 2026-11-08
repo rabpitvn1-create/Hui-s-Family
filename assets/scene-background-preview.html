@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Background snapshot — Chuyển cảnh fade (Hứa Gia)</title>
+<link rel="stylesheet" href="../src/scene-background.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #17100c; color: #e8e4d8; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding: 14px; }
+  .wrap { max-width: 560px; margin: 0 auto; }
+  h1 { font-size: 16px; letter-spacing: .1em; color: #e8c547; text-align: center; }
+  h1 small { display: block; font-size: 11px; color: #9a958a; letter-spacing: .04em; margin-top: 4px; font-weight: 400; }
+  p.lead { font-size: 12px; color: #9a958a; text-align: center; margin: 8px 0 14px; line-height: 1.6; }
+  p.lead strong { color: #e8e4d8; }
+  #demo-stage { border: 1px solid rgba(189, 148, 88, .35); border-radius: 6px; padding: 10px; background: #1c1410; }
+  #demo-stage .scene-background { margin: 0; }
+  .status { background: #0f0f0f; border: 1px solid #2a2a2a; border-radius: 8px; padding: 10px; font-family: ui-monospace, monospace; font-size: 11px; line-height: 1.7; color: #b8b2a4; margin: 12px 0; white-space: pre-wrap; word-break: break-all; }
+  .status b { color: #e8c547; font-weight: 600; }
+  .btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  button { padding: 11px 6px; font-size: 13px; font-weight: 600; border-radius: 8px; border: 1px solid #e8c547; background: transparent; color: #e8c547; cursor: pointer; }
+  button.on { background: #e8c547; color: #141414; }
+  button.ghost { border-color: #2a2a2a; color: #e8e4d8; }
+  .row { display: flex; gap: 8px; margin-top: 8px; }
+  .row button { flex: 1; }
+  .hint { font-size: 11px; color: #9a958a; text-align: center; margin: 12px 0 4px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>BACKGROUND SNAPSHOT — CHUYỂN CẢNH FADE<small>Hứa Gia · Living Scene · chỉ background, không chạm nhân vật</small></h1>
+  <p class="lead">Chạy bằng code thật trong repo (<strong>src/scene-background.js</strong> + <strong>src/scene-background.css</strong>).
+  Mỗi lần chuyển cảnh: nền cũ <strong>fade-out 450ms</strong> rồi nền mới <strong>fade-in 450ms</strong> nối tiếp.
+  Nền hiện tại là gradient chờ theo art direction Colonial Noir — artwork thật Eric duyệt Gate 2 mới thay bằng file <strong>assets/scenes/{stageId}.webp</strong>.</p>
+
+  <div id="demo-stage"></div>
+  <div class="status" id="status"></div>
+
+  <div class="btns" id="stage-btns"></div>
+  <div class="row">
+    <button id="btn-same" class="ghost" type="button">Bấm lại cùng cảnh (không fade)</button>
+    <button id="btn-auto" type="button">Tự chạy demo</button>
+  </div>
+
+  <p class="hint">Nhân vật (Kai / Tiểu Lan / Cao Minh) đã có sẵn, không nằm trong khung này nên không bị mờ theo khi nền fade.
+  Bấm "Bấm lại cùng cảnh" để kiểm chứng: key không đổi thì nền đứng yên, không fade lại.</p>
+</div>
+
+<script type="module">
+import { mountSceneBackground, resolveSceneBackground, SCENE_STAGES, SCENE_FADE_OUT_MS, SCENE_FADE_IN_MS } from "../src/scene-background.js";
+
+const LABELS = {
+  long_hai: "Hồi 1 · Long Hải",
+  can_gio: "Hồi 2 · Cần Giờ",
+  backrooms: "Hồi 3 · Backrooms",
+  thu_dau_mot: "Hồi 4 · Thủ Dầu Một",
+  vung_tau: "Hồi 5 · Vũng Tàu",
+  sai_gon_cho_lon: "Hồi 6 · Sài Gòn–Chợ Lớn"
+};
+
+let turn = 1;
+let currentStage = "long_hai";
+let currentFloor = 0;
+
+function makeSnapshot(stageId, floor) {
+  return {
+    turn,
+    progression: { stageId, stageIndex: SCENE_STAGES.indexOf(stageId), backroomsFloor: floor },
+    scene: { id: stageId === "backrooms" ? `backrooms-f${floor}` : stageId, title: LABELS[stageId] }
+  };
+}
+
+const controller = mountSceneBackground(
+  document.getElementById("demo-stage"),
+  makeSnapshot(currentStage, currentFloor)
+);
+const statusEl = document.getElementById("status");
+const autoButton = document.getElementById("btn-auto");
+let autoTimer = 0;
+
+function renderStatus(note) {
+  const view = resolveSceneBackground(makeSnapshot(currentStage, currentFloor));
+  statusEl.innerHTML = `<b>key:</b> ${view.key}\n<b>fade:</b> out ${SCENE_FADE_OUT_MS}ms → đổi nền → in ${SCENE_FADE_IN_MS}ms (tổng ~900ms)\n<b>ảnh:</b> ${view.image} (chưa có file thật → gradient chờ)${note ? `\n<b>ghi chú:</b> ${note}` : ""}`;
+}
+
+function goTo(stageId, floor = 0, note) {
+  turn += 1;
+  currentStage = stageId;
+  currentFloor = floor;
+  controller.sync(makeSnapshot(stageId, floor));
+  document.querySelectorAll("#stage-btns button").forEach((btn) => {
+    btn.classList.toggle("on", btn.dataset.stage === stageId);
+  });
+  renderStatus(note);
+}
+
+const stageBtns = document.getElementById("stage-btns");
+SCENE_STAGES.forEach((stageId) => {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.dataset.stage = stageId;
+  btn.textContent = LABELS[stageId];
+  btn.addEventListener("click", () => {
+    stopAuto();
+    if (stageId === "backrooms") {
+      // Đổi tầng Backrooms cũng là đổi cảnh (key có floor).
+      const floor = currentStage === "backrooms" ? (currentFloor + 5) % 16 : 0;
+      goTo(stageId, floor, `Backrooms tầng ${floor} — key đổi theo floor nên vẫn fade.`);
+    } else {
+      goTo(stageId, 0);
+    }
+  });
+  stageBtns.append(btn);
+});
+
+document.getElementById("btn-same").addEventListener("click", () => {
+  const before = controller.key;
+  controller.sync(makeSnapshot(currentStage, currentFloor));
+  renderStatus(controller.key === before
+    ? "Bấm lại cùng cảnh: key không đổi → nền đứng yên, không fade."
+    : "Key đã đổi (không nên xảy ra).");
+});
+
+autoButton.addEventListener("click", () => {
+  if (autoTimer) { stopAuto(); return; }
+  autoButton.textContent = "Dừng demo";
+  autoButton.classList.add("on");
+  let i = SCENE_STAGES.indexOf(currentStage);
+  autoTimer = window.setInterval(() => {
+    i = (i + 1) % SCENE_STAGES.length;
+    goTo(SCENE_STAGES[i], 0);
+  }, 2200);
+});
+
+function stopAuto() {
+  window.clearInterval(autoTimer);
+  autoTimer = 0;
+  autoButton.textContent = "Tự chạy demo";
+  autoButton.classList.remove("on");
+}
+
+goTo("long_hai", 0);
+</script>
+</body>
+</html>
