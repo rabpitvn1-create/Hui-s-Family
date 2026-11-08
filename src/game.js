@@ -1,7 +1,7 @@
 import { INITIAL_STATE, WORLD_CANON } from "./world-canon.js";
 import { requestGameFullscreen } from "./game-start.js";
 import { VN_SCENES, VN_START_SCENE } from "./vn-scenes.js";
-import { validateVnScenes, VN_LINK_PHASES } from "./vn-schema.js";
+import { validateVnScenes, VN_LINK_PHASES, resolveChoiceTarget } from "./vn-schema.js";
 import { INCOMPATIBLE_SAVE_KEYS, coerceCanonSave, sanitizeLegacyCanonState } from "./canon-migration.js";
 import {
   applyProgressionUpdate,
@@ -308,12 +308,17 @@ export function initGame() {
     const lastEntry = backlog.entries[backlog.entries.length - 1];
     if (lastEntry && lastEntry.sceneId === state.scene.id && choice.text) {
       lastEntry.choiceLabel = choice.text;
+      lastEntry.choiceId = choice.id;
       persistBacklog();
     }
-    if (!VN_SCENES[choice.next]) throw new Error("Nhánh không có scene đích: " + choice.next);
-    if (VN_SCENES[choice.next].deadEnd) {
+    // Cổng nextIf quyết định bằng cờ XEM TRƯỚC tại đúng điểm kiểm tra dead
+    // end này — trước khi hiệu ứng/cờ của lựa chọn được ghi (xem
+    // resolveChoiceTarget). Rơi vào dead end qua cổng = không cam kết gì.
+    const targetId = resolveChoiceTarget(choice, state.flags);
+    if (!VN_SCENES[targetId]) throw new Error("Nhánh không có scene đích: " + targetId);
+    if (VN_SCENES[targetId].deadEnd) {
       state.vnCheckpoint = clone({ ...state, vnCheckpoint: null });
-      presentScene(choice.next);
+      presentScene(targetId);
       autoSave();
       render({ resetScroll: true });
       return true;
@@ -388,6 +393,10 @@ export function initGame() {
     try {
       const decoded = candidates[0].decoded;
       state = normalizeState(sanitizeLegacyCanonState(decoded));
+      // Nạp backlog theo runId ĐÃ khôi phục TRƯỚC khi presentScene ghi
+      // entry mới — nạp sau sẽ bị captureBacklogEntry ghi đè mất backlog
+      // của lượt chơi được khôi phục (bug nền G1, khóa 2026-11-08).
+      loadBacklog();
       presentScene(state.scene.id);
       state.log.unshift("Đã khôi phục tiến độ đã lưu.");
       state.log = state.log.slice(0, 14);
@@ -398,8 +407,10 @@ export function initGame() {
     }
   }
 
-  loadBacklog();
-  if (!tryRestoreSavedState()) presentScene(VN_START_SCENE);
+  if (!tryRestoreSavedState()) {
+    loadBacklog();
+    presentScene(VN_START_SCENE);
+  }
 
   function applyStatEffects(rawEffects) {
     const effects = rawEffects && typeof rawEffects === "object" ? rawEffects : {};
@@ -839,7 +850,10 @@ export function initGame() {
     if (!autoPlay) return;
     const card = VN_SCENES[state.scene.id];
     const choices = card?.choices || [];
-    if (!card || card.deadEnd || card.sliceEnd || choices.length !== 1 || choices[0].retry) {
+    if (!card || card.deadEnd || card.sliceEnd || choices.length !== 1 || choices[0].retry
+      || choices.some((c) => c.nextIf)) {
+      // Cảnh có cổng nextIf: tự chạy phải DỪNG — qua cổng hay không là
+      // quyết định của người chơi, không của bộ hẹn giờ.
       autoPlay = false;
       syncPlaybackButtons();
       return;
@@ -862,11 +876,19 @@ export function initGame() {
     const card = VN_SCENES[state.scene.id];
     const recorded = new Map();
     for (const entry of backlog.entries) {
-      if (entry.choiceLabel) recorded.set(entry.sceneId, entry.choiceLabel);
+      if (entry.choiceLabel || entry.choiceId) recorded.set(entry.sceneId, entry);
     }
-    const label = recorded.get(state.scene.id);
-    const index = card && label ? (card.choices || []).findIndex((choice) => choice.text === label) : -1;
-    if (!card || card.deadEnd || card.sliceEnd || index < 0) {
+    const rec = recorded.get(state.scene.id);
+    const choices = card?.choices || [];
+    let index = -1;
+    if (card && rec) {
+      // Khớp theo choiceId trước (ổn định khi hai lựa chọn trùng lời);
+      // bản backlog cũ chưa có choiceId thì lùi về khớp theo text.
+      index = choices.findIndex((choice) => rec.choiceId && choice.id === rec.choiceId);
+      if (index < 0 && rec.choiceLabel)
+        index = choices.findIndex((choice) => choice.text === rec.choiceLabel);
+    }
+    if (!card || card.deadEnd || card.sliceEnd || index < 0 || choices.some((c) => c.nextIf)) {
       stopPlayback();
       return;
     }

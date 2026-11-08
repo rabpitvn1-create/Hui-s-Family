@@ -12,6 +12,21 @@ const VN_EFFECT_LIMITS = Object.freeze({
   ammunitionDelta: [-20,10], falseMemoryCountDelta: [-1,2]
 });
 const own = (o,k) => Object.prototype.hasOwnProperty.call(o,k);
+// Cổng rẽ nhánh theo cờ (chương trình Issue #35, khóa thiết kế 2026-11-08):
+// đích hiệu dụng của một lựa chọn. Cờ được XEM TRƯỚC (preview) = cờ hiện
+// tại phủ bởi chính các cờ lựa chọn này sẽ đặt — cổng quyết định TRƯỚC khi
+// bất kỳ hiệu ứng/cờ nào của lựa chọn được ghi vào state, nên một lựa chọn
+// rơi vào dead end qua cổng không bao giờ để lại dấu vết trong state.
+export function resolveChoiceTarget(choice, flags) {
+  const gate = choice?.nextIf;
+  if (!gate) return choice?.next;
+  const preview = { ...(flags || {}), ...(choice.flags || {}) };
+  const has = (name) => preview[name] === true;
+  const allOk = (gate.all || []).every(has);
+  const atLeastOk = !(gate.atLeast || []).length || gate.atLeast.some(has);
+  const noneOk = (gate.none || []).every((name) => !has(name));
+  return allOk && atLeastOk && noneOk ? gate.next : choice.next;
+}
 export function validateVnScenes(scenes, startId) {
   const errors = [];
   if (!scenes || typeof scenes !== "object" || !own(scenes,startId)) {
@@ -49,6 +64,19 @@ export function validateVnScenes(scenes, startId) {
     if (scene?.entity !== undefined && typeof scene.entity !== "boolean"
       && !(typeof scene.entity === "string" && Object.hasOwn(ENTITY_OVERLAYS, scene.entity)))
       errors.push(key + ": entity must be boolean or a known entity overlay id");
+    // Phòng Đối Sổ: cảnh ngoài mạch truyện (debrief:true) — không tiến
+    // trình, đúng một lựa chọn retry về checkpoint, có vào backlog.
+    if (scene?.debrief !== undefined && typeof scene.debrief !== "boolean")
+      errors.push(key + ": debrief must be boolean");
+    if (scene?.debrief) {
+      if (scene.deadEnd) errors.push(key + ": debrief scene cannot be a dead end");
+      if (scene.sceneEffects !== undefined)
+        errors.push(key + ": debrief scene must be progress-free (no sceneEffects)");
+      if (scene.link !== undefined)
+        errors.push(key + ": debrief scene must be progress-free (no link)");
+      if (!Array.isArray(scene.choices) || scene.choices.length !== 1 || !scene.choices[0]?.retry)
+        errors.push(key + ": debrief scene needs exactly one retry choice");
+    }
     if (scene?.link) {
       if (!VN_LINK_IDS.includes(scene.link.id) || !VN_LINK_PHASES.includes(scene.link.phase))
         errors.push(key + ": invalid link milestone");
@@ -58,7 +86,17 @@ export function validateVnScenes(scenes, startId) {
       if (typeof choice.id !== "string" || typeof choice.text !== "string")
         errors.push(key + ": choice needs id/text");
       if (!choice.retry && !own(scenes,choice.next)) errors.push(key + ": unknown next scene");
-      if (choice.retry && !scene.deadEnd) errors.push(key + ": retry outside dead end");
+      if (choice.retry && !scene.deadEnd && !scene.debrief) errors.push(key + ": retry outside dead end");
+      if (choice.nextIf !== undefined) {
+        const gate = choice.nextIf;
+        const nameList = (v) => Array.isArray(v) && v.every((x) => typeof x === "string" && x);
+        const badList = (v) => v !== undefined && (!nameList(v) || v.length > 4);
+        if (!gate || typeof gate !== "object" || Array.isArray(gate)
+          || typeof gate.next !== "string" || !own(scenes, gate.next) || !scenes[gate.next]?.deadEnd
+          || badList(gate.all) || badList(gate.atLeast) || badList(gate.none)
+          || ((gate.all || []).length + (gate.atLeast || []).length) < 1)
+          errors.push(key + ": invalid nextIf gate (target must be a dead end, <=4 flags per list, >=1 positive sign)");
+      }
       for (const [effect,amount] of Object.entries(choice.effects || {})) {
         const range = VN_EFFECT_LIMITS[effect];
         if (!range || !Number.isInteger(amount) || amount<range[0] || amount>range[1])

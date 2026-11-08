@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { initGame } from "../src/game.js";
 import { INITIAL_STATE } from "../src/world-canon.js";
 import { VN_SCENES, VN_START_SCENE } from "../src/vn-scenes.js";
-import { validateVnScenes } from "../src/vn-schema.js";
+import { validateVnScenes, resolveChoiceTarget } from "../src/vn-schema.js";
 const AUTO_SAVE_KEY = "hua-family-campaign-v4-auto";
 const MANUAL_SAVE_KEY = "hua-family-campaign-v4-manual";
 class Element extends EventTarget {
@@ -417,10 +417,18 @@ function renderedWords(scene, flags) {
 }
 for (const [sid, scene] of Object.entries(VN_SCENES)) {
   const keys = new Set();
-  for (const item of scene.narration) if (typeof item === "object") keys.add(item.if || item.unless);
-  for (const line of scene.dialogue) if (line.if || line.unless) keys.add(line.if || line.unless);
+  // Thu CẢ if và unless của mỗi item (bản cũ `item.if || item.unless` bỏ
+  // mất một cờ khi item mang cả hai — bug nền G1, khóa 2026-11-08).
+  for (const item of scene.narration) if (typeof item === "object") {
+    if (item.if) keys.add(item.if);
+    if (item.unless) keys.add(item.unless);
+  }
+  for (const line of scene.dialogue) {
+    if (line.if) keys.add(line.if);
+    if (line.unless) keys.add(line.unless);
+  }
   keys.delete(undefined);
-  const [lo, hi] = scene.deadEnd ? [700, 900] : [1200, 1400];
+  const [lo, hi] = scene.debrief ? [100, 150] : scene.deadEnd ? [700, 900] : [1200, 1400];
   const list = [...keys];
   for (let mask = 0; mask < (1 << list.length); mask++) {
     const flags = new Set(list.filter((_, i) => mask & (1 << i)));
@@ -435,6 +443,61 @@ for (const scene of Object.values(VN_SCENES))
     assert.notEqual(choice.id, "use_their_carriage");
 const delayChoice = VN_SCENES.lh_move_tonight.choices.find((c) => c.id === "delay_the_carriage");
 assert.ok(delayChoice && delayChoice.flags && delayChoice.flags.carriageDelayed === true);
+// G1 (chương trình Issue #35): cổng nextIf + cảnh Phòng Đối Sổ (debrief).
+// Kiểm bằng cảnh tổng hợp vì nội dung thật chưa dùng cổng nào — engine gọi
+// đúng resolveChoiceTarget đã kiểm ở đây.
+{
+  const mini = (id, extra = {}) => ({
+    id, title: id, contentStatus: "approved", backgroundId: "bg",
+    narration: ["x"], dialogue: [], choices: [], ...extra
+  });
+  const deadScene = mini("dead", {
+    deadEnd: true,
+    choices: [{ id: "retry", text: "Thử lại", retry: true }]
+  });
+  const gateMap = (gate) => ({
+    a: mini("a", { choices: [{ id: "go", text: "Đi", next: "b", nextIf: gate }] }),
+    b: mini("b"),
+    dead: deadScene
+  });
+  assert.deepEqual(validateVnScenes(gateMap({ next: "dead", all: ["f1"] }), "a"), [],
+    "cổng nextIf hợp lệ phải qua được xác thực");
+  assert.ok(validateVnScenes(gateMap({ next: "b", all: ["f1"] }), "a")
+    .some((e) => e.includes("nextIf")), "đích cổng không phải dead end phải bị chặn");
+  assert.ok(validateVnScenes(gateMap({ next: "dead", all: ["1", "2", "3", "4", "5"] }), "a")
+    .some((e) => e.includes("nextIf")), "cổng quá 4 cờ phải bị chặn");
+  assert.ok(validateVnScenes(gateMap({ next: "dead", none: ["f1"] }), "a")
+    .some((e) => e.includes("nextIf")), "cổng không có dấu hiệu dương phải bị chặn");
+  assert.ok(validateVnScenes(gateMap({ next: "missing", all: ["f1"] }), "a")
+    .some((e) => e.includes("nextIf")), "đích cổng không tồn tại phải bị chặn");
+
+  const gated = { next: "b", flags: {}, nextIf: { next: "dead", all: ["f1"] } };
+  assert.equal(resolveChoiceTarget(gated, {}), "b", "thiếu cờ: đi nhánh thường");
+  assert.equal(resolveChoiceTarget(gated, { f1: true }), "dead", "đủ cờ all: qua cổng");
+  assert.equal(resolveChoiceTarget({ ...gated, flags: { f1: true } }, {}), "dead",
+    "preview phải tính cả cờ chính lựa chọn đặt");
+  assert.equal(resolveChoiceTarget(
+    { next: "b", nextIf: { next: "dead", atLeast: ["x", "y"] } }, { y: true }), "dead",
+    "atLeast trúng một cờ là qua");
+  assert.equal(resolveChoiceTarget(
+    { next: "b", nextIf: { next: "dead", all: ["x"], none: ["z"] } }, { x: true, z: true }), "b",
+    "none chạm cờ cấm thì không qua");
+  assert.equal(resolveChoiceTarget({ next: "b" }, { f1: true }), "b", "không cổng: giữ next");
+
+  const debriefOk = {
+    a: mini("a", { choices: [{ id: "go", text: "Đi", next: "d" }] }),
+    d: mini("d", { debrief: true, choices: [{ id: "r", text: "Quay lại", retry: true }] })
+  };
+  assert.deepEqual(validateVnScenes(debriefOk, "a"), [],
+    "cảnh debrief đúng dạng (một lựa chọn retry) phải hợp lệ");
+  const debriefBad = {
+    a: debriefOk.a,
+    d: mini("d", { debrief: true, sceneEffects: { lanHealthDelta: 1 },
+      choices: [{ id: "r", text: "Quay lại", retry: true }] })
+  };
+  assert.ok(validateVnScenes(debriefBad, "a").some((e) => e.includes("debrief")),
+    "debrief mang sceneEffects (có tiến trình) phải bị chặn");
+}
 // G01–G06: companion resolve đúng giới/vai trên sân khấu.
 assert.equal(resolveCompanionId(VN_SCENES.lh_saloon), "steward");
 assert.equal(resolveCompanionId(VN_SCENES.lh_rules), "steward");
