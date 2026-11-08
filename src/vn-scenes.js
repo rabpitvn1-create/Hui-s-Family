@@ -6973,19 +6973,6 @@ export const VN_SCENES = Object.freeze({
         "flags": {
           "vtShipHalted": true
         }
-      },
-      {
-        "effects": {},
-        "flags": {
-          "vtShipHalted": true
-        },
-        "id": "seal_and_verify_first",
-        "next": "vt_dead_last_knock",
-        "route": {
-          "delta": 1,
-          "id": "nghi_le"
-        },
-        "text": "Giữ nguyên hiện trường: niêm phong cả tàu, đối chiếu giấy tờ của người gác nhịp với trạm bờ xong mới mở cỗ."
       }
     ]
   },
@@ -7452,8 +7439,7 @@ export const VN_SCENES = Object.freeze({
           "delta": 1
         },
         "flags": {
-          "vtRescueDebtKept": true,
-          "vtRescueDebtDeferred": true
+          "vtRescueDebtKept": true
         }
       }
     ]
@@ -7769,12 +7755,6 @@ export const VN_SCENES = Object.freeze({
         },
         "flags": {
           "vtRescueDebtRefused": true
-        },
-        "nextIf": {
-          "all": [
-            "vtRescueDebtDeferred"
-          ],
-          "next": "vt_dead_rescue_debt"
         }
       }
     ]
@@ -12285,15 +12265,15 @@ export const VN_SCENES = Object.freeze({
     "location": "Tàng Kinh Đường của Hạ Ô Môn, Long Hải — ngày 22, buổi phân xử tranh chấp chợ bằng Lưu Ngôn Châu",
     "companions": [],
     "narration": [
-      "Ngày hai mươi hai, một vụ tranh chấp của chợ Long Hải được đưa vào Tàng Kinh Đường phân xử theo lệ mới. Chủ sạp gạo và chủ sạp vải cãi nhau về một lời hứa miệng — giá và ngày giao của một lô hàng, không giấy, không chứng chắc chắn. Mỗi người nhớ một kiểu, ai cũng chắc như đinh đóng cột.",
+      "Ngày hai mươi hai, một vụ tranh chấp của chợ Long Hải được đưa vào Tàng Kinh Đường phân xử theo lệ mới. Chủ sạp gạo và chủ sạp vải cãi nhau về một lời hứa miệng — giá và ngày giao của một lô hàng, không giấy, không chứng chắc chắn.",
       "Đỗ Thị Hạnh, trưởng Nhân Danh Đường, tiếp vụ việc. Nàng không cho cãi tiếp theo lối cũ. Lệ buổi phân xử đặt ra trước: hai bên nói lại từ đầu, chậm rãi, và từ câu đầu tiên, lời của hai bên có một chỗ ở. Trên bàn, giữa sổ Nhân Danh Đường và chồng hồ sơ mang về từ Phúc Thọ, có một vật nhỏ nằm yên trong hộp gỗ.",
       "Cao Minh mở hộp, đặt Lưu Ngôn Châu lên bàn. Hạt châu ấy giữ lời nói vào nó và phát lại nguyên văn, không thêm, không bớt. Lần lượt, chủ sạp gạo rồi chủ sạp vải nói lại lời hứa vào châu. Hạnh cho phát lại ngay: hai phiên bản vang lên lệch nhau rõ từng chữ — giá khác, ngày giao khác. Cả đường im lặng.",
-      "Hạnh nói rõ giới hạn của hạt châu để không ai trông đợi quá phần của nó. Châu chỉ giữ lời vừa nói vào nó hôm nay. Lời đã quên, châu không trả lại được; ký ức cũ, châu không gọi về được.",
+      "Hạnh nói rõ giới hạn của hạt châu. Châu chỉ giữ lời vừa nói vào nó hôm nay. Lời đã quên, châu không trả lại được; ký ức cũ, châu không gọi về được.",
       "Buổi phân xử mời thêm một người làm chứng: người bán hàng đứng gần hai sạp hôm hẹn giá, nghe được câu chuyện hôm ấy. Lúc đầu, lời anh ta khớp với một bên, khá rành. Nhưng khi Hạnh hỏi tới khoản tiền đặt cọc, anh ta bắt đầu nói vòng, câu sau sửa câu trước, rồi lặng lẽ nghiêng hẳn sang phía ngược lại — đổi lời ngay giữa buổi, trước mặt hạt châu đang ghi.",
       "Việc đổi lời không qua khỏi mắt người trong đường. Trước buổi phân xử không lâu, một người môi giới vẫn lảng vảng quanh các vụ việc của chợ đã gặp riêng nhân chứng. Thứ nhân chứng nhận không phải tiền mặt khó truy: đó là giấy chi của vòng Phúc Thọ và Tài Phòng, mang dấu hiệu tài chính đoàn đã từng thấy. Lời dặn đi kèm rất khéo: chỉ nhờ anh ta nhớ lại cho đúng thôi.",
-      "Trên bàn phân xử, chồng hồ sơ mang về từ Phúc Thọ được mở ra: lệnh chi mang chữ ký Trần Khắc Tín, những biên nhận hoàn trả vẫn chạy đều cho chủ đã chết, giấy nợ và giấy chết của tuyến quan tài — toàn bộ là chứng cứ đoàn đã có từ trước. Tiểu Lan và Đỗ Thị Hạnh đối chiếu ngay trước mặt hai bên.",
+      "Trên bàn phân xử, chồng hồ sơ mang về từ Phúc Thọ được mở ra: lệnh chi mang chữ ký Trần Khắc Tín, những biên nhận hoàn trả vẫn chạy đều cho chủ đã chết, giấy nợ và giấy chết của tuyến quan tài. Tiểu Lan và Đỗ Thị Hạnh đối chiếu ngay trước mặt hai bên.",
       "Từng mục được đọc lên, đặt cạnh nhau: tên người ký trên giấy chi mua lời nói, ngày tháng, số tiền. Đặt cạnh lệnh chi cũ và biên nhận hoàn trả, chúng khớp ở đúng chỗ không thể là tình cờ — cùng hệ dấu, cùng cách ghi, cùng đường tiền. Đường tiền mua một lời nói ở chợ Long Hải chạy cùng hệ giấy với đường tiền nuôi người chết ở Phúc Thọ.",
-      "Phán quyết chỉ rộng bằng chứng cứ của nó. Vụ gạo và vải xử theo lời đã ghi đầu tiên của hai bên: khoản nào châu ghi rõ thì theo châu. Vụ mua nhân chứng không xử phạt ai tại chỗ. Toàn bộ — lời chứng hai lần, tờ giấy chi, kết quả đối chiếu — được ghi vào sổ Nhân Danh Đường, và tờ giấy chi bị giữ lại làm chứng cứ. Từ hôm nay, ở chợ này, lời nói có chỗ ở, và lời nói bị mua cũng có chỗ ở."
+      "Phán quyết chỉ rộng bằng chứng cứ của nó. Vụ gạo và vải xử theo lời đã ghi đầu tiên của hai bên: khoản nào châu ghi rõ thì theo châu. Vụ mua nhân chứng không xử phạt ai tại chỗ. Phần còn lại đặt cả lên bàn của Hạnh, tờ giấy chi bị giữ lại làm chứng cứ. Ghi chúng vào đâu là việc khép lại buổi phân xử: vào cuốn sổ mở — nơi tên nhân chứng và tên người ký phía Phúc Thọ nằm cạnh nhau cho cả chợ coi — hay vào hồ sơ niêm phong, nơi phần có tên người được khóa lại, sổ mở chỉ ghi phán quyết. Từ hôm nay, ở chợ này, lời nói có chỗ ở, và lời nói bị mua cũng có chỗ ở."
     ],
     "dialogue": [
       {
@@ -12390,11 +12370,11 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Tôi ghi kết quả vào sổ Nhân Danh Đường, đọc lại thành tiếng: giấy chi mua nhân chứng cùng hệ dấu, cùng cách ghi với lệnh chi và biên nhận hoàn trả của Phúc Thọ."
+        "text": "Tôi đọc lại kết quả đối chiếu thành tiếng: giấy chi mua nhân chứng cùng hệ dấu, cùng cách ghi với lệnh chi và biên nhận hoàn trả của Phúc Thọ."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Sổ ghi xong sẽ giữ ở đường. Ai cần đối chiếu lại, tới đường mà coi. Chứng cứ vào sổ này không đi lạc thêm tay nào nữa."
+        "text": "Sổ của đường ghi thế nào, giữ ở đâu, là việc tôi chịu trách nhiệm trước cả chợ này."
       },
       {
         "speaker": "Cao Minh",
@@ -12406,7 +12386,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Nhân chứng hỏi tôi tối nay ngủ ở đâu. Tôi đáp thật: chưa ai kịp tính. Sổ ghi xong phần giấy. Phần người — chưa ai được giao."
+        "text": "Nhân chứng hỏi tôi tối nay ngủ ở đâu. Tôi đáp thật: chưa ai kịp tính. Phần giấy đã xong. Phần người — chưa ai được giao."
       }
     ],
     "choices": [
@@ -17596,7 +17576,7 @@ export const VN_SCENES = Object.freeze({
           "delta": 1,
           "id": "bao_ho"
         },
-        "text": "Niêm lại toàn bộ số vỏ và sổ lô đang lưu hành, đổi dấu xác nhận ngay trong ngày — chặn đứng lô giả mới trước, rồi để các lô đã tráo tự lộ ra khi đối chiếu với dấu mới."
+        "text": "Niêm lại toàn bộ số vỏ và sổ lô đang lưu hành, đổi dấu xác nhận ngay trong ngày — và cho người đi truy thu từng gói của lô tráo ngay trong đêm: chặn hàng trước, vụ án tính sau."
       },
       {
         "effects": {
@@ -17730,7 +17710,7 @@ export const VN_SCENES = Object.freeze({
           "delta": 1,
           "id": "bao_ho"
         },
-        "text": "Treo danh sách dãy ghe cứu người ở sân trước của bến ngay hôm nay và cho người của môn đi cùng ghe trong các chuyến đêm sắp tới — ai muốn động vào phải động trước mặt mọi người."
+        "text": "Treo danh sách dãy ghe ở sân trước như lời ngài dặn, ghi cả lịch các chuyến cứu người sắp tới lên đó, và cho người của môn đi cùng các chuyến đêm — ai muốn động vào ghe phải động trước mặt mọi người."
       },
       {
         "effects": {
@@ -17738,7 +17718,7 @@ export const VN_SCENES = Object.freeze({
         },
         "flags": {
           "ky4BaHoeRefusedTheBoats": true,
-          "ky4BoatsUnlisted": true
+          "ky4ConvoyTripsUnescorted": true
         },
         "id": "let_his_refusal_stand_recorded",
         "next": "ky4_20_ban_lai_loi_song",
@@ -17746,7 +17726,7 @@ export const VN_SCENES = Object.freeze({
           "delta": 1,
           "id": "tu_quyet"
         },
-        "text": "Không treo gì, không kèm ai: chỉ giữ trang sổ của Lan làm chứng cứ niêm lại — lời từ chối này là việc của Bá Hòe, do chính hắn đứng tên; môn không biến nó thành bảng hiệu của mình."
+        "text": "Để lời từ chối của Bá Hòe đứng nguyên như hắn đã nói: danh sách ghe treo theo lệnh của ngài, nhưng lịch chuyến không ghi lên đó, người của môn không đi kèm — việc đêm của bến này không thành bảng hiệu của môn."
       }
     ],
     "companions": [],
@@ -17876,7 +17856,7 @@ export const VN_SCENES = Object.freeze({
         "text": "Để tuyến chạy nguyên vẹn, không một bàn tay nào của môn chạm vào: ghi lại giờ bán, vật hiệu, lịch chuyến đầu — cho cả mạng lưới mua tuyến tự lộ mặt theo từng chặng nó đi qua.",
         "nextIf": {
           "all": [
-            "ky4BoatsUnlisted"
+            "ky4ConvoyTripsUnescorted"
           ],
           "next": "ky4_dead_convoy_manifest"
         }
@@ -17962,6 +17942,10 @@ export const VN_SCENES = Object.freeze({
     "location": "Khúc sông phục kích, tuyến ghe tị nạn, Vũng Tàu — ngày thứ 39",
     "narration": [
       "Khúc sông phục kích vẫn còn dấu của trận giữ ghe mấy ngày trước: dây chăng đứt nằm trên bãi cạn, một chiếc ghe cướp mắc nghiêng chưa ai kéo về. Sáng ngày thứ 39, Võ Mười Rọ tiếp khách ngay trên ghe của hắn. Người tới mua không mua hàng, cũng không mua ghe: hắn mua một tuyến — tuyến ghe tị nạn chạy đêm qua các trạm, chở người rời khỏi nơi họ không còn ở được. Rọ trình bày tuyến của mình như người ta kê khai một tài sản: mấy chặng, bến nào nước cạn phải chuyển ghe, chỗ nào trạm không soi tới, một chuyến chở được bao nhiêu người. Ở đầu bến, Cao Minh ngồi ở quán nước từ trước khi ghe của người mua cập vào; hắn tới theo chuyến ghe rượu của bến này, và ở lại khi thấy Rọ tiếp khách lạ.",
+      {
+        "if": "ky4ConvoyTripsUnescorted",
+        "text": "Theo đúng phần đã giữ lại ở bến Phúc Thọ, các chuyến ghe cứu người sắp tới chạy không lịch treo, không người của môn đi kèm."
+      },
       "Rọ hỏi một câu nghề nghiệp trước khi nghe giá: người lên ghe ở đầu này thì xuống ở đâu, ai tiếp. Hắn hỏi để định giá, không phải để yên tâm. Người nhận tuyến đáp rõ, không giấu: đầu kia là trạm tiếp nhận của Giới Phòng; dân lên ghe sẽ được đưa về trạm, ghi danh sách, phân loại, bố trí nơi ở theo giấy của trạm. Một nhịp im lặng ngắn rơi xuống ghe. Rọ rót thêm chén rượu, nhìn mặt sông một lúc — hắn đã hiểu trọn mình đang sửa soạn bán người vào tay ai. Rồi hắn nói giá mới: gấp rưỡi con số người mua vừa đưa. Hiểu biết ấy không làm hắn rút lui; nó làm tuyến của hắn đắt hơn.",
       "Hến Cụt chống ghe cho tuyến này đã nhiều năm. Hắn đang buộc dây ở đầu bến, nghe được phần cuối, và chen vào ngay tại chỗ, trước mặt người mua, không chờ lúc riêng tư. Hắn nói bằng lý lẽ của nghề chở người: tuyến này mở ra để chở người chạy khỏi các trạm; người ta bước xuống ghe là tin vào mặt sông và vào tay chống; bán đầu kia cho trạm thì ghe của tuyến thành ghe bắt người hộ, và tên của những người đã chở sẽ dẫn trạm tới từng nhà. Hắn nói to đủ cho mấy người ghe khác trên bến cùng nghe. Rọ đáp bằng giọng của người giữ tuyến, lạnh và thực tế: tuyến thuộc về kẻ giữ được nó; ai không theo thì xuống bến.",
       "Người nhận tuyến liếc về phía quán nước ở đầu bến, nơi vị khách uống rượu đã ngồi từ đầu buổi, và hỏi Rọ một câu dò ý. Rọ đã tận mắt thấy khúc sông này đổi chiều trong trận giữ chín ghe; hắn biết rõ mình đang ngồi cách thứ gì mấy bước ghe. Hắn đáp bằng một sự thật nửa vời của người khôn: khách uống rượu, không phải việc của tuyến. Cao Minh nói đúng hai câu với Rọ, như người xem kịch bình phẩm một nước đi vừa đặt xuống. Hắn không cảnh cáo ai, không hứa hẹn gì với Hến Cụt. Ván cờ trong đầu hắn đã tự bày ra: một tuyến vừa bán xong sẽ tự chạy qua tay mọi mắt xích của mạng lưới mua người — ai nhận, ai trung chuyển, ai ký — những cái tên không moi ra được nếu chỉ bắt một mình Rọ trong buổi sáng nay.",
@@ -22828,7 +22812,7 @@ export const VN_SCENES = Object.freeze({
       "Hắn không cứu Mười Rọ. Không phải vì hắn không cứu được — mà vì Mười Rọ không nằm trong bất kỳ sự bảo vệ nào của hắn, và hắn tới sau, như một người đi ngang qua một vụ án đã khép. Hắn cũng không trừng phạt những kẻ vừa giết người để trả thù cho ai. Hắn đứng ở bãi đất còn nguyên dấu chân của buổi họp, nghe những người còn lại tự nói ra lý do của mình — nghe như một thứ thú tiêu khiển cay đắng mà hắn đã thấy ở mọi thế giới: người phàm, khi mất phần lợi, tự đổi giọng rất nhanh và rất thật.",
       {
         "if": "ky5BangWitnessesStay",
-        "text": "Trong nhóm người ở lại điểm hẹn có hai người đàn ông của bến Tam Giang — hai người đã làm chứng trong buổi sáng Hến Cụt bị giết và nhận ở lại giữ điểm này làm tai mắt cho phân đàn. Chiều nay họ đứng trong hàng người xin được ghi tên, như mọi người khác."
+        "text": "Trong nhóm người ở lại điểm hẹn có hai người đàn ông của bến Tam Giang — hai người đã làm chứng trong buổi sáng Hến Cụt bị giết và nhận ở lại giữ điểm này làm tai mắt cho phân đàn. Họ không xin vào ở trong phân đàn: điểm gác của họ ở ngoài, đêm nào họ cũng trở về đó. Điều họ xin chiều nay là một việc khác — tên của họ, vốn ghi kín trong sổ bảo vệ từ hôm làm chứng, nay được ghi công khai như mọi người, để bang không còn đường đòi lại."
       },
       "Bãi đất sau buổi việc còn nguyên hình của nó tới tận khi trời tối: một hàng ghe úp, mấy đống lưới chưa vá, và một khoảng đất giữa bãi mà không ai bước qua nữa. Người của bang tự phân việc cho nhau như một thói quen không cần trùm: hai người lo cho gia đình Hến ở tuyến trong, hai người giữ ghe, số còn lại ngồi lại bàn xem từ nay bang này — nếu còn gọi là bang — sẽ sống bằng nghề gì mà không phải bằng danh sách người."
     ],
@@ -26195,56 +26179,6 @@ export const VN_SCENES = Object.freeze({
     "stageId": "can_gio",
     "title": "Chiếc ghế đá và vò rượu"
   },
-  "vt_dead_last_knock": {
-    "backgroundId": "river-coffin-ship",
-    "choices": [
-      {
-        "id": "retry",
-        "retry": true,
-        "text": "Trở lại khoảnh khắc tay nàng đặt lên mép nắp cỗ"
-      },
-      {
-        "id": "to_debrief",
-        "next": "vt_dead_last_knock_debrief",
-        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
-        "toDebrief": true
-      }
-    ],
-    "companions": [],
-    "contentStatus": "approved",
-    "deadEnd": true,
-    "dialogue": [
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Cỗ thứ ba hụt nhịp rồi. Xé niêm đi. Ngay bây giờ — triện của ai, tôi chịu."
-      },
-      {
-        "speaker": "Cao Minh",
-        "text": "Đừng đếm nữa, Lan nhi. Hắn đi trong lúc chúng ta đối chiếu giấy tờ — đi rất khẽ, theo đúng cái nhịp đã nuôi hắn bao lâu nay, chỉ khác là nhịp ấy đã bị mang lên bờ."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi đã nghe tiếng gõ của hắn yếu nhất từ đầu buổi. Tôi biết cỗ nào cần mở trước. Vậy mà tôi để cho một buổi đối chiếu đứng xếp hàng trước một hơi thở. Ghi vào sổ đi, Hạnh — không, buổi này không có Hạnh. Tự tôi ghi: người này chết vì thứ tự."
-      },
-      {
-        "speaker": "Cao Minh",
-        "text": "Bổn tọa đứng ở phòng giấy, cách một mặt nước. Kiếm của bổn tọa tới đây nhanh hơn một ý nghĩ. Nhưng ý nghĩ ấy không tới — vì trong đầu bổn tọa lúc ấy cũng chỉ có giấy tờ. Sổ của ngươi cứ ghi thêm một dòng cho bổn tọa: có mặt, và không nghe thấy."
-      }
-    ],
-    "id": "vt_dead_last_knock",
-    "location": "Tàu quan tài, cửa sông Vũng Tàu — buổi sáng bị giữ lại",
-    "narration": [
-      "Con tàu được niêm phong đúng lệ. Dây niêm buộc qua các nắp cỗ, đầu dây đóng triện của đoàn; người gác nhịp được đưa lên bờ, ngồi trong phòng giấy của trạm, trả lời từng câu hỏi về giấy thông hành của mình — chuyến nào, dấu nào, ai đóng. Hắn trả lời trơn tru, như mọi người của tuyến vẫn trả lời. Chỉ có một việc hắn không ngừng được: chân phải của hắn vẫn dậm nhịp xuống sàn gỗ của phòng giấy, đều, rất đều, như một cái máy chưa ai tắt.",
-      "Trên tàu, tiếng gõ trong các cỗ quan tài đáp lại nhịp chân ấy một lúc lâu — qua hai lớp gỗ, qua mặt nước, yếu dần theo khoảng cách, như một dàn trống bị kéo ra xa khỏi tay trống. Không ai trên tàu ra lệnh cho sự yếu đi ấy. Nó chỉ đơn giản là vật lý của một thứ bị mang đi xa khỏi nguồn của nó.",
-      "Tiểu Lan là người nghe ra trước. Nàng đã áp tai xuống mặt boong từ lúc niêm phong xong, nghe từng cỗ một, theo đúng thứ tự nàng đã thuộc từ sáng. Tới cỗ thứ ba — cỗ có tiếng gõ yếu nhất từ đầu — nàng nghe thấy nhịp gõ của nó hụt một nhịp. Rồi hụt nữa. Rồi thưa hẳn, như một người chạy đuối sức trên một con dốc.",
-      "Nàng ra lệnh xé niêm phong. Triện chưa kịp khô hẳn đã bị bẻ. Nắp cỗ bật lên trên bản lề kêu cọt kẹt — và người đàn ông trong cỗ nhìn lên mặt trời bằng đôi mắt đã mở sẵn từ bao giờ. Ngực hắn còn phập phồng: hai nhịp nông, theo một nhịp không còn ai phát nữa, như thể thân thể hắn đang tự nhắc lại một bài học thuộc lòng mà thầy đã đi khỏi lớp. Rồi lồng ngực ấy nằm yên. Tay của Tiểu Lan đặt lên cổ hắn, đếm, đếm lại — và không còn gì để đếm.",
-      "Cao Minh từ phòng giấy của trạm sang tới boong tàu trong một bước. Hắn quỳ xuống cạnh cỗ quan tài, đặt hai ngón tay lên mạch của người chết — và rút tay về, không một tia kiếm khí, không một phép màu nào được gọi ra. Có những thứ đến chậm một hơi thở thì không còn là chậm nữa; nó là muộn, và muộn là một sự việc đã xong, không có nút nào bấm ngược được.",
-      "Ở phòng giấy, viên thư lại của trạm đóng triện xác nhận cuối cùng lên giấy thông hành của người gác và ghi, bằng nét chữ đẹp nhất của hắn: đối chiếu đúng lệ, giấy tờ hợp lệ, không thiếu một dấu nào. Hắn ghi đúng. Mọi người trong buổi sáng ấy đều làm đúng phần việc của mình: người niêm phong niêm phong chặt, người đối chiếu đối chiếu kỹ, người gác được thẩm vấn đầy đủ, triện đóng ngay ngắn. Chỉ có một việc không ai làm, vì nó không nằm trong phần việc của ai cả: mở một cái nắp ra sớm hơn một buổi sáng.",
-      "Tiểu Lan ngồi bên cỗ quan tài rất lâu. Sau này, khi người ta hỏi buổi sáng ấy sai ở đâu, nàng chỉ nói một câu: tiếng gõ cuối cùng của người ấy không được ai đáp lại — không phải vì người ta ác, mà vì tất cả đều đang bận làm cho đúng lệ."
-    ],
-    "stageId": "vung_tau",
-    "title": "Dead End · Tiếng gõ cuối cùng"
-  },
   "ky3_28_dead_witness_silenced": {
     "backgroundId": "ha-o-scripture-hall",
     "choices": [
@@ -26281,63 +26215,14 @@ export const VN_SCENES = Object.freeze({
     "location": "Chợ Long Hải — đêm ngày 22",
     "narration": [
       "Sổ Nhân Danh Đường mở ra ghi từ đầu buổi chiều, và theo đúng lệ của đường, ai cần đối chiếu đều được tới coi. Chợ Long Hải coi rất kỹ. Trước khi trời tối, cả chợ đã biết những điều cuốn sổ ấy giữ: có một tờ giấy chi mua lời nói, nó cùng hệ dấu với tiền của Phúc Thọ và Tài Phòng, và người bán hàng đứng gần hai sạp đã nhận tờ giấy ấy, đã đổi lời giữa buổi phân xử, rồi đã nói lại tất cả trước hạt châu.",
-      "Người bán hàng ấy ra khỏi đường lúc nắng còn chưa tắt. Anh ta hỏi Hạnh một câu — tối nay ngủ ở đâu cho yên — và nhận một câu trả lời thật: đường chưa kịp tính việc ấy. Anh ta gật đầu, như người ta gật đầu trước một tin thời tiết, rồi đi về phía chợ, hòa vào dòng người đang dọn sạp. Anh ta còn một việc phải làm trước khi tính chuyện ngủ: qua điểm hẹn cũ, nhận nốt phần tiền còn lại của tờ giấy chi — phần tiền sẽ làm vốn cho anh ta bỏ xứ ngay trong đêm. Anh ta biết rõ phía bên kia nguy hiểm. Anh ta vẫn đi, vì không có khoản tiền ấy, anh ta không còn đường nào khác để mà sống.",
+      "Người bán hàng ấy ra khỏi đường lúc nắng còn chưa tắt. Anh ta hỏi Hạnh một câu — tối nay ngủ ở đâu cho yên — và nhận một câu trả lời thật: đường chưa kịp tính việc ấy. Anh ta gật đầu, như người ta gật đầu trước một tin thời tiết, rồi đi về phía chợ, hòa vào dòng người đang dọn sạp. Anh ta còn một việc phải làm trước khi tính chuyện ngủ: qua điểm hẹn cũ, nhận nốt phần tiền còn lại của tờ giấy chi — phần tiền sẽ làm vốn cho anh ta bỏ xứ ngay trong đêm. Không ai trong đường biết điểm hẹn ấy; anh ta không khai ra, vì khai ra là thú nhận mình vẫn còn tính lấy tiền của phía đã mua mình. Anh ta biết rõ phía bên kia nguy hiểm. Anh ta vẫn đi, vì không có khoản tiền ấy, anh ta không còn đường nào khác để mà sống.",
       "Ở điểm hẹn, người môi giới không tới. Thay vào đó là hai người anh ta chưa gặp bao giờ, nói năng nhỏ nhẹ, mời anh ta xuống ghe để nói chuyện cho kín — ghe sẽ đưa anh ta ra khỏi vùng ngay trong đêm, họ nói vậy, khỏi cần quay lại chợ nữa. Anh ta bước xuống ghe. Đó là bước chân cuối cùng của anh ta mà có người nhìn thấy.",
-      "Hai ngày sau, người ta vớt được anh ta ở cửa rạch sau chợ. Trong áo của anh ta còn nguyên tờ giấy chi — phía nhà kia để anh ta giữ nó, như để nói một điều rất rõ cho những ai sẽ đọc cuốn sổ kia về sau: giấy không giết được ai, và giữ giấy cũng không cứu được ai; việc của tờ giấy chỉ là nằm trong một cuốn sổ, còn người cầm nó thì phải tự đi về nhà một mình trong đêm.",
+      "Hai ngày sau, người ta vớt được anh ta ở cửa rạch sau chợ. Trong áo của anh ta còn nguyên liên giấy của tờ chi — liên phía trả tiền phát cho người nhận, mà anh ta giữ như một tờ bảo đảm cho phần tiền còn thiếu. Phía nhà kia để anh ta giữ liên ấy, như để nói một điều rất rõ cho những ai sẽ đọc cuốn sổ kia về sau: giấy không giết được ai, và giữ giấy cũng không cứu được ai; việc của tờ giấy chỉ là nằm trong một cuốn sổ, còn người cầm nó thì phải tự đi về nhà một mình trong đêm.",
       "Đỗ Thị Hạnh ghi cái chết vào sổ theo đúng lệ, ngồi rất lâu trước trang giấy. Cuốn sổ đã làm tròn việc của nó: ghi đúng, ghi đủ, mở cho mọi người coi. Chỉ có một dòng cuốn sổ ấy không có, vì buổi chiều hôm ấy không ai nghĩ tới việc ghi nó trước: dòng giao việc giữ người đàn ông này qua đêm đầu tiên, sau khi anh ta đã nói hết những gì mình biết, trước mặt cả chợ.",
       "Ở chợ, từ hôm ấy, người ta vẫn tới đường đối chiếu sổ như cũ. Nhưng những người làm chứng tiềm năng của các vụ sau — những người đứng gần các sạp, nghe được những câu chuyện không phải của mình — bắt đầu học một bài học mà không ai trong đường muốn dạy: nói ra thì có sổ ghi, nhưng sổ không đi cùng người nói về tới nhà."
     ],
     "stageId": "long_hai",
     "title": "Dead End · Người làm chứng không về tới nhà"
-  },
-  "vt_dead_rescue_debt": {
-    "backgroundId": "coffin-wharf",
-    "choices": [
-      {
-        "id": "retry",
-        "retry": true,
-        "text": "Trở lại lần đầu tờ nợ được đặt lên bàn"
-      },
-      {
-        "id": "to_debrief",
-        "next": "vt_dead_rescue_debt_debrief",
-        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
-        "toDebrief": true
-      }
-    ],
-    "companions": [],
-    "contentStatus": "approved",
-    "deadEnd": true,
-    "dialogue": [
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Đọc lại tờ biên nhận ấy cho tôi nghe một lần nữa. Chậm thôi."
-      },
-      {
-        "speaker": "Cao Minh",
-        "text": "Bổn tọa đã đọc rồi. Giấy nói: người được đưa đi để đối chiếu nợ, có người của trạm chứng kiến, có triện. Mọi thứ đều có — trừ con người. Hắn ở trên ghe của chúng được nửa sông thì thân thể hắn nghỉ việc, theo đúng cách mà thân thể người của tuyến này vẫn nghỉ khi rời khỏi vòng chăm sóc quá một đêm. Chúng đặt hắn lại ở bến dưới và đi tiếp — việc của chúng với hắn đã xong ở chỗ hắn không còn nợ nữa."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Hai lần tôi cầm tờ nợ ấy trên tay. Lần đầu, tôi tiễn người ta ra cửa cho yên ổn. Lần sau, tôi mang vào gian sau đọc cho riêng người được cứu nghe. Không một lần nào tờ nợ ấy bị bóc ra giữa sân, trước mặt người bến. Cho nên trong sổ của tuyến, nó vẫn là một món nợ chưa từng bị ai từ chối."
-      },
-      {
-        "speaker": "Cao Minh",
-        "text": "Ngươi không giết hắn, Lan nhi. Người giết hắn là một tờ giấy không gặp phải một lời từ chối công khai nào trong suốt hai ngày nó đi từ tay này sang tay khác. Bổn tọa chỉ nói để ngươi nhớ cho đúng lần sau: có những tờ giấy phải bị giết ngay tại sân, trước mặt mọi người, ngay trong ngày nó tới."
-      }
-    ],
-    "id": "vt_dead_rescue_debt",
-    "location": "Bến quan tài, Vũng Tàu — hai ngày sau",
-    "narration": [
-      "Tờ nợ thứ hai không bao giờ tới. Thứ tới, vào buổi sáng thứ ba, là một đoàn người nhỏ của tuyến: một thư lại, hai người của trạm, và một tờ lệnh đưa người đi đối chiếu — đối tượng là người đàn ông vừa được cứu khỏi con tàu quan tài, món nợ cứu mạng của anh ta ghi rõ trên giấy, chưa từng bị từ chối ở bất kỳ sân nào, trước bất kỳ người bến nào.",
-      "Người của đoàn lúng túng. Tờ nợ này, trên giấy của tuyến, là một món nợ sạch: nó đã được giữ lại xem xét — tức là không bị bác tại chỗ; nó đã được đọc cho người nợ nghe — tức là người nợ đã biết; và không một lời từ chối công khai nào từng được ghi ở bến này. Trong hệ giấy của tuyến, một món nợ như thế là một món nợ đang chờ được thu, và cách thu rẻ nhất là thu bằng chính con người.",
-      "Anh ta đi theo họ không chống cự. Người của tuyến nói đúng lệ của chúng: chỉ là đối chiếu, có triện, có người chứng kiến, xong thì về. Anh ta còn ngoái lại nhìn gian lán sau — nơi tờ nợ từng được đọc cho anh ta nghe bằng giọng nhỏ, cẩn thận, như người ta đọc một tin xấu cho người bệnh nghe — rồi bước xuống ghe của trạm.",
-      "Chuyến ghe ấy đi được nửa sông. Thân thể của người đàn ông ấy đã sống bằng nhịp của kẻ khác từ rất lâu; rời khỏi vòng chăm sóc của bến — rời khỏi những bàn tay biết giữ nhịp cho anh ta bằng thuốc, bằng tiếng gọi, bằng sự có mặt đều đặn — nó chỉ cầm cự được tới giữa dòng. Anh ta không la, không vùng vẫy. Anh ta ngồi yên, hai tay đặt trên đùi, và nghỉ — như một ngọn đèn dầu hết dầu giữa một căn phòng không có ai.",
-      "Người của trạm làm đúng phần còn lại của lệ: họ ghé vào bến dưới, đặt anh ta xuống, lấy dấu tay của người giữ bến vào tờ biên nhận đã thi hành lệnh, rồi đi tiếp cho kịp giờ nước. Tờ biên nhận về tới bến quan tài vào chiều hôm sau, cùng với tin: người được đối chiếu đã mất trên ghe, thân thể đã được bến dưới lo liệu theo lệ của người vô thừa nhận.",
-      "Không ai trong buổi sáng ấy làm một việc ác nào có hình thù để mà chỉ mặt. Thư lại làm việc giấy. Người của trạm làm việc đưa người. Người giữ bến dưới làm việc chôn cất. Và ở đầu kia của con sông, hai ngày trước đó, một tờ giấy đã đi qua hai cái sân — một lần được tiễn ra cửa cho yên ổn, một lần được đọc nhỏ trong gian sau — mà không một lần nào bị xé ra giữa ánh sáng, trước mặt những người có thể làm chứng rằng nó đã bị từ chối."
-    ],
-    "stageId": "vung_tau",
-    "title": "Dead End · Tờ nợ đòi người"
   },
   "ky4_dead_unrecalled_medicine": {
     "backgroundId": "register-room",
@@ -26376,7 +26261,7 @@ export const VN_SCENES = Object.freeze({
     "narration": [
       "Buổi đối chiếu sổ trực dấu của Tài Phòng là một buổi làm việc mẫu mực. Ba tháng sổ được mở ra trước mặt người của môn, từng khoản đối chiếu với sổ lô, từng dấu trực đối chiếu với tay người đã đóng nó. Tới ngày thứ ba, đường rò đã lộ ra trọn vẹn: ai tráo nhãn, tráo ở khâu nào, tiền chạy qua tay ai. Vụ án, xét như một vụ án, đã xong — xong đẹp, xong chặt, không một mắt xích nào còn treo.",
       "Chỉ có một việc không nằm trong phòng sổ ấy: những gói thuốc còn lại của lô tráo nhãn. Dấu hiệu nhận biết lô giả đã được dán ở chợ Long Hải ngay trong ngày đầu — và từ giờ phút ấy, như Dương Thất Nương đã nói trước mặt cả phòng, những gói thuốc ấy không còn bán được ở chợ nhà nữa. Người giữ chúng làm điều duy nhất còn làm được: gói lại, chở đi trong đêm, bán chạy ra các chợ xa — rẻ, nhanh, và không hỏi người mua là ai.",
-      "Đêm thứ nhất, một ghe nhỏ chở mười mấy gói đi về hướng đông. Đêm thứ hai, số còn lại đi theo một ghe khác, xa hơn nữa. Không ai trong hai chuyến ghe ấy biết mình đang chở cái gì ngoài một thứ hàng phải bán cho xong trước khi tờ dấu hiệu kịp tới. Hàng đi bằng nước, tin đi bằng người — và trên vùng sông này, hàng luôn đi nhanh hơn tin một con sông.",
+      "Đêm thứ nhất, một ghe nhỏ chở mười mấy gói đi về hướng đông. Đêm thứ hai, số còn lại đi theo một ghe khác, xa hơn nữa. Không ai trong hai chuyến ghe ấy biết mình đang chở cái gì ngoài một thứ hàng phải bán cho xong trước khi tờ dấu hiệu kịp tới. Hàng đi bằng nước trong đêm. Còn việc truy thu — việc duy nhất có thể chạy đua với nó — chưa hề được ai ra lệnh: không phải tin đi chậm hơn hàng, mà là không có tin nào được gửi đi cả.",
       "Đêm thứ ba, ở một chợ xa mà tên của nó chỉ xuất hiện trong sổ của trạm thuốc với tư cách một điểm nhận tin, một bà mẹ mua một gói thuốc ấy cho đứa con đang sốt cao. Nàng mua bằng đúng giá của một gói thuốc thật, từ một người bán nàng chưa gặp bao giờ, ở một sạp chỉ dựng có một đêm. Đứa trẻ uống thuốc trước khi ngủ. Nó không tỉnh lại vào buổi sáng.",
       "Tờ dấu hiệu của Đan Đường tới chợ ấy vào sáng hôm sau, theo chuyến ghe đầu tiên của ngày — dán lên cột chợ, đọc to cho người bến nghe, đúng lệ, đúng chữ. Người mẹ đứng đọc nó hai lần. Rồi nàng gấp tờ giấy lại, rất ngay ngắn, và mang về nhà — không phải để kiện ai, vì người bán đã đi khỏi chợ từ trước khi trời sáng, mà để đặt cạnh gói thuốc còn thừa một nửa trong túi áo của đứa trẻ.",
       "Ở Long Hải, cuốn sổ đối chiếu được khép lại với một kết luận hoàn hảo về nguồn hàng. Không dòng nào trong kết luận ấy sai. Nó chỉ thiếu một trang — trang ghi rằng trong ba ngày nó được viết ra, ở một nơi cách đó một con sông, một gói thuốc chưa được thu hồi đã làm xong phần việc của nó."
@@ -26409,7 +26294,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Bổn tọa ở cách đó hai giờ sông, lo một đầu mối khác của cùng một mạng. Thần thức của bổn tọa nghe tiếng của con sâu và tiếng của kẻ mang nó — nó không nghe tiếng dao của người phàm chém nhau ở một khúc sông tối. Đêm ấy, trên khúc sông đó, không có con sâu nào cả. Chỉ có người, giấy đã bán, và một chiếc ghe không ai nhận ra."
+        "text": "Bổn tọa ở cách đó hai giờ sông — và bổn tọa đã chọn ở đó. Việc để tuyến chạy nguyên vẹn là để mạng lưới tự lộ mặt; bổn tọa tính rằng đầu mối ở cuối tuyến đáng hơn một chuyến ghe. Tính toán ấy là của bổn tọa. Người giữ ghe không có phần trong nó, mà phải trả thay nó."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -26419,11 +26304,11 @@ export const VN_SCENES = Object.freeze({
     "id": "ky4_dead_convoy_manifest",
     "location": "Khúc sông hẹp của tuyến tị nạn — đêm chuyến đầu tiên",
     "narration": [
-      "Tuyến tị nạn chạy chuyến đầu tiên vào đêm thứ hai sau khi việc bán tuyến được ghi nhận. Mọi thứ diễn ra đúng như cách nó đã được để cho diễn ra: không một bàn tay nào của môn chạm vào, không người của môn ngồi trên ghe, không một danh sách nào treo ở sân trước của bến nói cho vùng sông này biết những chiếc ghe ấy là ghe gì, chở ai, thuộc về ai. Các ghe chạy như mọi ghe chạy đêm — lặng, tối, và hoàn toàn vô danh.",
+      "Tuyến tị nạn chạy chuyến đầu tiên vào đêm thứ ba sau khi việc bán tuyến được ghi nhận — chuyến ấy do dãy ghe cứu người của Bá Hòe chạy, theo đúng tuyến vừa bị bán. Mọi thứ diễn ra đúng như cách nó đã được để cho diễn ra: không một bàn tay nào của môn chạm vào, không người của môn ngồi trên ghe, không một danh sách nào treo ở sân trước của bến nói cho vùng sông này biết những chiếc ghe ấy là ghe gì, chở ai, thuộc về ai. Các ghe chạy như mọi ghe chạy đêm — lặng, tối, và hoàn toàn vô danh.",
       "Phía mua tuyến đã có sẵn thứ chúng cần từ trước: bản đồ của tuyến, các chặng, các điểm nước cạn phải chậm lại. Thứ chúng không có — và không cần — là tên của những người trên ghe. Ở khúc sông hẹp nhất của chặng hai, nơi ghe nào cũng phải giảm tốc và lách qua bãi cạn từng chiếc một, chúng đợi sẵn với hai ghe ngang và một sợi dây chão căng sát mặt nước.",
       "Ghe đầu lách qua được trong lúc dây chưa căng hết. Ghe thứ hai vướng dây, tấp vào bờ cạn — và người của phía mua bước xuống nước, lên ghe, làm việc của chúng một cách có thứ tự: xem hàng, xem người, tìm thứ có giá. Chúng không tìm thấy hàng. Chúng tìm thấy người tị nạn co lại dưới mái lá, và một người giữ ghe trẻ đứng dậy ở mũi ghe với cây sào trong tay — cây sào mà cha anh ta đã dạy anh ta dùng để chống ghe, và cũng để chống bất kỳ ai bước lên ghe của mình không có lời mời.",
       "Anh ta chống được hai người đầu tiên. Người thứ ba không đánh nhau với anh ta. Người thứ ba làm một việc nhanh và lặng, như người ta vẫn làm ở các khúc sông tối khi một chiếc ghe không có tên bị giữ lại quá lâu và không một ai — ở bến trước, ở bến sau, hay trên chính chiếc ghe — có thể đứng ra nói một câu đơn giản: ghe này là ghe cứu người, người trên ghe này có tên, có nơi ghi, có người đang chờ tin của họ ở đầu kia của tuyến.",
-      "Người tị nạn trên ghe thứ hai sống sót cả. Ghe thứ ba quay lại kịp, người của bến ứng cứu kịp, phía mua rút vào rừng trước khi trời sáng — mạng lưới của chúng, đúng như kế hoạch, đã lộ thêm một chặng nữa qua chuyến đi này. Mọi mục tiêu của việc để tuyến chạy nguyên vẹn đều đạt. Chỉ có một người không về tới bến: người giữ ghe trẻ, nằm lại ở khúc sông hẹp, bên cạnh cây sào của mình, trong một chuyến đi mà không một cuốn sổ nào ghi tên anh ta ở vị trí người cầm sào — vì theo đúng lựa chọn đã được giữ lại trước đó, tên của người ngồi trên ghe Bá Hòe không phải thứ để chép ra."
+      "Người tị nạn trên ghe thứ hai sống sót cả. Ghe thứ ba quay lại kịp, người của bến ứng cứu kịp, phía mua rút vào rừng trước khi trời sáng — mạng lưới của chúng, đúng như kế hoạch, đã lộ thêm một chặng nữa qua chuyến đi này. Mọi mục tiêu của việc để tuyến chạy nguyên vẹn đều đạt. Chỉ có một người không về tới bến: người giữ ghe trẻ, nằm lại ở khúc sông hẹp, bên cạnh cây sào của mình, trong một chuyến đi mà không một cuốn sổ nào ghi tên anh ta ở vị trí người cầm sào — vì theo đúng phần đã giữ lại ở bến, chuyến đi ấy không có lịch treo ở đâu, không có người của môn đi cùng, và không một cuốn sổ nào ghi nó là chuyến của ai."
     ],
     "stageId": "vung_tau",
     "title": "Dead End · Ghe không có tên"
@@ -26453,7 +26338,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Bổn tọa cho họ ở lại làm tai mắt — đó là lệnh của bổn tọa, và họ đã làm tròn nó. Rồi phân đàn ghi tên họ vào một cuốn sổ không giữ nổi một bí mật qua ba ngày. Hai việc ấy cộng lại thành hai cái chết. Đừng ghi nó là việc của phe kia không thôi, Hạnh. Ghi đủ: một nửa là của bổn tọa."
+        "text": "Ở lại làm tai mắt là lựa chọn của chính họ — bổn tọa không ra lệnh ấy, và họ đã làm tròn nó theo cách của họ. Phần của bổn tọa nằm ở chỗ khác: khi họ xin ghi tên công khai, bổn tọa đã để việc ấy đi qua một cuốn sổ không giữ nổi một bí mật qua ba ngày. Đừng ghi nó là việc của phe kia không thôi, Hạnh. Ghi đủ: một nửa là của bổn tọa."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -26596,68 +26481,6 @@ export const VN_SCENES = Object.freeze({
     "stageId": "long_hai",
     "title": "Phòng Đối Sổ · Người được cứu không được hỏi"
   },
-  "vt_dead_last_knock_debrief": {
-    "backgroundId": "register-room",
-    "choices": [
-      {
-        "id": "retry",
-        "retry": true,
-        "text": "Trở lại khoảnh khắc tay nàng đặt lên mép nắp cỗ"
-      }
-    ],
-    "companions": [],
-    "contentStatus": "approved",
-    "debrief": true,
-    "debriefFor": "vt_dead_last_knock",
-    "dialogue": [
-      {
-        "speaker": "Bà Bảy",
-        "text": "Tôi không biết chữ, nhưng tôi biết tiếng gõ cửa. Người trong cỗ ấy gõ tới phút cuối — gõ yếu dần, như người gọi cửa một nhà đã khóa trái. Ở đầu này, ai cũng bận làm cho đúng. Tôi chỉ hỏi một câu của người nhà bếp: ai là người được giao việc nghe?"
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Dòng đã chọn: 'Giữ nguyên hiện trường: niêm phong cả tàu, đối chiếu giấy tờ của người gác nhịp với trạm bờ xong mới mở cỗ.' Dòng của trạm bờ, đóng triện cùng buổi sáng ấy: 'Đối chiếu đúng lệ, giấy tờ hợp lệ.' Hai dòng đều đúng. Không trang nào trong sổ có chỗ cho một hơi thở đến muộn."
-      }
-    ],
-    "id": "vt_dead_last_knock_debrief",
-    "location": "Phòng Đối Sổ — ngoài mạch truyện",
-    "narration": [
-      "Căn phòng này không nằm trong năm 1899. Trên bàn, ngoài hai cuốn sổ còn có một thứ Hạnh mang vào từ bến: một mẩu giấy niêm phong, triện còn nguyên."
-    ],
-    "stageId": "vung_tau",
-    "title": "Phòng Đối Sổ · Tiếng gõ cuối cùng"
-  },
-  "vt_dead_rescue_debt_debrief": {
-    "backgroundId": "register-room",
-    "choices": [
-      {
-        "id": "retry",
-        "retry": true,
-        "text": "Trở lại lần đầu tờ nợ được đặt lên bàn"
-      }
-    ],
-    "companions": [],
-    "contentStatus": "approved",
-    "debrief": true,
-    "debriefFor": "vt_dead_rescue_debt",
-    "dialogue": [
-      {
-        "speaker": "Bà Bảy",
-        "text": "Người đàn ông ấy vừa mới được cứu ra khỏi một cái hộp gỗ. Vậy mà tờ giấy cứu anh ta lại đi trước anh ta một bước, tới tận tay người ta, và lần này không ai cứu anh ta khỏi tờ giấy."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Hai dòng đã chọn: lần đầu, 'chỉ nói để xem lại và tiễn thư lại ra cửa yên ổn'; lần sau, 'mang tờ nợ vào gian sau đọc cho người được cứu nghe trước, sáng mai mới trả lời.' Trong sổ của tuyến, hai dòng ấy cộng lại thành một món nợ chưa từng bị từ chối. Sổ của tôi ghi thêm: không có buổi sáng mai nào trong hồ sơ của anh ta."
-      }
-    ],
-    "id": "vt_dead_rescue_debt_debrief",
-    "location": "Phòng Đối Sổ — ngoài mạch truyện",
-    "narration": [
-      "Căn phòng này không nằm trong năm 1899. Hạnh đặt lên bàn một tờ biên nhận có dấu tay của một người giữ bến xa lạ."
-    ],
-    "stageId": "vung_tau",
-    "title": "Phòng Đối Sổ · Tờ nợ đòi người"
-  },
   "ky3_28_dead_witness_debrief": {
     "backgroundId": "register-room",
     "choices": [
@@ -26705,7 +26528,7 @@ export const VN_SCENES = Object.freeze({
     "dialogue": [
       {
         "speaker": "Bà Bảy",
-        "text": "Tôi có cháu. Tôi biết một bà mẹ mua thuốc cho con đang sốt thì không đọc nhãn bằng mắt của người giữ kho — bà ta đọc bằng tai nghe tiếng con mình thở. Thuốc tới tay bà ta trước tin về thuốc một con sông."
+        "text": "Một bà mẹ mua thuốc cho con đang sốt thì không đọc nhãn bằng mắt của người giữ kho — bà ta đọc bằng tai nghe tiếng con mình thở."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
@@ -26740,7 +26563,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Hai dòng đã chọn: 'Không treo gì, không kèm ai: chỉ giữ trang sổ của Lan làm chứng cứ niêm lại' — và 'Để tuyến chạy nguyên vẹn, không một bàn tay nào của môn chạm vào.' Tôi đối chiếu: danh sách bán tuyến của phía kia thì đầy đủ giờ và chặng. Phần của mình, ở hai dòng người giữ ghe và giờ chạy, để trống — trống theo đúng quyết định đã ghi."
+        "text": "Hai dòng đã chọn: 'Để lời từ chối của Bá Hòe đứng nguyên: lịch chuyến không ghi lên danh sách, người của môn không đi kèm' — và 'Để tuyến chạy nguyên vẹn, không một bàn tay nào của môn chạm vào.' Tôi đối chiếu: danh sách bán tuyến của phía kia thì đầy đủ giờ và chặng. Phần của mình, ở hai dòng lịch chuyến và người đi kèm, để trống — trống theo đúng quyết định đã ghi."
       }
     ],
     "id": "ky4_dead_convoy_manifest_debrief",
@@ -26767,17 +26590,17 @@ export const VN_SCENES = Object.freeze({
     "dialogue": [
       {
         "speaker": "Bà Bảy",
-        "text": "Hai người ấy tôi gặp ở bến. Họ là người giữ lời: nhận việc gì, giữ việc ấy tới cùng. Một người như thế mà chết ở ngưỡng cửa nhà mình — chết vì tên mình nằm trong một cuốn sổ đi lạc — thì cái chết ấy không nằm trong phần việc họ đã nhận."
+        "text": "Họ là người giữ lời: nhận việc gì, giữ việc ấy tới cùng. Một người như thế mà chết ở ngưỡng cửa nhà mình — chết vì tên mình nằm trong một cuốn sổ đi lạc — thì cái chết ấy không nằm trong phần việc họ đã nhận."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Hai dòng đã chọn: 'Để họ ở lại điểm hẹn làm tai mắt cho phân đàn' — rồi 'Cho nhóm xin bảo vệ vào phân đàn ngay trong chiều, ghi tên công khai.' Đường đi của cuốn sổ sau đó: ba ngày, bốn bàn tay. Bàn tay thứ tư, tới nay, không có tên trong bất kỳ cuốn sổ nào."
+        "text": "Hai dòng đã chọn: 'Tôn trọng lựa chọn ở lại của hai người: ghi tên kín vào sổ bảo vệ' — rồi 'Cho nhóm xin bảo vệ vào phân đàn ngay trong chiều, ghi tên công khai.' Từ kín thành công khai là đường đi của hai cái tên ấy. Đường đi của cuốn sổ sau đó: ba ngày, bốn bàn tay. Bàn tay thứ tư không có tên trong bất kỳ cuốn sổ nào."
       }
     ],
     "id": "ky5_dead_two_witnesses_debrief",
     "location": "Phòng Đối Sổ — ngoài mạch truyện",
     "narration": [
-      "Căn phòng này không nằm trong năm 1899. Ngoài cửa sổ của nó không có sông, không có bến — chỉ có một khoảng tối trống."
+      "Căn phòng này không nằm trong năm 1899. Ngoài cửa sổ không có sông, không có bến — chỉ một khoảng tối trống."
     ],
     "stageId": "can_gio",
     "title": "Phòng Đối Sổ · Hai người giữ mắt"
