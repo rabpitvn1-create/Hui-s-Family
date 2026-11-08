@@ -272,7 +272,7 @@ export function initMissionInterface() {
   function sync(snapshot) {
     if (!snapshot || typeof snapshot !== "object") return;
     syncRoute(snapshot);
-    syncTarget(snapshot
+    syncTarget(snapshot);
     syncStage(snapshot);
     animateScene(String(snapshot?.scene?.id || `turn-${numberOr(snapshot?.turn)}`));
   }
