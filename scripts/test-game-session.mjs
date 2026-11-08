@@ -68,6 +68,31 @@ assert.deepEqual(validateVnScenes(VN_SCENES, VN_START_SCENE), []);
   assert.equal(reader.bridge.getSnapshot().scene.id, VN_START_SCENE);
   assert.equal(scroller.scrollTop, 0, "new campaign must start at top");
 }
+
+{
+  // G5: Phòng Đối Sổ — dead end có hai lối ra; đi qua debrief rồi
+  // retry phải khôi phục đúng checkpoint trước quyết định gây chết,
+  // và mọi dead end đều có đúng một debrief ghép đôi hai chiều.
+  for (const [id, scene] of Object.entries(VN_SCENES)) {
+    if (scene.deadEnd) {
+      const exits = (scene.choices || []).filter((c) => c.toDebrief);
+      assert.equal(exits.length, 1, id + ": dead end phải có đúng một lối vào Phòng Đối Sổ");
+      const target = VN_SCENES[exits[0].next];
+      assert.ok(target?.debrief && target.debriefFor === id, id + ": debrief phải ghép đôi hai chiều");
+    }
+    if (scene.debrief) assert.ok(VN_SCENES[scene.debriefFor]?.deadEnd, id + ": debriefFor phải trỏ về một dead end");
+  }
+  const reader = launch(new Map());
+  assert.equal(reader.bridge.applyScriptChoice(1), true); // strike -> lh_dead_blade
+  assert.equal(reader.bridge.getSnapshot().scene.id, "lh_dead_blade");
+  assert.equal(reader.bridge.applyScriptChoice(1), true); // to_debrief
+  const inDebrief = reader.bridge.getSnapshot();
+  assert.equal(inDebrief.scene.id, "lh_dead_blade_debrief");
+  assert.equal(inDebrief.vnCheckpointAvailable, true, "checkpoint phải sống qua chặng vào Phòng Đối Sổ");
+  assert.equal(reader.bridge.applyScriptChoice(0), true); // retry từ debrief
+  assert.equal(reader.bridge.getSnapshot().scene.id, VN_START_SCENE, "retry qua debrief phải về đúng cảnh trước quyết định gây chết");
+  assert.equal(reader.bridge.getSnapshot().vnCheckpointAvailable, false);
+}
 assert.equal(VN_SCENES.lh_prologue.contentStatus, "approved");
 // Nội dung chính thức đã vào (Muse, 2026-11-06): mọi scene gắn nhãn
 // "approved" tuyệt đối không được còn chữ placeholder kỹ thuật.

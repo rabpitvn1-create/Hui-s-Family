@@ -269,6 +269,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "text": "Trở lại trước khi kiếm rời vỏ",
         "retry": true
+      },
+      {
+        "id": "to_debrief",
+        "next": "lh_dead_blade_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "deadEnd": true
@@ -2658,6 +2664,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "text": "Trở lại khoảnh khắc trước khi kiếm khí rời tay",
         "retry": true
+      },
+      {
+        "id": "to_debrief",
+        "next": "lh_dead_host_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "deadEnd": true
@@ -4838,6 +4850,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "text": "Trở lại khoảnh khắc trước nhát kiếm vào neo xích",
         "retry": true
+      },
+      {
+        "id": "to_debrief",
+        "next": "lh_dead_order_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "deadEnd": true
@@ -5626,6 +5644,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "text": "Trở lại quyết định trước cổng biệt thự",
         "retry": true
+      },
+      {
+        "id": "to_debrief",
+        "next": "lh_dead_consent_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "deadEnd": true
@@ -26178,6 +26202,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "retry": true,
         "text": "Trở lại khoảnh khắc tay nàng đặt lên mép nắp cỗ"
+      },
+      {
+        "id": "to_debrief",
+        "next": "vt_dead_last_knock_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "companions": [],
@@ -26222,6 +26252,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "retry": true,
         "text": "Trở lại buổi phân xử, trước khi cuốn sổ được mở ra ghi"
+      },
+      {
+        "id": "to_debrief",
+        "next": "ky3_28_dead_witness_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "companions": [],
@@ -26261,6 +26297,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "retry": true,
         "text": "Trở lại lần đầu tờ nợ được đặt lên bàn"
+      },
+      {
+        "id": "to_debrief",
+        "next": "vt_dead_rescue_debt_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "companions": [],
@@ -26304,6 +26346,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "retry": true,
         "text": "Trở lại trạm thuốc, trước khi dấu hiệu của lô giả được dán lên"
+      },
+      {
+        "id": "to_debrief",
+        "next": "ky4_dead_unrecalled_medicine_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "companions": [],
@@ -26343,6 +26391,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "retry": true,
         "text": "Trở lại sân sau của bến, trước buổi treo danh sách"
+      },
+      {
+        "id": "to_debrief",
+        "next": "ky4_dead_convoy_manifest_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "companions": [],
@@ -26381,6 +26435,12 @@ export const VN_SCENES = Object.freeze({
         "id": "retry",
         "retry": true,
         "text": "Trở lại buổi chiều ghi tên ở sân phân đàn"
+      },
+      {
+        "id": "to_debrief",
+        "next": "ky5_dead_two_witnesses_debrief",
+        "text": "Vào Phòng Đối Sổ — nghe hai người giữ sổ đọc lại việc đã xảy ra",
+        "toDebrief": true
       }
     ],
     "companions": [],
@@ -26411,5 +26471,315 @@ export const VN_SCENES = Object.freeze({
     ],
     "stageId": "can_gio",
     "title": "Dead End · Hai người giữ mắt"
+  },
+  "lh_dead_blade_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại trước khi kiếm rời vỏ"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "lh_dead_blade",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Tôi chỉ biết một việc: trong sân lúc ấy có những người đang làm dở việc của mình. Có người đang bưng khay, có người đang quét sân. Một nhát kiếm đi qua, việc của họ không bao giờ xong nữa."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi chép lại nguyên văn dòng đã chọn: 'Một kiếm phá hết cả biệt thự để kết thúc tà khí.' Trong sổ của tôi, trang này có đủ mọi thứ — giờ, sân, người có mặt. Chỉ thiếu một dòng: không trang nào ghi họ đã thôi là người trước nhát kiếm ấy."
+      }
+    ],
+    "id": "lh_dead_blade_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Nó nằm sau trang cuối của mọi cuốn sổ: một ngọn đèn, một cái bàn dài, và hai cuốn sổ — một cuốn ghi người, một cuốn ghi giấy."
+    ],
+    "stageId": "long_hai",
+    "title": "Phòng Đối Sổ · Một kiếm quá dễ"
+  },
+  "lh_dead_host_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại khoảnh khắc trước khi kiếm khí rời tay"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "lh_dead_host",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Người gác ấy, tôi biết mặt. Anh ta bưng cơm lên hành lang mỗi tối, tay run run. Cái tay run ấy không phải tay của một kẻ ác — nó là tay của một người đang bị giữ như giữ một con rối. Cắt dây thì được. Cắt qua người thì người rơi xuống cùng với dây."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Dòng đã chọn ghi: 'Một kiếm xuyên qua người gác để cắt sợi lệnh tại gốc.' Sổ ghi nhận: sợi lệnh đứt thật. Ở trang của anh Sáu, không có dòng nào nói rằng anh ta từng được hỏi."
+      }
+    ],
+    "id": "lh_dead_host_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Đèn ở đây không tắt theo giờ của biệt thự. Trên bàn có hai cuốn sổ mở sẵn — một cuốn ghi người, một cuốn ghi giấy."
+    ],
+    "stageId": "long_hai",
+    "title": "Phòng Đối Sổ · Bàn tay nhuốm máu"
+  },
+  "lh_dead_order_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại khoảnh khắc trước nhát kiếm vào neo xích"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "lh_dead_order",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Ở cổng hôm ấy có một cô gái đang đứng bằng chính sức của mình — mệt, nhưng đứng. Thứ tự cắt sai một mắt, sức ấy bị giật đi như người ta giật một cái ghế dưới chân người đang ngồi. Tôi chỉ hiểu chuyện người ta ngã vì bị giật bất ngờ."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Chuỗi đã chọn có hai dòng. Dòng đầu: 'Cắt thẳng mắt xích gánh tải trước cho nhanh.' Dòng sau: 'Chém phăng cả neo chuông lẫn neo đèn cùng một lúc cho dứt điểm.' Ai cũng thấy tải sẽ giật ngược. Nó được ghi ở đó, trước khi nhát kiếm đầu tiên rời tay."
+      }
+    ],
+    "id": "lh_dead_order_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Nó là nơi những buổi sáng chưa kịp xảy ra được đọc lại chậm rãi: một người giữ ký ức về người, một người giữ ký ức về giấy."
+    ],
+    "stageId": "long_hai",
+    "title": "Phòng Đối Sổ · Cắt sai thứ tự"
+  },
+  "lh_dead_consent_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại quyết định trước cổng biệt thự"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "lh_dead_consent",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Cô gái ấy tỉnh. Tôi nói lại cho rõ: cô ấy tỉnh, nghe được, nói được. Người ta bế một người đang tỉnh đi qua cổng nhà mình mà không hỏi một câu — việc ấy ở quê tôi gọi bằng một cái tên khác hẳn chữ cứu."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Dòng đã chọn: 'Không cần hỏi nữa — bế nàng lên, đi thẳng qua cổng trong một nhịp thở.' Tôi đối chiếu với sổ: trước buổi sáng ấy, cô ấy đã nói rõ điều kiện của mình, có người nghe, có ghi. Trang này trong sổ của tôi có một khoảng trống đúng chỗ câu trả lời của cô ấy lẽ ra phải đứng."
+      }
+    ],
+    "id": "lh_dead_consent_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Bà Bảy rót một chén nước đặt ở chỗ trống trên bàn."
+    ],
+    "stageId": "long_hai",
+    "title": "Phòng Đối Sổ · Người được cứu không được hỏi"
+  },
+  "vt_dead_last_knock_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại khoảnh khắc tay nàng đặt lên mép nắp cỗ"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "vt_dead_last_knock",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Tôi không biết chữ, nhưng tôi biết tiếng gõ cửa. Người trong cỗ ấy gõ tới phút cuối — gõ yếu dần, như người gọi cửa một nhà đã khóa trái. Ở đầu này, ai cũng bận làm cho đúng. Tôi chỉ hỏi một câu của người nhà bếp: ai là người được giao việc nghe?"
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Dòng đã chọn: 'Giữ nguyên hiện trường: niêm phong cả tàu, đối chiếu giấy tờ của người gác nhịp với trạm bờ xong mới mở cỗ.' Dòng của trạm bờ, đóng triện cùng buổi sáng ấy: 'Đối chiếu đúng lệ, giấy tờ hợp lệ.' Hai dòng đều đúng. Không trang nào trong sổ có chỗ cho một hơi thở đến muộn."
+      }
+    ],
+    "id": "vt_dead_last_knock_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Trên bàn, ngoài hai cuốn sổ còn có một thứ Hạnh mang vào từ bến: một mẩu giấy niêm phong, triện còn nguyên."
+    ],
+    "stageId": "vung_tau",
+    "title": "Phòng Đối Sổ · Tiếng gõ cuối cùng"
+  },
+  "vt_dead_rescue_debt_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại lần đầu tờ nợ được đặt lên bàn"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "vt_dead_rescue_debt",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Người đàn ông ấy vừa mới được cứu ra khỏi một cái hộp gỗ. Vậy mà tờ giấy cứu anh ta lại đi trước anh ta một bước, tới tận tay người ta, và lần này không ai cứu anh ta khỏi tờ giấy."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Hai dòng đã chọn: lần đầu, 'chỉ nói để xem lại và tiễn thư lại ra cửa yên ổn'; lần sau, 'mang tờ nợ vào gian sau đọc cho người được cứu nghe trước, sáng mai mới trả lời.' Trong sổ của tuyến, hai dòng ấy cộng lại thành một món nợ chưa từng bị từ chối. Sổ của tôi ghi thêm: không có buổi sáng mai nào trong hồ sơ của anh ta."
+      }
+    ],
+    "id": "vt_dead_rescue_debt_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Hạnh đặt lên bàn một tờ biên nhận có dấu tay của một người giữ bến xa lạ."
+    ],
+    "stageId": "vung_tau",
+    "title": "Phòng Đối Sổ · Tờ nợ đòi người"
+  },
+  "ky3_28_dead_witness_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại buổi phân xử, trước khi cuốn sổ được mở ra ghi"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "ky3_28_dead_witness_silenced",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Anh bán hàng ấy không phải người tốt nguyên vẹn — anh ta đã cầm tiền để nói dối. Nhưng một người như vậy vẫn có một buổi tối để về nhà, vẫn có thể sợ, vẫn có thể đổi ý thêm một lần nữa."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Dòng đã chọn: 'Ghi phán quyết và vụ mua nhân chứng vào sổ Nhân Danh Đường.' Và dòng cuối cùng tôi nói trong buổi ấy, tôi chép lại đây nguyên văn: 'Phần giấy đã ghi xong. Phần người — chưa ai được giao.' Trang sau của cuốn sổ, chỗ lẽ ra ghi việc giao người giữ anh ta qua đêm đầu tiên, vẫn trắng."
+      }
+    ],
+    "id": "ky3_28_dead_witness_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Nó là phòng sau của mọi cuốn sổ: việc gì ghi xong mà người chưa xong, đều phải qua đây đọc lại một lần."
+    ],
+    "stageId": "long_hai",
+    "title": "Phòng Đối Sổ · Người làm chứng không về tới nhà"
+  },
+  "ky4_dead_unrecalled_medicine_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại trạm thuốc, trước khi dấu hiệu của lô giả được dán lên"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "ky4_dead_unrecalled_medicine",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Tôi có cháu. Tôi biết một bà mẹ mua thuốc cho con đang sốt thì không đọc nhãn bằng mắt của người giữ kho — bà ta đọc bằng tai nghe tiếng con mình thở. Thuốc tới tay bà ta trước tin về thuốc một con sông."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Hai dòng đã chọn: 'In dấu hiệu nhận biết lô giả, dán ở chợ và trạm thuốc ngay trong ngày' — rồi 'Buộc Tài Phòng mở sổ trực dấu ba tháng ra đối chiếu.' Giữa hai dòng ấy là một cảnh báo đã được nói thành tiếng: niêm và truy lô là việc tính bằng đêm, mở sổ là việc tính bằng ngày."
+      }
+    ],
+    "id": "ky4_dead_unrecalled_medicine_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Trên bàn có một tờ dấu hiệu nhận biết thuốc giả, gấp tư — bản gỡ xuống từ cột một cái chợ rất xa."
+    ],
+    "stageId": "long_hai",
+    "title": "Phòng Đối Sổ · Thuốc chưa kịp thu hồi"
+  },
+  "ky4_dead_convoy_manifest_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại sân sau của bến, trước buổi treo danh sách"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "ky4_dead_convoy_manifest",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Người giữ ghe ấy trẻ. Cây sào của anh ta là của cha anh ta để lại. Anh ta chết vì không ai biết chiếc ghe ấy là ghe của ai để mà nể một phần."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Hai dòng đã chọn: 'Không treo gì, không kèm ai: chỉ giữ trang sổ của Lan làm chứng cứ niêm lại' — và 'Để tuyến chạy nguyên vẹn, không một bàn tay nào của môn chạm vào.' Tôi đối chiếu: danh sách bán tuyến của phía kia thì đầy đủ giờ và chặng. Phần của mình, ở hai dòng người giữ ghe và giờ chạy, để trống — trống theo đúng quyết định đã ghi."
+      }
+    ],
+    "id": "ky4_dead_convoy_manifest_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Bà Bảy mang vào một khúc dây neo ướt, đặt cạnh cuốn sổ mà không nói gì."
+    ],
+    "stageId": "vung_tau",
+    "title": "Phòng Đối Sổ · Ghe không có tên"
+  },
+  "ky5_dead_two_witnesses_debrief": {
+    "backgroundId": "register-room",
+    "choices": [
+      {
+        "id": "retry",
+        "retry": true,
+        "text": "Trở lại buổi chiều ghi tên ở sân phân đàn"
+      }
+    ],
+    "companions": [],
+    "contentStatus": "approved",
+    "debrief": true,
+    "debriefFor": "ky5_dead_two_witnesses",
+    "dialogue": [
+      {
+        "speaker": "Bà Bảy",
+        "text": "Hai người ấy tôi gặp ở bến. Họ là người giữ lời: nhận việc gì, giữ việc ấy tới cùng. Một người như thế mà chết ở ngưỡng cửa nhà mình — chết vì tên mình nằm trong một cuốn sổ đi lạc — thì cái chết ấy không nằm trong phần việc họ đã nhận."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Hai dòng đã chọn: 'Để họ ở lại điểm hẹn làm tai mắt cho phân đàn' — rồi 'Cho nhóm xin bảo vệ vào phân đàn ngay trong chiều, ghi tên công khai.' Đường đi của cuốn sổ sau đó: ba ngày, bốn bàn tay. Bàn tay thứ tư, tới nay, không có tên trong bất kỳ cuốn sổ nào."
+      }
+    ],
+    "id": "ky5_dead_two_witnesses_debrief",
+    "location": "Phòng Đối Sổ — ngoài mạch truyện",
+    "narration": [
+      "Căn phòng này không nằm trong năm 1899. Ngoài cửa sổ của nó không có sông, không có bến — chỉ có một khoảng tối trống."
+    ],
+    "stageId": "can_gio",
+    "title": "Phòng Đối Sổ · Hai người giữ mắt"
   }
 });

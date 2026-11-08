@@ -82,6 +82,14 @@ export function validateVnScenes(scenes, startId) {
       if (!Array.isArray(scene.choices) || scene.choices.length !== 1 || !scene.choices[0]?.retry)
         errors.push(key + ": debrief scene needs exactly one retry choice");
     }
+    // Ghép đôi Phòng Đối Sổ: debrief khai debriefFor trỏ về dead end;
+    // dead end có tối đa một lựa chọn toDebrief trỏ đúng cảnh debrief
+    // đã ghép đôi với nó. Kiểm tra hai chiều khi có khai báo.
+    if (scene?.debrief && scene.debriefFor !== undefined
+      && (!own(scenes, scene.debriefFor) || !scenes[scene.debriefFor]?.deadEnd))
+      errors.push(key + ": debriefFor must name a dead end scene");
+    if (scene?.deadEnd && (scene.choices || []).filter((c) => c.toDebrief).length > 1)
+      errors.push(key + ": dead end may have at most one toDebrief choice");
     if (scene?.link) {
       if (!VN_LINK_IDS.includes(scene.link.id) || !VN_LINK_PHASES.includes(scene.link.phase))
         errors.push(key + ": invalid link milestone");
@@ -92,6 +100,9 @@ export function validateVnScenes(scenes, startId) {
         errors.push(key + ": choice needs id/text");
       if (!choice.retry && !own(scenes,choice.next)) errors.push(key + ": unknown next scene");
       if (choice.retry && !scene.deadEnd && !scene.debrief) errors.push(key + ": retry outside dead end");
+      if (choice.toDebrief && (!scene.deadEnd || !own(scenes, choice.next)
+        || !scenes[choice.next]?.debrief || scenes[choice.next]?.debriefFor !== key))
+        errors.push(key + ": toDebrief must target the paired debrief scene");
       if (choice.nextIf !== undefined) {
         const gate = choice.nextIf;
         const nameList = (v) => Array.isArray(v) && v.every((x) => typeof x === "string" && x);
