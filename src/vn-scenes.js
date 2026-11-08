@@ -20045,12 +20045,24 @@ export const VN_SCENES = Object.freeze({
           "delta": 1,
           "id": "tu_quyet"
         },
-        "text": "Trước khi rời bến, treo bảng tên đã trả lại ngay cổng kho cho cả bến đọc: người sống lấy lại tên công khai, không đợi giấy của phủ đường."
+        "text": "Trước khi rời bến, treo bảng tên đã trả lại ngay cổng kho — chỉ tên của người đã gật đầu cho treo — để cả bến đọc: người sống lấy lại tên công khai, không đợi giấy của phủ đường."
       }
     ],
     "companions": [],
     "contentStatus": "approved",
     "dialogue": [
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Tôi đọc lại dòng sổ cho cả bến nghe: Trương Bá Hòe, chết ngày 45 vì giữ nhân chứng và chứng cứ. Người ra đòn, cô chủ tôi tận mắt thấy."
+      },
+      {
+        "speaker": "Tạ Văn Độ",
+        "text": "Phu bến đứng yên trong vòng. Ai có lời thì nói ở sân này, trước sổ này."
+      },
+      {
+        "speaker": "Người đàn bà giữ kho",
+        "text": "Thưa cô, tôi tự đòi quay lại để nói phần của tôi. Nhưng nói trước: lời khai của tôi đọc ở đây được; tên tôi thì không đọc to, không lên bảng — ghi trong sổ kín của cô là đủ. Phần của tôi tôi nói; không ai được nhân đó mở hết danh sách kín ra."
+      },
       {
         "speaker": "Cai Biện",
         "text": "Tôi tới bến của tôi. Tay chân làm bậy thì chúng chịu; tôi không ra lệnh giết phu của bến này."
@@ -20061,19 +20073,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cai Biện",
-        "text": "Các anh đứng vòng vòng như thế là muốn làm loạn sao? Bến này mười mấy năm nay ai giữ cho ghe đi được?"
-      },
-      {
-        "speaker": "Cai Biện",
         "text": "Cô Lan, cô hiểu giấy tờ. Sổ này đọc bừa giữa sân, bến loạn, người chết thêm. Giao sổ cho tôi là yên."
-      },
-      {
-        "speaker": "Tạ Văn Độ",
-        "text": "Tôi đọc lại dòng sổ cho cả bến nghe: Trương Bá Hòe, chết ngày 45 vì giữ nhân chứng và chứng cứ. Người ra đòn, cô chủ tôi tận mắt thấy."
-      },
-      {
-        "speaker": "Tạ Văn Độ",
-        "text": "Phu bến đứng yên trong vòng. Ai có lời thì nói ở sân này, trước sổ này."
       },
       {
         "speaker": "Phu bến già",
@@ -20085,7 +20085,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Đây là nửa tờ cùi giấu trong quả cân và sợi dây nút ghi số rương, số ghe. Rương mở theo số ấy có nửa tờ cùi còn lại và bản mảnh sổ."
+        "text": "Đây là nửa tờ cùi giấu trong quả cân và sợi dây nút ghi số rương, số ghe."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -20105,15 +20105,11 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cai Biện",
-        "text": "Niêm phong rương lại ngay. Ai đọc thêm một chữ là tự chịu. Sổ này chỉ mở khi có người của phủ đường."
+        "text": "Niêm phong rương lại ngay. Sổ này chỉ mở khi có người của phủ đường."
       },
       {
         "speaker": "Cai Biện",
         "text": "Người đâu, xô cái bàn cân này ra! Giật rương lại cho tôi! Bến này là bến của tôi!"
-      },
-      {
-        "speaker": "Cai Biện",
-        "text": "Buông ra! Đồ ăn cơm bến này mà trở mặt! Tôi nuôi các anh mười mấy năm!"
       },
       {
         "speaker": "Cai Biện",
@@ -20124,7 +20120,7 @@ export const VN_SCENES = Object.freeze({
         "text": "Tên tôi là Trần Văn Lực. Ba năm nay tôi chết trên giấy; vợ tôi lĩnh tiền quan tài mà không được khóc chồng."
       },
       {
-        "speaker": "Phu bến mất tên",
+        "speaker": "Trần Văn Lực",
         "text": "Đòn gánh này là của tôi. Không ai sai tôi cả. Ông ghi tôi chết ba năm; chiều nay ông giết người giữ sổ."
       },
       {
@@ -20157,7 +20153,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Tạ Văn Độ",
-        "text": "Phu ở xa nghe cho rõ: hàng rương bên kho trong, không ai được tới gần. Ai qua sân thì đi vòng mé cầu cân."
+        "text": "Phu ở xa nghe cho rõ: hàng rương bên kho trong không ai được tới gần; ai qua sân thì đi vòng mé cầu cân."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -20172,23 +20168,26 @@ export const VN_SCENES = Object.freeze({
         "text": "Thưa cô, tôi điểm chỉ. Người đầu tiên trong danh sách là phu ghe chuyến đêm năm ấy; mai tôi dẫn người của cô tới nhà."
       },
       {
-        "speaker": "Cao Minh",
-        "text": "Một tờ giấy rách làm đôi mà nuôi được cả một bến sợ hãi mấy năm. Giấy của các ngươi cũng biết cắn người đấy, bổn tọa coi như được mở mắt."
-      },
-      {
         "speaker": "Tạ Văn Độ",
         "text": "Tên vừa viết lại vào sổ bến, tôi đọc cho cả bến nghe: Trần Văn Lực. Từ đêm nay, sổ này ghi người sống là người sống."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Tên của ai, người ấy tự định phần nào đọc to, phần nào giữ kín. Lệ ấy... bổn tọa nhớ rồi."
       }
     ],
     "id": "ky4_35_ben_khong_nguoi_chet",
     "location": "Bến quan tài, Phúc Thọ — sẩm tối ngày 45",
     "narration": [
-      "Sẩm tối ngày 45, sân kho bến quan tài đông khác thường. Phu bến không giải tán sau vụ giết người buổi chiều: họ đứng thành vòng quanh sân, đòn gánh dựng bên chân. Ghe liên lạc quay đầu lại bến, mang theo người đàn bà giữ kho: bà tự đòi quay lại, nói lời khai của bà phải nói ở bến này, trước mặt phu bến, mới có sức nặng. Tạ Văn Độ giữ vòng người, đọc lại dòng Lan vừa ghi.",
-      "Cai Biện tới cùng người của hắn, đi thẳng vào sân như chủ bến kiểm bến của mình. Hắn chối việc ra lệnh giết Bá Hòe: tay chân làm bậy thì tay chân chịu. Nhưng hắn tới không phải để phân trần: hắn đòi thu lại toàn bộ sổ kho và các rương của chuyến ghe chở mảnh sổ thứ hai, viện cớ sổ có người chết thì cai bến phải giữ để điều tra. Vòng người nghe tới đó khép chặt thêm.",
-      "Lan cho mở kho sổ của bến ngay trước mặt cả bến. Sau cái chết của Bá Hòe, việc đối chiếu công khai đã thành điều không ai còn hoãn được. Nàng đặt lên bàn cân lần lượt: nửa tờ cùi lấy từ quả cân, sợi dây nút thắt theo lệ bến, rồi cho mở chiếc rương của chuyến ghe theo đúng số nút dây chỉ. Trong rương, dưới lớp giấy dầu, nằm nửa tờ cùi còn lại và bản mảnh Sổ 2.",
-      "Cai Biện ra lệnh xô bàn cân, giật lấy rương. Phu bến không còn nghe lệnh ấy nữa. Trong lúc xô đẩy, một phu bến bước ra khỏi vòng người: tên hắn — Trần Văn Lực — nằm ngay trong mảnh Sổ 2 — người đã chết trên giấy ba năm nay, vợ hắn hai lần lĩnh tiền quan tài mà không được khóc chồng. Hắn ra đòn bằng đòn gánh tre, một đòn thẳng trong lúc giằng co, trúng thái dương Cai Biện khi Cai Biện đang giật lấy bản mảnh sổ. Cai Biện ngã xuống sàn kho, không dậy nữa.",
-      "Máu, tiếng người và bản mảnh sổ cùng động vào nhau, và mạng lưới của tuyến này thức dậy dọc gầm sàn kho, trong thân các rương quan tài chờ chuyến: những sợi mảnh như tơ ướt bò theo khe gỗ về phía người sống gần nhất, gỗ kêu răng rắc, hơi lạnh tràn ra. Cao Minh đi dọc hàng rương, ấn từng sợi trở lại vào thân gỗ, khóa chúng trong các rương rỗng: chứa lại, không đốt, không diệt. Diệt cả ổ ở bến này là cắt luôn phần mạng đang thay Lan điều phối sự sống.",
-      "Sân kho lặng hẳn. Lan hoàn tất nghiệm thu trước nhân chứng: người đàn bà giữ kho, Tạ Văn Độ và phu bến già cùng đứng bên bàn cân. Hai nửa tờ cùi khớp vết rách, khớp nửa dấu mộc Tài Phòng; số nút dây khớp số rương; bảng kê khớp trí nhớ nhân chứng ở ba tên đầu, ba tên giữa, ba tên cuối. Nàng ghi dòng nghiệm thu vào sổ, ký tên mình, hai nhân chứng điểm chỉ bên cạnh. Đêm xuống, phu bến tự chia nhau giữ kho và hàng rương đã phong tỏa."
+      "Sẩm tối ngày 45, sân kho bến quan tài đông khác thường. Ở cầu cân, đòn gánh và túi đồ nghề của Trương Bá Hòe còn để nguyên chỗ hắn ngã xuống — không ai mang trả về nhà hắn, vì nhà ấy không còn ai để nhận. Phu bến không giải tán sau vụ giết người buổi chiều: họ đứng thành vòng quanh sân. Ghe liên lạc quay đầu lại bến, mang theo người đàn bà giữ kho: bà tự đòi quay lại, nói lời khai của bà phải nói ở bến này, trước mặt phu bến, mới có sức nặng. Tạ Văn Độ giữ vòng người, đọc lại dòng Lan vừa ghi.",
+      "Cai Biện tới cùng người của hắn, đi thẳng vào sân như chủ bến kiểm bến của mình. Hắn đòi thu lại sổ kho và các rương của chuyến chở mảnh sổ thứ hai, viện cớ sổ có người chết thì cai bến phải giữ để điều tra. Vòng người nghe tới đó khép chặt thêm.",
+      "Lan cho mở kho sổ ngay trước mặt cả bến. Nàng đặt lên bàn cân: nửa tờ cùi lấy từ quả cân, sợi dây nút, rồi cho mở chiếc rương của chuyến ghe theo đúng số nút dây chỉ. Trong rương, dưới lớp giấy dầu, nằm nửa tờ cùi còn lại và bản mảnh Sổ 2.",
+      "Cai Biện ra lệnh xô bàn cân, giật lấy rương. Phu bến không còn nghe lệnh ấy nữa. Trong lúc xô đẩy, một phu bến bước ra: tên hắn — Trần Văn Lực — nằm ngay trong mảnh Sổ 2, người đã chết trên giấy ba năm nay. Hắn ra đòn bằng đòn gánh tre, một đòn thẳng trong lúc giằng co, trúng thái dương Cai Biện khi Cai Biện đang giật lấy bản mảnh sổ. Cai Biện ngã xuống sàn kho, không dậy nữa.",
+      "Không ai reo, không ai vỗ tay. Trần Văn Lực vẫn đứng nguyên chỗ ấy, hai tay còn nắm đòn gánh, nhìn xuống người vừa ngã — rồi hắn từ từ hạ đòn gánh xuống, dựng bên chân như mọi phu bến khác trong vòng. Sân kho lặng đi.",
+      "Máu và tiếng người động vào bản mảnh sổ; mạng lưới của tuyến này thức dậy dọc gầm sàn kho, trong thân các rương chờ chuyến: những sợi mảnh như tơ ướt bò theo khe gỗ về phía người sống gần nhất, gỗ kêu răng rắc. Cao Minh đi dọc hàng rương, ấn từng sợi trở lại vào thân gỗ, khóa chúng trong các rương rỗng: chứa lại, không đốt, không diệt — diệt cả ổ ở bến này là cắt luôn phần mạng đang thay Lan điều phối sự sống.",
+      "Lan hoàn tất nghiệm thu trước nhân chứng bên bàn cân: hai nửa tờ cùi khớp vết rách, khớp nửa dấu mộc Tài Phòng; số nút dây khớp số rương; bảng kê khớp trí nhớ nhân chứng ở đầu, giữa và cuối bảng. Nàng ghi dòng nghiệm thu vào sổ, ký tên mình, hai nhân chứng điểm chỉ bên cạnh.",
+      "Nghiệm thu xong, người giữ kho lấy từ đáy rương ra một tờ cước của một kiện hàng đồng — giấy của một chuyến khác, có số kiện, số ghe, không kèm trang sổ nào. Tiểu Lan ghi tờ cước vào sổ của mình như một dấu dẫn còn chờ: nó chỉ nói kiện đồng ấy đã qua tuyến này; trong kiện là gì, nàng chưa mở, chưa kết luận một chữ nào.",
+      "Đêm xuống, phu bến tự chia nhau giữ kho và hàng rương đã phong tỏa. Ở cửa kho, một phu trẻ buộc lại sợi dây niêm rương, đến nút cuối lại đảo thứ tự; người giữ kho không làm thay, chỉ nói lại thứ tự cho hắn tháo ra buộc lại từ đầu. Lần thứ hai, dây nút đúng lệ."
     ],
     "stageId": "vung_tau",
     "title": "Bến không người chết"
