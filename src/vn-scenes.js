@@ -20368,8 +20368,9 @@ export const VN_SCENES = Object.freeze({
       "Võ Văn Đực đứng ở mũi ghe đầu. Hắn không nhìn bản đồ; hắn đọc cọc tiêu, vệt bùn và màu nước như đọc chữ, cho ghe sau nối đuôi theo hiệu tay, lách qua bãi cạn mà người ngoài nhìn đâu cũng thấy là mặt sông phẳng. Ghe cập bãi bằng cách ủi mũi lên bùn; người xuống ghe phải xắn quần lội mấy bước mới tới đất cứng. Hành lý và rương hồ sơ được chuyền tay nhau lên bãi.",
       "Việc đầu tiên trên đất mới không phải dựng nhà. Lan mở danh sách người cần bảo vệ trên nắp rương: tên từ bến Phúc Thọ — gia đình nhân chứng, những phu bến có tên trong mảnh Sổ 2 — tên các làng dọc tuyến ghe, và tên những người của phân đàn phải đón trong ba ngày tới. Đỗ Thị Hạnh đối chiếu bản sao với bản gốc, chia danh sách thành ba bó theo tuyến đón. Một cái tên bị chép lệch họ được Hạnh khoanh lại ngay: tên sai một chữ là người mất dấu, bài học ấy cả đoàn đã học bằng giá đắt ở tuyến quan tài.",
       "Cao Minh lên bãi bồi sau cùng. Hắn nhìn khoảng đất trống đúng một lượt, từ mé nước tới bìa rừng, rồi phất tay một cái. Nền đất nén xuống thành sân phẳng; cọc gỗ tự đóng thành hàng sâu vào bùn; sàn nhà sàn dựng lên cao hơn mức nước lớn; kho chứa, chòi gác, một dãy lán ở và bờ kè ghe đứng dậy trong một nhịp, mắt trận nền của phân đàn chạy dưới đất như một tiếng thở dài của bùn. Không tiếng nổ, không ai kịp đếm. Ghe trên sông chao một cái vì sóng đất chứ không phải sóng nước. Hắn phủi tay như người vừa dọn xong một cái bàn.",
-      "Chưa hết buổi sáng, phân đàn đã có đủ việc của một cái làng. Ai ngủ lán nào, bếp nhóm ở đâu để khói không ám vào kho, ghe nào đậu trong, ghe nào đậu ngoài, nước ngọt chia theo đầu người hay theo ghe — việc nào cũng cần một người quyết và một người làm. Đực chia bến ghe và lịch nước; Hạnh treo danh sách lán ở lên cột kho. Tống Nguyên Phúc xuất hiện với xấp hồ sơ chuyển đàn, đề xuất mọi danh sách của phân đàn nên sao thêm một bộ về phòng giấy của hắn. Đề xuất nghe hợp lý, được ghi nhận, chưa ai quyết.",
-      "Chiều xuống, mấy gia đình chài lưới Cần Giờ chèo ghe tới bìa sân. Họ không vào hẳn, chỉ đậu ghe ở mé ngoài và hỏi điều kiện qua lão ngư lớn tuổi nhất: ở nhờ thì phải đóng gì, học pháp có phải bỏ nghề chài không, người chết ở đây có được ghi tên như ở Long Hải không. Tối đến, bếp đầu tiên của phân đàn nhóm lửa; tên phân đàn được viết vào đầu cuốn sổ mới của Nhân Danh. Trong số rương hồ sơ chuyển đàn vừa dỡ xuống sân có một rương hồ sơ sao chép do Ký Lương phụ trách niêm từ trước. Đực đi một vòng cuối, buộc lại dây ghe cho đêm nước lớn."
+      "Chưa hết buổi sáng, phân đàn đã có đủ việc của một cái làng. Ai ngủ lán nào, bếp nhóm ở đâu để khói không ám vào kho, ghe nào đậu trong, ghe nào đậu ngoài, nước ngọt chia theo đầu người hay theo ghe — việc nào cũng cần một người quyết và một người làm. Đực chia bến ghe và lịch nước; Hạnh treo danh sách lán ở lên cột kho. Tống Nguyên Phúc xuất hiện với xấp hồ sơ chuyển đàn, đề xuất mọi danh sách của phân đàn nên sao thêm một bộ về phòng giấy của hắn. Đề xuất được ghi nhận, chưa ai quyết.",
+      "Chiều xuống, mấy gia đình chài lưới Cần Giờ chèo ghe tới bìa sân. Họ không vào hẳn, chỉ đậu ghe ở mé ngoài và hỏi điều kiện qua lão ngư lớn tuổi nhất: ở nhờ thì phải đóng gì, học pháp có phải bỏ nghề chài không, người chết ở đây có được ghi tên như ở Long Hải không. Tối đến, bếp đầu tiên của phân đàn nhóm lửa; tên phân đàn được viết vào đầu cuốn sổ mới của Nhân Danh. Trong số rương hồ sơ chuyển đàn vừa dỡ xuống sân có một rương hồ sơ sao chép do Ký Lương phụ trách niêm từ trước. Đực đi một vòng cuối, buộc lại dây ghe cho đêm nước lớn.",
+      "Trong nhóm người bệnh đón về hôm ấy có Bùi Thị Lành. Chị không chịu nằm nghỉ ở lán một như người bệnh; chị xin việc nhỏ: xách nước, châm dầu, và giữ cây đèn ở bến trong — cây đèn để thấp, chao khép một nửa, chỉ đủ sáng cho người nhà thấy mặt bến. Có một lần, tay chị đưa cây đèn lên cao theo một nhịp quen; chị khựng lại, hạ đèn xuống ngang hông, đứng yên cho nhịp ấy qua. Chị không nói mình mệt."
     ],
     "stageId": "can_gio",
     "title": "Ghe vào Tam Giang"
@@ -20852,12 +20853,13 @@ export const VN_SCENES = Object.freeze({
     "id": "ky4_39_ban_hoa_uoc_phuc_tho",
     "location": "Cửa sông Cần Giờ, Tam Giang — ngày 47",
     "narration": [
-      "Tối ngày 47, một ghe lớn neo giữa cửa sông Cần Giờ làm nơi ký kết: đất trung lập, không thuộc bến nào. Phan Tường đón khách ở mũi ghe như chủ nhà, giọng trơn tru. Phía Pháp lên ghe trước: Lucien Vauclerc cùng một sĩ quan ghi chép. Phía Hứa lên sau: Hứa Tế Nguyên cùng người giữ cặp giấy của Tài Phòng. Và ở bàn giữa, Cao Minh đã ngồi sẵn với chén rượu, một vị khách không ai mời mà cũng không ai dám hỏi vì sao có mặt.",
-      "Hòa ước được đọc thành tiếng từng điều qua miệng Phan Tường. Phía Pháp công nhận trật tự bến bãi Phúc Thọ do Hứa Gia bảo đảm, cấp giấy thông hành cho ghe Hứa trên tuyến cũ. Hứa Gia cam kết giữ tuyến quan tài cho sạch, không còn ghe lậu qua trạm, và chia phần hoa hồng bến cho trạm. Hai bên đều được thứ mình cần trên giấy: phía Pháp được mặt trật tự, nhà họ Hứa được đường sống cho ghe sau khi tuyến quan tài đã mất.",
-      "Phần phụ lục không đọc to mà chuyền tay quanh bàn. Khi cần giữ trật tự ở bến và dọc tuyến ghe, hai phía dùng một lực lượng không mặc quân phục, không cầm giấy của Hứa Gia: tàn dư Bách Trảo, nửa Hắc Khăn đã tách ra từ ngày khăn đen tháo lệ mà không theo Bảy Lược nhập môn, và người của Thủy Xà trên tuyến sông. Tiền trả qua ba đầu mối khác nhau, để không tờ giấy nào nối được chúng với hai chữ ký sắp đặt xuống.",
-      "Hai con dấu xuống giấy: dấu chỉ huy trạm của phía Pháp và triện Tài Phòng của Hứa Gia; Phan Tường ký tên người làm chứng môi giới ở giữa. Cả hai phía ký khi biết rõ người ngồi đầu bàn là ai và đã nghe đủ tin về những gì hắn làm ở chợ Long Hải và với đội sát thủ tới sau đó. Tay ký không run: lợi của tờ giấy này lớn hơn nỗi sợ đã thành tin tức. Liên minh Phúc Thọ thành hình từ trang giấy này.",
+      "Tối ngày 47, một ghe lớn neo giữa cửa sông Cần Giờ làm nơi ký kết: đất trung lập, không thuộc bến nào. Phan Tường đón khách ở mũi ghe như chủ nhà, giọng trơn tru. Phía Pháp lên ghe trước: Lucien Vauclerc cùng một sĩ quan ghi chép. Phía Hứa lên sau: Hứa Tế Nguyên cùng người giữ cặp giấy của Tài Phòng. Và ở bàn giữa, Cao Minh đã ngồi sẵn với chén rượu, một vị khách không ai mời mà không ai dám hỏi vì sao có mặt.",
+      "Hòa ước được đọc thành tiếng từng điều qua miệng Phan Tường. Phía Pháp công nhận trật tự bến bãi Phúc Thọ do Hứa Gia bảo đảm, cấp giấy thông hành cho ghe Hứa trên tuyến cũ. Hứa Gia cam kết giữ tuyến quan tài cho sạch, không còn ghe lậu qua trạm, và chia phần hoa hồng bến cho trạm. Hai bên đều được thứ mình cần trên giấy: phía Pháp được mặt trật tự, nhà họ Hứa được đường sống cho ghe sau khi mất tuyến quan tài.",
+      "Phần phụ lục không đọc to mà chuyền tay quanh bàn. Khi cần giữ trật tự ở bến và dọc tuyến ghe, hai phía dùng một lực lượng không mặc quân phục, không cầm giấy của Hứa Gia: tàn dư Bách Trảo, nửa Hắc Khăn đã tách ra từ ngày khăn đen tháo lệ mà không theo Bảy Lược nhập môn, và người của Thủy Xà trên tuyến sông. Tiền trả qua ba đầu mối khác nhau, để không tờ giấy nào nối được chúng với hai chữ ký.",
+      "Hai con dấu xuống giấy: dấu chỉ huy trạm của phía Pháp và triện Tài Phòng của Hứa Gia; Phan Tường ký tên người làm chứng môi giới ở giữa. Cả hai phía ký khi biết rõ người ngồi đầu bàn là ai. Tay ký không run: lợi của tờ giấy này lớn hơn nỗi sợ đã thành tin tức. Liên minh Phúc Thọ thành hình từ trang giấy này.",
       "Giờ giải lao trước khi ghe nhổ neo, người trên ghe tản ra hai đầu. Tống Nguyên Phúc, đi theo đoàn với phận sự giữ hồ sơ của Hội Đồng, đi ngang qua người liên lạc của Phan Tường ở mạn ghe để trả lại cây bút mượn lúc ký. Dưới cây bút là một mẩu giấy gấp tư, chuyển tay trong một nhịp ngắn. Mẩu giấy ghi đúng hai thứ: nơi cất hồ sơ gốc của phân đàn Tam Giang, và giờ đổi ca của người giữ phòng giấy. Người liên lạc cất mẩu giấy vào tay áo, xuống ghe nhỏ trước.",
-      "Đêm xuống, ba bản hòa ước đi ba hướng: bản của phía Pháp về trạm, bản của Hứa Gia theo ghe về hướng Chợ Lớn, bản làm chứng ở lại ghe của Phan Tường. Lan ghi vào sổ Nhân Danh đủ ba chữ ký và điều khoản nàng đã đòi gạch: liên minh có giấy của chúng, nàng có giấy của nàng."
+      "Đêm xuống, ba bản hòa ước đi ba hướng: bản của phía Pháp về trạm, bản của Hứa Gia theo ghe về hướng Chợ Lớn, bản làm chứng ở lại ghe của Phan Tường. Lan ghi vào sổ Nhân Danh đủ ba chữ ký và điều khoản nàng đã đòi gạch: liên minh có giấy của chúng, nàng có giấy của nàng.",
+      "Đêm ấy, ở bến trong, Bùi Thị Lành ngồi ca đèn của mình như mọi đêm: cây đèn để thấp, chao khép một nửa. Gần nửa đêm, cái nhịp trong người chị lại gọi, bàn tay chị bắt đầu đưa lên ghìm cây đèn xuống thấp hơn, như mọi lần. Lần này chị không ghìm. Chị để yên tay mình, để nhịp ấy đi qua người như nước qua kẽ ván, rồi nghe tiếng thở của mình trở lại đều đặn. Đêm ấy chị ngủ được giấc sâu nhất từ nhiều tháng nay. Không ai ở phân đàn biết việc ấy."
     ],
     "stageId": "can_gio",
     "title": "Bản hòa ước Phúc Thọ"
@@ -21590,19 +21592,15 @@ export const VN_SCENES = Object.freeze({
     "dialogue": [
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Điểm danh vòng một: lán trong đủ người già và trẻ con. Những người thuộc năm nhóm bị nhắm hiện có mặt ở phân đàn, tôi đã dời vào lán giữa sân. Riêng hai người chèo ghe nhóm thứ ba vẫn bị giữ tại trạm, thưa cô. Biên bản của họ tôi giữ riêng để đòi tin."
+        "text": "Điểm danh vòng một: lán trong đủ người già và trẻ con. Những người thuộc năm nhóm bị nhắm, tôi đã dời vào lán giữa sân. Riêng hai người chèo ghe nhóm thứ ba vẫn bị giữ tại trạm, thưa cô. Biên bản của họ tôi giữ riêng để đòi tin."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
         "text": "Lệ đêm nay: ai đổi lán phải báo người giữ sổ. Tên người tôi điểm bằng miệng, không đọc to ra sân."
       },
       {
-        "speaker": "Người bán mật ong rừng",
-        "text": "Chum mật của tôi khóa rồi. Chợ mới mở hai ngày, mà người bán đã phải học cách đóng cửa sớm."
-      },
-      {
         "speaker": "Nguyễn Văn Thạo",
-        "text": "Cổng bến đã chốt, thưa cô. Ghe kéo lên bãi trong hết, không ghe nào nằm ngoài tầm chòi gác đêm nay."
+        "text": "Cổng bến đã chốt, thưa cô. Ghe kéo lên bãi trong hết, không ghe nào ngoài tầm chòi gác đêm nay."
       },
       {
         "speaker": "Nguyễn Văn Thạo",
@@ -21610,11 +21608,11 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Nguyễn Văn Thạo",
-        "text": "Ba ca tới sáng: ca đầu tới nửa đêm, ca hai tới gần sáng, ca ba giữ tới khi ghe sớm ra bến."
+        "text": "Ba ca tới sáng: ca đầu tới nửa đêm, ca hai tới gần sáng, ca ba giữ tới ghe sớm."
       },
       {
         "speaker": "Đệ tử trực gác",
-        "text": "Thưa thầy, hiệu đèn của phân đàn mình, nhắc lại cho con nghe lần nữa, kẻo con đốt lộn hiệu của người ta."
+        "text": "Thưa thầy, hiệu đèn của phân đàn mình, nhắc lại cho con nghe, kẻo con đốt lộn hiệu của người ta."
       },
       {
         "speaker": "Đệ tử trực gác",
@@ -21622,7 +21620,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Tống Nguyên Phúc",
-        "text": "Lịch điều động đêm nay, tôi giao anh Thạo giữ. Ghe nào đổi giờ, phòng giấy đã ghi sẵn ở cuối bản."
+        "text": "Lịch điều động đêm nay, tôi giao anh Thạo. Ghe nào đổi giờ, phòng giấy đã ghi ở cuối bản."
       },
       {
         "if": "thuNguyetFollows",
@@ -21640,18 +21638,13 @@ export const VN_SCENES = Object.freeze({
         "text": "Ký hiệu ngoài bó, em ghi theo lối người đưa thư: một nút dây đường sông, hai nút đường ghe đêm."
       },
       {
-        "if": "thuNguyetFollows",
-        "speaker": "Lê Thu Nguyệt",
-        "text": "Em gói xong thì qua phần việc ở lán trong. Cô nghỉ một chút đi, thưa cô."
-      },
-      {
         "speaker": "Người liên lạc ghe đêm",
         "text": "Thưa cô, tôi đọc lại ký hiệu ba bó: một nút dây đường sông, hai nút đường ghe đêm, bó không nút giữ lại phân đàn.",
         "unless": "thuNguyetFollows"
       },
       {
         "speaker": "Người liên lạc ghe đêm",
-        "text": "Tôi đi ngay theo nước xuống, giao bó thứ nhất trước khi trời sáng. Thứ tự giao bó, tôi nhớ đúng lời cô dặn.",
+        "text": "Tôi đi ngay theo nước xuống, giao bó thứ nhất trước khi trời sáng.",
         "unless": "thuNguyetFollows"
       },
       {
@@ -21677,26 +21670,26 @@ export const VN_SCENES = Object.freeze({
       {
         "if": "thuNguyetFollows",
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Biên nhận ba bó, tôi ghi xong: giờ giao, người giao, ký hiệu từng bó. Hai đường đã đi, một đường giữ lại."
+        "text": "Biên nhận ba bó ghi xong: giờ giao, người giao, ký hiệu từng bó. Hai đường đã đi, một đường giữ lại."
       },
       {
         "if": "thuNguyetFollows",
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Tên người trong từng bó, tôi đối chiếu với sổ điểm danh rồi. Không bó nào ôm hết tên của cả năm nhóm."
+        "text": "Tên người trong từng bó, tôi đối chiếu rồi. Không bó nào ôm hết tên của cả năm nhóm."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Biên nhận ba bó, tôi ghi xong: giờ giao, người giao, ký hiệu từng bó. Hai đường đã đi, một đường giữ lại.",
+        "text": "Biên nhận ba bó ghi xong: giờ giao, người giao, ký hiệu từng bó. Hai đường đã đi, một đường giữ lại.",
         "unless": "thuNguyetFollows"
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Tên người trong từng bó, tôi đối chiếu với sổ điểm danh rồi. Không bó nào ôm hết tên của cả năm nhóm.",
+        "text": "Tên người trong từng bó, tôi đối chiếu rồi. Không bó nào ôm hết tên của cả năm nhóm.",
         "unless": "thuNguyetFollows"
       },
       {
         "speaker": "Cao Minh",
-        "text": "Ngày 63 còn mười bốn đêm nữa. Đêm nào cũng gác thế này, tới ngày hẹn người ta lại khỏe ra. Bổn tọa lời một đám đệ tử thức khuya."
+        "text": "Ngày 63 còn mười bốn đêm nữa. Đêm nào cũng gác thế này, bổn tọa lời một đám đệ tử thức khuya."
       },
       {
         "speaker": "Cao Minh",
@@ -21716,7 +21709,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Năm nhóm bị nhắm, cách dời chỗ đã ghi đủ chưa? Nhóm đi trước theo ghe đêm, nhóm dời lán theo ca — đừng để sót một nhóm nào."
+        "text": "Năm nhóm bị nhắm, cách dời chỗ đã ghi đủ chưa? Nhóm đi trước theo ghe đêm, nhóm dời lán theo ca — đừng để sót nhóm nào."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -21732,7 +21725,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Cách dời chỗ của năm nhóm, tôi ghi đủ từng nhóm: ngày dời, đường đi, người phụ trách. Cô xem lại mai cũng được."
+        "text": "Cách dời chỗ của năm nhóm, tôi ghi đủ từng nhóm: ngày dời, đường đi, người phụ trách."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -21740,7 +21733,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Ghi vào sổ gác đúng giờ, đúng nhịp chớp. Điều chưa hiểu thì ghi lại cho đúng — đoán là việc của ngày mai."
+        "text": "Ghi vào sổ gác đúng giờ, đúng nhịp chớp. Điều chưa hiểu, ghi cho đúng — đoán là việc của ngày mai."
       },
       {
         "speaker": "Nguyễn Văn Thạo",
@@ -21758,19 +21751,20 @@ export const VN_SCENES = Object.freeze({
     "id": "ky4_44_dem_gac_tam_giang",
     "location": "Sân phân đàn Tam Giang, Cần Giờ — đêm ngày 49",
     "narration": [
-      "Đêm ngày 49 xuống trên Tam Giang. Sau buổi công bố lệnh, phân đàn làm việc đầu tiên của một nơi sắp có biến mà không họp hành gì thêm: đóng cửa. Dân về lán, ghe kéo lên bãi trong, kệ chợ dỡ hàng vào kho, bếp hạ lửa nhỏ. Đỗ Thị Hạnh đi một vòng với sổ điểm danh: ai ở lán nào đêm nay, người già và trẻ con ở vòng trong, những người thuộc năm nhóm bị nhắm đang có mặt ở phân đàn được dời vào các lán giữa sân; hai người chèo ghe còn bị giữ được đánh dấu riêng trong sổ đòi tin.",
-      "Nguyễn Văn Thạo dựng xong hai chòi gác ở cổng sân và đầu bến, chia ca gác thành ba ca tới sáng. Lệ gác hắn đọc thành tiếng: gác là để báo động và giữ người, không phải để đánh nhau với đội tuần; thấy ghe lạ thì đốt hiệu, không tự ra sông. Đệ tử ca đầu leo chòi với đèn dầu bọc kín gió. Tống Nguyên Phúc giao bản lịch điều động đêm cho Thạo theo đúng phần việc một mối của hắn — giấy đi đúng đường của nó. Đêm gác này dựng được mà chưa cần tới Cao Minh.",
+      "Đêm ngày 49 xuống trên Tam Giang. Sau buổi công bố lệnh, phân đàn làm việc đầu tiên của một nơi sắp có biến: đóng cửa. Dân về lán, ghe kéo lên bãi trong, kệ chợ dỡ hàng vào kho, bếp hạ lửa nhỏ. Đỗ Thị Hạnh đi một vòng với sổ điểm danh: ai ở lán nào đêm nay, người già và trẻ con ở vòng trong, những người thuộc năm nhóm bị nhắm đang có mặt ở phân đàn được dời vào các lán giữa sân; hai người chèo ghe còn bị giữ được đánh dấu riêng trong sổ đòi tin.",
+      "Thạo dựng xong hai chòi gác ở cổng sân và đầu bến, chia ca gác thành ba ca tới sáng. Lệ gác hắn đọc thành tiếng: gác là để báo động và giữ người, không phải để đánh nhau với đội tuần; thấy ghe lạ thì đốt hiệu, không tự ra sông. Đệ tử ca đầu leo chòi với đèn dầu bọc kín gió. Tống Nguyên Phúc giao bản lịch điều động đêm cho Thạo theo đúng phần việc một mối của hắn — giấy đi đúng đường của nó. Đêm gác này dựng được mà chưa cần tới Cao Minh.",
       {
         "if": "thuNguyetFollows",
         "text": "Ở phòng giấy, Thu Nguyệt giúp Tiểu Lan chuẩn bị hồ sơ cần phân tán. Ba bó giấy nằm trên bàn: bản sao mảnh Sổ 2, biên bản đối chiếu lời khai, phụ lục lệnh đã đối chiếu họ tên. Mỗi bó gói giấy dầu, buộc dây, ghi ký hiệu ngoài bó bằng lối ghi của tuyến liên lạc. Tên người tách ra đi đường riêng: một bó bị lấy giữa đường cũng không mất hết tên. Thu Nguyệt vừa gói vừa đọc ký hiệu cho Hạnh ghi biên nhận. Việc gói giấy xong trước ca hai."
       },
       {
-        "text": "Ở phòng giấy, ba bó hồ sơ đã gói sẵn từ chiều: bản sao mảnh Sổ 2, biên bản đối chiếu lời khai, phụ lục lệnh đã đối chiếu họ tên. Thu Nguyệt không có mặt ở phân đàn đêm nay. Ba bó giấy được trao cho người liên lạc ghe đêm ở bến trong: người ấy đọc lại ký hiệu từng bó thành tiếng cho Tiểu Lan kiểm, nhận lệnh đi ngay theo nước xuống. Tên người trong mỗi bó tách ra đi đường riêng — một bó bị lấy giữa đường cũng không mất hết tên của cả phân đàn. Người đưa thư của tuyến này đã quen mặt bến từ những ngày đầu của phân đàn.",
+        "text": "Ở phòng giấy, ba bó hồ sơ đã gói sẵn từ chiều: bản sao mảnh Sổ 2, biên bản đối chiếu lời khai, phụ lục lệnh đã đối chiếu họ tên. Thu Nguyệt không có mặt ở phân đàn đêm nay. Ba bó giấy được trao cho người liên lạc ghe đêm ở bến trong: người ấy đọc lại ký hiệu từng bó thành tiếng cho Tiểu Lan kiểm, nhận lệnh đi ngay theo nước xuống. Tên người trong mỗi bó tách ra đi đường riêng — một bó bị lấy giữa đường cũng không mất hết tên của cả phân đàn.",
         "unless": "thuNguyetFollows"
       },
-      "Giữa đêm, Cao Minh ra sân, ngồi xuống ghế đá giữa phân đàn với vò rượu, ngay khoảng sân mà mọi lán đều nhìn ra được. Hai thanh kiếm lơ lửng sau lưng theo lệ thường; ánh đèn chòi gác hắt lên áo hắn. Hắn không ra lệnh, không đi tuần, không hứa một câu nào. Hắn chỉ ở đó. Mấy đệ tử trẻ bớt nói khẽ, một bà mẹ ở lán trong thôi ra ngõ ngóng, ca gác đổi phiên đúng giờ hơn. Sự có mặt của hắn làm đêm gác yên lại.",
-      "Trước ca cuối, Tiểu Lan và Hạnh kiểm lại vòng chót. Sổ điểm danh khớp từng lán. Ba bó hồ sơ đã đi hai đường, bó thứ ba đã vào nơi giữ. Người thuộc năm nhóm có mặt ở phân đàn đã được chia đường dời chỗ; riêng hai người chèo ghe đang ở trạm có biên bản và đường đòi tin riêng: nhóm đi trước theo ghe đêm, nhóm dời lán theo ca, từng việc ghi vào sổ bằng chữ của Hạnh. Lan đóng cuốn sổ Nhân Danh. Nàng mệt thấy rõ, ngồi xuống nghỉ một nhịp — không ai làm thay phần quyết định của nàng.",
-      "Gần cuối ca hai, đệ tử trên chòi gác đầu bến hạ giọng gọi xuống sân: ngoài cửa sông có đèn hiệu. Cả sân lặng theo lệ gác. Trên mặt nước đen, một điểm sáng hiện lên theo nhịp: ba chớp dài, nghỉ, hai chớp. Không phải hiệu của phân đàn vừa đặt đêm nay. Không phải hiệu ghe tuần, không phải hiệu ghe buôn nào người gác từng thấy. Nó lặp lại lần thứ hai, rồi tắt hẳn, như chưa từng có. Không ai đuổi theo, không ai đốt hiệu đáp. Đêm gác của Tam Giang ghi thêm một dòng: một tín hiệu không thuộc về phe nào đã lộ mặt."
+      "Giữa đêm, Cao Minh ra sân, ngồi xuống ghế đá giữa phân đàn với vò rượu, ngay khoảng sân mọi lán đều nhìn ra được. Hắn không ra lệnh, không đi tuần, không hứa một câu nào. Hắn chỉ ở đó — và ca gác đổi phiên đúng giờ hơn, một bà mẹ ở lán trong thôi ra ngõ ngóng. Sự có mặt của hắn làm đêm gác yên lại.",
+      "Trước ca cuối, Tiểu Lan và Hạnh kiểm lại vòng chót. Sổ điểm danh khớp từng lán. Ba bó hồ sơ đã đi hai đường, bó thứ ba đã vào nơi giữ. Người thuộc năm nhóm có mặt ở phân đàn đã được chia đường dời chỗ; riêng hai người chèo ghe đang ở trạm có biên bản và đường đòi tin riêng: nhóm đi trước theo ghe đêm, nhóm dời lán theo ca, từng việc ghi vào sổ của Hạnh. Lan đóng cuốn sổ Nhân Danh. Nàng mệt thấy rõ, ngồi xuống nghỉ một nhịp — không ai làm thay phần quyết định của nàng.",
+      "Ca hai, khi ghe chở bó tuyến sông sắp rời bến trong, cây đèn ở bến trong bỗng mở chao sớm. Bùi Thị Lành, người giữ cây đèn ấy, đứng yên một nhịp — rồi bàn tay chị nâng nó lên cao. Ánh sáng mở ra trên mặt nước, bắt trọn chiếc ghe và người chèo đang chờ ở chỗ khuất dưới rặng bần — đủ lâu cho bất cứ mắt nào bên kia sông. Đệ tử gác bến phản ứng đúng lệ: anh ta bước tới che chao đèn lại, ghi giờ vào sổ gác, cho người chạy báo Thạo. Thạo đổi giờ khởi hành của ghe và đổi cả chỗ chờ của chuyến sau. Nhưng ánh sáng đã đi rồi, không thu lại được.",
+      "Gần cuối ca hai, đệ tử trên chòi gác đầu bến hạ giọng gọi xuống sân: ngoài cửa sông có đèn hiệu. Cả sân lặng theo lệ gác. Trên mặt nước đen, một điểm sáng hiện lên theo nhịp: ba chớp dài, nghỉ, hai chớp. Không phải hiệu của phân đàn, không phải hiệu ghe tuần hay ghe buôn nào người gác từng thấy. Nó lặp lại lần thứ hai, rồi tắt hẳn, như chưa từng có. Không ai đuổi theo, không ai đốt hiệu đáp. Đêm gác của Tam Giang ghi thêm một dòng: một tín hiệu không thuộc về phe nào đã lộ mặt."
     ],
     "stageId": "can_gio",
     "title": "Đêm gác Tam Giang"
