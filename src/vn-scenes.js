@@ -25404,11 +25404,11 @@ export const VN_SCENES = Object.freeze({
     "dialogue": [
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi hỏi ngài những câu cuối, thưa ngài — hỏi cho đủ, rồi tôi quyết. Câu thứ nhất: người ở lại. Nếu hôm nay tôi trả giá xong, phân đàn tự quản được không — không có ngài đứng sau lưng, không có tôi giữ nhịp?"
+        "text": "Tôi hỏi ngài những câu cuối — hỏi cho đủ, rồi tôi quyết. Câu thứ nhất: người ở lại. Nếu hôm nay tôi trả giá xong, phân đàn tự quản được không, khi không có ngài đứng sau lưng, không có tôi giữ nhịp?"
       },
       {
         "speaker": "Cao Minh",
-        "text": "Được. Ngươi đã xây nó để tự quản từ ngày đầu — sáu đường, một hội đồng, sổ sách ghi rõ từng việc. Nó không cần bổn tọa đứng sau lưng để tồn tại; nó chỉ cần thời gian. Câu đó, bổn tọa trả lời chắc chắn."
+        "text": "Được. Ngươi xây nó để tự quản từ ngày đầu: sáu đường, một hội đồng, sổ sách rõ từng việc. Nó không cần bổn tọa đứng sau lưng mới tồn tại — nó chỉ cần thời gian. Câu đó, bổn tọa chắc chắn."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -25416,15 +25416,15 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Đan Đường và Nhân Danh Đường, bằng kế hoạch chị ngươi — Thất Nương — đã chốt từ Bạch Cốt Bến: thuốc giữ nhịp, người nhà được dặn cách gọi tên, sổ theo dõi từng người. Họ không bị bỏ lại. Việc chăm người ở vùng này từ nay là việc của người phàm — và người phàm ở đây đã học được cách làm nó cho tử tế."
+        "text": "Bằng người, không phải bằng lời hứa của bổn tọa. Thất Nương và Đan Đường giữ thuốc giữ nhịp cho từng người. Hạnh và Nhân Danh Đường giữ sổ tên và lịch gọi tên ở từng nhà. Thạo cho Hộ Pháp đi thăm các tuyến xa theo phiên đã chốt. Ông Bảy Thìn từ chối tách thì cứ theo phần chăm của người từ chối — không ai ép, không ai bỏ. Kế hoạch ấy chị ngươi chốt từ Bạch Cốt Bến; nó không cần tay bổn tọa mới chạy được."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi hỏi thêm một câu nhỏ giữa hai câu lớn, thưa ngài, vì tôi muốn biên bản của ngày hôm nay không thiếu nó: nếu tôi chọn đường phản thanh và mọi việc xong xuôi, ngài có định rời vùng này ngay không? Tôi hỏi không phải để giữ ngài lại. Tôi hỏi để biết những người ở lại phải tính thời gian của họ thế nào."
+        "text": "Tôi hỏi thêm một câu nhỏ giữa hai câu lớn, thưa ngài: nếu tôi chọn đường phản thanh và mọi việc xong xuôi, ngài có định rời vùng này ngay không? Tôi hỏi không phải để giữ ngài lại. Tôi hỏi để người ở lại tính thời gian của họ."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Bổn tọa chưa từng hứa ở lại vĩnh viễn, và bổn tọa cũng không có kế hoạch ra đi nào đang chờ sẵn. Bổn tọa ở đây vì ở đây có chuyện làm bổn tọa chưa chán. Ngươi hỏi để người ở lại tính thời gian — vậy thì ghi vào biên bản của ngươi thế này: họ phải tính thời gian như thể bổn tọa không có ở đây. Đó là cách tính duy nhất không bao giờ sai, với bất kỳ ai."
+        "text": "Bổn tọa chưa từng hứa ở lại vĩnh viễn, và cũng không có kế hoạch ra đi nào đang chờ sẵn. Bổn tọa ở đây vì ở đây có chuyện làm bổn tọa chưa chán. Vậy ghi vào biên bản của ngươi thế này: người ở lại phải tính thời gian như thể bổn tọa không có ở đây. Đó là cách tính duy nhất không bao giờ sai."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -25432,11 +25432,11 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Bổn tọa sẽ nhớ thay phần ngươi quên. Bổn tọa nhớ buổi biển đầu tiên của ngươi từng cơn gió, nhớ đêm ngươi ký tên vào cuốn sổ vải vì ngươi đã kể cho bổn tọa nghe, nhớ cả giọng mẹ ngươi gọi tên ngươi theo đúng lời ngươi tả lại sáng nay. Và nghe cho kỹ điều này, vì nó là lời hứa của bổn tọa: khi bổn tọa kể lại những điều ấy cho ngươi, bổn tọa sẽ nói rõ đó là lời kể của bổn tọa — không bao giờ nói đó là ký ức của ngươi, không bao giờ để ngươi phải tin một điều không còn là của mình. Phần ngươi mất, bổn tọa giữ. Phần ngươi còn, là của ngươi. Không ai — kể cả bổn tọa — được trộn hai phần ấy vào nhau."
+        "text": "Bổn tọa sẽ nhớ thay phần ngươi quên. Nhưng nghe rõ giới hạn của bổn tọa: phần nào của ngươi sẽ mất, bổn tọa không biết trước, không chọn thay ngươi được. Bổn tọa nhớ buổi biển đầu tiên của ngươi từng cơn gió, nhớ đêm ngươi ký tên vào cuốn sổ vải như ngươi đã kể, nhớ giọng mẹ ngươi gọi tên ngươi theo đúng lời ngươi tả lại. Và nghe cho kỹ: khi bổn tọa kể lại những điều ấy, bổn tọa sẽ nói rõ đó là lời kể của bổn tọa — không bao giờ nói đó là ký ức của ngươi, không bao giờ để ngươi phải tin một điều không còn là của mình. Phần ngươi mất, bổn tọa giữ. Phần ngươi còn, là của ngươi. Không ai — kể cả bổn tọa — được trộn hai phần ấy vào nhau."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Vậy thì tôi nói quyết định của tôi. Nhưng trước khi nói, tôi chặn trước một điều, thưa ngài — tôi nói với ngài, và qua ngài, tôi nói với cả cái mạng trên đàn này và bất kỳ ai đang nghe: đây không phải ván cờ của ngài. Quyết định sắp tới không phải nước đi tối ưu của một kẻ mạnh, không phải sự hy sinh được sắp đặt cho đẹp một câu chuyện. Nó là của tôi. Hứa Tiểu Lan, mười tám tuổi, tỉnh táo, đã nghe đủ, hỏi đủ. Của tôi."
+        "text": "Vậy thì tôi nói quyết định của tôi. Trước khi nói, tôi chặn một điều, thưa ngài — tôi nói với ngài, và qua ngài, với cả cái mạng trên đàn này: đây không phải ván cờ của ngài. Quyết định sắp tới không phải nước đi tối ưu của một kẻ mạnh, không phải sự hy sinh được sắp đặt cho đẹp. Nó là của tôi. Hứa Tiểu Lan, mười tám tuổi, tỉnh táo, đã nghe đủ, hỏi đủ. Của tôi."
       },
       {
         "speaker": "Cao Minh",
@@ -25444,20 +25444,20 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi chọn đường phản thanh. Tôi chọn vô hiệu hóa cái đàn này, hôm nay, bằng chính vị trí của tôi trong đường dây của nó. Tôi biết cái giá: tổn thương thần kinh, và một khoảng ký ức có ý nghĩa sẽ mất — phần nào mất, tôi không chọn được, và tôi chấp nhận cả điều đó. Tôi không chọn đường giữ nguyên, vì đường ấy bắt cả vùng này sống thêm một đời người bên cạnh một cái đàn còn nguyên, và bắt chính tôi làm cái chốt chặn biết đi biết nói của nó mãi mãi. Tôi thà trả giá một lần, trong tỉnh táo, bằng con người đầy đủ này."
+        "text": "Tôi nói cả hai đường cho hết, rồi mới nói đường tôi chọn. Đường giữ nguyên là đường có thật, tôi không nói sai về nó: đàn còn nguyên, tôi còn giữ nhịp, các điểm neo giữ như cũ, người neo được chăm theo kế hoạch đã chốt, tôi vẫn sống, vẫn làm việc, vùng này sống chung với cái đàn như đã sống. Cái giá của nó cũng có thật: nó bắt chính tôi làm cái chốt chặn biết đi biết nói của cái đàn ấy mãi mãi, và bắt cả vùng này sống thêm một đời người bên một thứ chưa từng được giải quyết. Tôi đã nghe đủ về đường ấy, và tôi không chọn nó. Tôi chọn đường phản thanh: vô hiệu hóa cái đàn này, hôm nay, bằng chính vị trí của tôi trong đường dây của nó. Tôi biết cái giá: tổn thương thần kinh, và một khoảng ký ức có ý nghĩa sẽ mất — phần nào mất, tôi không chọn được, và tôi chấp nhận cả điều đó. Tôi thà trả giá một lần, trong tỉnh táo, bằng con người đầy đủ này."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Còn một điều nữa, trước khi bắt đầu — tôi nhắc lại câu hỏi đêm qua, thưa ngài. Ngài sợ mất điều gì? Đêm qua ngài cười nó đi. Hôm nay tôi không cần ngài trả lời nữa. Tôi tự trả lời thay phần tôi biết: có lẽ hôm nay ngài sẽ biết. Giờ thì mình bắt đầu thôi. Tôi là người bắt đầu — ngài là người hoàn tất. Theo thứ tự ấy."
+        "text": "Trước khi bắt đầu — tôi nhắc lại câu hỏi đêm qua, thưa ngài. Ngài sợ mất điều gì? Đêm qua ngài cười nó đi. Hôm nay tôi không cần ngài trả lời nữa. Tôi tự trả lời thay phần tôi biết: có lẽ hôm nay ngài sẽ biết. Giờ thì mình bắt đầu thôi. Tôi là người bắt đầu — ngài là người hoàn tất. Theo thứ tự ấy."
       }
     ],
     "id": "ky5_41_khong_phai_van_co",
     "location": "Thềm Mẫu Triều Đàn — sáng ngày 63",
     "narration": [
-      "Nàng quay lại sau khoảng thời gian thật mà nàng đã xin, và việc đầu tiên nàng làm không phải là tuyên bố quyết định. Việc đầu tiên nàng làm là hỏi nốt những câu cuối — về người ở lại, về vật chủ, và về chính phần ký ức của nàng trong tay kẻ khác. Đó là cách một người chủ thật sự của một quyết định hành xử: nàng không lao vào lựa chọn của mình như lao vào một ngọn lửa; nàng kiểm tra lần cuối mọi hệ quả của nó lên những người không có mặt trong vòng tròn này để tự lên tiếng. Từng câu trả lời của Cao Minh đều là sự thật hắn làm được — không một lời hứa nào vượt quá khả năng của hắn, kể cả lời hứa lớn nhất: lời hứa nhớ thay phần nàng quên, với điều kiện khắc nghiệt nhất của nó — không bao giờ để lời kể của hắn giả làm ký ức của nàng.",
-      "Có một điều về khoảng thời gian nàng xin mà chỉ hai người trong cuộc mới biết: nàng không dùng nó để cân lại hai con đường — hai con đường nàng đã cân xong từ trong buổi trình bày. Nàng dùng nó để đi hết một vòng của chính mình: nhớ lại từng người sẽ chịu hệ quả của quyết định này, từng cái tên trong sổ của Hạnh, từng vật chủ ở hai điểm neo đã cắt và những người còn neo ở các tuyến xa. Khi nàng quay lại thềm đàn, quyết định trong nàng đã không còn là một lựa chọn giữa hai phương án nữa. Nó là một kết luận đã đi qua tất cả những con người nó chạm tới — và trở về, nguyên vẹn, thuộc về một mình nàng.",
-      "Rồi nàng nói câu nói đã đặt tên cho buổi sáng này. 'Đây không phải ván cờ của ngài.' Nàng nói nó bình tĩnh, không giận dữ, như một điều khoản được đọc vào biên bản. Và Cao Minh — kẻ chưa từng thừa nhận một điều gì nhanh trong suốt cả hành trình này — thừa nhận ngay, không biện hộ một lời. Có lẽ đó là sự tôn trọng lớn nhất hắn từng dành cho một người phàm: đứng trước quyết định của nàng, hắn lùi đúng một bước về vị trí cánh tay, và ở yên đó.",
-      "Quyết định được nói ra sau đó, đầy đủ, có lý do, có cái giá được nhắc lại bằng chính miệng người sẽ trả nó. Ở vành ngoài, đoàn kiểm của Giới Phòng vẫn đang bị giữ trong mê cung thủ tục; ở thềm đàn, một người phụ nữ mười tám tuổi vừa tự quyết định phần đời còn lại của mình. Không có tiếng kẻng nào điểm cho khoảnh khắc ấy. Chỉ có gió sớm đi qua rừng ngập mặn, và tiếng lật trang sổ của một người ghi chép ở xa — người sẽ ghi quyết định này vào sổ bằng nét chữ không run."
+      "Nàng quay lại thềm đàn sau khoảng thời gian thật mà nàng đã xin. Việc đầu tiên nàng làm không phải tuyên bố quyết định: nàng tự tay đặt cuốn sổ Nhân Danh xuống bậc thềm, ngay phía mình, và tự sắp chỗ ngồi của mình — không ai làm thay hai việc ấy cho nàng. Rồi nàng hỏi nốt những câu cuối — về người ở lại, về vật chủ, và về chính phần ký ức của nàng trong tay kẻ khác. Từng câu trả lời của Cao Minh đều là sự thật hắn làm được — không một lời hứa nào vượt quá khả năng của hắn, kể cả lời hứa lớn nhất: nhớ thay phần nàng quên — không bao giờ để lời kể của hắn giả làm ký ức của nàng.",
+      "Khoảng thời gian nàng xin, nàng không dùng để cân lại hai con đường — hai con đường nàng đã cân xong từ buổi trình bày. Nàng dùng nó để đi hết một vòng của chính mình: từng người sẽ chịu hệ quả của quyết định này, từng cái tên trong sổ của Hạnh, từng vật chủ ở hai điểm neo đã cắt và những người còn neo ở các tuyến xa. Khi nàng quay lại, quyết định trong nàng không còn là một lựa chọn giữa hai phương án; nó là một kết luận đã đi qua tất cả những con người nó chạm tới — và trở về, nguyên vẹn, thuộc về một mình nàng.",
+      "Trước khi nàng nói quyết định, Cao Minh đã bắt đầu làm phần việc quen tay của hắn: hắn sắp lại thứ tự của buổi lễ trên thềm đàn — vị trí đặt chén, thứ tự các bước, chỗ đứng của từng người — như sắp một bàn cờ. Tiểu Lan không đưa cuốn sổ của mình về phía hắn; nàng giữ nó ở phía mình, một tay đặt lên bìa sổ. Tay hắn dừng lại giữa chừng — rồi rút về. Thứ tự của buổi sáng ấy, từ giây đó, không còn do hắn sắp nữa.",
+      "Rồi nàng nói câu nói đã đặt tên cho buổi sáng này. 'Đây không phải ván cờ của ngài.' Nàng nói nó bình tĩnh, không giận dữ, như một điều khoản được đọc vào biên bản. Và Cao Minh — kẻ chưa từng thừa nhận một điều gì nhanh trong suốt cả hành trình này — thừa nhận ngay, không biện hộ một lời. Đứng trước quyết định của nàng, hắn lùi đúng một bước về vị trí cánh tay — và ở yên đó."
     ],
     "sceneEffects": {
       "lanTrustDelta": 2
