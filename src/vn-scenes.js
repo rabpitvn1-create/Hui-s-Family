@@ -22625,27 +22625,27 @@ export const VN_SCENES = Object.freeze({
     "dialogue": [
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Thưa ngài, tôi nghe thấy nó. Không phải tiếng — là nhịp. Trong rừng và dọc hai bờ lạch, người đang bị gọi đi cùng một lúc, cùng một hướng. Vật chủ ven cửa sông đang đứng dậy, cả người trong đội kiểm của họ cũng có người đứng dậy. Đây là một đợt lệnh mới, thưa ngài. Chúng đang thu gom người."
+        "text": "Thưa ngài, tôi nghe thấy nó. Không phải tiếng — là nhịp. Trong rừng và dọc hai bờ lạch, người đang bị gọi đi cùng một lúc, cùng một hướng. Vật chủ ven cửa sông đang đứng dậy, cả người trong đội kiểm của họ cũng có người đứng dậy. Đây là một đợt lệnh mới chạy cùng một nhịp, thưa ngài."
       },
       {
         "speaker": "Nguyễn Văn Thạo",
-        "text": "Thưa cô, đúng như cô nói! Ghe dân trong lạch vừa báo: mấy người ở lán ven rừng tự nhiên bỏ việc, đi thành hàng về phía trong. Người nhà gọi không quay lại, kéo tay cũng không dừng. Tôi đã cho Hộ Pháp dạt ghe ra khỏi tuyến đi của họ, không ai được chặn đường bằng sức."
+        "text": "Ghe dân trong lạch vừa báo: mấy người ở lán ven rừng bỏ việc, đi thành hàng về phía trong. Người nhà gọi không quay lại, kéo tay cũng không dừng. Tôi đã cho Hộ Pháp dạt ghe ra khỏi tuyến đi của họ, không ai được chặn đường bằng sức."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Ra lệnh thu người giữa ban ngày, trước mặt hai đạo quân — kẻ cầm đầu mối của mạng này hoặc là ngu, hoặc là đang thử xem bổn tọa có thật sự giữ đầu mối ấy được không. Cả hai trường hợp, đáp án đều như nhau. Thạo, cho người của ngươi lùi khỏi mặt nước. Ngươi, đứng sát vào đây."
+        "text": "Nhịp lệnh chạy giữa ban ngày, trước mặt hai đạo quân. Nó không biết xấu hổ, cũng không biết sợ — nó chỉ chạy theo nhịp của nó. Đáp án của bổn tọa cũng theo nhịp của bổn tọa. Thạo, cho người của ngươi lùi khỏi mặt nước. Ngươi, đứng sát vào đây."
       },
       {
         "speaker": "Lucien Vauclerc",
-        "text": "Chuyện gì đang xảy ra ở bờ bên kia? Người của tôi báo có hai lính trong đội kiểm cũng vừa bỏ vị trí đi vào rừng, gọi không nghe. Thưa ông — nếu đây là việc của thứ mà hồ sơ gọi là mạng, thì tôi yêu cầu ông cho tôi biết người của tôi có bị nguy hiểm không."
+        "text": "Chuyện gì đang xảy ra ở bờ bên kia? Người của tôi báo có hai lính trong đội kiểm cũng vừa bỏ vị trí đi vào rừng, gọi không nghe. Thưa ông — nếu đây là việc của thứ mà hồ sơ gọi là mạng, thì cho tôi biết người của tôi có bị nguy hiểm không."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Ngươi vừa được xem tận mắt lý do mọi kế hoạch của các ngươi đều phải vòng qua bổn tọa. Người của ngươi không sao — vì bổn tọa đang giữ đầu mối. Nhìn cho kỹ vào, viên quan. Việc này bổn tọa làm không tốn một hơi thở, và làm được mãi. Kẻ nào trong các ngươi còn tính chuyện dùng lệnh của mạng để thu người trước mặt bổn tọa, thì nên tính lại."
+        "text": "Người của ngươi không sao — vì bổn tọa đang giữ đầu mối. Nhìn cho kỹ vào, viên quan: việc này bổn tọa làm không tốn một hơi thở, và làm được mãi."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Thưa ngài, họ dừng rồi. Người ở lán ven rừng đang ngồi xuống từng người một, như vừa tỉnh một giấc ngủ đứng. Có người khóc. Có người hỏi vì sao chân mình toàn bùn. Thưa ngài — họ không sao, nhưng tôi phải nói điều này ngay, trước mặt cả viên quan đây, để khỏi ai hiểu lầm việc vừa xảy ra."
+        "text": "Thưa ngài, họ dừng rồi. Người ở lán ven rừng đang ngồi xuống từng người một, như vừa tỉnh một giấc ngủ đứng. Có người khóc. Có người hỏi vì sao chân mình toàn bùn. Họ không sao, nhưng tôi phải nói điều này ngay, trước mặt cả viên quan đây, để khỏi ai hiểu lầm việc vừa xảy ra."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -22653,15 +22653,35 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Lucien Vauclerc",
-        "text": "Thưa cô, tôi ghi nhận điều cô vừa nói, và tôi sẽ ghi vào báo cáo của tôi nguyên văn. Tôi không hứa báo cáo ấy sẽ thay đổi lệnh ở trên. Nhưng tôi hứa một điều trong quyền của tôi: đội tàu của tôi sẽ không dùng bất kỳ người nào trong số những người ấy làm phương tiện áp lực lên phân đàn này, chừng nào tôi còn chỉ huy ở cửa sông này."
+        "text": "Thưa cô, tôi ghi nhận điều cô vừa nói, và tôi sẽ ghi vào báo cáo của tôi nguyên văn. Tôi không hứa báo cáo ấy sẽ thay đổi lệnh ở trên. Nhưng tôi hứa một điều trong quyền của tôi: đội tàu của tôi sẽ không dùng bất kỳ người nào trong số ấy làm phương tiện áp lực lên phân đàn này, chừng nào tôi còn chỉ huy ở cửa sông này."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Ngươi ghi cho đúng vào. Và ghi thêm dòng này: kẻ ra lệnh thu người hôm nay không phải ngươi, cũng không phải bổn tọa. Nó là thứ đang trốn trong thân thể người dân của vùng này, mượn tay tất cả các ngươi. Bổn tọa bịt được miệng nó một lúc. Muốn bịt hẳn, phải tìm tới nơi nó neo — và việc ấy là việc của những ngày tới, không phải của một buổi sáng khoe sức."
+        "text": "Kẻ ra lệnh hôm nay không phải ngươi, cũng không phải bổn tọa: nó là thứ đang trốn trong thân thể người dân vùng này. Bổn tọa bịt được miệng nó một lúc; muốn bịt hẳn, phải tìm tới nơi nó neo."
       },
       {
         "speaker": "Nguyễn Văn Thạo",
-        "text": "Thưa cô, vật chủ ở lán ven rừng đã được đưa về lán trong, có người của Đan Đường đi cùng. Không một ai bị thương, không một phát súng nào nổ ở cả hai phía. Tôi ghi vào sổ ca: ngày năm mươi lăm, một đợt lệnh thu người bị giữ lại giữa đường, người an toàn."
+        "text": "Thưa cô, thưa ngài, tôi mở sổ ca gác Tam Giang. Đêm bốn mươi chín, ca hai, dòng này do người gác ghi: 'Đèn ở bến trong mở chụp sớm; ánh sáng lộ một ghe và người chèo ở chỗ vốn khuất. Đã che đèn, ghi giờ, báo lên.' Kèm theo là lời khai của người chèo tuyến hai vừa về: ghe của anh bị lộ đúng ở chỗ ấy, và anh bị giữ một ngày."
+      },
+      {
+        "speaker": "Bùi Thị Lành",
+        "text": "Thưa cô, dòng ấy là tay tôi. Đêm bốn mươi chín tôi giữ cây đèn thấp ở bến trong. Cái nhịp ấy tới, tay tôi muốn nâng đèn lên theo nó — bao đêm, đêm nào tôi cũng ghìm xuống được. Đêm ấy tôi không ghìm nữa. Không phải nó thắng tôi. Tôi mệt vì không được nghỉ một phút nào — người ta ngủ còn có lúc thả tay, tôi thì đêm ngày phải canh chính cái tay của mình. Tôi để nó làm điều nó muốn, để được yên một lát. Ghe bị lộ hay ai bị giữ sau đó, tôi không thấy, không biết. Phần tôi biết chỉ có bấy nhiêu: tay tôi, và việc tôi thôi ghìm nó."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Ghi lời nàng vào một tờ riêng, đúng chữ của nàng. Không ai được gọi tờ ấy là bản thú tội. Buông tay vì mỏi không nằm trong sổ tội của bổn tọa."
+      },
+      {
+        "speaker": "Bùi Thị Lành",
+        "text": "Thưa cô, cho tôi ngồi lại ở bậc bến này một lát. Rồi tôi tự vào với mọi người."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Chị cứ ngồi. Tôi cho người để sẵn nước ở bậc bến."
+      },
+      {
+        "speaker": "Nguyễn Văn Thạo",
+        "text": "Người của Đan Đường đã kiểm lại: nhịp sống của những người bị kéo đã ổn định; trong phạm vi phong tỏa không còn lệnh mới nào tới — phần lệ thuộc trong thân thể vẫn còn nguyên. Sổ ca ghi ngày năm mươi lăm: đợt lệnh bị giữ lại giữa đường, không ai bị thương, không một phát súng nổ. Lời của chị Lành tôi ghi riêng, không nhập vào sổ của người chèo."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -22669,16 +22689,17 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Lucien Vauclerc",
-        "text": "Thưa ông, thưa cô, tôi cho đội tàu giữ nguyên đội hình, không tiến thêm một thước nào hôm nay. Tôi đã có đủ thông tin để viết lại toàn bộ cách đánh của phía tôi cho những ngày tới — và tôi tin phía ông cũng vậy. Cửa sông này, từ nay tới ngày sáu mươi ba, sẽ là một bàn cờ của giấy và người, không phải của pháo."
+        "text": "Thưa ông, thưa cô, tôi cho đội tàu giữ nguyên đội hình, không tiến thêm một thước nào hôm nay. Cửa sông này, từ nay tới ngày sáu mươi ba, sẽ là một bàn cờ của giấy và người, không phải của pháo."
       }
     ],
     "id": "ky5_09_khep_mach_trung",
     "location": "Cửa sông Cần Giờ — ngày 55",
     "narration": [
-      "Đợt lệnh mới chạy trong mạng như một cơn gió không có tiếng. Nó bắt đầu ở lán ven rừng: một người đàn ông đang vá lưới bỗng đứng dậy, bỏ lưới, đi thẳng về phía rừng với bước chân đều đều của người mộng du. Rồi một người nữa. Rồi hai người lính trong đội kiểm của phía Pháp ở bờ đối diện cũng bỏ vị trí, mắt mở, miệng im, chân bước theo cùng một hướng mà họ không hề chọn. Không ai tấn công ai. Đó là một cuộc thu gom — mạng đang gọi người của nó về, giữa ban ngày, trước mặt hai đạo quân.",
-      "Tiểu Lan nghe thấy nó trước mọi người. Cái phần Nghịch Trùng trong nàng không cho nàng thấy hình ảnh; nó cho nàng nghe nhịp — một nhịp đều, lạnh, đang lan ra trong thứ mà nàng vẫn gọi là tiếng gõ ở rất xa trong đầu mình. Nàng báo cho Thạo dạt ghe dân ra khỏi tuyến đi của những người bị kéo, và báo cho Cao Minh bằng đúng một câu ngắn. Với những việc thuộc về mạng, hai người họ đã có một thứ ngôn ngữ riêng không cần nhiều lời.",
-      "Cao Minh khép tay lại. Chỉ thế. Không ấn quyết rườm rà, không kiếm quang, không một tiếng động nào lớn hơn tiếng chén rượu đặt xuống mạn ghe. Nhưng trên khắp mặt trận của buổi sáng — từ lán ven rừng tới hàng tàu neo giữa sông — mọi vật chủ đang bị lệnh kéo đi đồng loạt dừng lại, như một sợi dây dài bị ai đó giữ chặt ở đầu mối. Người thì ngồi sụp xuống, người thì vịn vào cọc mà thở. Lệnh mới không tới được nữa. Đầu mối của nó đang nằm trong một bàn tay khép hờ.",
-      "Sự im lặng sau đó mới là thứ làm cả hai đạo quân phải ghi nhớ. Lính Pháp trên boong tàu nhìn nhau; người của Hộ Pháp nhìn nhau. Ai cũng vừa tận mắt thấy lý do vì sao mọi kế hoạch nhắm vào vùng này — của thuộc địa, của Hứa Gia, của Giới Phòng, của chính cái mạng kia — đều phải vòng qua một người đàn ông đang đứng cầm chén rượu ở mũi ghe. Không phải vì hắn mạnh hơn một đạo quân. Mà vì có những việc, trong cả vùng nước này, chỉ một mình hắn làm được, và hắn làm chúng như người ta phủi bụi áo."
+      "Đợt lệnh mới chạy trong mạng như một cơn gió không có tiếng. Ở khu chăm sóc ven bến, nó hiện ra bằng ba cách khác nhau trên ba con người: một người đàn ông đang vá lưới bỏ lưới xuống, đứng dậy, bước đều về phía rừng như người mộng du; một người đàn bà ghìm chặt bàn tay mình lên hàng phên, lấy tay kia đè lên trên, giữ nguyên như thế mà run; còn Bùi Thị Lành, đang xách nước ở bến trong, thì bàn tay rảnh nhấc lên nửa chừng theo nhịp lệnh — và để nguyên ở lưng chừng, không ghìm xuống. Cùng lúc ấy, ở lán ven rừng và trong đội kiểm phía Pháp, có người bỏ vị trí, mắt mở, miệng im, bước theo cùng một hướng mà họ không hề chọn.",
+      "Tiểu Lan nghe thấy nó trước mọi người. Cái phần Nghịch Trùng trong nàng không cho nàng thấy hình ảnh; nó cho nàng nghe nhịp — một nhịp đều, lạnh, đang lan ra trong thứ mà nàng vẫn gọi là tiếng gõ ở rất xa trong đầu mình. Nàng báo cho Thạo dạt ghe dân ra khỏi tuyến đi của những người bị kéo, và báo cho Cao Minh bằng đúng một câu ngắn.",
+      "Cao Minh khép tay lại. Chỉ thế. Không ấn quyết rườm rà, không kiếm quang, không một tiếng động nào lớn hơn tiếng chén rượu đặt xuống mạn ghe. Nhưng từ lán ven rừng tới hàng tàu neo giữa sông, mọi vật chủ đang bị lệnh kéo đi đồng loạt dừng lại, như một sợi dây dài bị ai đó giữ chặt ở đầu mối. Người thì ngồi sụp xuống, người thì vịn vào cọc mà thở. Lệnh mới không tới được nữa. Đầu mối của nó đang nằm trong một bàn tay khép hờ.",
+      "Sự im lặng sau đó làm cả hai phía ghi nhớ: có những việc trong cả vùng nước này chỉ một mình người đàn ông cầm chén rượu ở mũi ghe làm được — và hắn làm như phủi bụi áo.",
+      "Việc rà lại những động tác bị sai khiến bắt đầu ngay trong buổi sáng ấy. Nguyễn Văn Thạo mang sổ ca gác của Tam Giang tới, cùng lời khai của người chèo tuyến hai vừa được thả về. Khi dòng chữ của ca hai đêm bốn mươi chín được đọc lên, Bùi Thị Lành bước tới, đặt bàn tay mình xuống trang sổ, ngay cạnh dòng chữ ấy — bàn tay đặt phẳng, các ngón khép. Nàng nhìn nó một lúc lâu trước khi nói."
     ],
     "sceneEffects": {
       "partyHealthDelta": 2
