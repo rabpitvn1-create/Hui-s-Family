@@ -22402,11 +22402,12 @@ export const VN_SCENES = Object.freeze({
           "delta": 1,
           "id": "bao_ho"
         },
-        "text": "Đưa hai người vừa xin ghi tên về phân đàn ngay trong đêm, có tổ cứu hộ đi cùng và người của bang làm chứng."
+        "text": "Đưa hai người về phân đàn ngay trong đêm như họ vừa tự chọn, có tổ cứu hộ đi cùng và người của bang làm chứng."
       },
       {
         "flags": {
-          "ky5HencutKilled": true
+          "ky5HencutKilled": true,
+          "ky5BangWitnessesStay": true
         },
         "id": "let_them_stay_as_eyes",
         "next": "ky5_08_ham_doi_biet_ten_han",
@@ -22414,7 +22415,7 @@ export const VN_SCENES = Object.freeze({
           "delta": 1,
           "id": "nghi_le"
         },
-        "text": "Để hai người ấy ở lại trong bang làm tai mắt, chỉ ghi tên kín vào sổ bảo vệ, không để lộ ra mặt."
+        "text": "Tôn trọng lựa chọn ở lại của hai người: ghi tên kín vào sổ bảo vệ và giữ liên lạc như họ đã nhận — bảo vệ không phải là giá đổi lấy việc làm tai mắt."
       }
     ],
     "companions": [
@@ -22424,11 +22425,19 @@ export const VN_SCENES = Object.freeze({
     "dialogue": [
       {
         "speaker": "Võ Mười Rọ",
-        "text": "Đêm mai, ghe lớn của bang chở một chuyến đặc biệt. Danh sách người, bên mua đã đưa. Hến chèo chính, hai đứa phụ chèo phụ. Giá chia như lệ hàng cấm, thêm hai phần vì là việc đêm không trăng. Ai có ý kiến, nói ngay ở đây, đừng nói sau lưng tao."
+        "text": "Đêm mai, ghe lớn của bang chở một chuyến đặc biệt; danh sách người bên mua đã đưa. Hến chèo chính, hai đứa phụ chèo phụ. Giá chia như lệ hàng cấm, thêm hai phần vì là việc đêm không trăng. Ai có ý kiến, nói ngay ở đây."
       },
       {
         "speaker": "Hến Cụt",
-        "text": "Tui có ý kiến, nói ngay như anh dặn. Việc này tui không làm. Trong danh sách ấy có người già và con nít đi lánh nạn — họ tưởng lên ghe là được cứu, hóa ra lên ghe là bị bán. Tui chở hàng, tui chở hàng cấm, tui không chở người đi bán. Phần của tui, gạch tên ra."
+        "text": "Anh Mười, chuyến hàng ngày kia ra khơi lạch còn thiếu tay chèo chính không? Phần ấy để tui nhận thay. Còn chuyến đêm mai, anh cho tui đứng ngoài."
+      },
+      {
+        "speaker": "Võ Mười Rọ",
+        "text": "Danh sách bên mua đưa ghi tên mày. Không có đổi."
+      },
+      {
+        "speaker": "Hến Cụt",
+        "text": "Vậy tui nói thẳng, nói ngay như anh dặn. Việc này tui không làm. Trong danh sách ấy có người già và con nít đi lánh nạn — họ tưởng lên ghe là được cứu, hóa ra lên ghe là bị bán. Tui chở hàng, tui chở hàng cấm, tui không chở người đi bán. Phần của tui, gạch tên ra."
       },
       {
         "speaker": "Võ Mười Rọ",
@@ -22448,7 +22457,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Võ Văn Đực",
-        "text": "Thưa cô, tụi mình tới trễ rồi. Người chết nằm ở bãi, người của bang còn đứng vòng quanh, chưa ai dám đụng vào. Tôi ngửi được mùi này — mùi của một đám người vừa nhìn thấy một việc mà họ sẽ không quên được, dù họ có muốn quên."
+        "text": "Thưa cô, tụi mình tới trễ rồi. Người chết nằm ở bãi, người của bang còn đứng vòng quanh, chưa ai dám đụng vào. Tôi ngửi được mùi này: mùi của một đám người vừa thấy một việc họ sẽ không quên được, dù có muốn quên."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -22464,24 +22473,27 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Bổn tọa từng thấy nhiều kẻ chết đủ kiểu. Chết vì tham, vì sợ, vì ngu — nhiều không đếm hết. Chết vì một chữ 'không' nói đúng chỗ — ít hơn ngươi tưởng. Tay chèo này chọn cái chết rẻ nhất cho mình mà đắt nhất cho kẻ giết hắn: từ nay, mỗi người trong bang này khi nhận một việc, sẽ phải tự hỏi cái giá của chữ 'không' là gì."
+        "text": "Dây chèo mới chắp, quấn chặt, đều tay. Người này tính sống tới ngày kia. Cái chết của hắn không phải một nước cờ hay — nó là một sự lãng phí, và bổn tọa ghét lãng phí."
       },
       {
         "speaker": "Võ Văn Đực",
-        "text": "Thưa ngài, thưa cô, có hai người trong bang vừa nói nhỏ với tôi: họ muốn ghi tên. Còn lại bỏ đi về phía rừng, chắc về điểm hẹn cũ. Tôi e là đêm nay Thủy Xà không còn là một bang nữa — nó nứt rồi, nứt từ chính nhát dao của trùm nó."
+        "text": "Thưa ngài, thưa cô, có hai người trong bang vừa nói nhỏ với tôi: họ muốn được bảo vệ. Còn lại bỏ đi về phía rừng. Đêm nay Thủy Xà nứt rồi — nứt từ chính nhát dao của trùm nó."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Hai người muốn ghi tên thì đưa về phân đàn ngay trong đêm, đi đường vòng ngoài, đừng để ai nói họ bị bắt cóc hay bị mua. Người còn lại, để họ đi. Việc của đêm nay kết thúc ở đây: người chết được ghi tên, người sống được chọn đường. Đó là tất cả những gì phân đàn làm được cho anh Hến — và tôi sẽ không nói dối rằng nó là đủ."
+        "text": "Hai anh bước ra đây. Tôi hỏi thẳng, hai anh tự đáp: muốn về phân đàn ngay trong đêm nay, hay muốn ở lại đây? Ở lại thì nguy hiểm hơn, tôi nói trước. Nhưng bảo vệ của phân đàn không đổi theo câu trả lời — các anh chọn đường của mình, không ai chọn thay."
       }
     ],
     "id": "ky5_07_hen_cut_noi_khong",
     "location": "Điểm hẹn ven cửa sông — ngày 54",
     "narration": [
       "Điểm hẹn của Thủy Xà là một bãi đất trống sau lùm đước già, nơi ghe của bang thường lên cạn chờ nước. Chiều ngày năm mươi tư, người của bang tới đủ mặt hơn lệ thường: kẻ đứng, kẻ ngồi trên mạn ghe úp, không ai nói to. Võ Mười Rọ tới sau cùng, áo khoác vắt vai, đi qua đám đông như đi qua một hàng cọc. Việc của buổi gặp được hắn nói ra ngắn gọn, theo đúng lối của bang: đêm mai, một ghe người theo danh sách, chở từ bến trong ra điểm giao ngoài khơi lạch. Ai chèo chính, ai phụ, giá chia thế nào — hắn đọc như đọc một bảng phân công.",
-      "Hến Cụt đứng lên khi tên mình được đọc vào vị trí chèo chính. Hắn không nói vòng vo. Hắn nói lại, trước mặt cả bang, đúng câu hắn đã nói ở bến phân đàn hôm qua — nhưng lần này nói ở nơi câu nói ấy có giá của nó. Trong danh sách người phải chở đêm mai, hắn biết có người đang tìm đường lánh nạn: một bà già và hai đứa nhỏ của một nhà bị nhắm ở tuyến trong. Hắn nói: hắn chở hàng, chở hàng cấm, nhưng không chở người đi bán. Nói xong, hắn ngồi xuống, như người đã nói hết phần của mình.",
-      "Mười Rọ giết hắn ngay tại chỗ, trước mặt cả bang. Không có cãi vã dài, không có thách đấu. Đó là một quyết định của người giữ giá: một tay chèo từ chối công khai mà còn sống, thì từ mai mọi tay chèo trong bang đều có quyền từ chối, và danh sách mua người của liên minh sẽ phải trả giá khác. Mười Rọ cần cái chết ấy để giữ kỷ luật giá cả của Thủy Xà, và hắn ra tay như người đóng một cái dấu. Anh em trong bang đứng nhìn. Không một ai bước ra. Sự im lặng của họ nặng hơn tiếng la hét — và nó sẽ quay lại tìm Mười Rọ sớm hơn hắn tưởng.",
-      "Khi Tiểu Lan, Cao Minh và Võ Văn Đực tới nơi theo bố trí vòng ngoài, việc đã xong. Tổ cứu hộ không còn việc cứu; họ chuyển sang việc của người chết và người sống còn lại. Cao Minh nhìn hiện trường một lượt — dấu chân, vệt đất, tư thế của người chết — và đọc ra gần hết câu chuyện bằng thứ ngôn ngữ thuộc về hắn. Nhưng ai ra lệnh, ai đứng nhìn, ai sẽ nói ra — đó là việc của người phàm, và phải do người phàm tự nói."
+      "Hến Cụt tới sớm hơn giờ hẹn. Trong lúc chờ, hắn ngồi ở mạn ghe của mình làm việc của một người còn định sống lâu: tháo đoạn dây chèo bị sờn, chắp lại từng sợi, quấn chặt, cầm mái chèo lên thử cái cán đã mòn. Chuyến hàng ngày kia ra khơi lạch, hắn đã nhận phần chèo chính.",
+      "Hến Cụt đứng lên khi tên mình được đọc vào vị trí chèo chính. Hắn xin nhận chuyến hàng ngày kia thay vào — Mười Rọ không cho đổi. Hắn bèn nói lại, trước mặt cả bang, đúng câu hắn đã nói ở bến phân đàn hôm qua, nhưng lần này ở nơi câu nói ấy có giá của nó: hắn chở hàng, chở hàng cấm, nhưng không chở người đi bán. Nói xong, hắn ngồi xuống, như người đã nói hết phần của mình.",
+      "Nói xong, hắn nhìn sang người anh em ngồi cạnh — người chèo chung với hắn sáu năm, người hắn từng kéo lên khỏi mặt nước ở lạch ngoài. Người ấy nhìn xuống đôi tay mình, rồi nhìn ra mặt sông. Không nói một câu nào.",
+      "Mười Rọ giết hắn ngay tại chỗ, trước mặt cả bang. Không có cãi vã dài, không có thách đấu. Đó là một quyết định của người giữ giá: một tay chèo từ chối công khai mà còn sống, thì từ mai mọi tay chèo trong bang đều có quyền từ chối, và danh sách mua người của liên minh sẽ phải trả giá khác. Mười Rọ cần cái chết ấy để giữ kỷ luật giá cả của Thủy Xà, và hắn ra tay như người đóng một cái dấu. Anh em trong bang đứng nhìn. Không một ai bước ra. Sự im lặng của họ nặng hơn tiếng la hét.",
+      "Một thuộc hạ trẻ đưa tay ra định đỡ đầu người chết lên khỏi mặt đất ướt — rồi rút tay lại: chưa ai cho phép đụng vào. Bàn tay dừng giữa chừng một lúc mới buông xuống.",
+      "Khi Tiểu Lan, Cao Minh và Võ Văn Đực tới nơi theo bố trí vòng ngoài, việc đã xong. Tổ cứu hộ không còn việc cứu; họ chuyển sang việc của người chết và người sống còn lại. Cao Minh cúi xuống, tự tay nhấc thân người chết khỏi vũng đất ướt, đặt lên tấm ván khô của chiếc ghe úp. Hắn dừng lại ở mái chèo vừa được chắp dây: sợi dây mới quấn chặt, đều tay — của một người còn tính chuyện ngày kia. Nhưng ai ra lệnh, ai đứng nhìn, ai sẽ nói ra — đó là việc của người phàm, và phải do người phàm tự nói."
     ],
     "stageId": "can_gio",
     "title": "Hến Cụt nói không"
