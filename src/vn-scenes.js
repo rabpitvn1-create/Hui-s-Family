@@ -18819,19 +18819,11 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Lý Kha",
-        "text": "Tôi kể theo thứ tự sổ sách. Ở Tài Phòng, một khoản thu tuyến sông ghi hai con số trong hai cuốn sổ. Khoản lệch không ai ký nhận."
+        "text": "Tôi chứng một dòng thôi, thưa cô. Sổ trình lên trên ghi khoản thu của ghe ấy là thu đủ, bên cạnh có một dấu vòng — ở hệ trên, dấu vòng nghĩa là đã trừ phí đường. Sổ giữ tay ghi cùng khoản ấy thiếu đúng một đoạn, bên cạnh là một dấu gạch — ở hệ dưới, dấu gạch nghĩa là tiền đã qua tay người khác. Đọc riêng, hai dòng đều sạch. Đọc chéo, đoạn thiếu nằm đúng chỗ hai dấu gặp nhau. Và nó không ký tên ai hết."
       },
       {
         "speaker": "Lý Kha",
-        "text": "Tôi không phải người tốt mới tỉnh ra. Tôi là người vừa coi thấy tên mình trong danh sách bị đem bán. Bản kê ghi tôi nhận một khoản tôi chưa từng cầm."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Thưa, tôi hỏi một câu để ghi sổ. Những trang anh vừa kể có nằm trong hai bó sổ anh mang tới hôm nay không, hay nằm ở nơi khác?"
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, thưa anh, bản kê anh kể hiện đang niêm phong ở Tài Phòng, dưới hai lớp dấu. Tức là lời anh nói kiểm chứng được. Cả phòng này đều biết điều đó."
+        "text": "Tôi không phải người tốt mới tỉnh ra. Tôi là người vừa coi thấy tên mình trong danh sách bị đem bán. Bản kê ghi tôi nhận một khoản tôi chưa từng cầm. Một hệ sổ khôn ngoan luôn giữ sẵn tội cho từng thư lại của nó — tới lượt ai, nó chỉ việc mở thùng ra."
       },
       {
         "speaker": "Lý Kha",
@@ -18843,62 +18835,54 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, thưa anh, tôi hỏi hai điều trước khi đáp. Hai hệ sổ này còn thiếu trang nào không? Và ngoài anh ra, còn ai đọc được cả hai hệ này không?"
+        "text": "Tôi hỏi hai điều trước khi đáp: hai hệ sổ này còn thiếu trang nào không? Và ngoài anh ra, còn ai đọc được cả hai hệ này không? Sổ thiếu trang thì giá khác; sổ chỉ một người đọc được thì cách giữ cũng khác."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Thưa anh, tôi hỏi vậy để định giá cho đúng. Sổ thiếu trang thì giá khác. Sổ chỉ một người đọc được thì cách giữ cũng khác."
+        "text": "Tôi đáp rõ từng khoản. Tông môn không hứa chức vụ. Không ghế, không danh phận, không lời hẹn về sau — anh nghe cho kỹ, để sau này không ai nói tôi hứa rồi nuốt lời. Thứ tôi đưa ra: sổ tiếp nhận làm chứng cứ, có biên bản. Anh ở trong sân với tư cách nhân chứng được bảo vệ. Quá khứ hai đầu của anh ghi đúng như nó là."
       },
       {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi đáp rõ từng khoản. Tông môn không hứa chức vụ. Không ghế, không danh phận, không lời hẹn về sau. Anh nghe cho kỹ, để sau này không ai nói tôi hứa rồi nuốt lời."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Thứ tôi đưa ra là thế này: sổ tiếp nhận làm chứng cứ, có biên bản. Anh ở trong sân với tư cách nhân chứng được bảo vệ. Tôi mua chứng cứ bằng sự thật, không bằng ghế."
+        "speaker": "Cao Minh",
+        "text": "Bản chép tay anh giữ — giao nốt. Và tên người giao, bổn tọa cho công bố ngay hôm nay. Giấy nằm yên trong rương chỉ là giấy; tên người giao ra tới chợ, Tài Phòng mới phải cử động."
       },
       {
         "speaker": "Lý Kha",
-        "text": "Vậy là không có ghế. Không ghế, không danh phận. Chỉ có một chỗ ở trong sân và một biên bản ghi đúng tên tôi."
+        "text": "Thưa ngài, bản chép ấy là tự vệ của tôi — nó không phải một trang của hai hệ sổ; hai hệ tôi giao đủ, không thiếu một trang nào. Còn tên tôi: ngài công bố hôm nay, ngày mai bản kê giả kia thành bản án của tôi, và đầu mối nào còn sống cũng bị đốt sạch trước khi ai kịp đọc tới. Ngài muốn phá Tài Phòng, xin đừng phá bằng tên tôi."
       },
       {
-        "speaker": "Ký Lương",
-        "text": "Thưa cô Hạnh, khi tiếp nhận một hệ sổ lạ, thứ tự đánh số trang đi từ bìa vào hay từ trang có dấu trước? Tôi hỏi để chép cho đúng thể thức."
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Tôi ký biên bản này với một dòng ghi rõ: tiếp nhận đủ trang, đủ dấu — nội dung chưa kiểm chứng. Tôi giữ sổ; tôi không chứng thật thay ai hết."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Điều kiện ghi vào biên bản: bảo vệ trong sân là bảo vệ nhân chứng — không phải miễn tội cho việc cũ của anh. Công bố lời khai là một bước riêng, làm trước mặt anh. Anh bằng lòng thì điểm chỉ."
       },
       {
         "speaker": "Lý Kha",
-        "text": "Tôi giao cả hai bó, không thêm điều kiện nào. Tôi giữ lại đúng một thứ: bản chép tay của bản kê mang tên tôi. Thứ ấy là tự vệ của tôi."
+        "text": "Tôi nghe rõ từng khoản. Tôi giao cả hai bó."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Rút. Giấy chưa kiểm mà đem rao, khác gì chém hụt — bổn tọa không chém hụt. Lệ giấy của nhà này phiền, mà phiền có lý của nó."
       },
       {
         "speaker": "Cao Minh",
         "text": "Người bán đường sống thì trả bằng đường sống. Mua lòng trung thành là mua nhầm hàng. Bổn tọa coi cuộc mua bán này được."
       },
       {
-        "speaker": "Cao Minh",
-        "text": "Giấy nhiều thế này, đủ nhóm bếp một mùa. Đùa vậy thôi. Bổn tọa giữ giấy còn tốt hơn giữ người, giấy ít nhất không tự ý chạy sang nhà khác ban đêm."
-      },
-      {
         "speaker": "Ký Lương",
-        "text": "Thưa cô Hạnh, bó thứ hai tôi đếm được đủ số trang như lời người giao nói. Tôi xác nhận để cô đóng dấu tiếp nhận."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Tôi đọc lại biên bản tiếp nhận. Hai bó sổ, đánh số đủ, đóng dấu đủ, ghi người giao, người chứng kiến, tình trạng từng bó."
-      },
-      {
-        "speaker": "Cao Minh",
-        "text": "Ở thì ở cho yên. Bổn tọa ghét nhất loại khách tới lui hai cửa làm bẩn thềm. Đã chọn một cửa rồi thì bước cho thẳng."
+        "text": "Thưa cô Hạnh, bó thứ hai tôi đếm đủ số trang như lời người giao nói. Tôi xác nhận để cô đóng dấu tiếp nhận."
       }
     ],
     "id": "ky4_27_ly_kha_mang_hai_so",
     "location": "Tàng Kinh Các của Hạ Ô Môn, Long Hải — ngày 42, buổi sớm khi Lý Kha tự tới mang theo hai hệ sổ",
     "narration": [
-      "Lý Kha tới Tàng Kinh Các sáng ngày bốn mươi hai, sớm hơn cả giờ mở cửa ghi danh. Hắn tới một mình, không đoàn, không trát. Hai tay hắn ôm hai bó sổ bọc trong hai tấm vải khác màu, đặt xuống bàn của Đỗ Thị Hạnh. Đây là hai hệ sổ của cùng một chuỗi thu chi tuyến chợ và tuyến sông: một hệ trình lên trên, con số tròn trịa; một hệ giữ dưới tay, ghi đúng tiền đi qua tay ai. Hôm nay hắn mang tới nguyên hệ.",
-      "Hắn kể lại thứ đã thấy ở buổi niêm phong Tài Phòng, kể bằng giọng kể một bút toán, không thêm cảm xúc. Một khoản thu tuyến sông ghi hai con số trong hai cuốn sổ, lệch nhau đúng một khoản không ai ký nhận. Một bản kê phụ ghi một khoản tiền mặt lớn đứng tên hắn là người nhận, chữ ký giống bút tích của hắn, mà hắn chưa từng nhận khoản ấy. Hắn phân tích lạnh như phân tích sổ của người khác: một hệ sổ khôn ngoan luôn giữ sẵn tội cho từng thư lại của nó. Khi hệ sổ cần một cái tên để đổ lỗi, nó chỉ việc mở thùng ra. Hắn đã làm nghề dọn đường đổ tội cho người khác đủ lâu để nhận ra lần này lượt đang tới là lượt của mình.",
-      "Kể xong, hắn ra giá thẳng. Hắn muốn một vị trí trong hệ sổ sách của tông môn: một cái ghế có tên, có danh phận, để khi hệ sổ cũ tới đòi người, hắn không còn là thư lại bỏ trốn. Hắn nói rõ giá trị của hai bó sổ: từng phía mới coi được một nửa của chuỗi tiền, hai bó này nối hai nửa ấy lại, và chỉ hắn đọc được cả hai hệ như đọc một cuốn. Tiểu Lan ngồi nghe, không đáp ngay. Cao Minh lên tiếng trước, hỏi giá của hai bó sổ như hỏi giá một mẻ cá ở bến.",
-      "Tiểu Lan đáp rõ ràng, chậm, từng khoản một, trong lúc Hạnh ghi biên bản. Tông môn không hứa chức vụ. Không ghế, không danh phận, không một lời hẹn về sau để treo trước mặt hắn. Thứ nàng đưa ra thay vào đó cũng được nói thành từng món: hai hệ sổ được tiếp nhận làm chứng cứ, có biên bản ghi đúng người mang tới, ngày giờ, tình trạng từng bó. Hắn được ở lại trong sân với tư cách nhân chứng đang được bảo vệ. Và quá khứ hai đầu của hắn được ghi đúng như nó là trong biên bản. Nàng nói lý do theo lối của nàng: ghế mua bằng sổ thì sau này sổ cũng bán được cho một cái ghế khác. Ở mép bàn, Ký Lương chép buổi tiếp nhận không sót một chữ, mắt dừng lâu ở thể thức biên bản của Hạnh.",
-      "Lý Kha ngồi lặng một nhịp dài. Rồi hắn đẩy cả hai bó sổ qua phía Hạnh, qua hết đường bàn, không giữ lại một bó nào làm con tin. Lý do hắn nói toạc ra: ở lại với hệ sổ cũ, hắn chắc chắn tới lượt bị bán. Ở đây, không có ghế, nhưng còn đường sống. Hắn chọn đường sống — hôm nay chọn vậy, ngày mai lại chọn tiếp, không thề thốt gì xa hơn. Hắn chỉ giữ lại cho riêng mình đúng một thứ, và nói thẳng là mình giữ: bản chép tay của bản kê mang tên hắn. Cao Minh cầm một cuốn sổ lên, lật hai trang, rồi nói toạc bản chất của thương vụ này.",
-      "Đỗ Thị Hạnh hoàn tất biên bản tiếp nhận hai hệ sổ ngay trong buổi sáng. Từng bó được đánh số, đóng dấu, ghi người giao, người chứng kiến, số trang. Lý Kha điểm chỉ vào biên bản với tư cách người giao chứng cứ. Không dòng nào ghi hắn được bổ nhiệm vào bất cứ việc gì. Hai hệ sổ nằm trong Tàng Kinh Các từ buổi sáng ấy là một mối họa bằng giấy chờ ngày nổ cho nhiều phía cho nhiều phía. Ngoài chợ, có một người khác cũng đang tính sổ theo cách của mình: Cai Lẫm đang tính một nước không còn bằng giấy nữa."
+      "Lý Kha tới Tàng Kinh Các sáng ngày bốn mươi hai. Hắn tới một mình, không đoàn, không trát. Hắn ôm hai bó sổ bọc trong hai tấm vải khác màu, đặt xuống bàn của Đỗ Thị Hạnh — và đặt bên cạnh, riêng ra, một bản chép tay trên tờ giấy đã gấp tư. Hai bó là hai hệ sổ của cùng một chuỗi thu chi: một hệ trình lên trên, con số tròn trịa; một hệ giữ dưới tay, ghi đúng tiền đi qua tay ai. Hắn tới vì tên hắn vừa hiện ra trong danh sách những người sắp bị hệ sổ cũ đem bán — tư lợi đặt xuống bàn trước mọi lời cầu xin.",
+      "Hắn kể bằng giọng kể một bút toán, không thêm cảm xúc. Ở buổi niêm phong Tài Phòng, một bản kê phụ ghi một khoản tiền mặt lớn đứng tên hắn — chữ ký giống bút tích của hắn, mà hắn chưa từng nhận khoản ấy. Hắn đã làm nghề dọn đường đổ tội cho người khác đủ lâu để nhận ra lần này lượt đang tới là lượt của mình. Hắn mở cả hai bó sổ ra, tìm tới cùng một khoản thu, và đặt hai trang sổ cạnh nhau cho cả phòng đọc.",
+      "Tiểu Lan đáp rõ ràng, chậm, từng khoản một, trong lúc Hạnh ghi biên bản. Nàng nói lý do theo lối của nàng: ghế mua bằng sổ thì sau này sổ cũng bán được cho một cái ghế khác. Ở mép bàn, Ký Lương chép buổi tiếp nhận không sót một chữ, mắt dừng lâu ở thể thức biên bản của Hạnh. Lý Kha ngồi lặng một nhịp dài. Rồi câu chuyện rẽ sang phần việc nặng nhất của buổi sáng: đối chiếu.",
+      "Phần đối chiếu, Tiểu Lan nhận hết. Nàng nói nàng đã đọc qua bản kê mảnh Sổ, quen lối dấu của tuyến này — nàng làm phần chéo hai hệ trong đêm nay, sáng mai có kết quả. Không ai trong phòng thấy có gì lạ trong lời ấy: nàng vẫn là người đọc giấy nhanh nhất nhà này. Chỉ có một việc nhỏ xảy ra, nhỏ đến mức chỉ Hạnh — người ngồi chép bên cạnh — mới thấy: Tiểu Lan đọc tới một khoản ở bó thứ hai, dừng lại, quay lui đọc lại từ đầu khoản — đúng khoản nàng vừa đánh dấu xong bằng một nét chì ở mép trang. Nàng đọc nó lần thứ hai như đọc lần đầu, mặt không đổi sắc, rồi chép tiếp. Khi phần đối chiếu dở dang còn lại một đoạn cuối của bó thứ hai, nàng xếp đoạn ấy xuống dưới phần đã xong, ngay ngắn, như xếp một việc đã hoàn tất.",
+      "Người kết thúc cuộc thương lượng không phải Tiểu Lan. Đỗ Thị Hạnh đọc biên bản — cả dòng chưa kiểm chứng — rồi đẩy về phía Lý Kha. Lý Kha điểm chỉ. Sau đó hắn mới đẩy cả hai bó sổ qua hết đường bàn, về phía nàng — không giữ lại một bó nào làm con tin. Cái hắn giữ lại duy nhất là tờ bản chép đã gấp tư, hắn cất vào ngực áo trước mặt mọi người, không giấu. Hạnh trao biên bản có đóng dấu. Hai người ấy kết thúc cuộc mua bán này.",
+      "Đỗ Thị Hạnh hoàn tất việc niêm phong hai hệ sổ. Từng bó được đánh số, đóng dấu, ghi người giao, người chứng kiến, số trang. Không dòng nào ghi hắn được bổ nhiệm vào bất cứ việc gì. Phần đối chiếu còn dở của bó thứ hai, Hạnh lặng lẽ dời về phía bàn của mình lúc nào không ai để ý — nàng chưa mở nó ra, chưa biết trong đó có gì, và buổi sáng này không ai cảm ơn nàng vì việc ấy. Hai hệ sổ nằm trong Tàng Kinh Các từ buổi sáng ấy là một mối họa bằng giấy chờ ngày nổ cho nhiều phía. Ngoài chợ, có một người khác cũng đang tính sổ theo cách của mình: Cai Lẫm đang tính một nước không còn bằng giấy nữa."
     ],
     "stageId": "long_hai",
     "title": "Lý Kha mang hai sổ"
