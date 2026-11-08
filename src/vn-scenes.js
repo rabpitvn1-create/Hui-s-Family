@@ -21962,7 +21962,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Tôi đã soạn sẵn khung tờ đòi tin từ đêm qua, thưa cô. Căn cứ giữ người, yêu cầu xác nhận người còn sống, yêu cầu cho người nhà gửi đồ và gặp mặt theo lệ. Chỉ còn chờ cô quyết: ai là người ký tên đầu tiên vào tờ giấy này."
+        "text": "Tôi đã soạn sẵn khung tờ đòi tin từ đêm qua, thưa cô. Căn cứ giữ người, yêu cầu xác nhận người còn sống, yêu cầu cho người nhà gửi đồ và gặp mặt theo lệ. Lệ của phân đàn mình, lời hứa nào cũng phải đủ ba thứ mới thành việc: có người hứa chịu trách nhiệm, có người làm chứng, và có hạn chót ghi rõ ngày. Thiếu một thứ, nó chỉ là lời nói tử tế, không đòi ai được."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -22896,7 +22896,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Nguyễn Văn Thạo",
-        "text": "Thưa cô, ghe dân đầu tiên đang ra lạch rồi. Người chèo nhìn hàng tàu mà tay còn run, nhưng ghe vẫn đi. Tôi cho hai tổ Hộ Pháp đứng ở hai đầu tuyến như thường lệ — từ hôm nay, tuyến này chạy dưới sự chứng kiến của cả một hạm đội không còn bắn được. Chuyện này, dân ghe sẽ kể cho nhau nghe tới mấy đời."
+        "text": "Thưa cô, ghe dân đầu tiên đang ra lạch rồi. Người của tôi giữ nguyên vị trí như đã hứa, không một ai tự ý rời lán trong suốt lúc pháo quay nòng. Người chèo nhìn hàng tàu mà tay còn run, nhưng ghe vẫn đi."
       },
       {
         "speaker": "Cao Minh",
@@ -22911,7 +22911,7 @@ export const VN_SCENES = Object.freeze({
     "location": "Cửa sông Cần Giờ — ngày 56",
     "narration": [
       "Sau cái khép tay ở cửa sông, Vauclerc đổi cách đánh đúng như Tiểu Lan đã đoán: nếu không dùng được lệnh của mạng, không thắng được người, thì dùng vị trí và tiếng pháo để ép giấy. Sáng ngày năm mươi sáu, đội tàu dàn hàng ngang mới, các nòng pháo quay chậm rãi về phía tuyến ghe dân — không bắn, chỉ quay. Một thông điệp hành chính có thời hạn được đưa vào bến bằng xuồng nhỏ: sau một khắc, đội tàu sẽ bắn chỉ thiên để giữ trật tự, và sẽ bắn cho tới khi phân đàn chấp nhận kiểm tra mọi ghe qua cửa sông.",
-      "Thạo giữ ghe dân trong lạch, cho người xuống hết vào lán, và xin Cao Minh một lời. Tiểu Lan đứng ở đầu bến nhìn hàng tàu, bình tĩnh tới mức người của Hộ Pháp cũng bình tĩnh theo. Nàng biết viên quan Pháp đang diễn một màn có tính giờ: hỏa lực răn đe là thứ vũ khí của kẻ không còn nhiều quân bài, và màn diễn ấy chỉ có giá trị chừng nào chưa ai gọi nó là diễn. Nàng để hắn diễn trọn lễ thức của hắn — một khắc, rồi năm nhịp đếm cuối cùng được đọc to qua ống loa tay.",
+      "Thạo giữ ghe dân trong lạch, cho người xuống hết vào lán, hứa với Lan người của hắn không rời vị trí một bước chừng nào nàng chưa gật đầu, và xin Cao Minh một lời. Tiểu Lan đứng ở đầu bến nhìn hàng tàu, bình tĩnh tới mức người của Hộ Pháp cũng bình tĩnh theo. Nàng biết viên quan Pháp đang diễn một màn có tính giờ: hỏa lực răn đe là thứ vũ khí của kẻ không còn nhiều quân bài, và màn diễn ấy chỉ có giá trị chừng nào chưa ai gọi nó là diễn. Nàng để hắn diễn trọn lễ thức của hắn — một khắc, rồi năm nhịp đếm cuối cùng được đọc to qua ống loa tay.",
       "Giữa nhịp đếm thứ ba, Cao Minh khép tay lại lần thứ hai trong hai ngày. Lần này không có vật chủ nào cần giữ; lần này chỉ có sắt thép cần im lặng. Trên cả bảy chiếc tàu, cùng một khoảnh khắc, mọi nòng pháo nguội lạnh như vừa ngâm nước cả đêm, mọi cơ cấu khóa nòng chết cứng, mọi viên đạn nằm trong khoang bỗng là những cục chì không còn chút sinh khí nào của thuốc súng. Đội pháo thủ nhốn nháo kiểm tra trong tiếng lệnh dồn dập — và Vauclerc, đứng trên boong tàu chỉ huy, hiểu ra trước thuộc cấp của mình vài giây. Hắn quay lại nhìn người đàn ông ở đầu bến đang nâng chén rượu lên ngang tầm mắt, như ngắm màu rượu trong nắng sớm.",
       "Không một phát súng nào nổ. Không một người nào bị thương. Màn áp lực tốn kém nhất mà phía thuộc địa có thể dựng ở cửa sông này vừa kết thúc bằng một sự im lặng tuyệt đối — thứ im lặng mà về sau, trong báo cáo của Vauclerc gửi về Sài Gòn, hắn sẽ phải tìm một cách viết khác hẳn sự thật, vì sự thật không có ô nào trong mẫu báo cáo của quân đội để điền vào."
     ],
