@@ -4673,7 +4673,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "id": "chain_first",
-        "text": "Cắt thẳng mắt xích gánh tải trước cho nhanh — bất chấp phần tải của chuông và đèn sẽ giật ngược vào thân thể Tiểu Lan.",
+        "text": "Cắt thẳng mắt xích gánh tải trước cho nhanh.",
         "next": "lh_wrong_order"
       }
     ]
@@ -4800,7 +4800,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "id": "panic_cut",
-        "text": "Hoảng loạn — chém phăng cả neo chuông lẫn neo đèn cùng một lúc cho dứt điểm.",
+        "text": "Chém phăng cả neo chuông lẫn neo đèn cùng một lúc cho dứt điểm.",
         "next": "lh_dead_order"
       }
     ]
@@ -6676,7 +6676,7 @@ export const VN_SCENES = Object.freeze({
     "choices": [
       {
         "id": "follow_ship",
-        "text": "Theo tàu trẻ em vào cửa sông ngay.",
+        "text": "Bỏ vòng nợ lại sau, theo tàu trẻ em vào cửa sông ngay.",
         "next": "vt_children_pursuit",
         "route": {
           "id": "tu_quyet",
@@ -6688,7 +6688,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "id": "stay_ledger",
-        "text": "Ở lại gỡ vòng nợ trước.",
+        "text": "Ủy nhiệm người ở bến giữ việc gỡ vòng nợ, đoàn theo tàu trẻ em vào cửa sông.",
         "next": "vt_children_pursuit",
         "route": {
           "id": "bao_ho",
@@ -6895,7 +6895,7 @@ export const VN_SCENES = Object.freeze({
         "unless": "thuNguyetFollows"
       },
       "Từ trên boong tàu nhìn về phía bờ, đoàn thấy rõ phần còn lại của thế giới này vẫn đang vận hành như thường. Ở xa phía cửa sông, một con tàu khác của tuyến đang đi vào trong đúng lịch của nó, phu chèo đều, giấy tờ đầy đủ, không một ai trên bờ ngẩng lên nhìn nó lấy một lần — vì nó là chuyện thường ngày. Trạm nhịp trên bờ vẫn truyền nhịp xuống mặt nước theo giờ của nó. Bàn tay trả tiền ở đâu đó sau lưng tang quán vẫn chưa hề biết chuyến hàng này bị chặn, hoặc đã biết mà vẫn còn khối việc khác để làm. Tiểu Lan nói rõ phần thắng của buổi sáng này, nói như người kê một bản kê không cho phép mình kê thừa: đoàn chặn được con tàu này, và những con người cụ thể trên con tàu này. Không hơn. Tuyến vẫn còn nguyên ngoài kia, và nàng không cho phép ai trong đoàn — kể cả chính nàng — gọi buổi sáng này bằng một cái tên lớn hơn nó.",
-      "Rồi tiếng gõ vọng ra. Từ trong các cỗ quan tài, qua lớp gỗ mỏng, tiếng gõ khẽ khàng nổi lên — đều, rất đều, đi đúng theo nhịp chân của người gác còn sót lại trên tàu đang dậm xuống boong theo thói quen của một thân thể chưa kịp biết lệnh đã mất đầu phát. Người trong các cỗ vẫn gõ theo nhịp của kẻ khác, vì đó là điều họ đã bị dạy, và chưa ai nói cho họ biết rằng từ giây phút này họ không cần gõ nữa. Đoàn đứng yên nghe một lúc. Rồi Tiểu Lan quyết định: mở cỗ đầu tiên. Không phải cỗ to nhất, không phải cỗ gần nhất — cỗ có tiếng gõ yếu nhất. Việc mở nắp, và mọi điều sau đó, thuộc về khoảnh khắc kế tiếp. Mọi việc dừng ở quyết định ấy, khi tay nàng đã đặt lên mép nắp cỗ quan tài đầu tiên."
+      "Rồi tiếng gõ vọng ra. Từ trong các cỗ quan tài, qua lớp gỗ mỏng, tiếng gõ khẽ khàng nổi lên — đều, rất đều, đi đúng theo nhịp chân của người gác còn sót lại trên tàu đang dậm xuống boong theo thói quen của một thân thể chưa kịp biết lệnh đã mất đầu phát. Người trong các cỗ vẫn gõ theo nhịp của kẻ khác, vì đó là điều họ đã bị dạy, và chưa ai nói cho họ biết rằng từ giây phút này họ không cần gõ nữa. Đoàn đứng yên nghe một lúc. Tiểu Lan chỉ ra cỗ có tiếng gõ yếu nhất — không phải cỗ to nhất, không phải cỗ gần nhất — và đặt tay lên mép nắp của nó. Nhưng con tàu chưa được giữ yên: phu tàu còn trên boong, dây chưa cột vào bãi, trạm bờ chưa hay biết gì. Thứ tự của hai việc — mở nắp trước, hay giữ con tàu này trước — là quyết định của chính khoảnh khắc này."
     ],
     "dialogue": [
       {
@@ -10270,34 +10270,12 @@ export const VN_SCENES = Object.freeze({
     ],
     "choices": [
       {
-        "id": "close_the_class_quietly",
-        "text": "Khép buổi học bình thường: không ghi sổ, không bàn lại mẩu dấu hiệu em đã tự chọn nói — việc của lớp là chữ, không phải tin.",
-        "next": "ky3_15_su_tri_nhuan",
-        "effects": {
-          "lanTrustDelta": 1
-        },
-        "route": {
-          "id": "bao_ho",
-          "delta": 1
-        },
         "flags": {
           "ky3BeSauSpokeFreely": true
-        }
-      },
-      {
-        "id": "her_name_page_is_hers",
-        "text": "Để Bé Sáu tự giữ trang tên của mình và tự quyết mai có học tiếp hay không — trang chữ thuộc về em trọn vẹn.",
+        },
+        "id": "continue",
         "next": "ky3_15_su_tri_nhuan",
-        "effects": {
-          "lanTrustDelta": 2
-        },
-        "route": {
-          "id": "tu_quyet",
-          "delta": 1
-        },
-        "flags": {
-          "ky3BeSauSpokeFreely": true
-        }
+        "text": "Tiếp tục"
       }
     ]
   },
@@ -14909,34 +14887,12 @@ export const VN_SCENES = Object.freeze({
     ],
     "choices": [
       {
-        "id": "guard_the_names_first",
-        "text": "Ưu tiên giữ người và giữ tên trước cơn bão: hồ sơ Nhân Danh phân tán xong xuôi, ghe vào bờ hết, sân lễ chốt việc phàm rồi mới tính chuyện các phe.",
-        "next": "ky4_01_stub",
-        "effects": {
-          "lanTrustDelta": 1
-        },
-        "route": {
-          "id": "bao_ho",
-          "delta": 1
-        },
         "flags": {
           "ky3LanDeclaredHerPart": true
-        }
-      },
-      {
-        "id": "her_words_stand",
-        "text": "Để nguyên quyết định của nàng như nàng đã nói — không thêm một lời hứa, không sửa một chữ; chén rượu thứ hai ở yên trên thềm đá làm chứng.",
+        },
+        "id": "continue",
         "next": "ky4_01_stub",
-        "effects": {
-          "lanTrustDelta": 2
-        },
-        "route": {
-          "id": "tu_quyet",
-          "delta": 1
-        },
-        "flags": {
-          "ky3LanDeclaredHerPart": true
-        }
+        "text": "Tiếp tục"
       }
     ]
   },
@@ -16562,36 +16518,12 @@ export const VN_SCENES = Object.freeze({
     "backgroundId": "long-hai-fish-wharf",
     "choices": [
       {
-        "effects": {
-          "civiliansSavedDelta": 3,
-          "partyHealthDelta": 1
-        },
         "flags": {
           "ky4MarketScaleLawBroken": true
         },
-        "id": "ky4_market_breaks_scale_law",
+        "id": "continue",
         "next": "ky4_12_cuu_ghe_doat_me",
-        "route": {
-          "delta": 1,
-          "id": "bao_ho"
-        },
-        "text": "Để người chợ hoàn tất việc mình bắt đầu: các sạp mang cân nhà ra cân thay phiên, đệ tử chỉ đứng giữ lối lên bờ thông thoáng cho ghe vào."
-      },
-      {
-        "effects": {
-          "civiliansSavedDelta": 1,
-          "lanTrustDelta": 2
-        },
-        "flags": {
-          "ky4MarketScaleLawBroken": true
-        },
-        "id": "ky4_coercion_removed_not_permission",
-        "next": "ky4_12_cuu_ghe_doat_me",
-        "route": {
-          "delta": 1,
-          "id": "tu_quyet"
-        },
-        "text": "Chốt lại trước bến: đạo quán chỉ phá quyền chặn người bằng sức, việc bỏ lệ cân là quyết định của chợ — ngày mai chợ tự đối chiếu cân nhà với nhau."
+        "text": "Tiếp tục"
       }
     ],
     "companions": [],
