@@ -3,6 +3,8 @@ import { CHARACTER_OVERLAYS, companionDisplayName, resolveCompanionId } from "./
 import { resolveCharacterOverlay } from "./character-appearance.js";
 import { ENTITY_OVERLAYS, ENTITY_DISPLAY_NAMES, resolveEntityId, resolveEntitySrc } from "./entity-overlays.js";
 
+import { mountSceneBackground } from "./scene-background.js";
+
 const STAGES = Object.freeze([
   {
     "id": "long_hai",
@@ -102,6 +104,9 @@ export function initMissionInterface() {
   const stageCharacterWrap = document.querySelector(".stage-character-wrap");
   let lastSceneId = "";
   let sceneAnimationTimer = 0;
+  // Background snapshot (Living Scene): chỉ lớp nền, nhân vật giữ nguyên.
+  // Mount một lần ở đầu #story-panel, sync theo snapshot game mỗi lượt.
+  const sceneBackground = storyPanel ? mountSceneBackground(storyPanel, null) : null;
 
   if (window.HuaAndroid) body.classList.add("native-apk");
 
@@ -269,10 +274,11 @@ export function initMissionInterface() {
     if (!snapshot || typeof snapshot !== "object") return;
     syncRoute(snapshot);
     syncTarget(snapshot);
+    sceneBackground?.sync(snapshot);
     syncStage(snapshot);
     animateScene(String(snapshot?.scene?.id || `turn-${numberOr(snapshot?.turn)}`));
   }
-
+  
   function resizeActionInput() {
     if (!(actionInput instanceof HTMLTextAreaElement)) return;
     actionInput.style.height = "auto";
