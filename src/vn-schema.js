@@ -64,6 +64,11 @@ export function validateVnScenes(scenes, startId) {
     if (scene?.entity !== undefined && typeof scene.entity !== "boolean"
       && !(typeof scene.entity === "string" && Object.hasOwn(ENTITY_OVERLAYS, scene.entity)))
       errors.push(key + ": entity must be boolean or a known entity overlay id");
+    // showProtagonist: chỉ đạo sân khấu — cảnh khai báo false thì ẩn hẳn
+    // nhân vật chính (và hai thanh kiếm) khỏi Snapshot ở cảnh này; thiếu
+    // khai báo thì mặc định hiện như mọi cảnh khác.
+    if (scene?.showProtagonist !== undefined && typeof scene.showProtagonist !== "boolean")
+      errors.push(key + ": showProtagonist must be boolean");
     // Phòng Đối Sổ: cảnh ngoài mạch truyện (debrief:true) — không tiến
     // trình, đúng một lựa chọn retry về checkpoint, có vào backlog.
     if (scene?.debrief !== undefined && typeof scene.debrief !== "boolean")

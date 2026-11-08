@@ -272,6 +272,7 @@ export function initGame() {
         (id) => !(id === "le_thu_nguyet" && state.flags?.thuNguyetStays === true)
       ),
       entity: card.entity || false,
+      showProtagonist: card.showProtagonist !== false,
       choices: (card.choices || []).map((item) => item.text)
     };
     // Hiệu ứng bắt buộc tại cảnh: áp đúng MỘT lần cho mỗi lượt chơi, kể cả

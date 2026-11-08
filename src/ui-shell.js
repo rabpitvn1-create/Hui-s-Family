@@ -99,6 +99,7 @@ export function initMissionInterface() {
   const stageSceneName = document.querySelector("#stage-scene-name");
   const stageBackground = document.querySelector("#stage-background");
   const stageCharacter = document.querySelector("#stage-character");
+  const stageCharacterWrap = document.querySelector(".stage-character-wrap");
   let lastSceneId = "";
   let sceneAnimationTimer = 0;
 
@@ -247,6 +248,11 @@ export function initMissionInterface() {
         stageCompanionName.textContent = companionId ? companionDisplayName(companionId, snapshot?.scene) : "";
       }
     }
+
+    // Cảnh khai báo showProtagonist: false (chỉ đạo kịch bản, vd cảnh
+    // trạm ngày 63): ẩn cả khối nhân vật chính + hai thanh kiếm; cảnh
+    // sau không khai báo thì hiện lại như thường.
+    stageCharacterWrap?.classList.toggle("stage-protagonist-off", snapshot?.scene?.showProtagonist === false);
 
     const pose = active ? POSE_ENCOUNTER : POSE_EXPLORE;
     if (stageCharacter && stageCharacter.getAttribute("src") !== pose) {

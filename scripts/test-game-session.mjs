@@ -253,12 +253,13 @@ for (const flag of ["ky4CensusRefusedAtGate", "ky4BayLuocEnteredSect", "ky4Black
 }
 // Kỳ V — Tam Giang Huyết Chiến (hệ 9 agent, 2026-11-07): ky5_01_stub
 // đã là cảnh V01 chính thức (giữ id, thay nội dung, bỏ sliceEnd), mạch
-// 49 cảnh chạy liền tới V49 (sliceEnd, hết Arc I). Đi nhánh đầu tiên
+// 49 cảnh chạy liền tới V49 (sliceEnd, hết Arc I) — cộng cảnh trạm
+// ky5_38a chèn giữa V38 và V39 (Issue #35 G3, 2026-11-08). Đi nhánh đầu tiên
 // mọi cảnh. Vào V01 ký ức vẫn 79; khoản −11 khóa nằm ở sceneEffects
 // của V42 (áp khi VÀO cảnh) — trước V42 ký ức nguyên 79, từ V42 là 68.
 assert.equal(game.bridge.getSnapshot().scene.id, "ky5_01_stub");
 assert.equal(game.bridge.getSnapshot().scene.choices.length, 2);
-for (const expected of ["ky5_02_hai_nguoi_o_tram", "ky5_03_khong_trao_nguoi", "ky5_04_giay_doi_tin", "ky5_05_bai_dat_moi_dung", "ky5_06_ghe_cho_nguoi", "ky5_07_hen_cut_noi_khong", "ky5_08_ham_doi_biet_ten_han", "ky5_09_khep_mach_trung", "ky5_10_thuy_xa_tu_xu", "ky5_11_ham_doi_tat_hoa_luc", "ky5_12_khau_sung_dat_xuong", "ky5_13_cua_bien_khong_chu", "ky5_14_nhung_nguoi_con_cheo", "ky5_15_bun_giu_dau_chan", "ky5_16_duong_nuoc_qua_rung", "ky5_17_bien_ban_cho_nguoi", "ky5_18_hac_thuy_dai", "ky5_19_cat_diem_noi_thu_nhat", "ky5_20_nguoi_con_tinh", "ky5_21_giua_hai_tieng_keng", "ky5_22_ban_sao_o_sai_ban", "ky5_23_so_de_tu_mat_dau", "ky5_24_ban_giay_cua_phan_tuong", "ky5_25_hai_ban_danh_sach", "ky5_26_sau_ghe_mot_chuc_su", "ky5_27_phe_tong_bi_phe", "ky5_28_phe_khong_con_chu", "ky5_29_men_mo_so_tai", "ky5_30_gioi_phong_doi_nguoi", "ky5_31_bach_cot_ben", "ky5_32_nguoi_duoc_hoi", "ky5_33_cat_diem_noi_thu_hai", "ky5_34_men_doc_so_cua_song", "ky5_35_lien_minh_tu_can", "ky5_36_duong_toi_mau_trieu", "ky5_37_khong_phai_cho_chem", "ky5_38_thieu_than_truoc_den", "ky5_39_bay_muoi_chin", "ky5_40_hai_con_duong_that", "ky5_41_khong_phai_van_co", "ky5_42_phan_thanh_lan_ba", "ky5_43_dan_im_mach_con", "ky5_44_vong_sang_tren_nuoc", "ky5_45_nguoi_di_nguoi_o", "ky5_46_can_rung_khong_ten", "ky5_47_sau_ghe_khong_chu", "ky5_48_nhung_nguoi_con_o", "ky5_49_chiec_ghe_da_va_vo_ruou"]) {
+for (const expected of ["ky5_02_hai_nguoi_o_tram", "ky5_03_khong_trao_nguoi", "ky5_04_giay_doi_tin", "ky5_05_bai_dat_moi_dung", "ky5_06_ghe_cho_nguoi", "ky5_07_hen_cut_noi_khong", "ky5_08_ham_doi_biet_ten_han", "ky5_09_khep_mach_trung", "ky5_10_thuy_xa_tu_xu", "ky5_11_ham_doi_tat_hoa_luc", "ky5_12_khau_sung_dat_xuong", "ky5_13_cua_bien_khong_chu", "ky5_14_nhung_nguoi_con_cheo", "ky5_15_bun_giu_dau_chan", "ky5_16_duong_nuoc_qua_rung", "ky5_17_bien_ban_cho_nguoi", "ky5_18_hac_thuy_dai", "ky5_19_cat_diem_noi_thu_nhat", "ky5_20_nguoi_con_tinh", "ky5_21_giua_hai_tieng_keng", "ky5_22_ban_sao_o_sai_ban", "ky5_23_so_de_tu_mat_dau", "ky5_24_ban_giay_cua_phan_tuong", "ky5_25_hai_ban_danh_sach", "ky5_26_sau_ghe_mot_chuc_su", "ky5_27_phe_tong_bi_phe", "ky5_28_phe_khong_con_chu", "ky5_29_men_mo_so_tai", "ky5_30_gioi_phong_doi_nguoi", "ky5_31_bach_cot_ben", "ky5_32_nguoi_duoc_hoi", "ky5_33_cat_diem_noi_thu_hai", "ky5_34_men_doc_so_cua_song", "ky5_35_lien_minh_tu_can", "ky5_36_duong_toi_mau_trieu", "ky5_37_khong_phai_cho_chem", "ky5_38_thieu_than_truoc_den", "ky5_38a_tram_ngay_63", "ky5_39_bay_muoi_chin", "ky5_40_hai_con_duong_that", "ky5_41_khong_phai_van_co", "ky5_42_phan_thanh_lan_ba", "ky5_43_dan_im_mach_con", "ky5_44_vong_sang_tren_nuoc", "ky5_45_nguoi_di_nguoi_o", "ky5_46_can_rung_khong_ten", "ky5_47_sau_ghe_khong_chu", "ky5_48_nhung_nguoi_con_o", "ky5_49_chiec_ghe_da_va_vo_ruou"]) {
   game.bridge.applyScriptChoice(0);
   assert.equal(game.bridge.getSnapshot().scene.id, expected);
   // Chặng KHÔNG được lật khỏi Cần Giờ trong toàn Kỳ V: objective
@@ -269,6 +270,18 @@ for (const expected of ["ky5_02_hai_nguoi_o_tram", "ky5_03_khong_trao_nguoi", "k
     // Link Lệnh khai báo CẤP CẢNH tại V37 (áp khi vào cảnh).
     assert.equal(game.bridge.getSnapshot().flags.vnLinks.lenh, "identified");
     assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+  }
+  if (expected === "ky5_38a_tram_ngay_63") {
+    // Cảnh trạm: Cao Minh vắng mặt hẳn khỏi Snapshot (showProtagonist
+    // false truyền qua presentScene), ký ức vẫn nguyên 79 ở ngày 63.
+    assert.equal(game.bridge.getSnapshot().scene.showProtagonist, false);
+    assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);
+  }
+  if (expected === "ky5_39_bay_muoi_chin") {
+    // Rời cảnh trạm bằng lựa chọn duy nhất: cờ đình chỉ giấy đi tuyến
+    // đã đặt, và nhân vật chính hiện lại ở cảnh sau.
+    assert.equal(game.bridge.getSnapshot().flags.ky5RiverPassSuspended, true);
+    assert.equal(game.bridge.getSnapshot().scene.showProtagonist, true);
   }
   if (expected === "ky5_41_khong_phai_van_co") {
     assert.equal(game.bridge.getSnapshot().campaignStats.memoryIntegrity, 79);

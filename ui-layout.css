@@ -631,6 +631,10 @@ body.intel-open .intel-scrim {
 
 /* Khung bọc nhân vật chính: giữ đúng vị trí/kích thước overlay cũ,
    làm sân cho Thái Cổ Song Sát xoay quanh Cao Minh. */
+.stage-character-wrap.stage-protagonist-off {
+  display: none;
+}
+
 .stage-character-wrap {
   position: absolute;
   right: 0;
