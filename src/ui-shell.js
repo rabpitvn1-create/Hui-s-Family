@@ -3,7 +3,7 @@ import { CHARACTER_OVERLAYS, companionDisplayName, resolveCompanionId } from "./
 import { resolveCharacterOverlay } from "./character-appearance.js";
 import { ENTITY_OVERLAYS, ENTITY_DISPLAY_NAMES, resolveEntityId, resolveEntitySrc } from "./entity-overlays.js";
 
-import { mountSceneBackground } from "./scene-background.js";
+import { fadeSwapBackground } from "./scene-background.js";
 
 const STAGES = Object.freeze([
   {
@@ -104,9 +104,6 @@ export function initMissionInterface() {
   const stageCharacterWrap = document.querySelector(".stage-character-wrap");
   let lastSceneId = "";
   let sceneAnimationTimer = 0;
-  // Background snapshot (Living Scene): chỉ lớp nền, nhân vật giữ nguyên.
-  // Mount một lần ở đầu #story-panel, sync theo snapshot game mỗi lượt.
-  const sceneBackground = storyPanel ? mountSceneBackground(storyPanel, null) : null;
 
   if (window.HuaAndroid) body.classList.add("native-apk");
 
@@ -209,8 +206,10 @@ export function initMissionInterface() {
     const backgroundId = resolveSceneBackground(snapshot);
     const source = SCENE_BACKGROUNDS[backgroundId];
     if (stageBackground) {
-      if (source && stageBackground.getAttribute("src") !== source) stageBackground.setAttribute("src", source);
+      // Background snapshot fade (Living Scene): nền đổi thì ảnh cũ
+      // fade-out rồi ảnh mới fade-in nối tiếp; cùng ảnh thì đứng yên.
       stageBackground.hidden = !source;
+      if (source) fadeSwapBackground(stageBackground, source);
     }
     const title = String(snapshot?.scene?.title || "").trim();
     if (stageSceneName && title) stageSceneName.textContent = title;
@@ -273,8 +272,7 @@ export function initMissionInterface() {
   function sync(snapshot) {
     if (!snapshot || typeof snapshot !== "object") return;
     syncRoute(snapshot);
-    syncTarget(snapshot);
-    sceneBackground?.sync(snapshot);
+    syncTarget(snapshot
     syncStage(snapshot);
     animateScene(String(snapshot?.scene?.id || `turn-${numberOr(snapshot?.turn)}`));
   }
