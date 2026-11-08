@@ -17308,6 +17308,18 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Dương Thất Nương",
+        "text": "Chị Lành, tới lượt chị. Đêm qua chị ngủ được mấy canh?"
+      },
+      {
+        "speaker": "Bùi Thị Lành",
+        "text": "Thưa bà, tôi không dám ngủ sâu. Ngủ sâu là tay tôi nó đi đâu tôi không biết. Tôi chỉ chợp mắt từng chập, rồi giật mình coi lại tay mình còn ở yên không."
+      },
+      {
+        "speaker": "Bùi Thị Lành",
+        "text": "Việc xếp khăn bà giao, thưa bà, tôi làm chưa xong. Tôi sợ trong lúc tôi không để ý, tay tôi nó đã làm gì khác. Bà cho tôi việc chậm hơn cũng được."
+      },
+      {
+        "speaker": "Dương Thất Nương",
         "text": "Viên còn lại đây. Giấy gói mỏng hơn giấy của môn. Mùi dược liệu thiếu lớp mùi nền của linh tuyền. Cầm lên, nhẹ hơn đan thật cùng cỡ."
       },
       {
@@ -17431,6 +17443,7 @@ export const VN_SCENES = Object.freeze({
     "location": "Linh tuyền công cộng, đạo quán Hạ Ô Môn, Long Hải — ngày thứ 37",
     "narration": [
       "Sáng ngày thứ ba mươi bảy, trạm phát thuốc của Đan Đường bên linh tuyền mở cửa như mọi ngày. Chỉ khác một việc: một người bệnh được người nhà khiêng tới từ sớm đã mất trước khi cảnh này mở ít phút. Người ấy uống một viên đan mua từ hôm trước, phát tác trong đêm, tắt thở trước khi người nhà khiêng tới được trạm. Dương Thất Nương làm các việc phàm của một cái chết có chứng cứ: tấm vải phủ ngay ngắn, giờ mất ghi vào sổ trạm, chén thuốc dở đặt riêng ra khay giữ lại. Tiểu Lan có mặt từ đầu buổi.",
+      "Trong hàng người chờ tới lượt ở trạm sáng ấy có Bùi Thị Lành, bệnh nhân tái khám của Đan Đường. Chị ngồi rất yên — cái yên của người phải tự canh mình từng khắc. Xấp khăn chị được giao xếp từ hôm qua vẫn còn một nửa trong giỏ: cứ xếp được một lúc, chị lại phải dừng tay, nhìn hai bàn tay mình như nhìn hai người lạ vừa thuê về, rồi mới dám xếp tiếp.",
       "Viên đan chưa uống trong túi áo người đã mất được mang ra xem tại trạm, đặt cạnh một viên đan thật. Dương Thất Nương nhận ra chỗ sai bằng tay nghề của đường mình: giấy gói mỏng hơn giấy của môn, mùi dược liệu thiếu lớp mùi nền của linh tuyền, viên đan cầm lên nhẹ hơn đan thật cùng cỡ. Người bán đan dạo — kẻ đã bán gói thuốc này ở đầu chợ hôm trước — bị giữ lại khi hắn quay lại bán tiếp sáng nay. Hắn chối theo bản năng: hắn chỉ mua lại cả lô từ một đầu mối.",
       {
         "if": "thuNguyetFollows",
@@ -17442,7 +17455,7 @@ export const VN_SCENES = Object.freeze({
       },
       "Lê Thị Nhiên tới trạm khi việc nhà vừa lo xong. Cô là chị của người vừa mất. Cô không khóc ở trạm, không quỳ xuống xin ai điều gì. Cô đứng trước người bán, đối chất hắn bằng sự việc, từng việc một: em cô mua gói thuốc ở sạp nào, giờ nào, giá bao nhiêu, người bán đã nói câu gì khi bán. Từng câu của cô là một dữ kiện ghi được vào sổ. Người bán càng chối càng mâu thuẫn với lời khai đầu buổi đã ghi nguyên văn. Dương Thất Nương đáp câu hỏi cuối của cô bằng con số thật của Đan Đường — con số xấu, không giấu một gói nào.",
       "Trong lúc sổ trạm được sao lại, Ký Lương cầm một nhãn giả lên đối chiếu với nhãn thật. Tay hắn dừng ở chân con dấu lâu hơn cần thiết. Dấu giả bắt chước được hình, không bắt chước được chỗ ngấn tay của người đóng dấu thật: hắn nhìn ra như thợ nhìn ra nét tay nghề của thợ khác, và trong một thoáng, ánh mắt hắn là ánh mắt học nghề. Dương Thất Nương thoáng thấy cái dừng tay ấy mà không nói gì. Cùng lúc, Tiểu Lan đọc lại lời khai của Nhiên và của người bán cho cả hai nghe, sửa từng chữ theo đúng lời họ nói, rồi đóng sổ.",
-      "Cao Minh tới trạm khi mọi việc phàm đã xong phần đầu. Hắn xem khay thuốc dở, xem viên đan giả cạnh viên thật, nghe Thất Nương tóm tắt mấy câu ngắn. Không ai ở trạm hỏi hắn câu không thể hỏi, và hắn không nói câu không thể nói. Người đã mất thì đã mất. Phần của hắn là phần còn lại: một cái nhãn bị làm giả để giết người, và một lô hàng có nguồn. Nhiên nghe phần ấy, chỉ xin một việc cụ thể. Tiểu Lan khép sổ trạm, nhắc việc ngày mai: sổ nợ của nhà người mất sẽ tới tay ai, nàng phải theo tới nơi cho trọn."
+      "Cao Minh tới trạm khi mọi việc phàm đã xong phần đầu. Hắn xem khay thuốc dở, xem viên đan giả cạnh viên thật, nghe Thất Nương tóm tắt mấy câu ngắn. Người đã mất thì đã mất. Phần của hắn là phần còn lại: một cái nhãn bị làm giả để giết người, và một lô hàng có nguồn. Nhiên nghe phần ấy, chỉ xin một việc cụ thể. Tiểu Lan khép sổ trạm, nhắc việc ngày mai: sổ nợ của nhà người mất sẽ tới tay ai, nàng phải theo tới nơi cho trọn."
     ],
     "stageId": "long_hai",
     "title": "Đan giả giết người"
@@ -18020,7 +18033,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, tôi ghi đủ: số gói đã thu, số gói chưa thu, và gói vật chứng đi theo hồ sơ. Lệ bến đã đối chiếu xong, dấu đóng rồi — ghe chuẩn bị theo giờ nước được."
+        "text": "Dạ, tôi ghi đủ: số gói đã thu, số gói chưa thu, và gói vật chứng đi theo hồ sơ. Lệ bến đối chiếu xong, dấu đóng rồi."
       },
       {
         "speaker": "Lê Thị Nhiên",
@@ -18070,8 +18083,9 @@ export const VN_SCENES = Object.freeze({
     "id": "ky4_21_dam_tang_khong_phep_mau",
     "location": "Sân Phúc Thọ Đường, Vũng Tàu — ngày thứ 39",
     "narration": [
-      "Sân Phúc Thọ Đường buổi sớm ngày thứ 39 còn vắng. Một chiếc quan tài đã đóng nắp, đặt trên giá ở dãy ghe chở hòm — quan tài của người đã mất vì viên đan giả, đưa từ Long Hải sang hôm trước. Người coi bến cầm sổ đứng cạnh, nói việc đang kẹt lại bằng giọng hành chính của bến: lệ bến chở hòm chưa đóng, sổ chưa đóng dấu thì ghe chưa được nổ sào. Ông ta nói rõ thêm một câu: khoản lệ này là của bến Phúc Thọ, thu cho việc chở hòm qua sông — khác hẳn khoản tiền mua quan tài đã xử lý xong ở chợ Long Hải ngày 37, hai khoản nằm ở hai cuốn sổ khác nhau. Không ai làm khó ai; đám tang kẹt giữa sân nắng chỉ vì một dấu chưa đóng.",
+      "Sân Phúc Thọ Đường buổi sớm ngày thứ 39 còn vắng. Một chiếc quan tài đã đóng nắp, đặt trên giá ở dãy ghe chở hòm — quan tài của người đã mất vì viên đan giả, đưa từ Long Hải sang hôm trước. Người coi bến cầm sổ đứng cạnh, nói việc đang kẹt lại bằng giọng hành chính của bến: lệ bến chở hòm chưa đóng, sổ chưa đóng dấu thì ghe chưa được nổ sào. Ông ta nói rõ thêm: khoản lệ này là của bến Phúc Thọ, thu cho việc chở hòm qua sông — khác hẳn khoản tiền mua quan tài đã xử ở chợ Long Hải ngày 37; hai khoản, hai cuốn sổ. Không ai làm khó ai; đám tang kẹt giữa sân nắng chỉ vì một dấu chưa đóng.",
       "Dương Thất Nương có mặt ở bến không phải để dự tang theo lễ. Nàng mang theo việc của Đan Đường: danh sách thu hồi của lô đan giả — bao nhiêu gói đã thu về, bao nhiêu còn nằm ngoài — và một gói giấy nhỏ niêm kín: viên đan giả còn nguyên, giữ làm vật chứng. Người thì chôn theo người, còn viên thuốc đã giết người thì đi theo hồ sơ, không chôn theo quan tài. Các con số nàng báo ngắn, chính xác, để Tiểu Lan ghi vào sổ. Khoản lệ bến được xử lý bằng sổ tại chỗ: ghi nhận vào sổ của bến, dấu đóng xuống, ghe chuẩn bị nổ sào theo giờ nước.",
+      "Trong danh sách theo dõi Thất Nương mang theo có một dòng mới từ trạm Long Hải, ghi lời Bùi Thị Lành xin thuốc ngủ. Chị xin đúng một đêm — và hứa chắc như người hứa một việc nằm trong tay mình: ngủ một đêm cho đẫy, mai lại canh tay như cũ. Thất Nương đọc dòng ấy hai lần. Nàng không phê thuốc ngủ sâu cho ai phải tự canh mình; nàng ghi trả lời bên lề: chỉ cho thang an thần nhẹ, và phải có người ngồi gần.",
       "Lê Thị Nhiên tới một mình. Nàng mang theo đúng những thứ một người thân mang trong một đám tang nghèo và gấp: một bộ áo của người mất gấp gọn, ít giấy tiền, và tờ biên nhận quan tài nhàu trong tay áo. Nàng không nói một lời điếu nào. Việc của nàng toàn là việc tay: vuốt lại nếp áo trên nắp quan tài, hỏi giờ nước để về báo cho xóm, và xác nhận với Lan một dữ kiện cho hồ sơ — giờ em nàng uống viên đan hôm ấy — bằng giọng đều như đọc một biên bản đã thuộc lòng. Lan đáp nàng bằng cùng một thứ giọng. Ở sân này, việc tang được nói bằng giờ giấc và giấy tờ; sự tiết chế ấy là phẩm giá của cả hai phía.",
       "Cao Minh tới sân lúc quan tài sắp được đưa xuống ghe. Không ai bước tới xin hắn điều không thể xin, và hắn không đứng trước quan tài làm lễ, không nói một lời an ủi nào. Việc duy nhất của hắn xảy ra ở bậc xuống ghe: ván cầu trơn sau sương sớm, toán phu bến hụt tay một nhịp, chiếc quan tài nghiêng đi — rồi được giữ lại thăng bằng, đặt xuống ghe ngay ngắn như không có gì vừa xảy ra. Người coi bến chớp mắt. Nhiên nhìn hắn một cái rất ngắn. Hắn chỉ nói việc phàm: một câu về giờ nước với người coi bến, một câu báo cho Nhiên biết hồ sơ của vụ này còn mở. Phần của hắn, buổi sáng nay, là phần của người sống đang khiêng.",
       "Ghe chở quan tài rời bến theo con nước. Sân Phúc Thọ trở lại nhịp của nó rất nhanh: hòm khác đưa vào, sổ khác mở ra. Sự nhanh ấy không tàn nhẫn; bến này sống bằng việc người ta chết, nó không có thì giờ cho một đám tang nào lâu. Dương Thất Nương ở lại thêm một việc: nàng dán ở cột bến tờ dấu hiệu nhận biết lô giả — kiểu gấp giấy, lỗi ở chân nhãn — để dân qua bến tự soi gói thuốc trước khi uống. Đám tang vừa đi khuất, việc cứu người tiếp theo bắt đầu ở cùng một cột gỗ. Nhiên đứng nhìn ghe đi khuất khúc sông rồi mới quay lại, nói quyết định của nàng cho Lan nghe: nàng sẽ tự ra chợ nói lại chuyện gói thuốc này, bằng miệng người vừa chôn người thân.",
