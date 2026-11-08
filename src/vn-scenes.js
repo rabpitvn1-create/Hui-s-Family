@@ -9674,141 +9674,78 @@ export const VN_SCENES = Object.freeze({
     "location": "Sân lễ Hạ Ô Môn, Long Hải — ngày 12",
     "companions": [],
     "narration": [
-      "Buổi chiều ngày 12, sân lễ. Người phu được cứu ở giếng đầu buổi sáng được đồng bạn đỡ tới — chưa đi vững, một tay còn đặt lên ngực giữ hơi thở, nhưng khi Đỗ Thị Hạnh hỏi, anh ta tự nói được tên mình, rõ từng tiếng. Hạnh là người đầu tiên của nhà này hỏi anh ta theo đúng thứ tự của nàng: tên, quê, người nhà — trước mọi câu hỏi về cứu chữa. Tiểu Lan đứng cạnh, cầm mảnh giấy ghi tên anh ta từ buổi sáng, đối chiếu từng chữ: tên trên giấy và tên anh ta tự nói khớp nhau.",
-      "Hạnh tuyên bố lập Nhân Danh Đường ngay tại sân, trước mặt dân đang có mặt vì buổi mở tuyền. Tu vi của nàng là Luyện Khí tầng một — thấp nhất trong sáu trưởng đường — và nàng nói điều đó không giấu.",
-      "Tiểu Lan bước lên, trên tay là cuốn giấy sạch từ ngày 7 — buổi sáng đoàn về tới bến Long Hải, dân tụ về kín lối xuống nước, nàng đã ghi những cái tên đầu tiên lên giấy sạch: sạch vì nó không phải sổ nợ của Hứa Gia, không phải danh sách của Giới Phòng, chỉ là tên người ta tự xưng, ghi để nhớ họ là người sống. Nàng bàn giao cuốn ấy cho Hạnh bằng hai tay, trước mặt cả sân. Hạnh nhận sổ, mở trang đầu tiên ra xem ngay tại chỗ, rồi gật đầu — nhận cả món đồ lẫn cái lệ đi kèm.",
-      "Rồi Hạnh đứng giữa sân, tuyên bố thành tiếng điều lệ lớn nhất của đường mới — cho dân nghe, cho các đường khác nghe, chậm và rõ từng câu. Cả sân lặng đi; mọi con mắt quay về phía Cao Minh, chờ xem Đạo Tổ có sửa, có gạt hay không. Hắn không làm gì trong một nhịp dài. Rồi hắn nói một câu tùy tiện — coi như đóng dấu bằng sự thờ ơ của kẻ mạnh nhất nhà. Từ giây ấy, quyền phản đối là lệ đã tuyên bố của Nhân Danh Đường. Chưa một vụ việc nào được dựng lên hôm nay để dùng thử nó.",
-      "Việc đầu tiên của đường mới làm ngay trong buổi lập: Hạnh mở hồ sơ những người được cứu từ tuyến Phúc Thọ mang về cùng đoàn — những cái tên từng bị giấy tờ ghi là đã chết. Nàng đối chiếu từng người theo cách của đường: tên tự xưng, chứng cứ người còn sống, và xác nhận từng hồ sơ vật chủ còn tỉnh — còn tự nói được, tự quyết được việc của mình — ghi riêng thành một mục rõ ràng. Người phu ngồi ngay đó là một trường hợp sống trước mặt cả sân. Tiểu Lan hỗ trợ bằng những gì chính nàng chứng kiến ở Phúc Thọ.",
-      "Cuối buổi, cuốn giấy sạch của ngày 7 được đặt vào vị trí trang trọng nhất của đường mới: không khóa trong rương, mà để mở trên bàn của Nhân Danh Đường, trang đầu tiên hướng ra ngoài cho ai tới cũng thấy. Hạnh ghi dòng mới đầu tiên của nàng tiếp nối những dòng chữ của Lan. Ngay chiều nay, Hội Đồng Lục Đường họp lần đầu đủ sáu ghế ở sân này — và Hạnh sẽ mang chính cuốn sổ ấy vào buổi họp, ngồi vào chiếc ghế thứ sáu vừa mới có từ sáng nay."
+      "Buổi chiều ngày 12, sân lễ. Người phu được cứu ở giếng đầu buổi sáng được đồng bạn đỡ tới — chưa đi vững, một tay còn đặt lên ngực giữ hơi thở. Đỗ Thị Hạnh không đẩy cuốn sổ tới trước. Nàng đẩy chén nước tới trước: chờ anh ta uống xong hai ngụm, hơi thở đều lại, rồi mới mở sổ ra. Tiểu Lan đứng cạnh, cầm mảnh giấy ghi tên anh ta từ buổi sáng.",
+      "Hạnh viết xong dòng đầu tiên rồi đọc lại thành tiếng, chậm. Anh ta nghe hết, rồi chỉ vào một chữ ở giữa tên mình: chữ ấy ghi sai một dấu. Cả sân nhìn Hạnh gạch chữ sai đi, viết lại chữ đúng ngay trước mặt anh ta — nét gạch không giấu, ai cũng thấy đã sửa ở đâu, vì sao. Người phu nhìn dòng tên đúng của mình trong cuốn sổ của người sống, nói được một câu trọn vẹn lần đầu tiên trong ngày.",
+      "Tiểu Lan bước lên, hai tay trao cuốn giấy sạch từ ngày 7 — những cái tên đầu tiên nàng ghi ở bến Long Hải: tên người ta tự xưng, ghi để nhớ họ là người sống. Hạnh nhận sổ bằng hai tay, mở trang đầu ra xem ngay tại chỗ — nhận cả món đồ lẫn cái lệ đi kèm. Sổ ấy từ buổi này để mở trên bàn của Nhân Danh Đường: mở cho người mang tên tới đọc và sửa dòng của chính mình; tên của người khác, không ai được đọc thay.",
+      "Quyền phản đối được dùng ngay trong buổi lập đường, vào một việc nhỏ: một cách chia nước, chia cơm cho gọn. Cao Minh nghe trình bày, và có một khắc hắn đã toan gật đầu — chia theo số là nhanh, là gọn, là cách mọi sân bãi vẫn chạy. Hạnh phản đối trước khi cái gật đầu ấy kịp thành. Hắn nghe hết, nhìn xấp thẻ tre chưa kịp phát trong tay người quản sân, rồi không nói gì — cái gật đầu không tới. Người quản sân cúi đầu rút lại xấp thẻ, không một chút oán. Điều lệ của đường yếu nhất nhà này vừa chặn được một thói quen của cả thiên hạ, ngay trong giờ đầu tiên của nó.",
+      "Việc đầu tiên của đường mới: Hạnh mở hồ sơ người được cứu từ tuyến Phúc Thọ mang về — những cái tên từng bị giấy tờ ghi là đã chết. Nàng đối chiếu từng người theo cách của đường: tên tự xưng, chứng cứ người còn sống, và xác nhận từng vật chủ còn tỉnh — còn tự nói được, tự quyết được — ghi riêng một mục, đọc thành tiếng, sai một chữ sửa ngay. Tiểu Lan hỗ trợ bằng những gì chính nàng chứng kiến ở Phúc Thọ.",
+      "Gần cuối buổi, một người đàn ông tới, đứng ở mép bàn rồi dừng lại. Anh ta không bước hẳn vào vòng sáng của sân lễ. Anh ta xin ở lại chữa, xin ăn — và xin một điều ngược với mọi người đến trước anh ta hôm nay: đừng ghi tên anh ta ra chỗ người qua lại trông thấy. Hạnh không hỏi vì sao. Nàng gấp trang sổ đang mở xuống — lần đầu tiên trong ngày, cuốn sổ khép lại — và nhận lời anh ta bằng miệng: chỗ ở, phần ăn, phần chữa, người trực biết mặt anh ta là đủ. Rồi nàng lật lại trong đầu cách ghi chép mình vừa dựng lên buổi chiều này, tìm một ô, một ký hiệu, một dấu tiếp nhận kín nào đó để việc của anh ta đi theo được tới một cơ quan khác mà không cần đọc tên anh ta lên. Cách ghi của đường không có ô ấy. Đường này dựng lên để giữ tên người ta; nó chưa biết giữ một người không muốn đưa tên. Hạnh hứa với anh ta dù sao đi nữa. Anh ta gật đầu. Anh ta tin nàng — mọi việc nàng nói buổi chiều nay, nàng đều đã làm ngay trước mặt cả sân.",
+      "Cuối buổi, sân lễ dọn chung, bữa cơm đầu tiên của đường dọn ra ngay tại sân — cơm, cá, một nồi canh lớn — người đàn ông không tên ngồi ăn chung một mâm như mọi người, có đủ phần. Không ai hỏi anh ta điều gì thêm. Khi bữa cơm tàn, anh ta ra về phía dãy nhà dành cho người được cứu, hai tay không: không thẻ, không dấu, không một mảnh giấy nào chứng rằng buổi chiều nay anh ta đã được nhận vào và hứa giữ. Nếu ngày nào đó một cơ quan khác hỏi ai đã nhận anh ta, anh ta chỉ có những gương mặt nhớ mặt mình. Cuốn sổ trên bàn vẫn mở dưới ánh đèn, chờ người tiếp theo tới đọc dòng của chính mình."
     ],
     "dialogue": [
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Anh ngồi xuống đây đã. Tôi hỏi ba việc theo thứ tự của tôi: tên gì, quê ở đâu, người nhà giờ ở đâu?"
+        "text": "Anh ngồi xuống đây đã. Trước hết là nước. Anh uống đi, uống chậm thôi. Việc giấy tờ không chạy đâu mất."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Anh tự nói tên mình, tôi ghi theo đúng lời anh nói. Không ghi theo giấy nào hết."
+        "text": "Giờ tôi hỏi ba việc theo thứ tự của tôi: tên gì, quê ở đâu, người nhà giờ ở đâu? Anh tự nói, tôi ghi theo đúng lời anh — không ghi theo giấy nào hết."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Tốt. Tên anh vào sổ của đường tôi từ hôm nay — sổ của người sống. Tên trong sổ không phải là nợ."
+        "text": "Tôi đọc lại, anh nghe cho kỹ. Sai chỗ nào, anh nói, tôi sửa ngay trước mặt anh."
       },
       {
         "speaker": "Người được cứu",
-        "text": "Thưa cô… tôi nói được rồi. Tên tôi, quê tôi, tôi tự nói hết. Sáng nay ở giếng, tôi tưởng không còn nói được nữa."
+        "text": "Thưa cô… chữ giữa là 'Văn', không phải 'Văng'. Mẹ tôi đặt vậy. Cô sửa cho tôi đúng chữ ấy."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Sửa rồi. Tên anh vào sổ của đường tôi từ hôm nay — sổ của người sống. Tên trong sổ không phải là nợ."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, thưa chị Hạnh, mảnh giấy này là tên anh ấy — tôi ghi ở giếng buổi sáng, lúc anh ấy vừa tỉnh. Chị đối chiếu đi."
+        "text": "Dạ, thưa chị Hạnh, mảnh giấy này là tên anh ấy — tôi ghi ở giếng buổi sáng, lúc anh ấy vừa tỉnh. Cuốn này là sổ ngày 7, tôi mang tới trao chị hôm nay."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Một cái tên ghi vội bên tấm ván cứu người phải được mang tới tận nơi giữ tên. Giờ tôi trao cho chị."
+        "text": "Lệ tôi đặt kèm theo khi trao: không ai được dùng những cái tên trong này thay cho người mang tên."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Thưa bà con, hôm nay tôi lập Nhân Danh Đường. Việc của đường này là: ghi tên, giữ tên — cho cả người không nhập môn."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Ai từng được nhà này cứu, được chữa, được cho nước, cho giống — đều có tên trong sổ của đường tôi."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Lệ nền của đường: tên ghi phải là tên thật người đó tự xưng; ghi sai thì sửa ngay."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Tu vi của tôi là Luyện Khí tầng một, thấp nhất trong sáu trưởng đường — tôi nói ra không giấu."
+        "text": "Thưa bà con, hôm nay tôi lập Nhân Danh Đường. Việc của đường này là: ghi tên, giữ tên — cho cả người không nhập môn. Ai từng được nhà này cứu, được chữa, được cho nước, cho giống — đều có tên trong sổ. Tu vi của tôi là Luyện Khí tầng một, thấp nhất trong sáu trưởng đường — tôi nói ra không giấu."
       },
       {
         "speaker": "Cao Minh",
         "text": "Nhà của bổn tọa giờ có cả một đường chuyên lo giấy. Sổ sách đã nhiều hơn kiếm. Cứ ghi — bổn tọa coi."
       },
       {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Thưa chị Hạnh, cuốn này tôi mang tới hôm nay. Ngày 7, ở bến Long Hải, tôi đã ghi những cái tên đầu tiên lên nó."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Giấy sạch — vì nó không phải sổ nợ của Hứa Gia, cũng không phải danh sách của Giới Phòng. Từ hôm nay, nó là sổ đầu tiên của đường này."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Và lệ tôi đặt kèm theo: không ai được dùng những cái tên trong này thay cho người mang tên."
-      },
-      {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Thưa cô, tôi nhận cuốn sổ, và nhận cả cái lệ đi kèm. Đường tôi giữ đúng tinh thần của trang đầu tiên ấy."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Sổ này để mở trên bàn, không khóa trong rương. Sổ giữ tên mà phải giấu đi là đã giống sổ của chủ nợ rồi."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Tôi ghi vào lệ đường: tên trong sổ này không dùng thay người mang tên — việc của ai hỏi người ấy."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Giờ tôi tuyên bố điều lệ lớn nhất của Nhân Danh Đường: đường này giữ quyền phản đối mọi quyết định làm hại tới dân thường."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Phản đối phải được nghe, phải được trả lời trước mặt Hội Đồng. Người phản đối không bị ghi tội vì đã phản đối."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Tôi nói hôm nay, giữa sân này, để từ nay không ai nói là chưa từng nghe. Quyền này là lệ của đường."
+        "text": "Giờ tôi tuyên bố điều lệ lớn nhất của đường này: Nhân Danh Đường giữ quyền phản đối mọi quyết định làm hại tới dân thường. Phản đối phải được nghe, phải được trả lời trước mặt Hội Đồng. Người phản đối không bị ghi tội vì đã phản đối. Tôi nói hôm nay, giữa sân này, để từ nay không ai nói là chưa từng nghe."
       },
       {
         "speaker": "Cao Minh",
         "text": "Cứ thế. Ai thấy chướng thì tới tìm bổn tọa."
       },
       {
-        "speaker": "Cao Minh",
-        "text": "Một đường tu vi tầng một mà dám giữ quyền cãi lại cả nhà. Hay. Ghi lệ của ngươi đi, trưởng đường."
+        "speaker": "Người quản sân",
+        "text": "Thưa trưởng đường, một việc cho tiện: người mới về, hồ sơ chưa xong, tôi xin phát tạm mỗi người một thẻ số để chia nước, chia cơm theo hàng — xong hồ sơ rồi trả thẻ. Sân này xưa nay chạy bằng số cho khỏi lộn."
+      },
+      {
+        "speaker": "Đỗ Thị Hạnh",
+        "text": "Không. Tôi dùng quyền vừa tuyên bố, ngay tại buổi này: người được nhận hôm nay không bị đánh số hôm nay. Chia nước theo tên, chậm một khắc cũng được. Sân này mà bắt đầu bằng số thì đi tới đâu, tôi và anh đều biết."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, thưa chị, lời tuyên bố đã thành lệ. Từ hôm nay, tên của người thường ở nhà này có một nơi để kêu."
+        "text": "Dạ, phần Phúc Thọ, tôi làm chứng cho chị: những người này tự xưng tên, tự quyết việc đi hay ở — tôi tận mắt thấy."
+      },
+      {
+        "speaker": "Người xin giấu tên",
+        "text": "Thưa cô… cho tôi ở lại chữa, cho tôi ăn. Nhưng tên tôi — xin cô đừng đọc lên, đừng ghi ra chỗ người qua lại trông thấy. Tôi còn việc chưa yên ở ngoài kia."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Việc đầu tiên của đường, làm ngay buổi nay: hồ sơ những người được cứu từ tuyến Phúc Thọ."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Mục này tôi ghi riêng: vật chủ còn tỉnh — còn tự nói được, tự quyết được. Giấy cũ ghi họ là người chết; sổ tôi ghi họ là người sống."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Từng hồ sơ tôi đọc thành tiếng. Ai thấy sai một chữ, nói ngay, sửa ngay."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Đối chiếu xong, tôi kết mục này lại: người nào đã xác nhận còn sống, còn tỉnh, tôi đánh dấu rõ bên cạnh tên."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, phần Phúc Thọ, tôi làm chứng nhân cho chị. Những người này tôi tận mắt thấy: họ tự xưng tên, tự quyết việc đi hay ở."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Có người chọn ở lại, có người theo đoàn về đây — cả hai cách chọn đều là của chính họ. Người còn tỉnh là người còn quyền chọn."
-      },
-      {
-        "speaker": "Người được cứu",
-        "text": "Thưa cô Hạnh, thưa cô Lan… tôi nghe hết rồi. Tên tôi nằm trong sổ người sống. Tôi còn tỉnh — tôi tự nói được câu ấy."
-      },
-      {
-        "speaker": "Đỗ Thị Hạnh",
-        "text": "Trang đầu tiên của đường tôi để mở trên bàn, ai tới cũng thấy. Chiều nay tôi mang cuốn sổ này vào Hội Đồng."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Dạ, chị mang nó vào là đúng nhất. Cuốn sổ bắt đầu ở một cái bến, chiều nay vào tới vòng ghế của cả nhà."
+        "text": "Được. Anh ở lại, ăn uống chữa trị như mọi người. Tên anh, tôi không ghi ra chỗ đông người. Đường này nhớ anh bằng mặt. Việc của anh, đường này giữ."
       },
       {
         "speaker": "Cao Minh",
@@ -9834,7 +9771,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "id": "book_open_to_the_named",
-        "text": "Để cuốn sổ đầu tiên của đường mở công khai như nó vừa được đặt: ai có tên trong ấy đều được tới xem dòng của chính mình — bảo vệ một cái tên bắt đầu bằng việc không giấu nó.",
+        "text": "Để cuốn sổ đầu tiên của đường mở theo đúng lệ vừa tuyên: người mang tên được tới đọc và sửa dòng của chính mình — sổ mở cho người mang tên, không mở cho người ngoài.",
         "next": "ky3_12_luc_duong_luan_su",
         "route": {
           "id": "bao_ho",
