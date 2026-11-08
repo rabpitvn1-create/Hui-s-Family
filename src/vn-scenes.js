@@ -10455,8 +10455,9 @@ export const VN_SCENES = Object.freeze({
     "narration": [
       "Ngày thứ mười sáu, linh tuyền công cộng đông người từ sớm. Nước tuyền bốc hơi mỏng trên mặt đá, người bệnh ngồi chờ theo hàng dọc bờ. Bùi Thị Lành tới một mình, tay ôm chiếc khăn gói nhỏ, đi thẳng tới trước mặt Dương Thất Nương, không nhìn quanh tìm ai đỡ lời.",
       "Lành là người được cứu khỏi tuyến Phúc Thọ, đang sống trong diện được Nhân Danh Đường ghi tên. Nàng nói chậm, như người đã nghĩ việc này nhiều đêm. Từ ngày về Long Hải, có những việc thân thể nàng làm xong rồi nàng mới biết: tay tự đưa lên khi nghe tiếng gõ lạ, chân tự đứng dậy giữa đêm không rõ đi đâu. Nàng muốn nhìn cho rõ phần nào trong người mình còn chạy theo nhịp cũ ấy. Tiểu Lan đứng bên tuyền, nghe từ đầu, không chen một lời.",
+      "Khi nàng đang nói, một ngón tay của bàn tay trái bắt đầu gõ nhịp lên đầu gối — một nhịp đều, khô, không phải nhịp của người đang ngồi nói chuyện. Nàng nhìn xuống, như bắt gặp bàn tay của một người khác. Nàng lấy bàn tay phải đè nó xuống, ép phẳng lên gối, và giữ nguyên như thế trong lúc nói hết phần còn lại của lời xin. Dương Thất Nương nhìn thấy. Bà không nói một lời nào về ngón tay ấy.",
       "Dương Thất Nương không nhận lời ngay. Bà đặt viên đan xuống khay gỗ, nói hết bằng lời phàm, nói mặt giới hạn trước mặt công dụng. Cao Minh ngồi cách đó mấy bước, chén rượu trên tay, nghe như nghe chuyện của người khác — việc này là việc của hai người đàn bà với nhau, hắn không chen vào.",
-      "Lành uống viên đan với nửa chén nước tuyền ấm. Không có ánh sáng lạ, không có tiếng động nào. Nàng ngồi yên một lúc lâu, hai tay đặt trên gối, mắt nhìn xuống mặt nước mà như nhìn vào trong thân thể mình. Rồi nàng nói, giọng nhỏ đi: những việc nàng vẫn tưởng là ý mình — giật mình đứng dậy, đưa tay, quay đầu theo tiếng gọi — hóa ra chạy theo một nhịp có sẵn từ trước, như đường kim đã khâu sẵn trong áo, người mặc chỉ việc cử động theo đường khâu. Phần còn tự quyết được nhỏ hơn nàng tưởng nhiều, và nằm ở những chỗ không ai ngờ: quyền chậm lại một nhịp, quyền lắc đầu với một việc rất nhỏ, quyền giữ tay mình yên thêm một lúc.",
+      "Lành uống viên đan với nửa chén nước tuyền ấm. Không có ánh sáng lạ, không có tiếng động nào. Nàng ngồi yên một lúc lâu, hai tay đặt trên gối, mắt nhìn xuống mặt nước mà như nhìn vào trong thân thể mình. Rồi nàng nói, giọng nhỏ đi: những việc nàng vẫn tưởng là ý mình — giật mình đứng dậy, đưa tay, quay đầu theo tiếng gọi — hóa ra chạy theo một nhịp có sẵn từ trước, như đường kim đã khâu sẵn trong áo, người mặc chỉ việc cử động theo đường khâu. Phần còn tự quyết được nhỏ hơn nàng tưởng nhiều, và nằm ở những chỗ không ai ngờ: quyền chậm lại một nhịp, quyền lắc đầu với một việc rất nhỏ, quyền giữ tay mình yên thêm một lúc. Ngay lúc nàng nói tới đó, bàn tay trái của nàng tự nhấc lên khỏi gối — được nửa đường, như có ai gọi. Nàng bắt lấy nó bằng tay phải, đặt trở lại xuống gối, chậm rãi.",
       "Nàng sợ, tay đặt trên gối hơi run. Nhưng nàng nói rõ nàng không hối hận: biết rõ là một việc, được chữa là việc khác hẳn, hôm nay nàng mới làm xong việc thứ nhất. Tiểu Lan nghe, và qua lời của người đàn bà trước mặt, nàng nhìn thấy trường hợp của chính mình — phần điều phối sự sống của nàng cũng đã bị một thứ ngoài thân thay thế từ nhỏ. Không ai nói thay nàng điều ấy lúc này.",
       {
         "text": "Câu chuyện chạm vào một việc phàm nhỏ: phần cháo để riêng cho người bệnh tới sau giờ Ngọ ở lều nghỉ bên tuyền. Tiểu Lan khựng lại. Việc ấy là nàng đã dặn bếp từ mấy hôm trước — người chung quanh đều nhớ, sổ của đoàn cũng có ghi. Chỉ mình nàng là không nhớ đã dặn. Nàng không đoán, không vin vào lời ai. Nàng chọn cách đối chiếu. Thu Nguyệt mở cuốn ghi chép của đoàn, tìm đúng trang, đọc lại đúng từng chữ lời dặn hôm ấy, không thêm một chữ, không bớt một chữ — như nàng vẫn làm từ đêm ở bến Phúc Thọ.",
@@ -10466,9 +10467,9 @@ export const VN_SCENES = Object.freeze({
         "text": "Câu chuyện chạm vào một việc phàm nhỏ: phần cháo để riêng cho người bệnh tới sau giờ Ngọ ở lều nghỉ bên tuyền. Tiểu Lan khựng lại. Việc ấy là nàng đã dặn bếp từ mấy hôm trước — người chung quanh đều nhớ, hồ sơ cũng có ghi. Chỉ mình nàng là không nhớ đã dặn. Nàng không đoán, không vin vào lời ai. Nàng tự mở cuộn chỉ đếm ngày trong tay áo và cuốn ghi chép nàng tự giữ, lần theo từng nút chỉ tới đúng ngày ấy. Đỗ Thị Hạnh ngồi bên, giữ hồ sơ ngay ngắn, đối chiếu ngày tháng theo lời nàng đọc.",
         "unless": "thuNguyetFollows"
       },
-      "Nghỉ bên tuyền. Bếp đưa tới một bát cháo nấu bằng linh mễ, hơi bốc lên thơm mùi gạo mới. Tiểu Lan ăn chậm, từng muỗng một, giữa tiếng nước chảy quanh sân. Cháo linh mễ làm thân thể nàng khỏe hơn thật: hơi thở đều lại, tay bớt lạnh. Nhưng nàng nhận rõ cái khỏe ấy nằm trong giới hạn thường của một bát cháo — nó nuôi phần thân thể còn là của nàng, không chạm được tới phần đã mất.",
+      "Nghỉ bên tuyền. Bếp đưa tới một bát cháo nấu bằng linh mễ, hơi bốc lên thơm mùi gạo mới. Tiểu Lan ăn chậm, từng muỗng một, giữa tiếng nước chảy quanh sân. Cháo linh mễ làm thân thể nàng khỏe hơn thật: hơi thở đều lại, tay bớt lạnh.",
       "Nàng ăn hết bát cháo, không để thừa một muỗng. Rồi nàng ngẩng lên, nói một điều rất phàm, giọng bình thản như nói chuyện bữa ăn: thèm cá kho.",
-      "Lành nghe hết, ngồi yên một lúc, rồi tự quyết việc của mình: nàng ở lại diện ghi tên của Nhân Danh Đường, học cách sống cùng phần phụ thuộc mình vừa nhìn thấy, không chờ ai hứa sẽ có ngày khỏi hẳn. Nàng tự tay gấp lại chiếc khăn gói, gật đầu với Dương Thất Nương, và ra ngồi vào hàng người chờ bên tuyền như một người bệnh thường. Mặt nước lặng lại. Bát cháo trên bàn đã hết sạch."
+      "Lành nghe hết, ngồi yên một lúc, rồi tự quyết việc của mình: nàng ở lại diện ghi tên của Nhân Danh Đường, học cách sống cùng phần phụ thuộc mình vừa nhìn thấy, không chờ ai hứa sẽ có ngày khỏi hẳn. Nàng tự tay gấp lại chiếc khăn gói, gật đầu với Dương Thất Nương, và ra ngồi vào hàng người chờ bên tuyền như một người bệnh thường. Trước khi ngồi vào hàng chờ, nàng ghé lều nghỉ xin một bát cháo như mọi người bệnh — một cái đói rất thường — và ăn mấy muỗng đầu ngay tại chỗ. Mặt nước lặng lại. Bát cháo trên bàn đã hết sạch."
     ],
     "dialogue": [
       {
@@ -10556,10 +10557,6 @@ export const VN_SCENES = Object.freeze({
       {
         "speaker": "Cao Minh",
         "text": "Ai đó nghe đây: làm cá kho mang ra. Kho khô một chút, nàng ăn hết cháo rồi, còn bụng cho việc phàm."
-      },
-      {
-        "speaker": "Cao Minh",
-        "text": "Rượu vơi nửa chén rồi. Ngồi nghe chuyện mất mát, cuối cùng chỉ phải gọi thêm một khúc cá kho. Được."
       },
       {
         "speaker": "Hứa Tiểu Lan",
