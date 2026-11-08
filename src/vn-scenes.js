@@ -12427,15 +12427,15 @@ export const VN_SCENES = Object.freeze({
     "location": "Chợ Long Hải, Nam Kỳ — ngày 22, một tờ khế nợ bị đưa ra giữa chợ",
     "companions": [],
     "narration": [
-      "Cũng ngày hai mươi hai, giữa chợ Long Hải, một người dân mang tờ khế nợ nhà mình ra khiếu. Số tiền ghi trong khế hôm nay khác số tiền anh ta nhớ đã vay — khác tới mức phần đời còn lại của anh ta nằm ở con số nào trong hai con số ấy. Theo lệ chợ này từ buổi đọc ba tờ khế năm xưa, Mến nhận khế, đọc thành tiếng cho vòng người nghe.",
+      "Cũng ngày hai mươi hai, giữa chợ Long Hải, một người bán vải ở chợ này mang tờ khế nợ của nhà mình ra khiếu. Số tiền ghi trong khế hôm nay khác số tiền anh ta nhớ đã vay — khác tới mức phần đời còn lại của anh ta nằm ở con số nào trong hai con số ấy. Theo lệ chợ này từ buổi đọc ba tờ khế năm xưa, Mến nhận khế, đọc thành tiếng cho vòng người nghe.",
       "Bà Chín Lãi có mặt từ đầu buổi. Tờ khế này từng qua tay vòng của bà: bà mua lại nó trong xấp giấy của Tài Phòng, như bà vẫn làm bao năm. Buổi khiếu này không chỉ là chuyện của người vay và nhà Hứa — nó là chuyện của mọi tờ giấy trong rương bà.",
       "Mến đọc xong lượt đầu, Tiểu Lan xin cầm khế coi lại. Nàng coi chậm, ngón tay dừng ở dòng số tiền gốc. Mặt giấy ở dòng ấy mỏng hơn mọi dòng khác, sáng lên một màu khác thường — dấu vết của chỗ đã bị cạo, bị tẩy, rồi viết đè lên. Đó là con mắt của người lớn lên trong hệ giấy.",
       "Cao Minh cầm tờ khế, tiện tay rắc lên dòng số tiền một lớp phấn mỏng — Chiếu Cốt Phấn — nhẹ như rắc gia vị vào buổi chợ. Dưới lớp phấn, chữ cũ hiện lên: số tiền gốc nhỏ hơn hẳn số đang ghi, và một ngày tháng cũ nằm dưới ngày tháng mới. Cả chợ im lặng — thứ im lặng của người vừa thấy cơ chế đè lên đời mình có hình thù.",
       "Người cầm khế đứng lặng nhìn hai lớp chữ. Buổi chợ chưa kịp vỡ thành tiếng cãi thì một người khách bước vào vòng: Hứa Tế Nguyên, đại diện Tài Phòng, tới một mình với một cặp giấy, không kèn không trống. Hắn chào đúng lễ, tự giới thiệu đúng danh phận, rồi xin nói về tờ khế bằng ngôn ngữ giấy tờ.",
-      "Lập luận của Tế Nguyên điềm tĩnh. Triện là triện thật. Chuỗi chuyển tay không đứt một mắt. Còn vết tẩy — nếu quả có — theo hắn là sửa lỗi chép của thư lại: chép sai thì sửa, gốc nợ không vì một vết sửa mà mất. Hắn không đe dọa ai.",
+      "Lập luận của Tế Nguyên điềm tĩnh. Triện là triện thật. Chuỗi chuyển tay không đứt một mắt. Còn vết tẩy — nếu quả có — theo hắn là sửa lỗi chép của thư lại: chép sai thì sửa, gốc nợ không vì một vết sửa mà mất.",
       "Bên cạnh vòng người, Lý Kha ghi biên bản buổi chợ. Hắn ghi đúng, ghi đủ, bút đi đều, không nói thêm nửa chữ ngoài phần việc. Ai nhìn vào cũng chỉ thấy một thư lại làm đúng nghề — chỉ có điều, biên bản của hắn hôm nay đầy đủ nhất chợ này, vì hắn ghi cả những phần không ai dặn ghi.",
       "Bà Chín Lãi bước ra tiếp theo, và bà không bênh người vay. Bà tính đường của chính mình, nói thành tiếng cho cả chợ nghe: nếu khế của Tài Phòng bị kết là tẩy sửa, toàn bộ xấp khế bà mua lại từ Tài Phòng đều thành giấy rủi ro. Chủ nợ nhỏ quay sang đòi chủ nợ lớn chịu trách nhiệm cho giấy mình bán ra.",
-      "Quyết định về tờ khế được tuyên giữa chợ. Hôm nay không ai xử: nợ chưa xóa, khế chưa hủy, chỉ có vết tẩy là không giấu lại được. Bản chính niêm phong theo hồ sơ Nhân Danh Đường, chờ ngày đối chiếu sổ gốc Tài Phòng. Một bản sao có Mến và chính Bà Chín Lãi cùng ký chứng ở lại chợ — nâng một nấc so với bản sao một người giữ năm xưa. Trong đám đông có tiếng xúi đốt khế cho xong.",
+      "Quyết định về tờ khế được tuyên giữa chợ. Hôm nay không ai xử: nợ chưa xóa, khế chưa hủy, chỉ có vết tẩy là không giấu lại được. Bản chính niêm phong theo hồ sơ Nhân Danh Đường, chờ ngày đối chiếu sổ gốc Tài Phòng. Cuối tờ khế, dưới phần nợ, còn một ô trống in sẵn theo mẫu giấy của Tài Phòng: ô xác nhận giải chấp — chỉ Tài Phòng mới được đóng triện vào ô ấy khi nợ trả xong. Ô còn trống. Một bản sao có Mến và chính Bà Chín Lãi cùng ký chứng ở lại chợ — nâng một nấc so với bản sao một người giữ năm xưa. Trong đám đông có tiếng xúi đốt khế cho xong.",
       "Cao Minh đặt tờ khế xuống nguyên vẹn, lớp phấn còn trên mặt giấy. Tế Nguyên cáo lui đúng lễ, mang theo một bản biên bản. Hắn thua một buổi chợ, nhưng mang về một tin quan trọng: tông môn này đánh bằng chứng cứ, không đánh bằng đốt giấy. Lý Kha thu bút sau cùng, liếc tờ khế niêm phong một cái rất ngắn. Đêm nay, đội ghe Long Hải ra khơi trong mưa."
     ],
     "dialogue": [
@@ -12445,7 +12445,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Trần Thị Mến",
-        "text": "Đọc lại lần nữa cho người không biết chữ nghe trọn: tiền gốc là con số này, ngày trả là ngày này. Ai cầm khế cũng phải nghe đúng số đang đè lên nhà mình."
+        "text": "Đọc lại lần nữa cho người không biết chữ nghe trọn: tiền gốc là con số này, ngày trả là ngày này."
       },
       {
         "speaker": "Bà Chín Lãi",
@@ -12505,7 +12505,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Thưa bà con, hôm nay nghe cho kỹ: người của vòng nợ đang cãi nhau bằng giấy của nhau. Thứ cãi nhau ấy chưa từng xảy ra ở chợ này."
+        "text": "Thưa bà con, nghe cho kỹ: người của vòng nợ đang cãi nhau bằng giấy của nhau. Thứ cãi nhau ấy chưa từng xảy ra ở chợ này."
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -12582,7 +12582,7 @@ export const VN_SCENES = Object.freeze({
       "Khuya, ghe về lần lượt theo ánh đèn. Từng chiếc vào lạch được gọi tên, đối chiếu danh sách ở bến. Tới lượt đếm cuối, danh sách còn thiếu đúng một cái tên: một ghe nhỏ chưa về. Ngoài xa, qua màn mưa, đèn của nó nhấp nháy không định hướng — thấy được mà không vào được lạch.",
       "Tiểu Lan cho thi hành ngay lệ nàng đặt từ đầu buổi. Hồi Gia Đăng chính ở đầu cầu bến nhấp ba lần — tín hiệu trả lời của bờ — rồi tên ghe lạc được đọc to trong mưa để đội giữ lưới biết phải giữ nguyên lối nước nào. Cả bến hướng ra đốm sáng chao đảo ấy. Không ai la hét; người sông nước làm việc bằng giọng vừa đủ nghe.",
       "Cao Minh đứng dậy ở đầu bến. Hắn phất tay một cái, nhẹ như gạt một tấm màn sang bên. Triều đang rút gắt tách ra một vệt nước lặng, từ cửa lưới chạy thẳng ra hướng ghe lạc, và ánh đèn trên bến thành một đường sáng liền mạch với đốm đèn trên mũi ghe kia. Ghe lạc bám vệt nước lặng ấy mà về, qua cửa lưới an toàn. Cả bến chỉ nghe tiếng mưa và tiếng gọi tên ghe.",
-      "Ghe lạc cập bến, người ướt sũng, mệt, nhưng không ai bị thương. Đèn của đội nào, đội ấy giữ luôn từ đêm nay — bến không thu lại, không cho thuê lại. Danh sách ghe được giữ ở bến làm lệ: từ nay ghe ra khơi đều có tên ở lại bờ. Sáng mai, chuyện ghe về trong mưa chưa kịp nguội thì ở chợ, một chiếc cân lạ đã được khiêng ra đặt giữa sân."
+      "Ghe lạc cập bến, người ướt sũng, mệt, nhưng không ai bị thương. Ngư ông tự tay bắt lấy dây của nó khi nó chạm cầu — bàn tay tám ngón quấn dây quanh cọc, thắt nút một tay như mọi nút ông thắt mấy chục năm nay: đôi tay từng tháo dây cho người ta ra đi, đêm nay thắt dây giữ người ta ở lại bờ. Đèn của đội nào, đội ấy giữ luôn từ đêm nay — bến không thu lại, không cho thuê lại. Danh sách ghe được giữ ở bến làm lệ: từ nay ghe ra khơi đều có tên ở lại bờ. Sáng mai, chuyện ghe về trong mưa chưa kịp nguội thì ở chợ, một chiếc cân lạ đã được khiêng ra đặt giữa sân."
     ],
     "dialogue": [
       {
@@ -13304,7 +13304,7 @@ export const VN_SCENES = Object.freeze({
       "Ở quầy giấy bên chợ, Delmas đọc cho Phan Tường ghi một bản ghi nhớ gửi về trên. Tường cần đối chiếu mấy thuật ngữ cho đúng chữ, nên đọc lại bản dịch ra tiếng Việt cho Mến nghe nhờ kiểm: chữ tông môn viết thế nào, chữ đại kiểm hộ dùng chữ nào. Trong bản nháp dịch có một đoạn đánh giá về Hạ Ô Môn mà Tiểu Lan, đứng gần quầy giấy, nghe được trọn từng chữ: phía thuộc địa cho rằng tông môn này đang phá thế của nhà họ Hứa, nên cứ để yên cho nó phá; việc thu hồi tông môn tính sau, khi họ Hứa đã yếu hẳn.",
       "Nghe xong đoạn dịch, Tiểu Lan không đổi sắc mặt, cũng không chen vào việc của quầy giấy. Nàng chỉ quay sang Mến, dặn bà nhớ đúng câu chữ vừa nghe, từng chữ một, không nhớ ý mà nhớ lời. Việc của nàng từ lâu vẫn vậy: lời nghe được giữa chợ chỉ thành việc khi nó được ghi lại thành chứng cứ. Mến gật đầu, và đoạn câu chữ ấy được ghi xuống sổ chợ ngay trong buổi chiều, kẹp giữa hai trang ghi giá hàng.",
       "Đoạn ghi nhớ viết xong, phái viên chuyển sang việc chính thức. Phan Tường đặt lên bàn chợ một tờ công văn: nhân danh đợt Đại Kiểm Hộ sắp tới, phía thuộc địa yêu cầu Hạ Ô Môn nộp danh sách đệ tử, ghi đủ tên, tuổi, quê quán, để đối chiếu nhân khẩu. Hạn chót trong công văn gắn với ngày sáu mươi ba, một mốc ghi trên giấy để đếm ngược bằng giấy tờ, và chỉ có vậy. Mến cầm công văn đọc thành tiếng theo lệ chợ, đọc chậm từng mục đòi, để người bán hàng quanh bàn đều nghe rõ.",
-      "Việc nộp hay không nộp danh sách không do một người quyết tại bàn chợ. Mến thay mặt phía chợ và Linh Điền, Hạnh thay mặt Nhân Danh Đường — nơi giữ hồ sơ người được cứu và sổ tên người — cùng Tiểu Lan hội ý ngắn ngay tại chỗ, theo đúng thẩm quyền của Hội Đồng Lục Đường. Cao Minh có mặt mà không chen một lời. Kết quả được tuyên bố ngay tại bàn và ghi thành biên bản hai phía: Hội Đồng từ chối nộp danh sách tên người. Tên người không phải hàng tồn kho, người được cứu và đệ tử không phải vật để đối chiếu.",
+      "Việc nộp hay không nộp danh sách không do một người quyết tại bàn chợ. Mến thay mặt phía chợ và Linh Điền, Hạnh thay mặt Nhân Danh Đường — nơi giữ hồ sơ người được cứu và sổ tên người — cùng Tiểu Lan hội ý ngắn ngay tại chỗ, theo đúng thẩm quyền của Hội Đồng Lục Đường. Cao Minh có mặt mà không chen một lời. Kết quả được tuyên bố ngay tại bàn và ghi thành biên bản hai phía: Hội Đồng từ chối nộp danh sách tên người. Biên bản ghi đủ cả hai nửa của ranh giới ấy: từ chối nộp sổ tên người, và không phản đối quyền kiểm giấy ghe, giấy hàng tại các trạm theo lệ. Tên người không phải hàng tồn kho, người được cứu và đệ tử không phải vật để đối chiếu.",
       "Biên bản làm xong hai bản, phía thuộc địa giữ một bản, để lời từ chối là lời đã nói trước mặt nhau, không ai kể lại khác đi được. Rồi Cao Minh cầm bản công văn gốc, đi thẳng tới trước mặt Delmas và trả lại tận tay hắn. Hắn không ký nhận, không giữ bản sao theo lệ của phía bên kia, cũng không nhận giấy để về xem xét sau. Delmas nhận lại tờ giấy rất điềm tĩnh; hắn chỉ mở sổ ghi nhớ của mình, ghi thêm một dòng, rồi gấp sổ lại.",
       "Phái viên rời chợ trong lễ phép hoàn toàn, chào Mến và người bán hàng ở sạp đầu chợ như khách đi coi chợ xong thì về. Phía tông môn giữ lại ba thứ: một bản biên bản từ chối do Mến giữ cho chợ, một bản sao công văn đòi danh sách đưa vào hồ sơ Nhân Danh Đường — hạn ngày sáu mươi ba từ nay nằm trên giấy của cả hai phía — và đoạn câu chữ của bản nháp dịch đã ghi lại. Delmas chưa đi khỏi Long Hải. Ngay buổi sau, hắn quay lại, không mang công văn, mà mang một đề nghị làm ăn."
     ],
@@ -13371,7 +13371,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Tôi nói rõ ranh giới: hàng hóa, giá cả, cân đong của chợ này, ông coi bao nhiêu cũng được. Tên người thì không."
+        "text": "Tôi nói rõ ranh giới: hàng hóa, giá cả, cân đong của chợ này, ông coi bao nhiêu cũng được. Tên người thì không. Ghe hàng của phân đàn qua trạm nào, trạm ấy cứ kiểm giấy ghe, giấy hàng theo lệ — phần kiểm trạm, chúng tôi không cản. Chỉ sổ tên người là của Nhân Danh Đường giữ, không nộp."
       },
       {
         "speaker": "Hứa Tiểu Lan",
