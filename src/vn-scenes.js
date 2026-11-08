@@ -3135,34 +3135,48 @@ export const VN_SCENES = Object.freeze({
       "ba_nam_lien"
     ],
     "narration": [
-      "Bà Năm Liên xin gặp riêng Cao Minh lúc trời còn chưa sáng, ở gian phòng trong cùng, trước mặt Tiểu Lan đang ngủ. Bà già ngoài bảy mươi, lưng đã còng, hai tay đặt ngay ngắn trên đùi như một người chờ nghe tuyên án. Bà nói bà có một món nợ phải khai ra trước khi quá muộn — vì đoàn kiểm tra sắp tới, vì căn nhà đang dồn đến bước đường cùng, và vì bà không muốn mang bí mật này xuống mộ trong lúc cô chủ của bà còn đang cần mọi sự thật trên đời để tự quyết đời mình.",
-      "Câu chuyện của bà bắt đầu từ mười mấy năm trước, khi Tiểu Lan còn là một đứa bé con. Ngày ấy bà chỉ là một người làm công trong Hứa phủ ở Chợ Lớn, được việc bưng bê trong các bữa tiệc của nhà họ Hứa. Bà kể về một đêm nhà có lễ lớn — khách khứa đông, đèn đuốc sáng như ngày hội — và giữa bữa tiệc, có người đưa cho bà một chén rượu nhỏ, dặn bưng tới cho cô chủ nhỏ đang ngồi với mẹ, nói rằng đó là rượu lễ gia truyền, trẻ con nhà này tới tuổi ấy đều phải uống một ngụm để lấy phước.",
-      "Bà đã bưng chén rượu ấy bằng hai tay. Bà còn nhớ đứa bé con ngẩng lên nhìn bà cười, nhớ mình đã dỗ nó uống cho hết vì 'ngoan nào, uống đi con, phước của nhà mình đó'. Chén rượu ấy về sau bà mới biết tên — Lục Huyết Tửu — và mới hiểu, chầm chậm theo năm tháng, rằng thứ mình bưng cho đứa bé hôm ấy không phải phước lộc gì. Nó là hạt giống của thứ đang sống trong người nàng bây giờ, là sợi dây đầu tiên buộc một đứa trẻ vào cái mạng lưới mà cả đời nàng sau này không thoát ra được.",
-      "Bà kể thêm những chi tiết mà một người ngoài không bao giờ biết được: chén rượu ấy nhỏ hơn chén thường, miệng chén có viền bạc, rượu trong chén không trong như rượu lễ mà hơi đục và ánh lên một màu đỏ rất nhạt khi đưa ra ánh đèn. Người đưa chén cho bà là một ông khách của nhà — mặt mũi thế nào bà không còn nhớ, chỉ nhớ bàn tay ông ta rất trắng và móng tay cắt vuông, không giống tay của người làm ăn buôn bán. Và bà nhớ tiếng của mẹ con bé — bà Lâm Ngọc Chi — cười nói cảm ơn, vì đến tận lúc chén rượu được bưng tới, không một ai trong bữa tiệc ấy, kể cả nhị phu nhân, biết rằng mình đang dự một buổi lễ chứ không phải một bữa tiệc mừng.",
-      "Điều làm bà Năm Liên dằn vặt nhất, bà nói, không phải là việc bà đã bưng chén. Mà là những năm sau đó, khi con bé lớn dần và bắt đầu có những cơn bệnh lạ, bà đã vài lần định hỏi, định nói — và lần nào cũng thôi. Bà sợ. Sợ mất việc thì ít, sợ phải nghe câu trả lời thì nhiều. Bà cứ tự nhủ rằng chắc không phải do chén rượu ấy đâu, chắc con bé yếu sẵn, chắc mình nghĩ quá. Mười mấy năm tự nhủ như thế, cho tới cái đêm nghe tiếng đợt lệnh chạy qua các dãy buồng và nhìn đám gia nhân đứng dậy như mộng du, bà mới hiểu rằng sự im lặng của mình cũng là một thứ đã nuôi căn nhà này lớn lên. Bà khai ra hôm nay không phải để được tha. Bà khai ra vì nếu bà còn im lặng thêm một lần nữa, bà sẽ không còn là bà nữa.",
-      "Cao Minh nghe hết câu chuyện mà không ngắt lời một lần. Khi bà dứt, hắn ngồi im một lúc. Hắn không nói lời tha thứ — tha thứ không phải việc của hắn, và bà cũng không xin hắn điều đó. Hắn chỉ hỏi một câu về ông khách mặt trắng năm ấy, nghe bà đáp rằng không nhớ nổi mặt, rồi thôi. Món nợ này, trong đầu hắn, đã tự sắp xếp lại đúng tên người nợ: kẻ bày lễ, kẻ ra lệnh, cả một phủ đông người ngồi nhìn mà không ai hỏi một câu. Bà chỉ là mắt xích cuối cùng và yếu nhất của cái chuỗi ấy — và là mắt xích duy nhất, suốt mười mấy năm, tự mình đau vì nó.",
-      "Bà kể hết, không giấu một chi tiết nào để tự bào chữa: rằng bà không biết, rằng bà chỉ là người bưng bê, rằng trong Hứa phủ ngày ấy, người làm công không có quyền hỏi trong chén là gì. Rồi bà nói câu mà bà đã mang theo như một hòn đá trong ngực suốt mười mấy năm — rằng không biết, không có nghĩa là tay bà sạch. Chính tay bà. Chính chén rượu ấy. Chính đứa bé ấy, bây giờ nằm ngủ cách bà ba bước chân, thỉnh thoảng trong mơ vẫn gọi tên bà như gọi một người thân nhất trên đời.",
-      "Tiểu Lan không ngủ. Nàng đã tỉnh từ lúc nào, nằm yên nghe hết, nước mắt chảy ngang thái dương xuống gối mà không đưa tay lau. Khi bà Năm Liên nức nở xin nàng một lời tha thứ — hoặc một lời oán trách, thứ nào bà cũng xin nhận — nàng chống tay ngồi dậy, với qua, nắm lấy bàn tay già nua đang run rẩy kia. Câu nàng nói sau đó khiến Cao Minh, người đứng ở cuối giường, phải quay mặt đi một lúc:",
-      "Đêm ấy, bà Năm Liên quỳ rất lâu mới chịu đứng dậy, và khi đứng dậy, lưng bà như thẳng hơn được một chút — không phải vì món nợ đã hết, mà vì lần đầu tiên sau mười mấy năm, món nợ ấy được nói ra thành lời trước mặt người duy nhất có quyền phán xét nó. Cao Minh nhìn hai người đàn bà, một già một trẻ, nắm tay nhau trong gian phòng im lặng. Căn nhà này sống bằng sợ hãi, bằng mệnh lệnh — và bằng những bí mật không ai dám nói. Đêm nay, một bí mật vừa được nói ra."
+      "Bà Năm Liên xin gặp riêng Cao Minh lúc trời còn chưa sáng, ở gian phòng trong cùng, trước mặt Tiểu Lan đang ngủ. Bà già ngoài bảy mươi, lưng đã còng, bước vào rồi mà chưa chịu nói ngay: bà sửa lại góc chăn đắp cho cô chủ, quay chén nước trên bàn cho quai chén hướng ra ngoài, rồi lại sửa góc chăn một lần nữa — đôi tay của người hầu hạ cả đời tìm việc để làm, như thể chỉ cần tay còn bận thì câu phải nói còn được hoãn thêm một lúc. Cao Minh ngồi yên, để bà sửa cho xong. Cuối cùng bà đặt hai tay ngay ngắn trên đùi như một người chờ nghe tuyên án, và nói bà có một món nợ phải khai ra trước khi quá muộn — vì đoàn kiểm tra sắp tới, và vì bà không muốn mang bí mật này xuống mộ trong lúc cô chủ của bà còn đang cần mọi sự thật trên đời để tự quyết đời mình.",
+      "Câu chuyện của bà bắt đầu từ mười mấy năm trước, khi Tiểu Lan còn là một đứa bé con. Ngày ấy bà chỉ là một người làm công trong Hứa phủ ở Chợ Lớn, được việc bưng bê trong các bữa tiệc của nhà họ Hứa. Bà kể về một đêm nhà có lễ lớn — khách khứa đông, đèn đuốc sáng như ngày hội — và giữa bữa tiệc, có người đưa cho bà một chén rượu nhỏ, dặn bưng tới cho cô chủ nhỏ đang ngồi với mẹ, nói rằng đó là rượu lễ gia truyền, trẻ con nhà này tới tuổi ấy đều phải uống một ngụm để lấy phước. Bà kể tới đó thì dừng lại một lúc lâu. Phần tiếp theo của câu chuyện, bà không kể về người đưa chén nữa. Bà kể về chính tay mình.",
+      "Bà đã bưng chén rượu ấy bằng hai tay. Bà còn nhớ đứa bé con ngẩng lên nhìn bà cười, nhớ mình đã dỗ nó uống cho hết: 'ngoan nào, uống đi con, phước của nhà mình đó'. Chén rượu ấy về sau bà mới biết tên — Lục Huyết Tửu — và mới hiểu, chầm chậm theo năm tháng, rằng thứ mình bưng cho đứa bé hôm ấy không phải phước lộc gì. Nó là hạt giống của thứ đang sống trong người nàng bây giờ, là sợi dây đầu tiên buộc một đứa trẻ vào cái mạng lưới mà cả đời nàng sau này không thoát ra được. Trong bữa tiệc ấy, đến tận lúc chén rượu được bưng tới trước mặt đứa bé, không một ai — kể cả bà Lâm Ngọc Chi, mẹ của con bé, người đang cười nói cảm ơn — biết rằng mình đang dự một buổi lễ, chứ không phải một bữa tiệc mừng.",
+      "Cao Minh nghe hết câu chuyện mà không ngắt lời một lần. Hắn không nói lời tha thứ — tha thứ không phải việc của hắn, và bà cũng không xin hắn điều đó. Hắn chỉ hỏi một câu duy nhất, về người khách đã đưa chén rượu năm ấy. Nghe bà đáp xong, hắn gật đầu một cái rồi thôi, không gặng thêm. Điều gì bà không nhớ, hắn để nguyên như thế: trong phòng này, đã có quá nhiều thứ bị người ta bắt phải nhớ thay, bịa thay, sống thay. Một cái 'không nhớ' được nói thật thà, hắn coi trọng hơn một lời khai trơn tru.",
+      "Tiểu Lan không ngủ. Nàng đã tỉnh từ lúc nào, nằm yên nghe hết, nước mắt chảy ngang thái dương xuống gối mà không đưa tay lau. Khi bà Năm Liên nức nở xin một lời chửi mắng cho nhẹ ngực, nàng chống tay tự ngồi dậy — bà già luống cuống chìa tay ra đỡ, nàng nắm lấy bàn tay ấy, giữ yên nó trên mép giường, và không buông ra trong lúc nói hết những lời cần nói. Có một lúc bà già rướn người như muốn quỳ xuống hẳn bên giường; bàn tay bị giữ chặt ấy không cho bà quỳ trọn. Lan không để một cái quỳ khép lại câu chuyện thay cho câu trả lời nàng đang cần.",
+      "Cao Minh đứng dậy, lùi về phía cuối giường, nhường lại khoảng sáng của ngọn đèn cho hai người đàn bà. Hắn không tuyên bố món nợ này phải trả bằng cách nào, cũng không tuyên bố ai sạch, ai bẩn trong chuyện này. Lời chứng của bà già, nếu có ngày phải dùng tới, sẽ do chính người có quyền với nó — cô gái đang nắm tay bà — quyết định lúc nào rút ra. Hắn chỉ nói đúng một câu về việc ấy, rồi im lặng hẳn, như một vị khách biết mình đang đứng trong một món nợ không phải của mình.",
+      "Câu chuyện khép lại không có một lời tuyên án nào. Một lúc sau, bà Năm Liên rót nước cho cô chủ uống — việc của bà, như mọi đêm. Tay bà vẫn run, run hơn lúc bước vào phòng; miệng chén chạm vào thành chén nghe một tiếng khẽ. Tiểu Lan đưa tay ra, không đỡ lấy chén, mà nắm vào chân chén, giữ yên nó trong lúc bà rót. Nước rót đầy tới miệng, không sánh ra ngoài một giọt. Hai người ở gần nhau hơn lúc đầu đêm rất nhiều. Còn món nợ — món nợ vẫn nằm nguyên đó, giữa hai bàn tay cùng giữ một cái chén, chưa ai đóng nó lại hộ ai."
     ],
     "dialogue": [
       {
         "speaker": "Bà Năm Liên",
-        "text": "Dạ, thưa ông, bà già này xin khai thiệt. Cái chén rượu năm xưa đưa con bé vào cái kiếp này… là tay tôi bưng. Tôi không biết trong chén có gì, thiệt tình không biết. Nhưng tay tôi thì bưng thiệt. Mười mấy năm nay, đêm nào tôi cũng nghe tiếng chén rượu đó đặt xuống bàn. Ông cứ chửi tôi đi, thưa ông — hay cô chửi tôi đi — chửi cho tôi nhẹ cái ngực này một chút."
-      },
-      {
-        "speaker": "Hứa Tiểu Lan",
-        "text": "Bà ơi, bà đừng quỳ. Tôi không trách bà. Năm ấy bà bưng một chén rượu trong một bữa tiệc mà bà không có quyền hỏi han — cũng như anh Sáu kéo then cửa, như anh Bảy cầm dao. Cái nhà này nó khéo lắm: nó toàn mượn tay người hiền để làm việc ác, để người hiền tự dằn vặt nhau mà không ai nhìn lên kẻ ra lệnh. Tôi không để nó thắng thêm một lần như vậy nữa, bà nghe tôi chưa?"
+        "text": "Dạ, thưa ông, bà già này xin khai thiệt. Cái chén rượu năm xưa đưa con bé vào cái kiếp này… là tay tôi bưng. Tôi không biết trong chén có gì, thiệt tình không biết. Nhưng ông đừng để tôi nói 'không biết' rồi thôi. Mấy năm sau, con bé phát bệnh lạ, tôi có nghi — nghi cái chén ấy. Nghi mà không dám hỏi, không dám nói. Cái phần đó… là phần của tôi."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Đứng dậy đi, bà già. Người phải quỳ trong chuyện này không có mặt trong phòng này. Nợ của bà, từ nay trả bằng cách khác: ở lại — và khi cần, nói lại hết những gì bà vừa nói, trước mặt những kẻ phải nghe."
+        "text": "Người đưa chén cho bà đêm ấy — bà còn nhớ được gì về hắn?"
+      },
+      {
+        "speaker": "Bà Năm Liên",
+        "text": "Dạ… mặt thì chịu, mười mấy năm rồi, nhớ không ra nữa. Chỉ nhớ chén nhỏ hơn chén thường, miệng có viền bạc. Và nhớ cái tay đưa chén: trắng lắm, móng cắt vuông, không phải tay người làm ăn buôn bán."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Tới đó thôi. Không nhớ được mặt thì cứ giữ nguyên là không nhớ — đừng cố nhớ thêm."
+      },
+      {
+        "speaker": "Bà Năm Liên",
+        "text": "Ông cứ chửi tôi đi, thưa ông — hay cô chửi tôi đi — chửi cho tôi nhẹ cái ngực này một chút."
+      },
+      {
+        "speaker": "Hứa Tiểu Lan",
+        "text": "Bà ơi, bà đừng quỳ. Tôi chưa nói tha hay không tha, bà cũng chưa cần nghe câu đó đêm nay. Tôi xin bà một việc làm được ngay, và chỉ bà làm được: nhớ hết chuyện này thay tôi. Trí nhớ của tôi đang bị người ta lấy đi từng chút một. Sau này, mỗi khi tôi hỏi, bà kể lại đúng như đêm nay — không bớt một chữ, không thêm một chữ. Đó là việc tôi cần. Không phải cái quỳ này."
+      },
+      {
+        "speaker": "Cao Minh",
+        "text": "Lời này, nếu có ngày phải nói lại trước mặt những kẻ đã bày ra nó, sẽ nặng hơn một cái quỳ rất nhiều. Nói hay không, nói lúc nào — bổn tọa để nàng và bà ấy tự định."
       }
     ],
     "choices": [
       {
         "id": "ba_witness",
-        "text": "Khuyên bà giữ sức và giữ kín chuyện này cho tới ngày cần nói ra trước mặt đoàn kiểm tra — lời chứng của bà là một con dao chưa tới lúc rút.",
+        "text": "Cùng nàng định cách giữ lời chứng của bà Năm Liên — giữ kín cho tới ngày cần nói ra trước mặt những kẻ phải nghe.",
         "next": "lh_lan_plan",
         "effects": {
           "cluesHuaGiaDelta": 2,
