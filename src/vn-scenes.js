@@ -6315,7 +6315,7 @@ export const VN_SCENES = Object.freeze({
       "Việc thứ ba không cần ai nói: ở đầu kia sân, một tốp phu thắp đèn đang đi thành hàng về phía kho than — việc cuối của lệnh dọn bến là lục soát các kho. Người thanh niên sau vách bao than còn cách đoàn người ấy đúng một sân gạch và một cánh cửa gỗ.",
       "Trong chòi bến, Cao Minh nói kế hoạch của hắn bằng giọng nói chuyện phàm, ngắn gọn như một người thợ nói về cái máy mình sắp tháo:",
       "Rồi Tiểu Lan bước vào mạng.",
-      "Không có gì để nhìn. Nàng đứng trong bóng tối của chòi, mắt nhắm, và lắng nghe nhịp đang chạy qua người mình như nàng đã nghe nó mười tám năm — rồi nàng chen nhịp của chính mình vào. Đầu tiên, ở tốp phu cầm đèn gần kho than: một người khựng lại giữa bước, cả tốp chững theo; người đi đầu rẽ sang hướng kho dầu thay vì kho than, và cả hàng người — như một thân thể bị gõ lệch một khớp — đi chệch trong sương, mất mấy phút quý báu. Rồi tới đội khiêng quan tài xuống tàu: bước chân họ chậm lại như đi trong nước, đòn khiêng trĩu xuống, một cỗ phải đặt xuống nghỉ giữa cầu tàu.",
+      "Không có gì để nhìn. Nàng đứng trong bóng tối của chòi, mắt nhắm, và lắng nghe nhịp đang chạy qua người mình như nàng đã nghe nó từ nhỏ — rồi nàng chen nhịp của chính mình vào. Đầu tiên, ở tốp phu cầm đèn gần kho than: một người khựng lại giữa bước, cả tốp chững theo; người đi đầu rẽ sang hướng kho dầu thay vì kho than, và cả hàng người — như một thân thể bị gõ lệch một khớp — đi chệch trong sương, mất mấy phút quý báu. Rồi tới đội khiêng quan tài xuống tàu: bước chân họ chậm lại như đi trong nước, đòn khiêng trĩu xuống, một cỗ phải đặt xuống nghỉ giữa cầu tàu.",
       "Trong chòi, Cao Minh ra tay cùng lúc. Không có ánh sáng rực, không có tiếng nổ. Chỉ có một cái rung nhẹ trong không khí — và tiếng chuông nhỏ trong chòi rung lên đúng nửa nhịp rồi câm hẳn, như một câu nói bị cắt ngang cổ. Hắn thu kiếm ngay, mặt đã quay sang chuyện khác, như người vừa xong một việc vặt.",
       "Lệnh mất đầu phát, lại bị nhiễu giữa đường — cả bến trượt khỏi tay kẻ ra lệnh lặng lẽ. Tốp phu đi lục kho than, mất nhịp thúc sau lưng, tan hàng giữa sân: người quay về chỗ ngủ, người đứng ngơ nhìn nhau, không ai còn nhớ rõ mình vừa định đi đâu. Các đội khiêng xếp thiếu một cỗ quan tài bị đánh dấu — nó vẫn nằm lẫn trong đống quan tài thường ở góc sân, bị bỏ sót chỉ vì không còn ai ra lệnh nhắc tới nó nữa. Chiếc tàu hàng sống rời bến trong đêm, nhẹ hơn một chuyến.",
       {
@@ -6339,7 +6339,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Cao Minh",
-        "text": "Trạm chuông ở chòi này là đầu phát của bến. Bổn tọa cắt điểm nối — một nhát thôi. Chuông câm, lệnh mất đầu, cả bến này sẽ như đàn gà mất tiếng gọi. Nhưng phần máy là phần dễ. Khi nhịp gãy, người bị nó kéo đi sẽ khựng lại giữa chừng — có người hoảng, có người chạy loạn, có người ngã xuống khoang tàu. Giữ cho họ không loạn, chỉ nàng làm được. Và nàng có quyền không làm."
+        "text": "Trạm chuông ở chòi này là đầu phát của bến. Bổn tọa cắt điểm nối — một nhát thôi. Chuông câm, lệnh mất đầu, cả bến này sẽ như đàn gà mất tiếng gọi. Nhưng phần máy là phần dễ. Khi nhịp gãy, người bị nó kéo đi sẽ khựng lại giữa chừng — có người hoảng, có người chạy loạn, có người ngã xuống khoang tàu. Chen vào nhịp, chỉ người nghe nó từ nhỏ mới làm được. Và nàng có quyền không làm."
       },
       {
         "speaker": "Hứa Tiểu Lan",
