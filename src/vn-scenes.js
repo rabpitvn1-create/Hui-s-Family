@@ -23808,15 +23808,15 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Đối sách là chứng tên đi trước ngày kiểm. Mỗi người được bảo vệ được cấp một tờ chứng tên của Nhân Danh Đường: tên, quê quán, người làm chứng, và dấu của đường. Ngày sáu mươi ba, ai cũng có giấy trong tay. Đoàn kiểm muốn ghi ai là 'không rõ lai lịch', chúng phải cãi với một tờ giấy có tên người làm chứng còn sống — khó hơn cãi với một người bệnh đang nằm rất nhiều."
+        "text": "Đối sách là chứng tên đi trước ngày kiểm. Mỗi người được bảo vệ được cấp một tờ chứng tên của Nhân Danh Đường: tên, quê quán, người làm chứng, và dấu của đường. Ngày sáu mươi ba, ai cũng có giấy trong tay. Đoàn kiểm muốn ghi ai là 'không rõ lai lịch', chúng phải cãi với một tờ giấy có tên người làm chứng còn sống — khó hơn cãi với một người bệnh đang nằm. Còn một việc trong bảng kê của lệnh, thưa cô: con số người của đoàn mình ở chuyến Vũng Tàu là đúng số người đã đứng ra trình giấy ở trạm kiểm hôm ấy. Những người giấu sau vách nhà đòn, chúng không biết có. Bản đồ của chúng về mình chỉ có phần chúng được thấy."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Việc này cần sổ tên gốc, và sổ tên gốc của vùng này nằm ở hai nơi: người được bảo vệ thì ở Nhân Danh của chị; đệ tử và lịch ghe thì ở Chấp Chiếu Phòng. Mai, mình bắt đầu kiểm cả hai hệ sổ — không phải vì tôi nghi ai, mà vì chứng tên cấp cho hàng trăm người không được phép sai một chữ. Một cái tên sai trong tờ chứng là một người bị bắt đúng luật của chúng."
+        "text": "Việc này cần sổ tên gốc, và sổ tên gốc nằm ở hai nơi: Nhân Danh của chị, và Chấp Chiếu Phòng giữ đệ tử với lịch ghe. Mai, mình bắt đầu kiểm cả hai hệ sổ — không phải vì tôi nghi ai, mà vì chứng tên cấp cho hàng trăm người không được phép sai một chữ. Một cái tên sai trong tờ chứng là một người bị bắt đúng luật của chúng."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Tôi tính sơ khối lượng việc cho cô nghe: người được bảo vệ ở ba cơ sở, tính cả lán trong và điểm chăm sóc, là hơn bốn trăm người. Đệ tử có tên trong sổ Chấp Chiếu là gần một ngàn tám trăm. Chứng tên cấp hết trong bốn ngày, sai một chữ cũng không được. Việc này không làm bằng tay không được, thưa cô — nó cần cả hai hệ sổ mở ra cùng lúc, và cần người của Chấp Chiếu hợp tác."
+        "text": "Tôi tính sơ khối lượng việc cho cô nghe: người được bảo vệ ở ba cơ sở, tính cả lán trong và điểm chăm sóc, là hơn bốn trăm người. Đệ tử có tên trong sổ Chấp Chiếu là gần một ngàn tám trăm. Chứng tên cấp hết trong bốn ngày, sai một chữ cũng không được. Việc này cần cả hai hệ sổ mở ra cùng lúc, và cần người của Chấp Chiếu hợp tác."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
@@ -23832,15 +23832,15 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Nguyễn Văn Thạo",
-        "text": "Thưa ngài, tôi ghi nhận thay đổi vào bản đồ ca gác: lạch đông đổi hướng, cọc hiệu đặt lại ba điểm. Tôi cho tổ gác đi thử một vòng ngay đêm nay để thuộc đường mới. Còn tranh chấp giấy tờ ngày sáu mươi ba, phần ấy tôi không chen vào — đó là chiến trường của cô và chị Hạnh, Hộ Pháp chỉ giữ cho chiến trường ấy có đủ thời gian mà đánh."
+        "text": "Thưa ngài, tôi ghi nhận thay đổi vào bản đồ ca gác: lạch đông đổi hướng, cọc hiệu đặt lại ba điểm. Tôi cho tổ gác đi thử một vòng ngay đêm nay để thuộc đường mới. Còn tranh chấp giấy tờ ngày sáu mươi ba là chiến trường của cô và chị Hạnh — Hộ Pháp chỉ giữ cho chiến trường ấy đủ thời gian mà đánh."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Anh Thạo nói một câu rất đúng: giữ thời gian. Từ giờ tới ngày sáu mươi ba còn bốn ngày. Việc chứng tên bắt đầu từ mai, và nó sẽ dẫn mình đi xa hơn một việc cấp giấy — tôi có cảm giác thế. Sổ sách của một nơi, khi bị đọc kỹ, thường kể nhiều chuyện hơn chủ của nó tưởng."
+        "text": "Anh Thạo nói một câu rất đúng: giữ thời gian. Từ giờ tới ngày sáu mươi ba còn bốn ngày. Việc chứng tên bắt đầu từ mai, và nó sẽ dẫn mình đi xa hơn một việc cấp giấy. Sổ sách của một nơi, khi bị đọc kỹ, thường kể nhiều chuyện hơn chủ của nó tưởng."
       },
       {
         "speaker": "Nguyễn Văn Thạo",
-        "text": "Thưa cô, tôi đi thử vòng gác đường mới về rồi. Người của mình đi hết một vòng không vấp một điểm mù nào. Tôi nói một câu không phải việc giấy: từ mai, việc kiểm sổ là việc của các cô. Nhưng bất kỳ ai muốn vào phòng giấy của phân đàn này mà không có tên trong lịch hẹn, họ phải qua Hộ Pháp của tôi trước. Sổ cũng là một thứ cần được gác như người."
+        "text": "Thưa cô, tôi đi thử vòng gác đường mới về rồi. Người của mình đi hết một vòng không vấp một điểm mù nào. Tôi nói một câu không phải việc giấy: bất kỳ ai muốn vào phòng giấy của phân đàn này mà không có tên trong lịch hẹn, họ phải qua Hộ Pháp của tôi trước. Sổ cũng là một thứ cần được gác như người."
       }
     ],
     "id": "ky5_21_giua_hai_tieng_keng",
@@ -23848,8 +23848,9 @@ export const VN_SCENES = Object.freeze({
     "narration": [
       "Ngày năm mươi chín bắt đầu bằng một buổi đọc giấy. Đỗ Thị Hạnh mang bản đối chiếu tới từ sớm: một bên là danh sách người cần cứu và người được bảo vệ của phân đàn, một bên là văn bản lệnh Đại Kiểm Hộ đã công bố. Hai người đàn bà ngồi đối diện nhau qua một cái bàn thấp, đọc lệnh của địch chậm rãi như đọc một bản án — và Tiểu Lan là người dừng lại trước ở một điều khoản viết rất trơn tru, rất hợp lệ, và rất độc.",
       "Cái bẫy nằm ở hai chữ 'lai lịch'. Lệnh kiểm hộ không cần ra mặt bắt người của Hạ Ô Môn; nó chỉ cần định nghĩa lại họ. Người không xuất trình được giấy tại chỗ sẽ bị ghi là người không rõ lai lịch và bị đưa đi — một câu chữ hành chính vô tội, mà áp vào một phân đàn đầy người già, người bệnh và người vừa được cắt neo không đứng vững nổi, nó là một cái lưới. Hạnh và Lan nhìn cái bẫy ấy một lúc lâu. Rồi họ làm việc mà người giữ sổ làm giỏi nhất trên đời: họ viết đối sách của mình cũng bằng giấy.",
-      "Việc chứng tên cho hàng trăm người là việc của nhiều ngày, và nó đòi hai hệ sổ gốc của phân đàn phải khớp nhau từng chữ. Đó là lý do việc sáng nay bắt đầu tưởng như một việc hành chính thuần túy — kiểm sổ. Không ai trong phân đàn sáng hôm ấy biết rằng việc kiểm sổ cho ngay ngắn sẽ là việc mở ra một cánh cửa mà kẻ phản bội trong nhà đã cẩn thận đóng kín suốt mấy kỳ. Cái bẫy phân loại người của địch, một cách trớ trêu, lại là thứ buộc phân đàn phải đọc lại chính giấy tờ của mình — thật kỹ, lần đầu tiên.",
-      "Đêm ấy, trước khi rời hành lang sơ tán, Cao Minh đứng lại một mình ở điểm cọc hiệu cuối cùng hắn vừa đặt lại. Từ đó nhìn về phía phân đàn, đèn của các lán lấp loáng qua màn lá như một dải sao thấp. Hắn đứng nghe tiếng kẻng đổi ca vọng từ xa — tiếng kẻng của phân đàn hắn, đều đặn và nhàm chán một cách đáng quý. Ở đâu đó ngoài kia trong rừng tối có một tiếng kẻng khác, của phía kiểm, cũng đều đặn không kém. Hai tiếng kẻng của hai thế giới đang đếm ngược tới cùng một ngày, và cả hai đều biết rõ ngày ấy."
+      "Việc chứng tên cho hàng trăm người là việc của nhiều ngày, và nó đòi hai hệ sổ gốc của phân đàn phải khớp nhau từng chữ. Đó là lý do việc sáng nay bắt đầu tưởng như một việc hành chính thuần túy — kiểm sổ. Không ai trong phân đàn sáng hôm ấy biết rằng việc kiểm sổ cho ngay ngắn sẽ là việc mở ra một cánh cửa mà kẻ phản bội trong nhà đã cẩn thận đóng kín suốt mấy kỳ. Cái bẫy phân loại người của địch lại buộc phân đàn phải đọc lại chính giấy tờ của mình — thật kỹ, lần đầu tiên.",
+      "Buổi kiểm sổ còn moi ra một việc nữa. Trong danh sách người được bảo vệ có một người không có dòng nào trong cuốn sổ nào: người đàn ông tới Nhân Danh Đường ngày đầu tiên, xin ở lại chữa mà tên không được ghi ra chỗ người qua lại trông thấy. Hạnh đã hứa và đã giữ; anh ta ra về hai tay không. Chứng tên cấp từ sổ — anh ta không có sổ. Đường duy nhất là đơn phản đối gửi tới trạm dưới trong cửa sổ thủ tục đã công bố: hạn chót hết ngày sáu mươi mốt, người ký là chính người giữ sổ, và đơn cũng không ghi tên anh ta — chỉ ghi ngày anh ta tới, bữa cơm ăn chung, những gương mặt còn nhớ mặt anh ta.",
+      "Đêm ấy, Cao Minh đứng lại một mình ở điểm cọc hiệu cuối cùng hắn vừa đặt lại, nghe tiếng kẻng đổi ca của phân đàn vọng từ xa — đều đặn và nhàm chán một cách đáng quý. Ở đâu đó trong rừng tối có một tiếng kẻng khác, của phía kiểm, cũng đều đặn không kém. Hai tiếng kẻng của hai thế giới đang đếm ngược tới cùng một ngày."
     ],
     "sceneEffects": {
       "cluesHuaGiaDelta": 1
@@ -24489,7 +24490,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Tôi đối chiếu phần của chị Mến với sổ người được bảo vệ, và tôi thấy phần đau nhất: một số khoản 'phí vận chuyển' ấy tính theo đầu người. Người được liệt kê trong các khoản ấy là vật chủ — người sống — bị tính tiền nuôi theo ngày như một thứ hàng tồn kho. Có tên, có số ngày, có đơn giá. Chị Mến, chị giữ thứ sổ này một mình được bao lâu rồi?"
+        "text": "Tôi đối chiếu phần của chị Mến với sổ người được bảo vệ, và thấy phần đau nhất: một số khoản 'phí vận chuyển' ấy tính theo đầu người. Người được liệt kê trong các khoản ấy là vật chủ — người sống — bị tính tiền nuôi theo ngày như một thứ hàng tồn kho. Có tên, có số ngày, có đơn giá. Chị Mến, chị giữ thứ sổ này một mình được bao lâu rồi?"
       },
       {
         "speaker": "Hứa Tiểu Lan",
@@ -24501,11 +24502,11 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Trần Thị Mến",
-        "text": "Từ lúc tui còn ở kho bên Phúc Thọ, thưa cô. Tui không dám nói với ai vì tui là người giữ kho — người giữ kho mà lộ sổ của chủ thì mất nghề, mà ở đất ấy mất nghề là mất cả cái ăn của nhà. Tới khi qua đây, tui mới biết có một cuốn sổ khác nhận những con số này như nhận người thân. Cô cứ đọc hết đi. Tui ký tên chịu trách nhiệm cho từng trang tui chép."
+        "text": "Từ lúc tui còn ở kho bên Phúc Thọ, thưa cô. Tui không dám nói với ai vì tui là người giữ kho — người giữ kho mà lộ sổ của chủ thì mất nghề, mà ở đất ấy mất nghề là mất cả cái ăn của nhà. Tới khi qua đây, tui mới biết có một cuốn sổ khác nhận những con số này như nhận người thân. Tui ký tên chịu trách nhiệm cho từng trang tui chép."
       },
       {
         "speaker": "Hứa Tiểu Lan",
-        "text": "Chị Mến, tôi phải phân biệt hai thứ trong sổ của chị trước toàn thể mọi người, vì ngày mai khi đọc nó lên ở cửa sông, mình chỉ được đánh vào một thứ. Thứ nhất: những khoản tiền đang nuôi vật chủ sống — tiền thuốc, tiền ăn, tiền duy trì cho người mà thân thể họ đang phải sống nương vào nó. Đánh sập đột ngột những khoản ấy là giết người, và mình không làm. Thứ hai: quyền biến vật chủ thành tài sản bảo đảm cho các khoản nợ của Hứa Gia. Thứ đó là thứ phải bị công bố và vô hiệu. Đánh sập một hệ thống đang nuôi người sống không phải là cứu người — bản công bố này phải viết cho đúng tới mức đó."
+        "text": "Chị Mến, tôi phải phân biệt hai thứ trong sổ của chị trước toàn thể mọi người, vì ngày mai đọc nó lên ở cửa sông, mình chỉ được đánh vào một thứ. Thứ nhất: những khoản tiền đang nuôi vật chủ sống — tiền thuốc, tiền ăn, tiền duy trì cho người mà thân thể họ đang phải sống nương vào nó. Đánh sập đột ngột những khoản ấy là giết người, và mình không làm. Thứ hai: quyền biến vật chủ thành tài sản bảo đảm cho các khoản nợ của Hứa Gia. Thứ đó là thứ phải bị công bố và vô hiệu. Đánh sập một hệ thống đang nuôi người sống không phải là cứu người — bản công bố này phải viết cho đúng tới mức đó."
       },
       {
         "speaker": "Trần Thị Mến",
@@ -24521,7 +24522,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Thưa cô, bản công bố tôi đã chép thành ba bản như lệ hồ sơ: chữ của tôi, số của chị Mến, phần chỉ người của cô. Ba bản đi ba đường khác nhau trước buổi đọc. Kể từ giờ, không một vụ cháy kho hay một vụ cướp ghe nào có thể làm mất bản công bố này được nữa."
+        "text": "Thưa cô, bản công bố tôi đã chép thành ba bản như lệ hồ sơ: chữ của tôi, số của chị Mến, phần chỉ người của cô. Ba bản đi ba đường khác nhau trước buổi đọc. Không một vụ cháy kho hay một vụ cướp ghe nào làm mất được bản công bố này nữa."
       },
       {
         "speaker": "Trần Thị Mến",
@@ -24531,10 +24532,11 @@ export const VN_SCENES = Object.freeze({
     "id": "ky5_29_men_mo_so_tai",
     "location": "Phòng giấy phân đàn Tam Giang — ngày 61",
     "narration": [
-      "Cuốn sổ Tài của Trần Thị Mến không phải một cuốn sổ đẹp. Nó là một cuốn sổ kho chép bằng nhiều thứ mực khác nhau qua nhiều kỳ, giấy đã quăn mép vì hơi ẩm của kho, chữ của một người đàn bà bán cá học ghi chép bằng công việc chứ không bằng trường lớp. Nhưng sáng ngày sáu mươi mốt, khi nàng đặt nó lên bàn phòng giấy của phân đàn Tam Giang, cả phòng im lặng theo một cách mà những cuốn sổ bìa cứng của Chấp Chiếu Phòng chưa từng làm được: cuốn sổ này chứa bằng chứng về tiền — thứ bằng chứng khó cãi nhất trên đời, vì tiền không biết nói dối về đường đi của chính nó.",
-      "Mến trình bày thành quả tích lũy của nhiều kỳ: dòng linh mễ bị ghi giá hai lần, các khoản 'phí vận chuyển' không có ghe nào chạy, và những khoản tiền được tính theo đầu người sống. Nàng ghi chúng từ ngày còn làm ở kho bên Phúc Thọ, khi chưa biết mình đang ghi gì, chỉ vì một người giữ kho lâu năm có một thứ bản năng: con số nào không khớp với hàng thật, con số ấy phải được ghi lại. Bản năng nghề nghiệp của một người đàn bà chợ, qua nhiều tháng, đã trở thành một kho chứng cứ mà Hứa Gia không hề biết đang tồn tại.",
-      "Tiểu Lan đọc cuốn sổ chậm hơn bất kỳ ai. Nàng đọc không phải để tìm tội — tội thì đã rõ — mà để tìm ranh giới: ranh giới giữa phần tiền đang nuôi người sống và phần quyền đang biến người sống thành tài sản. Cả cuộc chiến ở vùng này, rút lại, nằm ở ranh giới ấy. Nàng vạch nó ra trước mặt mọi người bằng giọng bình tĩnh của một người soạn văn bản, vì ngày mai, ở cửa sông, ranh giới ấy sẽ là thứ duy nhất phân biệt một buổi công bố cứu người với một buổi tố cáo giết người.",
-      "Trước khi cuốn sổ được mang đi chép, Hạnh làm một việc lặng lẽ mà chỉ người của phòng giấy mới hiểu hết sức nặng của nó: nàng ghi vào sổ chính của phân đàn một dòng về sự tồn tại của cuốn sổ Tài — không ghi nội dung, chỉ ghi ngày nó được trình và người trình là ai. Từ giây phút ấy, cuốn sổ của Trần Thị Mến tồn tại trên giấy của cả hệ thống. Ai muốn làm nó biến mất, từ nay phải làm biến mất cả một hệ sổ đã ghi nhận nó — và hệ sổ ấy nằm rải ở ba cơ sở, trong tay những người đã thề giữ tên người trước giữ mọi thứ khác."
+      "Cuốn sổ Tài của Trần Thị Mến không phải một cuốn sổ đẹp. Nó là một cuốn sổ kho chép bằng nhiều thứ mực khác nhau qua nhiều kỳ, giấy đã quăn mép vì hơi ẩm của kho, chữ của một người đàn bà bán cá học ghi chép bằng công việc, không bằng trường lớp. Nhưng sáng ngày sáu mươi mốt, khi nàng đặt nó lên bàn phòng giấy của phân đàn Tam Giang, cả phòng im lặng theo một cách mà những cuốn sổ bìa cứng của Chấp Chiếu Phòng chưa từng làm được: cuốn sổ này chứa bằng chứng về tiền — thứ bằng chứng khó cãi nhất trên đời.",
+      "Mến trình bày thành quả tích lũy của nhiều kỳ: dòng linh mễ bị ghi giá hai lần, các khoản 'phí vận chuyển' không có ghe nào chạy, và những khoản tiền được tính theo đầu người sống. Nàng ghi chúng từ ngày còn làm ở kho bên Phúc Thọ, khi chưa biết mình đang ghi gì, chỉ vì bản năng của người giữ kho lâu năm: con số nào không khớp với hàng thật, con số ấy phải được ghi lại. Bản năng nghề nghiệp của một người đàn bà chợ, qua nhiều tháng, đã trở thành một kho chứng cứ mà Hứa Gia không hề biết đang tồn tại.",
+      "Tiểu Lan đọc cuốn sổ chậm hơn bất kỳ ai. Nàng đọc không phải để tìm tội — tội đã rõ — mà để tìm ranh giới giữa phần tiền đang nuôi người sống và phần quyền đang biến người sống thành tài sản. Cả cuộc chiến ở vùng này, rút lại, nằm ở ranh giới ấy. Nàng vạch nó ra trước mặt mọi người bằng giọng bình tĩnh của một người soạn văn bản, vì ngày mai, ở cửa sông, ranh giới ấy phân biệt một buổi công bố cứu người với một buổi tố cáo giết người.",
+      "Trước khi cuốn sổ được mang đi chép, Hạnh làm một việc lặng lẽ mà chỉ người của phòng giấy mới hiểu hết sức nặng của nó: nàng ghi vào sổ chính của phân đàn một dòng về sự tồn tại của cuốn sổ Tài — không ghi nội dung, chỉ ghi ngày nó được trình và người trình là ai. Từ giây phút ấy, cuốn sổ của Trần Thị Mến tồn tại trên giấy của cả hệ thống. Ai muốn làm nó biến mất, từ nay phải làm biến mất cả một hệ sổ đã ghi nhận nó — và hệ sổ ấy nằm rải ở ba cơ sở.",
+      "Buổi sáng ấy còn một thứ giấy nữa tới theo ghe sớm từ Chợ Lớn: một phong thư niêm triện Tài Phòng, ngoài bìa ghi đúng ba chữ 'Hứa Tiểu Lan' bằng nét chữ già của gia chủ. Hạnh ghi sổ ngày giờ thư tới, niêm còn nguyên vẹn. Tiểu Lan nghe báo, chỉ nói: để nguyên niêm. Thư của cha nàng — nàng chưa mở hôm nay."
     ],
     "sceneEffects": {
       "lanTrustDelta": 1
@@ -24567,7 +24569,7 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Thưa ông phó kiểm, tôi ghi nhận văn bản của ông đã tới cổng, có ngày giờ và người chứng. Tôi cũng ghi nhận một điều trong chính câu chữ của ông: văn bản viết 'yêu cầu', không viết 'theo thỏa thuận'. Tôi hỏi ông một câu cho rõ biên bản: giữa Giới Phòng và Hạ Ô Môn, có tồn tại một thỏa thuận nguyên tắc nào về việc giao người để đối chiếu hay không?"
+        "text": "Thưa ông phó kiểm, tôi ghi nhận văn bản của ông đã tới cổng, có ngày giờ và người chứng. Tôi ghi nhận một điều trong chính câu chữ của ông: văn bản viết 'yêu cầu', không viết 'theo thỏa thuận'. Tôi hỏi ông một câu cho rõ biên bản: giữa Giới Phòng và Hạ Ô Môn, có tồn tại một thỏa thuận nguyên tắc nào về việc giao người để đối chiếu hay không?"
       },
       {
         "speaker": "Đỗ Thị Hạnh",
@@ -24603,19 +24605,20 @@ export const VN_SCENES = Object.freeze({
       },
       {
         "speaker": "Phan Tường",
-        "text": "Thưa ngài, tôi chỉ đi theo đoàn với tư cách người quen biết hai phía, không có phần trong văn bản hôm nay. Tôi xin phép đi cùng đoàn ra về. Sông nước này dạo này nhiều việc quá — một kẻ môi giới như tôi, đứng ở đâu cũng thấy mình đứng sai chỗ."
+        "text": "Thưa ngài, tôi chỉ đi theo đoàn với tư cách người quen biết hai phía, không có phần trong văn bản hôm nay. Tôi xin phép đi cùng đoàn ra về. Một kẻ môi giới như tôi, đứng ở đâu cũng thấy mình đứng sai chỗ."
       },
       {
         "speaker": "Cao Minh",
-        "text": "Ngươi đứng chỗ nào cũng là chỗ của ngươi, Phan Tường — đó là nghề của ngươi và ngươi làm nó giỏi. Cứ đi đi. Nhớ lấy buổi sáng nay: giấy đòi người bị trả lời bằng một điều lệ, và điều lệ ấy không cần ai ký nhận mới có sức. Về kể cho những người thuê ngươi nghe, nếu chúng trả tiền cho tin tức."
+        "text": "Ngươi đứng chỗ nào cũng là chỗ của ngươi, Phan Tường — đó là nghề của ngươi và ngươi làm nó giỏi. Cứ đi đi. Nhớ buổi sáng nay: giấy đòi người bị trả lời bằng một điều lệ, và điều lệ ấy không cần ai ký nhận mới có sức. Về kể cho những người thuê ngươi nghe."
       }
     ],
     "id": "ky5_30_gioi_phong_doi_nguoi",
     "location": "Cổng phân đàn Tam Giang — ngày 61",
     "narration": [
-      "Đoàn của Giới Phòng tới cổng phân đàn vào giữa buổi sáng ngày sáu mươi mốt, đúng lễ: văn bản có dấu, tùy tùng có hàng ngũ, Phạm Đình Nghiêm đi đầu với phong thái của một người biết mình đang mang một yêu sách chứ không phải một quyền đã được thừa nhận. Phan Tường đi ở cuối đoàn, lọt thỏm giữa hai vai trò muôn thuở của hắn: người quan sát cho thuê và kẻ giữ một tập hồ sơ mật mà không ai trong đoàn này được phép biết tới. Hắn cúi chào người của phân đàn rất đúng mực, như một vị khách quen.",
+      "Đoàn của Giới Phòng tới cổng phân đàn vào giữa buổi sáng ngày sáu mươi mốt, đúng lễ: văn bản có dấu, tùy tùng có hàng ngũ, Phạm Đình Nghiêm đi đầu, biết mình đang mang một yêu sách chứ không phải một quyền đã được thừa nhận. Phan Tường đi ở cuối đoàn, lọt thỏm giữa hai vai trò muôn thuở của hắn: người quan sát cho thuê và kẻ giữ một tập hồ sơ mật. Hắn cúi chào người của phân đàn rất đúng mực.",
       "Văn bản đòi người được đọc to ở cổng. Nó mở rộng ngày kiểm hộ từ nhà và giấy sang người: mọi người đang ở trong các cơ sở của Hạ Ô Môn phải trình diện để đối chiếu nhân thân. Đó là ý đồ đã được gieo từ lâu trong cách hành văn của Giới Phòng — và sáng nay, lần đầu tiên, nó bị chặn lại không phải bằng sức mạnh, mà bằng một câu hỏi về căn cứ: thỏa thuận nào? Văn bản của chúng được viết trơn tru như thể một thỏa thuận nguyên tắc đã tồn tại từ trước giữa hai bên. Tiểu Lan bóc lớp trơn tru ấy ra trước mặt cả hai đoàn người, chỉ bằng một câu tuyên bố và một cuốn sổ điều lệ.",
-      "Nghiêm không cãi được điểm ấy. Hắn là người làm thủ tục; hắn biết một căn cứ không tồn tại thì không thể viện dẫn thành tiếng trước nhân chứng của hai phía. Hắn rút lui về đúng vị trí mạnh nhất còn lại của mình: cái hạn ngày sáu mươi ba và thứ máy thủ tục sẽ chạy vào ngày ấy. Trước khi đoàn rút, còn một việc nhỏ xảy ra ở cổng mà về sau Hạnh ghi vào sổ với một dòng gạch dưới: Tiểu Lan sửa lại ba cái tên bị đọc sai trong danh sách của chúng — chậm rãi, rõ ràng, trước mặt đoàn tùy tùng của Giới Phòng."
+      "Nghiêm không cãi được điểm ấy. Hắn là người làm thủ tục; hắn biết một căn cứ không tồn tại thì không thể viện dẫn thành tiếng trước nhân chứng của hai phía. Hắn rút lui về đúng vị trí mạnh nhất còn lại của mình: cái hạn ngày sáu mươi ba và thứ máy thủ tục sẽ chạy vào ngày ấy. Trước khi đoàn rút, còn một việc nhỏ xảy ra ở cổng mà về sau Hạnh ghi vào sổ với một dòng gạch dưới: Tiểu Lan sửa lại ba cái tên bị đọc sai trong danh sách của chúng — chậm rãi, rõ ràng, trước mặt đoàn tùy tùng của Giới Phòng.",
+      "Đoàn rút hẳn, Cao Minh mới nói phần việc của hắn, bằng giọng quyết thay cho cả sân: từ tối nay, người giữ sổ Tài và cuốn sổ của nàng không ra khỏi vòng trong; Hộ Pháp cắt người theo từng bước tới khi buổi đọc ở cửa sông xong. Hắn nói với người gác cổng, không nói với Trần Thị Mến — nàng sẽ biết lệnh ấy tối nay, qua danh sách ca gác. Lan đứng cạnh, nghe hết, chưa nói gì."
     ],
     "stageId": "can_gio",
     "title": "Giới Phòng đòi người"
