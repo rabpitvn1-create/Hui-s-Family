@@ -25002,6 +25002,14 @@ export const VN_SCENES = Object.freeze({
         "text": "Tôi xin phép nói phần của người đứng giữa, vì cả ba ông đều đang tính phần của riêng mình và không ai nói ra điều đó. Liên minh này từ đầu đã là ba con tính khác nhau mặc chung một cái áo. Tôi thì đơn giản: hồ sơ mật của tôi vẫn ở chỗ cũ, đường rút của tôi vẫn mở, và tôi đã bán cho mỗi bên trong phòng này một phần tin nhỏ đủ để cả ba bên đều thấy giữ tôi sống thì có lợi hơn. Tôi không phản ai hoàn toàn. Tôi phản tất cả — một cách vừa đủ."
       },
       {
+        "speaker": "Phan Tường",
+        "text": "Nhân nói chuyện bán buôn: kết luận về đường đi của kiện đồng trong tờ ghi ở bến Phúc Thọ — tôi đã bán cho Tài Phòng trong tuần này. Theo giấy của tôi, nó nằm ở kho của bến chuyển tải."
+      },
+      {
+        "speaker": "Hứa Tế Nguyên",
+        "text": "Nhà tôi mua nó để tự tìm đồ của nhà tôi. Ông bán cho nhà tôi, rồi ngồi đây rót trà cho cả hai phía."
+      },
+      {
         "speaker": "Lucien Vauclerc",
         "text": "Ông Phan nói câu ấy mà mặt không đổi — đó là lý do ông sống lâu trong nghề này. Còn ông — thưa ông, người ta mời ông tới nghe một đề nghị dàn xếp. Tôi nói thẳng: phía chúng tôi, từng phía một, sẵn sàng bàn những điều kiện để ngày mai không phải là một ngày đổ máu vô ích. Ông muốn gì cho phân đàn của ông, để ngày sáu mươi ba trôi qua trong yên lặng?"
       },
@@ -25027,6 +25035,7 @@ export const VN_SCENES = Object.freeze({
     "narration": [
       "Buổi gặp hậu công bố diễn ra ở chính điểm gặp của Phan Tường bên cửa sông, và nó là một buổi gặp của những kẻ vừa thua một trận mà mỗi người thua theo một cách khác nhau. Liên minh chống lại Hạ Ô Môn — thứ liên minh được Phan Tường dệt nên ở Kỳ trước từ những lợi ích không hề giống nhau — ngồi lại với nhau lần đầu tiên sau khi cuốn sổ ở cửa sông làm thay đổi mặt đất dưới chân tất cả. Vauclerc tính quân và thể diện. Nghiêm tính thủ tục và điểm neo cuối cùng. Hứa Tế Nguyên tính đường lui của một dòng họ vừa bị đọc sổ giữa chợ. Ba con tính, ba thứ tiếng lợi ích, không còn một câu chuyện chung nào để kể.",
       "Phan Tường, như mọi khi, là người tỉnh táo nhất phòng theo cách của riêng hắn: hắn đã chuẩn bị cho ngày liên minh này rạn từ rất lâu, bằng cách bán cho mỗi bên một phần sự thật vừa đủ để không bên nào muốn giết kẻ môi giới. Hồ sơ mật của hắn vẫn nguyên. Đường rút của hắn vẫn mở. Hắn rót trà cho cả ba phía bằng cùng một ấm trà và cùng một nụ cười, và không một ai trong phòng trách được hắn điều gì cụ thể.",
+      "Hắn không nói điều mà chỉ một người đối chiếu hai hệ sổ mới thấy: ký hiệu trên kiện đồng ấy là ký hiệu của lò đúc, đóng cho cả một mẻ hàng — kết luận của hắn đúng từng tờ giấy, và có thể sai ở đúng chỗ không tờ giấy nào ghi.",
       "Cao Minh tới buổi gặp trong tư cách khách được mời nghe một đề nghị dàn xếp. Hắn ngồi, uống thứ rượu hắn tự mang theo, và xem ba kẻ địch của mình tự bóc tách liên minh của chúng trước mặt hắn mà không cần hắn động một ngón tay. Đó là thứ cảnh hắn thích nhất trong mọi thứ cảnh ở thế giới này: con người, khi phần lợi bị đụng tới, tự đổi giọng, tự lộ mặt — và tự làm thay hắn mọi việc mà một đạo quân cũng không làm xuể."
     ],
     "stageId": "can_gio",
@@ -26095,27 +26104,27 @@ export const VN_SCENES = Object.freeze({
     "dialogue": [
       {
         "speaker": "Trần Thị Mến",
-        "text": "Phần tuyến lương về Long Hải, tui chốt trong tối nay: ghe gạo đi theo lịch cũ, không hoãn một chuyến nào vì biến cố. Người ở bản đàn sẽ hỏi tin — tui dặn người đưa tin của tui đáp đúng một câu: môn phái còn, sổ còn, ruộng còn. Ba thứ đó còn thì người ta ngủ yên được một đêm. Phần còn lại, để cuốn sổ báo cáo nói."
+        "text": "Phần tuyến lương về Long Hải, tui chốt trong tối nay: ghe gạo đi theo lịch cũ, không hoãn một chuyến nào vì biến cố. Người ở bản đàn sẽ hỏi tin — tui dặn người đưa tin của tui đáp đúng một câu: môn phái còn, sổ còn, ruộng còn. Ba thứ đó còn thì người ta ngủ yên được một đêm."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Tôi nói rõ cách ba cơ sở liên lạc từ tối nay, để ghi vào sổ làm lệ chính thức: tin khẩn đi bằng người đưa tin của anh Đực theo tuyến nước nhanh nhất; sổ báo cáo đi bằng ghe chuyến, hai bản, hai đường khác nhau; không một tin nào về người được bảo vệ được phép đi qua tay người ngoài ba cơ sở. Ba cơ sở từ nay là ba con mắt của nhau — nơi nào có việc, hai nơi còn lại biết trong ngày."
+        "text": "Tôi nói rõ cách ba cơ sở liên lạc từ tối nay: tin khẩn đi bằng người đưa tin của anh Đực theo tuyến nước nhanh nhất; sổ báo cáo đi bằng ghe chuyến, hai bản, hai đường khác nhau; không tin nào về người được bảo vệ đi qua tay người ngoài ba cơ sở. Ba cơ sở từ nay là ba con mắt của nhau — nơi nào có việc, hai nơi còn lại biết trong ngày."
       },
       {
         "speaker": "Võ Văn Đực",
-        "text": "Phần đường ghe của tui: các tuyến chạy đều, không một trạm thu phí nào của các bang cũ dám lập lại trong vùng nước người của mình đi lại hằng ngày. Tui nói một câu của dân ghe cho bàn này nghe: nước không nhớ ai từng đi qua nó — nước chỉ nhớ đường nào còn mở. Đường của mình còn mở hết, thưa các vị. Mai tui tự cầm lái chuyến ghe đầu tiên về Long Hải."
+        "text": "Phần đường ghe của tui: tuyến cứu hộ và tuyến của phân đàn chạy đều từ tối nay. Riêng ghe của anh Quới, anh Bửu: người đã về, giấy thả người không ai cãi — nhưng giấy đi tuyến của ghe ấy còn treo ở trạm, chưa qua được vòng đối chiếu. Đường của mình mở gần hết, trừ một tuyến còn kẹt giấy. Mai tui tự cầm lái chuyến ghe đầu tiên về Long Hải."
       },
       {
         "speaker": "Nguyễn Văn Thạo",
-        "text": "Tôi báo thêm phần gác: ba cơ sở đổi ca gác cùng một giờ kẻng từ tối nay, để bất kỳ ai nghe tiếng kẻng ở vùng này cũng biết cả ba nơi đang thức cùng nhau. Nhỏ thôi, nhưng người dân quanh các cơ sở nghe tiếng kẻng đều giờ là họ ngủ yên hơn một chút. Giữ người, nhiều khi, bắt đầu bằng việc giữ cho người ta ngủ yên."
+        "text": "Tôi báo thêm phần gác: ba cơ sở đổi ca gác cùng một giờ kẻng từ tối nay, để ai nghe kẻng cũng biết cả ba nơi đang thức cùng nhau. Nhỏ thôi, nhưng người dân quanh các cơ sở nghe tiếng kẻng đều giờ là họ ngủ yên hơn một chút. Giữ người, nhiều khi, bắt đầu bằng việc giữ cho người ta ngủ yên."
       },
       {
         "speaker": "Trần Thị Mến",
-        "text": "Tui nói một việc của người già ở bàn này, ghi hay không tùy chị Hạnh: tối nay, ở nhà ăn của phân đàn, người ta để lại hai chỗ ngồi trống ở đầu bàn như lệ cũ — chỗ của hai người vừa đi. Không ai nói gì về hai chỗ ấy. Người ta ăn, người ta nói chuyện ngày mai. Tui thấy thế là đúng. Nhớ người, ở cái tuổi của tui, không cần nghi thức gì to tát. Cứ để chỗ ngồi của họ ở đó, và sống tiếp cho tử tế."
+        "text": "Một việc của người già, ghi hay không tùy chị Hạnh: tối nay, ở nhà ăn của phân đàn, người ta để lại hai chỗ ngồi trống ở đầu bàn như lệ cũ — chỗ của hai người vừa đi. Không ai nói gì về hai chỗ ấy. Người ta ăn, người ta nói chuyện ngày mai. Tui thấy thế là đúng. Nhớ người, ở cái tuổi của tui, không cần nghi thức gì to tát. Cứ để chỗ ngồi của họ ở đó, và sống tiếp cho tử tế."
       },
       {
         "speaker": "Đỗ Thị Hạnh",
-        "text": "Phần danh sách người, tôi báo đúng, không làm tròn: người được đón ra ở ba cơ sở đã về nhà được phần lớn; một số còn ở lán chờ người thân tới nhận; hai trường hợp chưa rõ đang ở đâu, tôi ghi 'chưa rõ' chứ không ghi 'đã về'. Sổ này không ghi điều chưa chắc, dù điều chưa chắc ấy làm báo cáo xấu đi. Đó là lệ cô Lan đặt ra, và lệ ấy không đổi vì cô ấy đã đi."
+        "text": "Phần danh sách người, tôi báo đúng, không làm tròn: người được đón ra ở ba cơ sở đã về nhà được phần lớn; một số còn ở lán chờ người thân tới nhận; hai trường hợp chưa rõ đang ở đâu, tôi ghi 'chưa rõ' chứ không ghi 'đã về'. Sổ này không ghi điều chưa chắc, dù điều chưa chắc ấy làm báo cáo xấu đi. Đó là lệ cô Lan đặt ra, và lệ ấy không đổi vì cô ấy đã đi. Một dòng nữa: lão ngư ở Long Hải — người tháo dây cho đội ghe ra khơi, người thắt dây giữ ghe lạc ở lại bờ — từ chối được ghi công vào sổ công của vùng: tay ông làm việc của tay ông, không phải để đọc lên. Dòng của ông, tôi để trống — trống theo ý ông, và đó cũng là một cách ghi đúng. Và lệ mới của phòng tôi, từ bài học của người không có dòng sổ nào: từ nay Nhân Danh có ô tiếp nhận niêm phong — người được nhận mà không cần đọc tên ra chỗ đông người; trích lục nằm trong niêm phong, có người giữ được gọi tên, có người mang đơn được chỉ định, phải có giấy báo đã nhận. Bảo vệ bằng đường đi, không chỉ bằng lời hứa."
       },
       {
         "if": "thuNguyetFollows",
@@ -26134,13 +26143,14 @@ export const VN_SCENES = Object.freeze({
     "id": "ky5_48_nhung_nguoi_con_o",
     "location": "Ba cơ sở của Hạ Ô Môn — tối ngày 63",
     "narration": [
-      "Buổi tối đầu tiên của thời kỳ mới chạy dọc ba cơ sở của Hạ Ô Môn bằng ghe và người đưa tin: ở Tam Giang, Hội Đồng vừa tan họp và các đường bắt tay vào phần việc của mình; ở Phúc Thọ, phân đàn tự giữ trật tự qua ngày kiểm và đêm đầu tiên không một sự cố; trên các tuyến đường nước nối ba nơi ấy, ghe của Võ Văn Đực chạy đều trong đêm, mang theo tin, sổ và gạo — ba thứ mà một vùng đất cần nhất trong đêm đầu tiên nó tự giữ mình. Không nơi nào chờ một mệnh lệnh từ một trung tâm không còn nữa. Mỗi nơi tự xử phần việc của mình, theo đúng thiết kế đã được đặt ra từ trước.",
-      "Ở Phúc Thọ, phân đàn trải qua buổi tối đầu tiên ấy theo cách riêng của nó: người ở đó không có mặt ở cửa sông, tin đến với họ bằng người đưa tin và một bản tóm tắt ngắn — và phản ứng của họ, khi được ghi lại trong báo cáo gửi về sau đó, là một phản ứng làm Đỗ Thị Hạnh gật đầu khi đọc: họ không hỏi hai người đi đâu. Họ hỏi ba cơ sở còn liên lạc với nhau bằng tuyến nào, sổ người được bảo vệ của họ có phải gửi bản sao về Tam Giang không, và vụ giống tới có đi theo lịch cũ không. Một hệ thống đã học được cách tự giữ mình sẽ hỏi những câu hỏi của việc vận hành, không phải những câu hỏi của sự hoảng loạn.",
+      "Buổi tối đầu tiên của thời kỳ mới chạy dọc ba cơ sở của Hạ Ô Môn bằng ghe và người đưa tin: ở Tam Giang, Hội Đồng vừa tan họp và các đường bắt tay vào phần việc của mình; ở Phúc Thọ, phân đàn tự giữ trật tự qua ngày kiểm và đêm đầu tiên không một sự cố; trên các tuyến đường nước nối ba nơi ấy, ghe của Võ Văn Đực chạy đều trong đêm, mang theo tin, sổ và gạo — ba thứ một vùng đất cần nhất trong đêm đầu tiên tự giữ mình. Không nơi nào chờ một mệnh lệnh từ một trung tâm không còn nữa. Mỗi nơi tự xử phần việc của mình.",
+      "Ở Phúc Thọ, người ở đó không có mặt ở cửa sông, tin đến với họ bằng người đưa tin — và phản ứng của họ làm Đỗ Thị Hạnh gật đầu khi đọc: họ không hỏi hai người đi đâu. Họ hỏi ba cơ sở còn liên lạc với nhau bằng tuyến nào, sổ người được bảo vệ của họ có phải gửi bản sao về Tam Giang không, và vụ giống tới có đi theo lịch cũ không. Một hệ thống đã học được cách tự giữ mình sẽ hỏi những câu hỏi của việc vận hành, không phải những câu hỏi của sự hoảng loạn.",
       {
         "text": "Ở phía Long Hải, Lê Thu Nguyệt vẫn ở lại phần việc ghi chép của mình tại bản đàn — còn sống, còn khỏe, và là một trong những người đầu tiên ở đó nhận được tin của ngày sáu mươi ba qua tuyến người đưa tin. Đỗ Thị Hạnh ghi một dòng riêng về nàng trong sổ tối nay, ở mục người của Nhân Danh Đường đang làm việc tại các tuyến xa: 'Thu Nguyệt — bình an, giữ sổ ở Long Hải.' Đôi khi một dòng ghi ngắn như thế là cách một hệ thống nói rằng nó không quên người của mình, dù người ấy ở cách nó một ngày đường ghe.",
         "unless": "thuNguyetFollows"
       },
-      "Đó không phải là một buổi tối hoàn hảo. Ở phân đàn, một cuộc tranh luận thật và nhỏ về quyền giữ con dấu của Chấp Chiếu Phòng — ai giữ, ai xét tên, ai chịu trách nhiệm khi việc cứu người không đủ — kéo dài từ đầu buổi tối và bị kẻng đổi ca cắt ngang chưa ngã ngũ. Ở đâu đó ngoài vùng này, Phan Tường vẫn tự do với tập hồ sơ mật của hắn. Tàn dư của phe Tống Nguyên Phúc chưa tan hết. Hạ Ô Môn sau ngày sáu mươi ba không phải là một khu vườn đã dọn sạch; nó là một cộng đồng người thật, với những việc chưa xong thật — và chính vì thế, nó sống được."
+      "Đó không phải là một buổi tối hoàn hảo. Ở phân đàn, một cuộc tranh luận về quyền giữ con dấu của Chấp Chiếu Phòng — ai giữ, ai xét tên, ai chịu trách nhiệm khi việc cứu người không đủ — kéo dài từ đầu buổi tối và bị kẻng đổi ca cắt ngang chưa ngã ngũ. Hạ Ô Môn sau ngày sáu mươi ba không phải là một khu vườn đã dọn sạch; nó là một cộng đồng người thật, với những việc chưa xong thật — và chính vì thế, nó sống được.",
+      "Ở nhà ăn của phân đàn, nhà người bán vải ăn bữa cơm thứ hai được ghi vào sổ — vẫn cái mâm chia phần của người vợ: phần lãi nhỏ hơn, nhưng vẫn còn đó, vì ô giải chấp trên tờ khế của họ còn trống triện của Tài Phòng. Người chồng muốn bán quầy phía trước của sạp để dứt nợ; người vợ không chịu: ô chưa đóng, bán bây giờ là bán rẻ một thứ giấy chưa sạch. Họ cãi nhau nhỏ, ngay trong bữa cơm, và bữa cơm hết mà việc ấy chưa ngã ngũ. Hồ sơ của họ vào chồng hồ sơ chung của Hội Đồng — không ai tuyên bố nhà ấy đã được cứu."
     ],
     "stageId": "can_gio",
     "title": "Những người còn ở"
